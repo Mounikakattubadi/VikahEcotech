@@ -1,0 +1,515 @@
+.productpagetop {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.imagetop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.sht2000img {
+    width: 54%;
+    height: auto;
+    margin-bottom: 2%;
+    margin-top: 18%;
+    object-fit: cover; 
+}
+
+.main-image-container {
+    width: 100%; 
+    height: 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.additional-images {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin-top: 18%;
+}
+
+.additional-images div {
+    margin-right: 2%; 
+    flex: 1; 
+}
+
+.additional-images img {
+    width: 90%; 
+    height: auto;
+    cursor: pointer;
+    height: 100px;
+}
+
+.additional-images img:hover {
+    transform: scale(1.1); 
+    border: 0.1px solid #39fc84; 
+}
+
+.productdetails {
+    width: 42%;
+    padding: 20px;
+    margin-top: 4%;
+}
+
+.productdetails h1 {
+    font-size: 2em;
+    color: #FF7900; 
+}
+
+.reviews {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.reviews .stars {
+    color: #ffcc00; 
+    margin-right: 14px;
+    font-size: 145%;
+}
+
+.productdetails p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    width: 95%;
+}
+
+.sold {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    color: #ff6600; 
+}
+
+.sold span[role="img"] {
+    margin-right: 10px;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .productpagetop {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15%;
+    }
+
+    .imagetop {
+        width: 80%;
+    }
+
+    .sht2000img {
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    .additional-images {
+        flex-direction: row; 
+        align-items: center;
+        justify-content: center; 
+        width: 80%;
+        margin-top: 5%;
+    }
+
+    .additional-images div {
+        margin-right: 2%; 
+        margin-bottom: 0; 
+        
+    }
+
+    .additional-images img {
+        width: 80%; 
+        height: 70px;
+    }
+
+    .productdetails {
+        width: 90%;
+        margin-top: 10%;
+    }
+
+    .productdetails h1 {
+        font-size: 1.5em;
+    }
+
+    .reviews .stars {
+        font-size: 1.2em;
+    }
+
+    .productdetails p {
+        font-size: 0.9rem;
+    }
+
+    .sold {
+        font-size: 1em;
+    }
+}
+@media (min-width:600px) and (max-width:1100px){
+    .productpagetop{
+        margin-top: 13%;
+    }
+    .productdetails p{
+        width: 122%;
+    }   
+
+    .featurestable, .cuttingsection, .dimensions{
+        width: 100% !important;
+    }
+
+    .login-button, .downloadspeci-button
+    {
+        font-size: 0.6rem !important;
+        padding-top: 4% !important;
+    }
+    .specifications-image {
+        flex:
+      1;
+        width: 350px;
+        height: 270px;
+        margin-right: 1%;
+      }
+}
+
+@media (max-width: 480px) {
+
+    .productpagetop {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15%;
+    }
+
+    .sht2000img {
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .additional-images img {
+        width: 100%;
+    }
+
+    .productdetails h1 {
+        font-size: 1.2em;
+    }
+
+    .reviews .stars {
+        font-size: 1em;
+    }
+
+    .productdetails p {
+        font-size: 0.8rem;
+    }
+
+    .sold {
+        font-size: 0.9em;
+    }
+}
+
+
+.features-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 6%;
+}
+
+.features-container h2 {
+    font-size: 2.4em;
+    color: #FF7900; 
+    margin-bottom: 6%;
+
+}
+
+.features-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.specifications-image {
+    /* flex: 1; */
+    width:370px;
+    height:270px;
+    margin-right: 5%;
+}
+
+.sht200specification {
+    width: 50%;
+    text-align: left;
+}
+
+.sht200specification p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin: 0;
+    color: #333;
+    text-align: justify;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    
+    .features-content {
+        flex-direction: column;
+        align-items: center;
+        margin-left: -10%;
+    }
+
+    .specifications-image {
+        width: 160px;
+        height: 130px;
+        margin-right: 0;
+        margin-bottom: 5%;
+    }
+
+    .sht200specification {
+        width: 90%;
+        text-align: center;
+    }
+
+    .sht200specification p {
+        font-size: 1rem;
+       
+    }
+    .features-container h2 {
+        font-size: 1em;
+    }
+    .features-container {
+        width: 108%;
+        text-align: center;
+        margin-top: 6%;
+        margin-left: 16%;
+      }
+
+
+}
+
+@media (max-width: 480px) {
+    .features-container h2 {
+        font-size: 1em;
+        margin-left: 0%;
+        margin-right: 33%   !important;
+    }
+
+    .specifications-image {
+        width: 160px;
+        height: 130px;
+    }
+
+    .sht200specification p {
+        font-size: 0.9rem;
+    }
+
+        
+
+}
+
+
+.technical-heading {
+    text-align: center;
+    font-size: 2.1em;
+    color: #FF7900;
+    margin-bottom: 4%;
+    margin-top: 8%;
+}
+
+.featurestable,
+.cuttingsection,
+.dimensions {
+    margin: 2% auto;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    background-color: #fff;
+}
+
+.featurestable h3,
+.cuttingsection h3,
+.dimensions h3 {
+    text-align: center;
+    font-size: 1.8em;
+    color: #FF7900;
+    margin-bottom: 1.5%;
+}
+
+.featurestable table,
+.cuttingsection table,
+.dimensions table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.featurestable table td,
+.cuttingsection table td,
+.dimensions table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.featurestable table tr:nth-child(odd),
+.cuttingsection table tr:nth-child(odd),
+.dimensions table tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.featurestable table tr:nth-child(even),
+.cuttingsection table tr:nth-child(even),
+.dimensions table tr:nth-child(even) {
+    background-color: #e0f7e9;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .featurestable,
+    .cuttingsection,
+    .dimensions {
+        width: 106%;
+        padding: 10px;
+    }
+
+    .technical-heading {
+        font-size: 1.3em;
+        text-align: left;
+        margin-left: 19%;
+    }
+
+    .featurestable h3,
+    .cuttingsection h3,
+    .dimensions h3 {
+        font-size: 1.5em;
+    }
+
+    .featurestable table td,
+    .cuttingsection table td,
+    .dimensions table td {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .technical-heading {
+        font-size: 1.3em;
+        text-align: left;
+        margin-left: 19%;
+    }
+
+    .featurestable h3,
+    .cuttingsection h3,
+    .dimensions h3 {
+        font-size: 1.3em;
+    }
+
+    .featurestable table td,
+    .cuttingsection table td,
+    .dimensions table td {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}
+
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    width: 30%;
+  margin-top: 6%;
+}
+
+.login-button, .downloadspeci-button {
+    flex-grow: 1; /* Ensures buttons take up equal space */
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #FF7900;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px; /* Adds spacing between buttons */
+    height: 40px; /* Ensures consistent height */
+    text-align: center; /* Centers text */
+}
+
+.login-button:hover, .downloadspeci-button:hover {
+    background-color: #e67300;
+}
+
+@media (max-width: 768px) {
+    .features-container {
+      width: 100%;
+      text-align: center;
+      margin: 6% auto 0 auto;
+    }
+  
+    .features-container h2,
+    .features-container h3,
+    .features-container h1 {
+      text-align: center !important;
+      display: block;
+      width: 100%;
+      margin: 0 auto 6% auto;
+    }
+  
+    .features-content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .specifications-image {
+      width: 160px;
+      height: 130px;
+      margin: 0 auto 5% auto;
+    }
+  
+    .sht200specification {
+      width: 90%;
+      text-align: center;
+    }
+  
+    .sht200specification p {
+      font-size: 1rem;
+      text-align: center;
+    }
+    .buttons-container {
+        width: 100%;
+    }
+
+  }
+  
+  
+  
+  @media (max-width: 480px) {
+    .features-container h2 {
+      font-size: 1em;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+  
+    .specifications-image {
+      width: 160px;
+      height: 130px;
+      margin: 0 auto 5% auto; /* Center image on smallest screens */
+    }
+  
+    .sht200specification p {
+      font-size: 0.9rem;
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,490 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.home-container img {
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Tweaks for Mobile */
+@media (max-width: 768px) {
+  .home-container {
+    height: auto;
+    padding: 0px 0px;
+  }
+
+  .home-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+@media (min-width:768px) and (max-width:900px) {
+  .home-container {
+    height: auto;
+    padding: 0px 0px;
+  }
+
+  .home-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.green-heading {
+  color: #221ce6;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+@media (max-width: 767px) {
+  .green-heading {
+    font-size:1.1rem ;
+    
+  }
+  .home-container img {
+    height: auto;
+  }
+
+  .container {
+    padding: 0;
+  }
+}
+@media (min-width:500px) and (max-width:1000px){
+  .green-heading {
+    font-size:1.4rem ;
+    margin-top: 5%;
+  }
+
+}
+
+.ps-md-5 {
+  padding-left: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+/* Base Product Card Styles - Mostly good! */
+.product-card {
+  background: linear-gradient(to top, #00ff006e, #eaffea);
+  border-radius: 8px;
+  padding: 20px 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  max-width: 100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-label {
+  font-weight: bold;
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* ✅ Tablet Responsive */
+@media (min-width: 500px) and (max-width: 1000px) {
+  .product-card {
+    padding: 15px 10px;
+  }
+
+  .product-img {
+    max-width: 150px;
+    max-height: 120px;
+  }
+
+  .product-label {
+    font-size: 0.95rem;
+  }
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .product-card {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .product-img {
+    max-width: 120px;
+    max-height: 100px;
+  }
+
+  .product-label {
+    font-size: 0.9rem;
+  }
+
+  .col-6 {
+    flex: 0 0 50%;
+    max-width: 38%;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+
+/* ✅ Background Image for Product Section */
+.products-section-bg {
+  background-image: url('./images/backimg1.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* === Trade Fair Section Styles === */
+.trade-fair-section {
+  background-color: #f5f5f5;
+  padding: 40px 0;
+}
+
+.green-heading {
+  color: #28a745;
+  font-weight: 700;
+}
+
+/* Scrollable Card Wrapper */
+.trade-scroll-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  margin-left: 3%;
+
+  /* Hides scrollbar for WebKit */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.trade-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* Individual Trade Card */
+.trade-card {
+  flex: 0 0 90%;
+  max-width: 90%;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  scroll-snap-align: start;
+  transition: transform 0.3s ease-in-out;
+}
+
+.trade-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Card Image */
+.trade-img {
+  width: 100%;
+  height: 141px;
+  object-fit: contain;
+  margin-top: 4%;
+}
+
+/* Card Text Content */
+.trade-content h5 {
+  font-weight: bold;
+  color: #221ce6;
+  font-size: 1rem;
+}
+
+.trade-content p {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.trade-content .btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.trade-content .btn-success:hover {
+  background-color: #218838;
+}
+
+/* Responsive for tablets and up */
+@media (min-width: 768px) {
+  .trade-card {
+    flex: 0 0 48%;
+    max-width: 48%;
+  }
+}
+
+/* === Scroll Arrow Buttons (Updated Style) === */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ccc;
+  color: #333;
+  border: none;
+  font-size: 1.5rem;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+  background-color: #49cb67;
+}
+
+.scroll-btn:hover {
+  background-color: #b0b0b0;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+
+/* @media (max-width: 576px) {
+  .scroll-btn {
+    display: none;
+  }
+} */
+
+
+
+
+.testimonial-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.testimonial-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+}
+
+.testimonial-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  display: block;
+  border: 2px solid #28a745;
+}
+
+.testimonial-btn.left {
+  left: -20px;
+}
+
+.testimonial-btn.right {
+  right: -20px;
+}
+
+.testimonial-btn:hover {
+  background-color: #218838;
+}
+
+
+
+.testimonial-company {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #221ce6;
+}
+
+.testimonial-text {
+  font-style: italic;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #000;
+}
+
+
+@media (max-width: 768px) {
+  .testimonial-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+  }
+
+  .testimonial-card {
+    padding: 30px 20px;
+  }
+
+  .testimonial-btn.left {
+    left: -10px;
+  }
+
+  .testimonial-btn.right {
+    right: -10px;
+  }
+}
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.product-feature-section {
+  background-color: #f7fdf9;
+}
+
+.green-heading {
+  color: #019545;
+  font-weight: 600;
+}
+
+.product-feature-img {
+  max-height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.product-feature-img:hover {
+  transform: scale(1.03);
+}
+
+.about-top-section {
+  background: linear-gradient(135deg, #221ce6, #019545);
+  clip-path: ellipse(140% 100% at 50% 0%);
+  padding-top: 60px;
+  padding-bottom: 80px;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .products-section-bg {
+    padding: 2rem 1rem;
+  }
+
+  .products-row {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .product-img-col img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .product-text-col .green-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #198754;
+  }
+
+  .product-text-col p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+
+  .product-text-col .btn {
+    border: 1px solid #198754;
+    color: #198754;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .product-text-col .btn:hover {
+    background-color: #198754;
+    color: white;
+  }
+}

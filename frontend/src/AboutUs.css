@@ -1,0 +1,86 @@
+.about-us-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('./images/backimg6.png') center/cover no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .about-top-section {
+    background: linear-gradient(135deg, #221ce6, #019545);
+    clip-path: ellipse(140% 100% at 50% 0%);
+    padding-top: 60px;
+    padding-bottom: 80px;
+    color: #fff;
+  }
+  
+  .about-top-section h1 {
+    font-weight: 700;
+    font-size: 3rem;
+  }
+  
+  .about-top-section p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-img {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-img:hover {
+    transform: scale(1.03);
+  }
+  
+  .section-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #019545;
+  }
+  
+  .about-section-text {
+    font-size: 1rem;
+    color: #222;
+    line-height: 1.8;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .section-padding {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  /* 🔵 Get in Touch Section Styling */
+  .get-in-touch-section {
+    background-color: #2720e1;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+  
+  .get-in-touch-section a {
+    color: #ffd700; /* golden yellow */
+  }
+  
+  .get-in-touch-section a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

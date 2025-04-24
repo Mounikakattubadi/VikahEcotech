@@ -1,0 +1,107 @@
+/* Top section */
+.contact-top-section {
+  background: linear-gradient(135deg, #221ce6, #019545);
+  clip-path: ellipse(140% 100% at 50% 0%);
+  padding-top: 60px;
+  padding-bottom: 80px;
+  color: #fff;
+}
+
+/* Zigzag containers */
+.zigzag-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 40px 0;
+}
+
+.zigzag-container.right {
+  justify-content: flex-end;
+}
+
+/* Zigzag content layout */
+.zigzag-inner {
+  margin: 30px 0;
+}
+
+/* Card design */
+.zigzag-card {
+  width: 90%;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  border-left: 6px solid #007bff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.zigzag-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Head office highlight */
+.head-office {
+  border-left-color: #e91e63;
+  background-color: #fce4ec;
+}
+
+/* Typography */
+.contact-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.contact-title span {
+  font-size: 1.6rem;
+  margin-right: 10px;
+}
+
+.zigzag-card h5 {
+  color: #0056b3;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.zigzag-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.zigzag-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.zigzag-card a:hover {
+  text-decoration: underline;
+}
+
+/* Image styling */
+.zigzag-img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  animation: floatImg 3s ease-in-out infinite;
+}
+
+/* Animation for floating effect */
+@keyframes floatImg {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .zigzag-container,
+  .zigzag-container.right {
+    justify-content: center;
+  }
+}
