@@ -1,0 +1,116 @@
+.baler-header {
+  background: linear-gradient(135deg, #221ce6, #019545);
+}
+
+.baler-header h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;          /* Bigger size */
+  font-weight: 700;         /* Extra bold */
+  text-transform: uppercase;
+  color: #ffffff;           /* White for contrast */
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* subtle shadow */
+  border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.baler-header h1:hover {
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.description-below-heading {
+  font-size: 1rem;
+  color: #333;          /* Dark text for readability */
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.baler-header p {
+  font-size: 0.95rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Section Titles */
+.section-headingbaler {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #019545;
+}
+
+.balerbackimg {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('./images/backimg6.png') center/cover no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Key Features List */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.feature-item {
+  border-left: 4px solid #007BFF;
+  padding-left: 1rem;
+}
+
+.feature-icon .badge {
+  font-size: 0.8rem;
+}
+
+.feature-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.feature-desc {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Applications List */
+.app-list .list-group-item {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-left: 4px solid #00BCD4;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 991.98px) {
+  .section-heading {
+    text-align: center;
+  }
+
+  .feature-title,
+  .feature-desc {
+    text-align: left;
+  }
+}
+
+.enquiry-section {
+  background-color: #007bff; /* Bootstrap primary blue */
+  color: white;
+  font-weight: 500;
+  border-top: 5px solid #0056b3;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.enquiry-email {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.enquiry-email:hover {
+  color: #cce5ff;
+  text-decoration: none;
+}

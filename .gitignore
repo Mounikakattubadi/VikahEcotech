@@ -1,0 +1,34 @@
+# Ignore dependencies
+/frontend/node_modules/
+
+# Ignore build outputs
+/frontend/build/
+/frontend/dist/
+
+# Ignore environment variable files
+/frontend/.env
+/frontend/.env.local
+/frontend/.env.development.local
+/frontend/.env.test.local
+/frontend/.env.production.local
+
+# Ignore log files
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+
+# Ignore editor folders and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Ignore logs and coverage
+logs/
+*.log
+coverage/
+
+# Ignore package lock if needed
+/frontend/package-lock.json
+/frontend/yarn.lock
