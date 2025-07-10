@@ -18,6 +18,10 @@ import Homecards from "./Homecards";
 
 function Home() {
   const productsRef = useRef(null);
+    const scrollToProducts = () => {
+    productsRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   // const scrollCards = (direction) => {
   //   const container = document.getElementById("tradeCardScroll");
   //   const scrollAmount = 320;
@@ -79,9 +83,6 @@ function Home() {
     );
   };
 
-  const scrollToProducts = () => {
-    productsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   const [activeTab, setActiveTab] = useState("upcoming");
 

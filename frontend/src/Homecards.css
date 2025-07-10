@@ -1,4 +1,5 @@
-.cardsWrapper {
+/* ✅ Outer container */
+.cards-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -7,17 +8,13 @@
   background-color: #f7f7f7;
   box-sizing: border-box;
 }
-.heading{
-  color: blue;
-  font-size: 2rem;
-  text-align: center;
-}
 
-.glassCard {
+/* ✅ Card layout - consistent size, nice shadow and rounding */
+.glass-card {
   position: relative;
-  width: 240px;
-  height: 364px;
-  border-radius: 16px;
+  width: 250px;
+  height: 380px;
+  border-radius: 20px;
   overflow: hidden;
   background: transparent;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
@@ -27,11 +24,11 @@
   transition: transform 0.3s ease;
 }
 
-.glassCard:hover {
+.glass-card:hover {
   transform: translateY(-6px);
 }
 
-.glassOverlay {
+.glass-overlay {
   position: absolute;
   inset: 0;
   background: rgba(255, 255, 255, 0.12);
@@ -39,11 +36,12 @@
   z-index: 0;
 }
 
+/* ✅ Background gradients matching design */
 .bg1 {
-  background: linear-gradient(to bottom, #cbf1ee, #53e5e0);
+  background: linear-gradient(to bottom, #cbf1ee, #25e7df);
 }
 .bg2 {
-  background: linear-gradient(to bottom, #fbe7c1, #f5c25b);
+  background: linear-gradient(to bottom, #fbe7c1, #d6a33e);
 }
 .bg3 {
   background: linear-gradient(to bottom, #e4e4e4, #9c9898);
@@ -52,7 +50,8 @@
   background: linear-gradient(to bottom, #f7c5d6, #e24181);
 }
 
-.imageContainer {
+/* ✅ Image container */
+.image-container {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -63,7 +62,7 @@
   background-color: rgba(255, 255, 255, 0.08);
 }
 
-.cardImage {
+.card-image {
   width: 85%;
   height: 85%;
   object-fit: contain;
@@ -72,7 +71,8 @@
   background-color: rgba(255, 255, 255, 0.12);
 }
 
-.placeholderText {
+/* ✅ Placeholder for missing image */
+.placeholder-text {
   width: 100%;
   height: 100%;
   font-weight: bold;
@@ -84,7 +84,8 @@
   text-align: center;
 }
 
-.cardDetails {
+/* ✅ Text area */
+.card-details {
   position: relative;
   z-index: 1;
   text-align: center;
@@ -94,14 +95,15 @@
 }
 
 .title {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #23347b;
   margin-bottom: 12px;
   font-family: Cambria, Georgia, serif;
 }
 
-.buyButton {
+/* ✅ Button styling */
+.buy-button {
   padding: 6px 20px;
   font-size: 0.85rem;
   font-weight: bold;
@@ -113,62 +115,63 @@
   transition: 0.3s;
 }
 
-.buyButton:hover {
+.buy-button:hover {
   transform: scale(1.05);
 }
 
-.btnBlue {
+/* ✅ Button theme colors */
+.btn-blue {
   color: #0f8a9d;
 }
-.btnYellow {
+.btn-yellow {
   color: #b48211;
 }
-.btnGray {
+.btn-gray {
   color: #4f4f4f;
 }
-.btnPink {
+.btn-pink {
   color: #c64475;
 }
 
-.linkWrapper {
+/* ✅ Link wrapper */
+.link-wrapper {
   text-decoration: none;
   display: block;
 }
 
-/* Responsive styles */
+/* ✅ Responsive: 2 cards per row on tablets and mobile */
 @media (max-width: 768px) {
-  .cardsWrapper {
+
+  @media (max-width: 768px) {
+  .card-details {
+    padding: 15%;
+  }
+
+}
+
+  .cards-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     padding: 20px;
   }
 
-  .glassCard {
+  .glass-card {
     width: 100%;
     max-width: none;
-    height: 275px;
+    height: 360px;
   }
 
-  .imageContainer {
+  .image-container {
     height: 300px;
   }
 
-  .cardDetails {
-    padding: 5%;
-  }
-
   .title {
-    font-size: 0.77rem;
+    font-size: 0.9rem;
   }
 
-  .buyButton {
+  .buy-button {
     font-size: 0.78rem;
     padding: 5px 16px;
   }
-  .heading{
-  color: blue;
-  font-size: 1.5rem;
-  text-align: center;
-}
 }

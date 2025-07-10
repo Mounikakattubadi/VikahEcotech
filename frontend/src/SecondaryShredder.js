@@ -22,13 +22,14 @@ function SecondaryShredder() {
   }, []);
 
   const features = [
-    { title: 'Output Size', description: 'Typically reduces tyre chips up to 23 mm.' },
-    { title: 'Blades', description: 'RST 4000 uses hardened steel blades for finer cutting.' },
-    { title: 'Screening System', description: 'Includes screens to control output size and ensure uniformity.' },
-    { title: 'Easy Maintenance', description: 'Contact our CS team — we will send our engineer in 48 hrs.' },
-    { title: 'Dust and Noise Control', description: 'RST 4000 has dust and noise control features.' },
-    { title: 'Integration Ready', description: 'Can be integrated with your existing tyre recycling line.' }
+    { title: 'Output Size', description: 'Reduces tyre chips to sizes as small as 23 mm.' },
+    { title: 'Blades', description: 'Uses hardened steel blades for efficient, precise cutting.' },
+    { title: 'Screening System', description: 'Built-in screens ensure uniform output size and quality.' },
+    { title: 'Easy Maintenance', description: 'Our  Machineries is designed with easy maintenance in mind to ensure smooth operation, reduce  downtime and extends the equipments lifespan.' },
+    { title: 'Dust and Noise Control', description: 'Equipped with features to minimize dust and noise during operation.' },
+    { title: 'Integration Ready', description: 'Easily integrates into existing tyre recycling systems.' }
   ];
+
 
   const applications = [
     'Feedstock for crumb rubber production.',
@@ -46,7 +47,7 @@ function SecondaryShredder() {
 
       <div className="container text-center my-4">
         <p className="lead description-below-heading">
-          Vikah RST 4000 is a secondary shredder for tyres (also known as tyre rasper). It is a machine used in the second stage of the tyre recycling process. After the initial primary shredder cuts the whole tyres into rough chips (typically 50–150 mm or more), the RST 4000 secondary shredder further processes these chips into smaller, more uniform pieces, often suitable for further granulation or use in other applications.
+          The secondary shredder, also known as a tyre rasper, is used in the second stage of the tyre recycling process. After the primary shredder breaks down whole tyres into rough chips (typically 50–150 mm or more), the secondary shredder further processes these chips into smaller, more uniform pieces. These refined pieces are often used for further granulation or in various industrial applications.
         </p>
       </div>
 
@@ -83,10 +84,6 @@ function SecondaryShredder() {
           </Row>
         </Container>
       </section>
-
-      
-
-      
 
       {/* Applications Cards Section (like Primary Shredder) */}
       <div className="products-section-bg py-5">

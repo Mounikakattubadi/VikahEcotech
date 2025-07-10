@@ -1,10 +1,9 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
-import shredderhd from "./images/secondaryshredder1.jpg"
-import shredderhd1 from "./images/secondaryshredder2.jpg"
-import shredderhdimg from "./images/secondaryshredder3.jpg"
+import shredderhd from "./images/secondaryshredder1.jpg";
+import shredderhd1 from "./images/secondaryshredder2.jpg";
+import shredderhdimg from "./images/secondaryshredder3.jpg";
 
 const Sht4000 = () => {
     const [mainImage, setMainImage] = useState(shredderhd1);
@@ -12,6 +11,7 @@ const Sht4000 = () => {
     const handleImageClick = (image) => {
         setMainImage(image);
     };
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
@@ -20,22 +20,24 @@ const Sht4000 = () => {
     const model = 'Rasper';
 
     const handleDownload = (fileName) => {
-        // Create a new anchor element
         const link = document.createElement('a');
-        // Set the href to the PDF file
         link.href = `${process.env.PUBLIC_URL}/${fileName}.pdf`;
-        // Set the download attribute to the desired file name
         link.download = `${fileName}.pdf`;
-        // Append the anchor to the body
         document.body.appendChild(link);
-        // Programmatically click the anchor
         link.click();
-        // Remove the anchor from the body
         document.body.removeChild(link);
     };
 
     return (
-        <>
+        <div>
+            {/* Heading section similar to SecondaryMetalshredder */}
+            <header className="tyrecutting-header text-white text-center py-5">
+                <div className="container">
+                    <h1 className="display-4">Rasper</h1>
+                </div>
+            </header>
+
+            {/* Rest of your existing JSX */}
             <div className='productpagetop'>
                 <div className='imagetop'>
                     <div className="main-image-container">
@@ -48,7 +50,6 @@ const Sht4000 = () => {
                                 src={shredderhdimg}
                                 alt="Angle 1"
                                 onClick={() => handleImageClick(shredderhdimg)}
-
                             />
                         </div>
                         <div>
@@ -57,7 +58,6 @@ const Sht4000 = () => {
                                 src={shredderhd}
                                 alt="Angle 2"
                                 onClick={() => handleImageClick(shredderhd)}
-
                             />
                         </div>
                         <div>
@@ -66,24 +66,22 @@ const Sht4000 = () => {
                                 src={shredderhd1}
                                 alt="Angle 3"
                                 onClick={() => handleImageClick(shredderhd1)}
-
                             />
                         </div>
                     </div>
                 </div>
                 <div className="productdetails">
-                    <h1>{model}</h1>
-                   
                     <p>
-                        The Rasper Model R-6000 is an advanced tyre processing machine designed for efficient recycling of shredded tyres.
+                        The Rasper Model RST-4000 is an advanced tyre processing machine designed for efficient recycling of shredded tyres.
                         Engineered to handle various tyre sizes and types, including PCR and TBR, this high-performance model features
                         precision-cutting blades and a durable granulating chamber. It transforms shredded materials into uniform granules
                         suitable for diverse recycling applications while operating quietly and efficiently. With its compact design and
-                        user-friendly interface, the R-6000 seamlessly integrates into existing recycling lines,
+                        user-friendly interface, the RST-4000 seamlessly integrates into existing recycling lines,
                         delivering reliable and consistent results that prepare shredded tyres for further processing or repurposing.
                     </p>
                 </div>
             </div>
+
 
             <div className='features-container'>
                 <h2>FEATURES AND SPECIFICATIONS</h2>
@@ -130,7 +128,8 @@ const Sht4000 = () => {
                         </tr>
                         <tr>
                             <td>Motor Make</td>
-                            <td>Siemens / Abb / Crompton</td>
+                            <td>Siemens / Abb / Equivalent
+</td>
                         </tr>
                     </tbody>
                 </table>
@@ -202,10 +201,8 @@ const Sht4000 = () => {
                     Download Specifications
                 </button>
             </div>
-        </>
-
+        </div>
     );
 };
 
 export default Sht4000;
-
