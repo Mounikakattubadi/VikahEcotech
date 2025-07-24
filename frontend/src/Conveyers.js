@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import fdconveyer from "./images/fdconveyer.jpg";
 
 const Conveyers = () => {
   useEffect(() => {
@@ -29,21 +30,44 @@ const Conveyers = () => {
     'Warehousing & Distribution',
   ];
 
+  // Add sample specs - you can customize these
+  const specs = [
+    { label: 'Conveyor Length', value: 'Customizable (up to 30 meters)' },
+    { label: 'Belt Width', value: '0.5m – 2.0m' },
+    { label: 'Motor Power', value: '0.5 – 5 HP' },
+    { label: 'Speed Range', value: '0.5 – 3 m/s' },
+    { label: 'Material Compatibility', value: 'Bulk solids, recyclables, packaged goods' },
+    { label: 'Frame Material', value: 'Carbon steel with protective coating' }
+  ];
+
   return (
     <div className="tbf-page">
 
-      {/* Header (gradient) with ONLY heading */}
-      <header className="tbf-header text-white text-center py-5">
+      {/* Enhanced Header with image and description side-by-side */}
+      <header className="tbf-header-enhanced text-white py-5 position-relative">
         <Container>
-          <h1 className="tbf-heading">Feeding & Discharge Conveyers</h1>
+          <Row className="align-items-center">
+            <Col md={6} className="text-center text-md-start">
+              <h1 className="tbf-heading display-5 fw-bold">Feeding & Discharge Conveyers</h1>
+              <p className="lead mt-3">
+                Our Feeding & Discharge Conveyers are designed to efficiently move materials through your production or recycling line, improving productivity and reliability.
+              </p>
+            </Col>
+            <Col md={6} className="text-center mt-4 mt-md-0">
+              <img src={fdconveyer} alt="Feeding & Discharge Conveyers" className="stripcutter-image img-fluid" />
+            </Col>
+          </Row>
         </Container>
       </header>
 
-      {/* Below header centered paragraph (old style) */}
-      <div className="tbf-intro container text-center my-4">
-        <p className="lead">
-          Our Feeding & Discharge Conveyers are designed to efficiently move materials through your production or recycling line, improving productivity and reliability.
-        </p>
+      {/* Technical Overview floating box */}
+      <div className="specs-box shadow">
+        <h5 className="fw-bold mb-3">Technical Overview</h5>
+        <ul className="list-unstyled mb-0">
+          {specs.map((item, idx) => (
+            <li key={idx}><strong>{item.label}:</strong> {item.value}</li>
+          ))}
+        </ul>
       </div>
 
       {/* Features Section */}
@@ -89,6 +113,7 @@ const Conveyers = () => {
           </p>
         </Container>
       </section>
+
     </div>
   );
 };

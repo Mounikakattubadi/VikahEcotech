@@ -5,6 +5,7 @@ import Baler from "./images/baler8.jpg";
 import shredderhdimg from "./images/Shedder _ Final PNG.png";
 import Baler1 from "./images/baler1.png";
 import shred2 from "./images/secondaryshredder2.jpg";
+import oms from "./images/osm1.png";
 
 const cards = [
   {
@@ -47,20 +48,17 @@ const Homecards = () => {
             <div className={`${styles.glassCard} ${styles[card.bg]}`}>
               <div className={styles.glassOverlay} />
               <div className={styles.imageContainer}>
-                {card.image ? (
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className={styles.cardImage}
-                  />
-                ) : (
-<div className={styles.placeholderText}>Click Here 👉</div>
-                )}
+                <img
+                  src={card.image || oms}
+                  alt={card.title}
+                  className={styles.cardImage}
+                />
+
               </div>
               <div className={styles.cardDetails}>
                 <p className={styles.title}>{card.title}</p>
                 <button className={`${styles.buyButton} ${styles[card.btnClass]}`}>
-                  Know More 
+                  Know More
                 </button>
               </div>
             </div>

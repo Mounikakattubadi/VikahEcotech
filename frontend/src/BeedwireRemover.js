@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import beedwireremover from "./images/beedwireremover.webp";
 
 const BeadwireRemover = () => {
   useEffect(() => {
@@ -29,22 +30,49 @@ const BeadwireRemover = () => {
     'Construction and Demolition Waste Processing'
   ];
 
+  const specs = [
+    { label: 'Processing Capacity', value: '40 to 120 tires per hour' },
+    { label: 'Applicable Tire Types', value: 'Passenger, Truck, OTR Tires' },
+    { label: 'Power Consumption', value: 'Low Energy Usage' },
+    { label: 'Machine Dimensions', value: 'Varies by model' },
+    { label: 'Weight', value: 'Model dependent' },
+  ];
+
   return (
     <div className="tbf-page">
 
-      {/* Header (gradient) */}
-      <header className="tbf-header text-white text-center py-5">
+      {/* Enhanced Header */}
+      <header className="tbf-header-enhanced text-white py-5 position-relative">
         <Container>
-          <h1 className="tbf-heading">Beadwire Remover</h1>
+          <Row className="align-items-center">
+            <Col md={6} className="text-center text-md-start">
+              <h1 className="tbf-heading display-5 fw-bold">Beadwire Remover</h1>
+              <p className="lead mt-3">
+                Efficient and reliable machines engineered to extract steel bead wires from waste tires, boosting recycling and material recovery.
+              </p>
+            </Col>
+            <Col md={6} className="text-center mt-4 mt-md-0">
+              <img src={beedwireremover} alt="Beadwire Remover Machine" className="stripcutter-image img-fluid" />
+            </Col>
+          </Row>
         </Container>
       </header>
 
-      {/* Intro Paragraph (old style) */}
+      {/* Intro Paragraph */}
       <div className="tbf-intro container text-center my-4">
         <p className="lead">
-          Our Beadwire Remover machines are engineered to efficiently extract steel bead wires from waste tires,
-          facilitating the recycling process and enhancing material recovery rates.
+          Our Beadwire Remover machines are designed to simplify the tire recycling process by efficiently extracting steel bead wires, improving overall recycling efficiency.
         </p>
+      </div>
+
+      {/* Floating Technical Overview */}
+      <div className="specs-box shadow">
+        <h5 className="fw-bold mb-3">Technical Overview</h5>
+        <ul className="list-unstyled mb-0">
+          {specs.map((item, idx) => (
+            <li key={idx}><strong>{item.label}:</strong> {item.value}</li>
+          ))}
+        </ul>
       </div>
 
       {/* Features Section */}
@@ -90,6 +118,7 @@ const BeadwireRemover = () => {
           </p>
         </Container>
       </section>
+
     </div>
   );
 };

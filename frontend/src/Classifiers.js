@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import classifier from "./images/classifier.webp";
 
 const Classifiers = () => {
   useEffect(() => {
@@ -29,22 +30,49 @@ const Classifiers = () => {
     'Powder Coating',
   ];
 
+  const specs = [
+    { label: 'Classification Accuracy', value: '±0.5%' },
+    { label: 'Capacity', value: 'Up to 5 Tons/Hour' },
+    { label: 'Power Consumption', value: '5 kW' },
+    { label: 'Machine Dimensions (L x W x H)', value: '1.8 m x 1.2 m x 1.5 m' },
+    { label: 'Weight', value: '450 kg' }
+  ];
+
   return (
     <div className="tbf-page">
 
-      {/* Gradient Heading Section */}
-      <header className="tbf-header text-white text-center py-5">
+      {/* Enhanced Header with image */}
+      <header className="tbf-header-enhanced text-white py-5 position-relative">
         <Container>
-          <h1 className="tbf-heading">Classifiers</h1>
+          <Row className="align-items-center">
+            <Col md={6} className="text-center text-md-start">
+              <h1 className="tbf-heading display-5 fw-bold">Classifiers</h1>
+              <p className="lead mt-3">
+                Engineered for precise particle separation and high efficiency, our Classifiers are ideal for improving product quality across diverse industries.
+              </p>
+            </Col>
+            <Col md={6} className="text-center mt-4 mt-md-0">
+              <img src={classifier} alt="Classifier Machine" className="stripcutter-image img-fluid" />
+            </Col>
+          </Row>
         </Container>
       </header>
 
-      {/* Paragraph Section (Intro Text) */}
+      {/* Intro Paragraph */}
       <div className="tbf-intro container text-center my-4">
         <p className="lead">
-          Our Classifiers are engineered to provide precise and efficient separation of particles based on size,
-          enhancing product quality and ensuring high-quality results in various industrial applications.
+          Our Classifiers provide reliable and efficient separation of particles by size, ensuring enhanced quality and consistent results in various industrial processes.
         </p>
+      </div>
+
+      {/* Floating Technical Overview */}
+      <div className="specs-box shadow">
+        <h5 className="fw-bold mb-3">Technical Overview</h5>
+        <ul className="list-unstyled mb-0">
+          {specs.map((item, idx) => (
+            <li key={idx}><strong>{item.label}:</strong> {item.value}</li>
+          ))}
+        </ul>
       </div>
 
       {/* Features Section */}
@@ -90,6 +118,7 @@ const Classifiers = () => {
           </p>
         </Container>
       </section>
+
     </div>
   );
 };

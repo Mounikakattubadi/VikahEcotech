@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import othereqp from './OtherEqp.module.css';
 import Tyrecuttingimg from './images/tyrecutting1.jpg'; // For Cutting Equipment
 import tyrefolding from './images/tyre folding1.jpg'; // For Folding Equipment
 import TumbleBackFeeder from './images/Tumbleback-Feeder.png';
@@ -8,7 +9,7 @@ import vibrator from "./images/vibrator.jpg";
 import classifier from "./images/classifier.webp";
 import oms from "./images/oms.jpeg";
 import beedwireremover from "./images/beedwireremover.webp";
-import stripcutter from "./images/stripcutter.webp";
+import stripcutter from "./images/stripcutter1.png";
 import blockcutter from "./images/blockcutter.jpg";
 import sidewallremover from "./images/sidewallremover.jpg";
 
@@ -18,15 +19,15 @@ const OtherEquipment = () => {
   }, []);
 
   const products = [
-    { label: "Tumble Back Feeder", path: "/tumble-back-feeder",image: TumbleBackFeeder },
-    { label: "Feeding & Discharge Conveyers", path: "/feeding-discharge-conveyers" ,image: fdconveyer},
-    { label: "Vibrators", path: "/vibrators" ,image: vibrator},
-    { label: "Classifiers", path: "/classifiers" ,image: classifier},
-    { label: "Overband Magnetic Steel Separators", path: "/magnetic-steel-separators" ,image: oms},
-    { label: "Beedwire Remover", path: "/beedwire-remover" ,image: beedwireremover},
-    { label: "Strip Cutter", path: "/strip-cutter" ,image :stripcutter},
-    { label: "Block Cutter", path: "/block-cutter",image : blockcutter },
-    { label: "Side Wall Remover", path: "/sidewall-remover" ,image : sidewallremover},
+    { label: "Tumble Back Feeder", path: "/tumble-back-feeder", image: TumbleBackFeeder },
+    { label: "Feeding & Discharge Conveyers", path: "/feeding-discharge-conveyers", image: fdconveyer },
+    { label: "Vibrators", path: "/vibrators", image: vibrator },
+    { label: "Classifiers", path: "/classifiers", image: classifier },
+    { label: "Overband Magnetic Steel Separators", path: "/magnetic-steel-separators", image: oms },
+    { label: "Beadwire Remover", path: "/beedwire-remover", image: beedwireremover },
+    { label: "Strip Cutter", path: "/strip-cutter", image: stripcutter },
+    { label: "Block Cutter", path: "/block-cutter", image: blockcutter },
+    { label: "Side Wall Remover", path: "/sidewall-remover", image: sidewallremover },
     { label: "Cutting Equipment", path: "/tyrecutting", image: Tyrecuttingimg },
     { label: "Folding Equipment", path: "/tyrefolding", image: tyrefolding },
   ];
@@ -46,7 +47,7 @@ const OtherEquipment = () => {
                   <img
                     src={product.image}
                     alt={product.label}
-                    className="product-img"
+                    className={othereqp['product-img']}
                   />
                 ) : (
                   <div

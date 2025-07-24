@@ -1,0 +1,7 @@
+/*Images Section*/
+.product-img {
+  height: 60%;
+  width: 70%;
+  object-fit: contain;
+  border-radius: 8px;
+}

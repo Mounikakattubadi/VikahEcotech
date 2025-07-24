@@ -4,9 +4,13 @@
   background-color: #f8f9fc;
 }
 
-/* === Header === */
-.tbf-header {
-  background: linear-gradient(90deg, #007bff 0%, #6610f2 100%);
+/* === Enhanced Header === */
+.tbf-header-enhanced {
+  background: linear-gradient(135deg, #243949 0%, #517fa4 100%);
+  position: relative;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .tbf-heading {
@@ -15,7 +19,51 @@
   margin: 0;
 }
 
-/* === Intro Paragraph (below header) === */
+.stripcutter-image {
+  max-height: 280px;
+  object-fit: contain;
+  transform: rotate(-2deg);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(-2deg);
+  }
+}
+
+.specs-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 20px;
+  width: 20%;
+  position: absolute;
+  bottom: 5%;
+  left: 89%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #333;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.specs-box h5 {
+  color: #243949;
+  margin-bottom: 12px;
+}
+
+.specs-box ul {
+  padding-left: 1rem;
+}
+
+.specs-box li {
+  font-size: 0.95rem;
+  margin-bottom: 0.35rem;
+}
+
+/* === Intro Paragraph === */
 .tbf-intro p {
   max-width: 800px;
   margin: 0 auto;
@@ -39,8 +87,6 @@
   margin: 0 auto;
   max-width: fit-content;
 }
-
-
 
 /* === FEATURES GRID === */
 .feature-grid {
@@ -83,7 +129,6 @@
   line-height: 1.4;
   margin: 0;
 }
-
 
 /* === APPLICATIONS GRID === */
 .tbf-applications {
@@ -130,12 +175,50 @@
   text-decoration: underline;
 }
 
-/*Images Section*/
+/* === Responsive Layout for Mobile === */
+@media (max-width: 768px) {
+  /* Stack header content vertically */
+  .tbf-header-enhanced .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.product-img {
-  height: 60%;
-  width: 70%;
-  object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid #ddd;
+  .tbf-heading {
+    font-size: 2.25rem;
+    text-align: left;
+  }
+
+  .specs-box {
+    position: relative;
+    width: 100%;
+    left: auto;
+    bottom: auto;
+    transform: none;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    box-shadow: none;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+  }
+
+  .specs-box h5 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .specs-box li {
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+  }
+
+  /* Image comes after specs */
+  .stripcutter-image {
+    max-height: 200px;
+    animation: none;
+    transform: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-self: center;
+  }
 }

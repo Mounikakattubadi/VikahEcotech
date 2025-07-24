@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import blockcutter from "./images/blockcutter.jpg";
 
 const BlockCutter = () => {
   useEffect(() => {
@@ -30,22 +31,49 @@ const BlockCutter = () => {
     'Paving Stone Production',
   ];
 
+  // Optional: Add specs if you want to show a specs box like StripCutter, otherwise comment/remove
+  const specs = [
+    { label: 'Cutting Capacity', value: 'Up to 200 mm thickness' },
+    { label: 'Motor Power', value: '15 HP' },
+    { label: 'Machine Dimensions', value: '2.0 m x 1.2 m x 1.5 m' },
+    { label: 'Weight', value: '950 kg' },
+  ];
+
   return (
     <div className="tbf-page">
 
-      {/* Header (gradient) */}
-      <header className="tbf-header text-white text-center py-5">
+      {/* Enhanced Header */}
+      <header className="tbf-header-enhanced text-white py-5 position-relative">
         <Container>
-          <h1 className="tbf-heading">Block Cutter</h1>
+          <Row className="align-items-center">
+            <Col md={6} className="text-center text-md-start">
+              <h1 className="tbf-heading display-5 fw-bold">Block Cutter</h1>
+              <p className="lead mt-3">
+                Precise and durable block cutting machine designed for construction and masonry applications with user-friendly controls and robust build.
+              </p>
+            </Col>
+            <Col md={6} className="text-center mt-4 mt-md-0">
+              <img src={blockcutter} alt="Block Cutter Machine" className="stripcutter-image img-fluid" />
+            </Col>
+          </Row>
         </Container>
       </header>
 
       {/* Intro Paragraph */}
       <div className="tbf-intro container text-center my-4">
         <p className="lead">
-          Our Block Cutter machines are engineered to provide precise and efficient cutting solutions for various materials,
-          enhancing productivity and ensuring high-quality results in construction and masonry applications.
+          Our Block Cutter machines provide efficient and accurate cutting of various construction materials, enhancing productivity and quality in your projects.
         </p>
+      </div>
+
+      {/* Floating Technical Overview */}
+      <div className="specs-box shadow">
+        <h5 className="fw-bold mb-3">Technical Overview</h5>
+        <ul className="list-unstyled mb-0">
+          {specs.map((item, idx) => (
+            <li key={idx}><strong>{item.label}:</strong> {item.value}</li>
+          ))}
+        </ul>
       </div>
 
       {/* Features Section */}

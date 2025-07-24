@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import tumbleBackFeederImg from './images/Tumbleback-Feeder.png';
 
 const TumbleBackFeeder = () => {
   useEffect(() => {
@@ -29,22 +30,43 @@ const TumbleBackFeeder = () => {
     'Glass Recycling'
   ];
 
+  const specs = [
+    { label: 'Length', value: '20–48 ft (modular)' },
+    { label: 'Throughput Capacity', value: '10–70 TPH' },
+    { label: 'Material Compatibility', value: 'Rubber, Aluminum, PET, E-Waste, Steel, Glass' },
+    { label: 'Feeding Angle', value: 'Adjustable' },
+    { label: 'Construction Material', value: 'Heavy-duty steel' },
+    { label: 'Power Requirements', value: 'Varies by configuration' },
+  ];
+
   return (
     <div className="tbf-page">
 
-      {/* Header (gradient) with ONLY heading */}
-      <header className="tbf-header text-white text-center py-5">
+      {/* Enhanced Header */}
+      <header className="tbf-header-enhanced text-white py-5 position-relative">
         <Container>
-          <h1 className="tbf-heading">Tumble Back Feeder</h1>
+          <Row className="align-items-center">
+            <Col md={6} className="text-center text-md-start">
+              <h1 className="tbf-heading display-5 fw-bold">Tumble Back Feeder</h1>
+              <p className="lead mt-3">
+                Engineered to automate and streamline the feeding process for shredders and recycling machinery with modular flexibility and durability.
+              </p>
+            </Col>
+            <Col md={6} className="text-center mt-4 mt-md-0">
+              <img src={tumbleBackFeederImg} alt="Tumble Back Feeder Machine" className="stripcutter-image img-fluid" />
+            </Col>
+          </Row>
         </Container>
       </header>
 
-      {/* Below header centered paragraph (old style) */}
-      <div className="tbf-intro container text-center my-4">
-        <p className="lead">
-          Our Tumble Back Feeders are engineered to automate the loading process into shredders and other recycling machinery,
-          enhancing material handling efficiency and reducing manual labor.
-        </p>
+      {/* Floating Technical Overview */}
+      <div className="specs-box shadow">
+        <h5 className="fw-bold mb-3">Technical Overview</h5>
+        <ul className="list-unstyled mb-0">
+          {specs.map((item, idx) => (
+            <li key={idx}><strong>{item.label}:</strong> {item.value}</li>
+          ))}
+        </ul>
       </div>
 
       {/* Features Section */}

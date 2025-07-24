@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import './OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import stripcutter from './images/stripcutter1.png'; // Ensure this path is correct
 
 const StripCutter = () => {
   useEffect(() => {
@@ -29,13 +30,32 @@ const StripCutter = () => {
     'Waste Management',
   ];
 
+  const specs = [
+    { label: 'Strip Width', value: '2–6 cm (adjustable)' },
+    { label: 'Motor Power', value: '10 HP' },
+    { label: 'Capacity', value: '1 TON/Hour' },
+    { label: 'Tyre Diameter Compatibility', value: 'Up to 1200 mm' },
+    { label: 'Machine Size (L x W x H)', value: '1.5 M x 1.0 M x 1.2 M' },
+    { label: 'Weight', value: '800–850 kg' }
+  ];
+
   return (
     <div className="tbf-page">
 
-      {/* Header (gradient) */}
-      <header className="tbf-header text-white text-center py-5">
+      {/* Enhanced Header */}
+      <header className="tbf-header-enhanced text-white py-5 position-relative">
         <Container>
-          <h1 className="tbf-heading">Strip Cutter</h1>
+          <Row className="align-items-center">
+            <Col md={6} className="text-center text-md-start">
+              <h1 className="tbf-heading display-5 fw-bold">Strip Cutter</h1>
+              <p className="lead mt-3">
+                Industrial-grade precision cutting solution for rubber and plastic strips with heavy-duty performance and robust design.
+              </p>
+            </Col>
+            <Col md={6} className="text-center mt-4 mt-md-0">
+              <img src={stripcutter} alt="Strip Cutter Machine" className="stripcutter-image img-fluid" />
+            </Col>
+          </Row>
         </Container>
       </header>
 
@@ -45,6 +65,16 @@ const StripCutter = () => {
           Our Strip Cutter offers precise and efficient cutting solutions for various industrial strip materials, enhancing productivity and product quality.
         </p>
       </div>
+
+{/* Floating Technical Overview */}
+          <div className="specs-box shadow">
+            <h5 className="fw-bold mb-3">Technical Overview</h5>
+            <ul className="list-unstyled mb-0">
+              {specs.map((item, idx) => (
+                <li key={idx}><strong>{item.label}:</strong> {item.value}</li>
+              ))}
+            </ul>
+          </div>
 
       {/* Features Section */}
       <section className="tbf-section tbf-features">
