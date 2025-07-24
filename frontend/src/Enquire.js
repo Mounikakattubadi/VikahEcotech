@@ -97,7 +97,7 @@ const Enquire = () => {
           }
         }
       );
-      alert('Thanks for sending enquiry. One of our executives will get back to you: ' + response.data);
+      alert('Email-sent: ' + response.data);
     } catch (error) {
       alert('Failed to send email: ' + error.message);
     } finally {
