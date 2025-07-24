@@ -31,10 +31,22 @@ const Enquire = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const models = {
-    baler: ["BLT150", "BLT200", "BLT250"],
-    shredder: ["SHT6000", "SHT8000", "SHT12000"],
-    "tyre-cutting": ["TCPCR100", "TCTB100", "TCOTR100"],
-    "folding-machine": ["TFPCR100", "TFTBR100"],
+    baler: ["Tyre Scrap Balers", "Plastic Balers", "Card Board Balers", "Metal Balers"],
+    shredder: ["Tyre Shredder", "Metal Shredder", "Plastic Shredder", "Paper and Cardboard Shredder"],
+    "secondary-shredder": ["Rasper", "Metal Shredders", "Plastic Shredder", "Paper and Cardboard Shredder"],
+    "other-equipment": [
+      "Tumble Back Feeder",
+      "Feeding & Discharge Conveyers",
+      "Vibrators",
+      "Classifiers",
+      "Overband Magnetic Steel Separators",
+      "Beedwire Remover",
+      "Strip Cutter",
+      "Block Cutter",
+      "Side Wall Remover",
+      "Cutting Equipment",
+      "Folding Equipment"
+    ],
   };
 
   useEffect(() => {
@@ -56,7 +68,6 @@ const Enquire = () => {
 
   const validateForm = () => {
     const newErrors = {};
-
     if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
@@ -66,7 +77,7 @@ const Enquire = () => {
     if (!formData.phone.trim()) {
       newErrors.phone = 'Phone is required';
     } else if (!/^\d{10,15}$/.test(formData.phone)) {
-      newErrors.phone = 'Phone must be a valid number (10-15 digits)';
+      newErrors.phone = 'Phone must be valid (10–15 digits)';
     }
     if (!formData.address.trim()) newErrors.address = 'Address is required';
     if (!formData.city.trim()) newErrors.city = 'City is required';
@@ -78,11 +89,9 @@ const Enquire = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!validateForm()) {
-      return;
-    }
-    setIsSubmitting(true);
+    if (!validateForm()) return;
 
+    setIsSubmitting(true);
     try {
       const response = await axios.post(
         'https://www.vikahecotech.com/send-email.php',
@@ -92,12 +101,10 @@ const Enquire = () => {
           model: selectedModel
         },
         {
-          headers: {
-            'Content-Type': 'application/json'
-          }
+          headers: { 'Content-Type': 'application/json' }
         }
       );
-      alert('Email-sent: ' + response.data);
+      alert('Email sent: ' + response.data);
     } catch (error) {
       alert('Failed to send email: ' + error.message);
     } finally {
@@ -106,41 +113,41 @@ const Enquire = () => {
   };
 
   return (
-    <>
-      <div className="login-page">
+    <div className="login-page">
       <div className='enqheadcontainer'>
         <h3 className='enqhead'>
-          Please fill in your details to know more about our products and Services. We will get back to you within 48 hours
+          Please fill in your details to know more about our products and Services. We will get back to you within 48 hours.
         </h3>
-        <div className='enquiryform'> Enquiry form</div>
+        <div className='enquiryform'> Enquiry Form</div>
       </div>
+
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="name">Name:</label>
-              <input type="text" id="name" name="name" value={formData.name} onChange={handleInputChange} />
+              <input type="text" name="name" value={formData.name} onChange={handleInputChange} />
               {errors.name && <p className="error">{errors.name}</p>}
             </div>
             <div className="form-group">
               <label htmlFor="company">Company Name:</label>
-              <input type="text" id="company" name="company" value={formData.company} onChange={handleInputChange} />
+              <input type="text" name="company" value={formData.company} onChange={handleInputChange} />
             </div>
           </div>
 
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="machinery">Machinery:</label>
-              <select id="machinery" name="machinery" value={selectedMachinery} onChange={handleMachineryChange}>
+              <select name="machinery" value={selectedMachinery} onChange={handleMachineryChange}>
                 <option value="baler">Baler</option>
-                <option value="shredder">Shredder</option>
-                <option value="tyre-cutting">Tyre Cutting</option>
-                <option value="folding-machine">Folding Machine</option>
+                <option value="shredder">Primary Shredder</option>
+                <option value="secondary-shredder">Secondary Shredder</option>
+                <option value="other-equipment">Other Equipment</option>
               </select>
             </div>
             <div className="form-group">
-              <label htmlFor="model">Model No:</label>
-              <select id="model" name="model" value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)}>
+              <label htmlFor="model">Applications:</label>
+              <select name="model" value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)}>
                 {models[selectedMachinery]?.map((model) => (
                   <option key={model} value={model}>{model}</option>
                 ))}
@@ -150,46 +157,46 @@ const Enquire = () => {
 
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="email">Email:</label>
-              <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} />
+              <label>Email:</label>
+              <input type="email" name="email" value={formData.email} onChange={handleInputChange} />
               {errors.email && <p className="error">{errors.email}</p>}
             </div>
             <div className="form-group">
-              <label htmlFor="website">Website:</label>
-              <input type="text" id="website" name="website" value={formData.website} onChange={handleInputChange} />
+              <label>Website:</label>
+              <input type="text" name="website" value={formData.website} onChange={handleInputChange} />
             </div>
           </div>
 
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="phone">Phone:</label>
-              <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} />
+              <label>Phone:</label>
+              <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} />
               {errors.phone && <p className="error">{errors.phone}</p>}
             </div>
             <div className="form-group">
-              <label htmlFor="address">Address:</label>
-              <input type="text" id="address" name="address" value={formData.address} onChange={handleInputChange} />
+              <label>Address:</label>
+              <input type="text" name="address" value={formData.address} onChange={handleInputChange} />
               {errors.address && <p className="error">{errors.address}</p>}
             </div>
           </div>
 
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="city">City:</label>
-              <input type="text" id="city" name="city" value={formData.city} onChange={handleInputChange} />
+              <label>City:</label>
+              <input type="text" name="city" value={formData.city} onChange={handleInputChange} />
               {errors.city && <p className="error">{errors.city}</p>}
             </div>
             <div className="form-group">
-              <label htmlFor="country">Country:</label>
-              <input type="text" id="country" name="country" value={formData.country} onChange={handleInputChange} />
+              <label>Country:</label>
+              <input type="text" name="country" value={formData.country} onChange={handleInputChange} />
               {errors.country && <p className="error">{errors.country}</p>}
             </div>
           </div>
 
           <div className="form-row">
             <div className="form-group">
-              <label htmlFor="message">Message:</label>
-              <textarea id="message" name="message" value={formData.message} onChange={handleInputChange}></textarea>
+              <label>Message:</label>
+              <textarea name="message" value={formData.message} onChange={handleInputChange}></textarea>
             </div>
           </div>
 
@@ -200,8 +207,7 @@ const Enquire = () => {
           </div>
         </form>
       </div>
-      </div>
-    </>
+    </div>
   );
 };
 
