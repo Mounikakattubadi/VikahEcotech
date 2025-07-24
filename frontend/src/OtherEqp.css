@@ -129,3 +129,13 @@
 .tbf-contact-section a {
   text-decoration: underline;
 }
+
+/*Images Section*/
+
+.product-img {
+  height: 60%;
+  width: 70%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}

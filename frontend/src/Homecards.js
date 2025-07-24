@@ -54,13 +54,13 @@ const Homecards = () => {
                     className={styles.cardImage}
                   />
                 ) : (
-                  <div className={styles.placeholderText}>Uploading Soon</div>
+<div className={styles.placeholderText}>Click Here 👉</div>
                 )}
               </div>
               <div className={styles.cardDetails}>
                 <p className={styles.title}>{card.title}</p>
                 <button className={`${styles.buyButton} ${styles[card.btnClass]}`}>
-                  Know More
+                  Know More 
                 </button>
               </div>
             </div>

@@ -57,6 +57,9 @@ const offices = [
 
 function Contact() {
   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+  useEffect(() => {
     AOS.init({
       duration: 1000,
       once: true
