@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import vibrator from './images/vibrator.jpg'; // Ensure this path is correct
+import vibrator from './images/vibrator.png'; // Ensure this path is correct
 
 const Vibrators = () => {
   useEffect(() => {

@@ -5,9 +5,9 @@ import Tyrecuttingimg from './images/tyrecutting1.jpg'; // For Cutting Equipment
 import tyrefolding from './images/tyre folding1.jpg'; // For Folding Equipment
 import TumbleBackFeeder from './images/Tumbleback-Feeder.png';
 import fdconveyer from "./images/fdconveyer.jpg";
-import vibrator from "./images/vibrator.jpg";
-import classifier from "./images/classifier.webp";
-import oms from "./images/oms.jpeg";
+import vibrator from "./images/vibrator.png";
+import classifier from "./images/classifier.png";
+import oms from "./images/oms.png";
 import beedwireremover from "./images/beedwireremover.webp";
 import stripcutter from "./images/stripcutter1.png";
 import blockcutter from "./images/blockcutter.jpg";
