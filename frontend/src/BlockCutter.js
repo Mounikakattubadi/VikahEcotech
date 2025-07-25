@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import blockcutter from "./images/blockcutter.jpg";
+import blockcutter from "./images/blockcutter.png";
 
 const BlockCutter = () => {
   useEffect(() => {

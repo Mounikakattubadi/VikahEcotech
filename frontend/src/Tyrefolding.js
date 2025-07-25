@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Tyrecutting.css';
 import './Models.css';
-import tyrefoldingimg from "./images/tyre folding1.jpg";
+import tyrefoldingimg from "./images/tyre_folding1.png";
 import tyrefoldingimg1 from "./images/tyre folding2.jpg";
 
 function Tyrefolding() {

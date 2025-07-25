@@ -1,17 +1,17 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import othereqp from './OtherEqp.module.css';
-import Tyrecuttingimg from './images/tyrecutting1.jpg'; // For Cutting Equipment
-import tyrefolding from './images/tyre folding1.jpg'; // For Folding Equipment
+import Tyrecuttingimg from './images/tyrecutting1.png'; // For Cutting Equipment
+import tyrefolding from './images/tyre_folding1.png'; // For Folding Equipment
 import TumbleBackFeeder from './images/Tumbleback-Feeder.png';
-import fdconveyer from "./images/fdconveyer.jpg";
+import fdconveyer from "./images/fdconveyer.png";
 import vibrator from "./images/vibrator.png";
 import classifier from "./images/classifier.png";
 import oms from "./images/oms.png";
-import beedwireremover from "./images/beedwireremover.webp";
+import beedwireremover from "./images/beedwireremover.png";
 import stripcutter from "./images/stripcutter1.png";
-import blockcutter from "./images/blockcutter.jpg";
-import sidewallremover from "./images/sidewallremover.jpg";
+import blockcutter from "./images/blockcutter.png";
+import sidewallremover from "./images/sidewallremover.png";
 
 const OtherEquipment = () => {
   useEffect(() => {

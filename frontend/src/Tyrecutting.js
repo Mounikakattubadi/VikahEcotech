@@ -3,7 +3,7 @@ import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Tyrecutting.css';
 import './Models.css'; // Shared styles
-import tyrecimage from "./images/tyrecutting1.jpg";
+import tyrecimage from "./images/tyrecutting1.png";
 import tyrecimage2 from "./images/tyrecutting2.webp";
 import tyrecimage3 from "./images/tyrecutting3.jpg";
 
