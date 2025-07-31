@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
-import gif from "./images/top3.gif";
+import gif from "./images/green_combo_top.gif";
 import partnerImage from "./images/Tradefair/1.12.jpg";
 import Baler from "./images/baler.png";
 import Baler1 from "./images/baler1.png";

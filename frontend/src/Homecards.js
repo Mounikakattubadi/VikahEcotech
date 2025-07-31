@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Homecards.module.css";
-import Baler from "./images/baler8.jpg";
+import Baler from "./images/baler_bg.png";
 import shredderhdimg from "./images/Shedder _ Final PNG.png";
 import Baler1 from "./images/baler1.png";
 import shred2 from "./images/secondaryshredder2.jpg";

@@ -49,6 +49,9 @@ import SecondaryMetalshredder from './SecondaryMetalshredder.js';
 import SecondaryPlasticShredder from './SecondaryPlasticShredder.js';
 import SecondaryPcb from './SecondaryPcb.js';
 import Homecards from './Homecards.js';
+import ScrollToTopButton from './ScrollToTopButton';
+
+
 function App() {
   return (
     <Router>
@@ -106,7 +109,9 @@ function App() {
 
       </Routes>
       <Footer />
+      <ScrollToTopButton />
     </Router>
+
   );
 }
 

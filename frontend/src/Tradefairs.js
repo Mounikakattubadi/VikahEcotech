@@ -45,6 +45,29 @@ const TradeFairs = () => {
               </div>
             </div>
           </div>
+                    <div className="trade-card position-relative">
+                      <div className="upcoming-badge">Upcoming Trade Fair</div>
+                      <img src={ifatimg} alt="Eco Sustain Expo" className="trade-img" />
+                      <div className="trade-content p-3">
+                        <h5>IFAT India</h5>
+                        <p>
+                          IFAT India has been bringing together professionals and experts from various sectors of the water, sewage, waste, 
+                          and recycling industry, providing the entire industry with a platform for knowledge exchange, networking, 
+                          and the opportunity to forge partnerships between industry players, policy makers, and environmental experts.
+                        </p>
+                        <p><strong>Date:</strong> 14-10-2025 to 16-10-2025</p>
+                        <p><strong>Location:</strong> Bombay Exhibition Centre, Mumbai</p>
+                        <p><strong>Booth No:</strong> 2 / F025 </p>
+                        <a
+                          href="https://ifat.de/en/india/"
+                          className="btn btn-success"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Explore Ifat 2025
+                        </a>
+                      </div>
+                    </div>
 
           {/* EnviroTech Asia */}
           <div className="col-md-6">

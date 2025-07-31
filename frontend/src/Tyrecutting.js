@@ -97,7 +97,10 @@ function Tyrecutting() {
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p>
             For more information about our products and services, please visit our{' '}
-            <Link to="/ourproducts" className="fw-bold text-white text-decoration-underline">product range</Link> or reach us at{' '}
+            <a href="#/ourproducts" className="fw-bold text-white text-decoration-underline">
+  product range 
+</a>
+  <span> or reach us at{' '}</span>
             <a href="mailto:info@vikahecotech.com" className="text-white text-decoration-underline">info@vikahecotech.com</a>.
           </p>
         </Col>

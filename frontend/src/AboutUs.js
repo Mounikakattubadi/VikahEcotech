@@ -59,7 +59,7 @@ const AboutUs = () => {
             <h4 className="fw-bold mb-3">Get in Touch</h4>
             <p>
               For more information about our products and services, please visit our{" "}
-              <a href="/ourproducts" className="fw-bold">product range</a> or reach us at{" "}
+              <a href="#/ourproducts" className="fw-bold">product range</a> or reach us at{" "}
               <a href="mailto:info@vikahecotech.com">info@vikahecotech.com</a>.
             </p>
           </Col>
