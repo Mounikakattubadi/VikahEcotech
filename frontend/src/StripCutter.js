@@ -11,7 +11,7 @@ const StripCutter = () => {
   }, []);
 
   const features = [
-    { title: 'Precision Cutting', description: 'Designed to deliver clean and accurate cuts for various strip materials.' },
+    { title: 'Precision Cutting', description: 'Designed to deliver clean and accurate cuts for various Waste Rubber materials.' },
     { title: 'Heavy-Duty Construction', description: 'Built with robust components to withstand continuous industrial use.' },
     { title: 'Adjustable Cutting Lengths', description: 'Easily adjustable settings to accommodate different strip sizes and thicknesses.' },
     { title: 'User-Friendly Controls', description: 'Intuitive interface for smooth operation and minimal training required.' },
@@ -23,11 +23,8 @@ const StripCutter = () => {
 
   const applications = [
     'Recycling Facilities',
-    'Manufacturing Plants',
-    'Packaging Industry',
-    'Metal Processing',
-    'Plastic Processing',
     'Waste Management',
+    'Rubber Recycling',
   ];
 
   const specs = [
@@ -49,7 +46,7 @@ const StripCutter = () => {
             <Col md={6} className="text-center text-md-start">
               <h1 className="tbf-heading display-5 fw-bold">Strip Cutter</h1>
               <p className="lead mt-3">
-                Industrial-grade precision cutting solution for rubber and plastic strips with heavy-duty performance and robust design.
+                Industrial-grade precision cutting solution for rubber strips with heavy-duty performance and robust design.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
@@ -62,7 +59,7 @@ const StripCutter = () => {
       {/* Intro Paragraph */}
       <div className="tbf-intro container text-center my-4">
         <p className="lead">
-          Our Strip Cutter offers precise and efficient cutting solutions for various industrial strip materials, enhancing productivity and product quality.
+          Our Strip Cutter offers precise and efficient cutting solutions for waste Rubber materials, enhancing productivity and product quality.
         </p>
       </div>
 

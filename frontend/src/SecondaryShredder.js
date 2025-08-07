@@ -4,7 +4,7 @@ import './Baler.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import img1 from "./images/secondaryshredder1.jpg";
-import img2 from "./images/secondaryshredder2.jpg";
+import img2 from "./images/secondaryshredder1.png";
 import img3 from "./images/secondaryshredder3.jpg";
 import shredderhd from "./images/st.jpeg";
 import shredderhd1 from "./images/shredder_hd1.jpg";

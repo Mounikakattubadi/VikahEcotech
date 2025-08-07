@@ -48,9 +48,9 @@ const Conveyers = () => {
         <Container>
           <Row className="align-items-center">
             <Col md={6} className="text-center text-md-start">
-              <h1 className="tbf-heading display-5 fw-bold">Feeding & Discharge Conveyers</h1>
+              <h1 className="tbf-heading display-5 fw-bold">Feeding & Discharge Conveyors</h1>
               <p className="lead mt-3">
-                Our Feeding & Discharge Conveyers are designed to efficiently move materials through your production or recycling line, improving productivity and reliability.
+                Our Feeding & Discharge Conveyors are designed to efficiently move materials through your production or recycling line, improving productivity and reliability.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
@@ -108,7 +108,7 @@ const Conveyers = () => {
         <Container>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p className="mb-0">
-            For more information about our Feeding & Discharge Conveyers, please contact us at{" "}
+            For more information about our Feeding & Discharge Conveyors, please contact us at{" "}
             <a href="mailto:info@vikahecotech.com" className="fw-bold text-white">info@vikahecotech.com</a>.
           </p>
         </Container>

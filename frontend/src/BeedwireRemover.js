@@ -26,8 +26,6 @@ const BeadwireRemover = () => {
     'Rubber Processing Facilities',
     'Steel Wire Recovery Operations',
     'Environmental Waste Management',
-    'Automotive Industry',
-    'Construction and Demolition Waste Processing'
   ];
 
   const specs = [

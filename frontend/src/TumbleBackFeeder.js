@@ -11,8 +11,8 @@ const TumbleBackFeeder = () => {
   }, []);
 
   const features = [
-    { title: 'Modular Design', description: 'Customizable head and tail sections (20–48 ft) for flexible installation.' },
-    { title: 'High Throughput', description: 'Handles 10–70 TPH depending on configuration and hopper type.' },
+    { title: 'Modular Design', description: 'Customizable head and tail sections for flexible installation.' },
+    { title: 'High Throughput', description: 'Handles 2-10 TPH depending on configuration and hopper type.' },
     { title: 'Gravity-Driven Mechanism', description: 'Utilizes gravity to efficiently remove oversized materials.' },
     { title: 'Durable Construction', description: 'Built with robust materials to withstand harsh recycling environments.' },
     { title: 'Adjustable Feeding Angle', description: 'Allows customization to suit specific material types and processing needs.' },

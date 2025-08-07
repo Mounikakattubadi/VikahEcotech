@@ -12,7 +12,7 @@ const BlockCutter = () => {
 
   const features = [
     { title: 'High Precision Cutting', description: 'Equipped with advanced cutting technology to ensure accurate and clean cuts.' },
-    { title: 'Versatile Applications', description: 'Suitable for cutting various materials including concrete, stone, and bricks.' },
+    { title: 'Versatile Applications', description: 'Suitable for cutting waste rubber materials including concrete, stone, and bricks.' },
     { title: 'Durable Construction', description: 'Built with high-quality materials to withstand rigorous industrial use.' },
     { title: 'User-Friendly Operation', description: 'Designed for ease of use, reducing operator training time.' },
     { title: 'Safety Features', description: 'Incorporates safety mechanisms to protect operators during operation.' },
@@ -22,13 +22,7 @@ const BlockCutter = () => {
   ];
 
   const applications = [
-    'Construction Industry',
-    'Masonry Work',
-    'Landscaping Projects',
-    'Road Construction',
-    'Building Renovations',
-    'Brick and Stone Cutting',
-    'Paving Stone Production',
+        'Rubber Recycling',
   ];
 
   // Optional: Add specs if you want to show a specs box like StripCutter, otherwise comment/remove
@@ -49,7 +43,7 @@ const BlockCutter = () => {
             <Col md={6} className="text-center text-md-start">
               <h1 className="tbf-heading display-5 fw-bold">Block Cutter</h1>
               <p className="lead mt-3">
-                Precise and durable block cutting machine designed for construction and masonry applications with user-friendly controls and robust build.
+                Precise and durable block cutting machine to cut rubber into particular size with user-friendly controls and robust build.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
@@ -62,7 +56,7 @@ const BlockCutter = () => {
       {/* Intro Paragraph */}
       <div className="tbf-intro container text-center my-4">
         <p className="lead">
-          Our Block Cutter machines provide efficient and accurate cutting of various construction materials, enhancing productivity and quality in your projects.
+          Our Block Cutter machines provide efficient and accurate cutting of rubber waste materials, enhancing productivity and quality in your projects.
         </p>
       </div>
 

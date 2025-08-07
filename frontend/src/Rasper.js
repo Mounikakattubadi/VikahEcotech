@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
-import shredderhd from "./images/secondaryshredder1.jpg";
-import shredderhd1 from "./images/secondaryshredder2.jpg";
+import shredderhd from "./images/secondaryshredder1.png";
+import shredderhd1 from "./images/secondaryshredder2.png";
 import shredderhdimg from "./images/secondaryshredder3.jpg";
 
 const Sht4000 = () => {
@@ -101,97 +101,136 @@ const Sht4000 = () => {
                 </div>
             </div>
 
-            <h1 className="technical-heading">Technical Specifications</h1>
-            <div className="featurestable">
-                <h3>Electrical System</h3>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Power</td>
-                            <td>180 HP</td>
-                        </tr>
-                        <tr>
-                            <td>No Of Motors</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>Voltage</td>
-                            <td>As per Clients Requirement</td>
-                        </tr>
-                        <tr>
-                            <td>Drive</td>
-                            <td>Electric</td>
-                        </tr>
-                        <tr>
-                            <td>Panel</td>
-                            <td>MCC (Shall be suitable to 415v, 3 Phase, 50Hz AC Supply Drive)</td>
-                        </tr>
-                        <tr>
-                            <td>Motor Make</td>
-                            <td>Siemens / Abb / Equivalent
-</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+<h1 className="technical-heading">Technical Specifications</h1>
 
-            <div className="cuttingsection">
-                <h3>Cutting Section</h3>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Cutting Chamber:</td>
-                            <td>1600 x 960 mm</td>
-                        </tr>
-                        <tr>
-                            <td>Blades Thickness</td>
-                            <td>45 mm</td>
-                        </tr>
+<div className="featurestable">
+    <h3>Electrical System</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>Power</td>
+                <td>180 HP (132 kW)</td>
+            </tr>
+            <tr>
+                <td>No Of Motors</td>
+                <td>1 No. ABB Motor</td>
+            </tr>
+            <tr>
+                <td>Voltage</td>
+                <td>As per Customer's Requirement</td>
+            </tr>
+            <tr>
+                <td>Drive</td>
+                <td>ABB 160kW (H.D.), ACS580, 363A SIZE: R9 ,580-01-360A-4+P944+3B SDT</td>
+            </tr>
+            <tr>
+                <td>Electric Equipment’s</td>
+                <td>Schneider / ABB</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-                        <tr>
-                            <td>Hopper Height</td>
-                            <td>1400 mm</td>
-                        </tr>
-                        <tr>
-                            <td>Discharge Height</td>
-                            <td>2550 mm</td>
-                        </tr>
-                        <tr>
-                            <td>Feeding Mechanism</td>
-                            <td>Auto</td>
-                        </tr>
+<div className="cuttingsection">
+    <h3>Cutting Section</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>Cutting Chamber</td>
+                <td>L1240 mm × W1100 mm × H1000 mm (Hydraulics Opening)</td>
+            </tr>
+            <tr>
+                <td>Number of Shaft</td>
+                <td>1 Nos</td>
+            </tr>
+            <tr>
+                <td>Shaft Diameter</td>
+                <td>500 mm</td>
+            </tr>
+            <tr>
+                <td>Shaft Length</td>
+                <td>2100 mm</td>
+            </tr>
+            <tr>
+                <td>No. of Rotating Blades</td>
+                <td>42 Nos. (L 190 mm × W 58 mm × T 100 mm)</td>
+            </tr>
+            <tr>
+                <td>No. of Static Blades</td>
+                <td>6 Nos. (L 380 mm × W 120 mm × T 30 mm)</td>
+            </tr>
+            <tr>
+                <td>No. of Fixed Blade Mounting Blocks</td>
+                <td>42 Nos. (L 190 mm × W 135 mm × T 50 mm)</td>
+            </tr>
+            <tr>
+                <td>No. of Blades Locking Blocks (Type 4 Hole)</td>
+                <td>42 Nos. (L 190 mm × W 56 mm × T 50 mm)</td>
+            </tr>
+            <tr>
+                <td>Screen</td>
+                <td>MS 28 mm (Hydraulics Opening)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-                    </tbody>
-                </table>
-            </div>
+<div className="dimensions">
+    <h3>Gearbox and Hydraulics</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>Number of Gear Box</td>
+                <td>1 No., REGGIANA RIDUTTORI, RR6500L2MC:1</td>
+            </tr>
+            <tr>
+                <td>Number of Couplings</td>
+                <td>02 Nos SYTCO Brakes & Torque Limiter</td>
+            </tr>
+            <tr>
+                <td>Type of Coupling</td>
+                <td>Gear Coupling 1 Nos., Torque Limiter Coupling 1 Nos (1000/250 A/kes2ps)</td>
+            </tr>
+            <tr>
+                <td>Type of Bearings and Housing</td>
+                <td>J&J SNLN-3040-23040-kenw33-2C55, KVT 143 H3040, 2 Nos</td>
+            </tr>
+            <tr>
+                <td>Hydraulics</td>
+                <td>4 Nos 2 ton cylinder with Power Pack yuken 80LPM pump – 2 HP motor</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
-            <div className="dimensions">
-                <h3>Dimensions and Weight</h3>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>Equipment Length</td>
-                            <td>6000 mm</td>
-                        </tr>
-                        <tr>
-                            <td>Equipment Width</td>
-                            <td>2200 mm</td>
-                        </tr>
-                        <tr>
-                            <td>Equipment Height</td>
-                            <td>4855 mm</td>
-                        </tr>
-                        <tr>
-                            <td>Transport Height (H)</td>
-                            <td>2700 mm</td>
-                        </tr>
-                        <tr>
-                            <td>Equipment Weight (Approx)</td>
-                            <td>22500 Kilogram</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+<div className="dimensions">
+    <h3>Dimensions and Heights</h3>
+    <table>
+        <tbody>
+            <tr>
+                <td>Equipment Dimension (A x B x C)</td>
+                <td>L 5500 mm × W 2400 mm × H 3500 mm</td>
+            </tr>
+            <tr>
+                <td>Hopper Opening (G x F)</td>
+                <td>L 1280 mm × W 400 mm</td>
+            </tr>
+            <tr>
+                <td>Hopper Height (E)</td>
+                <td>850 mm</td>
+            </tr>
+            <tr>
+                <td>Discharge Height (D)</td>
+                <td>1800 mm</td>
+            </tr>
+            <tr>
+                <td>In Feed Height</td>
+                <td>2865 mm</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
             <div class="buttons-container">
                 <Link to={`/login?machinery=${machinery}&model=${model}`}>
                     <button className="login-button">Enquire Us</button>

@@ -22,12 +22,11 @@ const Classifiers = () => {
   ];
 
   const applications = [
-    'Chemical Industry',
     'Food Processing',
-    'Pharmaceutical Manufacturing',
     'Mineral Processing',
     'Plastic Recycling',
-    'Powder Coating',
+    'Metal Recycling',
+    'Rubber Recycling',
   ];
 
   const specs = [

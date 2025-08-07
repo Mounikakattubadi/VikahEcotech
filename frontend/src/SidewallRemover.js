@@ -18,15 +18,11 @@ const SidewallRemover = () => {
     { title: 'Low Maintenance', description: 'Designed for minimal upkeep and long-lasting performance.' },
     { title: 'Compact Design', description: 'Space-saving design fits well within existing production lines.' },
     { title: 'Safety Features', description: 'Incorporates safety guards and emergency stop functions.' },
-    { title: 'Versatile Applications', description: 'Suitable for use in recycling, manufacturing, and waste management industries.' }
+    { title: 'Versatile Applications', description: 'Suitable for use in recycling, manufacturing, and waste rubber management industries.' }
   ];
 
   const applications = [
-    'Recycling Plants',
-    'Manufacturing Facilities',
-    'Waste Processing Units',
-    'Material Recovery Facilities',
-    'Packaging Industry',
+            'Rubber Recycling',
   ];
 
   const specs = [
@@ -46,7 +42,7 @@ const SidewallRemover = () => {
             <Col md={6} className="text-center text-md-start">
               <h1 className="tbf-heading display-5 fw-bold">Side Wall Remover</h1>
               <p className="lead mt-3">
-                Our Side Wall Remover is designed to efficiently remove unwanted sidewall materials during processing, improving product quality and optimizing downstream operations.
+                Our Side Wall Remover is designed to efficiently remove Sidewalls from Passenger car tyres and Truck,bus,retail tyres, improving product quality and optimizing downstream operations.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
