@@ -230,16 +230,6 @@ const Sht4000 = () => {
         </tbody>
     </table>
 </div>
-
-            <div class="buttons-container">
-                <Link to={`/login?machinery=${machinery}&model=${model}`}>
-                    <button className="login-button">Enquire Us</button>
-                </Link>
-
-                <button className="downloadspeci-button" onClick={() => handleDownload('sht8000')}>
-                    Download Specifications
-                </button>
-            </div>
         </div>
     );
 };
