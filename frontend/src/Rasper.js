@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
-import shredderhd from "./images/secondaryshredder1.png";
-import shredderhd1 from "./images/secondaryshredder2.png";
-import shredderhdimg from "./images/secondaryshredder3.jpg";
+import shredderhd from "./images/ss_4.png";
+import shredderhd1 from "./images/ss_2.jpg";
+import shredderhdimg from "./images/ss_3.jpg";
 
 const Sht4000 = () => {
     const [mainImage, setMainImage] = useState(shredderhd1);

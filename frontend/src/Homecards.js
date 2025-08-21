@@ -4,7 +4,7 @@ import styles from "./Homecards.module.css";
 import Baler from "./images/baler_bg.png";
 import shredderhdimg from "./images/Shedder _ Final PNG.png";
 import Baler1 from "./images/baler1.png";
-import shred2 from "./images/secondaryshredder1.png";
+import shred2 from "./images/ss_4.png";
 import oms from "./images/osm1.png";
 
 const cards = [
