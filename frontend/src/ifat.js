@@ -45,9 +45,21 @@ const Ifat = () => {
     ];
 
     return (
+
+        <>
+        
+        <div>
+            <div className="about-top-section text-white text-center py-5">
+        <h1 className="display-5 fw-bold">Images and Videos of Ifat</h1>
+        {/* <p className="lead">Explore the key environmental expos and sustainability events we participate in, where innovation meets responsibility.</p> */}
+       <p className="mb-1"><strong></strong> 16-10-2024 to 18-10-2024</p>
+      </div>
+            </div>
+       
         <div  className="gallery-container">
             <ImageGallery items={images} />
         </div>
+         </>
     );
 };
 

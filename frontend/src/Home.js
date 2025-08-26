@@ -18,7 +18,7 @@ import Homecards from "./Homecards";
 
 function Home() {
   const productsRef = useRef(null);
-    const scrollToProducts = () => {
+  const scrollToProducts = () => {
     productsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
@@ -83,7 +83,6 @@ function Home() {
     );
   };
 
-
   const [activeTab, setActiveTab] = useState("upcoming");
 
   const scrollCards = (direction) => {
@@ -95,7 +94,6 @@ function Home() {
     }
   };
 
-  
   return (
     <>
       <div
@@ -125,10 +123,10 @@ function Home() {
           </Link>
         </div>
       </div>
-      
-<div ref={productsRef}>
-<Homecards/>
-</div>
+
+      <div ref={productsRef}>
+        <Homecards />
+      </div>
       {/* Our Products Section with background image */}
       {/* <div ref={productsRef} className="products-section-bg py-5">
         <div className="container text-center">
@@ -180,8 +178,6 @@ function Home() {
           </div>
         </div>
       </div> */}
-      
-
 
       {/* Trade Fair Section */}
       <div className="container my-5">
@@ -192,15 +188,17 @@ function Home() {
         {/* Tab Buttons */}
         <div className="d-flex justify-content-center mb-4">
           <button
-            className={`btn-tab mx-2 ${activeTab === "upcoming" ? "active" : ""
-              }`}
+            className={`btn-tab mx-2 ${
+              activeTab === "upcoming" ? "active" : ""
+            }`}
             onClick={() => setActiveTab("upcoming")}
           >
             Upcoming Trade Fair
           </button>
           <button
-            className={`btn-tab mx-2 ${activeTab === "completed" ? "active" : ""
-              }`}
+            className={`btn-tab mx-2 ${
+              activeTab === "completed" ? "active" : ""
+            }`}
             onClick={() => setActiveTab("completed")}
           >
             Completed Trade Fairs
@@ -223,66 +221,91 @@ function Home() {
           </button>
 
           {/* Scrollable Cards */}
-    <div className={`trade-scroll-wrapper d-flex ${activeTab === 'upcoming' ? 'single-card' : ''}`} id="tradeCardScroll">
-      {activeTab === "upcoming" && (
-        <>
-          {/* Upcoming Card 1 */}
-          <div className="trade-card position-relative">
-            <div className="upcoming-badge">Upcoming Trade Fair</div>
-            <img src={ece} alt="Eco Sustain Expo" className="trade-img" />
-            <div className="trade-content p-3">
-              <h5>Eco Sustain Expo & Conference</h5>
-              <p>
-                Eco Sustain Expo & Conference, an exceptional event
-                meticulously crafted by HITEX, Hyderabad that brings
-                together a diverse community of professionals, visionaries,
-                policymakers, researchers, and solution providers, all bound
-                by a resolute dedication to shaping a sustainable future.
-              </p>
-              <p><strong>Date:</strong> 22-08-2025 to 24-08-2025</p>
-              <p><strong>Location:</strong> HITEX Exhibition Center, Hyderabad</p>
-              <p><strong>Stall No:</strong> C06</p>
-              <a
-                href="https://ecosustainexpo.in/"
-                className="btn btn-success"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Explore Expo 2025
-              </a>
-            </div>
-          </div>
-
-          {/* Upcoming Card 2 */}
-          <div className="trade-card position-relative">
-            <div className="upcoming-badge">Upcoming Trade Fair</div>
-            <img src={ifatimg} alt="Eco Sustain Expo" className="trade-img" />
-            <div className="trade-content p-3">
-              <h5>IFAT India</h5>
-              <p>
-                IFAT India has been bringing together professionals and experts from various sectors of the water, sewage, waste, 
-                and recycling industry, providing the entire industry with a platform for knowledge exchange, networking, 
-                and the opportunity to forge partnerships between industry players, policy makers, and environmental experts.
-              </p>
-              <p><strong>Date:</strong> 14-10-2025 to 16-10-2025</p>
-              <p><strong>Location:</strong> Bombay Exhibition Centre, Mumbai</p>
-              <p><strong>Booth No:</strong> 2 / F025 </p>
-              <a
-                href="https://ifat.de/en/india/"
-                className="btn btn-success"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Explore Ifat 2025
-              </a>
-            </div>
-          </div>
-        </>
-      )}
+          <div
+            className={`trade-scroll-wrapper d-flex ${
+              activeTab === "upcoming" ? "single-card" : ""
+            }`}
+            id="tradeCardScroll"
+          >
+            {activeTab === "upcoming" && (
+              <>
+                {/* Upcoming Card  */}
+                <div className="d-flex justify-content-center">
+                  <div className="trade-card position-relative">
+                    <div className="upcoming-badge">Upcoming Trade Fair</div>
+                    <img
+                      src={ifatimg}
+                      alt="Eco Sustain Expo"
+                      className="trade-img"
+                    />
+                    <div className="trade-content p-3">
+                      <h5>IFAT India</h5>
+                      <p>
+                        IFAT India has been bringing together professionals and
+                        experts from various sectors of the water, sewage,
+                        waste, and recycling industry, providing the entire
+                        industry with a platform for knowledge exchange,
+                        networking, and the opportunity to forge partnerships
+                        between industry players, policy makers, and
+                        environmental experts.
+                      </p>
+                      <p>
+                        <strong>Date:</strong> 14-10-2025 to 16-10-2025
+                      </p>
+                      <p>
+                        <strong>Location:</strong> Bombay Exhibition Centre,
+                        Mumbai
+                      </p>
+                      <p>
+                        <strong>Booth No:</strong> 2 / F025{" "}
+                      </p>
+                      <a
+                        href="https://ifat.de/en/india/"
+                        className="btn btn-success"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Explore Ifat 2025
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </>
+            )}
 
             {activeTab === "completed" && (
               <>
                 {/* Completed Card 1 */}
+
+                <div className="trade-card position-relative">
+                  <img src={ece} alt="Eco Sustain Expo" className="trade-img" />
+                  <div className="trade-content p-3">
+                    <h5>Eco Sustain Expo & Conference</h5>
+                    <p>
+                      Eco Sustain Expo & Conference, an exceptional event
+                      meticulously crafted by HITEX, Hyderabad that brings
+                      together a diverse community of professionals,
+                      visionaries, policymakers, researchers, and solution
+                      providers, all bound by a resolute dedication to shaping a
+                      sustainable future.
+                    </p>
+                    <p>
+                      <strong>Date:</strong> 22-08-2025 to 24-08-2025
+                    </p>
+                    <p>
+                      <strong>Location:</strong> HITEX Exhibition Center,
+                      Hyderabad
+                    </p>
+                    <p>
+                      <strong>Stall No:</strong> C06
+                    </p>
+                    <Link to="/ecosustain2025" className="tradefairs-btn mt-3 align-self-start">
+                      Images and Videos
+                      </Link>
+                   
+                  </div>
+                </div>
+                {/* Completed Card 2 */}
                 <div className="trade-card">
                   <img
                     src={envirotechimg}
@@ -292,10 +315,13 @@ function Home() {
                   <div className="trade-content p-3">
                     <h5>EnviroTech Asia 2024</h5>
                     <p>
-                      The 7th edition will provide a platform for business leaders, investors, government officials, industry experts,
-                      and NGOs to share insights and opportunities in environmental protection and green business. It will be one of the largest
-                      gatherings in the environment sector, bringing
-                      together key stakeholders to drive sustainable development and environmental preservation.
+                      The 7th edition will provide a platform for business
+                      leaders, investors, government officials, industry
+                      experts, and NGOs to share insights and opportunities in
+                      environmental protection and green business. It will be
+                      one of the largest gatherings in the environment sector,
+                      bringing together key stakeholders to drive sustainable
+                      development and environmental preservation.
                     </p>
                     <p>
                       <strong>Date:</strong> 3–5 Dec 2024
@@ -310,15 +336,18 @@ function Home() {
                   </div>
                 </div>
 
-                {/* Completed Card 2 */}
+                {/* Completed Card 3 */}
                 <div className="trade-card">
                   <img src={ifatimg} alt="IFAT India" className="trade-img" />
                   <div className="trade-content p-3">
                     <h5>IFAT India</h5>
                     <p>
-                      IFAT India has been bringing together professionals and experts from various sectors of the water, sewage, waste,
-                      and recycling industry, providing the entire industry with a platform for knowledge exchange, networking,
-                      and the opportunity to forge partnerships between industry players, policy makers, and environmental experts.
+                      IFAT India has been bringing together professionals and
+                      experts from various sectors of the water, sewage, waste,
+                      and recycling industry, providing the entire industry with
+                      a platform for knowledge exchange, networking, and the
+                      opportunity to forge partnerships between industry
+                      players, policy makers, and environmental experts.
                     </p>
                     <p>
                       <strong>Date:</strong> 16–18 Oct 2024
@@ -330,12 +359,12 @@ function Home() {
                       <strong>Booth No:</strong> D016, Hall:3
                     </p>
                     <Link to="/ifat" className="btn btn-success">
-                      Know More
+                      Images and videos
                     </Link>
                   </div>
                 </div>
 
-                {/* Completed Card 3 */}
+                {/* Completed Card 4 */}
                 <div className="trade-card">
                   <img
                     src={ecosustainimg}
@@ -345,9 +374,12 @@ function Home() {
                   <div className="trade-content p-3">
                     <h5>Eco Sustain Expo & Conference</h5>
                     <p>
-                      Eco Sustain Expo & Conference, an exceptional event meticulously crafted by HITEX, Hyderabad that brings together a diverse community
-                      of professionals, visionaries, policymakers, researchers,
-                      and solution providers, all bound by a resolute dedication to shaping a sustainable future.
+                      Eco Sustain Expo & Conference, an exceptional event
+                      meticulously crafted by HITEX, Hyderabad that brings
+                      together a diverse community of professionals,
+                      visionaries, policymakers, researchers, and solution
+                      providers, all bound by a resolute dedication to shaping a
+                      sustainable future.
                     </p>
                     <p>
                       <strong>Date:</strong> 16–18 Aug 2024
@@ -360,7 +392,7 @@ function Home() {
                       <strong>Booth No:</strong> 4N01
                     </p>
                     <Link to="/completedTradefair1" className="btn btn-success">
-                      Know More
+                      Images and Videos
                     </Link>
                   </div>
                 </div>

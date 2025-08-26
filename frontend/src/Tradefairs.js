@@ -25,7 +25,7 @@ const TradeFairs = () => {
         <div className="row gy-4">
         <div className="col-md-6">
             <div className="tradefairs-card h-100 d-flex flex-column position-relative">
-            <div className="upcoming-badge">Upcoming Trade Fair</div>
+           
               <img src={ece} alt="Eco Sustain Expo" className="tradefairs-img" />
               <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
                 <div>
@@ -39,7 +39,7 @@ const TradeFairs = () => {
 
                   <p className="mb-1"><strong>Location:</strong> HITEX Exhibition Center, Hyderabad</p>
                   <p><strong>Stall No:</strong> C06 </p>
-                  <a href="https://ecosustainexpo.in/" className="btn btn-success" target="_blank" rel="noopener noreferrer">Explore Expo 2025</a>
+                  <Link to="/ecosustain2025" className="tradefairs-btn mt-3 align-self-start">images and videos</Link>
                 </div>
                 
               </div>
@@ -103,7 +103,7 @@ const TradeFairs = () => {
                   <p className="mb-1"><strong>Location:</strong> Mumbai Exhibition Centre</p>
                   <p><strong>Booth No:</strong> D016, Hall:3</p>
                 </div>
-                <Link to="/ifat" className="tradefairs-btn mt-3 align-self-start">Know More</Link>
+                <Link to="/ifat" className="tradefairs-btn mt-3 align-self-start">images and videos</Link>
                 
               </div>
             </div>
@@ -126,7 +126,7 @@ const TradeFairs = () => {
                   <p className="mb-1"><strong>Location:</strong> HITEX Exhibition Center, Hyderabad</p>
                   <p><strong>Booth No:</strong> 4N01</p>
                 </div>
-                <Link to="/CompletedTradefair1" className="tradefairs-btn mt-3 align-self-start">Know More</Link>
+                <Link to="/CompletedTradefair1" className="tradefairs-btn mt-3 align-self-start">images and videos</Link>
               </div>
             </div>
           </div>
