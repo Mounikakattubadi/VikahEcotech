@@ -17,6 +17,7 @@ const Ecosustain2025 = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    
 
     const images = [
         { original: t1, thumbnail: t1 },
