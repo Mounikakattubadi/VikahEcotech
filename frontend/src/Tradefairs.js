@@ -23,29 +23,7 @@ const TradeFairs = () => {
 
       <div className="container my-5">
         <div className="row gy-4">
-        <div className="col-md-6">
-            <div className="tradefairs-card h-100 d-flex flex-column position-relative">
-           
-              <img src={ece} alt="Eco Sustain Expo" className="tradefairs-img" />
-              <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
-                <div>
-                  <h5 className="mb-2">Eco Sustain Expo & Conference</h5>
-                  <p>Eco Sustain Expo & Conference, an exceptional event meticulously crafted by HITEX, Hyderabad that brings together a diverse community of
-                     professionals, visionaries, policymakers, researchers, and solution providers, all bound by a resolute dedication to shaping a sustainable future.
-                      In a world grappling with pressing global challenges like climate change, our event serves as a pivotal platform to drive transformative change 
-                      in waste management practices, inspire innovative solutions, and ignite a cleaner, greener world.
-                     Be part of this impactful movement with HITEX and let’s create a positive ripple effect for our planet.</p>
-                  <p className="mb-1"><strong>Date:</strong> 22-08-2025 to 24-08-2025</p>
-
-                  <p className="mb-1"><strong>Location:</strong> HITEX Exhibition Center, Hyderabad</p>
-                  <p><strong>Stall No:</strong> C06 </p>
-                  <Link to="/ecosustain2025" className="tradefairs-btn mt-3 align-self-start">images and videos</Link>
-                </div>
-                
-              </div>
-            </div>
-          </div>
-                    <div className="trade-card position-relative">
+                              <div className="trade-card position-relative">
                       <div className="upcoming-badge">Upcoming Trade Fair</div>
                       <img src={ifatimg} alt="Eco Sustain Expo" className="trade-img" />
                       <div className="trade-content p-3">
@@ -68,6 +46,29 @@ const TradeFairs = () => {
                         </a>
                       </div>
                     </div>
+        <div className="col-md-6">
+            <div className="tradefairs-card h-100 d-flex flex-column position-relative">
+           
+              <img src={ece} alt="Eco Sustain Expo" className="tradefairs-img" />
+              <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
+                <div>
+                  <h5 className="mb-2">Eco Sustain Expo & Conference</h5>
+                  <p>Eco Sustain Expo & Conference, an exceptional event meticulously crafted by HITEX, Hyderabad that brings together a diverse community of
+                     professionals, visionaries, policymakers, researchers, and solution providers, all bound by a resolute dedication to shaping a sustainable future.
+                      In a world grappling with pressing global challenges like climate change, our event serves as a pivotal platform to drive transformative change 
+                      in waste management practices, inspire innovative solutions, and ignite a cleaner, greener world.
+                     Be part of this impactful movement with HITEX and let’s create a positive ripple effect for our planet.</p>
+                  <p className="mb-1"><strong>Date:</strong> 22-08-2025 to 24-08-2025</p>
+
+                  <p className="mb-1"><strong>Location:</strong> HITEX Exhibition Center, Hyderabad</p>
+                  <p><strong>Stall No:</strong> C06 </p>
+                  <Link to="/ecosustain2025" className="tradefairs-btn mt-3 align-self-start">images and videos</Link>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+
 
           {/* EnviroTech Asia */}
           <div className="col-md-6">
