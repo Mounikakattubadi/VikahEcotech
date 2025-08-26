@@ -43,6 +43,7 @@ const Ifat = () => {
         )}
     
     ];
+    
 
     return (
 
