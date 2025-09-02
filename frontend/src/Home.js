@@ -257,7 +257,7 @@ function Home() {
                         Mumbai
                       </p>
                       <p>
-                        <strong>Booth No:</strong> 2 / F025{" "}
+                        <strong>Booth No:</strong> 2 / B005{" "}
                       </p>
                       <a
                         href="https://ifat.de/en/india/"

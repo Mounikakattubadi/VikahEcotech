@@ -35,7 +35,7 @@ const TradeFairs = () => {
                         </p>
                         <p><strong>Date:</strong> 14-10-2025 to 16-10-2025</p>
                         <p><strong>Location:</strong> Bombay Exhibition Centre, Mumbai</p>
-                        <p><strong>Booth No:</strong> 2 / F025 </p>
+                        <p><strong>Booth No:</strong> 2 / B005 </p>
                         <a
                           href="https://ifat.de/en/india/"
                           className="btn btn-success"
