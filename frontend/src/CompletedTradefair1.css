@@ -1,4 +1,4 @@
-/* Ensure gallery container and video fit correctly */
+/* Gallery Container */
 .gallery-container {
   margin: 0 auto;
   max-width: 80%;
@@ -6,6 +6,7 @@
   margin-top: 6%;
 }
 
+/* General Gallery Styles */
 div.gallery {
   border: 1px solid #ccc;
   position: relative;
@@ -30,6 +31,7 @@ div.gallery video {
   box-sizing: border-box;
 }
 
+/* Responsive Layout */
 .responsive {
   padding: 10px;
   float: left;
@@ -42,18 +44,16 @@ div.gallery video {
     margin-left: 8%;
     margin-top: 16%;
   }
+
+  .responsive {
+    width: calc(50% - 20px);
+  }
 }
 
 @media (min-width: 700px) and (max-width: 1000px) {
   .gallery-container {
     margin-left: 8%;
     margin-top: 10%;
-  }
-}
-
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: calc(50% - 20px);
   }
 }
 
@@ -64,33 +64,44 @@ div.gallery video {
   }
 }
 
+/* Flexbox clearfix */
 .clearfix {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/* Video-specific styling */
+/* Video Gallery */
 .video-gallery {
   position: relative;
   overflow: hidden;
 }
 
-.video-gallery video {
+/* YouTube Embed Wrapper */
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 540px;
-  object-fit: contain;
+  height: 100%;
 }
 
-/* Override fullscreen styles */
-.image-gallery-fullscreen .video-gallery video {
-  width: 100vw;  /* Set the video to the viewport width */
-  height: 100vh; /* Set the video to the viewport height */
-  object-fit: cover; /* Ensure the video covers the entire fullscreen without stretching */
+/* Fullscreen Override */
+.image-gallery-fullscreen .video-gallery iframe {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
+/* Hide Play Button */
 .image-gallery-play-button {
   display: none;
   left: 10% !important;
 }
-
