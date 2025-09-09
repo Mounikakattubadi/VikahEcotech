@@ -1,92 +1,150 @@
+/* =============================
+   Baler Page Styling
+   ============================= */
+
+/* Header Section */
 .baler-header {
-  background: linear-gradient(135deg, #221ce6, #019545);
+  background: linear-gradient(135deg, #006400, #32cd32); /* deep eco green → bright eco green */
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Decorative Eco Symbol */
+.baler-header::before {
+  content: "♻";
+  font-size: 10rem;
+  color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  top: -30px;
+  left: -15px;
+  transform: rotate(-25deg);
+}
+
+/* Title */
 .baler-header h1 {
   font-family: 'Oswald', sans-serif;
-  font-size: 3rem;          /* Bigger size */
-  font-weight: 700;         /* Extra bold */
+  font-size: 3rem;
+  font-weight: 700;
   text-transform: uppercase;
-  color: #ffffff;           /* White for contrast */
-  letter-spacing: 0.5px;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4); /* subtle shadow */
-  border-bottom: 3px solid rgba(255, 255, 255, 0.4);
-  display: inline-block;
-  padding-bottom: 0.3rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 1rem;
-  transition: text-shadow 0.3s ease-in-out;
+  display: inline-block;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.4rem;
+  transition: text-shadow 0.3s ease-in-out, transform 0.2s ease;
 }
 
 .baler-header h1:hover {
-  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6);
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+  transform: scale(1.03);
 }
 
-.description-below-heading {
-  font-size: 1rem;
-  color: #333;          /* Dark text for readability */
-  max-width: 800px;
-  margin: 0 auto;
-}
-
+/* Sub-heading text */
+.description-below-heading,
 .baler-header p {
-  font-size: 0.95rem;
-  max-width: 800px;
+  font-size: 1rem;
+  max-width: 780px;
   margin: 0 auto;
+  color: #000000;
+  line-height: 1.7;
 }
 
-/* Section Titles */
+/* Section Headings */
 .section-headingbaler {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: #019545;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #228b22; /* forest green */
+  margin-bottom: 1.2rem;
+  position: relative;
 }
 
+.section-headingbaler::before {
+  
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* Background Section */
 .balerbackimg {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('./images/backimg6.png') center/cover no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
+  background: url('./images/backimg6.png') center/cover no-repeat fixed;
+  padding: 3rem 0;
+  border-radius: 16px;
 }
 
-/* Key Features List */
+/* Features */
 .feature-list {
   list-style: none;
   padding-left: 0;
 }
 
 .feature-item {
-  border-left: 4px solid #007BFF;
+  border-left: 5px solid #32cd32; /* eco green */
   padding-left: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease;
 }
 
-.feature-icon .badge {
-  font-size: 0.8rem;
+.feature-item:hover {
+  transform: translateX(6px);
 }
 
 .feature-title {
   font-size: 1rem;
-  font-weight: 600;
-  color: #333;
+  font-weight: 700;
+  color: #006400;
 }
 
 .feature-desc {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.95rem;
+  color: #444;
 }
 
 /* Applications List */
 .app-list .list-group-item {
-  font-size: 0.9rem;
-  padding: 0.5rem 1rem;
-  border-left: 4px solid #00BCD4;
-  background-color: #fff;
-  border-radius: 0;
+  font-size: 0.95rem;
+  padding: 0.6rem 1rem;
+  border-left: 4px solid #2e8b57; /* sea green */
+  background-color: #f8fff8;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s ease;
 }
 
-/* Responsive Tweaks */
+.app-list .list-group-item:hover {
+  background-color: #eaffea;
+}
+
+/* Enquiry Section */
+.enquiry-section {
+  background: linear-gradient(135deg, #228b22, #32cd32);
+  color: white;
+  font-weight: 500;
+  border-top: 5px solid #1b5e20;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.enquiry-email {
+  color: #ffeb3b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.enquiry-email:hover {
+  color: #fff176;
+  text-decoration: none;
+}
+
+/* Responsive */
 @media (max-width: 991.98px) {
-  .section-heading {
+  .section-headingbaler {
     text-align: center;
   }
 
@@ -94,23 +152,4 @@
   .feature-desc {
     text-align: left;
   }
-}
-
-.enquiry-section {
-  background-color: #007bff; /* Bootstrap primary blue */
-  color: white;
-  font-weight: 500;
-  border-top: 5px solid #0056b3;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.enquiry-email {
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.enquiry-email:hover {
-  color: #cce5ff;
-  text-decoration: none;
 }

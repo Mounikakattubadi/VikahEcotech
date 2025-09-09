@@ -5,7 +5,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import partnerImage from './images/Tradefair/1.12.jpg';
-import missionImage from './images/bands.jpeg';      
+import missionImage from './images/bands.jpeg';    
+import t9 from "./images/eco sustain 2025/images/ecosust_15.jpg";  
 
 const AboutUs = () => {
   useEffect(() => {
@@ -26,7 +27,7 @@ const AboutUs = () => {
         {/* Who We Are */}
         <Row className="align-items-center mb-5">
           <Col md={6} className="text-center mb-4 mb-md-0">
-            <img src={partnerImage} alt="Vikah Ecotech innovative recycling machinery" className="about-img" />
+            <img src={t9} alt="Vikah Ecotech innovative recycling machinery" className="about-img" />
           </Col>
           <Col md={6}>
             <h2 className="section-heading">Who We Are</h2>
