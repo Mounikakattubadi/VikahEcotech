@@ -1,0 +1,124 @@
+/* Container */
+.equipment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1b5e20;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.page-title::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #43a047, #81c784);
+  display: block;
+  margin: 0.5rem auto 0;
+  border-radius: 4px;
+}
+
+/* Wrapper */
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Card base */
+.equipment-card {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #f1f8e9, #e8f5e9);
+  border-radius: 18px;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  opacity: 0; /* hidden by default */
+  width: 80%;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation-fill-mode: forwards;
+}
+
+/* Left vs Right placement (animation runs only when .visible is added) */
+.equipment-card.slide-in-left.visible {
+  align-self: flex-start;
+  animation: slideFromLeft 1.2s ease forwards;
+}
+.equipment-card.slide-in-right.visible {
+  align-self: flex-end;
+  animation: slideFromRight 1.2s ease forwards;
+}
+
+/* Hover */
+.equipment-card:hover {
+  transform: scale(1.03) translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+/* Content */
+.product-name {
+  flex: 1;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #2e7d32;
+  padding-right: 1.2rem;
+  border-right: 2px solid #a5d6a7;
+}
+.product-description {
+  flex: 2;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  padding-left: 1.2rem;
+}
+
+/* Animations */
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .equipment-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+    width: 100%;
+  }
+  .product-name {
+    border-right: none;
+    border-bottom: 2px solid #a5d6a7;
+    padding-right: 0;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .product-description {
+    padding-left: 0;
+  }
+}
