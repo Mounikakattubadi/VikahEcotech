@@ -189,17 +189,15 @@ function Home() {
         {/* Tab Buttons */}
         <div className="d-flex justify-content-center mb-4">
           <button
-            className={`btn-tab mx-2 ${
-              activeTab === "upcoming" ? "active" : ""
-            }`}
+            className={`btn-tab mx-2 ${activeTab === "upcoming" ? "active" : ""
+              }`}
             onClick={() => setActiveTab("upcoming")}
           >
             Upcoming Trade Fair
           </button>
           <button
-            className={`btn-tab mx-2 ${
-              activeTab === "completed" ? "active" : ""
-            }`}
+            className={`btn-tab mx-2 ${activeTab === "completed" ? "active" : ""
+              }`}
             onClick={() => setActiveTab("completed")}
           >
             Completed Trade Fairs
@@ -223,84 +221,83 @@ function Home() {
 
           {/* Scrollable Cards */}
           <div
-            className={`trade-scroll-wrapper d-flex ${
-              activeTab === "upcoming" ? "single-card" : ""
-            }`}
+            className={`trade-scroll-wrapper d-flex ${activeTab === "upcoming" ? "single-card" : ""
+              }`}
             id="tradeCardScroll"
           >
-{activeTab === "upcoming" && (
-  <>
-    {/* Upcoming Card 1 */}
-    <div className="trade-card position-relative">
-      <div className="upcoming-badge">Upcoming Trade Fair</div>
-      <img src={ifatimg} alt="IFAT India" className="trade-img" />
-      <div className="trade-content p-3">
-        <h5>IFAT India</h5>
-        <p>
-          IFAT India brings together professionals from water, sewage, waste,
-          and recycling industries to foster knowledge sharing, networking, and
-          collaboration among policymakers, industry leaders, and environmental
-          experts.
-        </p>
-        <p>
-          <strong>Date:</strong> 14-10-2025 to 16-10-2025
-        </p>
-        <p>
-          <strong>Location:</strong> Bombay Exhibition Centre, Mumbai
-        </p>
-        <p>
-          <strong>Booth No:</strong> 2 / B005
-        </p>
-        <a
-          href="https://ifat.de/en/india/"
-          className="btn btn-success"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore IFAT 2025
-        </a>
-      </div>
-    </div>
+            {activeTab === "upcoming" && (
+              <>
+                {/* Upcoming Card 1 */}
+                <div className="trade-card position-relative">
+                  <div className="upcoming-badge">Upcoming Trade Fair</div>
+                  <img src={ifatimg} alt="IFAT India" className="trade-img" />
+                  <div className="trade-content p-3">
+                    <h5>IFAT India</h5>
+                    <p>
+                      IFAT India brings together professionals from water, sewage, waste,
+                      and recycling industries to foster knowledge sharing, networking, and
+                      collaboration among policymakers, industry leaders, and environmental
+                      experts.
+                    </p>
+                    <p>
+                      <strong>Date:</strong> 14-10-2025 to 16-10-2025
+                    </p>
+                    <p>
+                      <strong>Location:</strong> Bombay Exhibition Centre, Mumbai
+                    </p>
+                    <p>
+                      <strong>Booth No:</strong> 2 / B005
+                    </p>
+                    <a
+                      href="https://ifat.de/en/india/"
+                      className="btn btn-success"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Explore IFAT 2025
+                    </a>
+                  </div>
+                </div>
 
-    {/* Upcoming Card 2 */}
-    <div className="trade-card position-relative">
-      <div className="upcoming-badge">Upcoming Trade Fair</div>
-      <img
-        src={rsme}
-        alt="Recycling Expo Middle East"
-        className="trade-img"
-      />
-      <div className="trade-content p-3">
-        <h5>Recycling Expo Middle East</h5>
-        <p>
-          Organized by Eljays44, a seasoned global event company, Recycling
-          Expo Middle East 2025 is a premier B2B platform uniting industry
-          leaders, innovators, and decision-makers. Featuring groundbreaking
-          recycling technologies, thought-leadership seminars, interactive
-          zones, and key networking, it drives innovation in the waste
-          management sector.
-        </p>
-        <p>
-          <strong>Date:</strong> 11-11-2025 to 12-11-2025
-        </p>
-        <p>
-          <strong>Location:</strong> The Arena, Riyadh, Saudi Arabia
-        </p>
-        <p>
-          <strong>Booth No:</strong> A52
-        </p>
-        <a
-          href="https://www.recyclingexpome.com/"
-          className="btn btn-success"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore Recycling Expo
-        </a>
-      </div>
-    </div>
-  </>
-)}
+                {/* Upcoming Card 2 */}
+                <div className="trade-card position-relative">
+                  <div className="upcoming-badge">Upcoming Trade Fair</div>
+                  <img
+                    src={rsme}
+                    alt="Recycling Expo Middle East"
+                    className="trade-img"
+                  />
+                  <div className="trade-content p-3">
+                    <h5>Recycling Expo Middle East</h5>
+                    <p>
+                      Organized by Eljays44, a seasoned global event company, Recycling
+                      Expo Middle East 2025 is a premier B2B platform uniting industry
+                      leaders, innovators, and decision-makers. Featuring groundbreaking
+                      recycling technologies, thought-leadership seminars, interactive
+                      zones, and key networking, it drives innovation in the waste
+                      management sector.
+                    </p>
+                    <p>
+                      <strong>Date:</strong> 11-11-2025 to 12-11-2025
+                    </p>
+                    <p>
+                      <strong>Location:</strong> The Arena, Riyadh, Saudi Arabia
+                    </p>
+                    <p>
+                      <strong>Booth No:</strong> A52
+                    </p>
+                    <a
+                      href="https://www.recyclingexpome.com/"
+                      className="btn btn-success"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Explore Recycling Expo
+                    </a>
+                  </div>
+                </div>
+              </>
+            )}
 
 
             {activeTab === "completed" && (

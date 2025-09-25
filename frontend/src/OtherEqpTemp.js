@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom"; // for navigation
 import "./OtherEqpTemp.css";
 
 const products = [
@@ -68,7 +69,7 @@ function OtherEqpTemp() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-            observer.unobserve(entry.target); // 👉 remove this if you want animations every time
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -97,6 +98,12 @@ function OtherEqpTemp() {
           >
             <div className="product-name">{product.name}</div>
             <div className="product-description">{product.description}</div>
+
+            {/* Enquiry Button */}
+            <div className="button-wrapper" style={{zIndex:"3"}}>
+              <Link to="/enquire" replace className="enquiry-btn">Enquiry</Link>
+
+            </div>
           </div>
         ))}
       </div>
