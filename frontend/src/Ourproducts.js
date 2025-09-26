@@ -11,6 +11,7 @@ import img2 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.49 
 import shredderhd from "./images/shredder_hd.jpg"
 import shredderhd1 from "./images/shredder_hd1.jpg"
 import OtherEquipment from './OtherEquipment';
+import OtherEqpTemp from './OtherEqpTemp';
 
 
 function Ourproducts() {
@@ -175,7 +176,8 @@ function Ourproducts() {
               </div></Link>
             </div>
 
-<OtherEquipment/>
+{/* <OtherEquipment/> */}
+<OtherEqpTemp/>
 
           </div>
         </div>

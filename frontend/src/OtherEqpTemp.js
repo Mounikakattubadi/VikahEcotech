@@ -84,7 +84,7 @@ function OtherEqpTemp() {
   }, []);
 
   return (
-    <div className="equipment-container">
+    <div className="equipment-container products-section-bg-otherequiptemp">
       <h2 className="page-title">Other Equipment</h2>
       <div className="cards-wrapper">
         {products.map((product, index) => (

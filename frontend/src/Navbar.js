@@ -103,7 +103,7 @@ const Navbar = () => {
                   <li><button className="dropdown-item" onClick={() => setProductMenu('Primary Shredder')}>Primary Shredder</button></li>
                   <li><button className="dropdown-item" onClick={() => setProductMenu('Secondary Shredder')}>Secondary Shredder</button></li>
                   <li><button className="dropdown-item" onClick={() => setProductMenu('baler')}>Baler</button></li>
-                  <li><Link to="/other-equipment" className="dropdown-item" onClick={handleNavigation}>Other Equipment</Link></li>
+                  <li><Link to="/othereqptemp" className="dropdown-item" onClick={handleNavigation}>Other Equipment</Link></li>
                 </ul>
               )}
 
