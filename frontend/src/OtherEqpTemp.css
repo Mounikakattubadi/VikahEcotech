@@ -167,13 +167,17 @@
     }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
+    .cards-wrapper {
+        align-items: center;
+    }
+
     .equipment-card {
         flex-direction: column;
         text-align: center;
         padding: 1.5rem;
         width: 100%;
+        align-self: center !important; /* Override zig-zag layout */
     }
 
     .product-name {
@@ -187,7 +191,26 @@
     .product-description {
         padding-left: 0;
     }
+
+    /* Optional: override animations to just fade in from bottom for consistency */
+    .equipment-card.slide-in-left.visible,
+    .equipment-card.slide-in-right.visible {
+        animation: slideFromBottom 1s ease forwards;
+    }
 }
+
+/* Optional smoother animation from bottom on mobile */
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Card base */
 .equipment-card {

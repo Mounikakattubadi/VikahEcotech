@@ -29,7 +29,7 @@ const products = [
       "Uses powerful magnets to extract ferrous content such as steel wires. Improves rubber purity, enhances safety, and extends equipment life.",
   },
   {
-    name: "Beadwire Remover",
+    name: "Beedwire Remover",
     description:
       "Extracts strong bead wires before shredding. Reduces machine stress and recovers valuable recyclable steel.",
   },
@@ -94,15 +94,22 @@ function OtherEqpTemp() {
             className={`equipment-card ${
               index % 2 === 0 ? "slide-in-left" : "slide-in-right"
             }`}
-            style={{ animationDelay: `${index * 0.2}s` }}
+            style={{ animationDelay: `${index * 0}s` }}
           >
             <div className="product-name">{product.name}</div>
             <div className="product-description">{product.description}</div>
 
             {/* Enquiry Button */}
-            <div className="button-wrapper" style={{zIndex:"3"}}>
-              <Link to="/enquire" replace className="enquiry-btn">Enquiry</Link>
-
+            <div className="button-wrapper" style={{ zIndex: "3" }}>
+              <Link
+                to={`/enquire?machinery=other-equipment&model=${encodeURIComponent(
+                  product.name
+                )}`}
+                className="enquiry-btn"
+                replace
+              >
+                Enquiry
+              </Link>
             </div>
           </div>
         ))}
