@@ -1,63 +1,63 @@
 import React, { useEffect, useRef } from "react";
-import { Link } from "react-router-dom"; // for navigation
+import { Link } from "react-router-dom";
 import "./OtherEqpTemp.css";
 
 const products = [
   {
-    name: "Tumble Back Feeder",
+    name: "TUMBLE BACK FEEDER",
     description:
-      "Ensures a steady and controlled flow of shredded tires or raw materials into the recycling line. Reduces manual handling, prevents jams, and boosts efficiency of downstream equipment.",
+      "Provides a steady and controlled flow of raw materials into the recycling line. Reduces manual handling and prevents jams. Suitable for rubber, plastic, paper, cardboard, and other materials."
   },
   {
-    name: "Feeding & Discharge Conveyers",
+    name: "FEEDING & DISCHARGE CONVEYORS",
     description:
-      "Heavy-duty conveyors designed for smooth transport of shredded tires, granules, and wires. Prevents bottlenecks and minimizes manual labor in recycling operations.",
+      "Heavy-duty conveyors for smooth transport of raw or processed materials. Prevents bottlenecks and reduces manual labor. Works with rubber, plastic, paper, cardboard, and more."
   },
   {
-    name: "Vibrators",
+    name: "VIBRATORS",
     description:
-      "Prevents clumping by evenly distributing rubber particles through vibration. Maintains consistent flow for classification and ensures high-quality end products.",
+      "Prevents clumping by evenly distributing particles through vibration. Maintains consistent flow for classification and ensures high-quality output. Suitable for rubber, plastic, paper, cardboard, and more."
   },
   {
-    name: "Classifiers",
+    name: "CLASSIFIERS",
     description:
-      "Separates rubber crumbs into precise size ranges using advanced sieving. Guarantees fine powder or coarse chips meet industry quality standards.",
+      "Separates materials into precise size ranges using advanced sieving. Ensures powders or chips meet quality standards. Works with rubber, plastic, paper, cardboard, and other feedstocks."
   },
   {
-    name: "Overband Magnetic Steel Separators",
+    name: "OVERBAND MAGNETIC STEEL SEPARATORS",
     description:
-      "Uses powerful magnets to extract ferrous content such as steel wires. Improves rubber purity, enhances safety, and extends equipment life.",
+      "Uses powerful magnets to remove ferrous materials such as steel wires. Improves purity, enhances safety, and extends equipment life. Effective for rubber, plastic, paper, cardboard, and more."
   },
   {
-    name: "Beedwire Remover",
+    name: "BEADWIRE REMOVER",
     description:
-      "Extracts strong bead wires before shredding. Reduces machine stress and recovers valuable recyclable steel.",
+      "Extracts strong bead wires before shredding to reduce machine stress and recover valuable steel. Suitable for rubber and adaptable to other reinforced materials."
   },
   {
-    name: "Strip Cutter",
+    name: "STRIP CUTTER",
     description:
-      "Cuts tires into manageable strips for further processing. Improves machine throughput and avoids blockages.",
+      "Cuts tires into manageable strips for further processing. Improves machine throughput and prevents blockages. Simplifies downstream shredding."
   },
   {
-    name: "Block Cutter",
+    name: "BLOCK CUTTER",
     description:
-      "Processes rubber strips into smaller blocks suitable for fine shredding or grinding. Ensures consistent feed size for smooth recycling flow.",
+      "Cuts rubber strips into smaller blocks for fine shredding or grinding. Ensures consistent feed size and smoother recycling flow. Enhances processing efficiency."
   },
   {
-    name: "Side Wall Remover",
+    name: "SIDE WALL REMOVER",
     description:
-      "Removes sidewalls efficiently, simplifying the tire cutting process and preparing cleaner materials for shredding.",
+      "Removes tire sidewalls efficiently to simplify cutting and prepare cleaner material for shredding. Speeds up processing and reduces wear on machines."
   },
   {
-    name: "Cutting Equipment",
+    name: "CUTTING EQUIPMENT",
     description:
-      "Heavy-duty machines designed to slice through full tires or thick rubber sections. Built for durability in continuous plant operation.",
+      "Heavy-duty machines designed to cut through full tires or thick rubber. Built for durability in continuous operation. Provides reliable performance in demanding environments."
   },
   {
-    name: "Folding Equipment",
+    name: "FOLDING EQUIPMENT",
     description:
-      "Folds processed rubber sheets or components into compact stacks. Saves storage space and makes handling easier.",
-  },
+      "Folds processed rubber sheets or components into compact stacks. Saves storage space and makes handling easier. Improves warehouse and logistics efficiency."
+  }
 ];
 
 function OtherEqpTemp() {
@@ -65,8 +65,8 @@ function OtherEqpTemp() {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      entries => {
+        entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
             observer.unobserve(entry.target);
@@ -76,7 +76,7 @@ function OtherEqpTemp() {
       { threshold: 0.2 }
     );
 
-    cardRefs.current.forEach((card) => {
+    cardRefs.current.forEach(card => {
       if (card) observer.observe(card);
     });
 
@@ -84,23 +84,20 @@ function OtherEqpTemp() {
   }, []);
 
   return (
-    <div className="equipment-container products-section-bg-otherequiptemp">
-      <h2 className="page-title">Other Equipment</h2>
-      <div className="cards-wrapper">
+    <div className="equipment-container split-design">
+      <h2 className="page-title">OTHER EQUIPMENT</h2>
+      <div className="split-list">
         {products.map((product, index) => (
           <div
             key={index}
-            ref={(el) => (cardRefs.current[index] = el)}
-            className={`equipment-card ${
-              index % 2 === 0 ? "slide-in-left" : "slide-in-right"
-            }`}
-            style={{ animationDelay: `${index * 0}s` }}
+            ref={el => (cardRefs.current[index] = el)}
+            className={`split-card ${index % 2 === 0 ? "even" : "odd"}`}
           >
-            <div className="product-name">{product.name}</div>
-            <div className="product-description">{product.description}</div>
-
-            {/* Enquiry Button */}
-            <div className="button-wrapper" style={{ zIndex: "3" }}>
+            <div className="split-left">
+              <h3>{product.name}</h3>
+            </div>
+            <div className="split-right">
+              <p>{product.description}</p>
               <Link
                 to={`/enquire?machinery=other-equipment&model=${encodeURIComponent(
                   product.name

@@ -1,271 +1,116 @@
-
-
 /* Container */
-.equipment-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 3rem 1rem;
-    font-family: "Poppins", sans-serif;
+.equipment-container.split-design {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Title */
 .page-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1b5e20;
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(90deg, #2fc2bb, #26a69a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.page-title::after {
-    content: "";
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #43a047, #81c784);
-    display: block;
-    margin: 0.5rem auto 0;
-    border-radius: 4px;
-}
-
-/* Wrapper */
-.cards-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    position: relative;
+/* List container */
+.split-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 /* Card base */
-.equipment-card {
-    display: flex;
-    align-items: center;
-    background: linear-gradient(135deg, #f1f8e9, #e8f5e9);
-    border-radius: 18px;
-    padding: 1.8rem 2rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    opacity: 0;
-    /* hidden by default */
-    width: 80%;
-    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
-    animation-fill-mode: forwards;
-    position: relative;
-    overflow: hidden;
+.split-card {
+  display: flex;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+.split-card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Left vs Right placement (animation runs only when .visible is added) */
-.equipment-card.slide-in-left.visible {
-    align-self: flex-start;
-    animation: slideFromLeft 1.2s ease forwards;
+/* Left panel */
+.split-left {
+  flex: 1;
+  background: linear-gradient(135deg, #2fc2bb, #26a69a);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.split-left h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
 }
 
-.equipment-card.slide-in-right.visible {
-    align-self: flex-end;
-    animation: slideFromRight 1.2s ease forwards;
+/* Right panel */
+.split-right {
+  flex: 2;
+  background: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.split-right p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-/* Blue overlay */
-.equipment-card::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(81, 245, 191, 0.25);
-    /* steelblue tint */
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    border-radius: 18px;
-    z-index: 1;
-}
-
-.equipment-card:hover::after {
-    opacity: 1;
-}
-
-/* Orange border frame */
-.equipment-card::before {
-    content: "";
-    position: absolute;
-    inset: 12px;
-    /* distance inside */
-    border: 2px solid #eeb867;
-    /* orange */
-    border-radius: 12px;
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    z-index: 2;
-}
-
-.equipment-card:hover::before {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Hover scaling */
-.equipment-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
-}
-
-/* Content */
-.product-name,
-.product-description {
-    position: relative;
-    z-index: 3;
-    /* above overlay & border */
-    transform: scale(0.85);
-    opacity: 0.9;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-/* Pop effect */
-.equipment-card:hover .product-name,
-.equipment-card:hover .product-description {
-    transform: scale(1);
-    opacity: 1;
-}
-
-/* Product name */
-.product-name {
-    flex: 1;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #2fc2bb;
-    padding-right: 1.2rem;
-    border-right: 2px solid #a5d6a7;
-}
-
-/* Product description */
-.product-description {
-    flex: 2;
-    font-size: 1.2rem;
-    color: #444;
-    line-height: 1.8;
-    padding-left: 1.2rem;
-}
-
-/* Animations */
-@keyframes slideFromLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-150px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideFromRight {
-    from {
-        opacity: 0;
-        transform: translateX(150px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .cards-wrapper {
-        align-items: center;
-    }
-
-    .equipment-card {
-        flex-direction: column;
-        text-align: center;
-        padding: 1.5rem;
-        width: 100%;
-        align-self: center !important; /* Override zig-zag layout */
-    }
-
-    .product-name {
-        border-right: none;
-        border-bottom: 2px solid #a5d6a7;
-        padding-right: 0;
-        padding-bottom: 0.75rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .product-description {
-        padding-left: 0;
-    }
-
-    /* Optional: override animations to just fade in from bottom for consistency */
-    .equipment-card.slide-in-left.visible,
-    .equipment-card.slide-in-right.visible {
-        animation: slideFromBottom 1s ease forwards;
-    }
-}
-
-/* Optional smoother animation from bottom on mobile */
-@keyframes slideFromBottom {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* Card base */
-.equipment-card {
-    display: flex;
-    flex-direction: column;
-    /* stack content vertically */
-    justify-content: space-between;
-    /* push button to bottom */
-    background: linear-gradient(135deg, #f1f8e9, #e8f5e9);
-    border-radius: 18px;
-    padding: 1.8rem 2rem;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    opacity: 0;
-    width: 80%;
-    transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
-    animation-fill-mode: forwards;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Content wrapper */
-.product-name,
-.product-description {
-    margin-bottom: 1rem;
-    /* spacing above button */
-}
-
-.button-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: auto;
-    /* pushes button to bottom */
-}
-
-/* Enquiry Button */
+/* Button */
 .enquiry-btn {
-    display: inline-block;
-    background: linear-gradient(90deg, #2fc2bb, #26a69a);
-    color: #fff !important;
-    /* ensure white text */
-    font-size: 0.95rem;
-    font-weight: 600;
-    padding: 0.5rem 1.4rem;
-    border-radius: 25px;
-    text-decoration: none !important;
-    /* remove underline */
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
-    text-align: center;
+  display: inline-block;
+  align-self: flex-start;
+  padding: 0.6rem 1.4rem;
+  background: linear-gradient(90deg, #2fc2bb, #26a69a);
+  color: #fff;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-left: 40%;
+}
+.enquiry-btn:hover {
+  background: linear-gradient(90deg, #26a69a, #2fc2bb);
+  transform: scale(1.05);
 }
 
-.enquiry-btn:hover {
-    background: linear-gradient(90deg, #26a69a, #2fc2bb);
-    transform: scale(1.07);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+/* Alternate styles for variety */
+.split-card.even .split-left {
+  background: linear-gradient(135deg, #1b5e20, #388e3c);
+}
+.split-card.odd .split-left {
+  background: linear-gradient(135deg, #2fc2bb, #26a69a);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .split-card {
+    flex-direction: column;
+  }
+  .split-left, .split-right {
+    flex: unset;
+    width: 100%;
+    text-align: center;
+  }
+  .split-right {
+    align-items: center;
+  }
+  .enquiry-btn {
+    align-self: center;
+  }
 }
