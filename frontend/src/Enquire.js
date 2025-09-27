@@ -35,17 +35,17 @@ const Enquire = () => {
     shredder: ["Tyre Shredder", "Metal Shredder", "Plastic Shredder", "Paper and Cardboard Shredder"],
     "secondary-shredder": ["Rasper", "Metal Shredders", "Plastic Shredder", "Paper and Cardboard Shredder"],
     "other-equipment": [
-      "Tumble Back Feeder",
-      "Feeding & Discharge Conveyers",
-      "Vibrators",
-      "Classifiers",
-      "Overband Magnetic Steel Separators",
-      "Beedwire Remover",
-      "Strip Cutter",
-      "Block Cutter",
-      "Side Wall Remover",
-      "Cutting Equipment",
-      "Folding Equipment"
+      "TUMBLE BACK FEEDER",
+      "FEEDING & DISCHARGE CONVEYORS",
+      "VIBRATORS",
+      "CLASSIFIERS",
+      "OVERBAND MAGNETIC STEEL SEPARATORS",
+      "BEAD WIRE REMOVER",
+      "STRIP CUTTER",
+      "BLOCK CUTTER",
+      "SIDE WALL REMOVER",
+      "CUTTING EQUIPMENT",
+      "FOLDING EQUIPMENT"
     ],
   };
 

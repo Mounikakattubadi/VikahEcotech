@@ -29,7 +29,7 @@ const products = [
       "Uses powerful magnets to remove ferrous materials such as steel wires. Improves purity, enhances safety, and extends equipment life. Effective for rubber, plastic, paper, cardboard, and more."
   },
   {
-    name: "BEADWIRE REMOVER",
+    name: "BEAD WIRE REMOVER",
     description:
       "Extracts strong bead wires before shredding to reduce machine stress and recover valuable steel. Suitable for rubber and adaptable to other reinforced materials."
   },
