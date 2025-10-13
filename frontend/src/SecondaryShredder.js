@@ -4,11 +4,12 @@ import './Baler.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import img1 from "./images/secondaryshredder1.jpg";
-import img2 from "./images/ss_4.png";
+import img2 from "./images/R1.png";
 import img3 from "./images/secondaryshredder3.jpg";
 import shredderhd from "./images/st.jpeg";
 import shredderhd1 from "./images/shredder_hd1.jpg";
-import shredderhdimg from "./images/Shedder _ Final PNG.png";
+import shredderhdimg from "./images/R4.png";
+import shredderhdimg1   from "./images/Shedder _ Final PNG.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './SecondaryShredder.css';
@@ -103,7 +104,7 @@ function SecondaryShredder() {
             <div className="col-6 col-md-3 mb-4">
               <Link to="/secondarymetalshredder">
                 <div className="product-card">
-                  <img src={shredderhdimg} alt="Metal Shredder" className="product-img" />
+                  <img src={shredderhdimg1} alt="Metal Shredder" className="product-img" />
                   <div className="product-label">Metal Shredder</div>
                 </div>
               </Link>
