@@ -52,6 +52,7 @@ import Homecards from './Homecards.js';
 import ScrollToTopButton from './ScrollToTopButton';
 import Ecosustain2025 from "./ecosustain2025.js"
 import OtherEqpTemp from "./OtherEqpTemp.js";
+import Ifat2025 from './Tradefairpages/ifat2025.js';
 
 function App() {
   return (
@@ -109,6 +110,8 @@ function App() {
         <Route path="/secondarypcb" element={<SecondaryPcb />} />
         <Route exact path="/ecosustain2025" element={<Ecosustain2025 />} />
         <Route exact path="/othereqptemp" element={<OtherEqpTemp />} />
+
+        <Route exact path="/ifat2025" element={<Ifat2025 />} />
 
       </Routes>
       <Footer />

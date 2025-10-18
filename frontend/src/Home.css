@@ -330,7 +330,7 @@ img.img-fluid {
 /* Center single child in flex container */
 .trade-scroll-wrapper:only-child,
 .trade-scroll-wrapper.single-card {
-  justify-content: left;
+  justify-content: center;
 }
 
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
-import shredderhd from "./images/R1.jpg";
+import shredderhd from "./images/R1.png";
 import shredderhd1 from "./images/R2.png";
-import shredderhdimg from "./images/R4.png";
+import shredderhdimg from "./images/R4.jpg";
 
 const Sht4000 = () => {
     const [mainImage, setMainImage] = useState(shredderhd1);
@@ -37,7 +37,7 @@ const Sht4000 = () => {
                 </div>
             </header>
 
-            {/* Rest of your existing JSX */}
+            {/* Rest of your  existing JSX */}
             <div className='productpagetop'>
                 <div className='imagetop'>
                     <div className="main-image-container">

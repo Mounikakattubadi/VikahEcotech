@@ -86,14 +86,25 @@ function Home() {
 
   const [activeTab, setActiveTab] = useState("upcoming");
 
-  const scrollCards = (direction) => {
-    const container = document.getElementById("tradeCardScroll");
-    if (direction === "left") {
-      container.scrollBy({ left: -300, behavior: "smooth" });
-    } else {
-      container.scrollBy({ left: 300, behavior: "smooth" });
-    }
-  };
+ const scrollCards = (direction) => {
+  const container = document.getElementById("tradeCardScroll");
+  const card = container.querySelector(".trade-card");
+
+  if (!card || !container) return;
+
+  const cardStyle = window.getComputedStyle(card);
+  const cardWidth = card.offsetWidth;
+  const gap = parseInt(cardStyle.marginRight || 20, 10); // fallback gap
+
+  const scrollAmount = cardWidth + gap;
+
+  if (direction === "left") {
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  } else {
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  }
+};
+
 
   return (
     <>
@@ -128,57 +139,7 @@ function Home() {
       <div ref={productsRef}>
         <Homecards />
       </div>
-      {/* Our Products Section with background image */}
-      {/* <div ref={productsRef} className="products-section-bg py-5">
-        <div className="container text-center">
-          <h2 className="green-heading">Our Products</h2>
-          <div className="row justify-content-center">
-            
-            <div className="col-6 col-md-3 mb-4">
-              <Link to="/Baler">
-                <div className="product-card">
-                  <img src={Baler} alt="Balers" className="product-img" />
-                  <div className="product-label">Baler</div>
-                </div>
-              </Link>
-            </div>
 
-           
-            <div className="col-6 col-md-3 mb-4">
-              <Link to="/shredder">
-                <div className="product-card">
-                  <img src={shredderhdimg} alt="Primary Shredder" className="product-img" />
-                  <div className="product-label">Primary Shredder</div>
-                </div>
-              </Link>
-            </div>
-
-            
-            <div className="col-6 col-md-3 mb-4">
-              <Link to="/secondaryShredder">
-                <div className="product-card">
-                  <img src={shred2} alt="Secondary Shredder" className="product-img" />
-                  <div className="product-label">Secondary Shredder</div>
-                </div>
-              </Link>
-            </div>
-
-           
-            <div className="col-6 col-md-3 mb-4">
-              <Link to="/other-equipment">
-                <div className="product-card">
-               
-                  <div className="product-img text-center d-flex align-items-center justify-content-center" style={{ height: '150px', backgroundColor: 'rgb(162, 251, 167)' }}>
-                    Click Here
-                  </div>
-                  <div className="product-label">Other Equipment</div>
-                </div>
-              </Link>
-            </div>
-
-          </div>
-        </div>
-      </div> */}
 
       {/* Trade Fair Section */}
       <div className="container my-5">
@@ -189,15 +150,17 @@ function Home() {
         {/* Tab Buttons */}
         <div className="d-flex justify-content-center mb-4">
           <button
-            className={`btn-tab mx-2 ${activeTab === "upcoming" ? "active" : ""
-              }`}
+            className={`btn-tab mx-2 ${
+              activeTab === "upcoming" ? "active" : ""
+            }`}
             onClick={() => setActiveTab("upcoming")}
           >
             Upcoming Trade Fair
           </button>
           <button
-            className={`btn-tab mx-2 ${activeTab === "completed" ? "active" : ""
-              }`}
+            className={`btn-tab mx-2 ${
+              activeTab === "completed" ? "active" : ""
+            }`}
             onClick={() => setActiveTab("completed")}
           >
             Completed Trade Fairs
@@ -221,45 +184,13 @@ function Home() {
 
           {/* Scrollable Cards */}
           <div
-            className={`trade-scroll-wrapper d-flex ${activeTab === "upcoming" ? "single-card" : ""
-              }`}
+            className={`trade-scroll-wrapper d-flex ${
+              activeTab === "upcoming" ? "single-card" : ""
+            }`}
             id="tradeCardScroll"
           >
             {activeTab === "upcoming" && (
               <>
-                {/* Upcoming Card 1 */}
-                <div className="trade-card position-relative">
-                  <div className="upcoming-badge">Upcoming Trade Fair</div>
-                  <img src={ifatimg} alt="IFAT India" className="trade-img" />
-                  <div className="trade-content p-3">
-                    <h5>IFAT India</h5>
-                    <p>
-                      IFAT India brings together professionals from water, sewage, waste,
-                      and recycling industries to foster knowledge sharing, networking, and
-                      collaboration among policymakers, industry leaders, and environmental
-                      experts.
-                    </p>
-                    <p>
-                      <strong>Date:</strong> 14-10-2025 to 16-10-2025
-                    </p>
-                    <p>
-                      <strong>Location:</strong> Bombay Exhibition Centre, Mumbai
-                    </p>
-                    <p>
-                      <strong>Booth No:</strong> 2 / B005
-                    </p>
-                    <a
-                      href="https://ifat.de/en/india/"
-                      className="btn btn-success"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Explore IFAT 2025
-                    </a>
-                  </div>
-                </div>
-
-                {/* Upcoming Card 2 */}
                 <div className="trade-card position-relative">
                   <div className="upcoming-badge">Upcoming Trade Fair</div>
                   <img
@@ -270,12 +201,13 @@ function Home() {
                   <div className="trade-content p-3">
                     <h5>Recycling Expo Middle East</h5>
                     <p>
-                      Organized by Eljays44, a seasoned global event company, Recycling
-                      Expo Middle East 2025 is a premier B2B platform uniting industry
-                      leaders, innovators, and decision-makers. Featuring groundbreaking
-                      recycling technologies, thought-leadership seminars, interactive
-                      zones, and key networking, it drives innovation in the waste
-                      management sector.
+                      Organized by Eljays44, a seasoned global event company,
+                      Recycling Expo Middle East 2025 is a premier B2B platform
+                      uniting industry leaders, innovators, and decision-makers.
+                      Featuring groundbreaking recycling technologies,
+                      thought-leadership seminars, interactive zones, and key
+                      networking, it drives innovation in the waste management
+                      sector.
                     </p>
                     <p>
                       <strong>Date:</strong> 11-11-2025 to 12-11-2025
@@ -299,10 +231,36 @@ function Home() {
               </>
             )}
 
-
             {activeTab === "completed" && (
               <>
-                {/* Completed Card 1 */}
+                <div className="trade-card position-relative">
+                  <img src={ifatimg} alt="IFAT India" className="trade-img" />
+                  <div className="trade-content p-3">
+                    <h5>IFAT India</h5>
+                    <p>
+                      IFAT India brings together professionals from water,
+                      sewage, waste, and recycling industries to foster
+                      knowledge sharing, networking, and collaboration among
+                      policymakers, industry leaders, and environmental experts.
+                    </p>
+                    <p>
+                      <strong>Date:</strong> 14-10-2025 to 16-10-2025
+                    </p>
+                    <p>
+                      <strong>Location:</strong> Bombay Exhibition Centre,
+                      Mumbai
+                    </p>
+                    <p>
+                      <strong>Booth No:</strong> 2 / B005
+                    </p>
+                    <Link
+                      to="/ifat2025"
+                      className="tradefairs-btn mt-3 align-self-start"
+                    >
+                      Images and Videos
+                    </Link>
+                  </div>
+                </div>
 
                 <div className="trade-card position-relative">
                   <img src={ece} alt="Eco Sustain Expo" className="trade-img" />
