@@ -27,17 +27,17 @@ const Ifat2025 = () => {
     { original: t7, thumbnail: t7 },
     { original: t8, thumbnail: t8 },
 
-    // Embedded YouTube Video (fixed)
+    // ✅ Embedded YouTube Video using correct embed URL
     {
-      original: "https://img.youtube.com/vi/bJVuuEoWYT0/hqdefault.jpg",
-      thumbnail: "https://img.youtube.com/vi/bJVuuEoWYT0/default.jpg",
+      original: "https://img.youtube.com/vi/32e0MAfXBWI/0.jpg",
+      thumbnail: "https://img.youtube.com/vi/32e0MAfXBWI/default.jpg",
       renderItem: () => (
         <div className="video-gallery">
           <div className="video-wrapper">
             <iframe
               width="100%"
               height="400"
-              src="https://www.youtube.com/embed/bJVuuEoWYT0"
+              src="https://www.youtube.com/embed/32e0MAfXBWI"
               title="IFAT 2025 Video 1"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
