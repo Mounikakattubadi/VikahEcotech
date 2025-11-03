@@ -11,6 +11,7 @@ const Navbar = () => {
   const [subProductMenu, setSubProductMenu] = useState('');
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef(null);
+
   const toggleNavbar = () => {
     setIsNavbarCollapsed(!isNavbarCollapsed);
     resetMenus();
@@ -107,7 +108,7 @@ const Navbar = () => {
                 </ul>
               )}
 
-              {/* Submenus */}
+              {/* Primary Shredder Submenu */}
               {productMenu === 'Primary Shredder' && !subProductMenu && (
                 <ul className="dropdown-menu show">
                   <li><button className="dropdown-item text-muted" onClick={handleBack}>← Back</button></li>
@@ -115,11 +116,11 @@ const Navbar = () => {
                   <li><button className="dropdown-item" onClick={() => setSubProductMenu('tyreShredder')}>Tyre Shredder</button></li>
                   <li><Link to="/metalshredder" className="dropdown-item" onClick={handleNavigation}>Metal Shredder</Link></li>
                   <li><Link to="/plasticshredder" className="dropdown-item" onClick={handleNavigation}>Plastic Shredder</Link></li>
-                  <li><Link to="/papershredder" className="dropdown-item" onClick={handleNavigation}>Paper and cardboard</Link></li>
-                  {/* <li><Link to="/metalbaler" className="dropdown-item" onClick={handleNavigation}>Metal Balers</Link></li> */}
+                  <li><Link to="/papershredder" className="dropdown-item" onClick={handleNavigation}>Paper and Cardboard</Link></li>
                 </ul>
               )}
 
+              {/* Tyre Shredder Submenu */}
               {subProductMenu === 'tyreShredder' && (
                 <ul className="dropdown-menu show">
                   <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
@@ -130,68 +131,50 @@ const Navbar = () => {
                 </ul>
               )}
 
+              {/* Secondary Shredder Submenu */}
               {productMenu === 'Secondary Shredder' && !subProductMenu && (
                 <ul className="dropdown-menu show">
                   <li><button className="dropdown-item text-muted" onClick={handleBack}>← Back</button></li>
                   <li><Link to="/secondaryShredder" className="dropdown-item" onClick={handleNavigation}>Secondary Shredder</Link></li>
-                  <li><Link to="/rasper" className="dropdown-item" onClick={handleNavigation}>Rasper</Link></li>
-                  <li><Link to="/secondarymetalshredder" className="dropdown-item" onClick={handleNavigation}>Metal Shredders</Link></li>
+                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('rasper')}>Rasper</button></li>
+                  <li><Link to="/secondarymetalshredder" className="dropdown-item" onClick={handleNavigation}>Metal Shredder</Link></li>
                   <li><Link to="/secondaryplasticshredder" className="dropdown-item" onClick={handleNavigation}>Plastic Shredder</Link></li>
                   <li><Link to="/secondarypcb" className="dropdown-item" onClick={handleNavigation}>Paper and Cardboard Shredder</Link></li>
                 </ul>
               )}
 
-              {productMenu === 'baler' && !subProductMenu && (
-                              <ul className="dropdown-menu show">
-                                <li><button className="dropdown-item text-muted" onClick={handleBack}>← Back</button></li>
-                                <li><Link to="/baler" className="dropdown-item" onClick={handleNavigation}>Balers</Link></li>
-                                <li><button className="dropdown-item" onClick={() => setSubProductMenu('tyreScrapBaler')}>Tyre Scrap Baler</button></li>
-                                <li><Link to="/plasticbaler" className="dropdown-item" onClick={handleNavigation}>Plastic Balers</Link></li>
-                                <li><Link to="/pcb" className="dropdown-item" onClick={handleNavigation}>Card Board Balers</Link></li>
-                                <li><Link to="/metalbaler" className="dropdown-item" onClick={handleNavigation}>Metal Balers</Link></li>
-                              </ul>
-                            )}
-              
-                            {subProductMenu === 'tyreScrapBaler' && (
-                              <ul className="dropdown-menu show">
-                                <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
-                                <li><Link to="/tyrescrapbaler" className="dropdown-item" onClick={handleNavigation}>Tyre Scrap Baler</Link></li>
-                                <li><Link to="/blt150" className="dropdown-item" onClick={handleNavigation}>BLT150</Link></li>
-                                <li><Link to="/blt200" className="dropdown-item" onClick={handleNavigation}>BLT200</Link></li>
-                                <li><Link to="/blt250" className="dropdown-item" onClick={handleNavigation}>BLT250</Link></li>
-                              </ul>
-                            )}
-
-              
-
-              {/* {subProductMenu === 'tyreShredder' && (
+              {/* ✅ Rasper Submenu */}
+              {subProductMenu === 'rasper' && (
                 <ul className="dropdown-menu show">
                   <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
-                  <li><Link to="/tyreshredder" className="dropdown-item" onClick={handleNavigation}>Tyre Shredder</Link></li>
-                  <li><Link to="/sht6000" className="dropdown-item" onClick={handleNavigation}>SHT6000</Link></li>
-                  <li><Link to="/sht8000" className="dropdown-item" onClick={handleNavigation}>SHT8000</Link></li>
-                  <li><Link to="/sht12000" className="dropdown-item" onClick={handleNavigation}>SHT12000</Link></li>
-                </ul>
-              )} */}
-
-              {/* {productMenu === 'tyreCutter' && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={handleBack}>← Back</button></li>
-                  <li><Link to="/tyrecutting" className="dropdown-item" onClick={handleNavigation}>Tyre Cutter</Link></li>
-                  <li><Link to="/tcpcr100" className="dropdown-item" onClick={handleNavigation}>TCPCR100</Link></li>
-                  <li><Link to="/tctb100" className="dropdown-item" onClick={handleNavigation}>TCTB100</Link></li>
-                  <li><Link to="/tcotr100" className="dropdown-item" onClick={handleNavigation}>TCOTR100</Link></li>
+                  <li><Link to="/rasper_secondaryshredders" className="dropdown-item" onClick={handleNavigation}>Rasper</Link></li>
+                  <li><Link to="/rst4000" className="dropdown-item" onClick={handleNavigation}>RST4000</Link></li>
+                  <li><Link to="/rst6000" className="dropdown-item" onClick={handleNavigation}>RST6000</Link></li>
                 </ul>
               )}
 
-              {productMenu === 'tyreFolding' && (
+              {/* Baler Submenu */}
+              {productMenu === 'baler' && !subProductMenu && (
                 <ul className="dropdown-menu show">
                   <li><button className="dropdown-item text-muted" onClick={handleBack}>← Back</button></li>
-                  <li><Link to="/tyrefolding" className="dropdown-item" onClick={handleNavigation}>Tyre Folding</Link></li>
-                  <li><Link to="/tfpcr100" className="dropdown-item" onClick={handleNavigation}>TFPCR100</Link></li>
-                  <li><Link to="/tftbr100" className="dropdown-item" onClick={handleNavigation}>TFTBR100</Link></li>
+                  <li><Link to="/baler" className="dropdown-item" onClick={handleNavigation}>Balers</Link></li>
+                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('tyreScrapBaler')}>Tyre Scrap Baler</button></li>
+                  <li><Link to="/plasticbaler" className="dropdown-item" onClick={handleNavigation}>Plastic Balers</Link></li>
+                  <li><Link to="/pcb" className="dropdown-item" onClick={handleNavigation}>Card Board Balers</Link></li>
+                  <li><Link to="/metalbaler" className="dropdown-item" onClick={handleNavigation}>Metal Balers</Link></li>
                 </ul>
-              )} */}
+              )}
+
+              {/* Tyre Scrap Baler Submenu */}
+              {subProductMenu === 'tyreScrapBaler' && (
+                <ul className="dropdown-menu show">
+                  <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
+                  <li><Link to="/tyrescrapbaler" className="dropdown-item" onClick={handleNavigation}>Tyre Scrap Baler</Link></li>
+                  <li><Link to="/blt150" className="dropdown-item" onClick={handleNavigation}>BLT150</Link></li>
+                  <li><Link to="/blt200" className="dropdown-item" onClick={handleNavigation}>BLT200</Link></li>
+                  <li><Link to="/blt250" className="dropdown-item" onClick={handleNavigation}>BLT250</Link></li>
+                </ul>
+              )}
             </div>
 
             <li className="nav-item mx-2">

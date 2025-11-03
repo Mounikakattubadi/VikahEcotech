@@ -5,7 +5,7 @@ import shredderhd from "./images/R1.png";
 import shredderhd1 from "./images/R2.png";
 import shredderhdimg from "./images/R4.jpg";
 
-const Sht4000 = () => {
+const Rst4000 = () => {
     const [mainImage, setMainImage] = useState(shredderhd1);
 
     const handleImageClick = (image) => {
@@ -33,7 +33,7 @@ const Sht4000 = () => {
             {/* Heading section similar to SecondaryMetalshredder */}
             <header className="tyrecutting-header text-white text-center py-5">
                 <div className="container">
-                    <h1 className="display-4">Rasper</h1>
+                    <h1 className="display-4">RST- 4000</h1>
                 </div>
             </header>
 
@@ -109,11 +109,15 @@ const Sht4000 = () => {
         <tbody>
             <tr>
                 <td>Power</td>
-                <td>180 HP (132 kW)</td>
+                <td>150-180 HP (132 kW)</td>
             </tr>
             <tr>
                 <td>No Of Motors</td>
-                <td>1 No. ABB Motor</td>
+                <td>1 No. ABB/siemens Motor</td>
+            </tr>
+            <tr>
+                <td>Drive Specification</td>
+                <td>Electrical System</td>
             </tr>
             <tr>
                 <td>Voltage</td>
@@ -125,7 +129,7 @@ const Sht4000 = () => {
             </tr>
             <tr>
                 <td>Electric Equipment’s</td>
-                <td>Schneider / ABB</td>
+                <td>SIZE: R9, 580-01-360A-4+P944+3B SDT Schneider / ABB</td>
             </tr>
         </tbody>
     </table>
@@ -137,7 +141,7 @@ const Sht4000 = () => {
         <tbody>
             <tr>
                 <td>Cutting Chamber</td>
-                <td>L1240 mm × W1100 mm × H1000 mm (Hydraulics Opening)</td>
+                <td>L1200 mm x W900 mm x H1000 mm (Hydraulics Opening)</td>
             </tr>
             <tr>
                 <td>Number of Shaft</td>
@@ -169,7 +173,7 @@ const Sht4000 = () => {
             </tr>
             <tr>
                 <td>Screen</td>
-                <td>MS 28 mm (Hydraulics Opening)</td>
+                <td>MS 18 mm (Hydraulics Opening)</td>
             </tr>
         </tbody>
     </table>
@@ -185,11 +189,11 @@ const Sht4000 = () => {
             </tr>
             <tr>
                 <td>Number of Couplings</td>
-                <td>02 Nos SYTCO Brakes & Torque Limiter</td>
+                <td>01 Nos</td>
             </tr>
             <tr>
                 <td>Type of Coupling</td>
-                <td>Gear Coupling 1 Nos., Torque Limiter Coupling 1 Nos (1000/250 A/kes2ps)</td>
+                <td>Gear Coupling 1 Nos</td>
             </tr>
             <tr>
                 <td>Type of Bearings and Housing</td>
@@ -197,7 +201,7 @@ const Sht4000 = () => {
             </tr>
             <tr>
                 <td>Hydraulics</td>
-                <td>4 Nos 2 ton cylinder with Power Pack yuken 80LPM pump – 2 HP motor</td>
+                <td>6 Nos 2 Ton Cylinder with Power Pack Yuken 80LPM Pump – 2 HP Motor</td>
             </tr>
         </tbody>
     </table>
@@ -209,11 +213,11 @@ const Sht4000 = () => {
         <tbody>
             <tr>
                 <td>Equipment Dimension (A x B x C)</td>
-                <td>L 5500 mm × W 2400 mm × H 3500 mm</td>
+                <td>L 3500 mm x W 1900 mm x H 2980 mm</td>
             </tr>
             <tr>
                 <td>Hopper Opening (G x F)</td>
-                <td>L 1280 mm × W 400 mm</td>
+                <td>L 1200 mm x H 850 mm</td>
             </tr>
             <tr>
                 <td>Hopper Height (E)</td>
@@ -221,11 +225,11 @@ const Sht4000 = () => {
             </tr>
             <tr>
                 <td>Discharge Height (D)</td>
-                <td>1800 mm</td>
+                <td>1200 mm</td>
             </tr>
             <tr>
                 <td>In Feed Height</td>
-                <td>2865 mm</td>
+                <td>2600 mm</td>
             </tr>
         </tbody>
     </table>
@@ -234,4 +238,4 @@ const Sht4000 = () => {
     );
 };
 
-export default Sht4000;
+export default Rst4000;

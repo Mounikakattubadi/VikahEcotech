@@ -32,7 +32,7 @@ import Ourproducts from './Ourproducts.js';
 import Tradefairs from './Tradefairs.js';
 import Ifat from './ifat.js';
 import CompletedTradefair1 from './CompletedTradefair1';
-import Rasper from './Rasper.js';
+import Rst4000 from './Rst4000.js';
 import Contact from './Contact.js';
 import OtherEquipment from './OtherEquipment';
 import SecondaryShredder from './SecondaryShredder.js';
@@ -53,6 +53,8 @@ import ScrollToTopButton from './ScrollToTopButton';
 import Ecosustain2025 from "./ecosustain2025.js"
 import OtherEqpTemp from "./OtherEqpTemp.js";
 import Ifat2025 from './Tradefairpages/ifat2025.js';
+import Rasper_secondaryshredders from './Rasper_secondaryshredders.js';
+import Rst6000 from './Rst6000.js';
 
 function App() {
   return (
@@ -88,7 +90,6 @@ function App() {
         <Route exact path="/sht6000" element={<Sht6000 />} />
         <Route exact path="/sht8000" element={<Sht8000 />} />
         <Route exact path="/sht12000" element={<Sht12000 />} />
-        <Route exact path="/Rasper" element={<Rasper />} />
         <Route exact path="/Tradefairs" element={<Tradefairs />} />
         <Route exact path="/ifat" element={<Ifat />} />
         <Route exact path="/completedTradefair1" element={<CompletedTradefair1 />} />
@@ -105,6 +106,9 @@ function App() {
         <Route path="/block-cutter" element={<BlockCutter />} />
         <Route path="/sidewall-remover" element={<SidewallRemover />} />
 
+        <Route exact path="/rasper_secondaryshredders" element={<Rasper_secondaryshredders />} />
+        <Route exact path="/rst4000" element={<Rst4000 />} />
+        <Route exact path="/rst6000" element={<Rst6000 />} />
         <Route path="/secondarymetalshredder" element={<SecondaryMetalshredder />} />
         <Route path="/secondaryplasticshredder" element={<SecondaryPlasticShredder />} />
         <Route path="/secondarypcb" element={<SecondaryPcb />} />

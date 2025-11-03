@@ -92,7 +92,7 @@ function SecondaryShredder() {
           <h2 className="green-heading mb-4">Applications</h2>
           <div className="row justify-content-center">
             <div className="col-6 col-md-3 mb-4">
-              <Link to="/rasper">
+              <Link to="/rasper_secondaryshredders">
                 <div className="product-card">
                   <img src={img2} alt="Rasper" className="product-img" />
                   <div className="product-label">Secondary Shredder / Rasper</div>

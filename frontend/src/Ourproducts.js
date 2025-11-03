@@ -12,7 +12,9 @@ import shredderhd from "./images/shredder_hd.jpg"
 import shredderhd1 from "./images/shredder_hd1.jpg"
 import OtherEquipment from './OtherEquipment';
 import OtherEqpTemp from './OtherEqpTemp';
-
+import ssshredderhd from "./images/R1.png";
+import ssshredderhd1 from "./images/R2.png";
+import ssshredderhdimg from "./images/R4.jpg";
 
 function Ourproducts() {
   useEffect(() => {
@@ -24,7 +26,7 @@ function Ourproducts() {
     <div>
         <div className="about-top-section text-white text-center py-5">
         <h1 className="display-5 fw-bold">Our Products</h1>
-        <p className="lead">At Vikah Ecotech, we specialize in designing and manufacturing high-quality recycling balers machinery that is tailored
+        <p className="lead">At Vikah Ecotech, we specialize in designing and manufacturing high-quality recycling  machinery that is tailored
              to meet the diverse needs of industries and facilities involved in waste management and recycling processes</p>
         <p><a href="/" className="text-white-50 text-decoration-none">Home</a> &gt; <span className="text-white">Products</span></p>
       </div>
@@ -148,10 +150,17 @@ function Ourproducts() {
               </div></Link>
             </div>
             <div className="col-6 col-md-3 mb-4">
-            <Link to="/rasper">
+            <Link to="/rst4000">
               <div className="product-card">
-                <img src={shredderhdimg} alt="Balers" className="product-img" />
-                <div className="product-label">Rasper</div>
+                <img src={ssshredderhdimg} alt="Balers" className="product-img" />
+                <div className="product-label">Rst4000</div>
+              </div></Link>
+            </div>
+            <div className="col-6 col-md-3 mb-4">
+            <Link to="/rst6000">
+              <div className="product-card">
+                <img src={ssshredderhd} alt="Balers" className="product-img" />
+                <div className="product-label">Rst6000</div>
               </div></Link>
             </div>
             <div className="col-6 col-md-3 mb-4">
