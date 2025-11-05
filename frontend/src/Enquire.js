@@ -104,13 +104,33 @@ const Enquire = () => {
           headers: { 'Content-Type': 'application/json' }
         }
       );
-      alert('Email sent: ' + response.data);
+
+      alert('Email sent successfully!');
+      window.location.reload();
+
+      // ✅ Reset form fields after submission
+      setFormData({
+        name: '',
+        company: '',
+        email: '',
+        website: '',
+        phone: '',
+        address: '',
+        city: '',
+        country: '',
+        message: ''
+      });
+
+      setSelectedMachinery('baler');
+      setSelectedModel('Tyre Scrap Balers');
+      setErrors({});
     } catch (error) {
       alert('Failed to send email: ' + error.message);
     } finally {
       setIsSubmitting(false);
     }
   };
+
 
   return (
     <div className="login-page">
