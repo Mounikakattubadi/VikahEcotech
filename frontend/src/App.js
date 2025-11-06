@@ -55,6 +55,18 @@ import OtherEqpTemp from "./OtherEqpTemp.js";
 import Ifat2025 from './Tradefairpages/ifat2025.js';
 import Rasper_secondaryshredders from './Rasper_secondaryshredders.js';
 import Rst6000 from './Rst6000.js';
+import BLP30 from './BLP30.js';
+import Blp40 from './Blp40.js';
+import Blp50 from './Blp50.js';
+import Blc30 from './Blc30.js';
+import Blc40 from './Blc40.js';
+import Blc50 from './Blc50.js';
+import Shp6000 from './Shp6000.js';
+import Shp8000 from './Shp8000.js';
+import Shp12000 from './Shp12000.js';
+import Shc6000 from './Shc6000.js';
+import Shc12000 from './Shc12000.js';
+import Shc8000 from './Shc8000.js';
 
 function App() {
   return (
@@ -116,6 +128,20 @@ function App() {
         <Route exact path="/othereqptemp" element={<OtherEqpTemp />} />
 
         <Route exact path="/ifat2025" element={<Ifat2025 />} />
+
+        <Route exact path="/blp30" element={<BLP30 />} />
+        <Route exact path="/blp40" element={<Blp40 />} />
+        <Route exact path="/blp50" element={<Blp50 />} />
+        <Route exact path="/blc30" element={<Blc30 />} />
+        <Route exact path="/blc40" element={<Blc40 />} />
+        <Route exact path="/blc50" element={<Blc50 />} />
+        <Route exact path="/shp6000" element={<Shp6000 />} />
+        <Route exact path="/shp8000" element={<Shp8000 />} />
+        <Route exact path="/shp12000" element={<Shp12000 />} />
+        <Route exact path="/shc6000" element={<Shc6000 />} />
+       <Route exact path="/shc8000" element={<Shc8000 />} />
+        <Route exact path="/shc12000" element={<Shc12000 />} />
+
 
       </Routes>
       <Footer />

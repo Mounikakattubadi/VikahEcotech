@@ -1,53 +1,96 @@
-import React from 'react';
-import { useEffect } from 'react';
-import './Tyrecutting.css'; // Reusing the styles for consistency
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Tyrecutting.css';
+import './Models.css';
+
+import Plastic1 from './images/baler.png';
+import Plastic2 from './images/baler1.png';
+import Plastic3 from './images/baler2.png';
 
 function Plasticbaler() {
   useEffect(() => {
-    // Directly set the scroll position to the top of the page
     document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;  // For compatibility with older browsers
-  }, []); // Empty dependency array ensures it runs only once on page load
+    document.body.scrollTop = 0;
+  }, []);
+
+  const balers = [
+    {
+      name: 'BLP30',
+      type: 'Plastic Baler',
+      force: '30 Ton',
+      weight: '1200 kg',
+      note: 'Compact design for lightweight plastic waste such as PET bottles and films.',
+      image: Plastic1,
+    },
+    {
+      name: 'BLP40',
+      type: 'Plastic Baler',
+      force: '40 Ton',
+      weight: '1500 kg',
+      note: 'Ideal for medium-density plastic waste management applications.',
+      image: Plastic2,
+    },
+    {
+      name: 'BLP50',
+      type: 'Plastic Baler',
+      force: '50 Ton',
+      weight: '1800 kg',
+      note: 'Heavy-duty design for industrial-scale plastic recycling operations.',
+      image: Plastic3,
+    },
+  ];
+
+  const [selected, setSelected] = useState(balers[0]);
 
   return (
     <div>
+      {/* Header Section */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
           <h1 className="display-4">Plastic Balers</h1>
         </div>
       </header>
 
-      <div className="container text-center my-4">
-        <p className="lead">
-          We Vikah Ecotech manufacture high-quality plastic balers for PET, HDPE, LDPE, etc.,
-          to streamline your plastic waste management and promote environmental sustainability.
+      {/* Description Section */}
+      <div className="container text-center my-4 balerbackimg">
+        <p>
+          Vikah Ecotech manufactures efficient, eco-friendly plastic balers designed for
+          PET, HDPE, LDPE, and other types of plastic waste. Our balers ensure optimal compression,
+          easy operation, and sustainable recycling solutions for various industries.
         </p>
-      </div>
 
+        {/* Model Tabs */}
+        <div className="btn-group flex-wrap mb-4" role="group">
+          {balers.map((baler, index) => (
+            <button
+              key={index}
+              className={`btn btn-outline-success mx-1 my-1 ${selected.name === baler.name ? 'active' : ''}`}
+              onClick={() => setSelected(baler)}
+            >
+              {baler.name}
+            </button>
+          ))}
+        </div>
 
-      <section className="balerbackimg">
-        <div className="container py-5">
-          <div className="row justify-content-center">
-            <div className="col-md-10 machine-content bg-white p-4 rounded shadow-sm">
-              <h3 className="machine-title">Reliable Plastic Baling Solutions</h3>
-              <p>
-                Vikah Ecotech is committed to providing cutting-edge solutions that meet the evolving needs
-                of the recycling industry. With years of experience in designing and manufacturing
-                state-of-the-art plastic baler machinery, we help businesses efficiently manage plastic waste.
-              </p>
-              <p>
-                Our team of skilled engineers and professionals works tirelessly to develop innovative balers
-                that support recycling and reuse while reducing environmental impact.
-              </p>
-              <p className="mt-4">
-                <strong>📧 For inquiries:</strong> <a href="mailto:info@vikahecotech.com">info@vikahecotech.com</a><br />
-                <strong>📞 Call us:</strong> <a href="tel:+914049471616">+91 4049471616</a>
-              </p>
-              <p className="text-muted mt-3 mb-0">We’ll be happy to assist you with your plastic baler requirements.</p>
-            </div>
+        {/* Selected Model Info */}
+        <div className="row justify-content-center align-items-center">
+          <div className="col-md-6 mb-4">
+            <img src={selected.image} alt={selected.name} className="img-fluid rounded machine-image" />
+          </div>
+          <div className="col-md-6 mb-4 makecenter">
+            <h3 className="machine-title">{selected.name}</h3>
+            <ul className="list-unstyled">
+              <li><strong>Type:</strong> {selected.type}</li>
+              <li><strong>Compaction Force:</strong> {selected.force}</li>
+              <li><strong>Baler Weight:</strong> {selected.weight}</li>
+              <li><strong>Note:</strong> {selected.note}</li>
+            </ul>
+            <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
+              Read More
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

@@ -1,51 +1,100 @@
-import React, { useEffect } from 'react';
-import './Tyrecutting.css'; // Reusing the same styles for consistency
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Tyrecutting.css';
+import './Models.css';
+
+import plasticImg1 from "./images/Shedder _ Final PNG.png";
+import plasticImg2 from "./images/shredder_hd.jpg";
+import plasticImg3 from "./images/shredder_hd1.jpg";
 
 function Plasticshredder() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const shredders = [
+    {
+      name: 'SHP6000',
+      type: 'Plastic Shredder',
+      power: '100 - 140 HP',
+      system: 'High Torque Hydraulic System',
+      feature: 'Our SHP6000 model ensures precise shredding for PET and HDPE plastics with efficient throughput.',
+      image: plasticImg1,
+    },
+    {
+      name: 'SHP8000',
+      type: 'Plastic Shredder',
+      power: '140 - 200 HP',
+      system: 'Dual Shaft Cutting Mechanism',
+      feature: 'SHP8000 provides higher cutting efficiency with superior handling for industrial-grade plastics.',
+      image: plasticImg2,
+    },
+    {
+      name: 'SHP12000',
+      type: 'Plastic Shredder',
+      power: '200 - 260 HP',
+      system: 'Heavy-Duty Hydraulic System',
+      feature: 'Our SHP12000 delivers unmatched shredding capacity for large-scale plastic recycling facilities.',
+      image: plasticImg3,
+    },
+  ];
+
+  const [selected, setSelected] = useState(shredders[0]);
+
   return (
     <div>
+      {/* Header */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
-          <h1 className="display-4">Plastic Shredder</h1>
+          <h1 className="display-4">Plastic Shredders</h1>
         </div>
       </header>
 
-      <div className="container text-center my-4">
-        <p className="lead">
-          Vikah Ecotech manufactures high-quality plastic shredders designed to streamline plastic waste management and
-          promote environmental sustainability. Our shredders are built to handle various types of plastics such as PET, HDPE,
-          LDPE, and more.
+      {/* Introduction */}
+      <div className="container text-center my-4 balerbackimg">
+        <p>
+          Vikah Ecotech manufactures advanced plastic shredders designed to handle PET, HDPE, LDPE, and other polymers efficiently.
+          Our shredders are built with superior engineering, ensuring smooth operation, long lifespan, and low maintenance.
         </p>
-      </div>
 
-      <section className="balerbackimg">
-        <div className="container py-5">
-          <div className="row justify-content-center">
-            <div className="col-md-10 machine-content bg-white p-4 rounded shadow-sm">
-              <h3 className="machine-title">Efficient and Sustainable Plastic Shredding</h3>
-              <p>
-                Vikah Ecotech's plastic shredders are engineered to process various plastic materials efficiently, enabling businesses
-                to reduce plastic waste and contribute to a circular economy. We are committed to providing cutting-edge solutions
-                that meet the evolving needs of the recycling industry.
-              </p>
-              <p>
-                Our shredders are built with advanced technology to ensure high performance, safety, and ease of operation.
-                Whether you're dealing with PET, HDPE, or LDPE plastic waste, our machines can handle it all, helping you efficiently
-                compact and recycle plastic waste for reuse.
-              </p>
-              <p className="mt-4">
-                <strong>📧 For inquiries:</strong> <a href="mailto:info@vikahecotech.com">info@vikahecotech.com</a><br />
-                <strong>📞 Call us:</strong> <a href="tel:+914049471616">+91 4049471616</a>
-              </p>
-              <p className="text-muted mt-3 mb-0">We’ll be happy to assist you with your plastic shredder requirements.</p>
-            </div>
+        {/* Model Buttons */}
+        <div className="btn-group flex-wrap mb-4" role="group">
+          {shredders.map((machine, index) => (
+            <button
+              key={index}
+              className={`btn btn-outline-success mx-1 my-1 ${selected.name === machine.name ? 'active' : ''}`}
+              onClick={() => setSelected(machine)}
+            >
+              {machine.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Selected Model Details */}
+        <div className="row justify-content-center align-items-center">
+          <div className="col-md-6 mb-4">
+            <img
+              src={selected.image}
+              alt={selected.name}
+              className="img-fluid rounded machine-image"
+            />
+          </div>
+
+          <div className="col-md-6 mb-4 makecenter">
+            <h3 className="machine-title">{selected.name}</h3>
+            <ul className="list-unstyled">
+              <li><strong>Type:</strong> {selected.type}</li>
+              <li><strong>Power Range:</strong> {selected.power}</li>
+              {selected.system && <li><strong>System:</strong> {selected.system}</li>}
+              <li><strong>Feature:</strong> {selected.feature}</li>
+            </ul>
+
+            <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
+              Read More
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

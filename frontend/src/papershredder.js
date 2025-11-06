@@ -1,48 +1,100 @@
-import React, { useEffect } from 'react';
-import './Tyrecutting.css'; // Reusing the same styles for consistency
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Tyrecutting.css';
+import './Models.css';
+
+import paperImg1 from "./images/Shedder _ Final PNG.png";
+import paperImg2 from "./images/shredder_hd.jpg";
+import paperImg3 from "./images/shredder_hd1.jpg";
 
 function Papershredder() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const shredders = [
+    {
+      name: 'SHC6000',
+      type: 'Paper & Cardboard Shredder',
+      power: '80 - 120 HP',
+      system: 'Dual Shaft Hydraulic Cutting System',
+      feature: 'The SHC6000 efficiently shreds large volumes of paper and cardboard waste, ideal for recycling operations.',
+      image: paperImg1,
+    },
+    {
+      name: 'SHC8000',
+      type: 'Paper & Cardboard Shredder',
+      power: '120 - 180 HP',
+      system: 'Auto-Feed Conveyor System',
+      feature: 'The SHC8000 model ensures smooth shredding with automated feeding and robust cutting power.',
+      image: paperImg2,
+    },
+    {
+      name: 'SHC12000',
+      type: 'Paper & Cardboard Shredder',
+      power: '180 - 240 HP',
+      system: 'Heavy-Duty Industrial Build',
+      feature: 'The SHC12000 handles high-volume shredding of corrugated sheets, cartons, and other bulky paper materials.',
+      image: paperImg3,
+    },
+  ];
+
+  const [selected, setSelected] = useState(shredders[0]);
+
   return (
     <div>
+      {/* Header Section */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
-          <h1 className="display-4">Paper and Cardboard Shredder</h1>
+          <h1 className="display-4">Paper & Cardboard Shredders</h1>
         </div>
       </header>
 
-      <div className="container text-center my-4">
-        <p className="lead">
-          Vikah Ecotech manufactures high-quality Paper and Cardboard Shredders designed to streamline your paper and cardboard waste management.
-          Our shredders ensure efficient processing and contribute to environmental sustainability.
+      {/* Intro Section */}
+      <div className="container text-center my-4 balerbackimg">
+        <p>
+          Vikah Ecotech's Paper & Cardboard Shredders are engineered to process office paper waste, corrugated boxes, 
+          and packaging materials with precision and high output. Our machines promote efficient recycling while minimizing manual effort.
         </p>
-      </div>
 
-      <section className="balerbackimg">
-        <div className="container py-5">
-          <div className="row justify-content-center">
-            <div className="col-md-10 machine-content bg-white p-4 rounded shadow-sm">
-              <h3 className="machine-title">Efficient Paper and Cardboard Shredding</h3>
-              <p>
-                Vikah Ecotech's Paper and Cardboard Shredders are designed to efficiently handle large quantities of paper and cardboard waste.
-                By processing these materials, businesses can optimize their recycling operations and reduce waste volumes.
-              </p>
-              <p>
-                Our shredders are equipped with advanced technology for reliable and high-performance shredding. Whether you're dealing with paper
-                or cardboard waste, we ensure that our shredders meet the highest standards of safety, efficiency, and durability.
-              </p>
-              <p className="mt-4">
-                <strong>📧 For inquiries:</strong> <a href="mailto:info@vikahecotech.com">info@vikahecotech.com</a><br />
-                <strong>📞 Call us:</strong> <a href="tel:+914049471616">+91 4049471616</a>
-              </p>
-              <p className="text-muted mt-3 mb-0">We’ll be happy to assist you with your Paper and Cardboard Shredder requirements.</p>
-            </div>
+        {/* Model Switch Buttons */}
+        <div className="btn-group flex-wrap mb-4" role="group">
+          {shredders.map((machine, index) => (
+            <button
+              key={index}
+              className={`btn btn-outline-success mx-1 my-1 ${selected.name === machine.name ? 'active' : ''}`}
+              onClick={() => setSelected(machine)}
+            >
+              {machine.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Selected Model Details */}
+        <div className="row justify-content-center align-items-center">
+          <div className="col-md-6 mb-4">
+            <img
+              src={selected.image}
+              alt={selected.name}
+              className="img-fluid rounded machine-image"
+            />
+          </div>
+
+          <div className="col-md-6 mb-4 makecenter">
+            <h3 className="machine-title">{selected.name}</h3>
+            <ul className="list-unstyled">
+              <li><strong>Type:</strong> {selected.type}</li>
+              <li><strong>Power Range:</strong> {selected.power}</li>
+              {selected.system && <li><strong>System:</strong> {selected.system}</li>}
+              <li><strong>Feature:</strong> {selected.feature}</li>
+            </ul>
+
+            <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
+              Read More
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
