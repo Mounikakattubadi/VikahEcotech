@@ -87,27 +87,28 @@ const BLP40 = () => {
 
       <div className="featurestable">
         <h3>MODEL NO: BLP 40</h3>
-        <table>
-         <tbody>
-            <tr><td>Compaction Force</td><td>40 Ton</td></tr>
-            <tr><td>Bale Size</td><td>900 x 600 x 700 mm</td></tr>
-            <tr><td>Bale Weight</td><td>60 – 100 Kg (depending on material)</td></tr>
-            <tr><td>Cylinder</td><td>1 Main Cylinder</td></tr>
-            <tr><td>Motor Power</td><td>7.5 HP</td></tr>
-            <tr><td>Oil Tank Capacity</td><td>150 Litres</td></tr>
-            <tr><td>Machine Weight</td><td>1500 Kg</td></tr>
-            <tr><td>Operation</td><td>Automatic / Manual</td></tr>
-            <tr><td>Cycle Time</td><td>40 Seconds (Approx.)</td></tr>
-            <tr><td>Application</td><td>PET bottles, plastic films, packaging, sheets, etc.</td></tr>
-          </tbody>
-        </table>
+            <table>
+              <tbody>
+                <tr><td>Model</td><td>BLP 40</td></tr>
+                <tr><td>Compression Force (Ton)</td><td>40</td></tr>
+                <tr><td>Bale size (L*W*H) mm</td><td>1100*750*(650-900)</td></tr>
+                <tr><td>Feed opening size (L*H) mm</td><td>1100*500</td></tr>
+                <tr><td>Capacity (Bales/Hr)</td><td>3-5</td></tr>
+                <tr><td>Bale weight (Kg)</td><td>200-350</td></tr>
+                <tr><td>Voltage (customizable) (V/Hz)</td><td>380V/50Hz</td></tr>
+                <tr><td>Power (Kw/Hp)</td><td>5.5Kw / 7.5Hp</td></tr>
+                <tr><td>Machine size (L*W*H) mm</td><td>1500*1000*3150</td></tr>
+                <tr><td>Machine weight (Kg)</td><td>1700</td></tr>
+              </tbody>
+            </table>
+
       </div>
 
       <div className="buttons-container">
         <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
           <button className="login-button">Enquire Us</button>
         </Link>
-        <button className="downloadspeci-button" onClick={() => handleDownload('BLP40')}>
+        <button className="downloadspeci-button" onClick={() => handleDownload('blp 40')}>
           Download Specifications
         </button>
       </div>

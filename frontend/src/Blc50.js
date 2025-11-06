@@ -86,18 +86,19 @@ const BLC50 = () => {
       <div className="featurestable">
         <h3>MODEL NO: BLC 50</h3>
         <table>
-          <tbody>
-            <tr><td>Compaction Force</td><td>50 Ton</td></tr>
-            <tr><td>Bale Size</td><td>1100 x 800 x 900 mm</td></tr>
-            <tr><td>Bale Weight</td><td>~100 – 150 Kg (depending on material)</td></tr>
-            <tr><td>Cylinder</td><td>1 Main Cylinder</td></tr>
-            <tr><td>Motor Power</td><td>10 HP</td></tr>
-            <tr><td>Oil Tank Capacity</td><td>200 Litres</td></tr>
-            <tr><td>Machine Weight</td><td>2000 Kg</td></tr>
-            <tr><td>Operation</td><td>Automatic / Manual</td></tr>
-            <tr><td>Cycle Time</td><td>~45 Seconds (Approx.)</td></tr>
-            <tr><td>Application</td><td>Bulk Cardboard, Paper Waste, Packaging Recycling</td></tr>
-          </tbody>
+              <tbody>
+                  <tr><td>Model</td><td>BLC 50</td></tr>
+                  <tr><td>Compression Force (Ton)</td><td>50</td></tr>
+                  <tr><td>Bale size (L*W*H) mm</td><td>1100*700*(450-900)</td></tr>
+                  <tr><td>Feed opening size (L*H) mm</td><td>1100*500</td></tr>
+                  <tr><td>Capacity (Bales/Hr)</td><td>4-6</td></tr>
+                  <tr><td>Bale weight (Kg)</td><td>250-350</td></tr>
+                  <tr><td>Voltage (Customizable) (V/Hz)</td><td>380V/50Hz</td></tr>
+                  <tr><td>Power (Kw/Hp)</td><td>7.5Kw / 10Hp</td></tr>
+                  <tr><td>Machine size (L*W*H) mm</td><td>1550*1100*3250</td></tr>
+                  <tr><td>Machine weight (Kg)</td><td>1700</td></tr>
+              </tbody>
+
         </table>
       </div>
 
@@ -105,7 +106,7 @@ const BLC50 = () => {
         <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
           <button className="login-button">Enquire Us</button>
         </Link>
-        <button className="downloadspeci-button" onClick={() => handleDownload('BLC50')}>
+        <button className="downloadspeci-button" onClick={() => handleDownload('blc 50')}>
           Download Specifications
         </button>
       </div>

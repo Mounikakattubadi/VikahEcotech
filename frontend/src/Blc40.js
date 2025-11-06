@@ -88,17 +88,18 @@ const BLC40 = () => {
         <h3>MODEL NO: BLC 40</h3>
         <table>
          <tbody>
-            <tr><td>Compaction Force</td><td>40 Ton</td></tr>
-            <tr><td>Bale Size</td><td>1000 x 700 x 800 mm</td></tr>
-            <tr><td>Bale Weight</td><td>~80 – 120 Kg (depending on material)</td></tr>
-            <tr><td>Cylinder</td><td>1 Main Cylinder</td></tr>
-            <tr><td>Motor Power</td><td>7.5 HP</td></tr>
-            <tr><td>Oil Tank Capacity</td><td>150 Litres</td></tr>
-            <tr><td>Machine Weight</td><td>1600 Kg</td></tr>
-            <tr><td>Operation</td><td>Automatic / Manual</td></tr>
-            <tr><td>Cycle Time</td><td>~40 Seconds (Approx.)</td></tr>
-            <tr><td>Application</td><td>Cardboard Boxes, Packaging Waste, Paper Sheets</td></tr>
-          </tbody>
+            <tr><td>Model</td><td>BLC 40</td></tr>
+            <tr><td>Compression Force (Ton)</td><td>40</td></tr>
+            <tr><td>Bale size (L*W*H) mm</td><td>1100*700*(450-900)</td></tr>
+            <tr><td>Feed opening size (L*H) mm</td><td>1100*500</td></tr>
+            <tr><td>Capacity (Bales/Hr)</td><td>4-7</td></tr>
+            <tr><td>Bale weight (Kg)</td><td>200-250</td></tr>
+            <tr><td>Voltage (Customizable) (V/Hz)</td><td>380V/50Hz</td></tr>
+            <tr><td>Power (Kw/Hp)</td><td>5.5Kw / 7.5Hp</td></tr>
+            <tr><td>Machine size (L*W*H) mm</td><td>1550*1100*3250</td></tr>
+            <tr><td>Machine weight (Kg)</td><td>1500</td></tr>
+        </tbody>
+
         </table>
       </div>
 
@@ -106,7 +107,7 @@ const BLC40 = () => {
         <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
           <button className="login-button">Enquire Us</button>
         </Link>
-        <button className="downloadspeci-button" onClick={() => handleDownload('BLC40')}>
+        <button className="downloadspeci-button" onClick={() => handleDownload('blc 40')}>
           Download Specifications
         </button>
       </div>

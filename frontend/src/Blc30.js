@@ -87,18 +87,19 @@ const BLC30 = () => {
       <div className="featurestable">
         <h3>MODEL NO: BLC 30</h3>
         <table>
-          <tbody>
-            <tr><td>Compaction Force</td><td>30 Ton</td></tr>
-            <tr><td>Bale Size</td><td>900 x 600 x 700 mm</td></tr>
-            <tr><td>Bale Weight</td><td>~60 – 100 Kg (depending on material)</td></tr>
-            <tr><td>Cylinder</td><td>1 Main Cylinder</td></tr>
-            <tr><td>Motor Power</td><td>5 HP</td></tr>
-            <tr><td>Oil Tank Capacity</td><td>120 Litres</td></tr>
-            <tr><td>Machine Weight</td><td>1300 Kg</td></tr>
-            <tr><td>Operation</td><td>Automatic / Manual</td></tr>
-            <tr><td>Cycle Time</td><td>~35 Seconds (Approx.)</td></tr>
-            <tr><td>Application</td><td>Paper, Cardboard, Packaging Waste</td></tr>
-          </tbody>
+         <tbody>
+            <tr><td>Model</td><td>BLC 30</td></tr>
+            <tr><td>Compression Force (Ton)</td><td>30</td></tr>
+            <tr><td>Bale size (L*W*H) mm</td><td>1100*700*(450-900)</td></tr>
+            <tr><td>Feed opening size (L*H) mm</td><td>1100*500</td></tr>
+            <tr><td>Capacity (Bales/Hr)</td><td>4-7</td></tr>
+            <tr><td>Bale weight (Kg)</td><td>120-200</td></tr>
+            <tr><td>Voltage (Customizable) (V/Hz)</td><td>380V/50Hz</td></tr>
+            <tr><td>Power (Kw/Hp)</td><td>5.5Kw / 7.5Hp</td></tr>
+            <tr><td>Machine size (L*W*H) mm</td><td>1550*950*3050</td></tr>
+            <tr><td>Machine weight (Kg)</td><td>1340</td></tr>
+        </tbody>
+
         </table>
       </div>
 
@@ -106,7 +107,7 @@ const BLC30 = () => {
         <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
           <button className="login-button">Enquire Us</button>
         </Link>
-        <button className="downloadspeci-button" onClick={() => handleDownload('BLC30')}>
+        <button className="downloadspeci-button" onClick={() => handleDownload('blc 30')}>
           Download Specifications
         </button>
       </div>

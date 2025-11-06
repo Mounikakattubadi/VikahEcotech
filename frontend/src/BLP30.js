@@ -88,18 +88,19 @@ const BLP30 = () => {
       <div className="featurestable">
         <h3>MODEL NO: BLP 30</h3>
         <table>
-          <tbody>
-            <tr><td>Compaction Force</td><td>30 Ton</td></tr>
-            <tr><td>Bale Size</td><td>800 x 500 x 600 mm</td></tr>
-            <tr><td>Bale Weight</td><td>40 – 80 Kg (depending on material)</td></tr>
-            <tr><td>Cylinder</td><td>1 Main Cylinder</td></tr>
-            <tr><td>Motor Power</td><td>5 HP</td></tr>
-            <tr><td>Oil Tank Capacity</td><td>100 Litres</td></tr>
-            <tr><td>Machine Weight</td><td>1200 Kg</td></tr>
-            <tr><td>Operation</td><td>Automatic / Manual</td></tr>
-            <tr><td>Cycle Time</td><td>35 Seconds (Approx.)</td></tr>
-            <tr><td>Application</td><td>Plastic bottles, films, wrappers, etc.</td></tr>
-          </tbody>
+              <tbody>
+                  <tr><td>Model</td><td>BLP 30</td></tr>
+                  <tr><td>Compression Force (Ton)</td><td>30</td></tr>
+                  <tr><td>Bale size (L*W*H) mm</td><td>1100*700*(650-900)</td></tr>
+                  <tr><td>Feed opening size (L*H) mm</td><td>1100*500</td></tr>
+                  <tr><td>Capacity (Bales/Hr)</td><td>3-6</td></tr>
+                  <tr><td>Bale weight (Kg)</td><td>150-250</td></tr>
+                  <tr><td>Voltage (customizable) (V/Hz)</td><td>380V/50Hz</td></tr>
+                  <tr><td>Power (Kw/Hp)</td><td>5.5Kw / 7.5Hp</td></tr>
+                  <tr><td>Machine size (L*W*H) mm</td><td>1500*950*3150</td></tr>
+                  <tr><td>Machine weight (Kg)</td><td>1200</td></tr>
+              </tbody>
+
         </table>
       </div>
 
@@ -107,7 +108,7 @@ const BLP30 = () => {
         <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
           <button className="login-button">Enquire Us</button>
         </Link>
-        <button className="downloadspeci-button" onClick={() => handleDownload('BLP30')}>
+        <button className="downloadspeci-button" onClick={() => handleDownload('blp 30')}>
           Download Specifications
         </button>
       </div>

@@ -88,18 +88,19 @@ const BLP50 = () => {
       <div className="featurestable">
         <h3>MODEL NO: BLP 50</h3>
         <table>
-         <tbody>
-            <tr><td>Compaction Force</td><td>50 Ton</td></tr>
-            <tr><td>Bale Size</td><td>1000 x 700 x 800 mm</td></tr>
-            <tr><td>Bale Weight</td><td>80 – 120 Kg (depending on material)</td></tr>
-            <tr><td>Cylinder</td><td>1 Main Cylinder</td></tr>
-            <tr><td>Motor Power</td><td>10 HP</td></tr>
-            <tr><td>Oil Tank Capacity</td><td>200 Litres</td></tr>
-            <tr><td>Machine Weight</td><td>1800 Kg</td></tr>
-            <tr><td>Operation</td><td>Automatic / Manual</td></tr>
-            <tr><td>Cycle Time</td><td>45 Seconds (Approx.)</td></tr>
-            <tr><td>Application</td><td>Bulk plastic films, bottles, drums, packaging waste, etc.</td></tr>
-          </tbody>
+            <tbody>
+                <tr><td>Model</td><td>BLP 50</td></tr>
+                <tr><td>Compression Force (Ton)</td><td>50</td></tr>
+                <tr><td>Bale size (L*W*H) mm</td><td>1500*750*(700-1000)</td></tr>
+                <tr><td>Feed opening size (L*H) mm</td><td>1500*600</td></tr>
+                <tr><td>Capacity (Bales/Hr)</td><td>3-5</td></tr>
+                <tr><td>Bale weight (Kg)</td><td>350-500</td></tr>
+                <tr><td>Voltage (customizable) (V/Hz)</td><td>380V/50Hz</td></tr>
+                <tr><td>Power (Kw/Hp)</td><td>7.5Kw / 10Hp</td></tr>
+                <tr><td>Machine size (L*W*H) mm</td><td>1850*1200*3300</td></tr>
+                <tr><td>Machine weight (Kg)</td><td>2300</td></tr>
+            </tbody>
+
         </table>
       </div>
 
@@ -107,7 +108,7 @@ const BLP50 = () => {
         <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
           <button className="login-button">Enquire Us</button>
         </Link>
-        <button className="downloadspeci-button" onClick={() => handleDownload('BLP50')}>
+        <button className="downloadspeci-button" onClick={() => handleDownload('blp 50')}>
           Download Specifications
         </button>
       </div>
