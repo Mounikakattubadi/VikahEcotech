@@ -1,51 +1,102 @@
-import React, { useEffect } from 'react';
-import './Tyrecutting.css'; // Reusing the same styles for consistency
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Tyrecutting.css';
+import './Models.css';
+
+// 👉 Replace with real images
+import metalImg1 from "./images/Shedder _ Final PNG.png";
+import metalImg2 from "./images/shredder_hd.jpg";
+import metalImg3 from "./images/shredder_hd1.jpg";
 
 function Metalshredder() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const shredders = [
+    {
+      name: 'SHM2000',
+      type: 'Metal Shredder',
+      power: '50 - 70 HP',
+      system: 'Twin Shaft Heavy Duty System',
+      feature: 'SHM2000 is ideal for small to mid-scale metal scrap shredding operations with high torque output.',
+      image: metalImg1,
+    },
+    {
+      name: 'SHM2200',
+      type: 'Metal Shredder',
+      power: '70 - 90 HP',
+      system: 'High Torque Hydraulic System',
+      feature: 'SHM2200 offers increased chamber size and shredding capacity for industrial metal processing.',
+      image: metalImg2,
+    },
+    {
+      name: 'SHM2600',
+      type: 'Metal Shredder',
+      power: '90 - 120 HP',
+      system: 'Dual Shaft Cutting + Heavy Duty Rotor',
+      feature: 'SHM2600 is designed for large-scale shredding of ferrous & non-ferrous scrap metals.',
+      image: metalImg3,
+    },
+  ];
+
+  const [selected, setSelected] = useState(shredders[0]);
+
   return (
     <div>
+      {/* Header */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
-          <h1 className="display-4">Metal Shredder</h1>
+          <h1 className="display-4">Metal Shredders</h1>
         </div>
       </header>
 
-      <div className="container text-center my-4">
-        <p className="lead">
-          Vikah Ecotech manufactures high-quality metal shredders designed to efficiently process and shred various metals 
-          such as ferrous and non-ferrous materials, including aluminum, copper, brass, and more.
+      {/* Introduction */}
+      <div className="container text-center my-4 balerbackimg">
+        <p>
+          Vikah Ecotech manufactures high-performance metal shredders engineered for both ferrous
+          and non-ferrous materials. Our shredders are built for strength, durability, and consistent
+          shredding output for recycling yards and industrial applications.
         </p>
-      </div>
 
-      <section className="balerbackimg">
-        <div className="container py-5">
-          <div className="row justify-content-center">
-            <div className="col-md-10 machine-content bg-white p-4 rounded shadow-sm">
-              <h3 className="machine-title">Revolutionizing Metal Shredding</h3>
-              <p>
-                At Vikah Ecotech, we specialize in providing cutting-edge metal shredding technology designed to meet the 
-                growing demands of metal recycling. Our machines are built with the latest technology to efficiently shred 
-                metals of various types, ensuring that businesses and recycling facilities can handle large volumes of metal waste 
-                in a cost-effective and environmentally friendly way.
-              </p>
-              <p>
-                Our team of engineers works diligently to design robust and reliable shredders that guarantee high performance and 
-                efficiency. By investing in our metal shredders, your facility can increase operational efficiency, reduce waste, 
-                and contribute to a more sustainable environment.
-              </p>
-              <p className="mt-4">
-                <strong>📧 For inquiries:</strong> <a href="mailto:info@vikahecotech.com">info@vikahecotech.com</a><br />
-                <strong>📞 Call us:</strong> <a href="tel:+914049471616">+91 4049471616</a>
-              </p>
-              <p className="text-muted mt-3 mb-0">We’ll be happy to assist you with your metal shredder requirements.</p>
-            </div>
+        {/* Model Buttons */}
+        <div className="btn-group flex-wrap mb-4" role="group">
+          {shredders.map((machine, index) => (
+            <button
+              key={index}
+              className={`btn btn-outline-success mx-1 my-1 ${selected.name === machine.name ? 'active' : ''}`}
+              onClick={() => setSelected(machine)}
+            >
+              {machine.name}
+            </button>
+          ))}
+        </div>
+
+        {/* Selected Model Details */}
+        <div className="row justify-content-center align-items-center">
+          <div className="col-md-6 mb-4">
+            <img
+              src={selected.image}
+              alt={selected.name}
+              className="img-fluid rounded machine-image"
+            />
+          </div>
+
+          <div className="col-md-6 mb-4 makecenter">
+            <h3 className="machine-title">{selected.name}</h3>
+            <ul className="list-unstyled">
+              <li><strong>Type:</strong> {selected.type}</li>
+              <li><strong>Power Range:</strong> {selected.power}</li>
+              {selected.system && <li><strong>System:</strong> {selected.system}</li>}
+              <li><strong>Feature:</strong> {selected.feature}</li>
+            </ul>
+
+            <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
+              Read More
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

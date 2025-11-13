@@ -111,12 +111,13 @@ const Navbar = () => {
               {/* Primary Shredder Submenu */}
               {productMenu === 'Primary Shredder' && !subProductMenu && (
                 <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={handleBack}>← Back</button></li>
-                  <li><Link to="/shredder" className="dropdown-item" onClick={handleNavigation}>Primary Shredders</Link></li>
                   <li><button className="dropdown-item" onClick={() => setSubProductMenu('tyreShredder')}>Tyre Shredder</button></li>
                   <li><button className="dropdown-item" onClick={() => setSubProductMenu('plasticShredder')}>Plastic Shredder</button></li>
                   <li><button className="dropdown-item" onClick={() => setSubProductMenu('paperShredder')}>Paper & Cardboard Shredder</button></li>
-                  <li><Link to="/metalshredder" className="dropdown-item" onClick={handleNavigation}>Metal Shredder</Link></li>
+
+                  {/* 👉 Direct link to E-Waste (no submenu) */}
+                  <li><Link to="/ewaste" className="dropdown-item" onClick={handleNavigation}>E-Waste Shredder</Link></li>
+                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('metalShredder')}>Metal Shredder</button></li>
                 </ul>
               )}
 
@@ -153,6 +154,42 @@ const Navbar = () => {
                 </ul>
               )}
 
+              {/* ✅ Metal Shredder Submenu */}
+              {subProductMenu === 'metalShredder' && (
+                <ul className="dropdown-menu show">
+                  <li>
+                    <button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>
+                      ← Back
+                    </button>
+                  </li>
+
+                  {/* Main category link */}
+                  <li>
+                    <Link to="/metalshredder" className="dropdown-item" onClick={handleNavigation}>
+                      Metal Shredder
+                    </Link>
+                  </li>
+
+                  {/* Models */}
+                  <li>
+                    <Link to="/shm2000" className="dropdown-item" onClick={handleNavigation}>
+                      SHM2000
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/shm2200" className="dropdown-item" onClick={handleNavigation}>
+                      SHM2200
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/shm2600" className="dropdown-item" onClick={handleNavigation}>
+                      SHM2600
+                    </Link>
+                  </li>
+                </ul>
+              )}
 
               {/* Secondary Shredder Submenu */}
               {productMenu === 'Secondary Shredder' && !subProductMenu && (
@@ -183,7 +220,7 @@ const Navbar = () => {
                   <li><button className="dropdown-item" onClick={() => setSubProductMenu('tyreScrapBaler')}>Tyre Scrap Baler</button></li>
                   <li><button className="dropdown-item" onClick={() => setSubProductMenu('plasticBaler')}>Plastic Balers</button></li>
                   <li><button className="dropdown-item" onClick={() => setSubProductMenu('cardboardBaler')}>Paper & Cardboard Balers</button></li>
-                  <li><Link to="/metalbaler" className="dropdown-item" onClick={handleNavigation}>Metal Balers</Link></li>
+<li><button className="dropdown-item" onClick={() => setSubProductMenu('metalBaler')}>Metal Balers</button></li>
                 </ul>
               )}
 
@@ -219,6 +256,42 @@ const Navbar = () => {
                   <li><Link to="/blc50" className="dropdown-item" onClick={handleNavigation}>BLC50</Link></li>
                 </ul>
               )}
+{/* ✅ Metal Baler Submenu */}
+{subProductMenu === 'metalBaler' && (
+  <ul className="dropdown-menu show">
+    <li>
+      <button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>
+        ← Back
+      </button>
+    </li>
+
+    {/* Main page link */}
+    <li>
+      <Link to="/metalbaler" className="dropdown-item" onClick={handleNavigation}>
+        Metal Balers
+      </Link>
+    </li>
+
+    {/* Models */}
+    <li>
+      <Link to="/blm150" className="dropdown-item" onClick={handleNavigation}>
+        BLM150
+      </Link>
+    </li>
+
+    <li>
+      <Link to="/blm200" className="dropdown-item" onClick={handleNavigation}>
+        BLM200
+      </Link>
+    </li>
+
+    <li>
+      <Link to="/blm250" className="dropdown-item" onClick={handleNavigation}>
+        BLM250
+      </Link>
+    </li>
+  </ul>
+)}
 
             </div>
 

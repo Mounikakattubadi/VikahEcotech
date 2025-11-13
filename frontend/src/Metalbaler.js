@@ -1,58 +1,98 @@
-import React from 'react';
-import { useEffect } from 'react';
-import './Tyrecutting.css'; // Reusing the same styles for consistency
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './Tyrecutting.css';
+import './Models.css';
+
+// 👉 Replace with your real metal baler images
+import Metal1 from './images/baler.png';
+import Metal2 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg';
+import Metal3 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.49 AM(1).jpeg';
 
 function Metalbaler() {
   useEffect(() => {
-    // Directly set the scroll position to the top of the page
-    document.documentElement.scrollTop = 0; 
-    document.body.scrollTop = 0;  // For compatibility with older browsers
-  }, []); // Empty dependency array ensures it runs only once on page load
-   useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+    window.scrollTo(0, 0);
+  }, []);
+
+  const balers = [
+    {
+      name: 'BLM150',
+      type: 'Metal Baler',
+      force: '150 Ton',
+      weight: '200–350 kg (per bale)',
+      note: 'Designed for compressing light-to-medium ferrous & non-ferrous metal scrap.',
+      image: Metal1,
+    },
+    {
+      name: 'BLM200',
+      type: 'Metal Baler',
+      force: '200 Ton',
+      weight: '250–450 kg (per bale)',
+      note: 'Ideal for medium-density steel scrap, alloy scrap, and industrial metal recycling.',
+      image: Metal2,
+    },
+    {
+      name: 'BLM250',
+      type: 'Metal Baler',
+      force: '250 Ton',
+      weight: '300–500 kg (per bale)',
+      note: 'Heavy-duty baler engineered for high-volume ferrous & non-ferrous metal compaction.',
+      image: Metal3,
+    },
+  ];
+
+  const [selected, setSelected] = useState(balers[0]);
+
   return (
     <div>
+      {/* Header Section */}
       <header className="tyrecutting-header text-white text-center py-5">
-  <div className="container">
-    <h1 className="display-4">Metal Balers</h1>
-  </div>
-</header>
+        <div className="container">
+          <h1 className="display-4">Metal Balers</h1>
+        </div>
+      </header>
 
-<div className="container text-center my-4">
-  <p className="lead">
-    Vikah Ecotech is your trusted manufacturer of high-performance metal scrap baler machinery 
-    designed to streamline your metal waste, such as light ferrous metals and non-ferrous metals 
-    (e.g., Aluminum, Copper, Brass, etc.).
-  </p>
-</div>
+      {/* Description Section */}
+      <div className="container text-center my-4 balerbackimg">
+        <p>
+          Vikah Ecotech manufactures premium-grade metal scrap balers engineered for performance, durability, 
+          and maximum compaction efficiency. Our machines are suitable for ferrous & non-ferrous metals such as 
+          aluminum, copper, brass, mild steel, and stainless steel.
+        </p>
 
+        {/* Model Tabs */}
+        <div className="btn-group flex-wrap mb-4" role="group">
+          {balers.map((baler, index) => (
+            <button
+              key={index}
+              className={`btn btn-outline-success mx-1 my-1 ${selected.name === baler.name ? 'active' : ''}`}
+              onClick={() => setSelected(baler)}
+            >
+              {baler.name}
+            </button>
+          ))}
+        </div>
 
-      <section className="balerbackimg">
-        <div className="container py-5">
-          <div className="row justify-content-center">
-            <div className="col-md-10 machine-content bg-white p-4 rounded shadow-sm">
-              <h3 className="machine-title">Revolutionizing Metal Scrap Recycling</h3>
-              <p>
-                At Vikah Ecotech, we focus on innovation, efficiency, and reliability. Our metal baler machinery 
-                is designed to handle the toughest metal scrap, making it easier for businesses to manage and recycle 
-                their metal waste. We offer high-performance equipment tailored to your needs, whether it’s for aluminum, 
-                copper, brass, or other metal types.
-              </p>
-              <p>
-                Our team of skilled engineers works tirelessly to develop cutting-edge balers that enhance the metal recycling 
-                process, contributing to a more sustainable environment. By investing in our technology, you can streamline 
-                your recycling operations, reduce costs, and increase overall efficiency.
-              </p>
-              <p className="mt-4">
-                <strong>📧 For inquiries:</strong> <a href="mailto:info@vikahecotech.com">info@vikahecotech.com</a><br />
-                <strong>📞 Call us:</strong> <a href="tel:+914049471616">+91 4049471616</a>
-              </p>
-              <p className="text-muted mt-3 mb-0">We’ll be happy to assist you with your metal baler requirements.</p>
-            </div>
+        {/* Selected Model Info */}
+        <div className="row justify-content-center align-items-center">
+          <div className="col-md-6 mb-4">
+            <img src={selected.image} alt={selected.name} className="img-fluid rounded machine-image" />
+          </div>
+
+          <div className="col-md-6 mb-4 makecenter">
+            <h3 className="machine-title">{selected.name}</h3>
+            <ul className="list-unstyled">
+              <li><strong>Type:</strong> {selected.type}</li>
+              <li><strong>Compaction Force:</strong> {selected.force}</li>
+              <li><strong>Bale Weight:</strong> {selected.weight}</li>
+              <li><strong>Note:</strong> {selected.note}</li>
+            </ul>
+
+            <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
+              Read More
+            </Link>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }
