@@ -55,7 +55,7 @@ const TradeFairs = () => {
                     sector.
                   </p>
                   <p>
-                    <strong>Date:</strong> 11-11-2025 to 12-11-2025
+                    <strong>Date:</strong> June-2026
                   </p>
                   <p>
                     <strong>Location:</strong> The Arena, Riyadh, Saudi Arabia
