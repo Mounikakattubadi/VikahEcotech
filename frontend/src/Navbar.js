@@ -137,9 +137,9 @@ const Navbar = () => {
                 <ul className="dropdown-menu show">
                   <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
                   <li><Link to="/plasticshredder" className="dropdown-item" onClick={handleNavigation}>Plastic Shredder</Link></li>
-                  <li><Link to="/shp6000" className="dropdown-item" onClick={handleNavigation}>SHP6000</Link></li>
-                  <li><Link to="/shp8000" className="dropdown-item" onClick={handleNavigation}>SHP8000</Link></li>
-                  <li><Link to="/shp12000" className="dropdown-item" onClick={handleNavigation}>SHP12000</Link></li>
+                  <li><Link to="/shp100" className="dropdown-item" onClick={handleNavigation}>SHP100</Link></li>
+                  <li><Link to="/shp150" className="dropdown-item" onClick={handleNavigation}>SHP150</Link></li>
+                  <li><Link to="/shp200" className="dropdown-item" onClick={handleNavigation}>SHP200</Link></li>
                 </ul>
               )}
 

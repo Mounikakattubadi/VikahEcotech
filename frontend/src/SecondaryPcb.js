@@ -13,7 +13,7 @@ function SecondaryPcb() {
     <div>
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
-          <h1 className="display-4">Secondary Paper and Cardboard Balers</h1>
+          <h1 className="display-4">Secondary Paper and Cardboard shredder</h1>
         </div>
       </header>
 

@@ -61,9 +61,6 @@ import Blp50 from './Blp50.js';
 import Blc30 from './Blc30.js';
 import Blc40 from './Blc40.js';
 import Blc50 from './Blc50.js';
-import Shp6000 from './Shp6000.js';
-import Shp8000 from './Shp8000.js';
-import Shp12000 from './Shp12000.js';
 import Shc6000 from './Shc6000.js';
 import Shc12000 from './Shc12000.js';
 import Shc8000 from './Shc8000.js';
@@ -74,6 +71,9 @@ import Shm2600 from './Shm2600.js';
 import Blm150 from './Blm150.js';
 import Blm200 from './Blm200.js';
 import Blm250 from './Blm250.js';
+import Shp100 from './Shp100.js';
+import Shp200 from './Shp200.js';
+import Shp150 from './Shp150.js';
 
 function App() {
   return (
@@ -142,9 +142,9 @@ function App() {
         <Route exact path="/blc30" element={<Blc30 />} />
         <Route exact path="/blc40" element={<Blc40 />} />
         <Route exact path="/blc50" element={<Blc50 />} />
-        <Route exact path="/shp6000" element={<Shp6000 />} />
-        <Route exact path="/shp8000" element={<Shp8000 />} />
-        <Route exact path="/shp12000" element={<Shp12000 />} />
+        <Route exact path="/shp100" element={<Shp100 />} />
+        <Route exact path="/shp200" element={<Shp200 />} />
+        <Route exact path="/shp150" element={<Shp150 />} />
         <Route exact path="/shc6000" element={<Shc6000 />} />
        <Route exact path="/shc8000" element={<Shc8000 />} />
         <Route exact path="/shc12000" element={<Shc12000 />} />
