@@ -111,6 +111,8 @@ const Navbar = () => {
               {/* Primary Shredder Submenu */}
               {productMenu === 'Primary Shredder' && !subProductMenu && (
                 <ul className="dropdown-menu show">
+                  <li><button className="dropdown-item text-muted" onClick={handleBack}>← Back</button></li>
+                  <li><Link to="/shredder" className="dropdown-item" onClick={handleNavigation}>Primary Shredder</Link></li>
                   <li><button className="dropdown-item" onClick={() => setSubProductMenu('tyreShredder')}>Tyre Shredder</button></li>
                   <li><button className="dropdown-item" onClick={() => setSubProductMenu('plasticShredder')}>Plastic Shredder</button></li>
                   <li><button className="dropdown-item" onClick={() => setSubProductMenu('paperShredder')}>Paper & Cardboard Shredder</button></li>
