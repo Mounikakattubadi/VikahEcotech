@@ -141,6 +141,13 @@
   color: #fff176;
   text-decoration: none;
 }
+/* Carousel Images Fix */
+.carousel-img {
+  width: 100%;
+  height: 220px;   /* Change height if needed */
+  object-fit: cover;
+  border-radius: 10px;
+}
 
 /* Responsive */
 @media (max-width: 991.98px) {

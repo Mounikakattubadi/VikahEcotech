@@ -1,19 +1,31 @@
 import React, { useEffect } from "react";
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import './Baler.css';
+import './SecondaryShredder.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import img1 from "./images/secondaryshredder1.jpg";
-import img2 from "./images/R1.png";
-import img3 from "./images/secondaryshredder3.jpg";
-import shredderhd from "./images/st.jpeg";
-import shredderhd1 from "./images/shredder_hd1.jpg";
-import shredderhdimg from "./images/R4.png";
-import shredderhdimg1   from "./images/Shedder _ Final PNG.png";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './SecondaryShredder.css';
 import { Link } from "react-router-dom";
+
+// Image imports
+import img2 from "./images/R1.png";
+import shredderhd1 from "./images/shredder_hd1.jpg";
+import shredderhdimg from "./images/R4.png";
+import shredderhdimg1 from "./images/Shedder _ Final PNG.png";
+
+import tyreshred2 from "./images/Applications/tyreshred2.jpg";
+import sectyre from "./images/Applications/sectyre.jpg";
+
+import metalshred1 from "./images/Applications/metalshred1.webp";
+import secmetal from "./images/Applications/secmetal.webp";
+
+import plasticshred1 from "./images/Applications/plasticshred1.webp";
+import secplas from "./images/Applications/secplas.jpg";
+
+import pcbshred1 from "./images/Applications/pcbshred1.jpg";
+import secpcb from "./images/Applications/secpcb.webp";
+import pcbshred2 from "./images/Applications/pcbshred2.jpg";
 
 function SecondaryShredder() {
   useEffect(() => {
@@ -26,17 +38,35 @@ function SecondaryShredder() {
     { title: 'Output Size', description: 'Reduces tyre chips to sizes as small as 23 mm.' },
     { title: 'Blades', description: 'Uses hardened steel blades for efficient, precise cutting.' },
     { title: 'Screening System', description: 'Built-in screens ensure uniform output size and quality.' },
-    { title: 'Easy Maintenance', description: 'Our  Machineries is designed with easy maintenance in mind to ensure smooth operation, reduce  downtime and extends the equipments lifespan.' },
+    { title: 'Easy Maintenance', description: 'Our Machineries is designed with easy maintenance in mind to ensure smooth operation, reduce downtime and extends the equipments lifespan.' },
     { title: 'Dust and Noise Control', description: 'Equipped with features to minimize dust and noise during operation.' },
     { title: 'Integration Ready', description: 'Easily integrates into existing tyre recycling systems.' }
   ];
-
 
   const applications = [
     'Feedstock for crumb rubber production.',
     'Tire-derived fuel (TDF).',
     'Rubber mulch or playground surfacing.'
   ];
+
+  const applicationImages = {
+    tyre: [tyreshred2, sectyre],
+    metal: [metalshred1, secmetal],
+    plastic: [plasticshred1, secplas],
+    pcb: [pcbshred1, secpcb, pcbshred2]
+  };
+
+  const renderCarousel = (images) => (
+    <div className="carousel-wrapper">
+      <Carousel indicators={false} controls={true} interval={2000}>
+        {images.map((imgSrc, idx) => (
+          <Carousel.Item key={idx}>
+            <img src={imgSrc} alt={`slide-${idx}`} />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
+  );
 
   return (
     <div className="baler-page">
@@ -86,45 +116,45 @@ function SecondaryShredder() {
         </Container>
       </section>
 
-      {/* Applications Cards Section (like Primary Shredder) */}
+      {/* Applications Cards with Carousel */}
       <div className="products-section-bg py-5">
         <div className="container text-center">
           <h2 className="green-heading mb-4">Applications</h2>
           <div className="row justify-content-center">
+
+            {/* Tyre */}
             <div className="col-6 col-md-3 mb-4">
               <Link to="/rasper_secondaryshredders">
-                <div className="product-card">
-                  <img src={img2} alt="Rasper" className="product-img" />
-                  <div className="product-label">Secondary Shredder / Rasper</div>
-                  <div className="product-label">(Tyres)</div>
-
-                </div>
+                {renderCarousel(applicationImages.tyre)}
+                <div className="product-label">Secondary Shredder / Rasper</div>
+                <div className="product-label">(Tyres)</div>
               </Link>
             </div>
+
+            {/* Metal */}
             <div className="col-6 col-md-3 mb-4">
               <Link to="/secondarymetalshredder">
-                <div className="product-card">
-                  <img src={shredderhdimg1} alt="Metal Shredder" className="product-img" />
-                  <div className="product-label">Metal Shredder</div>
-                </div>
+                {renderCarousel(applicationImages.metal)}
+                <div className="product-label">Metal Shredder</div>
               </Link>
             </div>
+
+            {/* Plastic */}
             <div className="col-6 col-md-3 mb-4">
               <Link to="/secondaryplasticshredder">
-                <div className="product-card">
-                  <img src={shredderhdimg} alt="Plastic Shredder" className="product-img" />
-                  <div className="product-label">Plastic Shredder</div>
-                </div>
+                {renderCarousel(applicationImages.plastic)}
+                <div className="product-label">Plastic Shredder</div>
               </Link>
             </div>
+
+            {/* Paper & Cardboard */}
             <div className="col-6 col-md-3 mb-4">
               <Link to="/secondarypcb">
-                <div className="product-card">
-                  <img src={shredderhd1} alt="Paper and Cardboard" className="product-img" />
-                  <div className="product-label">Paper & Cardboard</div>
-                </div>
+                {renderCarousel(applicationImages.pcb)}
+                <div className="product-label">Paper & Cardboard</div>
               </Link>
             </div>
+
           </div>
         </div>
       </div>

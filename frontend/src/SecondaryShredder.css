@@ -1,21 +1,21 @@
-/* Product Image Styling */
-.img-zoom-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #ddd;
+/* Make all carousel images the same size */
+.carousel-wrapper {
+  width: 100%;
+  max-width: 300px; /* adjust based on layout */
+  margin: 0 auto;
+}
+
+.carousel-wrapper img {
+  width: 100%;
+  height: 250px; /* fix all images to same height */
+  object-fit: cover; /* ensures the image fills the box without stretching */
   border-radius: 8px;
-  max-height: 400px;
-  margin-bottom: 20px;
 }
 
-/* Hover Zoom Effect */
-.img-zoom-hover:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Gallery Heading (optional - used above the images) */
-.green-heading {
-  color: #006241;
-  font-weight: 700;
-  margin-bottom: 30px;
+/* Optional: center the product labels */
+.product-label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #0000FF; /* same blue as screenshot */
+  text-align: center;
 }

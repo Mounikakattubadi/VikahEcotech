@@ -1,12 +1,33 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from 'react-bootstrap';
+import Carousel from 'react-bootstrap/Carousel';
 import './Baler.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Link } from "react-router-dom";
-import Balerimg from "./images/baler.png";
+
+// Original product card images
+import Balerimg from "./images/baler8.jpg";
 import Baler1 from "./images/baler1.png";
 import Baler2 from "./images/baler2.png";
+
+// Carousel Images
+// Tyre Scrap Baler
+import TyreBaler1 from "./images/Applications/tyrebaler1.webp";
+import TyreBaler2 from "./images/Applications/tyrebaler2.webp";
+
+// Plastic Baler
+import PlasticBaler1 from "./images/Applications/plasticbaler1.jpg";
+import PlasticBaler2 from "./images/Applications/plasticbaler2.jpg";
+
+// Cardboard
+import PCB1 from "./images/Applications/pcb1.webp";
+import PCB2 from "./images/Applications/pcb2.jpg";
+import PCB3 from "./images/Applications/pcb3.webp";
+
+// Metal
+import MetalBaler1 from "./images/Applications/metalbaler1.jpg";
+import MetalBaler2 from "./images/Applications/metalbaler2.jpg";
 
 function Baler() {
   useEffect(() => {
@@ -35,24 +56,41 @@ function Baler() {
     'And more'
   ];
 
+  // Carousel data
+  const productCarousels = {
+    tyrescrapbaler: [Balerimg,TyreBaler1,TyreBaler2],
+    plasticbaler: [PlasticBaler1, PlasticBaler2],
+    pcb: [PCB1, PCB2, PCB3],
+    metalbaler: [MetalBaler1, MetalBaler2]
+  };
+
+  const renderCarousel = (images) => (
+    <div className="carousel-wrapper">
+      <Carousel>
+        {images.map((img, idx) => (
+          <Carousel.Item key={idx}>
+            <img className="carousel-img" src={img} alt={`slide-${idx}`} />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
+  );
+
   return (
     <div className="baler-page">
 
-      {/* Gradient-styled heading only */}
       <header className="baler-header text-white text-center py-5">
         <Container>
           <h1 className="shredder-heading-alt">Balers</h1>
         </Container>
       </header>
 
-      {/* Paragraph in normal section, no gradient background */}
       <div className="container text-center my-4">
         <p className="lead description-below-heading">
           At Vikah Ecotech, we specialize in designing and manufacturing high-quality recycling balers machinery that is tailored to meet the diverse needs of industries and facilities involved in waste management and recycling processes. Our balers are engineered to streamline waste handling, increase operational efficiency, and promote sustainable practices.
         </p>
       </div>
 
-      {/* Key Features and Applications */}
       <section className="features-applications-section py-5 balerbackimg">
         <Container>
           <Row>
@@ -86,55 +124,53 @@ function Baler() {
         </Container>
       </section>
 
-      {/* Product Cards */}
+      {/* Products with Carousel */}
       <div className="products-section-bg py-5">
         <div className="container text-center">
           <h2 className="green-heading">Applications</h2>
           <div className="row justify-content-center">
-            <div className="col-6 col-md-3 mb-4">
+
+            {/* Tyre Scrap Baler */}
+            <div className="col-6 col-md-3 mb-4 app-item">
               <Link to="/tyrescrapbaler">
-                <div className="product-card">
-                  <img src={Balerimg} alt="Industrial baler" className="product-img" />
-                  <div className="product-label">Tyre Scrap Balers</div>
-                </div>
+                {renderCarousel(productCarousels.tyrescrapbaler)}
+                <div className="product-label mt-2">Tyre Scrap Balers</div>
               </Link>
             </div>
-            <div className="col-6 col-md-3 mb-4">
+
+            {/* Plastic Baler */}
+            <div className="col-6 col-md-3 mb-4 app-item">
               <Link to="/plasticbaler">
-                <div className="product-card">
-                  <img src={Baler1} alt="Plastic baler" className="product-img" />
-                  <div className="product-label">Plastic Balers</div>
-                </div>
+                {renderCarousel(productCarousels.plasticbaler)}
+                <div className="product-label mt-2">Plastic Balers</div>
               </Link>
             </div>
-            <div className="col-6 col-md-3 mb-4">
+
+            {/* Cardboard */}
+            <div className="col-6 col-md-3 mb-4 app-item">
               <Link to="/pcb">
-                <div className="product-card">
-                  <img src={Baler2} alt="Cardboard cutting equipment" className="product-img" />
-                  <div className="product-label">Card Board</div>
-                </div>
+                {renderCarousel(productCarousels.pcb)}
+                <div className="product-label mt-2">Card Board</div>
               </Link>
             </div>
-            <div className="col-6 col-md-3 mb-4">
+
+            {/* Metal */}
+            <div className="col-6 col-md-3 mb-4 app-item">
               <Link to="/metalbaler">
-                <div className="product-card">
-                  <img src={Balerimg} alt="Metal baler" className="product-img" />
-                  <div className="product-label">Metal Baler</div>
-                </div>
+                {renderCarousel(productCarousels.metalbaler)}
+                <div className="product-label mt-2">Metal Baler</div>
               </Link>
             </div>
+
           </div>
         </div>
       </div>
 
-      {/* Contact Section */}
       <Row className="text-center get-in-touch-section text-white py-5 rounded">
         <Col>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p>
-            For more information about our products and services, please visit our{" "}
-            <a href="#/ourproducts" className="fw-bold">product range</a> or reach us at{" "}
-            <a href="mailto:info@vikahecotech.com">info@vikahecotech.com</a>.
+            For more information about our products and services, please visit our <a href="#/ourproducts" className="fw-bold">product range</a> or reach us at <a href="mailto:info@vikahecotech.com">info@vikahecotech.com</a>.
           </p>
         </Col>
       </Row>
