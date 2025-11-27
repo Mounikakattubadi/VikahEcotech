@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 
-import she800_main from "./images/shredder_hd.jpg";  
-import she800_angle1 from "./images/shredder_hd1.jpg";
-import she800_angle2 from "./images/Shedder _ Final PNG.png";
-import she800_specs from "./images/Shedder _ Final PNG.png";  
+import she800_main from "./images/Applications/shredewaste.jpeg";  
+import she800_angle1 from "./images/Applications/shredewaste2.webp";
+import she800_specs from "./images/Applications/shredewaste3.webp";
+import she800_angle2 from "./images/Applications/shredewaste4.jpg";  
 
 const Ewaste = () => {
 

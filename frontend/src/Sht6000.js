@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
-import shredderhd from "./images/shredder_hd.jpg"
+import shredderhd from "./images/Applications/shredtyre6.jpg"
 import shredderhd1 from "./images/shredder_hd1.jpg"
 import shredderhdimg from "./images/Shedder _ Final PNG.png"
 

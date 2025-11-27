@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 import Baler4 from "./images/baler.png"
 import bp3 from "./images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg"
-import bp4 from "./images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.49 AM(1).jpeg"
+import bp4 from "./images/Applications/app12.jpg"
 import bp2 from "./images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.45 AM.jpeg"
 import bp1 from "./images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.51 AM(1).jpeg"
 

@@ -64,17 +64,18 @@ function Baler() {
     metalbaler: [MetalBaler1, MetalBaler2]
   };
 
-  const renderCarousel = (images) => (
-    <div className="carousel-wrapper">
-      <Carousel>
-        {images.map((img, idx) => (
-          <Carousel.Item key={idx}>
-            <img className="carousel-img" src={img} alt={`slide-${idx}`} />
-          </Carousel.Item>
-        ))}
-      </Carousel>
-    </div>
-  );
+const renderCarousel = (images) => (
+  <div className="carousel-wrapper">
+    <Carousel interval={null} pause={false}>
+      {images.map((img, idx) => (
+        <Carousel.Item key={idx}>
+          <img className="carousel-img" src={img} alt={`slide-${idx}`} />
+        </Carousel.Item>
+      ))}
+    </Carousel>
+  </div>
+);
+
 
   return (
     <div className="baler-page">

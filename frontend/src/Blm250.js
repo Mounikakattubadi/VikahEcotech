@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 
-import mainSpecImage from './images/baler3.png';
+import mainSpecImage from './images/Applications/appm3.jpg';
 
 // 👉 Replace with your own metal baler images
-import metalImg1 from './images/baler.png';
-import metalImg2 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg';
-import metalImg3 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.49 AM(1).jpeg';
+import metalImg1 from './images/Applications/appm7.jpg';
+import metalImg2 from './images/Applications/appm6.jpg';
+import metalImg3 from './images/Applications/appm4.jpg';
+
 
 const Blm250 = () => {
   const [mainImage, setMainImage] = useState(metalImg1);

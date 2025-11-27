@@ -74,7 +74,7 @@ function Shredder() {
     },
     {
       name: "E-Waste Shredder",
-      route: "/ewasteshredder",
+      route: "/ewaste",
       images: [ewaste1, ewaste2]
     }
   ];
@@ -163,18 +163,19 @@ function Shredder() {
             {applications.map((app, idx) => (
               <div className="col-6 col-md-3 mb-4" key={idx}>
                 <Link to={app.route}>
-                    <Carousel interval={2000} indicators={false} controls={true}>
-                      {app.images.map((img, index) => (
-                        <Carousel.Item key={index}>
-                          <img
-                            src={img}
-                            alt={app.name}
-                            className="product-img"
-                            style={{ width: "100%", height: "200px", objectFit: "cover" }}
-                          />
-                        </Carousel.Item>
-                      ))}
-                    </Carousel>
+                    <Carousel interval={null} indicators={false} controls={true} pause={false}>
+  {app.images.map((img, index) => (
+    <Carousel.Item key={index}>
+      <img
+        src={img}
+        alt={app.name}
+        className="product-img"
+        style={{ width: "100%", height: "200px", objectFit: "cover" }}
+      />
+    </Carousel.Item>
+  ))}
+</Carousel>
+
                     <div className="product-label">{app.name}</div>
                 </Link>
               </div>

@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 
-import shm_main from "./images/shredder_hd.jpg";
-import shm_angle1 from "./images/shredder_hd1.jpg";
-import shm_angle2 from "./images/Shedder _ Final PNG.png";
-import shm_specs from "./images/shredder_hd1.jpg";
+import shm_main from "./images/Applications/shredm1.jpg";
+import shm_angle1 from "./images/Applications/shredm2.jpg";
+import shm_angle2 from "./images/Applications/shredm3.jpg";
+import shm_specs from "./images/Applications/shredm4.jpeg";
 
 const Shm2000 = () => {
     const [mainImage, setMainImage] = useState(shm_main);

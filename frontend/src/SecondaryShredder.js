@@ -56,17 +56,18 @@ function SecondaryShredder() {
     pcb: [pcbshred1, secpcb, pcbshred2]
   };
 
-  const renderCarousel = (images) => (
-    <div className="carousel-wrapper">
-      <Carousel indicators={false} controls={true} interval={2000}>
-        {images.map((imgSrc, idx) => (
-          <Carousel.Item key={idx}>
-            <img src={imgSrc} alt={`slide-${idx}`} />
-          </Carousel.Item>
-        ))}
-      </Carousel>
-    </div>
-  );
+const renderCarousel = (images) => (
+  <div className="carousel-wrapper">
+    <Carousel indicators={false} controls={true} interval={null} pause={false}>
+      {images.map((imgSrc, idx) => (
+        <Carousel.Item key={idx}>
+          <img src={imgSrc} alt={`slide-${idx}`} />
+        </Carousel.Item>
+      ))}
+    </Carousel>
+  </div>
+);
+
 
   return (
     <div className="baler-page">

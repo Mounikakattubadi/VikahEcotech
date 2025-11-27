@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 
 import mainSpecImage from './images/baler3.png';
-import balerImage from './images/baler.png';
+import balerImage from './images/Applications/app1.webp';
 import img1 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg';
 import img2 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.49 AM(1).jpeg';
 

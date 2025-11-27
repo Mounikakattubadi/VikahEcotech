@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 
-import mainSpecImage from './images/baler3.png';
-import balerImage from './images/baler.png';
-import img1 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg';
-import img2 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.49 AM(1).jpeg';
+import mainSpecImage from './images/Applications/plas16.jpg';
+import balerImage from './images/Applications/plas17.jpeg';
+import img1 from './images/Applications/plas18.jpeg';
+import img2 from './images/Applications/plasticbaler2.jpg';
 
 const BLP50 = () => {
   const [mainImage, setMainImage] = useState(img1);
