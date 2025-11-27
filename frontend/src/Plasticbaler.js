@@ -6,6 +6,9 @@ import './Models.css';
 import Plastic1 from './images/baler.png';
 import Plastic2 from './images/baler1.png';
 import Plastic3 from './images/baler2.png';
+import mainSpecImage from './images/Applications/plas14.webp';
+import balerImage from './images/Applications/plas16.jpg';
+import img1 from './images/Applications/plas18.jpeg';
 
 function Plasticbaler() {
   useEffect(() => {
@@ -20,7 +23,7 @@ function Plasticbaler() {
       force: '30 Ton',
       weight: '150-250 kg',
       note: 'Compact design for lightweight plastic waste such as PET bottles and films.',
-      image: Plastic1,
+      image: mainSpecImage,
     },
     {
       name: 'BLP40',
@@ -28,7 +31,7 @@ function Plasticbaler() {
       force: '40 Ton',
       weight: '200-350 kg',
       note: 'Ideal for medium-density plastic waste management applications.',
-      image: Plastic2,
+      image: balerImage,
     },
     {
       name: 'BLP50',
@@ -36,7 +39,7 @@ function Plasticbaler() {
       force: '50 Ton',
       weight: '350-500 kg',
       note: 'Heavy-duty design for industrial-scale plastic recycling operations.',
-      image: Plastic3,
+      image: img1,
     },
   ];
 

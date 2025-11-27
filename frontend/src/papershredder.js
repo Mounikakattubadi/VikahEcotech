@@ -6,6 +6,9 @@ import './Models.css';
 import paperImg1 from "./images/Shedder _ Final PNG.png";
 import paperImg2 from "./images/shredder_hd.jpg";
 import paperImg3 from "./images/shredder_hd1.jpg";
+import shredderhd from "./images/Applications/shredpcb1.jpg"
+import shredderhd1 from "./images/Applications/shredpcb4.jpg"
+import shredderhdimg from "./images/Applications/shredpcb7.jpg"
 
 function Papershredder() {
   useEffect(() => {
@@ -19,7 +22,7 @@ function Papershredder() {
       power: '80 - 120 HP',
       system: 'Dual Shaft Hydraulic Cutting System',
       feature: 'The SHC6000 efficiently shreds large volumes of paper and cardboard waste, ideal for recycling operations.',
-      image: paperImg1,
+      image: shredderhd,
     },
     {
       name: 'SHC8000',
@@ -27,7 +30,7 @@ function Papershredder() {
       power: '120 - 180 HP',
       system: 'Auto-Feed Conveyor System',
       feature: 'The SHC8000 model ensures smooth shredding with automated feeding and robust cutting power.',
-      image: paperImg2,
+      image: shredderhd1,
     },
     {
       name: 'SHC12000',
@@ -35,7 +38,7 @@ function Papershredder() {
       power: '180 - 240 HP',
       system: 'Heavy-Duty Industrial Build',
       feature: 'The SHC12000 handles high-volume shredding of corrugated sheets, cartons, and other bulky paper materials.',
-      image: paperImg3,
+      image: shredderhdimg,
     },
   ];
 

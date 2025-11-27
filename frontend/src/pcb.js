@@ -7,6 +7,9 @@ import './Models.css';
 import Cardboard1 from './images/baler.png';
 import Cardboard2 from './images/baler1.png';
 import Cardboard3 from './images/baler2.png';
+import mainSpecImage from './images/Applications/apppcb1.jpg';
+import balerImage from './images/Applications/apppcb6.webp';
+import img1 from './images/Applications/apppcb3.jpg';
 
 function Pcb() {
   useEffect(() => {
@@ -22,7 +25,7 @@ function Pcb() {
       force: '30 Ton',
       weight: '120-200 kg',
       note: 'Compact design for small recycling units handling paper and cardboard waste.',
-      image: Cardboard1,
+      image: mainSpecImage,
     },
     {
       name: 'BLC40',
@@ -30,7 +33,7 @@ function Pcb() {
       force: '40 Ton',
       weight: '200-250 kg',
       note: 'Efficient mid-size model ideal for carton and packaging recycling centers.',
-      image: Cardboard2,
+      image: balerImage,
     },
     {
       name: 'BLC50',
@@ -38,7 +41,7 @@ function Pcb() {
       force: '50 Ton',
       weight: '250-350 kg',
       note: 'High-performance industrial baler for heavy-duty paper and cardboard waste.',
-      image: Cardboard3,
+      image: img1,
     },
   ];
 

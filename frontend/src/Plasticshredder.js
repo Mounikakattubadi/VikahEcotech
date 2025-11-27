@@ -6,6 +6,9 @@ import './Models.css';
 import plasticImg1 from "./images/Shedder _ Final PNG.png";
 import plasticImg2 from "./images/shredder_hd.jpg";
 import plasticImg3 from "./images/shredder_hd1.jpg";
+import shredderhd from "./images/Applications/shredp1.png"
+import shredderhd1 from "./images/Applications/shredp4.webp"
+import shredderhdimg from "./images/Applications/shredp2.jpeg"
 
 function Plasticshredder() {
   useEffect(() => {
@@ -19,7 +22,7 @@ const shredders = [
     power: '100 - 140 HP',
     system: 'High Torque Hydraulic System',
     feature: 'Our SHP100 model ensures precise shredding for PET and HDPE plastics with efficient throughput.',
-    image: plasticImg1,
+    image: shredderhd,
   },
   {
     name: 'SHP150',
@@ -27,7 +30,7 @@ const shredders = [
     power: '140 - 200 HP',
     system: 'Dual Shaft Cutting Mechanism',
     feature: 'SHP150 provides higher cutting efficiency with superior handling for industrial-grade plastics.',
-    image: plasticImg2,
+    image: shredderhd1,
   },
   {
     name: 'SHP200',
@@ -35,7 +38,7 @@ const shredders = [
     power: '200 - 260 HP',
     system: 'Heavy-Duty Hydraulic System',
     feature: 'Our SHP200 delivers unmatched shredding capacity for large-scale plastic recycling facilities.',
-    image: plasticImg3,
+    image: shredderhdimg,
   },
 ];
 

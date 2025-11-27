@@ -7,6 +7,9 @@ import './Models.css';
 import Metal1 from './images/baler.png';
 import Metal2 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg';
 import Metal3 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.49 AM(1).jpeg';
+import metalImg1 from './images/Applications/appm1.jpg';
+import metalImg2 from './images/Applications/appm4.jpg';
+import metalImg3 from './images/Applications/appm6.jpg';
 
 function Metalbaler() {
   useEffect(() => {
@@ -20,7 +23,7 @@ function Metalbaler() {
       force: '150 Ton',
       weight: '200–350 kg (per bale)',
       note: 'Designed for compressing light-to-medium ferrous & non-ferrous metal scrap.',
-      image: Metal1,
+      image: metalImg1,
     },
     {
       name: 'BLM200',
@@ -28,7 +31,7 @@ function Metalbaler() {
       force: '200 Ton',
       weight: '250–450 kg (per bale)',
       note: 'Ideal for medium-density steel scrap, alloy scrap, and industrial metal recycling.',
-      image: Metal2,
+      image: metalImg2,
     },
     {
       name: 'BLM250',
@@ -36,7 +39,7 @@ function Metalbaler() {
       force: '250 Ton',
       weight: '300–500 kg (per bale)',
       note: 'Heavy-duty baler engineered for high-volume ferrous & non-ferrous metal compaction.',
-      image: Metal3,
+      image: metalImg3,
     },
   ];
 

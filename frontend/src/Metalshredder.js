@@ -7,6 +7,10 @@ import './Models.css';
 import metalImg1 from "./images/Shedder _ Final PNG.png";
 import metalImg2 from "./images/shredder_hd.jpg";
 import metalImg3 from "./images/shredder_hd1.jpg";
+import shm_main from "./images/Applications/shredm1.jpg";
+import shm_angle1 from "./images/Applications/shredm2.jpg";
+import shm_angle2 from "./images/Applications/shredm3.jpg";
+import shm_specs from "./images/Applications/shredm4.jpeg";
 
 function Metalshredder() {
   useEffect(() => {
@@ -20,7 +24,7 @@ function Metalshredder() {
       power: '50 - 70 HP',
       system: 'Twin Shaft Heavy Duty System',
       feature: 'SHM2000 is ideal for small to mid-scale metal scrap shredding operations with high torque output.',
-      image: metalImg1,
+      image: shm_main,
     },
     {
       name: 'SHM2200',
@@ -28,7 +32,7 @@ function Metalshredder() {
       power: '70 - 90 HP',
       system: 'High Torque Hydraulic System',
       feature: 'SHM2200 offers increased chamber size and shredding capacity for industrial metal processing.',
-      image: metalImg2,
+      image: shm_angle1,
     },
     {
       name: 'SHM2600',
@@ -36,7 +40,7 @@ function Metalshredder() {
       power: '90 - 120 HP',
       system: 'Dual Shaft Cutting + Heavy Duty Rotor',
       feature: 'SHM2600 is designed for large-scale shredding of ferrous & non-ferrous scrap metals.',
-      image: metalImg3,
+      image: shm_angle2,
     },
   ];
 
