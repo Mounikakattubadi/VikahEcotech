@@ -26,7 +26,10 @@ import secplas from "./images/Applications/secplas.jpg";
 import pcbshred1 from "./images/Applications/pcbshred1.jpg";
 import secpcb from "./images/Applications/secpcb.webp";
 import pcbshred2 from "./images/Applications/pcbshred2.jpg";
+import styles from "./pss.module.css";
 
+import img1 from "./images/Applications/tyreshred2.jpg";
+import img22 from "./images/Applications/sectyre.jpg";
 function SecondaryShredder() {
   useEffect(() => {
     document.documentElement.scrollTop = 0;
@@ -43,11 +46,15 @@ function SecondaryShredder() {
     { title: 'Integration Ready', description: 'Easily integrates into existing tyre recycling systems.' }
   ];
 
-  const applications = [
-    'Feedstock for crumb rubber production.',
-    'Tire-derived fuel (TDF).',
-    'Rubber mulch or playground surfacing.'
-  ];
+ const applications = [
+  'Feedstock for crumb rubber production.',
+  'Tire-derived fuel (TDF).',
+  'Rubber mulch or playground surfacing.',
+  'Asphalt and road construction (rubberized asphalt).',
+  'Shock-absorbing mats and sports track surfaces.',
+  'Automotive parts and molded rubber products.',
+  
+];
 
   const applicationImages = {
     tyre: [tyreshred2, sectyre],
@@ -56,31 +63,91 @@ function SecondaryShredder() {
     pcb: [pcbshred1, secpcb, pcbshred2]
   };
 
-const renderCarousel = (images) => (
-  <div className="carousel-wrapper">
-    <Carousel indicators={false} controls={true} interval={null} pause={false}>
-      {images.map((imgSrc, idx) => (
-        <Carousel.Item key={idx}>
-          <img src={imgSrc} alt={`slide-${idx}`} />
-        </Carousel.Item>
-      ))}
-    </Carousel>
-  </div>
-);
+  const renderCarousel = (images) => (
+    <div className="carousel-wrapper">
+      <Carousel indicators={false} controls={true} interval={null} pause={false}>
+        {images.map((imgSrc, idx) => (
+          <Carousel.Item key={idx}>
+            <img src={imgSrc} alt={`slide-${idx}`} />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
+  );
 
 
   return (
     <div className="baler-page">
-      <header className="baler-header text-white text-center py-5" data-aos="fade-down">
-        <Container>
-          <h1 className="shredder-heading-alt">Secondary Shredder</h1>
-        </Container>
-      </header>
+      <div className={styles.heroWrapper}>
+        <div
+          id="heroCarousel"
+          className="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="6000"
+        >
+          {/* Indicators */}
+          <div className={`carousel-indicators ${styles.indicators}`}>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" />
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" />
+          </div>
 
-      <div className="container text-center my-4">
-        <p className="lead description-below-heading">
-          The secondary shredder, also known as a tyre rasper, is used in the second stage of the tyre recycling process. After the primary shredder breaks down whole tyres into rough chips (typically 50–150 mm or more), the secondary shredder further processes these chips into smaller, more uniform pieces. These refined pieces are often used for further granulation or in various industrial applications.
-        </p>
+          <div className="carousel-inner h-100">
+            <div
+              className={`carousel-item active ${styles.carouselItem}`}
+              style={{ backgroundImage: `url(${img1})` }}
+            >
+              <div className={styles.overlay}></div>
+
+              <div className={styles.contentBox}>
+                <p className={styles.subText}>Engineered for Secondary Stage Shredding & Material Refinement</p>
+                <h1 className={styles.heading}>Secondary Shedders</h1>
+                <p className={styles.description}>
+  The secondary shredder (tyre rasper) refines tyre chips from the primary shredder into smaller, uniform pieces for further granulation and industrial use.
+</p>
+
+
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`}>
+                    Explore Our Services ↗
+                  </button>
+                  <button className={`btn ${styles.whiteBtn}`}>More About Us</button>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className={`carousel-item ${styles.carouselItem}`}
+              style={{ backgroundImage: `url(${img22})` }}
+            >
+              <div className={styles.overlay}></div>
+
+              <div className={styles.contentBox}>
+                <p className={styles.subText}>
+Refining Shreds into High-Value Recyclable Material
+</p>
+<h1 className={styles.heading}>Secondary Shredders</h1>
+<p className={styles.description}>
+  Designed for precision processing, secondary shredders convert coarse tyre chips into clean, uniform material ready for granulation and resource recovery.
+</p>
+
+
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`}>See Machines ↗</button>
+                  <button className={`btn ${styles.whiteBtn}`}>Contact Sales</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Arrow controls */}
+          <button className={`carousel-control-prev ${styles.ctrl}`} type="button" data-bs-slide="prev" data-bs-target="#heroCarousel">
+            <span className={styles.ctrlIcon}>‹</span>
+          </button>
+
+          <button className={`carousel-control-next ${styles.ctrl}`} type="button" data-bs-slide="next" data-bs-target="#heroCarousel">
+            <span className={styles.ctrlIcon}>›</span>
+          </button>
+        </div>
       </div>
 
       <section className="features-applications-section py-5 balerbackimg" data-aos="fade-right">
@@ -105,13 +172,53 @@ const renderCarousel = (images) => (
               </ul>
             </Col>
 
-            <Col lg={6}>
-              <h2 className="section-headingbaler mb-4">Applications</h2>
-              <ul className="list-group list-group-flush app-list">
-                {applications.map((app, idx) => (
-                  <li key={idx} className="list-group-item">{app}</li>
-                ))}
-              </ul>
+            {/* NEW SEMI-CIRCLE TIMELINE FOR APPLICATIONS (RIGHT COLUMN) */}
+            <Col lg={6} className="mb-4">
+              <div className="key-features-outer">
+                <h2 className="key-features-title">Industries Served</h2>
+
+                <div className="kf2-timeline">
+                  {applications.map((app, idx) => {
+                    const isLeftText = idx % 2 === 0; // alternate L/R
+                    const stepNumber = String(idx + 1).padStart(2, "0");
+
+                    return (
+                      <div
+                        key={idx}
+                        className={`kf2-row ${isLeftText ? "left" : "right"}`}
+                      >
+                        {/* LEFT column */}
+                        {isLeftText ? (
+                          <div className="kf2-text">
+                            <h6 className="kf2-text-title">{app}</h6>
+                          </div>
+                        ) : (
+                          <div className="kf2-empty" />
+                        )}
+
+                        {/* CENTER circle + connector */}
+                        <div className="kf2-center">
+                          <span className="kf2-connector" />
+                          <div className="kf2-circle-outer">
+                            <div className="kf2-circle-inner">
+                              {stepNumber}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* RIGHT column */}
+                        {!isLeftText ? (
+                          <div className="kf2-text">
+                            <h6 className="kf2-text-title">{app}</h6>
+                          </div>
+                        ) : (
+                          <div className="kf2-empty" />
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
             </Col>
           </Row>
         </Container>

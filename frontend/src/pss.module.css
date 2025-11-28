@@ -1,0 +1,137 @@
+.heroWrapper {
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* The slide exists & has height (no blank screen) */
+.carouselItem {
+  height: 75vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Overlay tint */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 78, 46, 0.35);
+  z-index: 1;
+}
+
+/* Content */
+.contentBox {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: 3;
+  color: white;
+  max-width: 650px;
+}
+
+.subText {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.03;
+  margin-bottom: 16px;
+}
+
+.description {
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+
+.btnRow {
+  display: flex;
+  gap: 16px;
+}
+
+.greenBtn,
+.whiteBtn {
+  min-width: 220px;
+  height: 52px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+
+.greenBtn {
+  background: #167a16;
+  color: white;
+}
+
+.whiteBtn {
+  background: rgba(255, 255, 255, 0.95);
+  color: #0b3b1f;
+}
+
+/* Controls */
+.ctrl {
+  width: 70px;
+  height: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.ctrlIcon {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 50%;
+  color: white;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Indicators */
+.indicators {
+  bottom: 18px;
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+}
+.carousel-indicators .active {
+  background: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .heading { font-size: 34px; }
+  .heroWrapper { height: 60vh; }
+  .carouselItem { height: 60vh; }
+}
+
+@media (max-width: 576px) {
+  .heroWrapper { height: 52vh; }
+  .carouselItem { height: 52vh; }
+
+  .contentBox {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+  }
+
+  .btnRow { flex-direction: column; }
+  .greenBtn, .whiteBtn { width: 100%; min-width: unset; }
+
+  .ctrl { display: none; } /* hide arrows */
+}
