@@ -312,3 +312,288 @@
     font-size: 0.6rem;
   }
 }
+/* ================== BENEFITS – MODERN GRID ================== */
+
+.benefits-wrapper {
+  background: linear-gradient(135deg, #f4fff7, #ffffff);
+}
+
+.benefits-subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Card */
+.benefit-card {
+  position: relative;
+  padding: 1.6rem 1.4rem 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Soft gradient highlight on top edge */
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #32cd32, #00a86b, #8bc34a);
+  opacity: 0.9;
+}
+
+/* Glow on hover */
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.09);
+  border-color: rgba(50, 205, 50, 0.4);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* Number badge (top-right floating) */
+.benefit-number {
+  position: absolute;
+  top: 0.9rem;
+  right: 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #228b22;
+  background: rgba(222, 255, 227, 0.9);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 139, 34, 0.3);
+}
+
+/* Icon circle */
+.benefit-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  background: radial-gradient(circle at 30% 0, #ffffff, #e8ffe8);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
+}
+
+.benefit-icon i {
+  font-size: 1.3rem;
+  color: #1b5e20;
+}
+
+/* Text */
+.benefit-title-modern {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #004d1a;
+  margin-bottom: 0.4rem;
+}
+
+.benefit-desc-modern {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Slight stagger effect on larger screens */
+@media (min-width: 992px) {
+  .benefit-card:nth-child(2),
+  .benefit-card:nth-child(5),
+  .benefit-card:nth-child(8) {
+    transform: translateY(6px);
+  }
+
+  .benefit-card:nth-child(3),
+  .benefit-card:nth-child(6),
+  .benefit-card:nth-child(9) {
+    transform: translateY(12px);
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Small devices tweaks */
+@media (max-width: 575.98px) {
+  .benefits-grid {
+    gap: 1.2rem;
+  }
+
+  .benefit-card {
+    padding: 1.3rem 1.1rem 1.2rem;
+  }
+
+  .benefit-number {
+    font-size: 0.78rem;
+    top: 0.7rem;
+    right: 0.85rem;
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .benefit-title-modern {
+    font-size: 0.95rem;
+  }
+
+  .benefit-desc-modern {
+    font-size: 0.85rem;
+  }
+}
+/* ============ KEY FEATURES – VERTICAL TIMELINE ============ */
+
+.kf-vertical {
+  position: relative;
+  padding-left: 0.4rem;
+}
+
+/* Each row */
+.kf-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Left column: line + node */
+.kf-icon-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 34px;
+}
+
+/* vertical line */
+.kf-line {
+  position: absolute;
+  top: 0;
+  bottom: -1.4rem; /* so line continues past the node a bit */
+  width: 2px;
+  background: linear-gradient(180deg, #a5d6a7, #e0f2f1);
+  opacity: 0.9;
+}
+
+/* node wrapper */
+.kf-node {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+/* circular node */
+.kf-node-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0, #ffffff, #e8f5e9);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(46, 125, 50, 0.25);
+}
+
+.kf-node-inner i {
+  font-size: 1rem;
+  color: #2e7d32;
+}
+
+/* Right content */
+.kf-content {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
+}
+
+.kf-item:hover .kf-content {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(50, 205, 50, 0.3);
+  background: #ffffff;
+}
+
+/* Small label above title */
+.kf-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2e7d32;
+  margin-bottom: 0.15rem;
+}
+
+/* Title + description */
+.kf-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #004d1a;
+  margin-bottom: 0.25rem;
+}
+
+.kf-desc {
+  font-size: 0.88rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Last item: stop the line at bottom */
+.kf-item:last-child .kf-line {
+  bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 575.98px) {
+  .kf-item {
+    gap: 0.8rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .kf-content {
+    padding: 0.55rem 0.75rem;
+  }
+
+  .kf-node-inner {
+    width: 28px;
+    height: 28px;
+  }
+
+  .kf-title {
+    font-size: 0.94rem;
+  }
+
+  .kf-desc {
+    font-size: 0.84rem;
+  }
+}

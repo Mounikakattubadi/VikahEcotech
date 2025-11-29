@@ -209,29 +209,40 @@ function SecondaryShredder() {
       >
         <Container>
           <Row>
-            <Col lg={6} className="mb-4">
-              <h2 className="section-headingbaler mb-4">Key Features</h2>
-              <ul className="feature-list">
-                {features.map((feature, idx) => (
-                  <li
-                    key={idx}
-                    className="feature-item d-flex align-items-start mb-3"
-                  >
-                    <div className="feature-icon me-3">
-                      <span className="badge bg-primary rounded-circle p-2">
-                        <i className="bi bi-check-lg text-white"></i>
-                      </span>
-                    </div>
-                    <div className="feature-content">
-                      <h5 className="feature-title mb-1">{feature.title}</h5>
-                      <p className="feature-desc mb-0">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </Col>
+            {/* Key Features – Vertical Modern Timeline */}
+<Col lg={6} className="mb-4">
+  <h2 className="section-headingbaler mb-3">Key Features</h2>
+  <p className="features-subtitle mb-4">
+    Precision-engineered secondary shredders designed to refine tyre chips into
+    clean, uniform material for high-value recycling applications.
+  </p>
+
+  <div className="kf-vertical">
+    {features.map((feature, idx) => (
+      <div className="kf-item" key={idx}>
+        {/* Left line + icon */}
+        <div className="kf-icon-col">
+          <span className="kf-line" />
+          <div className="kf-node">
+            <span className="kf-node-inner">
+              <i className="bi bi-sliders" />
+            </span>
+          </div>
+        </div>
+
+        {/* Right content */}
+        <div className="kf-content">
+          <div className="kf-label">
+            FEATURE {String(idx + 1).padStart(2, "0")}
+          </div>
+          <h5 className="kf-title">{feature.title}</h5>
+          <p className="kf-desc">{feature.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</Col>
+
 
             {/* Industries Served – semi-circle timeline */}
             <Col lg={6} className="mb-4">

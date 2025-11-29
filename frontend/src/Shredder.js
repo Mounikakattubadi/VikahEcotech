@@ -275,30 +275,42 @@ function Shredder() {
       <section className="features-applications-section py-5 balerbackimg">
         <div className="container">
           <div className="row">
-            {/* Key Features */}
-            <div className="col-lg-6 mb-4">
-              <h2 className="section-headingbaler mb-4">Key Features</h2>
-              <ul className="feature-list">
-                {features.map((feature, idx) => (
-                  <li
-                    key={idx}
-                    className="feature-item d-flex align-items-start mb-3"
-                  >
-                    <div className="feature-icon me-3">
-                      <span className="badge bg-primary rounded-circle p-2">
-                        <i className="bi bi-check-lg text-white"></i>
-                      </span>
-                    </div>
-                    <div className="feature-content">
-                      <h5 className="feature-title mb-1">{feature.title}</h5>
-                      <p className="feature-desc mb-0">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Key Features – Vertical Modern Timeline */}
+<div className="col-lg-6 mb-4">
+  <h2 className="section-headingbaler mb-3">Key Features</h2>
+  <p className="features-subtitle mb-4">
+    Core capabilities that make our primary shredders reliable, efficient, and
+    safe for intensive industrial use.
+  </p>
+
+  <div className="kf-vertical">
+    {features.map((feature, idx) => (
+      <div className="kf-item" key={idx}>
+        {/* Left line + icon column */}
+        <div className="kf-icon-col">
+          {/* line */}
+          <span className="kf-line" />
+          {/* node */}
+          <div className="kf-node">
+            <span className="kf-node-inner">
+              <i className="bi bi-shield-lock" />
+            </span>
+          </div>
+        </div>
+
+        {/* Text content */}
+        <div className="kf-content">
+          <div className="kf-label">
+            FEATURE {String(idx + 1).padStart(2, "0")}
+          </div>
+          <h5 className="kf-title">{feature.title}</h5>
+          <p className="kf-desc">{feature.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
             {/* Applications – semi-circle timeline (use-case areas) */}
             <Col lg={6} className="mb-4">
@@ -352,33 +364,36 @@ function Shredder() {
         </div>
       </section>
 
-      {/* Benefits */}
-      <section className="py-5">
-        <div className="container">
-          <h2 className="section-headingbaler text-center mb-5">
-            Benefits of Using Our Shredders
-          </h2>
-          <div className="row">
-            {benefits.map((benefit, idx) => (
-              <div className="col-md-6 mb-4" key={idx}>
-                <div className="feature-item d-flex align-items-start">
-                  <div className="feature-icon me-3">
-                    <span className="badge bg-success rounded-circle p-2">
-                      <i className="bi bi-star-fill text-white"></i>
-                    </span>
-                  </div>
-                  <div className="feature-content">
-                    <h5 className="feature-title mb-1">{benefit.title}</h5>
-                    <p className="feature-desc mb-0">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
+{/* Benefits – Modern Card Grid */}
+<section className="py-5 benefits-wrapper">
+  <div className="container">
+    <h2 className="section-headingbaler text-center mb-4">
+      Benefits of Using Our Shredders
+    </h2>
+    <p className="benefits-subtitle text-center mb-5">
+      Designed to optimize waste handling, reduce costs, and support sustainable operations
+      across diverse industries.
+    </p>
+
+    <div className="benefits-grid">
+      {benefits.map((benefit, idx) => (
+        <div className="benefit-card" key={idx}>
+          <div className="benefit-number">
+            {String(idx + 1).padStart(2, "0")}
           </div>
+
+          <div className="benefit-icon">
+            <i className="bi bi-recycle" />
+          </div>
+
+          <h5 className="benefit-title-modern">{benefit.title}</h5>
+          <p className="benefit-desc-modern">{benefit.description}</p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Product Carousel Section – Applications (scroll target) */}
       <div
