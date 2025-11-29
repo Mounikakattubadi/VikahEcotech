@@ -28,6 +28,7 @@ import PCB3 from "./images/Applications/pcb3.webp";
 // Metal
 import MetalBaler1 from "./images/Applications/metalbaler1.jpg";
 import MetalBaler2 from "./images/Applications/metalbaler2.jpg";
+
 import styles from "./pss.module.css";
 
 import img1 from "./images/Applications/tyreshred1.jpg";
@@ -110,83 +111,144 @@ function Baler() {
     </div>
   );
 
+  // 🔹 Scroll to Applications section on the same page
+  const handleScrollToApplications = () => {
+    const section = document.getElementById("baler-applications-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="baler-page">
-<div className={styles.heroWrapper}>
-      <div
-        id="heroCarousel"
-        className="carousel slide"
-        data-bs-ride="carousel"
-        data-bs-interval="6000"
-      >
-        {/* Indicators */}
-        <div className={`carousel-indicators ${styles.indicators}`}>
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" />
-          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" />
-        </div>
+      {/* HERO CAROUSEL */}
+      <div className={styles.heroWrapper}>
+        <div
+          id="heroCarousel"
+          className="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="6000"
+        >
+          {/* Indicators */}
+          <div className={`carousel-indicators ${styles.indicators}`}>
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="0"
+              className="active"
+            />
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="1"
+            />
+          </div>
 
-        <div className="carousel-inner h-100">
-          <div
-            className={`carousel-item active ${styles.carouselItem}`}
-            style={{ backgroundImage: `url(${img1})` }}
-          >
-            <div className={styles.overlay}></div>
+          <div className="carousel-inner h-100">
+            {/* Slide 1 */}
+            <div
+              className={`carousel-item active ${styles.carouselItem}`}
+              style={{ backgroundImage: `url(${img1})` }}
+            >
+              <div className={styles.overlay}></div>
 
-            <div className={styles.contentBox}>
-              <p className={styles.subText}>Turning Waste into Value through Smart Baling Technology</p>
-              <h1 className={styles.heading}>Balers</h1>
-              <p className={styles.description}>
-                At Vikah Ecotech, we specialize in designing and manufacturing high-quality recycling balers machinery that is tailored to meet the diverse needs of industries 
-                and facilities involved in waste management and recycling processes. Our balers are engineered to streamline waste handling, increase operational efficiency, and 
-                promote sustainable practices.
-              </p>
+              <div className={styles.contentBox}>
+                <p className={styles.subText}>
+                  Turning Waste into Value through Smart Baling Technology
+                </p>
+                <h1 className={styles.heading}>Balers</h1>
+                <p className={styles.description}>
+                  At Vikah Ecotech, we specialize in designing and
+                  manufacturing high-quality recycling balers machinery that is
+                  tailored to meet the diverse needs of industries and
+                  facilities involved in waste management and recycling
+                  processes. Our balers are engineered to streamline waste
+                  handling, increase operational efficiency, and promote
+                  sustainable practices.
+                </p>
 
-              <div className={styles.btnRow}>
-                <button className={`btn ${styles.greenBtn}`}>
-                  Explore Our Services ↗
-                </button>
-                <button className={`btn ${styles.whiteBtn}`}>More About Us</button>
+                <div className={styles.btnRow}>
+                  {/* Explore Our Services → scroll to Applications section */}
+                  <button
+                    className={`btn ${styles.greenBtn}`}
+                    onClick={handleScrollToApplications}
+                  >
+                    Explore Our Services ↗
+                  </button>
+
+                  {/* More About Us → /ourproducts */}
+                  <Link
+                    to="/ourproducts"
+                    className={`btn ${styles.whiteBtn}`}
+                  >
+                    More Our Products
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            {/* Slide 2 */}
+            <div
+              className={`carousel-item ${styles.carouselItem}`}
+              style={{ backgroundImage: `url(${img2})` }}
+            >
+              <div className={styles.overlay}></div>
+
+              <div className={styles.contentBox}>
+                <p className={styles.subText}>
+                  Efficient Compaction. Cleaner Operations.
+                </p>
+                <h1 className={styles.heading}>Balers</h1>
+                <p className={styles.description}>
+                  Our balers compact recyclable materials like cardboard,
+                  plastic, metal, and paper into dense, stackable bales—reducing
+                  waste volume, saving space, and improving handling efficiency.
+                </p>
+
+                <div className={styles.btnRow}>
+                  {/* See Machines → scroll to Applications section */}
+                  <button
+                    className={`btn ${styles.greenBtn}`}
+                    onClick={handleScrollToApplications}
+                  >
+                    See Machines ↗
+                  </button>
+
+                  {/* Contact Sales → /Contact */}
+                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+                    Contact Us
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
 
-          <div
-            className={`carousel-item ${styles.carouselItem}`}
-            style={{ backgroundImage: `url(${img2})` }}
+          {/* Arrow controls */}
+          <button
+            className={`carousel-control-prev ${styles.ctrl}`}
+            type="button"
+            data-bs-slide="prev"
+            data-bs-target="#heroCarousel"
           >
-            <div className={styles.overlay}></div>
+            <span className={styles.ctrlIcon}>‹</span>
+          </button>
 
-            <div className={styles.contentBox}>
-              <p className={styles.subText}>Efficient Compaction. Cleaner Operations.</p>
-<h1 className={styles.heading}>Balers</h1>
-<p className={styles.description}>
-  Our balers compact recyclable materials like cardboard, plastic, metal, and paper into dense, stackable bales—reducing waste volume, saving space, and improving handling efficiency.
-</p>
-
-
-              <div className={styles.btnRow}>
-                <button className={`btn ${styles.greenBtn}`}>See Machines ↗</button>
-                <button className={`btn ${styles.whiteBtn}`}>Contact Sales</button>
-              </div>
-            </div>
-          </div>
+          <button
+            className={`carousel-control-next ${styles.ctrl}`}
+            type="button"
+            data-bs-slide="next"
+            data-bs-target="#heroCarousel"
+          >
+            <span className={styles.ctrlIcon}>›</span>
+          </button>
         </div>
-
-        {/* Arrow controls */}
-        <button className={`carousel-control-prev ${styles.ctrl}`} type="button" data-bs-slide="prev" data-bs-target="#heroCarousel">
-          <span className={styles.ctrlIcon}>‹</span>
-        </button>
-
-        <button className={`carousel-control-next ${styles.ctrl}`} type="button" data-bs-slide="next" data-bs-target="#heroCarousel">
-          <span className={styles.ctrlIcon}>›</span>
-        </button>
       </div>
-    </div>
 
+      {/* Features + Industries Served */}
       <section className="features-applications-section py-5 balerbackimg">
         <Container>
           <Row>
-            {/* OLD STYLE FOR KEY FEATURES (LEFT COLUMN) */}
+            {/* Key Features */}
             <Col lg={6} className="mb-4">
               <h2 className="section-headingbaler mb-4">Key Features</h2>
               <ul className="feature-list">
@@ -201,7 +263,9 @@ function Baler() {
                       </span>
                     </div>
                     <div className="feature-content">
-                      <h6 className="feature-title mb-1">{feature.title}</h6>
+                      <h6 className="feature-title mb-1">
+                        {feature.title}
+                      </h6>
                       <p className="feature-desc mb-0">
                         {feature.description}
                       </p>
@@ -211,7 +275,7 @@ function Baler() {
               </ul>
             </Col>
 
-            {/* NEW SEMI-CIRCLE TIMELINE FOR APPLICATIONS (RIGHT COLUMN) */}
+            {/* Industries Served – Timeline */}
             <Col lg={6} className="mb-4">
               <div className="key-features-outer">
                 <h2 className="key-features-title">Industries Served</h2>
@@ -224,7 +288,9 @@ function Baler() {
                     return (
                       <div
                         key={idx}
-                        className={`kf2-row ${isLeftText ? "left" : "right"}`}
+                        className={`kf2-row ${
+                          isLeftText ? "left" : "right"
+                        }`}
                       >
                         {/* LEFT column */}
                         {isLeftText ? (
@@ -263,8 +329,11 @@ function Baler() {
         </Container>
       </section>
 
-      {/* Products with Carousel */}
-      <div className="products-section-bg py-5">
+      {/* Products with Carousel – Applications Section */}
+      <div
+        className="products-section-bg py-5"
+        id="baler-applications-section"  // 👈 target for scroll
+      >
         <div className="container text-center">
           <h2 className="green-heading">Applications</h2>
           <div className="row justify-content-center">
@@ -299,6 +368,7 @@ function Baler() {
         </div>
       </div>
 
+      {/* Contact Section */}
       <Row className="text-center get-in-touch-section text-white py-5 rounded">
         <Col>
           <h4 className="fw-bold mb-3">Get in Touch</h4>

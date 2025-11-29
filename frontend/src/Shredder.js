@@ -142,6 +142,14 @@ function Shredder() {
     },
   ];
 
+  // 🔹 Scroll to Applications section on same page
+  const handleScrollToApplications = () => {
+    const section = document.getElementById("shredder-applications-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="baler-page">
       {/* HERO CAROUSEL */}
@@ -187,12 +195,21 @@ function Shredder() {
                 </p>
 
                 <div className={styles.btnRow}>
-                  <button className={`btn ${styles.greenBtn}`}>
+                  {/* Explore Our Services → scroll to Applications */}
+                  <button
+                    className={`btn ${styles.greenBtn}`}
+                    onClick={handleScrollToApplications}
+                  >
                     Explore Our Services ↗
                   </button>
-                  <button className={`btn ${styles.whiteBtn}`}>
-                    More About Us
-                  </button>
+
+                  {/* More About Us → /ourproducts */}
+                  <Link
+                    to="/ourproducts"
+                    className={`btn ${styles.whiteBtn}`}
+                  >
+                    More Our Products
+                  </Link>
                 </div>
               </div>
             </div>
@@ -216,12 +233,18 @@ function Shredder() {
                 </p>
 
                 <div className={styles.btnRow}>
-                  <button className={`btn ${styles.greenBtn}`}>
+                  {/* See Machines → scroll to Applications */}
+                  <button
+                    className={`btn ${styles.greenBtn}`}
+                    onClick={handleScrollToApplications}
+                  >
                     See Machines ↗
                   </button>
-                  <button className={`btn ${styles.whiteBtn}`}>
-                    Contact Sales
-                  </button>
+
+                  {/* Contact Sales → /Contact */}
+                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+                    Contact Us
+                  </Link>
                 </div>
               </div>
             </div>
@@ -248,7 +271,7 @@ function Shredder() {
         </div>
       </div>
 
-      {/* Features & Applications */}
+      {/* Features & Industries Served */}
       <section className="features-applications-section py-5 balerbackimg">
         <div className="container">
           <div className="row">
@@ -357,8 +380,11 @@ function Shredder() {
         </div>
       </section>
 
-      {/* Product Carousel Section */}
-      <div className="products-section-bg py-5">
+      {/* Product Carousel Section – Applications (scroll target) */}
+      <div
+        className="products-section-bg py-5"
+        id="shredder-applications-section" // 👈 scroll target
+      >
         <div className="container text-center">
           <h2 className="green-heading mb-4">Applications</h2>
           <div className="row justify-content-center">
