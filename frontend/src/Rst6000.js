@@ -17,7 +17,7 @@ const Rst6000 = () => {
     }, []);
 
     const machinery = 'shredder';
-    const model = 'Rasper'; // Keeping original variables as requested
+    const model = 'RST-6000'; // Keeping original variables as requested
 
     const handleDownload = (fileName) => {
         const link = document.createElement('a');
@@ -33,12 +33,19 @@ const Rst6000 = () => {
             {/* Heading section similar to SecondaryMetalshredder */}
             <header className="tyrecutting-header text-white text-center py-5">
                 <div className="container">
-                    <h1 className="display-4">RST - 6000</h1>
+                    <h1 className="display-4">RST-6000</h1>
                 </div>
             </header>
 
             {/* Rest of your existing JSX */}
             <div className='productpagetop'>
+                <div className="top-model-buttons">
+                                    <p className="related-title">Related Model</p>
+                                  <Link to="/rst4000">
+                                    <button className="model-btn">RST-4000</button>
+                                  </Link>
+                        
+                                </div>
                 <div className='imagetop'>
                     <div className="main-image-container">
                         <div className="main-image-wrapper">
@@ -84,6 +91,7 @@ const Rst6000 = () => {
                     </div>
                 </div>
                 <div className="productdetails">
+                    <h1>{model}</h1>
                     <p>
   The RST-6000 is a high-capacity secondary shredder engineered for advanced tyre chip refinement in medium to large-scale
   recycling operations. Equipped with a reinforced rotor, precision-hardened blades, and an enlarged cutting chamber, it 

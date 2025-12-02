@@ -17,7 +17,7 @@ const Sht6000 = () => {
   }, []);
 
   const machinery = "shredder";
-  const model = "SHT6000";
+  const model = "SHT-6000";
   const handleDownload = (fileName) => {
     // Create a new anchor element
     const link = document.createElement("a");
@@ -34,23 +34,24 @@ const Sht6000 = () => {
   };
   return (
     <>
-    <header className="tyrecutting-header text-white text-center py-5">
-                <div className="container">
-                    <h1 className="display-4">SHT-6000</h1>
-
-                </div>
-            </header>
+      <header className="tyrecutting-header text-white text-center py-5">
+        <div className="container">
+          <h1 className="display-4">SHT-6000</h1>
+        </div>
+      </header>
       <div className="productpagetop">
-        
-         <div className="top-model-buttons">
+        <div className="top-model-buttons">
+          <p className="related-title">Related Models</p>
+
           <Link to="/sht8000">
-            <button className="model-btn">SHT8000</button>
+            <button className="model-btn">SHT-8000</button>
           </Link>
 
           <Link to="/sht12000">
-            <button className="model-btn">SHT1200</button>
+            <button className="model-btn">SHT-12000</button>
           </Link>
         </div>
+
         <div className="imagetop">
           <div className="main-image-container">
             <div className="main-image-wrapper">
@@ -100,18 +101,15 @@ const Sht6000 = () => {
         </div>
         <div className="productdetails">
           <div className="details-header">
-    <h1>{model}</h1>
-
-    
-  </div>
-          
+            <h1>{model}</h1>
+          </div>
 
           <p>
             Our SHT-6000 is a high performance tyre shredder model, designed to
             efficiently process and recycle used/waste tyres with ease. The
             robust model is built to handle various tyre sizes and types, from
             PCR to TBR tyres. Equipped with powerful cutting blades and a
-            durable shredding chamber, this SHT 6000 can effectively reduce
+            durable shredding chamber, this SHT-6000 can effectively reduce
             tyres into smaller and more manageable pieces, making them ready for
             further recycling or disposal. SHT-6000 operates with precision and
             speed, ensuring quick and efficient processing of large volumes of

@@ -17,7 +17,7 @@ const Rst4000 = () => {
     }, []);
 
     const machinery = 'shredder';
-    const model = 'Rasper';
+    const model = 'RST-4000';
 
     const handleDownload = (fileName) => {
         const link = document.createElement('a');
@@ -37,8 +37,15 @@ const Rst4000 = () => {
                 </div>
             </header>
 
-            {/* Rest of your  existing JSX */}
-            <div className='productpagetop'>
+              <div className="productpagetop">
+                
+                 <div className="top-model-buttons">
+                    <p className="related-title">Related Model</p>
+                  <Link to="/rst6000">
+                    <button className="model-btn">RST-6000</button>
+                  </Link>
+        
+                </div>
                 <div className='imagetop'>
                     <div className="main-image-container">
                         <div className="main-image-wrapper">
@@ -84,6 +91,7 @@ const Rst4000 = () => {
                     </div>
                 </div>
                 <div className="productdetails">
+                    <h1>{model}</h1>
                     <p>
                         The RST-4000 is a high-efficiency secondary shredder (rasper) designed to refine pre-shredded tyre chips into clean,
                         uniform rubber fragments ready for granulation. Built with a heavy-duty rotor, wear-resistant blades, and a robust cutting

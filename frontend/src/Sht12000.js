@@ -45,12 +45,13 @@ const Sht12000 = () => {
               <div className="productpagetop">
                 
                  <div className="top-model-buttons">
+                    <p className="related-title">Related Models</p>
                   <Link to="/sht8000">
-                    <button className="model-btn">SHT8000</button>
+                    <button className="model-btn">SHT-8000</button>
                   </Link>
         
                   <Link to="/sht6000">
-                    <button className="model-btn">SHT6000</button>
+                    <button className="model-btn">SHT-6000</button>
                   </Link>
                 </div>
             

@@ -36,7 +36,23 @@ const BLT200 = () => {
 
     return (
         <>
-            <div className='productpagetop'>
+           <header className="tyrecutting-header text-white text-center py-5">
+                   <div className="container">
+                     <h1 className="display-4">BLT-200</h1>
+                   </div>
+                 </header>
+           
+                 {/* Rest of your existing JSX */}
+                 <div className="productpagetop">
+                   <div className="top-model-buttons">
+                     <p className="related-title">Related Models</p>
+                     <Link to="/blt150">
+                       <button className="model-btn">BLT-150</button>
+                     </Link>
+                      <Link to="/blt250">
+                       <button className="model-btn">BLT-250</button>
+                     </Link>
+                   </div>
                 <div className='imagetop'>
                     <div className="main-image-container">
                         <div className="main-image-wrapper">
@@ -116,12 +132,12 @@ const BLT200 = () => {
 
             <h1 className="technical-heading">Technical Specifications</h1>
             <div className="featurestable">
-                <h3>MODEL NO:  BLT200</h3>
+                <h3>MODEL NO:  BLT-200</h3>
                 <table>
                     <tbody>
                         {/* General Information */}
                         <tr><th colSpan="2">General Information</th></tr>
-                        <tr><td>Model</td><td>BLT 200</td></tr>
+                        <tr><td>Model</td><td>BLT-200</td></tr>
                         <tr><td>Application</td><td>Designed for compressing and packaging used/waste tyres for storage, transport, and recycling</td></tr>
                         <tr><td>Structure</td><td>MS (Mild Steel) heavy-duty frame</td></tr>
                         <tr><td>Operation Type</td><td>Hydraulic door opening (manual & electric operation)</td></tr>
