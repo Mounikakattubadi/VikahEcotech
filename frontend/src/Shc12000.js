@@ -18,7 +18,7 @@ const Shc12000 = () => {
     }, []);
 
     const machinery = 'shredder';
-    const model = 'SHC12000';
+    const model = 'SHC-12000';
     const handleDownload = (fileName) => {
         // Create a new anchor element
         const link = document.createElement('a');
@@ -37,7 +37,7 @@ const Shc12000 = () => {
         <>
             <div className='productpagetop'>
                 <div className='imagetop'>
-<div className="main-image-container">
+                    <div className="main-image-container">
                         <div className="main-image-wrapper">
                             <img
                                 src={mainImage}
@@ -86,9 +86,9 @@ const Shc12000 = () => {
                 <div className="productdetails">
                     <h1>{model}</h1>
                     <p>
-                        The SHC-12000 is a heavy-duty industrial plastic shredder designed 
-                        for large-scale operations. Suitable for high-capacity recycling 
-                        plants, it can process bulky plastic waste, drums, containers, and films. 
+                        The SHC-12000 is a heavy-duty industrial plastic shredder designed
+                        for large-scale operations. Suitable for high-capacity recycling
+                        plants, it can process bulky plastic waste, drums, containers, and films.
                         Designed for durability, safety, and continuous operation.
                     </p>
                 </div>
@@ -99,7 +99,7 @@ const Shc12000 = () => {
                 <div className='features-content'>
                     <img src={shredderhdimg} alt="Specifications" className="specifications-image" />
                     <div className='sht200specification'>
-                       <p>
+                        <p>
                             ➤ Heavy-duty twin shaft shredder<br />
                             ➤ Hydraulic pusher feeding system<br />
                             ➤ Full automation and overload protection<br />
@@ -114,7 +114,7 @@ const Shc12000 = () => {
             <div className="featurestable">
                 <h3>Electrical System</h3>
                 <table>
-                     <tbody>
+                    <tbody>
                         <tr><td>Power</td><td>160 HP</td></tr>
                         <tr><td>No Of Motors</td><td>2</td></tr>
                         <tr><td>Voltage</td><td>As per Client’s Requirement</td></tr>
@@ -128,7 +128,7 @@ const Shc12000 = () => {
             <div className="cuttingsection">
                 <h3>Cutting Section</h3>
                 <table>
-                     <tbody>
+                    <tbody>
                         <tr><td>Cutting Chamber</td><td>1400 x 900 mm</td></tr>
                         <tr><td>Knives Thickness</td><td>40 mm</td></tr>
                         <tr><td>Knives Diameter</td><td>450 mm</td></tr>

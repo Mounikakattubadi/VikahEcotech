@@ -2,19 +2,19 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 
-import shm2600_main from "./images/Applications/shredm8.webp";
-import shm2600_angle1 from "./images/Applications/shredm4.jpeg";
-import shm2600_angle2 from "./images/Applications/shredm6.jpg";
+import shm4000_main from "./images/Applications/shredm5.jpg";
+import shm4000_angle1 from "./images/Applications/shredm6.jpg";
+import shm4000_angle2 from "./images/Applications/shredm7.jpg";
 
-const Shm2600 = () => {
-    const [mainImage, setMainImage] = useState(shm2600_main);
+const Shm4000 = () => {
+    const [mainImage, setMainImage] = useState(shm4000_main);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
     const machinery = "metal-shredder";
-    const model = "SHM2600";
+    const model = "SHM-4000";
 
     const handleDownload = (fileName) => {
         const link = document.createElement("a");
@@ -33,7 +33,7 @@ const Shm2600 = () => {
         <>
             <div className='productpagetop'>
                 <div className='imagetop'>
-<div className="main-image-container">
+                    <div className="main-image-container">
                         <div className="main-image-wrapper">
                             <img
                                 src={mainImage}
@@ -54,25 +54,25 @@ const Shm2600 = () => {
                         <div>
                             <img
                                 className='angle1'
-                                src={shm2600_angle1}
+                                src={shm4000_angle1}
                                 alt="Angle 1"
-                                onClick={() => handleImageClick(shm2600_angle1)}
+                                onClick={() => handleImageClick(shm4000_angle1)}
                             />
                         </div>
                         <div>
                             <img
                                 className='angle2'
-                                src={shm2600_main}
+                                src={shm4000_main}
                                 alt="Angle 2"
-                                onClick={() => handleImageClick(shm2600_main)}
+                                onClick={() => handleImageClick(shm4000_main)}
                             />
                         </div>
                         <div>
                             <img
                                 className='angle3'
-                                src={shm2600_angle2}
+                                src={shm4000_angle2}
                                 alt="Angle 3"
-                                onClick={() => handleImageClick(shm2600_angle2)}
+                                onClick={() => handleImageClick(shm4000_angle2)}
                             />
                         </div>
                     </div>
@@ -81,10 +81,9 @@ const Shm2600 = () => {
                 <div className="productdetails">
                     <h1>{model}</h1>
                     <p>
-                        The SHM-2600 Metal Shredder is a heavy-duty, industrial-grade twin-shaft shredder 
-                        engineered to shred large volumes of ferrous & non-ferrous scrap metal. 
-                        Its oversized chamber and increased power range make it ideal for large recycling facilities 
-                        handling heavy metal loads.
+                        The SHM-4000 Metal Shredder is an advanced machine engineered for high-capacity metal scrap processing.
+                        It offers robust twin-shaft design, ISO-certified heavy-duty blades, and is optimized for shredding ferrous
+                        and non-ferrous metals at scale.
                     </p>
                 </div>
             </div>
@@ -92,15 +91,14 @@ const Shm2600 = () => {
             <div className='features-container'>
                 <h2>FEATURES AND SPECIFICATIONS</h2>
                 <div className='features-content'>
-                    <img src={shm2600_angle1} alt="Specifications" className="specifications-image" />
+                    <img src={shm4000_angle1} alt="Specifications" className="specifications-image" />
                     <div className='sht200specification'>
                         <p>
-                            ➤ Heavy-duty twin shaft metal shredding system<br />
-                            ➤ Hardened alloy steel blades for extended durability<br />
-                            ➤ Automatic reverse to prevent jamming<br />
-                            ➤ High torque output for large scrap pieces<br />
-                            ➤ Low-noise, vibration-resistant frame design<br />
-                            ➤ PLC automation for real-time safety & performance<br />
+                            ➤ Twin-shaft high-torque rotor system<br />
+                            ➤ Hardened alloy steel blades with extended lifespan<br />
+                            ➤ Overload-reverse protection and safety interlocks<br />
+                            ➤ PLC-controlled automation and monitoring<br />
+                            ➤ Vibration-absorbing frame for smoother operation<br />
                         </p>
                     </div>
                 </div>
@@ -112,7 +110,7 @@ const Shm2600 = () => {
                 <h3>Electrical System</h3>
                 <table>
                     <tbody>
-                        <tr><td>Power</td><td>80 HP</td></tr>
+                        <tr><td>Power</td><td>180-220 HP</td></tr>
                         <tr><td>No Of Motors</td><td>2</td></tr>
                         <tr><td>Voltage</td><td>As per Client’s Requirement</td></tr>
                         <tr><td>Drive</td><td>Electric</td></tr>
@@ -125,13 +123,14 @@ const Shm2600 = () => {
                 <h3>Cutting Section</h3>
                 <table>
                     <tbody>
-                        <tr><td>Cutting Chamber</td><td>2600 x 1000 mm</td></tr>
+                        <tr><td>Cutting Chamber</td><td>4000 x 900 mm</td></tr>
                         <tr><td>Blade Thickness</td><td>50 mm</td></tr>
-                        <tr><td>Rotor Diameter</td><td>380 mm</td></tr>
-                        <tr><td>Hopper Height</td><td>1350 mm</td></tr>
-                        <tr><td>Discharge Height</td><td>1250 mm</td></tr>
+                      <tr><td>Blade Diameter</td><td>500 mm</td></tr>
+                        <tr><td>Rotor Diameter</td><td>360 mm</td></tr>
+                        <tr><td>Hopper Height</td><td>1300 mm</td></tr>
+                        <tr><td>Discharge Height</td><td>1200 mm</td></tr>
                         <tr><td>Feeding Mechanism</td><td>Auto</td></tr>
-                        <tr><td>Production Capacity</td><td>4000–5500 Kg/hr</td></tr>
+                        <tr><td>Production Capacity</td><td>4000-4500 Kg/hr</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -140,10 +139,10 @@ const Shm2600 = () => {
                 <h3>Dimensions and Weight</h3>
                 <table>
                     <tbody>
-                        <tr><td>Length</td><td>4600 mm</td></tr>
-                        <tr><td>Width</td><td>1800 mm</td></tr>
-                        <tr><td>Height</td><td>2600 mm</td></tr>
-                        <tr><td>Weight (Approx)</td><td>9500 Kg</td></tr>
+                        <tr><td>Length</td><td>4300 mm</td></tr>
+                        <tr><td>Width</td><td>1650 mm</td></tr>
+                        <tr><td>Height</td><td>2450 mm</td></tr>
+                        <tr><td>Weight (Approx)</td><td>12000 Kg</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -153,7 +152,7 @@ const Shm2600 = () => {
                     <button className="login-button">Enquire Us</button>
                 </Link>
 
-                <button className="downloadspeci-button" onClick={() => handleDownload('shm2600')}>
+                <button className="downloadspeci-button" onClick={() => handleDownload('shm4000')}>
                     Download Specifications
                 </button>
             </div>
@@ -161,4 +160,4 @@ const Shm2600 = () => {
     );
 };
 
-export default Shm2600;
+export default Shm4000;

@@ -18,7 +18,7 @@ const Sht12000 = () => {
     }, []);
 
     const machinery = 'shredder';
-    const model = 'SHT12000';
+    const model = 'SHT-12000';
 
     const handleDownload = (fileName) => {
         // Create a new anchor element
@@ -56,21 +56,21 @@ const Sht12000 = () => {
             
                 <div className='imagetop'>
                     <div className="main-image-container">
-  <div className="main-image-wrapper">
-    <img
-      src={mainImage}
-      alt="SHT12000 Tyre Shredder main view by Vikah Ecotech"
-      className="sht2000img"
-    />
-    <span
-      className="view-image-icon"
-      onClick={() => window.open(mainImage, '_blank', 'noopener,noreferrer')}
-      title="View full image"
-    >
-      🔍
-    </span>
-  </div>
-</div>
+                        <div className="main-image-wrapper">
+                            <img
+                                src={mainImage}
+                                alt="SHT12000 Tyre Shredder main view by Vikah Ecotech"
+                                className="sht2000img"
+                            />
+                            <span
+                                className="view-image-icon"
+                                onClick={() => window.open(mainImage, '_blank', 'noopener,noreferrer')}
+                                title="View full image"
+                            >
+                                🔍
+                            </span>
+                        </div>
+                    </div>
 
                     <div className="additional-images">
                         <div>
@@ -101,15 +101,15 @@ const Sht12000 = () => {
                 </div>
                 <div className="productdetails">
                     <h1>{model}</h1>
-                   
                     <p>
-                        Our SHT-12000 is a high performance tyre shredder model, designed to efficiently process and recycle used/waste tyres with ease.
-                        The robust model is built to handle various tyre sizes and types, from PCR to TBR tyres.
-                        Equipped with powerful cutting blades and a durable shredding chamber,
-                        this SHT 12000 can effectively reduce tyres into smaller and more manageable pieces,
-                        making them ready for further recycling or disposal. SHT-12000 operates with precision and speed,
-                        ensuring quick and efficient processing of large volumes of tyres.
+                        Our SHT-12000 is an industrial-class tyre shredder designed for heavy-duty, high-capacity recycling facilities.
+                        With oversized shafts, extra-thick blades and a large cutting chamber, it reduces tyres rapidly into uniform chips suitable for downstream processing.
+                        The machine is engineered for continuous 24/7 operation — its rugged frame, high-flow drives and precision hydraulics ensure stable performance under heavy loads.
+                        Advanced PLC controls, automated feeding and safety interlocks deliver consistent throughput with minimal operator intervention.
+                        Serviceability is built in: accessible inspection ports, replaceable wear inserts and convenient maintenance platforms reduce downtime.
+                        The SHT-12000 is the top choice when maximum throughput, reliability and chip quality are mission-critical.
                     </p>
+
                 </div>
             </div>
 

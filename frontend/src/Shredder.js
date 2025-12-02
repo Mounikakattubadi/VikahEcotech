@@ -161,7 +161,7 @@ function Shredder() {
           id="heroCarousel"
           className="carousel slide"
           data-bs-ride="carousel"
-          data-bs-interval="6000"
+          data-bs-interval="3000"
         >
           {/* Indicators */}
           <div className={`carousel-indicators ${styles.indicators}`}>
@@ -192,140 +192,151 @@ function Shredder() {
               data-bs-slide-to="4"
             />
           </div>
+          <div className="carousel-inner h-100">
 
-<div className="carousel-inner h-100">
+            {/* Slide 1 – Tyre Shredders */}
+            <div
+              className={`carousel-item active ${styles.carouselItem}`}
+              style={{ backgroundImage: `url(${img1})` }}
+            >
+              <div className={styles.overlay}></div>
 
-  {/* Slide 1 – Tyre Shredders */}
-  <div
-    className={`carousel-item active ${styles.carouselItem}`}
-    style={{ backgroundImage: `url(${img1})` }}
-  >
-    <div className={styles.overlay}></div>
+              {/* ⭐ TOP-CENTER MAIN HEADING */}
+              <h2 className={styles.mainHeadingTop}>PRIMARY SHREDDERS</h2>
 
-    <div className={styles.contentBox}>
-      <p className={styles.subText}>Transforming Bulk Waste into Recyclable Resources</p>
-      <h1 className={styles.heading}>Tyre Shredders</h1>
+              <div className={styles.contentBox}>
+                <h1 className={styles.heading}>Tyre Shredders</h1>
 
-      <p className={styles.description}>
-        Heavy-duty shredders designed to break down tyres into uniform pieces for efficient recycling.
-      </p>
+                <p className={styles.description}>
+                  Heavy-duty shredders designed to break down tyres into uniform pieces for efficient recycling.
+                </p>
 
-      <div className={styles.btnRow}>
-        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
-          Explore Our Services ↗
-        </button>
-        <Link to="/ourproducts" className={`btn ${styles.whiteBtn}`}>
-          More Our Products
-        </Link>
-      </div>
-    </div>
-  </div>
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+                    Explore Our Services ↗
+                  </button>
+                  <Link to="/ourproducts" className={`btn ${styles.whiteBtn}`}>
+                    More Our Products
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-  {/* Slide 2 – E-Waste Shredders */}
-  <div
-    className={`carousel-item ${styles.carouselItem}`}
-    style={{ backgroundImage: `url(${img2})` }}
-  >
-    <div className={styles.overlay}></div>
+            {/* Slide 2 – E-Waste Shredders */}
+            <div
+              className={`carousel-item ${styles.carouselItem}`}
+              style={{ backgroundImage: `url(${img2})` }}
+            >
+              <div className={styles.overlay}></div>
 
-    <div className={styles.contentBox}>
-      <p className={styles.subText}>Engineered for High-Capacity Industrial Shredding</p>
-      <h1 className={styles.heading}>E-Waste Shredders</h1>
+              {/* ⭐ TOP-CENTER MAIN HEADING */}
+              <h2 className={styles.mainHeadingTop}>PRIMARY SHREDDERS</h2>
 
-      <p className={styles.description}>
-        Powerful shredders built to process electronic waste safely and prepare materials for recycling.
-      </p>
+              <div className={styles.contentBox}>
+                <h1 className={styles.heading}>E-Waste Shredders</h1>
 
-      <div className={styles.btnRow}>
-        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
-          See Machines ↗
-        </button>
-        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
-          Contact Us
-        </Link>
-      </div>
-    </div>
-  </div>
+                <p className={styles.description}>
+                  Powerful shredders built to process electronic waste safely and prepare materials for recycling.
+                </p>
 
-  {/* Slide 3 – Paper & Cardboard Shredders */}
-  <div
-    className={`carousel-item ${styles.carouselItem}`}
-    style={{ backgroundImage: `url(${img3})` }}
-  >
-    <div className={styles.overlay}></div>
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+                    See Machines ↗
+                  </button>
+                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-    <div className={styles.contentBox}>
-      <p className={styles.subText}>Engineered for High-Capacity Industrial Shredding</p>
-      <h1 className={styles.heading}>Paper & Cardboard Shredders</h1>
+            {/* Slide 3 – Paper & Cardboard Shredders */}
+            <div
+              className={`carousel-item ${styles.carouselItem}`}
+              style={{ backgroundImage: `url(${img3})` }}
+            >
+              <div className={styles.overlay}></div>
 
-      <p className={styles.description}>
-        Designed to shred bulk paper and cartons into manageable particles for recycling workflows.
-      </p>
+              {/* ⭐ TOP-CENTER MAIN HEADING */}
+              <h2 className={styles.mainHeadingTop}>PRIMARY SHREDDERS</h2>
 
-      <div className={styles.btnRow}>
-        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
-          See Machines ↗
-        </button>
-        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
-          Contact Us
-        </Link>
-      </div>
-    </div>
-  </div>
+              <div className={styles.contentBox}>
+                <h1 className={styles.heading}>Paper & Cardboard Shredders</h1>
 
-  {/* Slide 4 – Metal Shredders */}
-  <div
-    className={`carousel-item ${styles.carouselItem}`}
-    style={{ backgroundImage: `url(${img4})` }}
-  >
-    <div className={styles.overlay}></div>
+                <p className={styles.description}>
+                  Designed to shred bulk paper and cartons into manageable particles for recycling workflows.
+                </p>
 
-    <div className={styles.contentBox}>
-      <p className={styles.subText}>Engineered for High-Capacity Industrial Shredding</p>
-      <h1 className={styles.heading}>Metal Shredders</h1>
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+                    See Machines ↗
+                  </button>
+                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-      <p className={styles.description}>
-        High-torque shredders capable of reducing metal scrap into smaller, recyclable fragments.
-      </p>
+            {/* Slide 4 – Metal Shredders */}
+            <div
+              className={`carousel-item ${styles.carouselItem}`}
+              style={{ backgroundImage: `url(${img4})` }}
+            >
+              <div className={styles.overlay}></div>
 
-      <div className={styles.btnRow}>
-        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
-          See Machines ↗
-        </button>
-        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
-          Contact Us
-        </Link>
-      </div>
-    </div>
-  </div>
+              {/* ⭐ TOP-CENTER MAIN HEADING */}
+              <h2 className={styles.mainHeadingTop}>PRIMARY SHREDDERS</h2>
 
-  {/* Slide 5 – Plastic Shredders */}
-  <div
-    className={`carousel-item ${styles.carouselItem}`}
-    style={{ backgroundImage: `url(${img5})` }}
-  >
-    <div className={styles.overlay}></div>
+              <div className={styles.contentBox}>
+                <h1 className={styles.heading}>Metal Shredders</h1>
 
-    <div className={styles.contentBox}>
-      <p className={styles.subText}>Engineered for High-Capacity Industrial Shredding</p>
-      <h1 className={styles.heading}>Plastic Shredders</h1>
+                <p className={styles.description}>
+                  High-torque shredders capable of reducing metal scrap into smaller, recyclable fragments.
+                </p>
 
-      <p className={styles.description}>
-        Efficient shredders that break down plastic waste into uniform pieces for further processing.
-      </p>
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+                    See Machines ↗
+                  </button>
+                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+            </div>
 
-      <div className={styles.btnRow}>
-        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
-          See Machines ↗
-        </button>
-        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
-          Contact Us
-        </Link>
-      </div>
-    </div>
-  </div>
+            {/* Slide 5 – Plastic Shredders */}
+            <div
+              className={`carousel-item ${styles.carouselItem}`}
+              style={{ backgroundImage: `url(${img5})` }}
+            >
+              <div className={styles.overlay}></div>
 
-</div>
+              {/* ⭐ TOP-CENTER MAIN HEADING */}
+              <h2 className={styles.mainHeadingTop}>PRIMARY SHREDDERS</h2>
+
+              <div className={styles.contentBox}>
+                <h1 className={styles.heading}>Plastic Shredders</h1>
+
+                <p className={styles.description}>
+                  Efficient shredders that break down plastic waste into uniform pieces for further processing.
+                </p>
+
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+                    See Machines ↗
+                  </button>
+                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+                    Contact Us
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
 
 
           {/* Arrow controls */}

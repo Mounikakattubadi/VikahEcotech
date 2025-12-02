@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import './Tyrecutting.css';
 import './Models.css';
 
-import Plastic1 from './images/baler.png';
-import Plastic2 from './images/baler1.png';
-import Plastic3 from './images/baler2.png';
+
 import mainSpecImage from './images/Applications/plas14.webp';
 import balerImage from './images/Applications/plas16.jpg';
 import img1 from './images/Applications/plas18.jpeg';
@@ -23,7 +21,6 @@ function Plasticbaler() {
       force: '30 Ton',
       weight: '150-250 kg',
       note: 'Compact design for lightweight plastic waste such as PET bottles and films.',
-      image: mainSpecImage,
     },
     {
       name: 'BLP40',
@@ -31,7 +28,6 @@ function Plasticbaler() {
       force: '40 Ton',
       weight: '200-350 kg',
       note: 'Ideal for medium-density plastic waste management applications.',
-      image: balerImage,
     },
     {
       name: 'BLP50',
@@ -39,9 +35,11 @@ function Plasticbaler() {
       force: '50 Ton',
       weight: '350-500 kg',
       note: 'Heavy-duty design for industrial-scale plastic recycling operations.',
-      image: img1,
     },
   ];
+
+  // Carousel images (same for all models)
+  const carouselImages = [ mainSpecImage, balerImage, img1];
 
   const [selected, setSelected] = useState(balers[0]);
 
@@ -54,7 +52,7 @@ function Plasticbaler() {
         </div>
       </header>
 
-      {/* Description Section */}
+      {/* Description */}
       <div className="container text-center my-4 balerbackimg">
         <p>
           Vikah Ecotech manufactures efficient, eco-friendly plastic balers designed for
@@ -75,11 +73,31 @@ function Plasticbaler() {
           ))}
         </div>
 
-        {/* Selected Model Info */}
+        {/* Main Section */}
         <div className="row justify-content-center align-items-center">
+
+          {/* CAROUSEL */}
           <div className="col-md-6 mb-4">
-            <img src={selected.image} alt={selected.name} className="img-fluid rounded machine-image" />
+            <div id="plasticCarousel" className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-inner">
+                {carouselImages.map((img, i) => (
+                  <div key={i} className={`carousel-item ${i === 0 ? "active" : ""}`}>
+                    <img src={img} className="d-block w-100 baler-carousel-img" alt="Plastic Baler" />
+                  </div>
+                ))}
+              </div>
+
+              {/* Controls */}
+              <button className="carousel-control-prev" type="button" data-bs-target="#plasticCarousel" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon"></span>
+              </button>
+              <button className="carousel-control-next" type="button" data-bs-target="#plasticCarousel" data-bs-slide="next">
+                <span className="carousel-control-next-icon"></span>
+              </button>
+            </div>
           </div>
+
+          {/* INFO */}
           <div className="col-md-6 mb-4 makecenter">
             <h3 className="machine-title">{selected.name}</h3>
             <ul className="list-unstyled">
@@ -92,6 +110,7 @@ function Plasticbaler() {
               Read More
             </Link>
           </div>
+
         </div>
       </div>
     </div>

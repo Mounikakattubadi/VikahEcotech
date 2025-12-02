@@ -37,6 +37,7 @@ const Sht6000 = () => {
     <header className="tyrecutting-header text-white text-center py-5">
                 <div className="container">
                     <h1 className="display-4">SHT-6000</h1>
+
                 </div>
             </header>
       <div className="productpagetop">

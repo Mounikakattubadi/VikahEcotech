@@ -19,7 +19,6 @@ function Tyrescrapbaler() {
       force: '150 Ton',
       weight: '9000 kg',
       note: 'Operators can easily and safely operate the BLT-150.',
-      image: Balerimg,
     },
     {
       name: 'BLT200',
@@ -27,7 +26,6 @@ function Tyrescrapbaler() {
       force: '200 Ton',
       weight: '9000 kg',
       note: 'Our BLT-200 is engineered to efficiently compress.',
-      image: Baler1,
     },
     {
       name: 'BLT250',
@@ -35,9 +33,10 @@ function Tyrescrapbaler() {
       force: '250 Ton',
       weight: '11000 kg',
       note: 'Operators can easily and safely operate the BLT-250.',
-      image: Baler2,
     },
   ];
+
+  const carouselImages = [Balerimg, Baler1, Baler2];
 
   const [selected, setSelected] = useState(balers[0]);
 
@@ -50,15 +49,14 @@ function Tyrescrapbaler() {
         </div>
       </header>
 
-      {/* Description */}
       <div className="container text-center my-4 balerbackimg">
-        <p className=" ">
-          Our powerful balers are engineered to handle high compaction requirements for tyre scrap and other heavy-duty recycling processes.
-          Built for safety, efficiency, and durability, these machines deliver unmatched performance in industrial environments.
+        <p>
+          Our powerful balers are engineered to handle high compaction requirements for tyre scrap
+          and other heavy-duty recycling processes.
         </p>
 
         {/* Tab Buttons */}
-        <div className="btn-group flex-wrap mb-4" role="group">
+        <div className="btn-group flex-wrap mb-4">
           {balers.map((baler, index) => (
             <button
               key={index}
@@ -70,11 +68,32 @@ function Tyrescrapbaler() {
           ))}
         </div>
 
-        {/* Selected Baler Info */}
+        {/* MAIN DISPLAY */}
         <div className="row justify-content-center align-items-center">
+          
+          {/* CAROUSEL */}
           <div className="col-md-6 mb-4">
-            <img src={selected.image} alt={selected.name} className="img-fluid rounded machine-image" />
+            <div id="balerCarousel" className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-inner">
+                {carouselImages.map((img, i) => (
+                  <div key={i} className={`carousel-item ${i === 0 ? "active" : ""}`}>
+                    <img src={img} className="d-block w-100 baler-carousel-img" alt="Baler" />
+                  </div>
+                ))}
+              </div>
+
+              {/* Controls */}
+              <button className="carousel-control-prev" type="button" data-bs-target="#balerCarousel" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon"></span>
+              </button>
+
+              <button className="carousel-control-next" type="button" data-bs-target="#balerCarousel" data-bs-slide="next">
+                <span className="carousel-control-next-icon"></span>
+              </button>
+            </div>
           </div>
+
+          {/* INFO */}
           <div className="col-md-6 mb-4 makecenter">
             <h3 className="machine-title">{selected.name}</h3>
             <ul className="list-unstyled">
@@ -83,10 +102,12 @@ function Tyrescrapbaler() {
               <li><strong>Baler Weight:</strong> {selected.weight}</li>
               <li><strong>Note:</strong> {selected.note}</li>
             </ul>
+
             <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
               Read More
             </Link>
           </div>
+
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ const BLT250 = () => {
     }, []);
 
     const machinery = 'Baler';
-    const model = 'BLT250';
+    const model = 'BLT-250';
 
     const handleDownload = (fileName) => {
         // Create a new anchor element
@@ -96,12 +96,7 @@ const BLT250 = () => {
                     <h1>{model}</h1>
                     
                     <p>
-                        Our BLT-250 is engineered to efficiently compress and package used/waste tyres for storage,
-                        transportation and recycling process.  Our BLT-250 comes with a robust hydraulic system and
-                        a sturdy compression chamber which can compact a large number of tyres into dense and
-                        uniform bales quickly and efficiently.  Our BLT-250 is equipped with user friendly controls and
-                        safety features, such as emergency stop functions and safety guards, operators can easily and
-                        safely operate the BLT-150 to achieve optimal compression results.
+                        The BLT-250 is a heavy-duty industrial baler built for high-volume tyre recycling and continuous 24/7 operation. Its 250-ton compaction force, oversized hydraulic cylinders, and reinforced frame deliver exceptionally dense, transport-ready bales that reduce handling and logistics costs. A high-flow piston pump and automated cycle controls ensure fast, consistent compression with minimal operator effort. Safety is fully integrated with emergency stops, interlocks and limit switches for reliable, protected operation. Designed for long service life, the BLT-250 features easily accessible maintenance points and durable components that minimize downtime. It’s the ideal choice for facilities that demand maximum output, reliability and uniform bale quality.
                     </p>
                 </div>
             </div>

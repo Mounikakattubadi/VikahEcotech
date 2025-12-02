@@ -3,14 +3,10 @@ import { Link } from 'react-router-dom';
 import './Tyrecutting.css';
 import './Models.css';
 
-// 👉 Replace with real images
-import metalImg1 from "./images/Shedder _ Final PNG.png";
-import metalImg2 from "./images/shredder_hd.jpg";
-import metalImg3 from "./images/shredder_hd1.jpg";
+// Model-specific main images
 import shm_main from "./images/Applications/shredm1.jpg";
 import shm_angle1 from "./images/Applications/shredm2.jpg";
 import shm_angle2 from "./images/Applications/shredm3.jpg";
-import shm_specs from "./images/Applications/shredm4.jpeg";
 
 function Metalshredder() {
   useEffect(() => {
@@ -27,22 +23,17 @@ function Metalshredder() {
       image: shm_main,
     },
     {
-      name: 'SHM2200',
+      name: 'SHM4000',
       type: 'Metal Shredder',
       power: '70 - 90 HP',
       system: 'High Torque Hydraulic System',
-      feature: 'SHM2200 offers increased chamber size and shredding capacity for industrial metal processing.',
+      feature: 'SHM2400 offers increased chamber size and shredding capacity for industrial metal processing.',
       image: shm_angle1,
     },
-    {
-      name: 'SHM2600',
-      type: 'Metal Shredder',
-      power: '90 - 120 HP',
-      system: 'Dual Shaft Cutting + Heavy Duty Rotor',
-      feature: 'SHM2600 is designed for large-scale shredding of ferrous & non-ferrous scrap metals.',
-      image: shm_angle2,
-    },
   ];
+
+  // SAME carousel images for every model (consistent design)
+  const carouselImages = [shm_main, shm_angle1, shm_angle2];
 
   const [selected, setSelected] = useState(shredders[0]);
 
@@ -55,7 +46,6 @@ function Metalshredder() {
         </div>
       </header>
 
-      {/* Introduction */}
       <div className="container text-center my-4 balerbackimg">
         <p>
           Vikah Ecotech manufactures high-performance metal shredders engineered for both ferrous
@@ -76,18 +66,34 @@ function Metalshredder() {
           ))}
         </div>
 
-        {/* Selected Model Details */}
+        {/* MAIN SECTION */}
         <div className="row justify-content-center align-items-center">
+
+          {/* CAROUSEL */}
           <div className="col-md-6 mb-4">
-            <img
-              src={selected.image}
-              alt={selected.name}
-              className="img-fluid rounded machine-image"
-            />
+            <div id="metalShredCarousel" className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-inner">
+                {carouselImages.map((img, index) => (
+                  <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                    <img src={img} className="d-block w-100 baler-carousel-img" alt="Metal Shredder" />
+                  </div>
+                ))}
+              </div>
+
+              <button className="carousel-control-prev" type="button" data-bs-target="#metalShredCarousel" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon"></span>
+              </button>
+
+              <button className="carousel-control-next" type="button" data-bs-target="#metalShredCarousel" data-bs-slide="next">
+                <span className="carousel-control-next-icon"></span>
+              </button>
+            </div>
           </div>
 
+          {/* INFO SECTION */}
           <div className="col-md-6 mb-4 makecenter">
             <h3 className="machine-title">{selected.name}</h3>
+
             <ul className="list-unstyled">
               <li><strong>Type:</strong> {selected.type}</li>
               <li><strong>Power Range:</strong> {selected.power}</li>
@@ -99,6 +105,7 @@ function Metalshredder() {
               Read More
             </Link>
           </div>
+
         </div>
       </div>
     </div>

@@ -66,7 +66,7 @@ const Blm200 = () => {
         </div>
 
         <div className="productdetails">
-          <h1>BLM200</h1>
+          <h1>BLM-200</h1>
           <p>
             The <strong>BLM-200</strong> is ideal for medium-to-heavy metal scrap including steel sheets, 
             alloy scrap, and fabricated metal waste. Designed with reinforced steel body.

@@ -72,7 +72,7 @@ const BLP50 = () => {
         </div>
 
         <div className="productdetails">
-          <h1>BLP50</h1>
+          <h1>BLP-50</h1>
        
           <p>
             The <strong>BLP-50</strong> Plastic Baler is designed for compressing and baling lightweight plastic waste materials 

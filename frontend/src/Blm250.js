@@ -66,7 +66,7 @@ const Blm250 = () => {
         </div>
 
         <div className="productdetails">
-          <h1>BLM250</h1>
+          <h1>BLM-250</h1>
           <p>
             The <strong>BLM-250</strong> is a high-force industrial metal baler designed for large-scale 
             recycling yards. Suitable for ferrous & non-ferrous metals including steel punchings, cast 

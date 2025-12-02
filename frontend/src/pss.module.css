@@ -39,7 +39,7 @@
 }
 
 .heading {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 800;
   line-height: 1.03;
   margin-bottom: 16px;
@@ -114,7 +114,7 @@
 
 /* RESPONSIVE */
 @media (max-width: 992px) {
-  .heading { font-size: 34px; }
+  .heading { font-size: 25px; }
   .heroWrapper { height: 60vh; }
   .carouselItem { height: 60vh; }
 }
@@ -135,3 +135,49 @@
 
   .ctrl { display: none; } /* hide arrows */
 }
+/* desktop/tablet keep as before (no change) */
+.mainHeadingTop {
+  position: absolute;
+  top: 9%;
+  left: 54%;
+  transform: translateX(-50%);
+  color: #00d26a;
+  font-size: 3.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  z-index: 20;
+  pointer-events: none;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.45);
+  margin: 0;
+  transition: all 200ms ease;
+}
+
+@media (max-width: 576px) {
+  .mainHeadingTop {
+    position: absolute;
+    top: 10px;
+    left: 50%;               /* ⭐ REQUIRED for centering */
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    letter-spacing: 0.5px;
+    padding: 6px 14px;
+    background: rgba(0, 0, 0, 0.18);
+    border-radius: 6px;
+    white-space: nowrap;
+    text-align: center;
+    z-index: 10;
+  }
+
+  .contentBox {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 92%;
+  }
+
+  .btnRow { flex-direction: column; gap: 12px; }
+  .greenBtn, .whiteBtn { width: 100%; min-width: unset; }
+}
+

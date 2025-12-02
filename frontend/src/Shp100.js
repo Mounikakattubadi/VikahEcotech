@@ -19,7 +19,7 @@ const Shp100 = () => {
     }, []);
 
     const machinery = 'shredder';
-    const model = 'SHP100';
+    const model = 'SHP-100';
 
     const handleDownload = (fileName) => {
         const link = document.createElement('a');
@@ -34,7 +34,7 @@ const Shp100 = () => {
         <>
             <div className='productpagetop'>
                 <div className='imagetop'>
-<div className="main-image-container">
+                    <div className="main-image-container">
                         <div className="main-image-wrapper">
                             <img
                                 src={mainImage}
@@ -83,10 +83,10 @@ const Shp100 = () => {
                 <div className="productdetails">
                     <h1>{model}</h1>
                     <p>
-                        The SHP100 Plastic & PET Bottle Shredder is designed for efficient 
-                        shredding of plastic waste, PET bottles, and poly bags. Built with 
-                        strong components and a durable single-shaft design, it offers smooth 
-                        semi-automatic shredding performance suitable for small-scale and 
+                        The SHP100 Plastic & PET Bottle Shredder is designed for efficient
+                        shredding of plastic waste, PET bottles, and poly bags. Built with
+                        strong components and a durable single-shaft design, it offers smooth
+                        semi-automatic shredding performance suitable for small-scale and
                         medium-scale recycling operations.
                     </p>
                 </div>

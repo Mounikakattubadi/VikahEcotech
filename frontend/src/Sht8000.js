@@ -17,7 +17,7 @@ const Sht8000 = () => {
     }, []);
 
     const machinery = 'shredder';
-    const model = 'SHT8000';
+    const model = 'SHT-8000';
 
     const handleDownload = (fileName) => {
         // Create a new anchor element
@@ -55,21 +55,21 @@ const Sht8000 = () => {
             
                 <div className='imagetop'>
                     <div className="main-image-container">
-  <div className="main-image-wrapper">
-    <img
-      src={mainImage}
-      alt="SHT8000 Tyre Shredder main view by Vikah Ecotech"
-      className="sht2000img"
-    />
-    <span
-      className="view-image-icon"
-      onClick={() => window.open(mainImage, '_blank', 'noopener,noreferrer')}
-      title="View full image"
-    >
-      🔍
-    </span>
-  </div>
-</div>
+                        <div className="main-image-wrapper">
+                            <img
+                                src={mainImage}
+                                alt="SHT8000 Tyre Shredder main view by Vikah Ecotech"
+                                className="sht2000img"
+                            />
+                            <span
+                                className="view-image-icon"
+                                onClick={() => window.open(mainImage, '_blank', 'noopener,noreferrer')}
+                                title="View full image"
+                            >
+                                🔍
+                            </span>
+                        </div>
+                    </div>
 
                     <div className="additional-images">
                         <div>
@@ -100,12 +100,15 @@ const Sht8000 = () => {
                 </div>
                 <div className="productdetails">
                     <h1>{model}</h1>
-                   
                     <p>
-                        Our SHT-8000 is a high performance tyre shredder model, designed to efficiently process and recycle used/waste tyres with ease.  The robust model is built to handle of tyre sizes and types, from PCR to TBR tyres.  Equipped with powerful cu	ng blades and a durable shredding chamber,
-                        this SHT 8000 can effec vely reduce tyres into smaller and more manageable pieces, making them ready for further recycling or disposal. SHT-8000 operates with precision and speed,
-                        ensuring quick and efficient processing of large volumes of tyres
+                        Our SHT-8000 is a high-performance tyre shredder engineered for medium-to-large recycling operations.
+                        Built to handle a wide range of tyre sizes — from PCR to TBR — it features oversized shafts and precision-cut blades for aggressive, consistent reduction.
+                        A reinforced shredding chamber and heavy-duty bearings deliver durability and stable throughput under continuous duty.
+                        The SHT-8000 combines high torque with optimized drive design to process large volumes quickly while keeping power consumption efficient.
+                        User-friendly controls, PLC automation and safety interlocks simplify operation and minimize downtime.
+                        With easy-access service points and robust construction, the SHT-8000 is ideal where fast, reliable shredding and long-term uptime are required.
                     </p>
+
                 </div>
             </div>
 

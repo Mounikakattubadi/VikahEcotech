@@ -15,7 +15,7 @@ const BLT150 = () => {
   }, []);
 
   const machinery = 'Baler';
-  const model = 'BLT150';
+  const model = 'BLT-150';
 
   const handleImageClick = (image) => {
     setMainImage(image);
@@ -84,9 +84,7 @@ const BLT150 = () => {
           <h1>{model}</h1>
 
           <p>
-            Our BLT-150 is engineered to efficiently compress and package used/waste tyres for storage, transportation, and recycling.
-            It features a robust hydraulic system and a sturdy compression chamber to produce uniform bales quickly and efficiently.
-            The user-friendly controls and safety features ensure optimal and safe operation.
+            The BLT-150 is a reliable tyre baler designed for small to mid-scale recycling operations, offering strong performance with a compact footprint. Its 150-ton compaction force and durable MS steel chamber produce uniform, dense bales that lower storage needs and reduce transport costs. A smooth hydraulic system with precision cylinders ensures consistent operation and stable bale quality. The BLT-150 includes user-friendly controls, safety guards, and emergency-stop systems, making it safe and simple for operators to use. With low maintenance requirements and accessible service points, it delivers dependable daily performance. An ideal choice for facilities seeking efficient tyre baling without oversized power consumption.
           </p>
         </div>
       </div>

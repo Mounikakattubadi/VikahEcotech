@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Tyrecutting.css';
-import './Models.css'
+import './Models.css';
+
 import shredderhdimg from "./images/Shedder _ Final PNG.png";
 import shredderhd from "./images/shredder_hd.jpg";
 import shredderhd1 from "./images/shredder_hd1.jpg";
@@ -18,14 +19,12 @@ function Tyreshredder() {
       power: '120 - 160 HP',
       system: 'Robust Hydraulic System',
       feature: 'Our SHT6000 is equipped with user-friendly controls.',
-      image: shredderhdimg,
     },
     {
       name: 'SHT8000',
       type: 'Shredder',
       power: '160 - 220 HP',
       feature: 'Our SHT8000 is equipped with user-friendly controls.',
-      image: shredderhd,
     },
     {
       name: 'SHT12000',
@@ -33,14 +32,17 @@ function Tyreshredder() {
       power: '220 - 280 HP',
       system: 'Robust Hydraulic System',
       feature: 'Our SHT12000 is equipped with user-friendly controls.',
-      image: shredderhd1,
     },
   ];
+
+  // Shared carousel images
+  const carouselImages = [shredderhdimg, shredderhd, shredderhd1];
 
   const [selected, setSelected] = useState(shredders[0]);
 
   return (
     <div>
+      {/* Header */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
           <h1 className="display-4">Primary Shredders For Tyres</h1>
@@ -48,7 +50,7 @@ function Tyreshredder() {
       </header>
 
       <div className="container text-center my-4 balerbackimg">
-        <p className="">
+        <p>
           Our advanced shredders are engineered for powerful, efficient, and user-friendly tyre shredding operations.
           These machines are built for performance with high horsepower and robust hydraulic systems.
         </p>
@@ -66,11 +68,30 @@ function Tyreshredder() {
           ))}
         </div>
 
-        {/* Selected Shredder Info */}
+        {/* MAIN DISPLAY */}
         <div className="row justify-content-center align-items-center">
+
+          {/* CAROUSEL */}
           <div className="col-md-6 mb-4">
-            <img src={selected.image} alt={selected.name} className="img-fluid rounded machine-image" />
+            <div id="shredCarousel" className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-inner">
+                {carouselImages.map((img, index) => (
+                  <div key={index} className={`carousel-item ${index === 0 ? "active" : ""}`}>
+                    <img src={img} className="d-block w-100 baler-carousel-img" alt="Shredder" />
+                  </div>
+                ))}
+              </div>
+
+              <button className="carousel-control-prev" type="button" data-bs-target="#shredCarousel" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon"></span>
+              </button>
+              <button className="carousel-control-next" type="button" data-bs-target="#shredCarousel" data-bs-slide="next">
+                <span className="carousel-control-next-icon"></span>
+              </button>
+            </div>
           </div>
+
+          {/* INFO */}
           <div className="col-md-6 mb-4 makecenter">
             <h3 className="machine-title">{selected.name}</h3>
             <ul className="list-unstyled">
@@ -79,10 +100,12 @@ function Tyreshredder() {
               {selected.system && <li><strong>System:</strong> {selected.system}</li>}
               <li><strong>Feature:</strong> {selected.feature}</li>
             </ul>
+
             <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
               Read More
             </Link>
           </div>
+
         </div>
       </div>
     </div>

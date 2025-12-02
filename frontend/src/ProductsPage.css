@@ -37,7 +37,7 @@
 /* Wrapper so we can place zoom icon on top */
 .main-image-wrapper {
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 100%;
 }
 
@@ -144,7 +144,7 @@
 }
 
 .specifications-image {
-  width: 370px;
+  width: 275px;
   height: 270px;
   object-fit: cover;
   border-radius: 8px;

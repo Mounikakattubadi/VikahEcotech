@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import './Tyrecutting.css';
 import './Models.css';
 
-// Importing images (replace with your actual cardboard baler images)
-import Cardboard1 from './images/baler.png';
-import Cardboard2 from './images/baler1.png';
-import Cardboard3 from './images/baler2.png';
 import mainSpecImage from './images/Applications/apppcb1.jpg';
 import balerImage from './images/Applications/apppcb6.webp';
 import img1 from './images/Applications/apppcb3.jpg';
@@ -17,7 +13,7 @@ function Pcb() {
     document.body.scrollTop = 0;
   }, []);
 
-  // Baler Models Data
+  // Baler Models
   const balers = [
     {
       name: 'BLC30',
@@ -25,7 +21,6 @@ function Pcb() {
       force: '30 Ton',
       weight: '120-200 kg',
       note: 'Compact design for small recycling units handling paper and cardboard waste.',
-      image: mainSpecImage,
     },
     {
       name: 'BLC40',
@@ -33,7 +28,6 @@ function Pcb() {
       force: '40 Ton',
       weight: '200-250 kg',
       note: 'Efficient mid-size model ideal for carton and packaging recycling centers.',
-      image: balerImage,
     },
     {
       name: 'BLC50',
@@ -41,29 +35,30 @@ function Pcb() {
       force: '50 Ton',
       weight: '250-350 kg',
       note: 'High-performance industrial baler for heavy-duty paper and cardboard waste.',
-      image: img1,
     },
   ];
+
+  // Same 3-carousel images for all models
+  const carouselImages =  [ mainSpecImage, balerImage, img1];
 
   const [selected, setSelected] = useState(balers[0]);
 
   return (
     <div>
-      {/* Header Section */}
+      {/* Header */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
           <h1 className="display-4">Paper & Cardboard Balers</h1>
         </div>
       </header>
 
-      {/* Description Section */}
       <div className="container text-center my-4 balerbackimg">
         <p>
           Vikah Ecotech manufactures reliable and efficient balers for paper, cardboard, and packaging materials.
           Designed for sustainability, our machines help reduce waste volume, transportation costs, and environmental impact.
         </p>
 
-        {/* Model Selector Buttons */}
+        {/* Model Tabs */}
         <div className="btn-group flex-wrap mb-4" role="group">
           {balers.map((baler, index) => (
             <button
@@ -76,27 +71,47 @@ function Pcb() {
           ))}
         </div>
 
-        {/* Selected Model Info */}
+        {/* MAIN SECTION */}
         <div className="row justify-content-center align-items-center">
+
+          {/* CAROUSEL */}
           <div className="col-md-6 mb-4">
-            <img
-              src={selected.image}
-              alt={selected.name}
-              className="img-fluid rounded machine-image"
-            />
+            <div id="pcbCarousel" className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-inner">
+                {carouselImages.map((img, i) => (
+                  <div key={i} className={`carousel-item ${i === 0 ? 'active' : ''}`}>
+                    <img src={img} className="d-block w-100 baler-carousel-img" alt="Cardboard Baler" />
+                  </div>
+                ))}
+              </div>
+
+              {/* Controls */}
+              <button className="carousel-control-prev" type="button" data-bs-target="#pcbCarousel" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon"></span>
+              </button>
+
+              <button className="carousel-control-next" type="button" data-bs-target="#pcbCarousel" data-bs-slide="next">
+                <span className="carousel-control-next-icon"></span>
+              </button>
+            </div>
           </div>
+
+          {/* INFO SECTION */}
           <div className="col-md-6 mb-4 makecenter">
             <h3 className="machine-title">{selected.name}</h3>
+
             <ul className="list-unstyled">
               <li><strong>Type:</strong> {selected.type}</li>
               <li><strong>Compaction Force:</strong> {selected.force}</li>
               <li><strong>Baler Weight:</strong> {selected.weight}</li>
               <li><strong>Note:</strong> {selected.note}</li>
             </ul>
+
             <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
               Read More
             </Link>
           </div>
+
         </div>
       </div>
     </div>

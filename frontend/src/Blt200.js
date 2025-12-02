@@ -19,7 +19,7 @@ const BLT200 = () => {
     }, []);
 
     const machinery = 'Baler';
-    const model = 'BLT200';
+    const model = 'BLT-200';
 
     const handleDownload = (fileName) => {
         const link = document.createElement('a');

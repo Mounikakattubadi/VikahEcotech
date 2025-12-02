@@ -15,7 +15,7 @@ const Shm2000 = () => {
     }, []);
 
     const machinery = "metal-shredder";
-    const model = "SHM2000";
+    const model = "SHM-2000";
 
     const handleDownload = () => {
         const link = document.createElement("a");
@@ -29,7 +29,7 @@ const Shm2000 = () => {
             {/* Top Section */}
             <div className="productpagetop">
                 <div className="imagetop">
-<div className="main-image-container">
+                    <div className="main-image-container">
                         <div className="main-image-wrapper">
                             <img
                                 src={mainImage}
@@ -56,7 +56,7 @@ const Shm2000 = () => {
                 <div className="productdetails">
                     <h1>{model}</h1>
                     <p>
-                        The SHM-2000 Metal Shredder is engineered for heavy-duty shredding of ferrous 
+                        The SHM-2000 Metal Shredder is engineered for heavy-duty shredding of ferrous
                         and non-ferrous metals. Ideal for recycling yards and industrial scrap processing…
                     </p>
                 </div>
@@ -88,7 +88,7 @@ const Shm2000 = () => {
                 <h3>Electrical System</h3>
                 <table>
                     <tbody>
-                        <tr><td>Power</td><td>50 HP</td></tr>
+                        <tr><td>Power</td><td>50 x 2 HP</td></tr>
                         <tr><td>Motors</td><td>2</td></tr>
                         <tr><td>Voltage</td><td>As per requirement</td></tr>
                         <tr><td>Drive</td><td>Electric</td></tr>
