@@ -6,6 +6,7 @@ import mainSpecImage from './images/Applications/apppcb4.jpg';
 import balerImage from './images/Applications/apppcb6.webp';
 import img1 from './images/Applications/apppcb7.avif';
 import img2 from './images/Applications/apppcb8.webp';
+
 const BLC40 = () => {
   const [mainImage, setMainImage] = useState(img1);
 
@@ -29,18 +30,34 @@ const BLC40 = () => {
     document.body.removeChild(link);
   };
 
+  // 🔍 Open current image in new tab
+  const handleViewImage = () => {
+    window.open(mainImage, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">
-            <img
-              src={mainImage}
-              alt="BLC40 Plastic Baler machine main view by Vikah Ecotech"
-              className="sht2000img"
-              style={{ width: "300px", height: "280px" }}
-            />
+            
+            {/* 🔍 Wrapper & Icon */}
+            <div className="main-image-wrapper">
+              <img
+                src={mainImage}
+                alt="BLC40 Cardboard Baler main view by Vikah Ecotech"
+                className="sht2000img"
+              />
+              <span
+                className="view-image-icon"
+                onClick={handleViewImage}
+                title="View full image"
+              >
+                🔍
+              </span>
+            </div>
           </div>
+
           <div className="additional-images">
             <div>
               <img src={img2} alt="BLC40 machine angle view 1 by Vikah Ecotech" onClick={() => handleImageClick(img2)} />
@@ -98,7 +115,6 @@ const BLC40 = () => {
             <tr><td>Machine size (L*W*H) mm</td><td>1550*1100*3250</td></tr>
             <tr><td>Machine weight (Kg)</td><td>1500</td></tr>
         </tbody>
-
         </table>
       </div>
 

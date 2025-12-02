@@ -29,7 +29,9 @@ import pcbshred2 from "./images/Applications/pcbshred2.jpg";
 import styles from "./pss.module.css";
 
 import img1 from "./images/Applications/tyreshred2.jpg";
-import img22 from "./images/Applications/sectyre.jpg";
+import img22 from "./images/Applications/secplas1.webp";
+import img23 from "./images/Applications/secpcb.webp";
+import img24 from "./images/Applications/shredm4.jpeg";
 
 function SecondaryShredder() {
   useEffect(() => {
@@ -109,77 +111,123 @@ function SecondaryShredder() {
               data-bs-target="#heroCarousel"
               data-bs-slide-to="1"
             />
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="2"
+            />
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="3"
+            />
           </div>
 
-          <div className="carousel-inner h-100">
-            {/* Slide 1 */}
-            <div
-              className={`carousel-item active ${styles.carouselItem}`}
-              style={{ backgroundImage: `url(${img1})` }}
-            >
-              <div className={styles.overlay}></div>
+<div className="carousel-inner h-100">
 
-              <div className={styles.contentBox}>
-                <p className={styles.subText}>
-                  Engineered for Secondary Stage Shredding & Material Refinement
-                </p>
-                <h1 className={styles.heading}>Secondary Shredders</h1>
-                <p className={styles.description}>
-                  The secondary shredder (tyre rasper) refines tyre chips from the primary shredder into smaller,
-                  uniform pieces for further granulation and industrial use.
-                </p>
+  {/* Slide 1 – Rasper */}
+  <div
+    className={`carousel-item active ${styles.carouselItem}`}
+    style={{ backgroundImage: `url(${img1})` }}
+  >
+    <div className={styles.overlay}></div>
 
-                <div className={styles.btnRow}>
-                  {/* Explore Our Services → scroll to Applications */}
-                  <button
-                    className={`btn ${styles.greenBtn}`}
-                    onClick={handleScrollToApplications}
-                  >
-                    Explore Our Services ↗
-                  </button>
+    <div className={styles.contentBox}>
+      <p className={styles.subText}>Engineered for Secondary Stage Shredding & Material Refinement</p>
+      <h1 className={styles.heading}>Rasper</h1>
 
-                  {/* More About Us → /ourproducts */}
-                  <Link to="/ourproducts" className={`btn ${styles.whiteBtn}`}>
-                    More Our Products
-                  </Link>
-                </div>
-              </div>
-            </div>
+      <p className={styles.description}>
+        Refines tyre chips into smaller, cleaner, uniform pieces ready for granulation and further processing.
+      </p>
 
-            {/* Slide 2 */}
-            <div
-              className={`carousel-item ${styles.carouselItem}`}
-              style={{ backgroundImage: `url(${img22})` }}
-            >
-              <div className={styles.overlay}></div>
+      <div className={styles.btnRow}>
+        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+          Explore Our Services ↗
+        </button>
+        <Link to="/ourproducts" className={`btn ${styles.whiteBtn}`}>
+          More Our Products
+        </Link>
+      </div>
+    </div>
+  </div>
 
-              <div className={styles.contentBox}>
-                <p className={styles.subText}>
-                  Refining Shreds into High-Value Recyclable Material
-                </p>
-                <h1 className={styles.heading}>Secondary Shredders</h1>
-                <p className={styles.description}>
-                  Designed for precision processing, secondary shredders convert coarse tyre chips into clean,
-                  uniform material ready for granulation and resource recovery.
-                </p>
+  {/* Slide 2 – Secondary Plastic Shredders */}
+  <div
+    className={`carousel-item ${styles.carouselItem}`}
+    style={{ backgroundImage: `url(${img22})` }}
+  >
+    <div className={styles.overlay}></div>
 
-                <div className={styles.btnRow}>
-                  {/* See Machines → scroll to Applications */}
-                  <button
-                    className={`btn ${styles.greenBtn}`}
-                    onClick={handleScrollToApplications}
-                  >
-                    See Machines ↗
-                  </button>
+    <div className={styles.contentBox}>
+      <p className={styles.subText}>Refining Shreds into High-Value Recyclable Material</p>
+      <h1 className={styles.heading}>Secondary Plastic Shredders</h1>
 
-                  {/* Contact Sales → /Contact */}
-                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
-                    Contact Us
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+      <p className={styles.description}>
+        Processes coarse plastic or tyre chips into consistent, high-quality output ideal for granulation.
+      </p>
+
+      <div className={styles.btnRow}>
+        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+          See Machines ↗
+        </button>
+        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+          Contact Us
+        </Link>
+      </div>
+    </div>
+  </div>
+
+  {/* Slide 3 – Secondary Paper & Cardboard Shredders */}
+  <div
+    className={`carousel-item ${styles.carouselItem}`}
+    style={{ backgroundImage: `url(${img23})` }}
+  >
+    <div className={styles.overlay}></div>
+
+    <div className={styles.contentBox}>
+      <h1 className={styles.heading}>Secondary Paper & Cardboard Shredders</h1>
+
+      <p className={styles.description}>
+        Converts pre-shredded paper and cartons into finer, uniform particles ideal for recycling processes.
+      </p>
+
+      <div className={styles.btnRow}>
+        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+          See Machines ↗
+        </button>
+        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+          Contact Us
+        </Link>
+      </div>
+    </div>
+  </div>
+
+  {/* Slide 4 – Secondary Metal Shredders */}
+  <div
+    className={`carousel-item ${styles.carouselItem}`}
+    style={{ backgroundImage: `url(${img24})` }}
+  >
+    <div className={styles.overlay}></div>
+
+    <div className={styles.contentBox}>
+      <h1 className={styles.heading}>Secondary Metal Shredders</h1>
+
+      <p className={styles.description}>
+        Breaks down pre-shredded metal scrap into smaller, refined pieces for smelting and recycling.
+      </p>
+
+      <div className={styles.btnRow}>
+        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+          See Machines ↗
+        </button>
+        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+          Contact Us
+        </Link>
+      </div>
+    </div>
+  </div>
+
+</div>
 
           {/* Arrow controls */}
           <button
@@ -210,38 +258,38 @@ function SecondaryShredder() {
         <Container>
           <Row>
             {/* Key Features – Vertical Modern Timeline */}
-<Col lg={6} className="mb-4">
-  <h2 className="section-headingbaler mb-3">Key Features</h2>
-  <p className="features-subtitle mb-4">
-    Precision-engineered secondary shredders designed to refine tyre chips into
-    clean, uniform material for high-value recycling applications.
-  </p>
+            <Col lg={6} className="mb-4">
+              <h2 className="section-headingbaler mb-3">Key Features</h2>
+              <p className="features-subtitle mb-4">
+                Precision-engineered secondary shredders designed to refine tyre chips into
+                clean, uniform material for high-value recycling applications.
+              </p>
 
-  <div className="kf-vertical">
-    {features.map((feature, idx) => (
-      <div className="kf-item" key={idx}>
-        {/* Left line + icon */}
-        <div className="kf-icon-col">
-          <span className="kf-line" />
-          <div className="kf-node">
-            <span className="kf-node-inner">
-              <i className="bi bi-sliders" />
-            </span>
-          </div>
-        </div>
+              <div className="kf-vertical">
+                {features.map((feature, idx) => (
+                  <div className="kf-item" key={idx}>
+                    {/* Left line + icon */}
+                    <div className="kf-icon-col">
+                      <span className="kf-line" />
+                      <div className="kf-node">
+                        <span className="kf-node-inner">
+                          <i className="bi bi-sliders" />
+                        </span>
+                      </div>
+                    </div>
 
-        {/* Right content */}
-        <div className="kf-content">
-          <div className="kf-label">
-            FEATURE {String(idx + 1).padStart(2, "0")}
-          </div>
-          <h5 className="kf-title">{feature.title}</h5>
-          <p className="kf-desc">{feature.description}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</Col>
+                    {/* Right content */}
+                    <div className="kf-content">
+                      <div className="kf-label">
+                        FEATURE {String(idx + 1).padStart(2, "0")}
+                      </div>
+                      <h5 className="kf-title">{feature.title}</h5>
+                      <p className="kf-desc">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Col>
 
 
             {/* Industries Served – semi-circle timeline */}
@@ -340,7 +388,7 @@ function SecondaryShredder() {
         </div>
       </div>
 
-      {/* Contact Section */}
+      {/* Contact Section 
       <Row
         className="text-center get-in-touch-section text-white py-5 rounded"
         data-aos="fade-up"
@@ -359,7 +407,7 @@ function SecondaryShredder() {
             within 48 hours.
           </p>
         </Col>
-      </Row>
+      </Row>*/}
     </div>
   );
 }

@@ -32,23 +32,38 @@ const Blm150 = () => {
     document.body.removeChild(link);
   };
 
+  // 🔍 View Full Image in new tab
+  const handleViewImage = () => {
+    window.open(mainImage, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">
-            <img
-              src={mainImage}
-              alt="BLM150 Metal Baler"
-              className="sht2000img"
-              style={{ width: "300px", height: "280px" }}
-            />
+
+            {/* 🔍 Add wrapper with icon */}
+            <div className="main-image-wrapper">
+              <img
+                src={mainImage}
+                alt="BLM150 Metal Baler"
+                className="sht2000img"
+              />
+              <span
+                className="view-image-icon"
+                onClick={handleViewImage}
+                title="View full image"
+              >
+                🔍
+              </span>
+            </div>
           </div>
 
           <div className="additional-images">
-            <div><img src={metalImg2} alt="angle" onClick={() => handleImageClick(metalImg2)} /></div>
-            <div><img src={metalImg3} alt="angle" onClick={() => handleImageClick(metalImg3)} /></div>
-            <div><img src={metalImg1} alt="angle" onClick={() => handleImageClick(metalImg1)} /></div>
+            <div><img src={metalImg2} alt="BLM150 angle 1" onClick={() => handleImageClick(metalImg2)} /></div>
+            <div><img src={metalImg3} alt="BLM150 angle 2" onClick={() => handleImageClick(metalImg3)} /></div>
+            <div><img src={metalImg1} alt="BLM150 angle 3" onClick={() => handleImageClick(metalImg1)} /></div>
           </div>
         </div>
 

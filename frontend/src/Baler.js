@@ -32,7 +32,9 @@ import MetalBaler2 from "./images/Applications/metalbaler2.jpg";
 import styles from "./pss.module.css";
 
 import img1 from "./images/Applications/tyreshred1.jpg";
-import img2 from "./images/Applications/pss1.png";
+import img2 from "./images/Applications/plas13.webp";
+import img3 from "./images/Applications/metalbaler2.jpg";
+import img4 from "./images/Applications/pcb1.webp";
 
 function Baler() {
   useEffect(() => {
@@ -142,86 +144,123 @@ function Baler() {
               data-bs-target="#heroCarousel"
               data-bs-slide-to="1"
             />
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="2"
+            />
+            <button
+              type="button"
+              data-bs-target="#heroCarousel"
+              data-bs-slide-to="3"
+            />
           </div>
+<div className="carousel-inner h-100">
+  {/* Slide 1 */}
+  <div
+    className={`carousel-item active ${styles.carouselItem}`}
+    style={{ backgroundImage: `url(${img1})` }}
+  >
+    <div className={styles.overlay}></div>
 
-          <div className="carousel-inner h-100">
-            {/* Slide 1 */}
-            <div
-              className={`carousel-item active ${styles.carouselItem}`}
-              style={{ backgroundImage: `url(${img1})` }}
-            >
-              <div className={styles.overlay}></div>
+    <div className={styles.contentBox}>
+      <p className={styles.subText}>
+        Turning Waste into Value through Smart Baling Technology
+      </p>
+      <h1 className={styles.heading}>Tyre Scrap Balers</h1>
 
-              <div className={styles.contentBox}>
-                <p className={styles.subText}>
-                  Turning Waste into Value through Smart Baling Technology
-                </p>
-                <h1 className={styles.heading}>Balers</h1>
-                <p className={styles.description}>
-                  At Vikah Ecotech, we specialize in designing and
-                  manufacturing high-quality recycling balers machinery that is
-                  tailored to meet the diverse needs of industries and
-                  facilities involved in waste management and recycling
-                  processes. Our balers are engineered to streamline waste
-                  handling, increase operational efficiency, and promote
-                  sustainable practices.
-                </p>
+      <p className={styles.description}>
+        Heavy-duty balers designed to compress used tyres into compact bales, saving space and improving recycling efficiency.
+      </p>
 
-                <div className={styles.btnRow}>
-                  {/* Explore Our Services → scroll to Applications section */}
-                  <button
-                    className={`btn ${styles.greenBtn}`}
-                    onClick={handleScrollToApplications}
-                  >
-                    Explore Our Services ↗
-                  </button>
+      <div className={styles.btnRow}>
+        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+          Explore Our Services ↗
+        </button>
+        <Link to="/ourproducts" className={`btn ${styles.whiteBtn}`}>
+          More Our Products
+        </Link>
+      </div>
+    </div>
+  </div>
 
-                  {/* More About Us → /ourproducts */}
-                  <Link
-                    to="/ourproducts"
-                    className={`btn ${styles.whiteBtn}`}
-                  >
-                    More Our Products
-                  </Link>
-                </div>
-              </div>
-            </div>
+  {/* Slide 2 */}
+  <div
+    className={`carousel-item ${styles.carouselItem}`}
+    style={{ backgroundImage: `url(${img2})` }}
+  >
+    <div className={styles.overlay}></div>
 
-            {/* Slide 2 */}
-            <div
-              className={`carousel-item ${styles.carouselItem}`}
-              style={{ backgroundImage: `url(${img2})` }}
-            >
-              <div className={styles.overlay}></div>
+    <div className={styles.contentBox}>
+      <p className={styles.subText}>Efficient Compaction. Cleaner Operations.</p>
+      <h1 className={styles.heading}>Plastic Balers</h1>
 
-              <div className={styles.contentBox}>
-                <p className={styles.subText}>
-                  Efficient Compaction. Cleaner Operations.
-                </p>
-                <h1 className={styles.heading}>Balers</h1>
-                <p className={styles.description}>
-                  Our balers compact recyclable materials like cardboard,
-                  plastic, metal, and paper into dense, stackable bales—reducing
-                  waste volume, saving space, and improving handling efficiency.
-                </p>
+      <p className={styles.description}>
+        Compact all types of plastic waste into dense, stackable bales—reducing volume and improving handling.
+      </p>
 
-                <div className={styles.btnRow}>
-                  {/* See Machines → scroll to Applications section */}
-                  <button
-                    className={`btn ${styles.greenBtn}`}
-                    onClick={handleScrollToApplications}
-                  >
-                    See Machines ↗
-                  </button>
+      <div className={styles.btnRow}>
+        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+          See Machines ↗
+        </button>
+        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+          Contact Us
+        </Link>
+      </div>
+    </div>
+  </div>
 
-                  {/* Contact Sales → /Contact */}
-                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
-                    Contact Us
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
+  {/* Slide 3 */}
+  <div
+    className={`carousel-item ${styles.carouselItem}`}
+    style={{ backgroundImage: `url(${img3})` }}
+  >
+    <div className={styles.overlay}></div>
+
+    <div className={styles.contentBox}>
+      <h1 className={styles.heading}>Metal Balers</h1>
+
+      <p className={styles.description}>
+        High-power balers that compress ferrous and non-ferrous metal scrap into solid, transport-ready bales.
+      </p>
+
+      <div className={styles.btnRow}>
+        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+          See Machines ↗
+        </button>
+        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+          Contact Us
+        </Link>
+      </div>
+    </div>
+  </div>
+
+  {/* Slide 4 */}
+  <div
+    className={`carousel-item ${styles.carouselItem}`}
+    style={{ backgroundImage: `url(${img4})` }}
+  >
+    <div className={styles.overlay}></div>
+
+    <div className={styles.contentBox}>
+      <h1 className={styles.heading}>Paper & Cardboard Balers</h1>
+
+      <p className={styles.description}>
+        Efficiently compress paper waste and cartons into clean, uniform bales for easy storage and recycling.
+      </p>
+
+      <div className={styles.btnRow}>
+        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+          See Machines ↗
+        </button>
+        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
+          Contact Us
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>
+
 
           {/* Arrow controls */}
           <button
@@ -249,38 +288,38 @@ function Baler() {
         <Container>
           <Row>
             {/* Key Features – Vertical Modern Timeline */}
-<Col lg={6} className="mb-4">
-  <h2 className="section-headingbaler mb-3">Key Features</h2>
-  <p className="features-subtitle mb-4">
-    Core features that make our balers robust, efficient, and ideal for
-    high-volume waste handling and recycling operations.
-  </p>
+            <Col lg={6} className="mb-4">
+              <h2 className="section-headingbaler mb-3">Key Features</h2>
+              <p className="features-subtitle mb-4">
+                Core features that make our balers robust, efficient, and ideal for
+                high-volume waste handling and recycling operations.
+              </p>
 
-  <div className="kf-vertical">
-    {features.map((feature, idx) => (
-      <div className="kf-item" key={idx}>
-        {/* Left line + icon */}
-        <div className="kf-icon-col">
-          <span className="kf-line" />
-          <div className="kf-node">
-            <span className="kf-node-inner">
-              <i className="bi bi-gear-fill" />
-            </span>
-          </div>
-        </div>
+              <div className="kf-vertical">
+                {features.map((feature, idx) => (
+                  <div className="kf-item" key={idx}>
+                    {/* Left line + icon */}
+                    <div className="kf-icon-col">
+                      <span className="kf-line" />
+                      <div className="kf-node">
+                        <span className="kf-node-inner">
+                          <i className="bi bi-gear-fill" />
+                        </span>
+                      </div>
+                    </div>
 
-        {/* Right content */}
-        <div className="kf-content">
-          <div className="kf-label">
-            FEATURE {String(idx + 1).padStart(2, "0")}
-          </div>
-          <h5 className="kf-title">{feature.title}</h5>
-          <p className="kf-desc">{feature.description}</p>
-        </div>
-      </div>
-    ))}
-  </div>
-</Col>
+                    {/* Right content */}
+                    <div className="kf-content">
+                      <div className="kf-label">
+                        FEATURE {String(idx + 1).padStart(2, "0")}
+                      </div>
+                      <h5 className="kf-title">{feature.title}</h5>
+                      <p className="kf-desc">{feature.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Col>
 
 
             {/* Industries Served – Timeline */}
@@ -296,9 +335,8 @@ function Baler() {
                     return (
                       <div
                         key={idx}
-                        className={`kf2-row ${
-                          isLeftText ? "left" : "right"
-                        }`}
+                        className={`kf2-row ${isLeftText ? "left" : "right"
+                          }`}
                       >
                         {/* LEFT column */}
                         {isLeftText ? (
@@ -376,7 +414,7 @@ function Baler() {
         </div>
       </div>
 
-      {/* Contact Section */}
+      {/* Contact Section 
       <Row className="text-center get-in-touch-section text-white py-5 rounded">
         <Col>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
@@ -390,7 +428,7 @@ function Baler() {
             <a href="mailto:info@vikahecotech.com">info@vikahecotech.com</a>.
           </p>
         </Col>
-      </Row>
+      </Row>*/}
     </div>
   );
 }

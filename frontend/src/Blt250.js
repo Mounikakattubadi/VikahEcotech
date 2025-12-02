@@ -36,12 +36,31 @@ const BLT250 = () => {
         document.body.removeChild(link);
     };
 
+    // 🔍 New: view current main image in new tab
+    const handleViewImage = () => {
+        window.open(mainImage, '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <>
             <div className='productpagetop'>
                 <div className='imagetop'>
                     <div className="main-image-container">
-                        <img src={mainImage} alt="sht2000" className="sht2000img" style={{ width: "300px", height: "280px" }} />
+                        {/* Wrapped existing img in a wrapper + icon */}
+                        <div className="main-image-wrapper">
+                            <img
+                                src={mainImage}
+                                alt="sht2000"
+                                className="sht2000img"
+                            />
+                            <span
+                                className="view-image-icon"
+                                onClick={handleViewImage}
+                                title="View full image"
+                            >
+                                🔍
+                            </span>
+                        </div>
                     </div>
                     <div className="additional-images">
                         <div>

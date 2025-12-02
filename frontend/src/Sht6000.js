@@ -37,8 +37,22 @@ const Sht6000 = () => {
             <div className='productpagetop'>
                 <div className='imagetop'>
                     <div className="main-image-container">
-                        <img src={mainImage} alt="sht2000" className="sht2000img" />
+                        <div className="main-image-wrapper">
+                            <img
+                                src={mainImage}
+                                alt="SHT6000 Tyre Shredder main view by Vikah Ecotech"
+                                className="sht2000img"
+                            />
+                            <span
+                                className="view-image-icon"
+                                onClick={() => window.open(mainImage, '_blank', 'noopener,noreferrer')}
+                                title="View full image"
+                            >
+                                🔍
+                            </span>
+                        </div>
                     </div>
+
                     <div className="additional-images">
                         <div>
                             <img
@@ -71,7 +85,7 @@ const Sht6000 = () => {
                 </div>
                 <div className="productdetails">
                     <h1>{model}</h1>
-                    
+
                     <p>
                         Our SHT-6000 is a high performance tyre shredder model, designed to efficiently process and recycle used/waste tyres with ease.
                         The robust model is built to handle various tyre sizes and types, from PCR to TBR tyres.

@@ -21,22 +21,53 @@
   min-width: 300px;
 }
 
-/* ✅ Fixed-size image container for consistent layout */
+/* 🔲 Fixed-size image container – SAME for all main images */
 .main-image-container {
   width: 100%;
-  max-width: 420px;
-  height: 320px;
+  max-width: 420px;   /* desktop width */
+  height: 320px;      /* desktop height */
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
 }
 
+/* Wrapper so we can place zoom icon on top */
+.main-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 🖼 MAIN IMAGE – always same width & height as container */
 .sht2000img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Keeps all images same proportion */
+  object-fit: cover;     /* fills box, crops a bit if needed */
+  display: block;
   border-radius: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔍 Zoom icon */
+.view-image-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
 }
 
 /* Thumbnails */
@@ -56,6 +87,11 @@
   border-radius: 6px;
   object-fit: cover;
   transition: transform 0.3s ease, border 0.3s ease;
+}
+
+/* Optional active thumb class (if you add it via JS) */
+.additional-images img.thumb-active {
+  border: 2px solid #39fc84;
 }
 
 .additional-images img:hover {

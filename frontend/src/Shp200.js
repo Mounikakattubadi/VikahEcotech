@@ -35,8 +35,21 @@ const Shp200 = () => {
         <>
             <div className='productpagetop'>
                 <div className='imagetop'>
-                    <div className="main-image-container">
-                        <img src={mainImage} alt="shp200" className="sht2000img" />
+<div className="main-image-container">
+                        <div className="main-image-wrapper">
+                            <img
+                                src={mainImage}
+                                alt="SHT8000 Tyre Shredder main view by Vikah Ecotech"
+                                className="sht2000img"
+                            />
+                            <span
+                                className="view-image-icon"
+                                onClick={() => window.open(mainImage, '_blank', 'noopener,noreferrer')}
+                                title="View full image"
+                            >
+                                🔍
+                            </span>
+                        </div>
                     </div>
 
                     <div className="additional-images">

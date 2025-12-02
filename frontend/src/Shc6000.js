@@ -38,8 +38,22 @@ const Shc6000 = () => {
             <div className='productpagetop'>
                 <div className='imagetop'>
                     <div className="main-image-container">
-                        <img src={mainImage} alt="sht2000" className="sht2000img" />
+                        <div className="main-image-wrapper">
+                            <img
+                                src={mainImage}
+                                alt="SHT8000 Tyre Shredder main view by Vikah Ecotech"
+                                className="sht2000img"
+                            />
+                            <span
+                                className="view-image-icon"
+                                onClick={() => window.open(mainImage, '_blank', 'noopener,noreferrer')}
+                                title="View full image"
+                            >
+                                🔍
+                            </span>
+                        </div>
                     </div>
+
                     <div className="additional-images">
                         <div>
                             <img
@@ -73,9 +87,9 @@ const Shc6000 = () => {
                 <div className="productdetails">
                     <h1>{model}</h1>
                     <p>
-                        The SHC-6000 Plastic Shredder is a compact yet powerful machine designed for efficient shredding 
-                        of plastic waste such as HDPE, LDPE, PP, PET, and other polymers. It ensures uniform shredding with 
-                        high torque and low power consumption. Ideal for small to mid-scale recycling plants, this machine 
+                        The SHC-6000 Plastic Shredder is a compact yet powerful machine designed for efficient shredding
+                        of plastic waste such as HDPE, LDPE, PP, PET, and other polymers. It ensures uniform shredding with
+                        high torque and low power consumption. Ideal for small to mid-scale recycling plants, this machine
                         helps minimize waste volume while preparing materials for further granulation or processing.
                     </p>
                 </div>

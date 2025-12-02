@@ -9,7 +9,6 @@ import metalImg1 from './images/Applications/appm7.jpg';
 import metalImg2 from './images/Applications/appm6.jpg';
 import metalImg3 from './images/Applications/appm4.jpg';
 
-
 const Blm250 = () => {
   const [mainImage, setMainImage] = useState(metalImg1);
 
@@ -26,7 +25,14 @@ const Blm250 = () => {
     const link = document.createElement('a');
     link.href = `${process.env.PUBLIC_URL}/blm250.pdf`;
     link.download = 'blm250.pdf';
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
+  };
+
+  // 🔍 Open image in new tab
+  const handleViewImage = () => {
+    window.open(mainImage, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -34,13 +40,28 @@ const Blm250 = () => {
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">
-            <img src={mainImage} className="sht2000img" alt="BLM250" style={{ width: "300px", height: "280px" }} />
+            
+            {/* 🔍 Wrapper with zoom icon */}
+            <div className="main-image-wrapper">
+              <img
+                src={mainImage}
+                className="sht2000img"
+                alt="BLM250 Metal Baler"
+              />
+              <span
+                className="view-image-icon"
+                onClick={handleViewImage}
+                title="View full image"
+              >
+                🔍
+              </span>
+            </div>
           </div>
 
           <div className="additional-images">
-            <div><img src={metalImg2} onClick={() => handleImageClick(metalImg2)} /></div>
-            <div><img src={metalImg3} onClick={() => handleImageClick(metalImg3)} /></div>
-            <div><img src={metalImg1} onClick={() => handleImageClick(metalImg1)} /></div>
+            <div><img src={metalImg2} alt="BLM250 view 1" onClick={() => handleImageClick(metalImg2)} /></div>
+            <div><img src={metalImg3} alt="BLM250 view 2" onClick={() => handleImageClick(metalImg3)} /></div>
+            <div><img src={metalImg1} alt="BLM250 view 3" onClick={() => handleImageClick(metalImg1)} /></div>
           </div>
         </div>
 
@@ -57,7 +78,7 @@ const Blm250 = () => {
       <div className='features-container'>
         <h2>FEATURES AND SPECIFICATIONS</h2>
         <div className='features-content'>
-          <img src={mainSpecImage} className="specifications-image" />
+          <img src={mainSpecImage} className="specifications-image" alt="BLM250 specifications" />
           <div className='sht200specification'>
             <p>
               ➤ 250-ton powerful compression<br />

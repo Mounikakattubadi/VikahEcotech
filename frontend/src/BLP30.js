@@ -30,18 +30,34 @@ const BLP30 = () => {
     document.body.removeChild(link);
   };
 
+  // 🔍 Open current image in new tab
+  const handleViewImage = () => {
+    window.open(mainImage, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">
-            <img
-              src={mainImage}
-              alt="BLP30 Plastic Baler machine main view by Vikah Ecotech"
-              className="sht2000img"
-              style={{ width: "300px", height: "280px" }}
-            />
+
+            {/* 🔍 Wrapper added here */}
+            <div className="main-image-wrapper">
+              <img
+                src={mainImage}
+                alt="BLP30 Plastic Baler machine main view by Vikah Ecotech"
+                className="sht2000img"
+              />
+              <span
+                className="view-image-icon"
+                onClick={handleViewImage}
+                title="View full image"
+              >
+                🔍
+              </span>
+            </div>
           </div>
+
           <div className="additional-images">
             <div>
               <img src={img2} alt="BLP30 machine angle view 1 by Vikah Ecotech" onClick={() => handleImageClick(img2)} />
@@ -88,19 +104,18 @@ const BLP30 = () => {
       <div className="featurestable">
         <h3>MODEL NO: BLP 30</h3>
         <table>
-              <tbody>
-                  <tr><td>Model</td><td>BLP 30</td></tr>
-                  <tr><td>Compression Force (Ton)</td><td>30</td></tr>
-                  <tr><td>Bale size (L*W*H) mm</td><td>1100*700*(650-900)</td></tr>
-                  <tr><td>Feed opening size (L*H) mm</td><td>1100*500</td></tr>
-                  <tr><td>Capacity (Bales/Hr)</td><td>3-6</td></tr>
-                  <tr><td>Bale weight (Kg)</td><td>150-250</td></tr>
-                  <tr><td>Voltage (customizable) (V/Hz)</td><td>380V/50Hz</td></tr>
-                  <tr><td>Power (Kw/Hp)</td><td>5.5Kw / 7.5Hp</td></tr>
-                  <tr><td>Machine size (L*W*H) mm</td><td>1500*950*3150</td></tr>
-                  <tr><td>Machine weight (Kg)</td><td>1200</td></tr>
-              </tbody>
-
+          <tbody>
+              <tr><td>Model</td><td>BLP 30</td></tr>
+              <tr><td>Compression Force (Ton)</td><td>30</td></tr>
+              <tr><td>Bale size (L*W*H) mm</td><td>1100*700*(650-900)</td></tr>
+              <tr><td>Feed opening size (L*H) mm</td><td>1100*500</td></tr>
+              <tr><td>Capacity (Bales/Hr)</td><td>3-6</td></tr>
+              <tr><td>Bale weight (Kg)</td><td>150-250</td></tr>
+              <tr><td>Voltage (customizable) (V/Hz)</td><td>380V/50Hz</td></tr>
+              <tr><td>Power (Kw/Hp)</td><td>5.5Kw / 7.5Hp</td></tr>
+              <tr><td>Machine size (L*W*H) mm</td><td>1500*950*3150</td></tr>
+              <tr><td>Machine weight (Kg)</td><td>1200</td></tr>
+          </tbody>
         </table>
       </div>
 

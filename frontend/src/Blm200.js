@@ -9,7 +9,6 @@ import metalImg1 from './images/Applications/appm3.jpg';
 import metalImg2 from './images/Applications/appm4.jpg';
 import metalImg3 from './images/Applications/appm5.avif';
 
-
 const Blm200 = () => {
   const [mainImage, setMainImage] = useState(metalImg1);
 
@@ -31,18 +30,38 @@ const Blm200 = () => {
     document.body.removeChild(link);
   };
 
+  // 🔍 Function to open full image
+  const handleViewImage = () => {
+    window.open(mainImage, '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <>
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">
-            <img src={mainImage} alt="BLM200" className="sht2000img" style={{ width: "300px", height: "280px" }} />
+
+            {/* 🔍 Wrapper with expansion icon */}
+            <div className="main-image-wrapper">
+              <img
+                src={mainImage}
+                alt="BLM200 Metal Baler"
+                className="sht2000img"
+              />
+              <span
+                className="view-image-icon"
+                onClick={handleViewImage}
+                title="View full image"
+              >
+                🔍
+              </span>
+            </div>
           </div>
 
           <div className="additional-images">
-            <div><img src={metalImg2} onClick={() => handleImageClick(metalImg2)} /></div>
-            <div><img src={metalImg3} onClick={() => handleImageClick(metalImg3)} /></div>
-            <div><img src={metalImg1} onClick={() => handleImageClick(metalImg1)} /></div>
+            <div><img src={metalImg2} alt="BLM200 angle view 1" onClick={() => handleImageClick(metalImg2)} /></div>
+            <div><img src={metalImg3} alt="BLM200 angle view 2" onClick={() => handleImageClick(metalImg3)} /></div>
+            <div><img src={metalImg1} alt="BLM200 angle view 3" onClick={() => handleImageClick(metalImg1)} /></div>
           </div>
         </div>
 
