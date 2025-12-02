@@ -1,0 +1,91 @@
+/* Wrapper */
+.aboutWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background Image */
+.image {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Light Greenish Overlay */
+.aboutWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(1, 108, 58, 0.128); 
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+/* Text Overlay Section */
+.textOverlay {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  padding: 28px 40px;
+  background: rgba(0, 0, 0, 0.15); /* darker bg for better visibility */
+  border-radius: 12px;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading styling */
+.textOverlay h1 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif; 
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: #fefefe;
+}
+
+/* Subtitle text */
+.textOverlay p {
+  font-family: Cambria, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #e6e6e6;
+}
+
+/* About Page Paragraph Block */
+.aboutpara {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6%;
+  background-color: #e9f4fb;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-top: 50px;
+}
+
+.aboutpara p {
+  font-family: Cambria, Georgia, serif;
+  font-size: 1.25rem;
+  text-align: justify;
+  line-height: 1.9;
+  color: #333;
+}
+
+/* Section Title */
+.sectionTitle {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}

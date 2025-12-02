@@ -43,7 +43,7 @@ function Tyreshredder() {
     <div>
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
-          <h1 className="display-4">Primary Shredders</h1>
+          <h1 className="display-4">Primary Shredders For Tyres</h1>
         </div>
       </header>
 

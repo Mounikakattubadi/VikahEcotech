@@ -4,9 +4,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
+import Aboutcss from './About.module.css';
 // Images
-import t9 from "./images/eco sustain 2025/images/ecosust_15.jpg";
+import t9 from "./images/eco sustain 2025/images/abtbggi.png";
+import grouppic from "./images/eco sustain 2025/images/ecosust_15.jpg";
 import Baler from "./images/baler_bg.png";
 import shredderhdimg from "./images/Shedder _ Final PNG.png";
 import shred2 from "./images/R1.png";
@@ -20,26 +21,20 @@ const AboutUs = () => {
   return (
     <div className="about-us-page text-dark">
       {/* Top Gradient Section */}
-      <div className="about-top-section text-white text-center py-5">
-        <h1 className="display-5 fw-bold">About Us</h1>
-        <p className="lead">
-          Read more about us. Our vision, mission, success and many other things
-          you might love.
-        </p>
-        <p>
-          <a href="/" className="text-white-50 text-decoration-none">
-            Home
-          </a>{" "}
-          &gt; <span className="text-white">About</span>
-        </p>
-      </div>
+           <div className={Aboutcss.aboutWrapper}>
+             <img src={t9} alt="Scenic view of nature" className={Aboutcss.image} />
+              <div className={Aboutcss.textOverlay}>
+               <h1>About Us</h1>
+               <p>Read more about us. Our vision, mission, success and many other things you might love.</p>
+             </div>
+           </div>
 
       <Container className="section-padding">
         {/* Who We Are – keep first image as it is */}
         <Row className="align-items-center mb-5">
           <Col md={6} className="text-center mb-4 mb-md-0">
             <img
-              src={t9}
+              src={grouppic}
               alt="Vikah Ecotech innovative recycling machinery"
               className="about-img"
             />

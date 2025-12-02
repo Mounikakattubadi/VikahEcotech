@@ -387,3 +387,53 @@
     width: 80%;
   }
 }
+
+/* Desktop: top-right buttons */
+.top-model-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0rem 4rem 0 0; /* adjust right spacing */
+  box-sizing: border-box;
+  margin-bottom: 0rem; /* remove negative margin */
+}
+
+/* Buttons */
+.model-btn {
+  padding: 0.6rem 1.4rem;
+  background-color: #ff8c00;
+  color: #fff;
+  border: none;
+  border-radius: 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.model-btn:hover {
+  background-color: #ff7000;
+  transform: scale(1.05);
+}
+
+/* Mobile view — buttons BELOW images */
+@media (max-width: 768px) {
+
+  .productpagetop {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .top-model-buttons {
+    order: 3;                     /* moves buttons BELOW images */
+    width: 100%;
+    justify-content: flex-end;    /* keep them right aligned */
+    padding: 0 1rem;
+    margin: 0;
+  }
+}
+
+
+

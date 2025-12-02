@@ -37,7 +37,23 @@ const Sht12000 = () => {
 
     return (
         <>
-            <div className='productpagetop'>
+        <header className="tyrecutting-header text-white text-center py-5">
+                        <div className="container">
+                            <h1 className="display-4">SHT-12000</h1>
+                        </div>
+                    </header>
+              <div className="productpagetop">
+                
+                 <div className="top-model-buttons">
+                  <Link to="/sht8000">
+                    <button className="model-btn">SHT8000</button>
+                  </Link>
+        
+                  <Link to="/sht6000">
+                    <button className="model-btn">SHT6000</button>
+                  </Link>
+                </div>
+            
                 <div className='imagetop'>
                     <div className="main-image-container">
   <div className="main-image-wrapper">
@@ -142,7 +158,7 @@ const Sht12000 = () => {
                         </tr>
                         <tr>
                             <td>Motor Make</td>
-                            <td>Siemens / Abb / Crompton </td>
+                            <td>Siemens / ABB / Crompton </td>
                         </tr>
                     </tbody>
                 </table>

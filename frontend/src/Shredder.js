@@ -51,7 +51,7 @@ function Shredder() {
     {
       title: "Versatile Shredding Options",
       description:
-        "Available in single-shaft and dual-shaft models to handle a wide range of materials such as plastic, paper, cardboard, wood, metals, tyres, and more.",
+        "Available in  Dual-shaft models to handle a wide range of materials such as plastic, paper, cardboard, wood, metals, tyres, and more.",
     },
     {
       title: "High Efficiency",
@@ -446,7 +446,7 @@ function Shredder() {
       <section className="py-5 benefits-wrapper">
         <div className="container">
           <h2 className="section-headingbaler text-center mb-4">
-            Benefits of Using Our Shredders
+            Benefits of Using Our Primary Shredders
           </h2>
           <p className="benefits-subtitle text-center mb-5">
             Designed to optimize waste handling, reduce costs, and support sustainable operations
