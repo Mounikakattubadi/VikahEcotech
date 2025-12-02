@@ -40,7 +40,7 @@ const Rst4000 = () => {
             {/* Rest of your  existing JSX */}
             <div className='productpagetop'>
                 <div className='imagetop'>
-<div className="main-image-container">
+                    <div className="main-image-container">
                         <div className="main-image-wrapper">
                             <img
                                 src={mainImage}
@@ -85,13 +85,14 @@ const Rst4000 = () => {
                 </div>
                 <div className="productdetails">
                     <p>
-                        The Rasper Model RST-4000 is an advanced tyre processing machine designed for efficient recycling of shredded tyres.
-                        Engineered to handle various tyre sizes and types, including PCR and TBR, this high-performance model features
-                        precision-cutting blades and a durable granulating chamber. It transforms shredded materials into uniform granules
-                        suitable for diverse recycling applications while operating quietly and efficiently. With its compact design and
-                        user-friendly interface, the RST-4000 seamlessly integrates into existing recycling lines,
-                        delivering reliable and consistent results that prepare shredded tyres for further processing or repurposing.
+                        The RST-4000 is a high-efficiency secondary shredder (rasper) designed to refine pre-shredded tyre chips into clean,
+                        uniform rubber fragments ready for granulation. Built with a heavy-duty rotor, wear-resistant blades, and a robust cutting
+                        chamber, it delivers precise cutting performance even under continuous load. The rasper efficiently separates steel wires
+                        from rubber, improving downstream processing quality and throughput. With PLC-controlled automation, safety interlocks, and
+                        optimized feed mechanisms, the RST-4000 ensures stable output size, reduced contamination, and minimal downtime. Compact
+                        and easy to integrate, it is ideal for tyre recycling plants seeking superior chip refinement and reliable 24/7 operation.
                     </p>
+
                 </div>
             </div>
 
@@ -114,139 +115,139 @@ const Rst4000 = () => {
                 </div>
             </div>
 
-<h1 className="technical-heading">Technical Specifications</h1>
+            <h1 className="technical-heading">Technical Specifications</h1>
 
-<div className="featurestable">
-    <h3>Electrical System</h3>
-    <table>
-        <tbody>
-            <tr>
-                <td>Power</td>
-                <td>150-180 HP (132 kW)</td>
-            </tr>
-            <tr>
-                <td>No Of Motors</td>
-                <td>1 No. ABB/siemens Motor</td>
-            </tr>
-            <tr>
-                <td>Drive Specification</td>
-                <td>Electrical System</td>
-            </tr>
-            <tr>
-                <td>Voltage</td>
-                <td>As per Customer's Requirement</td>
-            </tr>
-            <tr>
-                <td>Drive</td>
-                <td>ABB 160kW (H.D.), ACS580, 363A SIZE: R9 ,580-01-360A-4+P944+3B SDT</td>
-            </tr>
-            <tr>
-                <td>Electric Equipment’s</td>
-                <td>SIZE: R9, 580-01-360A-4+P944+3B SDT Schneider / ABB</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+            <div className="featurestable">
+                <h3>Electrical System</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Power</td>
+                            <td>150-180 HP (132 kW)</td>
+                        </tr>
+                        <tr>
+                            <td>No Of Motors</td>
+                            <td>1 No. ABB/siemens Motor</td>
+                        </tr>
+                        <tr>
+                            <td>Drive Specification</td>
+                            <td>Electrical System</td>
+                        </tr>
+                        <tr>
+                            <td>Voltage</td>
+                            <td>As per Customer's Requirement</td>
+                        </tr>
+                        <tr>
+                            <td>Drive</td>
+                            <td>ABB 160kW (H.D.), ACS580, 363A SIZE: R9 ,580-01-360A-4+P944+3B SDT</td>
+                        </tr>
+                        <tr>
+                            <td>Electric Equipment’s</td>
+                            <td>SIZE: R9, 580-01-360A-4+P944+3B SDT Schneider / ABB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-<div className="cuttingsection">
-    <h3>Cutting Section</h3>
-    <table>
-        <tbody>
-            <tr>
-                <td>Cutting Chamber</td>
-                <td>L1200 mm x W900 mm x H1000 mm (Hydraulics Opening)</td>
-            </tr>
-            <tr>
-                <td>Number of Shaft</td>
-                <td>1 Nos</td>
-            </tr>
-            <tr>
-                <td>Shaft Diameter</td>
-                <td>500 mm</td>
-            </tr>
-            <tr>
-                <td>Shaft Length</td>
-                <td>2100 mm</td>
-            </tr>
-            <tr>
-                <td>No. of Rotating Blades</td>
-                <td>42 Nos. (L 190 mm × W 58 mm × T 100 mm)</td>
-            </tr>
-            <tr>
-                <td>No. of Static Blades</td>
-                <td>6 Nos. (L 380 mm × W 120 mm × T 30 mm)</td>
-            </tr>
-            <tr>
-                <td>No. of Fixed Blade Mounting Blocks</td>
-                <td>42 Nos. (L 190 mm × W 135 mm × T 50 mm)</td>
-            </tr>
-            <tr>
-                <td>No. of Blades Locking Blocks (Type 4 Hole)</td>
-                <td>42 Nos. (L 190 mm × W 56 mm × T 50 mm)</td>
-            </tr>
-            <tr>
-                <td>Screen</td>
-                <td>MS 18 mm (Hydraulics Opening)</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+            <div className="cuttingsection">
+                <h3>Cutting Section</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Cutting Chamber</td>
+                            <td>L1200 mm x W900 mm x H1000 mm (Hydraulics Opening)</td>
+                        </tr>
+                        <tr>
+                            <td>Number of Shaft</td>
+                            <td>1 Nos</td>
+                        </tr>
+                        <tr>
+                            <td>Shaft Diameter</td>
+                            <td>500 mm</td>
+                        </tr>
+                        <tr>
+                            <td>Shaft Length</td>
+                            <td>2100 mm</td>
+                        </tr>
+                        <tr>
+                            <td>No. of Rotating Blades</td>
+                            <td>42 Nos. (L 190 mm × W 58 mm × T 100 mm)</td>
+                        </tr>
+                        <tr>
+                            <td>No. of Static Blades</td>
+                            <td>6 Nos. (L 380 mm × W 120 mm × T 30 mm)</td>
+                        </tr>
+                        <tr>
+                            <td>No. of Fixed Blade Mounting Blocks</td>
+                            <td>42 Nos. (L 190 mm × W 135 mm × T 50 mm)</td>
+                        </tr>
+                        <tr>
+                            <td>No. of Blades Locking Blocks (Type 4 Hole)</td>
+                            <td>42 Nos. (L 190 mm × W 56 mm × T 50 mm)</td>
+                        </tr>
+                        <tr>
+                            <td>Screen</td>
+                            <td>MS 18 mm (Hydraulics Opening)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-<div className="dimensions">
-    <h3>Gearbox and Hydraulics</h3>
-    <table>
-        <tbody>
-            <tr>
-                <td>Number of Gear Box</td>
-                <td>1 No., REGGIANA RIDUTTORI, RR6500L2MC:1</td>
-            </tr>
-            <tr>
-                <td>Number of Couplings</td>
-                <td>01 Nos</td>
-            </tr>
-            <tr>
-                <td>Type of Coupling</td>
-                <td>Gear Coupling 1 Nos</td>
-            </tr>
-            <tr>
-                <td>Type of Bearings and Housing</td>
-                <td>J&J SNLN-3040-23040-kenw33-2C55, KVT 143 H3040, 2 Nos</td>
-            </tr>
-            <tr>
-                <td>Hydraulics</td>
-                <td>6 Nos 2 Ton Cylinder with Power Pack Yuken 80LPM Pump – 2 HP Motor</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+            <div className="dimensions">
+                <h3>Gearbox and Hydraulics</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Number of Gear Box</td>
+                            <td>1 No., REGGIANA RIDUTTORI, RR6500L2MC:1</td>
+                        </tr>
+                        <tr>
+                            <td>Number of Couplings</td>
+                            <td>01 Nos</td>
+                        </tr>
+                        <tr>
+                            <td>Type of Coupling</td>
+                            <td>Gear Coupling 1 Nos</td>
+                        </tr>
+                        <tr>
+                            <td>Type of Bearings and Housing</td>
+                            <td>J&J SNLN-3040-23040-kenw33-2C55, KVT 143 H3040, 2 Nos</td>
+                        </tr>
+                        <tr>
+                            <td>Hydraulics</td>
+                            <td>6 Nos 2 Ton Cylinder with Power Pack Yuken 80LPM Pump – 2 HP Motor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
-<div className="dimensions">
-    <h3>Dimensions and Heights</h3>
-    <table>
-        <tbody>
-            <tr>
-                <td>Equipment Dimension (A x B x C)</td>
-                <td>L 3500 mm x W 1900 mm x H 2980 mm</td>
-            </tr>
-            <tr>
-                <td>Hopper Opening (G x F)</td>
-                <td>L 1200 mm x H 850 mm</td>
-            </tr>
-            <tr>
-                <td>Hopper Height (E)</td>
-                <td>850 mm</td>
-            </tr>
-            <tr>
-                <td>Discharge Height (D)</td>
-                <td>1200 mm</td>
-            </tr>
-            <tr>
-                <td>In Feed Height</td>
-                <td>2600 mm</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+            <div className="dimensions">
+                <h3>Dimensions and Heights</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Equipment Dimension (A x B x C)</td>
+                            <td>L 3500 mm x W 1900 mm x H 2980 mm</td>
+                        </tr>
+                        <tr>
+                            <td>Hopper Opening (G x F)</td>
+                            <td>L 1200 mm x H 850 mm</td>
+                        </tr>
+                        <tr>
+                            <td>Hopper Height (E)</td>
+                            <td>850 mm</td>
+                        </tr>
+                        <tr>
+                            <td>Discharge Height (D)</td>
+                            <td>1200 mm</td>
+                        </tr>
+                        <tr>
+                            <td>In Feed Height</td>
+                            <td>2600 mm</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };

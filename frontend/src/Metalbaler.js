@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import './Tyrecutting.css';
 import './Models.css';
 
-// 👉 Replace with your real metal baler images
-import Metal1 from './images/baler.png';
-import Metal2 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg';
-import Metal3 from './images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.49 AM(1).jpeg';
 import metalImg1 from './images/Applications/appm1.jpg';
 import metalImg2 from './images/Applications/appm4.jpg';
 import metalImg3 from './images/Applications/appm6.jpg';
@@ -43,6 +39,9 @@ function Metalbaler() {
     },
   ];
 
+  // Carousel images (same for all models)
+  const carouselImages = [metalImg1, metalImg2, metalImg3];
+
   const [selected, setSelected] = useState(balers[0]);
 
   return (
@@ -77,10 +76,27 @@ function Metalbaler() {
 
         {/* Selected Model Info */}
         <div className="row justify-content-center align-items-center">
+          {/* CAROUSEL */}
           <div className="col-md-6 mb-4">
-            <img src={selected.image} alt={selected.name} className="img-fluid rounded machine-image" />
+            <div id="metalCarousel" className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-inner">
+                {carouselImages.map((img, i) => (
+                  <div key={i} className={`carousel-item ${i === 0 ? 'active' : ''}`}>
+                    <img src={img} className="d-block w-100 baler-carousel-img" alt={`Metal ${i+1}`} />
+                  </div>
+                ))}
+              </div>
+
+              <button className="carousel-control-prev" type="button" data-bs-target="#metalCarousel" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon"></span>
+              </button>
+              <button className="carousel-control-next" type="button" data-bs-target="#metalCarousel" data-bs-slide="next">
+                <span className="carousel-control-next-icon"></span>
+              </button>
+            </div>
           </div>
 
+          {/* INFO */}
           <div className="col-md-6 mb-4 makecenter">
             <h3 className="machine-title">{selected.name}</h3>
             <ul className="list-unstyled">

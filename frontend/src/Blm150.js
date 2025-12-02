@@ -68,7 +68,7 @@ const Blm150 = () => {
         </div>
 
         <div className="productdetails">
-          <h1>BLM150</h1>
+          <h1>BLM-150</h1>
           <p>
             The <strong>BLM-150 Metal Baler</strong> is engineered for compacting light to medium-grade 
             metal scrap including aluminium, copper, brass, and steel offcuts. It delivers strong 

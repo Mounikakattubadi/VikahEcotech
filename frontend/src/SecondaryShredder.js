@@ -89,6 +89,7 @@ function SecondaryShredder() {
     }
   };
 
+
   return (
     <div className="baler-page">
       <div className={styles.heroWrapper}>
@@ -96,7 +97,7 @@ function SecondaryShredder() {
           id="heroCarousel"
           className="carousel slide"
           data-bs-ride="carousel"
-          data-bs-interval="6000"
+          data-bs-interval="3000"
         >
           {/* Indicators */}
           <div className={`carousel-indicators ${styles.indicators}`}>
@@ -122,112 +123,90 @@ function SecondaryShredder() {
               data-bs-slide-to="3"
             />
           </div>
+          <div className="carousel-inner h-100">
 
-<div className="carousel-inner h-100">
+            {/* Slide 1 – Rasper */}
+            <div
+              className={`carousel-item active ${styles.carouselItem}`}
+              style={{ backgroundImage: `url(${img1})` }}
+            >
+              <div className={styles.overlay}></div>
 
-  {/* Slide 1 – Rasper */}
-  <div
-    className={`carousel-item active ${styles.carouselItem}`}
-    style={{ backgroundImage: `url(${img1})` }}
-  >
-    <div className={styles.overlay}></div>
+              {/* TOP-CENTER HEADING */}
+              <h2 className={styles.mainHeadingTop}>SECONDARY SHREDDERS</h2>
 
-    <div className={styles.contentBox}>
-      <p className={styles.subText}>Engineered for Secondary Stage Shredding & Material Refinement</p>
-      <h1 className={styles.heading}>Rasper</h1>
+              <div className={styles.contentBox}>
+                <h1 className={styles.heading}>Rasper</h1>
+                <p className={styles.description}>
+                  Refines tyre chips into smaller, cleaner, uniform pieces ready for granulation and further processing.
+                </p>
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>Explore Our Services ↗</button>
+                  <Link to="/ourproducts" className={`btn ${styles.whiteBtn}`}>More Our Products</Link>
+                </div>
+              </div>
+            </div>
 
-      <p className={styles.description}>
-        Refines tyre chips into smaller, cleaner, uniform pieces ready for granulation and further processing.
-      </p>
+            {/* Slide 2 */}
+            <div className={`carousel-item ${styles.carouselItem}`} style={{ backgroundImage: `url(${img22})` }}>
+              <div className={styles.overlay}></div>
 
-      <div className={styles.btnRow}>
-        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
-          Explore Our Services ↗
-        </button>
-        <Link to="/ourproducts" className={`btn ${styles.whiteBtn}`}>
-          More Our Products
-        </Link>
-      </div>
-    </div>
-  </div>
+              {/* TOP-CENTER HEADING */}
+              <h2 className={styles.mainHeadingTop}>SECONDARY SHREDDERS</h2>
 
-  {/* Slide 2 – Secondary Plastic Shredders */}
-  <div
-    className={`carousel-item ${styles.carouselItem}`}
-    style={{ backgroundImage: `url(${img22})` }}
-  >
-    <div className={styles.overlay}></div>
+              <div className={styles.contentBox}>
+                <h1 className={styles.heading}>Plastic Shredders</h1>
+                <p className={styles.description}>
+                  Processes coarse plastic or tyre chips into consistent, high-quality output ideal for granulation.
+                </p>
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>See Machines ↗</button>
+                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>Contact Us</Link>
+                </div>
+              </div>
+            </div>
 
-    <div className={styles.contentBox}>
-      <p className={styles.subText}>Refining Shreds into High-Value Recyclable Material</p>
-      <h1 className={styles.heading}>Secondary Plastic Shredders</h1>
+            {/* Slide 3 */}
+            <div className={`carousel-item ${styles.carouselItem}`} style={{ backgroundImage: `url(${img23})` }}>
+              <div className={styles.overlay}></div>
 
-      <p className={styles.description}>
-        Processes coarse plastic or tyre chips into consistent, high-quality output ideal for granulation.
-      </p>
+              {/* TOP-CENTER HEADING */}
+              <h2 className={styles.mainHeadingTop}>SECONDARY SHREDDERS</h2>
 
-      <div className={styles.btnRow}>
-        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
-          See Machines ↗
-        </button>
-        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
-          Contact Us
-        </Link>
-      </div>
-    </div>
-  </div>
+              <div className={styles.contentBox}>
+                <h1 className={styles.heading}>Paper & Cardboard Shredders</h1>
+                <p className={styles.description}>
+                  Converts pre-shredded paper and cartons into finer, uniform particles ideal for recycling processes.
+                </p>
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>See Machines ↗</button>
+                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>Contact Us</Link>
+                </div>
+              </div>
+            </div>
 
-  {/* Slide 3 – Secondary Paper & Cardboard Shredders */}
-  <div
-    className={`carousel-item ${styles.carouselItem}`}
-    style={{ backgroundImage: `url(${img23})` }}
-  >
-    <div className={styles.overlay}></div>
+            {/* Slide 4 */}
+            <div className={`carousel-item ${styles.carouselItem}`} style={{ backgroundImage: `url(${img24})` }}>
+              <div className={styles.overlay}></div>
 
-    <div className={styles.contentBox}>
-      <h1 className={styles.heading}>Secondary Paper & Cardboard Shredders</h1>
+              {/* TOP-CENTER HEADING */}
+              <h2 className={styles.mainHeadingTop}>SECONDARY SHREDDERS</h2>
 
-      <p className={styles.description}>
-        Converts pre-shredded paper and cartons into finer, uniform particles ideal for recycling processes.
-      </p>
+              <div className={styles.contentBox}>
+                <h1 className={styles.heading}>Metal Shredders</h1>
+                <p className={styles.description}>
+                  Breaks down pre-shredded metal scrap into smaller, refined pieces for smelting and recycling.
+                </p>
+                <div className={styles.btnRow}>
+                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>See Machines ↗</button>
+                  <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>Contact Us</Link>
+                </div>
+              </div>
+            </div>
 
-      <div className={styles.btnRow}>
-        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
-          See Machines ↗
-        </button>
-        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
-          Contact Us
-        </Link>
-      </div>
-    </div>
-  </div>
+          </div>
 
-  {/* Slide 4 – Secondary Metal Shredders */}
-  <div
-    className={`carousel-item ${styles.carouselItem}`}
-    style={{ backgroundImage: `url(${img24})` }}
-  >
-    <div className={styles.overlay}></div>
 
-    <div className={styles.contentBox}>
-      <h1 className={styles.heading}>Secondary Metal Shredders</h1>
-
-      <p className={styles.description}>
-        Breaks down pre-shredded metal scrap into smaller, refined pieces for smelting and recycling.
-      </p>
-
-      <div className={styles.btnRow}>
-        <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
-          See Machines ↗
-        </button>
-        <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
-          Contact Us
-        </Link>
-      </div>
-    </div>
-  </div>
-
-</div>
 
           {/* Arrow controls */}
           <button

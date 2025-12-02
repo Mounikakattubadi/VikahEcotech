@@ -66,8 +66,7 @@ import Shc12000 from './Shc12000.js';
 import Shc8000 from './Shc8000.js';
 import Ewaste from './Ewaste.js';
 import Shm2000 from './Shm2000.js';
-import Shm2200 from './Shm2200.js';
-import Shm2600 from './Shm2600.js';
+import Shm4000 from './Shm4000.js';
 import Blm150 from './Blm150.js';
 import Blm200 from './Blm200.js';
 import Blm250 from './Blm250.js';
@@ -150,8 +149,7 @@ function App() {
         <Route exact path="/shc12000" element={<Shc12000 />} />
         <Route exact path="/ewaste" element={<Ewaste />} />
         <Route exact path="/shm2000" element={<Shm2000 />} />
-        <Route exact path="/shm2200" element={<Shm2200/>} />
-        <Route exact path="/shm2600" element={<Shm2600/>} />
+        <Route exact path="/shm4000" element={<Shm4000/>} />
         <Route exact path="/blm150" element={<Blm150/>} />
         <Route exact path="/blm200" element={<Blm200/>} />
         <Route exact path="/blm250" element={<Blm250/>} />

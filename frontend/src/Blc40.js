@@ -72,7 +72,7 @@ const BLC40 = () => {
         </div>
 
         <div className="productdetails">
-          <h1>BLC40</h1>
+          <h1>BLC-40</h1>
        
            <p>
             The <strong>BLC-40</strong> Paper & Cardboard Baler is designed for medium-capacity operations, handling larger volumes of cartons and packaging.

@@ -72,7 +72,7 @@ const BLC50 = () => {
         </div>
 
         <div className="productdetails">
-          <h1>BLC50</h1>
+          <h1>BLC-50</h1>
        
           <p>
             The <strong>BLC-50</strong> Paper & Cardboard Baler is our most powerful model in the series. 

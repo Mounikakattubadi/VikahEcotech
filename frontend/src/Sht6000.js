@@ -17,7 +17,7 @@ const Sht6000 = () => {
     }, []);
 
     const machinery = 'shredder';
-    const model = 'SHT6000';
+    const model = 'SHT-6000';
     const handleDownload = (fileName) => {
         // Create a new anchor element
         const link = document.createElement('a');

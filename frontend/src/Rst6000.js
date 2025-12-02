@@ -85,9 +85,15 @@ const Rst6000 = () => {
                 </div>
                 <div className="productdetails">
                     <p>
-                        {/* --- CORRECTED STARTING PARAGRAPH FOR RST-6000 --- */}
-                        The **Rasper Model RST-6000** is an advanced tyre processing machine designed for efficient recycling of shredded tyres, transforming them into uniform granules (crumb rubber). Engineered to handle various tyre sizes and types, including PCR and TBR, this high-performance model features precision-cutting blades and a durable granulating chamber. With its compact design and user-friendly interface, the RST-6000 seamlessly integrates into existing recycling lines, delivering reliable and consistent results that prepare shredded tyres for further processing or repurposing.
-                    </p>
+  The RST-6000 is a high-capacity secondary shredder engineered for advanced tyre chip refinement in medium to large-scale
+  recycling operations. Equipped with a reinforced rotor, precision-hardened blades, and an enlarged cutting chamber, it 
+  processes higher volumes with exceptional accuracy and consistency. The machine efficiently separates steel from rubber 
+  while producing clean, uniform output ideal for granulators and fine processing stages. Its PLC-automated control system, 
+  auto-reversal protection, and vibration-optimized structure ensure smooth performance with reduced downtime. Designed for 
+  continuous duty, the RST-6000 offers enhanced throughput, longer component life, and dependable operation in demanding 
+  recycling environments.
+</p>
+
                 </div>
             </div>
 

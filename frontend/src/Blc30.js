@@ -72,7 +72,7 @@ const BLC30 = () => {
         </div>
 
         <div className="productdetails">
-          <h1>BLC30</h1>
+          <h1>BLC-30</h1>
        
            <p>
             The <strong>BLC-30</strong> Paper & Cardboard Baler is designed for small-to-medium scale cardboard waste management. 

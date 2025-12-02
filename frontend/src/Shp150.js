@@ -34,7 +34,7 @@ const Shp150 = () => {
         <>
             <div className='productpagetop'>
                 <div className='imagetop'>
-<div className="main-image-container">
+                    <div className="main-image-container">
                         <div className="main-image-wrapper">
                             <img
                                 src={mainImage}
@@ -82,10 +82,10 @@ const Shp150 = () => {
                 <div className="productdetails">
                     <h1>{model}</h1>
                     <p>
-                        <strong>SHP-150 Plastic & PET Bottle Shredder</strong> is engineered for 
-                        medium-level recycling applications. With a shredding capacity of 
-                        <strong>150 kg/hr</strong>, it efficiently processes PET bottles, poly bags, 
-                        plastic films, and light industrial plastic waste. Built for durability, 
+                        <strong>SHP-150 Plastic & PET Bottle Shredder</strong> is engineered for
+                        medium-level recycling applications. With a shredding capacity of
+                        <strong>150 kg/hr</strong>, it efficiently processes PET bottles, poly bags,
+                        plastic films, and light industrial plastic waste. Built for durability,
                         reliability, and ease of operation.
                     </p>
                 </div>

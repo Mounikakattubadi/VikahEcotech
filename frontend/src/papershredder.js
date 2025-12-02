@@ -3,12 +3,9 @@ import { Link } from 'react-router-dom';
 import './Tyrecutting.css';
 import './Models.css';
 
-import paperImg1 from "./images/Shedder _ Final PNG.png";
-import paperImg2 from "./images/shredder_hd.jpg";
-import paperImg3 from "./images/shredder_hd1.jpg";
-import shredderhd from "./images/Applications/shredpcb1.jpg"
-import shredderhd1 from "./images/Applications/shredpcb4.jpg"
-import shredderhdimg from "./images/Applications/shredpcb7.jpg"
+import shredderhd from "./images/Applications/shredpcb1.jpg";
+import shredderhd1 from "./images/Applications/shredpcb4.jpg";
+import shredderhdimg from "./images/Applications/shredpcb7.jpg";
 
 function Papershredder() {
   useEffect(() => {
@@ -42,6 +39,9 @@ function Papershredder() {
     },
   ];
 
+  // Shared carousel images (same for every model)
+  const carouselImages = [shredderhd, shredderhd1, shredderhdimg];
+
   const [selected, setSelected] = useState(shredders[0]);
 
   return (
@@ -53,14 +53,14 @@ function Papershredder() {
         </div>
       </header>
 
-      {/* Intro Section */}
+      {/* Intro */}
       <div className="container text-center my-4 balerbackimg">
         <p>
-          Vikah Ecotech's Paper & Cardboard Shredders are engineered to process office paper waste, corrugated boxes, 
+          Vikah Ecotech's Paper & Cardboard Shredders are engineered to process office paper waste, corrugated boxes,
           and packaging materials with precision and high output. Our machines promote efficient recycling while minimizing manual effort.
         </p>
 
-        {/* Model Switch Buttons */}
+        {/* Model Buttons */}
         <div className="btn-group flex-wrap mb-4" role="group">
           {shredders.map((machine, index) => (
             <button
@@ -73,16 +73,30 @@ function Papershredder() {
           ))}
         </div>
 
-        {/* Selected Model Details */}
+        {/* MAIN SECTION */}
         <div className="row justify-content-center align-items-center">
+
+          {/* CAROUSEL */}
           <div className="col-md-6 mb-4">
-            <img
-              src={selected.image}
-              alt={selected.name}
-              className="img-fluid rounded machine-image"
-            />
+            <div id="paperShredCarousel" className="carousel slide" data-bs-ride="carousel">
+              <div className="carousel-inner">
+                {carouselImages.map((img, idx) => (
+                  <div key={idx} className={`carousel-item ${idx === 0 ? 'active' : ''}`}>
+                    <img src={img} className="d-block w-100 baler-carousel-img" alt={`Paper ${idx + 1}`} />
+                  </div>
+                ))}
+              </div>
+
+              <button className="carousel-control-prev" type="button" data-bs-target="#paperShredCarousel" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon"></span>
+              </button>
+              <button className="carousel-control-next" type="button" data-bs-target="#paperShredCarousel" data-bs-slide="next">
+                <span className="carousel-control-next-icon"></span>
+              </button>
+            </div>
           </div>
 
+          {/* INFO */}
           <div className="col-md-6 mb-4 makecenter">
             <h3 className="machine-title">{selected.name}</h3>
             <ul className="list-unstyled">
@@ -96,6 +110,7 @@ function Papershredder() {
               Read More
             </Link>
           </div>
+
         </div>
       </div>
     </div>

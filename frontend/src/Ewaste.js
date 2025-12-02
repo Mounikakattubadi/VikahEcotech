@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductsPage.css';
 
-import she800_main from "./images/Applications/shredewaste.jpeg";  
+import she800_main from "./images/Applications/shredewaste.jpeg";
 import she800_angle1 from "./images/Applications/shredewaste2.webp";
 import she800_specs from "./images/Applications/shredewaste3.webp";
-import she800_angle2 from "./images/Applications/shredewaste4.jpg";  
+import she800_angle2 from "./images/Applications/shredewaste4.jpg";
 
 const Ewaste = () => {
 
@@ -20,7 +20,7 @@ const Ewaste = () => {
     }, []);
 
     const machinery = 'e-waste-primary-shredder';
-    const model = 'SHE800';
+    const model = 'SHE-400';
 
     const handleDownload = (fileName) => {
         const link = document.createElement('a');
@@ -35,11 +35,11 @@ const Ewaste = () => {
         <>
             <div className='productpagetop'>
                 <div className='imagetop'>
-<div className="main-image-container">
+                    <div className="main-image-container">
                         <div className="main-image-wrapper">
                             <img
                                 src={mainImage}
-                                alt="SHT8000 Tyre Shredder main view by Vikah Ecotech"
+                                alt="SHE 400 E-Waste Shredder main view by Vikah Ecotech"
                                 className="sht2000img"
                             />
                             <span
@@ -83,10 +83,10 @@ const Ewaste = () => {
                 <div className="productdetails">
                     <h1>{model}</h1>
                     <p>
-                        The SHE-800 E-Waste Primary Shredder is a heavy-duty industrial machine 
-                        engineered for shredding electronic waste such as PCB boards, 
-                        laptops, mobile phones, appliances, and mixed electrical scrap. 
-                        It delivers high torque, slow RPM shredding ideal for safe and 
+                        The SHE-800 E-Waste Primary Shredder is a heavy-duty industrial machine
+                        engineered for shredding electronic waste such as PCB boards,
+                        laptops, mobile phones, appliances, and mixed electrical scrap.
+                        It delivers high torque, slow RPM shredding ideal for safe and
                         efficient size reduction before secondary processing.
                         Designed for recycling plants requiring continuous and reliable operation.
                     </p>
@@ -139,7 +139,7 @@ const Ewaste = () => {
                         <tr><td>Hopper Height</td><td>1200 mm</td></tr>
                         <tr><td>Discharge Height</td><td>1150 mm</td></tr>
                         <tr><td>Feeding Mechanism</td><td>Auto</td></tr>
-                        <tr><td>Processing Capacity</td><td>8000–10000 Kg/hr</td></tr>
+                        <tr><td>Processing Capacity</td><td>4000–6000 Kg/hr</td></tr>
                     </tbody>
                 </table>
             </div>
