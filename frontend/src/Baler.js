@@ -400,7 +400,7 @@ function Baler() {
             <div className="col-6 col-md-3 mb-4 app-item">
               <Link to="/pcb">
                 {renderCarousel(productCarousels.pcb)}
-                <div className="product-label mt-2">Card Board</div>
+                <div className="product-label mt-2">Paper and Card Board Baler</div>
               </Link>
             </div>
 
