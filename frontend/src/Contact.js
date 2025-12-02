@@ -4,6 +4,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Contact.css';
+import contactcss from './About.module.css';
+import t9 from "./images/eco sustain 2025/images/contactbg.png";
 
 const offices = [
   {
@@ -68,13 +70,15 @@ function Contact() {
 
   return (
     <>
-      <div className="contact-top-section text-white text-center py-5">
-        <h1 className="display-5 fw-bold">Contact Us</h1>
-        <p className="lead">Reach out to us at any of our global offices</p>
-        <p>
-          <a href="/" className="text-white-50 text-decoration-none">Home</a> &gt; <span className="text-white">Contact</span>
-        </p>
-      </div>
+    <div className="about-us-page text-dark">
+          {/* Top Gradient Section */}
+               <div className={contactcss.aboutWrapper}>
+                 <img src={t9} alt="Scenic view of nature" className={contactcss.image} />
+                  <div className={contactcss.textOverlay}>
+                   <h1>Contact Us</h1>
+                   <p>Reach out to us at any of our global offices</p>
+                 </div>
+               </div>
 
       <div className="container py-5">
         {offices.map((office, index) => (
@@ -100,6 +104,7 @@ function Contact() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </>
   );
