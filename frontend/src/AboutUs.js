@@ -6,11 +6,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import Aboutcss from './About.module.css';
 // Images
-import t9 from "./images/eco sustain 2025/images/abtbggi.png";
+import t9 from "./images/eco sustain 2025/images/abtbgve.png";
 import grouppic from "./images/eco sustain 2025/images/ecosust_15.jpg";
 import Baler from "./images/baler_bg.png";
 import shredderhdimg from "./images/Shedder _ Final PNG.png";
-import shred2 from "./images/R1.png";
+import shred2 from "./images/R3.jpg";
 
 const AboutUs = () => {
   useEffect(() => {
