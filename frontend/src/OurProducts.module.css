@@ -131,7 +131,7 @@
 /* category block */
 .categoryBlock { margin-bottom: 28px; padding: 18px; background: white; border-radius: 12px; box-shadow: 0 10px 30px rgba(2,6,23,0.03); border: 1px solid rgba(15,23,36,0.03); }
 .categoryHeader { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 14px; }
-.categoryTitle { margin: 0; font-size: 1.125rem; }
+.categoryTitle { margin: 0; font-size: 1.125rem; font-weight: 600;}
 .categoryDesc { color: #5b6b7d; font-size: .92rem; margin-top: 6px; }
 .categoryActions { display: flex; gap: 10px; align-items: center; }
 .actionBtn {
@@ -147,7 +147,7 @@
 .appsWrap { margin-top: 8px; display: grid; gap: 14px; }
 .application { padding: 12px; border-radius: 10px; border: 1px dashed rgba(15,23,36,0.04); background: linear-gradient(180deg, #fff, #fbfdff); }
 .appHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; gap: 12px; }
-.appTitle { margin: 0; font-size: 1rem; }
+.appTitle { margin: 0; font-size: 1rem; font-weight: 600;}
 .appBlurb { color: #6b7b8c; font-size: 0.9rem; margin-top: 6px; }
 .viewAllModels {
   background: #0f1724;

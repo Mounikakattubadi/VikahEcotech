@@ -175,7 +175,7 @@ img.img-fluid {
   .col-6 {
     flex: 0 0 50%;
     max-width: 38%;
-    padding-left: 5px;
+    padding-left: 5%;
     padding-right: 5px;
   }
 }

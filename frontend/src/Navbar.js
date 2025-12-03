@@ -168,12 +168,12 @@ const Navbar = () => {
 
                   {/* Main category link */}
                   <li>
-                    <Link to="/metalshredder" className="dropdown-item" onClick={handleNavigation}>
-                      Metal Shredder
+                    <Link to="/shm4000" className="dropdown-item" onClick={handleNavigation}>
+                      SHM 4000
                     </Link>
                   </li>
 
-                  {/* Models */}
+                  {/* Models 
                   <li>
                     <Link to="/shm2000" className="dropdown-item" onClick={handleNavigation}>
                       SHM2000
@@ -190,7 +190,7 @@ const Navbar = () => {
                     <Link to="/shm2600" className="dropdown-item" onClick={handleNavigation}>
                       SHM2600
                     </Link>
-                  </li>
+                  </li>*/}
                 </ul>
               )}
 

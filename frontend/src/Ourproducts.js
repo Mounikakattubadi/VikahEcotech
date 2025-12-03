@@ -69,7 +69,7 @@ export default function Ourproducts() {
     () => [
       {
         id: "baler",
-        title: "Baler",
+        title: "BALER",
         description: "Applications: Tyre scrap, Metal, Plastic, Paper & Cardboard",
         applications: [
           {
@@ -117,7 +117,7 @@ export default function Ourproducts() {
 
       {
         id: "primary-shredder",
-        title: "Primary Shredder",
+        title: "PRIMARY SHREDDER",
         description: "Applications: Tyre, Plastic, Metal, Paper & Cardboard, E-Waste",
         applications: [
           {
@@ -171,7 +171,7 @@ export default function Ourproducts() {
 
       {
         id: "secondary-shredder",
-        title: "Secondary Shredder",
+        title: "SECONDARY SHREDDER",
         description: "Applications: Rasper, Metal, Plastic, Paper & Cardboard",
         applications: [
           {

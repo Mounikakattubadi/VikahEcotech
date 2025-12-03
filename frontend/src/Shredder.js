@@ -125,7 +125,7 @@ function Shredder() {
     },
     {
       name: "Metal Shredder",
-      route: "/metalshredder",
+      route: "/shm4000",
       images: [metalbaler1, metalshred1],
     },
     {
