@@ -163,7 +163,7 @@ export default function Ourproducts() {
             title: "E-Waste (Primary)",
             blurb: "Rugged primary shredders for e-waste pre-processing.",
             models: [
-              { code: "SHE400", link: "/she400", img: she_ewaste1 },
+              { code: "SHE400", link: "/ewaste", img: she_ewaste1 },
             ],
           },
         ],
