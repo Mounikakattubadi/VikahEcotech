@@ -1,317 +1,377 @@
-import React, { useState, useEffect, useRef } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
-import logo from './images/logo.png';
-import './Navbar.css';
-import { Link } from 'react-router-dom';
+// Navbar.jsx
+import React, { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
+import logo from "./images/logo.png";
+import "./Navbar.css";
 
 const Navbar = () => {
-  const [isNavbarCollapsed, setIsNavbarCollapsed] = useState(true);
-  const [productMenu, setProductMenu] = useState('');
-  const [subProductMenu, setSubProductMenu] = useState('');
-  const [showDropdown, setShowDropdown] = useState(false);
-  const dropdownRef = useRef(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
+  const [elevated, setElevated] = useState(false);
 
-  const toggleNavbar = () => {
-    setIsNavbarCollapsed(!isNavbarCollapsed);
-    resetMenus();
-  };
-
-  const resetMenus = () => {
-    setProductMenu('');
-    setSubProductMenu('');
-    setShowDropdown(false);
-  };
-
-  const handleBack = () => {
-    if (subProductMenu) {
-      setSubProductMenu('');
-    } else {
-      setProductMenu('');
-    }
-  };
-
-  const handleNavigation = () => {
-    setIsNavbarCollapsed(true);
-    resetMenus();
-  };
-
-  const handleDropdownToggle = () => {
-    setShowDropdown((prev) => !prev);
-    setProductMenu('');
-    setSubProductMenu('');
-  };
-
-  // Close dropdown on outside click
+  // Elevate navbar on scroll
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setShowDropdown(false);
-        resetMenus();
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    const onScroll = () => setElevated(window.scrollY > 10);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const toggleMobile = () => {
+    setMobileOpen((prev) => {
+      const next = !prev;
+
+      // When closing the mobile menu, also close Solutions
+      if (!next) {
+        setProductsOpen(false);
+      }
+
+      return next;
+    });
+  };
+
+  const closeAll = () => {
+    setMobileOpen(false);
+    setProductsOpen(false);
+  };
+
+  const toggleProducts = () => {
+    setProductsOpen((prev) => !prev);
+  };
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light p-2">
-      <div className="container">
-        <Link className="navbar-brand" to="/" onClick={resetMenus}>
-          <img className="logo" src={logo} alt="vikahecotech" />
+    <header className={`ve-navbar ${elevated ? "ve-navbar--elevated" : ""}`}>
+      <div className="container ve-navbar__inner">
+        {/* Brand */}
+        <Link to="/" className="ve-navbar__brand" onClick={closeAll}>
+          <img src={logo} alt="Vikah Ecotech" className="ve-navbar__logo" />
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          onClick={toggleNavbar}
-          aria-controls="navbarNav"
-          aria-expanded={!isNavbarCollapsed}
-          aria-label="Toggle navigation"
+
+        {/* Desktop / mobile nav */}
+        <nav
+          className={`ve-navbar__menu ${
+            mobileOpen ? "ve-navbar__menu--open" : ""
+          }`}
         >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className={`collapse navbar-collapse ${isNavbarCollapsed ? '' : 'show'}`} id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item mx-2">
-              <Link to="/" className="nav-link nav-hover" onClick={handleNavigation}>
-                Home
-              </Link>
-            </li>
-            <li className="nav-item mx-2">
-              <Link to="/About" className="nav-link nav-hover" onClick={handleNavigation}>
-                About us
-              </Link>
-            </li>
-
-            {/* Our Products Dropdown */}
-            <div ref={dropdownRef} className="nav-item dropdown mx-2">
-              <button
-                className="nav-link dropdown-toggle nav-hover btn btn-link text-center text-lg-center w-100"
-                type="button"
-                id="navbarDropdown"
-                onClick={handleDropdownToggle}
+          <ul className="ve-navbar__links">
+            {/* Home */}
+            <li className="ve-navbar__item">
+              <NavLink
+                to="/"
+                end
+                className={({ isActive }) =>
+                  "ve-navbar__link" +
+                  (isActive ? " ve-navbar__link--active" : "")
+                }
+                onClick={closeAll}
               >
-                Our Products
+                Home
+              </NavLink>
+            </li>
+
+            {/* About */}
+            <li className="ve-navbar__item">
+              <NavLink
+                to="/About"
+                className={({ isActive }) =>
+                  "ve-navbar__link" +
+                  (isActive ? " ve-navbar__link--active" : "")
+                }
+                onClick={closeAll}
+              >
+                About Us
+              </NavLink>
+            </li>
+
+            {/* All products (single page) */}
+            <li className="ve-navbar__item">
+              <NavLink
+                to="/ourproducts"
+                className={({ isActive }) =>
+                  "ve-navbar__link" +
+                  (isActive ? " ve-navbar__link--active" : "")
+                }
+                onClick={closeAll}
+              >
+                All Products
+              </NavLink>
+            </li>
+
+            {/* Solutions – modern mega menu */}
+            <li className="ve-navbar__item ve-navbar__item--has-mega">
+              <button
+                type="button"
+                className={`ve-navbar__link ve-navbar__link--button ${
+                  productsOpen ? "ve-navbar__link--active" : ""
+                }`}
+                onClick={toggleProducts}
+              >
+                Recycling Solutions
+                <span
+                  className={`ve-chevron ${
+                    productsOpen ? "ve-chevron--up" : ""
+                  }`}
+                />
               </button>
 
-              {/* Main Products Menu */}
-              {showDropdown && !productMenu && (
-                <ul className="dropdown-menu show" aria-labelledby="navbarDropdown">
-                  <li><button className="dropdown-item" onClick={() => setProductMenu('Primary Shredder')}>Primary Shredder</button></li>
-                  <li><button className="dropdown-item" onClick={() => setProductMenu('Secondary Shredder')}>Secondary Shredder</button></li>
-                  <li><button className="dropdown-item" onClick={() => setProductMenu('baler')}>Baler</button></li>
-                  <li><Link to="/othereqptemp" className="dropdown-item" onClick={handleNavigation}>Other Equipment</Link></li>
-                 <li><Link to="/ourproducts" className="dropdown-item" onClick={handleNavigation}>All Products</Link></li>
-                </ul>
-              )}
-
-              {/* Primary Shredder Submenu */}
-              {productMenu === 'Primary Shredder' && !subProductMenu && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={handleBack}>← Back</button></li>
-                  <li><Link to="/shredder" className="dropdown-item" onClick={handleNavigation}>Primary Shredder</Link></li>
-                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('tyreShredder')}>Tyre Shredder</button></li>
-                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('plasticShredder')}>Plastic Shredder</button></li>
-                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('paperShredder')}>Paper & Cardboard Shredder</button></li>
-
-                  {/* 👉 Direct link to E-Waste (no submenu) */}
-                  <li><Link to="/ewaste" className="dropdown-item" onClick={handleNavigation}>E-Waste Shredder</Link></li>
-                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('metalShredder')}>Metal Shredder</button></li>
-                </ul>
-              )}
-
-              {/* Tyre Shredder Submenu */}
-              {subProductMenu === 'tyreShredder' && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
-                  <li><Link to="/tyreshredder" className="dropdown-item" onClick={handleNavigation}>Tyre Shredder</Link></li>
-                  <li><Link to="/sht6000" className="dropdown-item" onClick={handleNavigation}>SHT6000</Link></li>
-                  <li><Link to="/sht8000" className="dropdown-item" onClick={handleNavigation}>SHT8000</Link></li>
-                  <li><Link to="/sht12000" className="dropdown-item" onClick={handleNavigation}>SHT12000</Link></li>
-                </ul>
-              )}
-
-              {/* ✅ Plastic Shredder Submenu */}
-              {subProductMenu === 'plasticShredder' && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
-                  <li><Link to="/plasticshredder" className="dropdown-item" onClick={handleNavigation}>Plastic Shredder</Link></li>
-                  <li><Link to="/shp100" className="dropdown-item" onClick={handleNavigation}>SHP100</Link></li>
-                  <li><Link to="/shp150" className="dropdown-item" onClick={handleNavigation}>SHP150</Link></li>
-                  <li><Link to="/shp200" className="dropdown-item" onClick={handleNavigation}>SHP200</Link></li>
-                </ul>
-              )}
-
-              {/* ✅ Paper & Cardboard Shredder Submenu */}
-              {subProductMenu === 'paperShredder' && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
-                  <li><Link to="/papershredder" className="dropdown-item" onClick={handleNavigation}>Paper & Cardboard Shredder</Link></li>
-                  <li><Link to="/shc6000" className="dropdown-item" onClick={handleNavigation}>SHC6000</Link></li>
-                  <li><Link to="/shc8000" className="dropdown-item" onClick={handleNavigation}>SHC8000</Link></li>
-                  <li><Link to="/shc12000" className="dropdown-item" onClick={handleNavigation}>SHC12000</Link></li>
-                </ul>
-              )}
-
-              {/* ✅ Metal Shredder Submenu */}
-              {subProductMenu === 'metalShredder' && (
-                <ul className="dropdown-menu show">
-                  <li>
-                    <button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>
-                      ← Back
-                    </button>
-                  </li>
-
-                  {/* Main category link */}
-                  <li>
-                    <Link to="/shm4000" className="dropdown-item" onClick={handleNavigation}>
-                      SHM 4000
+              <div
+                className={`ve-mega ${productsOpen ? "ve-mega--open" : ""}`}
+              >
+                <div className="ve-mega__grid">
+                  {/* Baler */}
+                  <div className="ve-mega__column">
+                    <h4 className="ve-mega__title">Balers</h4>
+                    <p className="ve-mega__desc">
+                      High-density balers for tyre scrap, plastics, metals,
+                      paper and cardboard.
+                    </p>
+                    <Link
+                      to="/baler"
+                      className="ve-mega__link ve-mega__link--main"
+                      onClick={closeAll}
+                    >
+                      Baler overview →
                     </Link>
-                  </li>
+                    <div className="ve-mega__group">
+                      <span className="ve-mega__group-label">Applications</span>
+                      <Link
+                        to="/tyrescrapbaler"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Tyre Scrap Baler
+                      </Link>
+                      <Link
+                        to="/plasticbaler"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Plastic Balers
+                      </Link>
+                      <Link
+                        to="/pcb"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Paper &amp; Cardboard Balers
+                      </Link>
+                      <Link
+                        to="/metalbaler"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Metal Balers
+                      </Link>
+                    </div>
+                  </div>
 
-                  {/* Models 
-                  <li>
-                    <Link to="/shm2000" className="dropdown-item" onClick={handleNavigation}>
-                      SHM2000
+                  {/* Primary Shredder */}
+                  <div className="ve-mega__column">
+                    <h4 className="ve-mega__title">Primary Shredders</h4>
+                    <p className="ve-mega__desc">
+                      Heavy-duty primary shredders for bulky tyres, plastics,
+                      metals and e-waste.
+                    </p>
+                    <Link
+                      to="/shredder"
+                      className="ve-mega__link ve-mega__link--main"
+                      onClick={closeAll}
+                    >
+                      Primary shredders →
                     </Link>
-                  </li>
+                    <div className="ve-mega__group">
+                      <span className="ve-mega__group-label">Applications</span>
+                      <Link
+                        to="/tyreshredder"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Tyre Shredder
+                      </Link>
+                      <Link
+                        to="/plasticshredder"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Plastic Shredder
+                      </Link>
+                      <Link
+                        to="/papershredder"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Paper &amp; Cardboard Shredder
+                      </Link>
+                      <Link
+                        to="/ewaste"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        E-Waste Shredder
+                      </Link>
+                      <Link
+                        to="/shm4000"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Metal Shredder (SHM4000)
+                      </Link>
+                    </div>
+                  </div>
 
-                  <li>
-                    <Link to="/shm2200" className="dropdown-item" onClick={handleNavigation}>
-                      SHM2200
+                  {/* Secondary Shredder */}
+                  <div className="ve-mega__column">
+                    <h4 className="ve-mega__title">Secondary Shredders</h4>
+                    <p className="ve-mega__desc">
+                      Raspers &amp; secondary shredders for fine granulation and
+                      uniform output.
+                    </p>
+                    <Link
+                      to="/secondaryShredder"
+                      className="ve-mega__link ve-mega__link--main"
+                      onClick={closeAll}
+                    >
+                      Secondary shredders →
                     </Link>
-                  </li>
+                    <div className="ve-mega__group">
+                      <span className="ve-mega__group-label">Applications</span>
+                      <Link
+                        to="/rasper_secondaryshredders"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Rasper
+                      </Link>
+                      <Link
+                        to="/secondarymetalshredder"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Metal Shredder
+                      </Link>
+                      <Link
+                        to="/secondaryplasticshredder"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Plastic Shredder
+                      </Link>
+                      <Link
+                        to="/secondarypcb"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Paper &amp; Cardboard Shredder
+                      </Link>
+                    </div>
+                  </div>
 
-                  <li>
-                    <Link to="/shm2600" className="dropdown-item" onClick={handleNavigation}>
-                      SHM2600
+                  {/* Systems / more */}
+                  <div className="ve-mega__column">
+                    <h4 className="ve-mega__title">Complete Systems</h4>
+                    <p className="ve-mega__desc">
+                      End-to-end tyre &amp; waste recycling lines with feeding,
+                      separation and conveying.
+                    </p>
+                    <Link
+                      to="/ourproducts"
+                      className="ve-mega__link ve-mega__link--main"
+                      onClick={closeAll}
+                    >
+                      View all machines →
                     </Link>
-                  </li>*/}
-                </ul>
-              )}
-
-              {/* Secondary Shredder Submenu */}
-              {productMenu === 'Secondary Shredder' && !subProductMenu && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={handleBack}>← Back</button></li>
-                  <li><Link to="/secondaryShredder" className="dropdown-item" onClick={handleNavigation}>Secondary Shredder</Link></li>
-                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('rasper')}>Rasper</button></li>
-                  <li><Link to="/secondarymetalshredder" className="dropdown-item" onClick={handleNavigation}>Metal Shredder</Link></li>
-                  <li><Link to="/secondaryplasticshredder" className="dropdown-item" onClick={handleNavigation}>Plastic Shredder</Link></li>
-                  <li><Link to="/secondarypcb" className="dropdown-item" onClick={handleNavigation}>Paper and Cardboard Shredder</Link></li>
-                </ul>
-              )}
-
-              {/* ✅ Rasper Submenu */}
-              {subProductMenu === 'rasper' && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
-                  <li><Link to="/rasper_secondaryshredders" className="dropdown-item" onClick={handleNavigation}>Rasper</Link></li>
-                  <li><Link to="/rst4000" className="dropdown-item" onClick={handleNavigation}>RST4000</Link></li>
-                  <li><Link to="/rst6000" className="dropdown-item" onClick={handleNavigation}>RST6000</Link></li>
-                </ul>
-              )}
-              {/* Baler Submenu */}
-              {productMenu === 'baler' && !subProductMenu && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={handleBack}>← Back</button></li>
-                  <li><Link to="/baler" className="dropdown-item" onClick={handleNavigation}>Balers</Link></li>
-                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('tyreScrapBaler')}>Tyre Scrap Baler</button></li>
-                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('plasticBaler')}>Plastic Balers</button></li>
-                  <li><button className="dropdown-item" onClick={() => setSubProductMenu('cardboardBaler')}>Paper & Cardboard Balers</button></li>
-<li><button className="dropdown-item" onClick={() => setSubProductMenu('metalBaler')}>Metal Balers</button></li>
-                </ul>
-              )}
-
-              {/* Tyre Scrap Baler Submenu */}
-              {subProductMenu === 'tyreScrapBaler' && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
-                  <li><Link to="/tyrescrapbaler" className="dropdown-item" onClick={handleNavigation}>Tyre Scrap Baler</Link></li>
-                  <li><Link to="/blt150" className="dropdown-item" onClick={handleNavigation}>BLT150</Link></li>
-                  <li><Link to="/blt200" className="dropdown-item" onClick={handleNavigation}>BLT200</Link></li>
-                  <li><Link to="/blt250" className="dropdown-item" onClick={handleNavigation}>BLT250</Link></li>
-                </ul>
-              )}
-
-              {/* ✅ Plastic Baler Submenu */}
-              {subProductMenu === 'plasticBaler' && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
-                  <li><Link to="/plasticbaler" className="dropdown-item" onClick={handleNavigation}>Plastic Balers</Link></li>
-                  <li><Link to="/blp30" className="dropdown-item" onClick={handleNavigation}>BLP30</Link></li>
-                  <li><Link to="/blp40" className="dropdown-item" onClick={handleNavigation}>BLP40</Link></li>
-                  <li><Link to="/blp50" className="dropdown-item" onClick={handleNavigation}>BLP50</Link></li>
-                </ul>
-              )}
-
-              {/* ✅ Paper & Cardboard Baler Submenu */}
-              {subProductMenu === 'cardboardBaler' && (
-                <ul className="dropdown-menu show">
-                  <li><button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>← Back</button></li>
-                  <li><Link to="/pcb" className="dropdown-item" onClick={handleNavigation}>Paper & Cardboard Balers</Link></li>
-                  <li><Link to="/blc30" className="dropdown-item" onClick={handleNavigation}>BLC30</Link></li>
-                  <li><Link to="/blc40" className="dropdown-item" onClick={handleNavigation}>BLC40</Link></li>
-                  <li><Link to="/blc50" className="dropdown-item" onClick={handleNavigation}>BLC50</Link></li>
-                </ul>
-              )}
-{/* ✅ Metal Baler Submenu */}
-{subProductMenu === 'metalBaler' && (
-  <ul className="dropdown-menu show">
-    <li>
-      <button className="dropdown-item text-muted" onClick={() => setSubProductMenu('')}>
-        ← Back
-      </button>
-    </li>
-
-    {/* Main page link */}
-    <li>
-      <Link to="/metalbaler" className="dropdown-item" onClick={handleNavigation}>
-        Metal Balers
-      </Link>
-    </li>
-
-    {/* Models */}
-    <li>
-      <Link to="/blm150" className="dropdown-item" onClick={handleNavigation}>
-        BLM150
-      </Link>
-    </li>
-
-    <li>
-      <Link to="/blm200" className="dropdown-item" onClick={handleNavigation}>
-        BLM200
-      </Link>
-    </li>
-
-    <li>
-      <Link to="/blm250" className="dropdown-item" onClick={handleNavigation}>
-        BLM250
-      </Link>
-    </li>
-  </ul>
-)}
-
-            </div>
-
-            <li className="nav-item mx-2">
-              <Link className="nav-link nav-hover" to="/enquire" onClick={handleNavigation}>
-                Enquiry
-              </Link>
+                    <div className="ve-mega__group">
+                      <span className="ve-mega__group-label">Equipment</span>
+                      <Link
+                        to="/othereqptemp"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Other Equipment
+                      </Link>
+                      <Link
+                        to="/enquire"
+                        className="ve-mega__link"
+                        onClick={closeAll}
+                      >
+                        Custom layouts &amp; design
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
-            <li className="nav-item mx-2">
-              <Link className="nav-link nav-hover" to="/Contact" onClick={handleNavigation}>
+            {/* Other Equipment direct link */}
+            <li className="ve-navbar__item">
+              <NavLink
+                to="/othereqptemp"
+                className={({ isActive }) =>
+                  "ve-navbar__link" +
+                  (isActive ? " ve-navbar__link--active" : "")
+                }
+                onClick={closeAll}
+              >
+                Other Equipment
+              </NavLink>
+            </li>
+
+            {/* Trade Fairs */}
+            <li className="ve-navbar__item">
+              <NavLink
+                to="/tradefairs"
+                end
+                className={({ isActive }) =>
+                  "ve-navbar__link" +
+                  (isActive ? " ve-navbar__link--active" : "")
+                }
+                onClick={closeAll}
+              >
+                Trade Fairs
+              </NavLink>
+            </li>
+            {/* Enquiry CTA */}
+            <li className="ve-navbar__item">
+              <NavLink
+                to="/enquire"
+                className={({ isActive }) =>
+                  "ve-navbar__link ve-navbar__link--cta" +
+                  (isActive ? " ve-navbar__link--cta-active" : "")
+                }
+                onClick={closeAll}
+              >
+                Enquiry
+              </NavLink>
+            </li>
+
+            {/* Contact */}
+            <li className="ve-navbar__item">
+              <NavLink
+                to="/Contact"
+                className={({ isActive }) =>
+                  "ve-navbar__link" +
+                  (isActive ? " ve-navbar__link--active" : "")
+                }
+                onClick={closeAll}
+              >
                 Contact Us
-              </Link>
+              </NavLink>
             </li>
           </ul>
-        </div>
+        </nav>
+
+        {/* Mobile toggle */}
+        <button
+          type="button"
+          className={`ve-navbar__toggle ${mobileOpen ? "is-open" : ""}`}
+          onClick={toggleMobile}
+          aria-label="Toggle navigation"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </div>
-    </nav>
+    </header>
   );
 };
 

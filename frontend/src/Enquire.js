@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useLocation } from "react-router-dom";
 import "./Enquire.css";
 
 const Enquire = () => {
@@ -10,30 +10,45 @@ const Enquire = () => {
 
   const location = useLocation();
   const query = new URLSearchParams(location.search);
-  const initialMachinery = (query.get('machinery') || 'baler').toLowerCase();
-  const initialModel = query.get('model') || '';
+  const initialMachinery = (query.get("machinery") || "baler").toLowerCase();
+  const initialModel = query.get("model") || "";
 
   const [selectedMachinery, setSelectedMachinery] = useState(initialMachinery);
   const [selectedModel, setSelectedModel] = useState(initialModel);
   const [formData, setFormData] = useState({
-    name: '',
-    company: '',
-    email: '',
-    website: '',
-    phone: '',
-    address: '',
-    city: '',
-    country: '',
-    message: ''
+    name: "",
+    company: "",
+    email: "",
+    website: "",
+    phone: "",
+    address: "",
+    city: "",
+    country: "",
+    message: "",
   });
 
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const models = {
-    baler: ["Tyre Scrap Balers", "Plastic Balers", "Card Board Balers", "Metal Balers"],
-    shredder: ["Tyre Shredder", "Metal Shredder", "Plastic Shredder", "Paper and Cardboard Shredder"],
-    "secondary-shredder": ["Rasper", "Metal Shredders", "Plastic Shredder", "Paper and Cardboard Shredder"],
+    baler: [
+      "Tyre Scrap Balers",
+      "Plastic Balers",
+      "Card Board Balers",
+      "Metal Balers",
+    ],
+    shredder: [
+      "Tyre Shredder",
+      "Metal Shredder",
+      "Plastic Shredder",
+      "Paper and Cardboard Shredder",
+    ],
+    "secondary-shredder": [
+      "Rasper",
+      "Metal Shredders",
+      "Plastic Shredder",
+      "Paper and Cardboard Shredder",
+    ],
     "other-equipment": [
       "TUMBLE BACK FEEDER",
       "FEEDING & DISCHARGE CONVEYORS",
@@ -45,12 +60,16 @@ const Enquire = () => {
       "BLOCK CUTTER",
       "SIDE WALL REMOVER",
       "CUTTING EQUIPMENT",
-      "FOLDING EQUIPMENT"
+      "FOLDING EQUIPMENT",
     ],
   };
 
+  // keep initial selection in sync with available models
   useEffect(() => {
-    if (models[selectedMachinery] && !models[selectedMachinery].includes(selectedModel)) {
+    if (
+      models[selectedMachinery] &&
+      !models[selectedMachinery].includes(selectedModel)
+    ) {
       setSelectedModel(models[selectedMachinery][0]);
     }
   }, [selectedMachinery, selectedModel]);
@@ -58,7 +77,7 @@ const Enquire = () => {
   const handleMachineryChange = (event) => {
     const machinery = event.target.value.toLowerCase();
     setSelectedMachinery(machinery);
-    setSelectedModel(models[machinery] ? models[machinery][0] : '');
+    setSelectedModel(models[machinery] ? models[machinery][0] : "");
   };
 
   const handleInputChange = (event) => {
@@ -68,20 +87,20 @@ const Enquire = () => {
 
   const validateForm = () => {
     const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.name.trim()) newErrors.name = "Name is required";
     if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
+      newErrors.email = "Email is required";
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
+      newErrors.email = "Email is invalid";
     }
     if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone is required';
+      newErrors.phone = "Phone is required";
     } else if (!/^\d{10,15}$/.test(formData.phone)) {
-      newErrors.phone = 'Phone must be valid (10–15 digits)';
+      newErrors.phone = "Phone must be valid (10–15 digits)";
     }
-    if (!formData.address.trim()) newErrors.address = 'Address is required';
-    if (!formData.city.trim()) newErrors.city = 'City is required';
-    if (!formData.country.trim()) newErrors.country = 'Country is required';
+    if (!formData.address.trim()) newErrors.address = "Address is required";
+    if (!formData.city.trim()) newErrors.city = "City is required";
+    if (!formData.country.trim()) newErrors.country = "Country is required";
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -94,139 +113,290 @@ const Enquire = () => {
     setIsSubmitting(true);
     try {
       const response = await axios.post(
-        'https://www.vikahecotech.com/send-email.php',
+        "https://www.vikahecotech.com/send-email.php",
         {
           ...formData,
           machinery: selectedMachinery,
-          model: selectedModel
+          model: selectedModel,
         },
         {
-          headers: { 'Content-Type': 'application/json' }
+          headers: { "Content-Type": "application/json" },
         }
       );
 
-      alert('Email sent successfully!');
+      alert("Email sent successfully!");
       window.location.reload();
 
-      // ✅ Reset form fields after submission
+      // (Won't usually run because of reload, but keeping it exactly
+      // like your original logic)
       setFormData({
-        name: '',
-        company: '',
-        email: '',
-        website: '',
-        phone: '',
-        address: '',
-        city: '',
-        country: '',
-        message: ''
+        name: "",
+        company: "",
+        email: "",
+        website: "",
+        phone: "",
+        address: "",
+        city: "",
+        country: "",
+        message: "",
       });
 
-      setSelectedMachinery('baler');
-      setSelectedModel('Tyre Scrap Balers');
+      setSelectedMachinery("baler");
+      setSelectedModel("Tyre Scrap Balers");
       setErrors({});
     } catch (error) {
-      alert('Failed to send email: ' + error.message);
+      alert("Failed to send email: " + error.message);
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  const machineryLabelMap = {
+    baler: "Baler",
+    shredder: "Primary Shredder",
+    "secondary-shredder": "Secondary Shredder",
+    "other-equipment": "Other Equipment",
+  };
 
   return (
-    <div className="login-page">
-      <div className='enqheadcontainer'>
-        <h3 className='enqhead'>
-          Please fill in your details to know more about our products and Services. We will get back to you within 48 hours.
-        </h3>
-        <div className='enquiryform'> Enquiry Form</div>
-      </div>
+    <div className="enquire-page">
+      {/* HERO / SUMMARY */}
+      <section className="enquire-hero">
+        <div className="enquire-hero-inner">
+          <div className="enquire-kicker">Talk to our team</div>
+          <h1 className="enquire-title">Request a machinery quote</h1>
+          <p className="enquire-subtitle">
+            Please share your details and application. Our engineers will reach
+            out within <strong>48 hours</strong> with the right solution.
+          </p>
 
-      <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit}>
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="name">Name:</label>
-              <input type="text" name="name" value={formData.name} onChange={handleInputChange} />
-              {errors.name && <p className="error">{errors.name}</p>}
+          <div className="enquire-summary">
+            <div className="enquire-pill">
+              <span className="enquire-pill-label">Machinery</span>
+              <span className="enquire-pill-value">
+                {machineryLabelMap[selectedMachinery] || "Baler"}
+              </span>
             </div>
-            <div className="form-group">
-              <label htmlFor="company">Company Name:</label>
-              <input type="text" name="company" value={formData.company} onChange={handleInputChange} />
+            <div className="enquire-pill">
+              <span className="enquire-pill-label">Application</span>
+              <span className="enquire-pill-value">
+                {selectedModel || "Select an application"}
+              </span>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="form-row">
-            <div className="form-group">
-              <label htmlFor="machinery">Machinery:</label>
-              <select name="machinery" value={selectedMachinery} onChange={handleMachineryChange}>
-                <option value="baler">Baler</option>
-                <option value="shredder">Primary Shredder</option>
-                <option value="secondary-shredder">Secondary Shredder</option>
-                <option value="other-equipment">Other Equipment</option>
-              </select>
-            </div>
-            <div className="form-group">
-              <label htmlFor="model">Applications:</label>
-              <select name="model" value={selectedModel} onChange={(e) => setSelectedModel(e.target.value)}>
-                {models[selectedMachinery]?.map((model) => (
-                  <option key={model} value={model}>{model}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+      {/* MAIN FORM CARD */}
+      <section className="enquire-shell">
+        <div className="enquire-card">
+          <header className="enquire-card-header">
+            <div className="enquire-step-badge">Step 1 · Tell us about you</div>
+            <h2>Contact & Machinery details</h2>
+            <p>
+              This helps us configure the right recycling machinery and share a
+              tailored proposal.
+            </p>
+          </header>
 
-          <div className="form-row">
-            <div className="form-group">
-              <label>Email:</label>
-              <input type="email" name="email" value={formData.email} onChange={handleInputChange} />
-              {errors.email && <p className="error">{errors.email}</p>}
-            </div>
-            <div className="form-group">
-              <label>Website:</label>
-              <input type="text" name="website" value={formData.website} onChange={handleInputChange} />
-            </div>
-          </div>
+          <form className="enquire-form" onSubmit={handleSubmit}>
+            {/* Machinery selection row */}
+            <div className="enquire-section">
+              <h3 className="enquire-section-title">Equipment interest</h3>
+              <div className="enquire-grid">
+                <div className="enquire-field">
+                  <label htmlFor="machinery">Machinery</label>
+                  <select
+                    id="machinery"
+                    name="machinery"
+                    value={selectedMachinery}
+                    onChange={handleMachineryChange}
+                  >
+                    <option value="baler">Baler</option>
+                    <option value="shredder">Primary Shredder</option>
+                    <option value="secondary-shredder">Secondary Shredder</option>
+                    <option value="other-equipment">Other Equipment</option>
+                  </select>
+                </div>
 
-          <div className="form-row">
-            <div className="form-group">
-              <label>Phone:</label>
-              <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} />
-              {errors.phone && <p className="error">{errors.phone}</p>}
+                <div className="enquire-field">
+                  <label htmlFor="model">Application</label>
+                  <select
+                    id="model"
+                    name="model"
+                    value={selectedModel}
+                    onChange={(e) => setSelectedModel(e.target.value)}
+                  >
+                    {models[selectedMachinery]?.map((model) => (
+                      <option key={model} value={model}>
+                        {model}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
             </div>
-            <div className="form-group">
-              <label>Address:</label>
-              <input type="text" name="address" value={formData.address} onChange={handleInputChange} />
-              {errors.address && <p className="error">{errors.address}</p>}
-            </div>
-          </div>
 
-          <div className="form-row">
-            <div className="form-group">
-              <label>City:</label>
-              <input type="text" name="city" value={formData.city} onChange={handleInputChange} />
-              {errors.city && <p className="error">{errors.city}</p>}
-            </div>
-            <div className="form-group">
-              <label>Country:</label>
-              <input type="text" name="country" value={formData.country} onChange={handleInputChange} />
-              {errors.country && <p className="error">{errors.country}</p>}
-            </div>
-          </div>
+            {/* Contact details */}
+            <div className="enquire-section">
+              <h3 className="enquire-section-title">Contact details</h3>
+              <div className="enquire-grid">
+                <div className="enquire-field">
+                  <label htmlFor="name">
+                    Name <span className="enquire-required">*</span>
+                  </label>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                  />
+                  {errors.name && <p className="error">{errors.name}</p>}
+                </div>
 
-          <div className="form-row">
-            <div className="form-group">
-              <label>Message:</label>
-              <textarea name="message" value={formData.message} onChange={handleInputChange}></textarea>
-            </div>
-          </div>
+                <div className="enquire-field">
+                  <label htmlFor="company">Company name</label>
+                  <input
+                    id="company"
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
 
-          <div className="form-row">
-            <button type="submit" className="submit-button" disabled={isSubmitting}>
-              {isSubmitting ? 'Submitting...' : 'Submit'}
-            </button>
-          </div>
-        </form>
-      </div>
+              <div className="enquire-grid">
+                <div className="enquire-field">
+                  <label htmlFor="email">
+                    Email <span className="enquire-required">*</span>
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                  />
+                  {errors.email && <p className="error">{errors.email}</p>}
+                </div>
+
+                <div className="enquire-field">
+                  <label htmlFor="website">Website</label>
+                  <input
+                    id="website"
+                    type="text"
+                    name="website"
+                    value={formData.website}
+                    onChange={handleInputChange}
+                  />
+                </div>
+              </div>
+
+              <div className="enquire-grid">
+                <div className="enquire-field">
+                  <label htmlFor="phone">
+                    Phone <span className="enquire-required">*</span>
+                  </label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                  />
+                  {errors.phone && <p className="error">{errors.phone}</p>}
+                </div>
+
+                <div className="enquire-field">
+                  <label htmlFor="address">
+                    Address <span className="enquire-required">*</span>
+                  </label>
+                  <input
+                    id="address"
+                    type="text"
+                    name="address"
+                    value={formData.address}
+                    onChange={handleInputChange}
+                  />
+                  {errors.address && <p className="error">{errors.address}</p>}
+                </div>
+              </div>
+
+              <div className="enquire-grid">
+                <div className="enquire-field">
+                  <label htmlFor="city">
+                    City <span className="enquire-required">*</span>
+                  </label>
+                  <input
+                    id="city"
+                    type="text"
+                    name="city"
+                    value={formData.city}
+                    onChange={handleInputChange}
+                  />
+                  {errors.city && <p className="error">{errors.city}</p>}
+                </div>
+
+                <div className="enquire-field">
+                  <label htmlFor="country">
+                    Country <span className="enquire-required">*</span>
+                  </label>
+                  <input
+                    id="country"
+                    type="text"
+                    name="country"
+                    value={formData.country}
+                    onChange={handleInputChange}
+                  />
+                  {errors.country && <p className="error">{errors.country}</p>}
+                </div>
+              </div>
+            </div>
+
+            {/* Message */}
+            <div className="enquire-section">
+              <h3 className="enquire-section-title">Machinery details</h3>
+              <div className="enquire-field">
+                <label htmlFor="message">Tell us about your requirement</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  placeholder="E.g. Expected input material, capacity, layout constraints, etc."
+                ></textarea>
+              </div>
+            </div>
+
+            {/* Submit */}
+            <div className="enquire-actions">
+              <button
+                type="submit"
+                className="enquire-submit"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <span className="enquire-submit-inner">
+                    <span className="enquire-spinner" />
+                    Sending…
+                  </span>
+                ) : (
+                  <span className="enquire-submit-inner">
+                    Submit enquiry
+                    <span className="enquire-arrow">→</span>
+                  </span>
+                )}
+              </button>
+              <p className="enquire-footnote">
+                By submitting this form, you agree to be contacted by Vikah
+                Ecotech regarding your enquiry.
+              </p>
+            </div>
+          </form>
+        </div>
+      </section>
     </div>
   );
 };

@@ -59,52 +59,83 @@ const offices = [
 
 function Contact() {
   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 900,
       once: true
     });
   }, []);
 
   return (
     <>
-    <div className="about-us-page text-dark">
-          {/* Top Gradient Section */}
-               <div className={contactcss.aboutWrapper}>
-                 <img src={t9} alt="Scenic view of nature" className={contactcss.image} />
-                  <div className={contactcss.textOverlay}>
-                   <h1>Contact Us</h1>
-                   <p>Reach out to us at any of our global offices</p>
-                 </div>
-               </div>
-
-      <div className="container py-5">
-        {offices.map((office, index) => (
-          <div
-            key={index}
-            className={`zigzag-container ${index % 2 === 0 ? 'left' : 'right'}`}
-            data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
-          >
-            <div className={`zigzag-card ${office.isHead ? 'head-office' : ''}`}>
-              <div className="contact-title">
-                <span>{office.flag}</span> {office.country}
-              </div>
-              <h5>{office.company}</h5>
-              {office.addresses.map((addr, i) => (
-                <p key={i} className="mb-1"><i className="bi bi-geo-alt me-2"></i>{addr}</p>
-              ))}
-              <p className="mb-1"><i className="bi bi-telephone me-2"></i><strong>Phone:</strong> {office.phone}</p>
-              {office.mobile && <p className="mb-1"><i className="bi bi-phone me-2"></i><strong>Mobile:</strong> {office.mobile}</p>}
-              <p className="mb-1"><i className="bi bi-envelope me-2"></i><strong>Email:</strong> <a href={`mailto:${office.email}`}>{office.email}</a></p>
-              {office.website && (
-                <p><i className="bi bi-globe me-2"></i><strong>Website:</strong> <a href={`https://${office.website}`} target="_blank" rel="noopener noreferrer">{office.website}</a></p>
-              )}
-            </div>
+      <div className="about-us-page text-dark">
+        {/* Hero (reusing About hero style) */}
+        <div className={contactcss.aboutWrapper}>
+          <img src={t9} alt="Contact background" className={contactcss.image} />
+          <div className={contactcss.textOverlay}>
+            <h1>Contact Us</h1>
+            <p>Reach out to us at any of our global offices</p>
           </div>
-        ))}
-      </div>
+        </div>
+
+        {/* Timeline-style office list */}
+        <div className="container py-5 contact-timeline">
+          {offices.map((office, index) => (
+            <div
+              key={index}
+              className={`zigzag-container ${index % 2 === 0 ? 'left' : 'right'}`}
+              data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
+            >
+              <div className={`zigzag-card ${office.isHead ? 'head-office' : ''}`}>
+                <div className="contact-title">
+                  <span>{office.flag}</span> {office.country}
+                </div>
+                <h5>{office.company}</h5>
+
+                {office.addresses.map((addr, i) => (
+                  <p key={i} className="mb-1">
+                    <i className="bi bi-geo-alt me-2" /> {addr}
+                  </p>
+                ))}
+
+                <p className="mb-1">
+                  <i className="bi bi-telephone me-2" />
+                  <strong>Phone:</strong> {office.phone}
+                </p>
+
+                {office.mobile && (
+                  <p className="mb-1">
+                    <i className="bi bi-phone me-2" />
+                    <strong>Mobile:</strong> {office.mobile}
+                  </p>
+                )}
+
+                <p className="mb-1">
+                  <i className="bi bi-envelope me-2" />
+                  <strong>Email:</strong>{" "}
+                  <a href={`mailto:${office.email}`}>{office.email}</a>
+                </p>
+
+                {office.website && (
+                  <p className="mb-0">
+                    <i className="bi bi-globe me-2" />
+                    <strong>Website:</strong>{" "}
+                    <a
+                      href={`https://${office.website}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {office.website}
+                    </a>
+                  </p>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );

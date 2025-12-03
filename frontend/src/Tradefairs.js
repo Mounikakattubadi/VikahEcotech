@@ -78,11 +78,9 @@ const TradeFairs = () => {
 
           <div className="col-md-6">
             <div className="tradefairs-card h-100 d-flex flex-column position-relative">
-              
               <img src={ifatimg} alt="IFAT India 2025" className="trade-img" />
               <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
                 {/* Upcoming: IFAT India 2025 */}
-
                 <div className="trade-content p-3">
                   <h5>IFAT India</h5>
                   <p>
@@ -116,11 +114,7 @@ const TradeFairs = () => {
           {/* Upcoming: Eco Sustain Expo 2025 */}
           <div className="col-md-6">
             <div className="tradefairs-card h-100 d-flex flex-column position-relative">
-              <img
-                src={ece}
-                alt="Eco Sustain Expo"
-                className="tradefairs-img"
-              />
+              <img src={ece} alt="Eco Sustain Expo" className="tradefairs-img" />
               <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
                 <div>
                   <h5 className="mb-2">Eco Sustain Expo & Conference</h5>
