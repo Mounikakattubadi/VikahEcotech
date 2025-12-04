@@ -289,6 +289,25 @@
 
 /* ===== Responsive ===== */
 @media (max-width: 992px) {
+  .ve-navbar__inner {
+    position: relative;
+  }
+
+  /* Button fixed LEFT */
+  .ve-navbar__toggle {
+    position: absolute;
+    left: 12px;     /* adjust spacing */
+    top: 50%;
+    transform: translateY(-50%);
+    order: 1;
+    z-index: 2000;  /* stays above everything */
+  }
+
+  /* Logo fixed RIGHT */
+  .ve-navbar__brand {
+    margin-left: auto;
+    order: 2;
+  }
   .ve-navbar__logo {
     height: 40px;
   }

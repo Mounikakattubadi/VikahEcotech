@@ -356,15 +356,6 @@ export default function Ourproducts() {
                     </div>
 
                     <div className={styles.categoryActions}>
-                      <button
-                        className={styles.actionBtn}
-                        onClick={() => {
-                          setActiveCategory(cat.id);
-                          window.scrollTo({ top: 0, behavior: "smooth" });
-                        }}
-                      >
-                        View only
-                      </button>
                       <Link to="/othereqptemp" className={styles.linkGhost}>
                         Other equipment
                       </Link>

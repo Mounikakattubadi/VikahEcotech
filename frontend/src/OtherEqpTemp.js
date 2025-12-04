@@ -6,10 +6,10 @@ import "./OtherEqpTemp.css";
 const CATEGORIES = [
   { id: "all", label: "All" },
   { id: "feeding", label: "Feeding & Handling" },
-  { id: "flow", label: "Flow & Dosing" },
+  { id: "flow", label: "Flow " },
   { id: "screening", label: "Screening & Separation" },
   { id: "cutting", label: "Cutting & Preparation" },
-  { id: "packing", label: "Packing & Logistics" },
+  { id: "packing", label: "Packing " },
 ];
 
 const PRODUCTS = [
@@ -35,7 +35,7 @@ const PRODUCTS = [
     id: "vibrators",
         name: "VIBRATORS",
     category: "flow",
-    pillar: "Flow & Dosing",
+    pillar: "Flow",
     description:
       "Prevents clumping by evenly distributing particles through vibration. Maintains consistent flow for classification and ensures high-quality output. Suitable for rubber, plastic, paper, cardboard, and more.",
     materials: ["Fine Rubber", "Plastics", "Powders"],
@@ -95,19 +95,10 @@ const PRODUCTS = [
     materials: ["Car & Truck Tyres"],
   },
   {
-    id: "cutting-equipment",
-    name: "CUTTING EQUIPMENT",
-    category: "cutting",
-    pillar: "Cutting & Preparation",
-    description:
-      "Robust cutting systems designed to slice full tyres or thick rubber sections. Built for durability in continuous, heavy-duty recycling environments.",
-    materials: ["Full Tyres", "Thick Rubber"],
-  },
-  {
     id: "folding-equipment",
     name: "FOLDING EQUIPMENT",
     category: "packing",
-    pillar: "Packing & Logistics",
+    pillar: "Packing",
     description:
       "Folds processed rubber sheets or components into compact stacks. Saves storage space and improves handling efficiency for shipping and warehousing.",
     materials: ["Rubber Sheets", "Cut Strips"],

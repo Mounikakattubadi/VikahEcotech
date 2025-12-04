@@ -164,7 +164,7 @@ const Enquire = () => {
       <section className="enquire-hero">
         <div className="enquire-hero-inner">
           <div className="enquire-kicker">Talk to our team</div>
-          <h1 className="enquire-title">Request a machinery quote</h1>
+          <h1 className="enquire-title">Request a Machinery Quote</h1>
           <p className="enquire-subtitle">
             Please share your details and application. Our engineers will reach
             out within <strong>48 hours</strong> with the right solution.
@@ -189,7 +189,7 @@ const Enquire = () => {
 
       {/* MAIN FORM CARD */}
       <section className="enquire-shell">
-        <div className="enquire-card">
+        <div className="enquire-card mb-3">
           <header className="enquire-card-header">
             <div className="enquire-step-badge">Step 1 · Tell us about you</div>
             <h2>Contact & Machinery details</h2>

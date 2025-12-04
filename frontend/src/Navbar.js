@@ -41,7 +41,7 @@ const Navbar = () => {
 
   return (
     <header className={`ve-navbar ${elevated ? "ve-navbar--elevated" : ""}`}>
-      <div className="container ve-navbar__inner">
+      <div className="container ve-navbar__inner mt-1 mb-1">
         {/* Brand */}
         <Link to="/" className="ve-navbar__brand" onClick={closeAll}>
           <img src={logo} alt="Vikah Ecotech" className="ve-navbar__logo" />
@@ -273,13 +273,6 @@ const Navbar = () => {
                       End-to-end tyre &amp; waste recycling lines with feeding,
                       separation and conveying.
                     </p>
-                    <Link
-                      to="/ourproducts"
-                      className="ve-mega__link ve-mega__link--main"
-                      onClick={closeAll}
-                    >
-                      View all machines →
-                    </Link>
                     <div className="ve-mega__group">
                       <span className="ve-mega__group-label">Equipment</span>
                       <Link
@@ -289,30 +282,10 @@ const Navbar = () => {
                       >
                         Other Equipment
                       </Link>
-                      <Link
-                        to="/enquire"
-                        className="ve-mega__link"
-                        onClick={closeAll}
-                      >
-                        Custom layouts &amp; design
-                      </Link>
                     </div>
                   </div>
                 </div>
               </div>
-            </li>
-            {/* Other Equipment direct link */}
-            <li className="ve-navbar__item">
-              <NavLink
-                to="/othereqptemp"
-                className={({ isActive }) =>
-                  "ve-navbar__link" +
-                  (isActive ? " ve-navbar__link--active" : "")
-                }
-                onClick={closeAll}
-              >
-                Other Equipment
-              </NavLink>
             </li>
 
             {/* Trade Fairs */}

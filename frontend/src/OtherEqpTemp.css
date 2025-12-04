@@ -202,7 +202,9 @@
 
 /* Enquiry button */
 .oe-cardBtn {
-  margin-top: 6px;
+  /* push the button to the bottom of the flex column */
+  margin-top: auto;
+
   align-self: flex-start;
   padding: 8px 14px;
   border-radius: 999px;
@@ -214,6 +216,7 @@
   box-shadow: 0 12px 30px rgba(16, 185, 129, 0.6);
   transition: transform 0.16s ease, box-shadow 0.16s ease;
 }
+
 
 .oe-cardBtn:hover {
   transform: translateY(-1px);

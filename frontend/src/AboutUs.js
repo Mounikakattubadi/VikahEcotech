@@ -39,41 +39,32 @@ const AboutUs = () => {
       </div>
 
       <Container className={Aboutcss.sectionPadding}>
-        {/* Stats strip */}
-        <Row className={`text-center mb-5 ${Aboutcss.aboutStatsRow}`}>
-          <Col xs={6} md={3} className="mb-3 mb-md-0">
-            <div className={Aboutcss.aboutStatCard}>
-              <i className={`fas fa-industry ${Aboutcss.aboutStatIcon}`} />
-              <div className={Aboutcss.aboutStatValue}>10+ yrs</div>
-              <div className={Aboutcss.aboutStatLabel}>
-                Manufacturing Experience
-              </div>
-            </div>
-          </Col>
-          <Col xs={6} md={3} className="mb-3 mb-md-0">
-            <div className={Aboutcss.aboutStatCard}>
-              <i className={`fas fa-recycle ${Aboutcss.aboutStatIcon}`} />
-              <div className={Aboutcss.aboutStatValue}>100+ </div>
-              <div className={Aboutcss.aboutStatLabel}>
-                Recycling Installations
-              </div>
-            </div>
-          </Col>
-          <Col xs={6} md={3} className="mb-3 mb-md-0">
-            <div className={Aboutcss.aboutStatCard}>
-              <i className={`fas fa-globe-asia ${Aboutcss.aboutStatIcon}`} />
-              <div className={Aboutcss.aboutStatValue}>15+</div>
-              <div className={Aboutcss.aboutStatLabel}>Countries Served</div>
-            </div>
-          </Col>
-          <Col xs={6} md={3}>
-            <div className={Aboutcss.aboutStatCard}>
-              <i className={`fas fa-leaf ${Aboutcss.aboutStatIcon}`} />
-              <div className={Aboutcss.aboutStatValue}>1000+ t/yr</div>
-              <div className={Aboutcss.aboutStatLabel}>Waste Processed*</div>
-            </div>
-          </Col>
-        </Row>
+        <Row className={`text-center mb-5 justify-content-center gap-3 ${Aboutcss.aboutStatsRow}`}>
+  <Col xs={10} sm={6} md={3}>
+    <div className={Aboutcss.aboutStatCard}>
+      <i className={`fas fa-industry ${Aboutcss.aboutStatIcon}`} />
+      <div className={Aboutcss.aboutStatValue}>10+ yrs</div>
+      <div className={Aboutcss.aboutStatLabel}>Manufacturing Experience</div>
+    </div>
+  </Col>
+
+  <Col xs={10} sm={6} md={3}>
+    <div className={Aboutcss.aboutStatCard}>
+      <i className={`fas fa-recycle ${Aboutcss.aboutStatIcon}`} />
+      <div className={Aboutcss.aboutStatValue}>100+</div>
+      <div className={Aboutcss.aboutStatLabel}>Recycling Installations</div>
+    </div>
+  </Col>
+
+  <Col xs={10} sm={6} md={3}>
+    <div className={Aboutcss.aboutStatCard}>
+      <i className={`fas fa-globe-asia ${Aboutcss.aboutStatIcon}`} />
+      <div className={Aboutcss.aboutStatValue}>15+</div>
+      <div className={Aboutcss.aboutStatLabel}>Countries Served</div>
+    </div>
+  </Col>
+</Row>
+
 
         {/* Who We Are */}
         <Row
