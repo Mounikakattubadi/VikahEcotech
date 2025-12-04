@@ -312,21 +312,28 @@
     height: 40px;
   }
 
+   /* Mobile menu: small panel under LEFT toggle */
   .ve-navbar__menu {
     position: absolute;
-    left: 0;
-    right: 0;
     top: 100%;
+    left: 12px;                          /* align under toggle */
+    right: auto;
+    width: min(280px, 80vw);             /* not full width */
+
     background: #ffffff;
-    border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 12px;
+    border: 1px solid rgba(226, 232, 240, 0.9);
     box-shadow: 0 18px 40px rgba(15, 23, 42, 0.16);
-    transform-origin: top;
+
+    transform-origin: top left;          /* open from the toggle side */
     transform: scaleY(0);
     opacity: 0;
     pointer-events: none;
     transition: transform 0.18s ease, opacity 0.18s ease;
-    max-height: 80vh;          /* scrollable mobile drawer */
+
+    max-height: 80vh;
     overflow-y: auto;
+    z-index: 1500;
   }
 
   .ve-navbar__menu--open {
@@ -334,6 +341,7 @@
     opacity: 1;
     pointer-events: auto;
   }
+
 
   .ve-navbar__links {
     flex-direction: column;

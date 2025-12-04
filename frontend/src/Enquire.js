@@ -189,7 +189,7 @@ const Enquire = () => {
 
       {/* MAIN FORM CARD */}
       <section className="enquire-shell">
-        <div className="enquire-card mb-3">
+        <div className="enquire-card mb-5">
           <header className="enquire-card-header">
             <div className="enquire-step-badge">Step 1 · Tell us about you</div>
             <h2>Contact & Machinery details</h2>
