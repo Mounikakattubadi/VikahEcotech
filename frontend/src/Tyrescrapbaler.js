@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Carousel from 'react-bootstrap/Carousel';       // ✅ add this
+import 'bootstrap/dist/css/bootstrap.min.css';         // (already likely in index.js, but safe here too)
 import './Tyrecutting.css';
 import './Models.css';
 import Balerimg from "./images/baler.png";
@@ -70,27 +72,19 @@ function Tyrescrapbaler() {
 
         {/* MAIN DISPLAY */}
         <div className="row justify-content-center align-items-center">
-          
-          {/* CAROUSEL */}
+          {/* CAROUSEL – now react-bootstrap */}
           <div className="col-md-6 mb-4">
-            <div id="balerCarousel" className="carousel slide" data-bs-ride="carousel">
-              <div className="carousel-inner">
-                {carouselImages.map((img, i) => (
-                  <div key={i} className={`carousel-item ${i === 0 ? "active" : ""}`}>
-                    <img src={img} className="d-block w-100 baler-carousel-img" alt="Baler" />
-                  </div>
-                ))}
-              </div>
-
-              {/* Controls */}
-              <button className="carousel-control-prev" type="button" data-bs-target="#balerCarousel" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon"></span>
-              </button>
-
-              <button className="carousel-control-next" type="button" data-bs-target="#balerCarousel" data-bs-slide="next">
-                <span className="carousel-control-next-icon"></span>
-              </button>
-            </div>
+            <Carousel interval={4000} pause="hover" className="baler-carousel-wrapper">
+              {carouselImages.map((img, i) => (
+                <Carousel.Item key={i}>
+                  <img
+                    src={img}
+                    className="d-block w-100 baler-carousel-img"
+                    alt={`Baler ${i + 1}`}
+                  />
+                </Carousel.Item>
+              ))}
+            </Carousel>
           </div>
 
           {/* INFO */}
@@ -107,7 +101,6 @@ function Tyrescrapbaler() {
               Read More
             </Link>
           </div>
-
         </div>
       </div>
     </div>

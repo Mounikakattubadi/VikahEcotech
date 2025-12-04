@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Tyrecutting.css';
-import './Models.css';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./Tyrecutting.css";
+import "./Models.css";
 
-
-import mainSpecImage from './images/Applications/plas14.webp';
-import balerImage from './images/Applications/plas16.jpg';
-import img1 from './images/Applications/plas18.jpeg';
+import mainSpecImage from "./images/Applications/plas14.webp";
+import balerImage from "./images/Applications/plas16.jpg";
+import img1 from "./images/Applications/plas18.jpeg";
 
 function Plasticbaler() {
   useEffect(() => {
@@ -16,32 +15,43 @@ function Plasticbaler() {
 
   const balers = [
     {
-      name: 'BLP30',
-      type: 'Plastic Baler',
-      force: '30 Ton',
-      weight: '150-250 kg',
-      note: 'Compact design for lightweight plastic waste such as PET bottles and films.',
+      name: "BLP30",
+      type: "Plastic Baler",
+      force: "30 Ton",
+      weight: "150-250 kg",
+      note: "Compact design for lightweight plastic waste such as PET bottles and films.",
     },
     {
-      name: 'BLP40',
-      type: 'Plastic Baler',
-      force: '40 Ton',
-      weight: '200-350 kg',
-      note: 'Ideal for medium-density plastic waste management applications.',
+      name: "BLP40",
+      type: "Plastic Baler",
+      force: "40 Ton",
+      weight: "200-350 kg",
+      note: "Ideal for medium-density plastic waste management applications.",
     },
     {
-      name: 'BLP50',
-      type: 'Plastic Baler',
-      force: '50 Ton',
-      weight: '350-500 kg',
-      note: 'Heavy-duty design for industrial-scale plastic recycling operations.',
+      name: "BLP50",
+      type: "Plastic Baler",
+      force: "50 Ton",
+      weight: "350-500 kg",
+      note: "Heavy-duty design for industrial-scale plastic recycling operations.",
     },
   ];
 
   // Carousel images (same for all models)
-  const carouselImages = [ mainSpecImage, balerImage, img1];
+  const carouselImages = [mainSpecImage, balerImage, img1];
 
   const [selected, setSelected] = useState(balers[0]);
+  const [slide, setSlide] = useState(0);
+
+  const nextSlide = () => {
+    setSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevSlide = () => {
+    setSlide((prev) =>
+      prev === 0 ? carouselImages.length - 1 : prev - 1
+    );
+  };
 
   return (
     <div>
@@ -65,7 +75,9 @@ function Plasticbaler() {
           {balers.map((baler, index) => (
             <button
               key={index}
-              className={`btn btn-outline-success mx-1 my-1 ${selected.name === baler.name ? 'active' : ''}`}
+              className={`btn btn-outline-success mx-1 my-1 ${
+                selected.name === baler.name ? "active" : ""
+              }`}
               onClick={() => setSelected(baler)}
             >
               {baler.name}
@@ -75,24 +87,30 @@ function Plasticbaler() {
 
         {/* Main Section */}
         <div className="row justify-content-center align-items-center">
-
-          {/* CAROUSEL */}
+          {/* CAROUSEL (custom, same idea as Tyrescrapbaler) */}
           <div className="col-md-6 mb-4">
-            <div id="plasticCarousel" className="carousel slide" data-bs-ride="carousel">
-              <div className="carousel-inner">
-                {carouselImages.map((img, i) => (
-                  <div key={i} className={`carousel-item ${i === 0 ? "active" : ""}`}>
-                    <img src={img} className="d-block w-100 baler-carousel-img" alt="Plastic Baler" />
-                  </div>
-                ))}
-              </div>
+            <div className="custom-carousel">
+              <img
+                src={carouselImages[slide]}
+                className="carousel-img baler-carousel-img"
+                alt="Plastic Baler"
+              />
 
-              {/* Controls */}
-              <button className="carousel-control-prev" type="button" data-bs-target="#plasticCarousel" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon"></span>
+              <button
+                type="button"
+                className="carousel-btn left"
+                onClick={prevSlide}
+                aria-label="Previous image"
+              >
+                ❮
               </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#plasticCarousel" data-bs-slide="next">
-                <span className="carousel-control-next-icon"></span>
+              <button
+                type="button"
+                className="carousel-btn right"
+                onClick={nextSlide}
+                aria-label="Next image"
+              >
+                ❯
               </button>
             </div>
           </div>
@@ -101,16 +119,26 @@ function Plasticbaler() {
           <div className="col-md-6 mb-4 makecenter">
             <h3 className="machine-title">{selected.name}</h3>
             <ul className="list-unstyled">
-              <li><strong>Type:</strong> {selected.type}</li>
-              <li><strong>Compaction Force:</strong> {selected.force}</li>
-              <li><strong>Baler Weight:</strong> {selected.weight}</li>
-              <li><strong>Note:</strong> {selected.note}</li>
+              <li>
+                <strong>Type:</strong> {selected.type}
+              </li>
+              <li>
+                <strong>Compaction Force:</strong> {selected.force}
+              </li>
+              <li>
+                <strong>Baler Weight:</strong> {selected.weight}
+              </li>
+              <li>
+                <strong>Note:</strong> {selected.note}
+              </li>
             </ul>
-            <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
+            <Link
+              to={`/${selected.name.toLowerCase()}`}
+              className="btn btn-outline-success mt-3"
+            >
               Read More
             </Link>
           </div>
-
         </div>
       </div>
     </div>

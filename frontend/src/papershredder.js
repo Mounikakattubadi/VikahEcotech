@@ -42,8 +42,16 @@ function Papershredder() {
   // Shared carousel images (same for every model)
   const carouselImages = [shredderhd, shredderhd1, shredderhdimg];
 
-  const [selected, setSelected] = useState(shredders[0]);
+const [selected, setSelected] = useState(shredders[0]);
+  const [slide, setSlide] = useState(0);
 
+  const nextSlide = () => {
+    setSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevSlide = () => {
+    setSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
+  };
   return (
     <div>
       {/* Header Section */}
@@ -73,44 +81,62 @@ function Papershredder() {
           ))}
         </div>
 
+
         {/* MAIN SECTION */}
         <div className="row justify-content-center align-items-center">
-
-          {/* CAROUSEL */}
+          {/* CAROUSEL (same style as Tyrescrapbaler) */}
           <div className="col-md-6 mb-4">
-            <div id="paperShredCarousel" className="carousel slide" data-bs-ride="carousel">
-              <div className="carousel-inner">
-                {carouselImages.map((img, idx) => (
-                  <div key={idx} className={`carousel-item ${idx === 0 ? 'active' : ''}`}>
-                    <img src={img} className="d-block w-100 baler-carousel-img" alt={`Paper ${idx + 1}`} />
-                  </div>
-                ))}
-              </div>
-
-              <button className="carousel-control-prev" type="button" data-bs-target="#paperShredCarousel" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon"></span>
+            <div className="custom-carousel">
+              <img
+                src={carouselImages[slide]}
+                alt="Plastic Shredder"
+                className="baler-carousel-img carousel-img"
+              />
+              <button
+                type="button"
+                className="carousel-btn left"
+                onClick={prevSlide}
+              >
+                ❮
               </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#paperShredCarousel" data-bs-slide="next">
-                <span className="carousel-control-next-icon"></span>
+              <button
+                type="button"
+                className="carousel-btn right"
+                onClick={nextSlide}
+              >
+                ❯
               </button>
             </div>
           </div>
 
-          {/* INFO */}
+          {/* INFO SECTION */}
           <div className="col-md-6 mb-4 makecenter">
             <h3 className="machine-title">{selected.name}</h3>
+
             <ul className="list-unstyled">
-              <li><strong>Type:</strong> {selected.type}</li>
-              <li><strong>Power Range:</strong> {selected.power}</li>
-              {selected.system && <li><strong>System:</strong> {selected.system}</li>}
-              <li><strong>Feature:</strong> {selected.feature}</li>
+              <li>
+                <strong>Type:</strong> {selected.type}
+              </li>
+              <li>
+                <strong>Power Range:</strong> {selected.power}
+              </li>
+              {selected.system && (
+                <li>
+                  <strong>System:</strong> {selected.system}
+                </li>
+              )}
+              <li>
+                <strong>Feature:</strong> {selected.feature}
+              </li>
             </ul>
 
-            <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
+            <Link
+              to={`/${selected.name.toLowerCase()}`}
+              className="btn btn-outline-success mt-3"
+            >
               Read More
             </Link>
           </div>
-
         </div>
       </div>
     </div>

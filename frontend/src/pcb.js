@@ -42,6 +42,17 @@ function Pcb() {
   const carouselImages =  [ mainSpecImage, balerImage, img1];
 
   const [selected, setSelected] = useState(balers[0]);
+  const [slide, setSlide] = useState(0);
+
+  const nextSlide = () => {
+    setSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevSlide = () => {
+    setSlide((prev) =>
+      prev === 0 ? carouselImages.length - 1 : prev - 1
+    );
+  };
 
   return (
     <div>
@@ -74,24 +85,29 @@ function Pcb() {
         {/* MAIN SECTION */}
         <div className="row justify-content-center align-items-center">
 
-          {/* CAROUSEL */}
           <div className="col-md-6 mb-4">
-            <div id="pcbCarousel" className="carousel slide" data-bs-ride="carousel">
-              <div className="carousel-inner">
-                {carouselImages.map((img, i) => (
-                  <div key={i} className={`carousel-item ${i === 0 ? 'active' : ''}`}>
-                    <img src={img} className="d-block w-100 baler-carousel-img" alt="Cardboard Baler" />
-                  </div>
-                ))}
-              </div>
+            <div className="custom-carousel">
+              <img
+                src={carouselImages[slide]}
+                className="carousel-img baler-carousel-img"
+                alt="Plastic Baler"
+              />
 
-              {/* Controls */}
-              <button className="carousel-control-prev" type="button" data-bs-target="#pcbCarousel" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon"></span>
+              <button
+                type="button"
+                className="carousel-btn left"
+                onClick={prevSlide}
+                aria-label="Previous image"
+              >
+                ❮
               </button>
-
-              <button className="carousel-control-next" type="button" data-bs-target="#pcbCarousel" data-bs-slide="next">
-                <span className="carousel-control-next-icon"></span>
+              <button
+                type="button"
+                className="carousel-btn right"
+                onClick={nextSlide}
+                aria-label="Next image"
+              >
+                ❯
               </button>
             </div>
           </div>

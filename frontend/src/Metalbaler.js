@@ -43,7 +43,17 @@ function Metalbaler() {
   const carouselImages = [metalImg1, metalImg2, metalImg3];
 
   const [selected, setSelected] = useState(balers[0]);
+  const [slide, setSlide] = useState(0);
 
+  const nextSlide = () => {
+    setSlide((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const prevSlide = () => {
+    setSlide((prev) =>
+      prev === 0 ? carouselImages.length - 1 : prev - 1
+    );
+  };
   return (
     <div>
       {/* Header Section */}
@@ -78,23 +88,32 @@ function Metalbaler() {
         <div className="row justify-content-center align-items-center">
           {/* CAROUSEL */}
           <div className="col-md-6 mb-4">
-            <div id="metalCarousel" className="carousel slide" data-bs-ride="carousel">
-              <div className="carousel-inner">
-                {carouselImages.map((img, i) => (
-                  <div key={i} className={`carousel-item ${i === 0 ? 'active' : ''}`}>
-                    <img src={img} className="d-block w-100 baler-carousel-img" alt={`Metal ${i+1}`} />
-                  </div>
-                ))}
-              </div>
+            <div className="custom-carousel">
+              <img
+                src={carouselImages[slide]}
+                className="carousel-img baler-carousel-img"
+                alt="Plastic Baler"
+              />
 
-              <button className="carousel-control-prev" type="button" data-bs-target="#metalCarousel" data-bs-slide="prev">
-                <span className="carousel-control-prev-icon"></span>
+              <button
+                type="button"
+                className="carousel-btn left"
+                onClick={prevSlide}
+                aria-label="Previous image"
+              >
+                ❮
               </button>
-              <button className="carousel-control-next" type="button" data-bs-target="#metalCarousel" data-bs-slide="next">
-                <span className="carousel-control-next-icon"></span>
+              <button
+                type="button"
+                className="carousel-btn right"
+                onClick={nextSlide}
+                aria-label="Next image"
+              >
+                ❯
               </button>
             </div>
           </div>
+
 
           {/* INFO */}
           <div className="col-md-6 mb-4 makecenter">

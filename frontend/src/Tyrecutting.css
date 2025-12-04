@@ -1,6 +1,45 @@
 /* =============================
    Tyre Cutting Page Styling
    ============================= */
+.baler-carousel-img {
+  height: 420px;
+  object-fit: contain;
+  background: #f8f8f8;
+  border-radius: 10px;
+}
+.custom-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.carousel-img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.carousel-btn.left {
+  left: 10px;
+}
+
+.carousel-btn.right {
+  right: 10px;
+}
 
 /* Section Header */
 .tyrecutting-header {
