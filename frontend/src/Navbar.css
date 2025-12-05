@@ -15,7 +15,8 @@
   background: #ffffff;
 }
 
-.ve-navbar__inner {
+/* container + inner */
+.container.ve-navbar__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,7 +57,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  flex-wrap: nowrap;   /* ✅ keep in single row on desktop */
+  flex-wrap: nowrap;
 }
 
 .ve-navbar__item {
@@ -293,6 +294,14 @@
     height: 40px;
   }
 
+  /* Make toggle visible on mobile */
+  .ve-navbar__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Mobile menu drawer (full width, drops below header) */
   .ve-navbar__menu {
     position: absolute;
     left: 0;
@@ -306,8 +315,10 @@
     opacity: 0;
     pointer-events: none;
     transition: transform 0.18s ease, opacity 0.18s ease;
-    max-height: 80vh;          /* scrollable mobile drawer */
+    max-height: 80vh;
     overflow-y: auto;
+    z-index: 998;
+    justify-content: flex-start;
   }
 
   .ve-navbar__menu--open {
@@ -328,15 +339,10 @@
     justify-content: flex-start;
   }
 
-  .ve-navbar__toggle {
-    display: inline-flex;
-  }
-
   .ve-navbar__item--has-mega {
     position: static;
   }
 
-  /* ✅ MOBILE MEGA MENU: collapsed when closed, only shown with --open */
   .ve-mega {
     position: static;
     left: auto;
@@ -347,15 +353,14 @@
     border-radius: 10px;
     margin-top: 6px;
     border: 1px solid rgba(226, 232, 240, 0.9);
-
-    display: none;            /* <-- hidden by default */
-    opacity: 1;               /* no fade needed on mobile */
+    display: none;
+    opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
 
   .ve-mega.ve-mega--open {
-    display: block;           /* <-- only when Solutions is opened */
+    display: block;
   }
 
   .ve-mega__grid {
@@ -374,5 +379,37 @@
     border-bottom: none;
     margin-bottom: 0;
     padding-bottom: 0;
+  }
+
+  /* ===== Header order: toggle left, logo right ===== */
+  .container.ve-navbar__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  /* make toggle appear left */
+  .ve-navbar__toggle {
+    order: 1;
+    margin-left: 6px;
+  }
+
+  /* ensure nav drawer sits under header (order not visually relevant due to absolute positioning) */
+  .ve-navbar__menu {
+    order: 2;
+  }
+
+  /* make logo appear on right */
+  .ve-navbar__brand {
+    order: 3;
+    margin-right: 8px;
+  }
+
+  /* ensure header tap area is comfortable */
+  .ve-navbar {
+    padding-top: 3px;
+    padding-bottom: 1px;
   }
 }
