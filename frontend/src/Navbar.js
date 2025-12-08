@@ -1,5 +1,5 @@
 // Navbar.jsx
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "./images/logo.png";
 import "./Navbar.css";
@@ -13,6 +13,32 @@ const Navbar = () => {
   const [isMobile, setIsMobile] = useState(
     typeof window !== "undefined" ? window.innerWidth < MOBILE_BREAKPOINT : false
   );
+
+  
+  const navbarRef = useRef(null); // ⬅️ ref for click-outside
+
+  // Close menus when clicking outside navbar
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!navbarRef.current) return;
+
+      // if click target is outside the navbar
+      if (!navbarRef.current.contains(event.target)) {
+        setProductsOpen(false);
+        setMobileOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, []);
+
+
 
   // Track scroll to elevate navbar
   useEffect(() => {
@@ -66,7 +92,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`ve-navbar ${elevated ? "ve-navbar--elevated" : ""}`}>
+    <header       ref={navbarRef}  className={`ve-navbar ${elevated ? "ve-navbar--elevated" : ""}`}>
       <div className="container ve-navbar__inner mt-1 mb-1">
         {/* Mobile toggle (CSS places it left on mobile) */}
         <button
