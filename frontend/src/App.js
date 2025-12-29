@@ -1,5 +1,5 @@
 import React from 'react';
-import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import {  BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
 import Footer from './Footer';
@@ -84,12 +84,12 @@ function App() {
         <Route exact path="/about" element={<AboutUs />} />
         <Route exact path="/enquire" element={<Enquire />} />
         <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/baler" element={<Baler />} />
+        <Route exact path="/tyre-baler" element={<Baler />} />
         <Route exact path="/tyrescrapbaler" element={<Tyrescrapbaler />} />
         <Route exact path="/plasticbaler" element={<Plasticbaler />} />
         <Route exact path="/pcb" element={<Pcb />} />
         <Route exact path="/metalbaler" element={<Metalbaler />} />
-        <Route exact path="/shredder" element={<Shredder />} />
+        <Route exact path="/primary-shredder" element={<Shredder />} />
         <Route exact path="/tyreshredder" element={<Tyreshredder />} />
         <Route exact path="/metalshredder" element={<Metalshredder />} />
         <Route exact path="/plasticshredder" element={<Plasticshredder />} />
@@ -112,7 +112,7 @@ function App() {
         <Route exact path="/ifat" element={<Ifat />} />
         <Route exact path="/completedTradefair1" element={<CompletedTradefair1 />} />
         <Route path="/other-equipment" element={<OtherEquipment />} />
-        <Route exact path="/secondaryShredder" element={<SecondaryShredder />} />
+        <Route exact path="/secondary-shredder" element={<SecondaryShredder />} />
 
         <Route path="/tumble-back-feeder" element={<TumbleBackFeeder />} />
         <Route path="/feeding-discharge-conveyers" element={<Conveyers />} />

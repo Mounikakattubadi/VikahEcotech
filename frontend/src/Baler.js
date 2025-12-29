@@ -35,6 +35,8 @@ import img1 from "./images/Applications/tyreshred1.jpg";
 import img2 from "./images/Applications/plas13.webp";
 import img3 from "./images/Applications/metalbaler2.jpg";
 import img4 from "./images/Applications/pcb1.webp";
+import { Helmet } from "react-helmet";
+
 
 function Baler() {
   useEffect(() => {
@@ -123,6 +125,22 @@ function Baler() {
 
   return (
     <div className="baler-page">
+
+
+      <Helmet>
+        <title>Tyre Baler Machine Manufacturer in India | Vikah Ecotech</title>
+        <meta
+          name="description"
+          content="Vikah Ecotech manufactures high-performance tyre baler machines for tyre recycling plants in India."
+        />
+        <meta
+          name="keywords"
+          content="tyre baler machine, tyre scrap baler, tyre recycling baler,Tyre Scrap Balers,Plastic Balers,Paper and Card Board Baler,Metal Baler, baler manufacturer india"
+        />
+        <link rel="canonical" href="https://vikahecotech.com/tyre-baler" />
+      </Helmet>
+
+      
       {/* HERO CAROUSEL */}
       <div className={styles.heroWrapper}>
         <div

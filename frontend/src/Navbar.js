@@ -179,7 +179,7 @@ const Navbar = () => {
                       High-density balers for tyre scrap, plastics, metals,
                       paper and cardboard.
                     </p>
-                    <Link to="/baler" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>
+                    <Link to="/tyre-baler" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>
                       Baler overview →
                     </Link>
                     <div className="ve-mega__group">
@@ -198,7 +198,7 @@ const Navbar = () => {
                       Heavy-duty primary shredders for bulky tyres, plastics,
                       metals and e-waste.
                     </p>
-                    <Link to="/shredder" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>Primary shredders →</Link>
+                    <Link to="/primary-shredder" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>Primary shredders →</Link>
                     <div className="ve-mega__group">
                       <span className="ve-mega__group-label">Applications</span>
                       <Link to="/tyreshredder" className="ve-mega__link" onClick={closeAll}>Tyre Shredder</Link>
@@ -216,7 +216,7 @@ const Navbar = () => {
                       Raspers &amp; secondary shredders for fine granulation and
                       uniform output.
                     </p>
-                    <Link to="/secondaryShredder" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>Secondary shredders →</Link>
+                    <Link to="/secondary-shredder" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>Secondary shredders →</Link>
                     <div className="ve-mega__group">
                       <span className="ve-mega__group-label">Applications</span>
                       <Link to="/rasper_secondaryshredders" className="ve-mega__link" onClick={closeAll}>Rasper</Link>

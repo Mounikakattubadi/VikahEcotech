@@ -34,6 +34,7 @@ import img2 from "./images/Applications/ewaste.jpg";
 import img3 from "./images/Applications/shredpcb6.jpg";
 import img4 from "./images/Applications/metalbaler1.jpg";
 import img5 from "./images/Applications/plas1.webp";
+import { Helmet } from "react-helmet";
 
 function Shredder() {
   useEffect(() => {
@@ -155,6 +156,27 @@ function Shredder() {
 
   return (
     <div className="baler-page">
+      <Helmet>
+        <title>
+          Primary Shredder Machine Manufacturer in India | Vikah Ecotech
+        </title>
+
+        <meta
+          name="description"
+          content="Vikah Ecotech is a leading manufacturer of primary shredder machines for tyre recycling, e-waste, metal, plastic, and paper waste processing in India. High-performance industrial shredders for reliable waste management."
+        />
+
+        <meta
+          name="keywords"
+          content="primary shredder, primary shredder machine, tyre shredder, metal shredder, plastic shredder, paper shredder, e-waste shredder, industrial shredder, waste shredder, shredder manufacturer india"
+        />
+
+        <link
+          rel="canonical"
+          href="https://vikahecotech.com/primary-shredder"
+        />
+      </Helmet>
+
       {/* HERO CAROUSEL */}
       <div className={styles.heroWrapper}>
         <div
@@ -193,7 +215,6 @@ function Shredder() {
             />
           </div>
           <div className="carousel-inner h-100">
-
             {/* Slide 1 – Tyre Shredders */}
             <div
               className={`carousel-item active ${styles.carouselItem}`}
@@ -208,11 +229,15 @@ function Shredder() {
                 <h1 className={styles.heading}>Tyre Shredders</h1>
 
                 <p className={styles.description}>
-                  Heavy-duty shredders designed to break down tyres into uniform pieces for efficient recycling.
+                  Heavy-duty shredders designed to break down tyres into uniform
+                  pieces for efficient recycling.
                 </p>
 
                 <div className={styles.btnRow}>
-                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+                  <button
+                    className={`btn ${styles.greenBtn}`}
+                    onClick={handleScrollToApplications}
+                  >
                     Explore Our Services ↗
                   </button>
                   <Link to="/ourproducts" className={`btn ${styles.whiteBtn}`}>
@@ -236,11 +261,15 @@ function Shredder() {
                 <h1 className={styles.heading}>E-Waste Shredders</h1>
 
                 <p className={styles.description}>
-                  Powerful shredders built to process electronic waste safely and prepare materials for recycling.
+                  Powerful shredders built to process electronic waste safely
+                  and prepare materials for recycling.
                 </p>
 
                 <div className={styles.btnRow}>
-                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+                  <button
+                    className={`btn ${styles.greenBtn}`}
+                    onClick={handleScrollToApplications}
+                  >
                     See Machines ↗
                   </button>
                   <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
@@ -264,11 +293,15 @@ function Shredder() {
                 <h1 className={styles.heading}>Paper & Cardboard Shredders</h1>
 
                 <p className={styles.description}>
-                  Designed to shred bulk paper and cartons into manageable particles for recycling workflows.
+                  Designed to shred bulk paper and cartons into manageable
+                  particles for recycling workflows.
                 </p>
 
                 <div className={styles.btnRow}>
-                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+                  <button
+                    className={`btn ${styles.greenBtn}`}
+                    onClick={handleScrollToApplications}
+                  >
                     See Machines ↗
                   </button>
                   <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
@@ -292,11 +325,15 @@ function Shredder() {
                 <h1 className={styles.heading}>Metal Shredders</h1>
 
                 <p className={styles.description}>
-                  High-torque shredders capable of reducing metal scrap into smaller, recyclable fragments.
+                  High-torque shredders capable of reducing metal scrap into
+                  smaller, recyclable fragments.
                 </p>
 
                 <div className={styles.btnRow}>
-                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+                  <button
+                    className={`btn ${styles.greenBtn}`}
+                    onClick={handleScrollToApplications}
+                  >
                     See Machines ↗
                   </button>
                   <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
@@ -320,11 +357,15 @@ function Shredder() {
                 <h1 className={styles.heading}>Plastic Shredders</h1>
 
                 <p className={styles.description}>
-                  Efficient shredders that break down plastic waste into uniform pieces for further processing.
+                  Efficient shredders that break down plastic waste into uniform
+                  pieces for further processing.
                 </p>
 
                 <div className={styles.btnRow}>
-                  <button className={`btn ${styles.greenBtn}`} onClick={handleScrollToApplications}>
+                  <button
+                    className={`btn ${styles.greenBtn}`}
+                    onClick={handleScrollToApplications}
+                  >
                     See Machines ↗
                   </button>
                   <Link to="/Contact" className={`btn ${styles.whiteBtn}`}>
@@ -333,11 +374,7 @@ function Shredder() {
                 </div>
               </div>
             </div>
-
           </div>
-
-
-
 
           {/* Arrow controls */}
           <button
@@ -368,8 +405,8 @@ function Shredder() {
             <div className="col-lg-6 mb-4">
               <h2 className="section-headingbaler mb-3">Key Features</h2>
               <p className="features-subtitle mb-4">
-                Core capabilities that make our primary shredders reliable, efficient, and
-                safe for intensive industrial use.
+                Core capabilities that make our primary shredders reliable,
+                efficient, and safe for intensive industrial use.
               </p>
 
               <div className="kf-vertical">
@@ -400,7 +437,6 @@ function Shredder() {
               </div>
             </div>
 
-
             {/* Applications – semi-circle timeline (use-case areas) */}
             <Col lg={6} className="mb-4">
               <div className="key-features-outer">
@@ -429,9 +465,7 @@ function Shredder() {
                         <div className="kf2-center">
                           <span className="kf2-connector" />
                           <div className="kf2-circle-outer">
-                            <div className="kf2-circle-inner">
-                              {stepNumber}
-                            </div>
+                            <div className="kf2-circle-inner">{stepNumber}</div>
                           </div>
                         </div>
 
@@ -460,8 +494,8 @@ function Shredder() {
             Benefits of Using Our Primary Shredders
           </h2>
           <p className="benefits-subtitle text-center mb-5">
-            Designed to optimize waste handling, reduce costs, and support sustainable operations
-            across diverse industries.
+            Designed to optimize waste handling, reduce costs, and support
+            sustainable operations across diverse industries.
           </p>
 
           <div className="benefits-grid">
@@ -482,7 +516,6 @@ function Shredder() {
           </div>
         </div>
       </section>
-
 
       {/* Product Carousel Section – Applications (scroll target) */}
       <div
