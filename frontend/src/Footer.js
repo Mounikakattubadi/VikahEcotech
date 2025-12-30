@@ -31,7 +31,7 @@ const Footer = () => {
             <ul className="list-unstyled footer-links">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/ourproducts">Products</Link></li>
+              <li><Link to="/ourproducts">Our Products</Link></li>
               <li><Link to="/tradefairs">Trade Fairs</Link></li>
               <li><Link to="/enquire">Enquire Us</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>

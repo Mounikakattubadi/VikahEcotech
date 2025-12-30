@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>https://vikahecotech.com/</loc>
     <priority>1.0</priority>
   </url>
 
+  <!-- Core category pages -->
   <url>
-    <loc>https://vikahecotech.com/tyre-baler</loc>
+    <loc>https://vikahecotech.com/balers</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://vikahecotech.com/primary-shredder</loc>
     <priority>0.9</priority>
   </url>
 
@@ -16,9 +23,26 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Specific product pages -->
   <url>
-    <loc>https://vikahecotech.com/primary-shredder</loc>
-    <priority>0.9</priority>
+    <loc>https://vikahecotech.com/tyre-scrap-balers</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Informational / supporting pages -->
+  <url>
+    <loc>https://vikahecotech.com/about</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://vikahecotech.com/ourproducts</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://vikahecotech.com/enquire</loc>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

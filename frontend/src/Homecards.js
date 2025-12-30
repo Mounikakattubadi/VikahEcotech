@@ -12,7 +12,7 @@ const cards = [
     bg: "bg1",
     btnClass: "btnBlue",
     image: Baler,
-    path: "/tyre-baler",
+    path: "/balers",
   },
   {
     title: "Primary Shredder",

@@ -84,8 +84,8 @@ function App() {
         <Route exact path="/about" element={<AboutUs />} />
         <Route exact path="/enquire" element={<Enquire />} />
         <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/tyre-baler" element={<Baler />} />
-        <Route exact path="/tyrescrapbaler" element={<Tyrescrapbaler />} />
+        <Route exact path="/balers" element={<Baler />} />
+        <Route exact path="/tyre-scrap-balers" element={<Tyrescrapbaler />} />
         <Route exact path="/plasticbaler" element={<Plasticbaler />} />
         <Route exact path="/pcb" element={<Pcb />} />
         <Route exact path="/metalbaler" element={<Metalbaler />} />

@@ -179,12 +179,12 @@ const Navbar = () => {
                       High-density balers for tyre scrap, plastics, metals,
                       paper and cardboard.
                     </p>
-                    <Link to="/tyre-baler" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>
+                    <Link to="/balers" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>
                       Baler overview →
                     </Link>
                     <div className="ve-mega__group">
                       <span className="ve-mega__group-label">Applications</span>
-                      <Link to="/tyrescrapbaler" className="ve-mega__link" onClick={closeAll}>Tyre Scrap Baler</Link>
+                      <Link to="/tyre-scrap-balers" className="ve-mega__link" onClick={closeAll}>Tyre Scrap Baler</Link>
                       <Link to="/plasticbaler" className="ve-mega__link" onClick={closeAll}>Plastic Balers</Link>
                       <Link to="/pcb" className="ve-mega__link" onClick={closeAll}>Paper &amp; Cardboard Balers</Link>
                       <Link to="/metalbaler" className="ve-mega__link" onClick={closeAll}>Metal Balers</Link>
