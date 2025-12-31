@@ -135,7 +135,7 @@ const Navbar = () => {
             {/* About */}
             <li className="ve-navbar__item">
               <NavLink
-                to="/About"
+                to="/about"
                 className={({ isActive }) =>
                   "ve-navbar__link" + (isActive ? " ve-navbar__link--active" : "")
                 }

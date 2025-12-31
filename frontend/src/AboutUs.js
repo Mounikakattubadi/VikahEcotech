@@ -13,6 +13,7 @@ import grouppic from "./images/eco sustain 2025/images/ecosust_15.jpg";
 import Baler from "./images/baler_bg.png";
 import shredderhdimg from "./images/Shedder _ Final PNG.png";
 import shred2 from "./images/R3.jpg";
+import { Helmet } from "react-helmet";
 
 const AboutUs = () => {
   useEffect(() => {
@@ -22,6 +23,23 @@ const AboutUs = () => {
 
   return (
     <div className={`${Aboutcss.aboutUsPage} text-dark`}>
+      <Helmet>
+        <title>
+          About Vikah Ecotech | Recycling Machinery Manufacturer in India
+        </title>
+
+        <meta
+          name="description"
+          content="Learn about Vikah Ecotech, a leading manufacturer of recycling machinery in India. Discover our vision, mission, engineering expertise, and commitment to sustainable waste management solutions."
+        />
+
+        <meta
+          name="keywords"
+          content="about vikah ecotech, recycling machinery manufacturer, waste management company india, recycling equipment manufacturer, sustainable recycling solutions"
+        />
+
+        <link rel="canonical" href="https://vikahecotech.com/about" />
+      </Helmet>
       {/* Hero using module CSS */}
       <div className={Aboutcss.aboutWrapper}>
         <img
@@ -37,7 +55,6 @@ const AboutUs = () => {
           </p>
         </div>
       </div>
-
       <Container className={Aboutcss.sectionPadding}>
         {/* Stats strip */}
         <Row className={`text-center mb-5 ${Aboutcss.aboutStatsRow}`}>
@@ -70,16 +87,15 @@ const AboutUs = () => {
             <div className={Aboutcss.aboutStatCard}>
               <i className={`fas fa-seedling ${Aboutcss.aboutStatIcon}`} />
               <div className={Aboutcss.aboutStatValue}>95%</div>
-              <div className={Aboutcss.aboutStatLabel}>Recycling Efficiency</div>
+              <div className={Aboutcss.aboutStatLabel}>
+                Recycling Efficiency
+              </div>
             </div>
           </Col>
-
         </Row>
 
         {/* Who We Are */}
-        <Row
-          className={`align-items-center mb-5 ${Aboutcss.aboutSection}`}
-        >
+        <Row className={`align-items-center mb-5 ${Aboutcss.aboutSection}`}>
           <Col md={6} className="text-center mb-4 mb-md-0">
             <div className={Aboutcss.aboutImgWrapper}>
               <img
@@ -169,9 +185,7 @@ const AboutUs = () => {
         {/* Why Vikah Ecotech */}
         <Row className={`mb-5 ${Aboutcss.aboutSection}`}>
           <Col>
-            <h2
-              className={`${Aboutcss.sectionHeading} text-center mb-4`}
-            >
+            <h2 className={`${Aboutcss.sectionHeading} text-center mb-4`}>
               Why Vikah Ecotech?
             </h2>
           </Col>

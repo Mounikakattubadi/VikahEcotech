@@ -6,6 +6,7 @@ import mainSpecImage from "./images/baler3.png";
 import balerImage from "./images/Applications/app1.webp";
 import img1 from "./images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg";
 import img2 from "./images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.49 AM(1).jpeg";
+import { Helmet } from "react-helmet";
 
 const BLT150 = () => {
   const [mainImage, setMainImage] = useState(img1);
@@ -36,12 +37,26 @@ const BLT150 = () => {
 
   return (
     <>
+      <Helmet>
+        <title>BLT-150 Tyre Scrap Baler Machine | Vikah Ecotech</title>
+
+        <meta
+          name="description"
+          content="BLT-150 is a compact and reliable tyre scrap baler machine by Vikah Ecotech, designed for small to mid-scale tyre recycling operations with efficient bale compaction."
+        />
+
+        <meta
+          name="keywords"
+          content="BLT-150 tyre baler, tyre scrap baler machine, tyre recycling baler, industrial tyre baler, baler machine for scrap tyres"
+        />
+
+        <link rel="canonical" href="https://vikahecotech.com/blt150" />
+      </Helmet>
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
           <h1 className="display-4">BLT-150</h1>
         </div>
       </header>
-
       {/* Rest of your existing JSX */}
       <div className="productpagetop">
         <div className="top-model-buttons">
@@ -49,7 +64,7 @@ const BLT150 = () => {
           <Link to="/blt200">
             <button className="model-btn">BLT-200</button>
           </Link>
-           <Link to="/blt250">
+          <Link to="/blt250">
             <button className="model-btn">BLT-250</button>
           </Link>
         </div>
@@ -112,9 +127,15 @@ const BLT150 = () => {
             dependable daily performance. An ideal choice for facilities seeking
             efficient tyre baling without oversized power consumption.
           </p>
+          <p>
+            The BLT series tyre balers are part of our
+            <a href="/tyre-scrap-balers"> tyre scrap baler machines </a>
+             under
+            <a href="/balers"> industrial baler systems </a>
+             designed for tyre recycling applications.
+          </p>
         </div>
       </div>
-
       <div className="features-container">
         <h2>FEATURES AND SPECIFICATIONS</h2>
         <div className="features-content">
@@ -134,9 +155,7 @@ const BLT150 = () => {
           </div>
         </div>
       </div>
-
       <h1 className="technical-heading">Technical Specifications</h1>
-
       <div className="featurestable">
         <h3>MODEL NO: BLT-150</h3>
         <table>
@@ -347,7 +366,6 @@ const BLT150 = () => {
           </tbody>
         </table>
       </div>
-
       <div className="buttons-container">
         <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
           <button className="login-button">Enquire Us</button>

@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Tyrecutting.css';
-import './Models.css';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./Tyrecutting.css";
+import "./Models.css";
 
 import shredderhdimg from "./images/Shedder _ Final PNG.png";
 import shredderhd from "./images/shredder_hd.jpg";
 import shredderhd1 from "./images/shredder_hd1.jpg";
+import { Helmet } from "react-helmet";
 
 function Tyreshredder() {
   useEffect(() => {
@@ -14,31 +15,31 @@ function Tyreshredder() {
 
   const shredders = [
     {
-      name: 'SHT6000',
-      type: 'Shredder',
-      power: '120 - 160 HP',
-      system: 'Robust Hydraulic System',
-      feature: 'Our SHT6000 is equipped with user-friendly controls.',
+      name: "SHT6000",
+      type: "Shredder",
+      power: "120 - 160 HP",
+      system: "Robust Hydraulic System",
+      feature: "Our SHT6000 is equipped with user-friendly controls.",
     },
     {
-      name: 'SHT8000',
-      type: 'Shredder',
-      power: '160 - 220 HP',
-      feature: 'Our SHT8000 is equipped with user-friendly controls.',
+      name: "SHT8000",
+      type: "Shredder",
+      power: "160 - 220 HP",
+      feature: "Our SHT8000 is equipped with user-friendly controls.",
     },
     {
-      name: 'SHT12000',
-      type: 'Shredder',
-      power: '220 - 280 HP',
-      system: 'Robust Hydraulic System',
-      feature: 'Our SHT12000 is equipped with user-friendly controls.',
+      name: "SHT12000",
+      type: "Shredder",
+      power: "220 - 280 HP",
+      system: "Robust Hydraulic System",
+      feature: "Our SHT12000 is equipped with user-friendly controls.",
     },
   ];
 
   // Shared carousel images
   const carouselImages = [shredderhdimg, shredderhd, shredderhd1];
 
-const [selected, setSelected] = useState(shredders[0]);
+  const [selected, setSelected] = useState(shredders[0]);
   const [slide, setSlide] = useState(0);
 
   const nextSlide = () => {
@@ -49,20 +50,36 @@ const [selected, setSelected] = useState(shredders[0]);
     setSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
   };
 
-
   return (
     <div>
+      <Helmet>
+        <title>Tyre Shredder Machine for Recycling | Vikah Ecotech</title>
+
+        <meta
+          name="description"
+          content="Vikah Ecotech manufactures heavy-duty tyre shredder machines designed for primary shredding of waste tyres in recycling plants. Reliable tyre shredders for industrial applications."
+        />
+
+        <meta
+          name="keywords"
+          content="tyre shredder machine, tyre shredding machine, tyre recycling shredder, primary tyre shredder, industrial tyre shredder"
+        />
+
+        <link rel="canonical" href="https://vikahecotech.com/tyreshredder" />
+      </Helmet>
       {/* Header */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
           <h1 className="display-4">Primary Shredders For Tyres</h1>
         </div>
       </header>
-
       <div className="container text-center my-4 balerbackimg">
         <p>
-          Our advanced shredders are engineered for powerful, efficient, and user-friendly tyre shredding operations.
-          These machines are built for performance with high horsepower and robust hydraulic systems.
+          Our primary tyre shredders are engineered for powerful, efficient, and
+          continuous tyre shredding operations in recycling plants. Built with
+          high horsepower drives and robust hydraulic systems, these industrial
+          shredders deliver reliable performance for processing whole tyres into
+          uniform shredded material for downstream recycling applications.
         </p>
 
         {/* Buttons */}
@@ -70,7 +87,9 @@ const [selected, setSelected] = useState(shredders[0]);
           {shredders.map((machine, index) => (
             <button
               key={index}
-              className={`btn btn-outline-success mx-1 my-1 ${selected.name === machine.name ? 'active' : ''}`}
+              className={`btn btn-outline-success mx-1 my-1 ${
+                selected.name === machine.name ? "active" : ""
+              }`}
               onClick={() => setSelected(machine)}
             >
               {machine.name}

@@ -5,6 +5,7 @@ import "./ProductsPage.css";
 import shredderhd from "./images/Applications/shredtyre6.jpg";
 import shredderhd1 from "./images/shredder_hd1.jpg";
 import shredderhdimg from "./images/Shedder _ Final PNG.png";
+import { Helmet } from "react-helmet";
 
 const Sht6000 = () => {
   const [mainImage, setMainImage] = useState(shredderhd);
@@ -34,6 +35,22 @@ const Sht6000 = () => {
   };
   return (
     <>
+      <Helmet>
+        <title>SHT-6000 Tyre Shredder Machine | Vikah Ecotech</title>
+
+        <meta
+          name="description"
+          content="SHT-6000 is a high-performance tyre shredder machine by Vikah Ecotech, designed for primary shredding of PCR and TBR tyres in tyre recycling plants."
+        />
+
+        <meta
+          name="keywords"
+          content="SHT-6000 tyre shredder, tyre shredder machine, primary tyre shredder, tyre recycling shredder, industrial tyre shredder"
+        />
+
+        <link rel="canonical" href="https://vikahecotech.com/sht6000" />
+      </Helmet>
+
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
           <h1 className="display-4">SHT-6000</h1>
@@ -115,9 +132,15 @@ const Sht6000 = () => {
             speed, ensuring quick and efficient processing of large volumes of
             tyres.
           </p>
+          <p>
+            The SHT-6000 tyre shredder is part of our 
+            <a href="/tyreshredder"> tyre shredder range </a>
+             under
+            <a href="/primary-shredder"> primary shredder systems </a>
+             for tyre recycling applications.
+          </p>
         </div>
       </div>
-
       <div className="features-container">
         <h2>FEATURES AND SPECIFICATIONS</h2>
         <div className="features-content">
@@ -139,7 +162,6 @@ const Sht6000 = () => {
           </div>
         </div>
       </div>
-
       <h1 className="technical-heading">Technical Specifications</h1>
       <div className="featurestable">
         <h3>Electrical System</h3>
@@ -174,7 +196,6 @@ const Sht6000 = () => {
           </tbody>
         </table>
       </div>
-
       <div className="cuttingsection">
         <h3>Cutting Section</h3>
         <table>
@@ -211,7 +232,6 @@ const Sht6000 = () => {
           </tbody>
         </table>
       </div>
-
       <div className="dimensions">
         <h3>Dimensions and Weight</h3>
         <table>
@@ -239,7 +259,6 @@ const Sht6000 = () => {
           </tbody>
         </table>
       </div>
-
       <div class="buttons-container">
         <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
           <button className="login-button">Enquire Us</button>
