@@ -68,6 +68,14 @@ function Home() {
       author: "K.Kumar",
       image: Baler,
     },
+    {
+      company: "GREEN EARTH RECYCLERS PTE LTD (SINGAPORE)",
+      feedback:
+        "We purchased a complete tyre recycling line from Vikah Ecotech, and the performance has been outstanding. The installation was smooth, and the machines run efficiently with minimal downtime. Their team provided excellent technical guidance and ensured we understood every part of the process. Truly a reliable partner for long-term industrial needs.",
+      author: "Daniel Wong",
+      image: tyrefolding, // or any image you prefer
+    },
+
   ];
 
   const [current, setCurrent] = React.useState(0);
@@ -86,24 +94,24 @@ function Home() {
 
   const [activeTab, setActiveTab] = useState("upcoming");
 
- const scrollCards = (direction) => {
-  const container = document.getElementById("tradeCardScroll");
-  const card = container.querySelector(".trade-card");
+  const scrollCards = (direction) => {
+    const container = document.getElementById("tradeCardScroll");
+    const card = container.querySelector(".trade-card");
 
-  if (!card || !container) return;
+    if (!card || !container) return;
 
-  const cardStyle = window.getComputedStyle(card);
-  const cardWidth = card.offsetWidth;
-  const gap = parseInt(cardStyle.marginRight || 20, 10); // fallback gap
+    const cardStyle = window.getComputedStyle(card);
+    const cardWidth = card.offsetWidth;
+    const gap = parseInt(cardStyle.marginRight || 20, 10); // fallback gap
 
-  const scrollAmount = cardWidth + gap;
+    const scrollAmount = cardWidth + gap;
 
-  if (direction === "left") {
-    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-  } else {
-    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-  }
-};
+    if (direction === "left") {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
 
 
   return (
@@ -150,17 +158,15 @@ function Home() {
         {/* Tab Buttons */}
         <div className="d-flex justify-content-center mb-4">
           <button
-            className={`btn-tab mx-2 ${
-              activeTab === "upcoming" ? "active" : ""
-            }`}
+            className={`btn-tab mx-2 ${activeTab === "upcoming" ? "active" : ""
+              }`}
             onClick={() => setActiveTab("upcoming")}
           >
             Upcoming Trade Fair
           </button>
           <button
-            className={`btn-tab mx-2 ${
-              activeTab === "completed" ? "active" : ""
-            }`}
+            className={`btn-tab mx-2 ${activeTab === "completed" ? "active" : ""
+              }`}
             onClick={() => setActiveTab("completed")}
           >
             Completed Trade Fairs
@@ -184,9 +190,8 @@ function Home() {
 
           {/* Scrollable Cards */}
           <div
-            className={`trade-scroll-wrapper d-flex ${
-              activeTab === "upcoming" ? "single-card" : ""
-            }`}
+            className={`trade-scroll-wrapper d-flex ${activeTab === "upcoming" ? "single-card" : ""
+              }`}
             id="tradeCardScroll"
           >
             {activeTab === "upcoming" && (
