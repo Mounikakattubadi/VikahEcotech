@@ -138,7 +138,7 @@ function Home() {
             to efficiently process waste materials and contribute to a circular
             economy.
           </p>
-          <Link to="/about">
+          <Link to="/About">
             <button className="btn btn-success">Learn More</button>
           </Link>
         </div>
