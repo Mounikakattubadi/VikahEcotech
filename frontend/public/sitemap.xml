@@ -40,6 +40,12 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://vikahecotech.com/rasper_secondaryshredders</loc>
+    <priority>0.8</priority>
+  </url>
+
+
   <!-- ========================= -->
   <!-- Model Pages – Tyre Shredders -->
   <!-- ========================= -->
@@ -73,6 +79,20 @@
 
   <url>
     <loc>https://vikahecotech.com/blt250</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ========================= -->
+  <!-- Model Pages – Secondary shredders -->
+  <!-- ========================= -->
+
+  <url>
+    <loc>https://vikahecotech.com/rst4000</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://vikahecotech.com/rst6000</loc>
     <priority>0.7</priority>
   </url>
 
