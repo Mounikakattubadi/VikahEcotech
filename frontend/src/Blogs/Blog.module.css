@@ -1,0 +1,165 @@
+/* CARD LINK */
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* CARD MAIN */
+.uniqueCard {
+  border-radius: 22px;
+  overflow: visible;
+  transition: 0.45s ease;
+  background: transparent;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: fadeInUp 0.7s ease forwards;
+  opacity: 0;
+}
+
+/* FADE-IN ANIMATION */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(25px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Hover effect */
+.uniqueCard:hover {
+  transform: translateY(-12px) scale(1.02) rotateX(4deg) rotateY(-2deg);
+  box-shadow: 0 25px 40px rgba(0, 150, 60, 0.25);
+}
+
+/* ---------------- TOP WAVE (GREEN) ---------------- */
+.topWave {
+  background: linear-gradient(135deg, #12a852, #046e32);
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 22px;
+  border-top-right-radius: 22px;
+  padding: 30px 18px 10px;
+  display: flex;
+  align-items: flex-start;
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 0 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine swipe */
+.topWave::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  width: 160%;
+  height: 160%;
+  background: rgba(255, 255, 255, 0.18);
+  transform: rotate(25deg);
+  transition: 0.6s;
+  opacity: 0;
+}
+
+.uniqueCard:hover .topWave::after {
+  opacity: 1;
+  top: -70%;
+}
+
+/* Title */
+.topWave h3 {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+/* ---------------- IMAGE ---------------- */
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+}
+
+.machineImg {
+  width: 85%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.45s ease, box-shadow 0.3s ease;
+}
+
+/* Hover image movement */
+.uniqueCard:hover .machineImg {
+  transform: scale(1.07) translateY(-6px);
+  box-shadow: 0 22px 35px rgba(0, 120, 40, 0.3);
+}
+
+/* ---------------- BOTTOM CARD ---------------- */
+.bottomOval {
+  background: #ffffff;
+  margin-top: -30px;
+  padding: 22px;
+  border-radius: 0 0 22px 22px;
+  box-shadow: 0 8px 24px rgba(0, 50, 0, 0.12);
+  position: relative;
+  z-index: 5;
+  transition: 0.4s ease;
+}
+
+/* Hover lift */
+.uniqueCard:hover .bottomOval {
+  transform: translateY(-6px);
+}
+
+/* Text */
+.bottomOval h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #064d24;
+}
+
+.bottomOval p {
+  font-size: 0.9rem;
+  color: #444;
+  margin-top: 8px;
+}
+
+/* ---------------- BUTTON (GREEN) ---------------- */
+.readMoreBtn {
+  margin-top: 12px;
+  background: linear-gradient(135deg, #16b45d, #0a6a36);
+  color: #fff;
+  padding: 8px 18px;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 12px rgba(20, 160, 70, 0.4);
+}
+
+.readMoreBtn:hover {
+  background: linear-gradient(135deg, #0a6a36, #16b45d);
+  transform: scale(1.12);
+  box-shadow: 0 8px 24px rgba(0, 170, 70, 0.5);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .machineImg {
+    width: 92%;
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .machineImg {
+    width: 95%;
+    height: 150px;
+  }
+
+  .topWave {
+    height: 120px;
+  }
+}

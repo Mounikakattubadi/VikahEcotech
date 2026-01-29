@@ -1,0 +1,386 @@
+/* ==== HERO / TOP IMAGE (your original) ==== */
+
+/* Wrapper */
+.aboutWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Background Image */
+.image {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Light Greenish Overlay */
+.aboutWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(1, 88, 47, 0.413);
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+/* Text Overlay Section */
+.textOverlay {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  padding: 28px 40px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  backdrop-filter: blur(3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading styling */
+.textOverlay h1 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: #fefefe;
+}
+
+/* Subtitle text */
+.textOverlay p {
+  font-family: Cambria, Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #e6e6e6;
+}
+
+/* About Page Paragraph Block (optional if you use later) */
+.aboutpara {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6%;
+  background-color: #e9f4fb;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin-top: 50px;
+}
+
+.aboutpara p {
+  font-family: Cambria, Georgia, serif;
+  font-size: 1.25rem;
+  text-align: justify;
+  line-height: 1.9;
+  color: #333;
+}
+
+/* Section Title (generic) */
+.sectionTitle {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ==== PAGE WRAPPER & SPACING ==== */
+
+.aboutUsPage {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("../images/backimg6.png") center/cover no-repeat fixed;
+  min-height: 100vh;
+}
+
+.sectionPadding {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Each content block fade-in */
+.aboutSection {
+  animation: aboutFadeUp 0.5s ease-out;
+}
+
+/* ==== STATS STRIP ==== */
+
+.aboutStatsRow {
+  backdrop-filter: blur(6px);
+}
+
+.aboutStatCard {
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: 14px;
+  padding: 14px 10px;
+  color: #e5fdf5;
+  box-shadow: 0 14px 38px rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(34, 197, 94, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.aboutStatCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.9);
+  border-color: rgba(56, 189, 248, 0.7);
+}
+
+.aboutStatIcon {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+  color: #22c55e;
+}
+
+.aboutStatValue {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.aboutStatLabel {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+/* ==== IMAGES & CAROUSEL WRAPPERS ==== */
+
+.aboutImgWrapper,
+.aboutCarouselWrapper {
+  padding: 10px;
+  border-radius: 18px;
+  background: radial-gradient(
+    circle at top,
+    rgba(34, 197, 94, 0.12),
+    transparent
+  );
+}
+
+.aboutCarouselWrapper {
+  background: radial-gradient(
+    circle at top,
+    rgba(56, 189, 248, 0.15),
+    transparent
+  );
+}
+
+.aboutImg {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin: 0 auto;
+}
+
+.aboutImg:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.55);
+}
+
+.aboutCarousel .aboutImg {
+  max-height: 360px;
+  object-fit: contain;
+}
+
+/* ==== TEXT STYLES ==== */
+
+.sectionHeading {
+  font-size: 2rem;
+  font-weight: 650;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #22c55e, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.aboutSectionText {
+  font-size: 0.98rem;
+  color: #0f172a;
+  line-height: 1.7;
+  background-color: rgba(248, 250, 252, 0.95);
+  padding: 12px 14px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+.aboutList {
+  padding-left: 1.1rem;
+  margin: 6px 0 12px;
+  font-size: 0.96rem;
+  color: #0f172a;
+}
+
+.aboutList li {
+  margin-bottom: 4px;
+}
+
+/* ==== WHY VIKAH – FEATURE CARDS ==== */
+
+.aboutFeaturesRow {
+  row-gap: 18px;
+}
+
+.aboutFeatureCard {
+  background: rgba(15, 23, 42, 0.92);
+  color: #e5fdf5;
+  border-radius: 16px;
+  padding: 18px 16px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(34, 197, 94, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.aboutFeatureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.95);
+  border-color: rgba(56, 189, 248, 0.8);
+}
+
+.aboutFeatureIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+  background: radial-gradient(circle at top, #22c55e, #0f766e);
+  color: #f9fafb;
+}
+
+.aboutFeatureCard h5 {
+  font-size: 1.02rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.aboutFeatureCard p {
+  font-size: 0.92rem;
+  margin: 0;
+  color: #e5e7eb;
+}
+
+/* ==== GET IN TOUCH SECTION ==== */
+
+.getInTouchSection {
+  background: radial-gradient(circle at top left, #22c55e, #1d4ed8);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.85);
+  border-radius: 18px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.getInTouchSection a {
+  color: #fbbf24;
+}
+
+.getInTouchSection a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.getInTouchLink {
+  text-decoration: none;
+}
+
+.getInTouchLink:hover {
+  text-decoration: underline;
+}
+
+/* ==== CAROUSEL CONTROLS (GLOBAL SELECTORS) ==== */
+:global(.carousel-control-prev-icon),
+:global(.carousel-control-next-icon) {
+  filter: brightness(0) invert(1);
+  width: 20px;
+  height: 20px;
+}
+
+:global(.carousel-control-prev),
+:global(.carousel-control-next) {
+  opacity: 0.9 !important;
+  background: rgba(15, 23, 42, 0.35);
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+:global(.carousel-control-prev) {
+  left: 20px;
+}
+
+:global(.carousel-control-next) {
+  right: 20px;
+}
+
+/* ==== ANIMATION ==== */
+
+@keyframes aboutFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== RESPONSIVE ==== */
+
+@media (max-width: 992px) {
+  .sectionHeading {
+    text-align: center;
+  }
+
+  .aboutSectionText {
+    font-size: 0.95rem;
+  }
+
+  .aboutStatsRow {
+    margin-bottom: 2.5rem;
+  }
+
+  .image {
+    height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionPadding {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .aboutFeatureCard {
+    text-align: center;
+  }
+
+  .aboutFeatureIcon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .textOverlay {
+    padding: 20px 18px;
+  }
+
+  .textOverlay h1 {
+    font-size: 2.2rem;
+  }
+
+  .textOverlay p {
+    font-size: 1rem;
+  }
+}

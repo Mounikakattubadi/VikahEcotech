@@ -1,0 +1,599 @@
+/* ========= Header ========= */
+.baler-header {
+  background: linear-gradient(135deg, #006400, #32cd32);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.baler-header::before {
+  content: "♻";
+  font-size: 10rem;
+  color: rgba(255, 255, 255, 0.08);
+  position: absolute;
+  top: -30px;
+  left: -15px;
+  transform: rotate(-25deg);
+}
+
+.baler-header h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  display: inline-block;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 0.4rem;
+}
+
+/* ========= Intro text ========= */
+.description-below-heading,
+.baler-header p {
+  font-size: 1rem;
+  max-width: 780px;
+  margin: 0 auto;
+  color: #000;
+  line-height: 1.7;
+}
+
+/* ========= Section headings ========= */
+.section-headingbaler {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #228b22;
+  margin-bottom: 1.2rem;
+}
+
+/* ========= Background block ========= */
+.balerbackimg {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("../images/backimg6.png") center/cover no-repeat fixed;
+  padding: 3rem 0;
+  border-radius: 16px;
+}
+
+/* ========= KEY FEATURES – OLD LIST STYLE ========= */
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.feature-item {
+  border-left: 5px solid #32cd32;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.feature-item:hover {
+  transform: translateX(6px);
+}
+
+.feature-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #006400;
+}
+
+.feature-desc {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* ========= APPLICATIONS – DESKTOP TIMELINE ========= */
+.key-features-outer {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.key-features-title {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* center vertical spine */
+.kf2-timeline {
+  position: relative;
+  padding: 0;
+}
+
+.kf2-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background: #ccc;
+  transform: translateX(-50%);
+}
+
+/* row layout */
+.kf2-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* left text | circle | right text */
+  align-items: center;
+  margin: 1.2rem 3rem;
+}
+
+.kf2-text {
+  max-width: 220px;
+  font-size: 0.7rem;
+  color: #006400;
+  font-weight: 600;
+}
+
+.kf2-text-title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.kf2-row.left .kf2-text {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.kf2-row.right .kf2-text {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.kf2-empty {
+  min-height: 1px;
+}
+
+.kf2-center {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kf2-connector {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  border-bottom: 1px dotted #a0a0a0;
+}
+
+.kf2-row.left .kf2-connector {
+  left: 100%;
+}
+
+.kf2-row.right .kf2-connector {
+  right: 100%;
+}
+
+/* circles + semi-ring */
+.kf2-circle-outer {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.kf2-circle-outer::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  border: 5px solid #ffc107;
+  border-color: #ffc107 #ffc107 transparent #ffc107;
+}
+
+.kf2-row.right .kf2-circle-outer::before {
+  transform: rotate(90deg);
+}
+
+.kf2-row.left .kf2-circle-outer::before {
+  transform: rotate(-90deg);
+}
+
+.kf2-circle-inner {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.kf2-circle-inner::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  border-color: transparent rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) transparent;
+  transform: rotate(15deg);
+}
+
+/* ========= Other sections ========= */
+.app-list .list-group-item {
+  font-size: 0.95rem;
+  padding: 0.6rem 1rem;
+  border-left: 4px solid #2e8b57;
+  background-color: #f8fff8;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  transition: background 0.2s ease;
+}
+
+.app-list .list-group-item:hover {
+  background-color: #eaffea;
+}
+
+.carousel-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.get-in-touch-section {
+  background: linear-gradient(135deg, #228b22, #32cd32);
+  color: white;
+  font-weight: 500;
+  border-top: 5px solid #1b5e20;
+}
+
+/* ========= Tablet ========= */
+@media (max-width: 991.98px) {
+  .section-headingbaler {
+    text-align: center;
+  }
+
+  .feature-title,
+  .feature-desc {
+    text-align: left;
+  }
+
+  .kf2-row {
+    margin: 1rem 4.5rem;
+  }
+  .kf2-row.right .kf2-text{
+    padding-left: 2.5rem;
+  }
+}
+
+/* ========= Mobile – keep both sides, just smaller ========= */
+@media (max-width: 768px) {
+  /* keep the same 3 columns, just tighter */
+  .kf2-row {
+    grid-template-columns: 1fr auto 1fr;
+    margin: 0.6rem 2rem;
+  }
+
+  .kf2-text {
+    max-width: 120px;
+    font-size: 0.6rem;
+  }
+.kf2-text-title{
+  font-size: 0.9rem;
+}
+  .kf2-row.left .kf2-text {
+    padding-right: 0.4rem;
+  }
+
+  .kf2-row.right .kf2-text {
+    padding-left: 1.2rem;
+  }
+
+  .kf2-connector {
+    width: 22px;
+  }
+
+  .kf2-circle-outer {
+    width: 46px;
+    height: 46px;
+  }
+
+  .kf2-circle-inner {
+    width: 32px;
+    height: 32px;
+    font-size: 0.6rem;
+  }
+}
+/* ================== BENEFITS – MODERN GRID ================== */
+
+.benefits-wrapper {
+  background: linear-gradient(135deg, #f4fff7, #ffffff);
+}
+
+.benefits-subtitle {
+  max-width: 720px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+/* Card */
+.benefit-card {
+  position: relative;
+  padding: 1.6rem 1.4rem 1.5rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Soft gradient highlight on top edge */
+.benefit-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #32cd32, #00a86b, #8bc34a);
+  opacity: 0.9;
+}
+
+/* Glow on hover */
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.09);
+  border-color: rgba(50, 205, 50, 0.4);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+/* Number badge (top-right floating) */
+.benefit-number {
+  position: absolute;
+  top: 0.9rem;
+  right: 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #228b22;
+  background: rgba(222, 255, 227, 0.9);
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 139, 34, 0.3);
+}
+
+/* Icon circle */
+.benefit-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9rem;
+  background: radial-gradient(circle at 30% 0, #ffffff, #e8ffe8);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.07);
+}
+
+.benefit-icon i {
+  font-size: 1.3rem;
+  color: #1b5e20;
+}
+
+/* Text */
+.benefit-title-modern {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #004d1a;
+  margin-bottom: 0.4rem;
+}
+
+.benefit-desc-modern {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Slight stagger effect on larger screens */
+@media (min-width: 992px) {
+  .benefit-card:nth-child(2),
+  .benefit-card:nth-child(5),
+  .benefit-card:nth-child(8) {
+    transform: translateY(6px);
+  }
+
+  .benefit-card:nth-child(3),
+  .benefit-card:nth-child(6),
+  .benefit-card:nth-child(9) {
+    transform: translateY(12px);
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Small devices tweaks */
+@media (max-width: 575.98px) {
+  .benefits-grid {
+    gap: 1.2rem;
+  }
+
+  .benefit-card {
+    padding: 1.3rem 1.1rem 1.2rem;
+  }
+
+  .benefit-number {
+    font-size: 0.78rem;
+    top: 0.7rem;
+    right: 0.85rem;
+  }
+
+  .benefit-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .benefit-title-modern {
+    font-size: 0.95rem;
+  }
+
+  .benefit-desc-modern {
+    font-size: 0.85rem;
+  }
+}
+/* ============ KEY FEATURES – VERTICAL TIMELINE ============ */
+
+.kf-vertical {
+  position: relative;
+  padding-left: 0.4rem;
+}
+
+/* Each row */
+.kf-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+/* Left column: line + node */
+.kf-icon-col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 34px;
+}
+
+/* vertical line */
+.kf-line {
+  position: absolute;
+  top: 0;
+  bottom: -1.4rem; /* so line continues past the node a bit */
+  width: 2px;
+  background: linear-gradient(180deg, #a5d6a7, #e0f2f1);
+  opacity: 0.9;
+}
+
+/* node wrapper */
+.kf-node {
+  position: relative;
+  z-index: 1;
+  margin-top: 0.15rem;
+  margin-bottom: 0.5rem;
+}
+
+/* circular node */
+.kf-node-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 0, #ffffff, #e8f5e9);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(46, 125, 50, 0.25);
+}
+
+.kf-node-inner i {
+  font-size: 1rem;
+  color: #2e7d32;
+}
+
+/* Right content */
+.kf-content {
+  flex: 1;
+  padding: 0.6rem 0.9rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    border-color 0.22s ease,
+    background 0.22s ease;
+}
+
+.kf-item:hover .kf-content {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(50, 205, 50, 0.3);
+  background: #ffffff;
+}
+
+/* Small label above title */
+.kf-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2e7d32;
+  margin-bottom: 0.15rem;
+}
+
+/* Title + description */
+.kf-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #004d1a;
+  margin-bottom: 0.25rem;
+}
+
+.kf-desc {
+  font-size: 0.88rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Last item: stop the line at bottom */
+.kf-item:last-child .kf-line {
+  bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 575.98px) {
+  .kf-item {
+    gap: 0.8rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .kf-content {
+    padding: 0.55rem 0.75rem;
+  }
+
+  .kf-node-inner {
+    width: 28px;
+    height: 28px;
+  }
+
+  .kf-title {
+    font-size: 0.94rem;
+  }
+
+  .kf-desc {
+    font-size: 0.84rem;
+  }
+}
