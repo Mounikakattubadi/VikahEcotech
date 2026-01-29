@@ -34,6 +34,8 @@ const faqsData = [
 ];
 
 const SecondaryShredderBlog2 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction: Overview of Secondary Shredders" },
     { id: "workflow", title: "Optimized Workflow: How Secondary Shredders Improve Operations" },

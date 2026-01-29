@@ -230,23 +230,23 @@ function App() {
 
 
             {/* blogs pages */}
-        <Route exact path="/BlogLandingPage" element={<BlogLandingPage />} />
-        <Route exact path="/BalerBlog1" element={<BalerBlog1 />} />
-        <Route exact path="/BalerBlog2" element={<BalerBlog2 />} />
-        <Route exact path="/BalerBlog3" element={<BalerBlog3 />} />
-        <Route exact path="/BalerBlog4" element={<BalerBlog4 />} />
-        <Route exact path="/ShredderBlog1" element={<ShredderBlog1 />} />
-        <Route exact path="/ShredderBlog2" element={<ShredderBlog2 />} />
-        <Route exact path="/ShredderBlog3" element={<ShredderBlog3 />} />
-        <Route exact path="/ShredderBlog4" element={<ShredderBlog4 />} />
-        <Route exact path="/SecondaryShredderBlog1" element={<SecondaryShredderBlog1 />} />
-        <Route exact path="/SecondaryShredderBlog2" element={<SecondaryShredderBlog2 />} />
-        <Route exact path="/SecondaryShredderBlog3" element={<SecondaryShredderBlog3 />} />
-        <Route exact path="/SecondaryShredderBlog4" element={<SecondaryShredderBlog4 />} />
-        <Route exact path="/OtherEquipmentBlog1" element={<OtherEquipmentBlog1 />} />
-        <Route exact path="/OtherEquipmentBlog2" element={<OtherEquipmentBlog2 />} />
-        <Route exact path="/OtherEquipmentBlog3" element={<OtherEquipmentBlog3 />} />
-        <Route exact path="/OtherEquipmentBlog4" element={<OtherEquipmentBlog4 />} />
+        <Route exact path="/bloglandingpage" element={<BlogLandingPage />} />
+        <Route exact path="/baler-blog1" element={<BalerBlog1 />} />
+        <Route exact path="/baler-blog2" element={<BalerBlog2 />} />
+        <Route exact path="/baler-blog3" element={<BalerBlog3 />} />
+        <Route exact path="/baler-blog4" element={<BalerBlog4 />} />
+        <Route exact path="/shredder-blog1" element={<ShredderBlog1 />} />
+        <Route exact path="/shredder-blog2" element={<ShredderBlog2 />} />
+        <Route exact path="/shredder-blog3" element={<ShredderBlog3 />} />
+        <Route exact path="/shredder-blog4" element={<ShredderBlog4 />} />
+        <Route exact path="/secondaryshredder-blog1" element={<SecondaryShredderBlog1 />} />
+        <Route exact path="/secondaryshredder-blog2" element={<SecondaryShredderBlog2 />} />
+        <Route exact path="/secondaryshredder-blog3" element={<SecondaryShredderBlog3 />} />
+        <Route exact path="/secondaryshredder-blog4" element={<SecondaryShredderBlog4 />} />
+        <Route exact path="/otherequipment-blog1" element={<OtherEquipmentBlog1 />} />
+        <Route exact path="/otherequipment-blog2" element={<OtherEquipmentBlog2 />} />
+        <Route exact path="/otherequipment-blog3" element={<OtherEquipmentBlog3 />} />
+        <Route exact path="/otherequipment-blog4" element={<OtherEquipmentBlog4 />} />
         
 
 

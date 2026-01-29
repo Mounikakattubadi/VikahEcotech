@@ -27,6 +27,8 @@ const faqsData = [
 ];
 
 const OtherEquipmentBlog4 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction: Overview of Folding & Packing Equipment" },
     { id: "how-it-works", title: "How Folding Machines Work: Step by Step" },

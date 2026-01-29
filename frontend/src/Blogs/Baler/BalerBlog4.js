@@ -27,6 +27,8 @@ const faqsData = [
 ];
 
 const BalerBlog4 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction" },
     { id: "importance", title: "Importance of Industrial Balers" },

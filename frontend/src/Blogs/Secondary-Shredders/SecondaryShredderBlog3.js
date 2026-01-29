@@ -38,6 +38,8 @@ const faqsData = [
 ];
 
 const SecondaryShredderBlog4 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction: Industrial Shredding Overview" },
     { id: "types", title: "Types of Secondary Shredders & Their Applications" },

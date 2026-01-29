@@ -40,6 +40,8 @@ const faqsData = [
 ];
 
 const OtherEquipmentBlog1 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction" },
     { id: "how-it-works", title: "How It Works" },

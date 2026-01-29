@@ -34,6 +34,8 @@ const faqsData = [
 ];
 
 const ShredderBlog2 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction to Industrial Shredders and Their Role in Efficiency" },
     { id: "efficiency", title: "Maximizing Efficiency in Industrial Operations Using Shredders" },

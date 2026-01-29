@@ -31,6 +31,9 @@ const faqsData = [
 ];
 
 const BalerBlog2SEOImages = () => {
+
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "intro", title: "Why Industrial Facilities Invest in Balers" },
     { id: "challenges", title: "Major Challenges in Plastic & General Waste Management" },

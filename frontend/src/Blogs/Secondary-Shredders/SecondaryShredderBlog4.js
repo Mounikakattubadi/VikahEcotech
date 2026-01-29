@@ -26,6 +26,8 @@ const faqsData = [
 ];
 
 const SecondaryShredderBlog4 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction" },
     { id: "productivity", title: "Enhanced Productivity" },

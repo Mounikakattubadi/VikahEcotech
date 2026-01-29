@@ -42,6 +42,8 @@ const faqsData = [
 ];
 
 const SecondaryShredderBlog1 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction: Secondary Shredders Overview" },
     { id: "role", title: "Role in Industrial Material Reduction & Recycling" },

@@ -36,6 +36,8 @@ const faqsData = [
 ];
 
 const OtherEquipmentBlog3 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction: Importance of Tyre Pre-Processing" },
     { id: "how-it-works", title: "How Tyre Cutting & Preparation Equipment Works" },

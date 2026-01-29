@@ -26,6 +26,8 @@ const faqsData = [
 ];
 
 const ShredderBlog1 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction to Industrial Shredders and Their Role in Waste Management" },
     { id: "importance", title: "Why Industrial Shredders Are Critical for Manufacturing and Recycling Operations" },

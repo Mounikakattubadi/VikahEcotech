@@ -38,6 +38,8 @@ const faqsData = [
 ];
 
 const ShredderBlog3 = () => {
+    useEffect(() => window.scrollTo(0, 0), []);
+
   const sections = [
     { id: "introduction", title: "Introduction: Industrial Shredders and Modern Waste Management" },
     { id: "role", title: "The Role of Shredders in Efficient Waste Management" },
