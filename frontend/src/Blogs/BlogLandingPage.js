@@ -82,7 +82,7 @@ const blogsData = [
     {
         title: "Shredding Technology Trends 2025",
         description: "Discover new shredder technologies designed for better productivity and lower maintenance.",
-        route: "/shredder-blog5",
+        route: "/shredder-blog4",
         image: Img16,
         category: "Shredder"
     },
