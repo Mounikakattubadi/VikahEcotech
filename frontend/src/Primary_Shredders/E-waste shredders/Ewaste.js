@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../../Pages/ProductsPage.css';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import "../../Pages/ProductsPage.css";
 
 import she800_main from "../../images/Applications/shredewaste.jpeg";
 import she800_angle1 from "../../images/Applications/shredewaste2.webp";
@@ -8,165 +9,216 @@ import she800_specs from "../../images/Applications/shredewaste3.webp";
 import she800_angle2 from "../../images/Applications/shredewaste4.jpg";
 
 const Ewaste = () => {
+  const [mainImage, setMainImage] = useState(she800_main);
 
-    const [mainImage, setMainImage] = useState(she800_main);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-    const handleImageClick = (img) => {
-        setMainImage(img);
-    };
+  const machinery = "e-waste-primary-shredder";
+  const model = "SHE-400";
 
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+  const handleImageClick = (img) => setMainImage(img);
 
-    const machinery = 'e-waste-primary-shredder';
-    const model = 'SHE-400';
+  const handleDownload = (fileName) => {
+    const link = document.createElement("a");
+    link.href = `${process.env.PUBLIC_URL}/${fileName}.pdf`;
+    link.download = `${fileName}.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
-    const handleDownload = (fileName) => {
-        const link = document.createElement('a');
-        link.href = `${process.env.PUBLIC_URL}/${fileName}.pdf`;
-        link.download = `${fileName}.pdf`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    };
+  return (
+    <>
+      {/* ================= SEO HELMET ================= */}
+      <Helmet>
+        <title>
+          E-Waste Shredder Machine Manufacturer in India | SHE-400 | Vikah Ecotech
+        </title>
 
-    return (
-        <>
-            <div className='productpagetop'>
-                <div className='imagetop'>
-                    <div className="main-image-container">
-                        <div className="main-image-wrapper">
-                            <img
-                                src={mainImage}
-                                alt="SHE 400 E-Waste Shredder main view by Vikah Ecotech"
-                                className="sht2000img"
-                            />
-                            <span
-                                className="view-image-icon"
-                                onClick={() => window.open(mainImage, '_blank', 'noopener,noreferrer')}
-                                title="View full image"
-                            >
-                                🔍
-                            </span>
-                        </div>
-                    </div>
+        <meta
+          name="description"
+          content="SHE-400 is a heavy-duty e-waste shredder machine by Vikah Ecotech, designed for safe and efficient shredding of electronic waste, PCB boards, appliances, and electrical scrap."
+        />
 
-                    <div className="additional-images">
-                        <div>
-                            <img
-                                className="angle1"
-                                src={she800_angle1}
-                                alt="Angle 1"
-                                onClick={() => handleImageClick(she800_angle1)}
-                            />
-                        </div>
-                        <div>
-                            <img
-                                className="angle2"
-                                src={she800_main}
-                                alt="Angle 2"
-                                onClick={() => handleImageClick(she800_main)}
-                            />
-                        </div>
-                        <div>
-                            <img
-                                className="angle3"
-                                src={she800_angle2}
-                                alt="Angle 3"
-                                onClick={() => handleImageClick(she800_angle2)}
-                            />
-                        </div>
-                    </div>
-                </div>
+        <meta
+          name="keywords"
+          content="e-waste shredder machine, electronic waste shredder, pcb shredder, e waste recycling machine, primary e-waste shredder, shredder manufacturer india"
+        />
 
-                <div className="productdetails">
-                    <h1>{model}</h1>
-                    <p>
-                        The SHE-800 E-Waste Primary Shredder is a heavy-duty industrial machine
-                        engineered for shredding electronic waste such as PCB boards,
-                        laptops, mobile phones, appliances, and mixed electrical scrap.
-                        It delivers high torque, slow RPM shredding ideal for safe and
-                        efficient size reduction before secondary processing.
-                        Designed for recycling plants requiring continuous and reliable operation.
-                    </p>
-                </div>
+        <link
+          rel="canonical"
+          href="https://vikahecotech.com/ewaste"
+        />
+
+        {/* Product Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: "SHE-400 E-Waste Shredder Machine",
+            description:
+              "Heavy-duty primary e-waste shredder for shredding electronic waste, PCB boards, appliances, and electrical scrap.",
+            brand: {
+              "@type": "Brand",
+              name: "Vikah Ecotech",
+            },
+            manufacturer: {
+              "@type": "Organization",
+              name: "Vikah Ecotech",
+              url: "https://vikahecotech.com",
+            },
+            category: "E-Waste Recycling Machinery",
+          })}
+        </script>
+      </Helmet>
+
+      {/* ================= HEADER ================= */}
+      <header className="tyrecutting-header text-white text-center py-5">
+        <div className="container">
+          <h1 className="display-4">E-Waste Shredder Machine</h1>
+          <p className="lead">
+            Primary Shredding Solution for Electronic Waste Recycling
+          </p>
+        </div>
+      </header>
+
+      {/* ================= PRODUCT TOP ================= */}
+      <div className="productpagetop">
+        <div className="imagetop">
+          <div className="main-image-container">
+            <div className="main-image-wrapper">
+              <img
+                src={mainImage}
+                alt="SHE-400 e-waste shredder machine by Vikah Ecotech"
+                className="sht2000img"
+                loading="lazy"
+              />
+              <span
+                className="view-image-icon"
+                onClick={() =>
+                  window.open(mainImage, "_blank", "noopener,noreferrer")
+                }
+                title="View full image"
+              >
+                🔍
+              </span>
             </div>
+          </div>
 
-            <div className='features-container'>
-                <h2>FEATURES AND SPECIFICATIONS</h2>
+          <div className="additional-images">
+            <img
+              src={she800_angle1}
+              alt="E-waste shredder side view"
+              onClick={() => handleImageClick(she800_angle1)}
+            />
+            <img
+              src={she800_main}
+              alt="E-waste shredder front view"
+              onClick={() => handleImageClick(she800_main)}
+            />
+            <img
+              src={she800_angle2}
+              alt="E-waste shredder cutting chamber"
+              onClick={() => handleImageClick(she800_angle2)}
+            />
+          </div>
+        </div>
 
-                <div className='features-content'>
-                    <img src={she800_specs} alt="Specifications" className="specifications-image" />
+        <div className="productdetails">
+          <h1>SHE-400 E-Waste Shredder</h1>
+          <p>
+            The <strong>SHE-400 E-Waste Primary Shredder</strong> is an industrial
+            shredding machine engineered for efficient processing of electronic
+            waste such as PCB boards, mobile phones, laptops, household appliances,
+            and mixed electrical scrap. Built with a high-torque, low-speed
+            shredding mechanism, it ensures safe size reduction while protecting
+            valuable recoverable materials for downstream recycling processes.
+          </p>
+        </div>
+      </div>
 
-                    <div className='sht200specification'>
-                        <p>
-                            ➤ Robust twin-shaft shredding technology<br />
-                            ➤ High-torque, low-speed rotor suitable for e-waste<br />
-                            ➤ Hardened alloy steel blades<br />
-                            ➤ Auto-reverse overload protection<br />
-                            ➤ Shock-absorbing chamber design<br />
-                            ➤ PLC integrated automation<br />
-                            ➤ Low noise & low vibration operation<br />
-                        </p>
-                    </div>
-                </div>
-            </div>
+      {/* ================= FEATURES ================= */}
+      <div className="features-container">
+        <h2>Features & Advantages</h2>
 
-            <h1 className="technical-heading">Technical Specifications</h1>
+        <div className="features-content">
+          <img
+            src={she800_specs}
+            alt="E-waste shredder specifications"
+            className="specifications-image"
+          />
 
-            <div className="featurestable">
-                <h3>Electrical System</h3>
-                <table>
-                    <tbody>
-                        <tr><td>Total Power</td><td>60 HP</td></tr>
-                        <tr><td>No Of Motors</td><td>2</td></tr>
-                        <tr><td>Voltage</td><td>As per Client Requirement</td></tr>
-                        <tr><td>Drive</td><td>Electric</td></tr>
-                        <tr><td>Panel</td><td>MCC Type, PLC Controlled</td></tr>
-                        <tr><td>Motor Make</td><td>Siemens / Crompton</td></tr>
-                    </tbody>
-                </table>
-            </div>
+          <div className="sht200specification">
+            <p>
+              ➤ Twin-shaft high-torque shredding technology<br />
+              ➤ Low-speed operation for safe e-waste processing<br />
+              ➤ Hardened alloy steel cutting blades<br />
+              ➤ Automatic overload reverse protection<br />
+              ➤ PLC-based automation and monitoring<br />
+              ➤ Low noise and vibration design<br />
+            </p>
+          </div>
+        </div>
+      </div>
 
-            <div className="cuttingsection">
-                <h3>Cutting Section</h3>
-                <table>
-                    <tbody>
-                        <tr><td>Cutting Chamber</td><td>800 x 700 mm</td></tr>
-                        <tr><td>Rotor Diameter</td><td>320 mm</td></tr>
-                        <tr><td>Blade Thickness</td><td>40 mm</td></tr>
-                        <tr><td>Hopper Height</td><td>1200 mm</td></tr>
-                        <tr><td>Discharge Height</td><td>1150 mm</td></tr>
-                        <tr><td>Feeding Mechanism</td><td>Auto</td></tr>
-                        <tr><td>Processing Capacity</td><td>4000–6000 Kg/hr</td></tr>
-                    </tbody>
-                </table>
-            </div>
+      {/* ================= TECHNICAL SPECS ================= */}
+      <h2 className="technical-heading">Technical Specifications</h2>
 
-            <div className="dimensions">
-                <h3>Dimensions and Weight</h3>
-                <table>
-                    <tbody>
-                        <tr><td>Length</td><td>3500 mm</td></tr>
-                        <tr><td>Width</td><td>1500 mm</td></tr>
-                        <tr><td>Height</td><td>2400 mm</td></tr>
-                        <tr><td>Weight (Approx)</td><td>7000 Kg</td></tr>
-                    </tbody>
-                </table>
-            </div>
+      <div className="featurestable">
+        <h3>Electrical System</h3>
+        <table>
+          <tbody>
+            <tr><td>Total Power</td><td>60 HP</td></tr>
+            <tr><td>No. of Motors</td><td>2</td></tr>
+            <tr><td>Voltage</td><td>As per Client Requirement</td></tr>
+            <tr><td>Drive</td><td>Electric</td></tr>
+            <tr><td>Control Panel</td><td>MCC / PLC Controlled</td></tr>
+            <tr><td>Motor Make</td><td>Siemens / Crompton</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-            <div className="buttons-container">
-                <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
-                    <button className="login-button">Enquire Us</button>
-                </Link>
+      <div className="cuttingsection">
+        <h3>Cutting Section</h3>
+        <table>
+          <tbody>
+            <tr><td>Cutting Chamber</td><td>800 × 700 mm</td></tr>
+            <tr><td>Rotor Diameter</td><td>320 mm</td></tr>
+            <tr><td>Blade Thickness</td><td>40 mm</td></tr>
+            <tr><td>Processing Capacity</td><td>4000 – 6000 kg/hr</td></tr>
+          </tbody>
+        </table>
+      </div>
 
-                <button className="downloadspeci-button" onClick={() => handleDownload('she800')}>
-                    Download Specifications
-                </button>
-            </div>
-        </>
-    );
+      <div className="dimensions">
+        <h3>Dimensions & Weight</h3>
+        <table>
+          <tbody>
+            <tr><td>Length</td><td>3500 mm</td></tr>
+            <tr><td>Width</td><td>1500 mm</td></tr>
+            <tr><td>Height</td><td>2400 mm</td></tr>
+            <tr><td>Weight</td><td>Approx. 7000 kg</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* ================= CTA ================= */}
+      <div className="buttons-container">
+        <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
+          <button className="login-button">Enquire Now</button>
+        </Link>
+
+        <button
+          className="downloadspeci-button"
+          onClick={() => handleDownload("she800")}
+        >
+          Download Specifications
+        </button>
+      </div>
+    </>
+  );
 };
 
 export default Ewaste;

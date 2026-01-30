@@ -45,6 +45,41 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://vikahecotech.com/plasticbaler</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://vikahecotech.com/pcb</loc>
+    <priority>0.8</priority>
+  </url>
+
+    <url>
+      <loc>https://vikahecotech.com/metalbaler</loc>
+      <priority>0.8</priority>
+    </url>
+  <url>
+    <loc>https://vikahecotech.com/plasticshredder</loc>
+    <priority>0.8</priority>
+  </url>
+
+    <url>
+    <loc>https://vikahecotech.com/papershredder</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+  <loc>https://vikahecotech.com/shm4000</loc>
+  <priority>0.8</priority>
+  </url>
+
+  <url>
+  <loc>https://vikahecotech.com/ewaste</loc>
+  <priority>0.8</priority>
+  </url>
+
+
 
   <!-- ========================= -->
   <!-- Model Pages – Tyre Shredders -->

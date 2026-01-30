@@ -35,6 +35,7 @@ const Footer = () => {
               <li><Link to="/tradefairs">Trade Fairs</Link></li>
               <li><Link to="/enquire">Enquire Us</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
+              <li><Link to="/bloglandingpage">Blogs</Link></li>
             </ul>
           </Col>
 

@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import "../../Other Equipments/Tyrecutting.css";
 import "../../Pages/Models.css";
 
-import metalImg1 from '../../images/Applications/appm1.jpg';
-import metalImg2 from '../../images/Applications/appm4.jpg';
-import metalImg3 from '../../images/Applications/appm6.jpg';
+import metalImg1 from "../../images/Applications/appm1.jpg";
+import metalImg2 from "../../images/Applications/appm4.jpg";
+import metalImg3 from "../../images/Applications/appm6.jpg";
 
 function Metalbaler() {
   useEffect(() => {
@@ -14,69 +16,114 @@ function Metalbaler() {
 
   const balers = [
     {
-      name: 'BLM150',
-      type: 'Metal Baler',
-      force: '150 Ton',
-      weight: '200–350 kg (per bale)',
-      note: 'Designed for compressing light-to-medium ferrous & non-ferrous metal scrap.',
-      image: metalImg1,
+      name: "BLM150",
+      type: "Metal Scrap Baler",
+      force: "150 Ton",
+      weight: "200–350 kg per bale",
+      note: "Suitable for compacting light to medium ferrous and non-ferrous metal scrap such as aluminum and mild steel.",
     },
     {
-      name: 'BLM200',
-      type: 'Metal Baler',
-      force: '200 Ton',
-      weight: '250–450 kg (per bale)',
-      note: 'Ideal for medium-density steel scrap, alloy scrap, and industrial metal recycling.',
-      image: metalImg2,
+      name: "BLM200",
+      type: "Metal Scrap Baler",
+      force: "200 Ton",
+      weight: "250–450 kg per bale",
+      note: "Designed for medium-density steel scrap, alloy scrap, and industrial metal recycling applications.",
     },
     {
-      name: 'BLM250',
-      type: 'Metal Baler',
-      force: '250 Ton',
-      weight: '300–500 kg (per bale)',
-      note: 'Heavy-duty baler engineered for high-volume ferrous & non-ferrous metal compaction.',
-      image: metalImg3,
+      name: "BLM250",
+      type: "Heavy-Duty Metal Baler",
+      force: "250 Ton",
+      weight: "300–500 kg per bale",
+      note: "High-performance baler engineered for high-volume ferrous and non-ferrous metal compaction.",
     },
   ];
 
-  // Carousel images (same for all models)
   const carouselImages = [metalImg1, metalImg2, metalImg3];
 
   const [selected, setSelected] = useState(balers[0]);
   const [slide, setSlide] = useState(0);
 
-  const nextSlide = () => {
+  const nextSlide = () =>
     setSlide((prev) => (prev + 1) % carouselImages.length);
-  };
 
-  const prevSlide = () => {
-    setSlide((prev) =>
-      prev === 0 ? carouselImages.length - 1 : prev - 1
-    );
-  };
+  const prevSlide = () =>
+    setSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
+
   return (
     <div>
-      {/* Header Section */}
+      {/* ================= SEO HELMET ================= */}
+      <Helmet>
+        <title>
+          Metal Scrap Baler Machines Manufacturer in India | Vikah Ecotech
+        </title>
+
+        <meta
+          name="description"
+          content="Vikah Ecotech manufactures metal scrap baler machines for recycling ferrous and non-ferrous metals. Heavy-duty hydraulic metal balers for industrial recycling operations."
+        />
+
+        <meta
+          name="keywords"
+          content="metal baler machine, metal scrap baler, hydraulic metal baler, ferrous metal baler, non ferrous metal baler, metal recycling baler machine"
+        />
+
+        <link rel="canonical" href="https://vikahecotech.com/metalbaler" />
+
+        {/* Category Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Metal Scrap Baler Machines",
+            url: "https://vikahecotech.com/metalbaler",
+            description:
+              "Metal scrap baler machines designed for recycling ferrous and non-ferrous metal waste.",
+            isPartOf: {
+              "@type": "WebSite",
+              name: "Vikah Ecotech",
+              url: "https://vikahecotech.com",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Vikah Ecotech",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://vikahecotech.com/favicon.ico",
+              },
+            },
+          })}
+        </script>
+      </Helmet>
+
+      {/* ================= HEADER ================= */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
-          <h1 className="display-4">Metal Balers</h1>
+          <h1 className="display-4">Metal Scrap Baler Machines</h1>
+          <p className="lead">High-Compaction Solutions for Metal Recycling</p>
         </div>
       </header>
 
-      {/* Description Section */}
-      <div className="container text-center my-4 balerbackimg">
+      {/* ================= CONTENT ================= */}
+      <div className="container text-center my-5 balerbackimg">
+        <h2 className="mb-3">Industrial Metal Balers for Scrap Recycling</h2>
+
         <p>
-          Vikah Ecotech manufactures premium-grade metal scrap balers engineered for performance, durability, 
-          and maximum compaction efficiency. Our machines are suitable for ferrous & non-ferrous metals such as 
-          aluminum, copper, brass, mild steel, and stainless steel.
+          Vikah Ecotech manufactures metal scrap baler machines designed to
+          efficiently compress ferrous and non-ferrous metals such as aluminum,
+          copper, brass, mild steel, and stainless steel. Our hydraulic metal
+          balers deliver high compaction force, rugged construction, and
+          consistent performance for metal recycling plants, foundries, and
+          industrial scrap yards.
         </p>
 
-        {/* Model Tabs */}
+        {/* ================= MODEL TABS ================= */}
         <div className="btn-group flex-wrap mb-4" role="group">
           {balers.map((baler, index) => (
             <button
               key={index}
-              className={`btn btn-outline-success mx-1 my-1 ${selected.name === baler.name ? 'active' : ''}`}
+              className={`btn btn-outline-success mx-1 my-1 ${
+                selected.name === baler.name ? "active" : ""
+              }`}
               onClick={() => setSelected(baler)}
             >
               {baler.name}
@@ -84,15 +131,16 @@ function Metalbaler() {
           ))}
         </div>
 
-        {/* Selected Model Info */}
+        {/* ================= MAIN SECTION ================= */}
         <div className="row justify-content-center align-items-center">
-          {/* CAROUSEL */}
+          {/* Carousel */}
           <div className="col-md-6 mb-4">
             <div className="custom-carousel">
               <img
                 src={carouselImages[slide]}
                 className="carousel-img baler-carousel-img"
-                alt="Plastic Baler"
+                alt={`${selected.name} metal scrap baler machine for recycling`}
+                loading="lazy"
               />
 
               <button
@@ -114,19 +162,30 @@ function Metalbaler() {
             </div>
           </div>
 
-
-          {/* INFO */}
+          {/* Info */}
           <div className="col-md-6 mb-4 makecenter">
-            <h3 className="machine-title">{selected.name}</h3>
+            <h3 className="machine-title">{selected.name} Metal Scrap Baler</h3>
+
             <ul className="list-unstyled">
-              <li><strong>Type:</strong> {selected.type}</li>
-              <li><strong>Compaction Force:</strong> {selected.force}</li>
-              <li><strong>Bale Weight:</strong> {selected.weight}</li>
-              <li><strong>Note:</strong> {selected.note}</li>
+              <li>
+                <strong>Type:</strong> {selected.type}
+              </li>
+              <li>
+                <strong>Compaction Force:</strong> {selected.force}
+              </li>
+              <li>
+                <strong>Bale Weight:</strong> {selected.weight}
+              </li>
+              <li>
+                <strong>Application:</strong> {selected.note}
+              </li>
             </ul>
 
-            <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
-              Read More
+            <Link
+              to={`/${selected.name.toLowerCase()}`}
+              className="btn btn-outline-success mt-3"
+            >
+              Read more about {selected.name}
             </Link>
           </div>
         </div>

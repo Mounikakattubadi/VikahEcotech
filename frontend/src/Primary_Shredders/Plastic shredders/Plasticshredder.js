@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+
 import "../../Other Equipments/Tyrecutting.css";
 import "../../Pages/Models.css";
 
@@ -14,67 +16,127 @@ function Plasticshredder() {
 
   const shredders = [
     {
-      name: 'SHP100',
-      type: 'Plastic Shredder',
-      power: '100 - 140 HP',
-      system: 'High Torque Hydraulic System',
+      name: "SHP100",
+      type: "Plastic Shredder",
+      power: "100 – 140 HP",
+      system: "High Torque Hydraulic System",
       feature:
-        'Our SHP100 model ensures precise shredding for PET and HDPE plastics with efficient throughput.',
+        "Designed for precise shredding of PET bottles, LDPE films, and light plastic waste with efficient throughput.",
     },
     {
-      name: 'SHP150',
-      type: 'Plastic Shredder',
-      power: '140 - 200 HP',
-      system: 'Dual Shaft Cutting Mechanism',
+      name: "SHP150",
+      type: "Plastic Shredder",
+      power: "140 – 200 HP",
+      system: "Dual Shaft Cutting Mechanism",
       feature:
-        'SHP150 provides higher cutting efficiency with superior handling for industrial-grade plastics.',
+        "Provides higher cutting efficiency and stable performance for industrial-grade plastic scrap recycling.",
     },
     {
-      name: 'SHP200',
-      type: 'Plastic Shredder',
-      power: '200 - 260 HP',
-      system: 'Heavy-Duty Hydraulic System',
+      name: "SHP200",
+      type: "Heavy-Duty Plastic Shredder",
+      power: "200 – 260 HP",
+      system: "Heavy-Duty Hydraulic System",
       feature:
-        'Our SHP200 delivers unmatched shredding capacity for large-scale plastic recycling facilities.',
+        "High-capacity plastic shredder engineered for large-scale plastic recycling and continuous operation.",
     },
   ];
 
-  // SAME carousel images for all models
   const carouselImages = [shredderhd, shredderhd1, shredderhdimg];
 
   const [selected, setSelected] = useState(shredders[0]);
   const [slide, setSlide] = useState(0);
 
-  const nextSlide = () => {
+  const nextSlide = () =>
     setSlide((prev) => (prev + 1) % carouselImages.length);
-  };
 
-  const prevSlide = () => {
-    setSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
-  };
+  const prevSlide = () =>
+    setSlide((prev) =>
+      prev === 0 ? carouselImages.length - 1 : prev - 1
+    );
 
   return (
     <div>
-      {/* Header */}
+      {/* ================= SEO HELMET ================= */}
+      <Helmet>
+        <title>
+          Plastic Shredder Machines Manufacturer in India | Vikah Ecotech
+        </title>
+
+        <meta
+          name="description"
+          content="Vikah Ecotech manufactures plastic shredder machines for recycling PET, HDPE, LDPE, and industrial plastic waste. Primary plastic shredders designed for high performance and durability."
+        />
+
+        <meta
+          name="keywords"
+          content="plastic shredder machine, plastic recycling shredder, primary plastic shredder, PET shredder, HDPE shredder, plastic shredder manufacturer india"
+        />
+
+        <link
+          rel="canonical"
+          href="https://vikahecotech.com/plasticshredder"
+        />
+
+        {/* Category Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Plastic Shredder Machines",
+            url: "https://vikahecotech.com/plasticshredder",
+            description:
+              "Primary plastic shredder machines designed for recycling PET, HDPE, LDPE, and industrial plastic waste.",
+            isPartOf: {
+              "@type": "WebSite",
+              name: "Vikah Ecotech",
+              url: "https://vikahecotech.com",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Vikah Ecotech",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://vikahecotech.com/favicon.ico",
+              },
+            },
+          })}
+        </script>
+      </Helmet>
+
+      {/* ================= HEADER ================= */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
-          <h1 className="display-4">Plastic Shredders</h1>
+          <h1 className="display-4">
+            Plastic Shredder Machines
+          </h1>
+          <p className="lead">
+            Primary Shredders for Plastic Recycling Applications
+          </p>
         </div>
       </header>
 
-      <div className="container text-center my-4 balerbackimg">
+      {/* ================= CONTENT ================= */}
+      <div className="container text-center my-5 balerbackimg">
+        <h2 className="mb-3">
+          Industrial Plastic Shredders for Recycling
+        </h2>
+
         <p>
-          Vikah Ecotech manufactures advanced plastic shredders designed to handle PET, HDPE, LDPE, and other polymers efficiently.
-          Our shredders are built with superior engineering, ensuring smooth operation, long lifespan, and low maintenance.
+          Vikah Ecotech manufactures primary plastic shredder machines designed
+          for efficient size reduction of PET bottles, HDPE containers, LDPE
+          films, packaging plastics, and industrial plastic scrap. Our plastic
+          shredders feature high-torque hydraulic systems, robust cutting
+          chambers, and durable blades to ensure consistent performance, low
+          maintenance, and long service life in demanding recycling operations.
         </p>
 
-        {/* Model Buttons */}
+        {/* ================= MODEL TABS ================= */}
         <div className="btn-group flex-wrap mb-4" role="group">
           {shredders.map((machine, index) => (
             <button
               key={index}
               className={`btn btn-outline-success mx-1 my-1 ${
-                selected.name === machine.name ? 'active' : ''
+                selected.name === machine.name ? "active" : ""
               }`}
               onClick={() => setSelected(machine)}
             >
@@ -83,20 +145,22 @@ function Plasticshredder() {
           ))}
         </div>
 
-        {/* MAIN SECTION */}
+        {/* ================= MAIN SECTION ================= */}
         <div className="row justify-content-center align-items-center">
-          {/* CAROUSEL (same style as Tyrescrapbaler) */}
+          {/* Carousel */}
           <div className="col-md-6 mb-4">
             <div className="custom-carousel">
               <img
                 src={carouselImages[slide]}
-                alt="Plastic Shredder"
+                alt={`${selected.name} plastic shredder machine for recycling`}
                 className="baler-carousel-img carousel-img"
+                loading="lazy"
               />
               <button
                 type="button"
                 className="carousel-btn left"
                 onClick={prevSlide}
+                aria-label="Previous image"
               >
                 ❮
               </button>
@@ -104,30 +168,34 @@ function Plasticshredder() {
                 type="button"
                 className="carousel-btn right"
                 onClick={nextSlide}
+                aria-label="Next image"
               >
                 ❯
               </button>
             </div>
           </div>
 
-          {/* INFO SECTION */}
+          {/* INFO */}
           <div className="col-md-6 mb-4 makecenter">
-            <h3 className="machine-title">{selected.name}</h3>
+            <h3 className="machine-title">
+              {selected.name} Plastic Shredder
+            </h3>
 
             <ul className="list-unstyled">
               <li>
                 <strong>Type:</strong> {selected.type}
               </li>
               <li>
-                <strong>Power Range:</strong> {selected.power}
+                <strong>Power Range:</strong>{" "}
+                {selected.power}
               </li>
-              {selected.system && (
-                <li>
-                  <strong>System:</strong> {selected.system}
-                </li>
-              )}
               <li>
-                <strong>Feature:</strong> {selected.feature}
+                <strong>System:</strong>{" "}
+                {selected.system}
+              </li>
+              <li>
+                <strong>Application:</strong>{" "}
+                {selected.feature}
               </li>
             </ul>
 
@@ -135,7 +203,7 @@ function Plasticshredder() {
               to={`/${selected.name.toLowerCase()}`}
               className="btn btn-outline-success mt-3"
             >
-              Read More
+              Read more about {selected.name}
             </Link>
           </div>
         </div>
