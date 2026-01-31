@@ -238,6 +238,29 @@ const OtherEquipmentBlog2 = () => {
 
         </div>
       </div>
+
+                       {/* RIGHT — Animated Related Pages Sidebar */}
+                        <aside className={styles.relatedSidebar}>
+                          <h3 className={styles.relatedTitle}>Related Pages</h3>
+                  
+                          <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+                            <a href="/othereqptemp">Other Equipment →</a>
+                          </div>
+                  
+                          <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+                            <a href="//ourproducts">All Products →</a>
+                          </div>
+                  
+                          <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+                            <a href="/Contact">Contact Us →</a>
+                          </div>
+                  
+                          <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+                            <a href="/enquire">Enquire Us →</a>
+                          </div>
+                  
+                        </aside>
+                        
     </div>
   );
 };

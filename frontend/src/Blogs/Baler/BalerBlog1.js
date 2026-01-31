@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Blog.module.css";
-
+import { Link } from "react-router-dom";
 // Images
 import PlasticBaler1 from "../../images/Applications/plasticbaler1.jpg";
 import PlasticBaler2 from "../../images/Applications/plasticbaler2.jpg";
@@ -28,7 +28,7 @@ const faqsData = [
 
 const BalerBlog1 = () => {
 
-    useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => window.scrollTo(0, 0), []);
 
   const sections = [
     { id: "introduction", title: "Introduction" },
@@ -71,7 +71,7 @@ const BalerBlog1 = () => {
   };
 
   return (
-    
+
     <div className={styles.pageWrapper}>
 
       {/* LEFT NAVIGATION */}
@@ -338,7 +338,30 @@ const BalerBlog1 = () => {
         </div>
       </div>
 
+      {/* RIGHT — Animated Related Pages Sidebar */}
+      <aside className={styles.relatedSidebar}>
+        <h3 className={styles.relatedTitle}>Related Pages</h3>
 
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <Link to="/balers">Industrial Balers →</Link>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <Link to="/tyre-scrap-balers">Tyre Scrap Balers →</Link>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <Link to="/plasticbaler">Plastic Balers →</Link>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <Link to="/pcb">PCB Balers →</Link>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <Link to="/metalbaler">Metal Balers →</Link>
+        </div>
+      </aside>
 
     </div>
   );

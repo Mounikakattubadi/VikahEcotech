@@ -309,6 +309,37 @@ const ShredderBlog4 = () => {
         </div>
       </div>
 
+
+      {/* RIGHT — Animated Related Pages Sidebar */}
+      <aside className={styles.relatedSidebar}>
+        <h3 className={styles.relatedTitle}>Related Pages</h3>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/primary-shredder">Industrial Shredders →</a>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/tyreshredder">Tyre Shredder →</a>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/plasticshredder">Plastic Shredders →</a>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/papershredder">PCB Shredders →</a>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/shm4000">Metal Shredders →</a>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/ewaste">E-Waste Shredders →</a>
+        </div>
+
+      </aside>
+      
     </div>
   );
 };

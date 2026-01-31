@@ -258,7 +258,31 @@ const BalerBlog3 = () => {
 
         </div>
       </div>
+      
+{/* RIGHT — Animated Related Pages Sidebar */}
+<aside className={styles.relatedSidebar}>
+  <h3 className={styles.relatedTitle}>Related Pages</h3>
 
+  <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+    <a href="/balers">Industrial Balers →</a>
+  </div>
+
+  <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+    <a href="/tyre-scrap-balers">Tyre Scrap Balers →</a>
+  </div>
+
+  <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+    <a href="/plasticbaler">Plastic Balers →</a>
+  </div>
+
+  <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+    <a href="/pcb">PCB Balers →</a>
+  </div>
+
+  <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+    <a href="/metalbaler">Metal Balers →</a>
+  </div>
+</aside>
     </div>
   );
 };

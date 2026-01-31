@@ -374,3 +374,88 @@ body {
   .toc { flex: 1 0 100%; padding: 20px; }
   .btn { padding: 12px 22px; font-size: 15px; }
 }
+/* --- RELATED SIDEBAR --- */
+
+
+.relatedSidebar {
+  width: 280px;
+  margin-left: 30px;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.relatedTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #0d3b66;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Base Card */
+.relatedCard {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #e6e6e6;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.relatedCard a {
+  text-decoration: none;
+  color: #145c3d;
+  font-weight: 600;
+  font-size: 16px;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+/* Animated Floating Effect */
+.floatCard {
+  transform: translateY(0) rotateX(0deg);
+}
+
+.floatCard:hover {
+  transform: translateY(-8px) rotateX(6deg);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.18);
+}
+
+.floatCard a:hover {
+  color: #1a73e8;
+}
+
+.floatCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #1a73e8, #00b4d8, #1a73e8);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;   /* THIS FIXES THE CLICK ISSUE */
+}
+
+
+.floatCard:hover::before {
+  opacity: 0.08;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+  .relatedSidebar {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .relatedCard {
+    margin-bottom: 18px;
+  }
+}
