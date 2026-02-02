@@ -6,6 +6,7 @@ import BlogImg1 from "../../images/Applications/plasticbaler1.jpg";
 import BlogImg2 from "../../images/Applications/plasticbaler2.jpg";
 import BlogImg3 from "../../images/Applications/pcb1.webp";
 import BlogImg4 from "../../images/Applications/pcb3.webp";
+import { Helmet } from "react-helmet";
 
 const faqsData = [
   {
@@ -70,6 +71,124 @@ const BalerBlog3 = () => {
 
   return (
     <div className={styles.pageWrapper}>
+
+
+
+
+<Helmet>
+  {/* SEO Title */}
+  <title>
+    Tyre Baling Machines for Efficient Scrap & Waste Management | Vikah Ecotech
+  </title>
+
+  {/* Meta Description */}
+  <meta
+    name="description"
+    content="Learn how industrial balers improve scrap and waste management by enhancing efficiency, reducing costs, saving space, and supporting sustainable recycling operations."
+  />
+
+  {/* Keywords (kept natural & safe) */}
+  <meta
+    name="keywords"
+    content="industrial balers, scrap management solutions, waste management balers, recycling baler machines, hydraulic balers india, industrial waste compaction"
+  />
+
+  {/* Canonical URL */}
+  <link
+    rel="canonical"
+    href="https://vikahecotech.com/industrial-balers-waste-management"
+  />
+
+  {/* Open Graph (No images used) */}
+  <meta
+    property="og:title"
+    content="How Industrial Balers Transform Scrap & Waste Management"
+  />
+  <meta
+    property="og:description"
+    content="Discover how industrial balers streamline scrap handling, improve productivity, reduce operational costs, and support sustainable waste management."
+  />
+  <meta property="og:type" content="article" />
+  <meta
+    property="og:url"
+    content="https://vikahecotech.com/industrial-balers-waste-management"
+  />
+
+  {/* Article Structured Data */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline:
+        "How Industrial Balers Transform Waste Management and Operations",
+      description:
+        "This article explains how industrial balers improve scrap and waste management through better efficiency, space utilization, safety, cost savings, and sustainability.",
+      author: {
+        "@type": "Organization",
+        name: "Vikah Ecotech"
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Vikah Ecotech",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://vikahecotech.com/logo_vk.png"
+        }
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id":
+          "https://vikahecotech.com/industrial-balers-waste-management"
+      }
+    })}
+  </script>
+
+  {/* FAQ Structured Data (matches your FAQ section) */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What types of waste can be processed?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Industrial balers can process plastics, rubber, industrial scrap, and other compressible waste materials efficiently."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Is it safe to operate for beginners?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Yes, industrial balers include safety features such as emergency stops and safety interlocks, making them suitable for beginners."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "Does using a baler reduce operational costs?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "By compacting scrap into dense bales, balers reduce storage space, handling time, and transportation costs."
+          }
+        },
+        {
+          "@type": "Question",
+          name: "How do balers improve workflow?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text:
+              "Balers help keep workspaces organized, reduce clutter, and enable faster, more efficient material handling."
+          }
+        }
+      ]
+    })}
+  </script>
+</Helmet>
 
       {/* LEFT NAVIGATION */}
       <nav className={styles.toc}>

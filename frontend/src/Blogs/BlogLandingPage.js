@@ -29,23 +29,23 @@ import Img16 from "./../images/Applications/shredewaste2.webp";
 const blogsData = [
     // Baler Blogs
     {
-        title: "Hydraulic Tyre Balers in India",
+        title: "Hydraulic  Balers in India",
         description: "How do hydraulic tyre balers improve efficiency, safety, and overall waste management?",
-        route: "/baler-blog1",
+        route: "/baler-info",
         image: Img1,
         category: "Baler"
     },
     {
-        title: "Advanced Tyre Baling Solutions",
+        title: "Advanced  Baling Solutions",
         description: "Learn about modern baling technologies that optimize storage and reduce operational costs.",
-        route: "/baler-blog2",
+        route: "/baler-scrap-management",
         image: Img2,
         category: "Baler"
     },
     {
         title: "Industrial Tyre Baling Machines",
         description: "What makes industrial tyre balers essential for large-scale recycling facilities?",
-        route: "/baler-blog3",
+        route: "/industrial-balers-waste-management",
         image: Img3,
         category: "Baler"
     },

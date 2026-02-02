@@ -231,9 +231,9 @@ function App() {
 
             {/* blogs pages */}
         <Route exact path="/bloglandingpage" element={<BlogLandingPage />} />
-        <Route exact path="/baler-blog1" element={<BalerBlog1 />} />
-        <Route exact path="/baler-blog2" element={<BalerBlog2 />} />
-        <Route exact path="/baler-blog3" element={<BalerBlog3 />} />
+        <Route exact path="/baler-info" element={<BalerBlog1 />} />
+        <Route exact path="/baler-scrap-management" element={<BalerBlog2 />} />
+        <Route exact path="/industrial-balers-waste-management" element={<BalerBlog3 />} />
         <Route exact path="/baler-blog4" element={<BalerBlog4 />} />
         <Route exact path="/shredder-blog1" element={<ShredderBlog1 />} />
         <Route exact path="/shredder-blog2" element={<ShredderBlog2 />} />
