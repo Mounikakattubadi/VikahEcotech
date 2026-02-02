@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import styles from "./Blog.module.css";
 
 // Images
-import BlogImg1 from "../../images/Applications/plasticbaler1.jpg";
-import BlogImg2 from "../../images/Applications/plasticbaler2.jpg";
-import BlogImg3 from "../../images/Applications/pcb1.webp";
-import BlogImg4 from "../../images/Applications/pcb3.webp";
+import BlogImg1 from "../../images/Applications/app13.jpg";
+import BlogImg2 from "../../images/Applications/app12.jpg";
+import BlogImg3 from "../../images/Applications/pss1.png";
 import { Helmet } from "react-helmet";
 
 const faqsData = [
@@ -93,7 +92,7 @@ const BalerBlog3 = () => {
         {/* Canonical URL */}
         <link
           rel="canonical"
-          href="https://vikahecotech.com/tyre-balers"
+          href="https://vikahecotech.com/tyre-balers-machine"
         />
 
         {/* Open Graph */}
@@ -108,7 +107,7 @@ const BalerBlog3 = () => {
         <meta property="og:type" content="article" />
         <meta
           property="og:url"
-          content="https://vikahecotech.com/tyre-balers"
+          content="https://vikahecotech.com/tyre-balers-machines"
         />
 
         {/* Article Structured Data */}
@@ -132,7 +131,7 @@ const BalerBlog3 = () => {
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": "https://vikahecotech.com/tyre-balers"
+              "@id": "https://vikahecotech.com/tyre-balers-machine"
             }
           })}
         </script>

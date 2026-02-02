@@ -233,8 +233,8 @@ function App() {
         <Route exact path="/bloglandingpage" element={<BlogLandingPage />} />
         <Route exact path="/baler-info" element={<BalerBlog1 />} />
         <Route exact path="/baler-scrap-management" element={<BalerBlog2 />} />
-        <Route exact path="/industrial-balers-waste-management" element={<BalerBlog3 />} />
-        <Route exact path="/baler-blog4" element={<BalerBlog4 />} />
+        <Route exact path="/tyre-balers-machine" element={<BalerBlog3 />} />
+        <Route exact path="/baler-for-tyres" element={<BalerBlog4 />} />
         <Route exact path="/shredder-blog1" element={<ShredderBlog1 />} />
         <Route exact path="/shredder-blog2" element={<ShredderBlog2 />} />
         <Route exact path="/shredder-blog3" element={<ShredderBlog3 />} />

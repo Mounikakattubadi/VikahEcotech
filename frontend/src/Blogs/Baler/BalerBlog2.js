@@ -6,6 +6,7 @@ import PlasticBaler1 from "../../images/Applications/plasticbaler1.jpg";
 import PlasticBaler2 from "../../images/Applications/plasticbaler2.jpg";
 import PCB1 from "../../images/Applications/pcb1.webp";
 import PCB3 from "../../images/Applications/pcb3.webp";
+import BlogImg1 from "../../images/Applications/app13.jpg";
 
 import { Helmet } from "react-helmet";
 
@@ -102,7 +103,7 @@ const BalerBlog2SEOImages = () => {
         {/* Keywords (light & safe) */}
         <meta
           name="keywords"
-          content="hydraulic balers, plastic waste management india, industrial balers, waste recycling machines, plastic baler machines, baling solutions for industries"
+          content="hydraulic balers, plastic waste management india,advanced bailing solutions, industrial balers, waste recycling machines, plastic baler machines, baling solutions for industries"
         />
 
         {/* Canonical URL */}
@@ -188,7 +189,7 @@ const BalerBlog2SEOImages = () => {
           <div id="intro" className={styles.section}>
             <div className={styles.imgLeft}>
               <img
-                src={PlasticBaler1}
+                src={BlogImg1}
                 alt="Industrial Plastic Baler in Operation"
               />
               <span className={styles.caption}>

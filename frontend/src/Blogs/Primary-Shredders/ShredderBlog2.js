@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import styles from "./Blog.module.css";
 
 // Images
-import BlogImg1 from "../../images/Applications/plasticbaler1.jpg";
 import BlogImg3 from "../../images/Applications/plasticbaler2.jpg";
-import BlogImg4 from "../../images/Applications/pcb3.webp";
+import BlogImg1 from "../../images/Applications/app13.jpg";
+import BlogImg4 from "../../images/Applications/pss1.png";
 
 const faqsData = [
   {

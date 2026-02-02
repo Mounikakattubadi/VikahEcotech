@@ -112,7 +112,7 @@ const BalerBlog1 = () => {
   <meta property="og:type" content="article" />
   <meta
     property="og:url"
-    content="https://vikahecotech.com/tyre-baler-info"
+    content="https://vikahecotech.com/baler-info"
   />
 
   {/* Article Structured Data */}
@@ -133,7 +133,7 @@ const BalerBlog1 = () => {
       },
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://vikahecotech.com/tyre-baler-info",
+        "@id": "https://vikahecotech.com/baler-info",
       },
     })}
   </script>

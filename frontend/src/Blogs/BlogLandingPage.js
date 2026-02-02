@@ -5,8 +5,9 @@ import styles from "./Blog.module.css";
 //Balers
 import Img1 from "./../images/Applications/plasticbaler1.jpg";
 import Img2 from "./../images/Applications/apppcb6.webp";
-import Img3 from "./../images/Applications/appm1.jpg";
-import Img4 from "./../images/Applications/plasticbaler2.jpg";
+
+import BlogImg2 from "./../images/Applications/app12.jpg";
+import BlogImg3 from "./../images/Applications/pss1.png";
 
 //secondary shredder
 import Img5 from "./../images/Applications/shredpcb1.jpg";
@@ -21,8 +22,8 @@ import Img11 from "./../images/Applications/pcb1.webp";
 import Img12 from "./../images/Applications/pcb3.webp";
 
 //primary shredders
-import Img13 from "./../images/Applications/shredpcb4.jpg";
-import Img14 from "./../images/Applications/shredm1.jpg";
+import Img13 from "./../images/Applications/tyreshred2.jpg";
+import Img14 from "./../images/Applications/tyreshred1.jpg";
 import Img15 from "./../images/Applications/shredp1.png";
 import Img16 from "./../images/Applications/shredewaste2.webp";
 
@@ -45,15 +46,15 @@ const blogsData = [
     {
         title: "Industrial Tyre Baling Machines",
         description: "What makes industrial tyre balers essential for large-scale recycling facilities?",
-        route: "/industrial-balers-waste-management",
-        image: Img3,
+        route: "/tyre-balers-machine",
+        image: BlogImg3,
         category: "Baler"
     },
     {
         title: "Tyre Baler Operational Insights",
         description: "Understand how balers streamline workflow, ensure compliance, and boost resale value.",
-        route: "/baler-blog4",
-        image: Img4,
+        route: "/baler-for-tyres",
+        image: BlogImg2,
         category: "Baler"
     },
 
