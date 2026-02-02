@@ -8,19 +8,19 @@ import BlogImg4 from "../../images/Applications/pcb3.webp";
 
 const faqsData = [
   {
-    question: "What types of materials can shredders handle?",
-    answer: "Industrial shredders handle plastics, rubber, wood, paper, and various scrap materials, providing a versatile solution for manufacturing and recycling operations. Choosing the right shredder for specific materials ensures optimal shredding efficiency and reduces machine wear."
+    question: "What types of materials can Primary Shredders handle?",
+    answer: "Industrial Primary Shredders handle plastics, rubber, wood, paper, and various scrap materials, providing a versatile solution for manufacturing and recycling operations. Choosing the right shredder for specific materials ensures optimal shredding efficiency and reduces machine wear."
   },
   {
-    question: "Are shredders safe to operate?",
-    answer: "Yes, modern industrial shredders include safety interlocks, emergency stops, and overload protection to ensure operator safety while maintaining efficiency during material processing."
+    question: "Are Primary Shredders safe to operate?",
+    answer: "Yes, modern industrial Primary Shredders include safety interlocks, emergency stops, and overload protection to ensure operator safety while maintaining efficiency during material processing."
   },
   {
-    question: "How do shredders improve workflow?",
-    answer: "Shredders reduce material size, making handling, storage, and transport easier. This streamlines workflow, improves material throughput, and ensures consistent operations across industrial and recycling facilities."
+    question: "How do Primary Shredders improve workflow?",
+    answer: "Primary Shredders reduce material size, making handling, storage, and transport easier. This streamlines workflow, improves material throughput, and ensures consistent operations across industrial and recycling facilities."
   },
   {
-    question: "Do shredders support sustainability goals?",
+    question: "Do Primary Shredders support sustainability goals?",
     answer: "Absolutely. Shredded materials are easier to recycle, reducing landfill dependency and supporting green industrial practices. Properly sized materials enhance recycling efficiency and environmental responsibility."
   }
 ];
@@ -29,22 +29,22 @@ const ShredderBlog1 = () => {
   useEffect(() => window.scrollTo(0, 0), []);
 
   const sections = [
-    { id: "introduction", title: "Introduction to Industrial Shredders and Their Role in Waste Management" },
-    { id: "importance", title: "Why Industrial Shredders Are Critical for Manufacturing and Recycling Operations" },
-    { id: "operation", title: "Understanding How Industrial Shredders Operate and Process Materials" },
-    { id: "types", title: "Different Types of Industrial Shredders and Their Applications" },
-    { id: "benefits", title: "Key Benefits of Using Industrial Shredders in Your Facility" },
-    { id: "workflow", title: "Improving Workflow, Storage, and Space Optimization with Shredders" },
+    { id: "introduction", title: "Introduction to Industrial Primary Shredders and Their Role in Waste Management" },
+    { id: "importance", title: "Why Industrial Primary Shredders Are Critical for Manufacturing and Recycling Operations" },
+    { id: "operation", title: "Understanding How Industrial Primary Shredders Operate and Process Materials" },
+    { id: "types", title: "Different Types of Industrial Primary Shredders and Their Applications" },
+    { id: "benefits", title: "Key Benefits of Using Industrial Primary Shredders in Your Facility" },
+    { id: "workflow", title: "Improving Workflow, Storage, and Space Optimization with Primary Shredders" },
     { id: "cost", title: "Cost Reduction and Transport Efficiency Through Shredding" },
-    { id: "safety", title: "Safety Features and Advantages of Modern Industrial Shredders" },
-    { id: "sustainability", title: "Sustainability: How Shredders Support Recycling and Green Practices" },
-    { id: "maintenance", title: "Maintenance Practices and Ensuring Long-Term Reliability of Shredders" },
+    { id: "safety", title: "Safety Features and Advantages of Modern Industrial Primary Shredders" },
+    { id: "sustainability", title: "Sustainability: How Primary Shredders Support Recycling and Green Practices" },
+    { id: "maintenance", title: "Maintenance Practices and Ensuring Long-Term Reliability of Primary Shredders" },
     { id: "automation", title: "Automation and Integration with Industrial Waste Management Systems" },
-    { id: "long-term", title: "Long-Term Impact of Shredders on Operational Efficiency and Cost Savings" },
+    { id: "long-term", title: "Long-Term Impact of Primary Shredders on Operational Efficiency and Cost Savings" },
     { id: "why-us", title: "Why Choose Our Shredding Solutions for Your Industry" },
-    { id: "conclusion", title: "Conclusion: Investing in Industrial Shredders for Maximum ROI" },
-    { id: "key-takeaways", title: "Key Takeaways: Industrial Shredders for Efficient Waste Management" },
-    { id: "faqs", title: "Frequently Asked Questions About Industrial Shredders" }
+    { id: "conclusion", title: "Conclusion: Investing in Industrial Primary Shredders for Maximum ROI" },
+    { id: "key-takeaways", title: "Key Takeaways: Industrial Primary Shredders for Efficient Waste Management" },
+    { id: "faqs", title: "Frequently Asked Questions About Industrial Primary Shredders" }
   ];
 
   const [activeSection, setActiveSection] = useState(sections[0].id);
@@ -94,35 +94,35 @@ const ShredderBlog1 = () => {
         <div className={styles.blogInner}>
 
           <h1 className="mulch-heading">
-            Why Industries Use Industrial Shredders for Efficient Waste Management
+            Why Industries Use Industrial Primary Shredders for Efficient Waste Management
           </h1>
 
           {/* Introduction */}
           <div id="introduction" className={styles.section}>
             <div className={styles.imgLeft}>
-              <img src={BlogImg1} alt="Industrial Shredders Efficient Waste Management" />
-              <span className={styles.caption}>Industrial shredders in action for efficient waste handling</span>
+              <img src={BlogImg1} alt="Industrial Primary Shredders Efficient Waste Management" />
+              <span className={styles.caption}>Industrial Primary Shredders in action for efficient waste handling</span>
             </div>
             <p>
-              Industrial shredders are essential machines for converting bulky waste and scrap materials into smaller, manageable pieces. They help industries maintain operational efficiency, reduce clutter, improve safety, and support recycling initiatives.
+              Industrial Primary Shredders are essential machines for converting bulky waste and scrap materials into smaller, manageable pieces. They help industries maintain operational efficiency, reduce clutter, improve safety, and support recycling initiatives.
             </p>
           </div>
 
           {/* Importance */}
           <div id="importance" className={styles.section}>
-            <h2>Importance of Industrial Shredders in Manufacturing and Recycling</h2>
+            <h2>Importance of Industrial Primary Shredders in Manufacturing and Recycling</h2>
             <p>
-              Shredders are critical for reducing waste volume, improving workflow, and preparing materials for recycling. They ensure compliance with environmental regulations and reduce handling risks, making them indispensable in modern industrial operations.
+              Primary Shredders are critical for reducing waste volume, improving workflow, and preparing materials for recycling. They ensure compliance with environmental regulations and reduce handling risks, making them indispensable in modern industrial operations.
             </p>
           </div>
 
           {/* Operation */}
           <div id="operation" className={styles.section}>
             <div className={styles.imgRight}>
-              <img src={BlogImg3} alt="Shredders Operating Process" />
+              <img src={BlogImg3} alt="Primary Shredders Operating Process" />
               <span className={styles.caption}>Shredding scrap materials for optimized handling</span>
             </div>
-            <h2>How Industrial Shredders Operate</h2>
+            <h2>How Industrial Primary Shredders Operate</h2>
             <p>
               Materials are fed into the shredder, which uses rotating blades, cutters, or hammers to reduce them into smaller pieces. Shredded materials can then be sorted, stored, or recycled efficiently. Different mechanisms are designed for specific materials to maximize efficiency and safety.
             </p>
@@ -130,19 +130,19 @@ const ShredderBlog1 = () => {
 
           {/* Types */}
           <div id="types" className={styles.section}>
-            <h2>Types of Industrial Shredders and Their Applications</h2>
+            <h2>Types of Industrial Primary Shredders and Their Applications</h2>
             <ul className={styles.list}>
-              <li><strong>Single-Shaft Shredders:</strong> Ideal for medium-sized materials and consistent output for recycling.</li>
-              <li><strong>Dual-Shaft Shredders:</strong> Handle heavy-duty shredding for tyres, plastics, and metals with higher throughput.</li>
+              <li><strong>Single-Shaft Primary Shredders:</strong> Ideal for medium-sized materials and consistent output for recycling.</li>
+              <li><strong>Dual-Shaft Primary Shredders:</strong> Handle heavy-duty shredding for tyres, plastics, and metals with higher throughput.</li>
               <li><strong>Granulators:</strong> Reduce shredded material into small granules suitable for resale or recycling.</li>
-              <li><strong>High-Speed Rotary Shredders:</strong> Efficient for paper, cardboard, and lightweight plastic waste.</li>
+              <li><strong>High-Speed Rotary Primary Shredders:</strong> Efficient for paper, cardboard, and lightweight plastic waste.</li>
             </ul>
             <p>Choosing the right type ensures optimal performance and longevity of your equipment.</p>
           </div>
 
           {/* Benefits */}
           <div id="benefits" className={styles.section}>
-            <h2>Key Benefits of Using Industrial Shredders</h2>
+            <h2>Key Benefits of Using Industrial Primary Shredders</h2>
             <ul className={styles.list}>
               <li>Significant reduction in waste volume</li>
               <li>Improved handling, storage, and transport efficiency</li>
@@ -172,7 +172,7 @@ const ShredderBlog1 = () => {
           <div id="safety" className={styles.section}>
             <h2>Safety Features and Advantages</h2>
             <p>
-              Modern shredders include interlocks, emergency stops, overload protection, and protective enclosures. Reducing clutter and organizing waste helps prevent workplace accidents and injuries.
+              Modern Primary Shredders include interlocks, emergency stops, overload protection, and protective enclosures. Reducing clutter and organizing waste helps prevent workplace accidents and injuries.
             </p>
           </div>
 
@@ -188,7 +188,7 @@ const ShredderBlog1 = () => {
           <div id="maintenance" className={styles.section}>
             <h2>Maintenance Practices & Reliability</h2>
             <p>
-              Shredders are built for durability with minimal maintenance. Routine servicing prevents downtime, ensures long-term reliability, and maintains operational efficiency.
+              Primary Shredders are built for durability with minimal maintenance. Routine servicing prevents downtime, ensures long-term reliability, and maintains operational efficiency.
             </p>
           </div>
 
@@ -196,7 +196,7 @@ const ShredderBlog1 = () => {
           <div id="automation" className={styles.section}>
             <h2>Automation and Integration</h2>
             <p>
-              Modern shredders integrate with conveyors, sensors, and sorting systems for automated material handling. Real-time monitoring and predictive maintenance reduce labor, downtime, and operational costs.
+              Modern Primary Shredders integrate with conveyors, sensors, and sorting systems for automated material handling. Real-time monitoring and predictive maintenance reduce labor, downtime, and operational costs.
             </p>
           </div>
 
@@ -216,7 +216,7 @@ const ShredderBlog1 = () => {
           <div id="why-us" className={styles.section}>
             <h2>Why Choose Our Shredding Solutions</h2>
             <p>
-              Our shredders are designed for reliability, efficiency, and safety. Scalable for any facility size, they provide measurable long-term benefits in workflow, cost management, and sustainability.
+              Our Primary Shredders are designed for reliability, efficiency, and safety. Scalable for any facility size, they provide measurable long-term benefits in workflow, cost management, and sustainability.
             </p>
           </div>
 
@@ -228,7 +228,7 @@ const ShredderBlog1 = () => {
             </div>
             <h2>Conclusion</h2>
             <p>
-              Industrial shredders are essential for efficient waste management, optimized workflow, and sustainable practices. Investing in shredders ensures operational efficiency, safety, and long-term ROI.
+              Industrial Primary Shredders are essential for efficient waste management, optimized workflow, and sustainable practices. Investing in Primary Shredders ensures operational efficiency, safety, and long-term ROI.
             </p>
           </div>
 
@@ -279,7 +279,7 @@ const ShredderBlog1 = () => {
         <h3 className={styles.relatedTitle}>Related Pages</h3>
 
         <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-          <a href="/primary-shredder">Industrial Shredders →</a>
+          <a href="/primary-shredder">Industrial Primary Shredders →</a>
         </div>
 
         <div className={`${styles.relatedCard} ${styles.floatCard}`}>
@@ -287,19 +287,19 @@ const ShredderBlog1 = () => {
         </div>
 
         <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-          <a href="/plasticshredder">Plastic Shredders →</a>
+          <a href="/plasticshredder">Plastic Primary Shredders →</a>
         </div>
 
         <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-          <a href="/papershredder">PCB Shredders →</a>
+          <a href="/papershredder">PCB Primary Shredders →</a>
         </div>
 
         <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-          <a href="/shm4000">Metal Shredders →</a>
+          <a href="/shm4000">Metal Primary Shredders →</a>
         </div>
 
         <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-          <a href="/ewaste">E-Waste Shredders →</a>
+          <a href="/ewaste">E-Waste Primary Shredders →</a>
         </div>
 
       </aside>

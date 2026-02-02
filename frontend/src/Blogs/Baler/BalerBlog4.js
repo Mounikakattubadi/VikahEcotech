@@ -9,30 +9,30 @@ import BlogImg4 from "../../images/Applications/pcb3.webp";
 
 const faqsData = [
   {
-    question: "Can balers handle all types of scrap?",
-    answer: "Yes, industrial balers can efficiently process various types of compressible waste including plastics, rubber, and other scrap materials."
+    question: "Can tyre balers handle all types of tyre scrap?",
+    answer: "Yes, tyre balers efficiently process shredded tyres, mixed rubber, and industrial tyre scrap into compact, manageable bales."
   },
   {
-    question: "Do balers require trained operators?",
-    answer: "Basic training is sufficient for safe operation, as most machines are user-friendly and equipped with safety mechanisms."
+    question: "Do tyre balers require trained operators?",
+    answer: "Basic training is sufficient for safe operation, as most tyre balers are user-friendly and equipped with safety mechanisms."
   },
   {
-    question: "How do balers help reduce costs?",
-    answer: "By compressing scrap into compact units, balers lower storage, handling, and transportation expenses significantly."
+    question: "How do tyre balers help reduce costs?",
+    answer: "By compressing tyre scrap into compact bales, tyre balers reduce storage, handling, and transportation expenses significantly."
   },
   {
-    question: "Are balers environmentally friendly?",
-    answer: "Absolutely. Baling scrap improves recyclability, reduces landfill waste, and supports sustainable industrial practices."
+    question: "Are tyre balers environmentally friendly?",
+    answer: "Absolutely. Baling tyre scrap improves recyclability, reduces landfill waste, and supports sustainable industrial practices."
   }
 ];
 
 const BalerBlog4 = () => {
-    useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => window.scrollTo(0, 0), []);
 
   const sections = [
     { id: "introduction", title: "Introduction" },
-    { id: "importance", title: "Importance of Industrial Balers" },
-    { id: "operation", title: "How They Operate" },
+    { id: "importance", title: "Importance of Tyre Balers" },
+    { id: "operation", title: "How Tyre Balers Operate" },
     { id: "benefits", title: "Key Benefits" },
     { id: "workflow", title: "Workflow & Space Optimization" },
     { id: "cost", title: "Cost & Transport Efficiency" },
@@ -40,7 +40,7 @@ const BalerBlog4 = () => {
     { id: "sustainability", title: "Sustainability & Recycling" },
     { id: "maintenance", title: "Maintenance & Reliability" },
     { id: "long-term", title: "Long-Term Impact" },
-    { id: "why-us", title: "Why Choose Our Solutions" },
+    { id: "why-us", title: "Why Choose Our Tyre Balers" },
     { id: "conclusion", title: "Final Thoughts" },
     { id: "key-takeaways", title: "Key Takeaways" },
     { id: "faqs", title: "FAQs" }
@@ -93,37 +93,40 @@ const BalerBlog4 = () => {
         <div className={styles.blogInner}>
 
           <h1 className="mulch-heading">
-            Enhancing Industrial Operations with Efficient Waste Management Solutions
+            Optimizing Tyre Scrap Management with Efficient Tyre Balers
           </h1>
 
           {/* Introduction */}
           <div id="introduction" className={styles.section}>
             <div className={styles.imgLeft}>
-              <img src={BlogImg1} alt="Industrial Operations" />
-              <span className={styles.caption}>Streamlined industrial operations with organized waste</span>
+              <img src={BlogImg1} alt="Tyre Balers in Industrial Facility" />
+              <span className={styles.caption}>Efficient tyre scrap handling in industrial facilities</span>
             </div>
             <p>
-              Industrial facilities produce large volumes of scrap and recyclable materials daily. Managing these efficiently is crucial to maintaining smooth operations, safety, and cost control. Industrial balers provide a reliable solution by compressing waste into manageable units, freeing up space, and simplifying handling.
+              Industrial facilities generate large volumes of tyre scrap daily. Managing this efficiently is crucial for operational flow, safety, and cost savings. Tyre balers provide a reliable solution by compressing tyres and rubber scrap into compact, manageable bales.
+            </p>
+            <p>
+              By implementing tyre balers, facilities can streamline recycling processes, optimize storage, and reduce transportation costs while maintaining compliance with environmental standards.
             </p>
           </div>
 
           {/* Importance */}
           <div id="importance" className={styles.section}>
-            <h2>Importance of Industrial Balers</h2>
+            <h2>Importance of Tyre Balers</h2>
             <p>
-              Compressing loose scrap into compact bales not only improves space utilization but also enhances workflow efficiency. Facilities using balers experience better organization, reduced hazards, and easier compliance with environmental regulations.
+              Tyre balers transform loose tyre scrap into standardized bales, improving space utilization and workflow efficiency. This ensures safer, cleaner, and more organized industrial environments.
             </p>
           </div>
 
           {/* Operation */}
           <div id="operation" className={styles.section}>
             <div className={styles.imgRight}>
-              <img src={BlogImg2} alt="Balers Operation" />
-              <span className={styles.caption}>Compression and baling in progress</span>
+              <img src={BlogImg2} alt="Tyre Balers in Operation" />
+              <span className={styles.caption}>Compression and baling of tyre scrap</span>
             </div>
-            <h2>How They Operate</h2>
+            <h2>How Tyre Balers Operate</h2>
             <p>
-              Operators feed scrap materials into the machine, which compresses them into dense, uniform bales. Straps or wires secure each bale for storage or transport. Advanced balers may include automated features for consistency, monitoring, and reduced manual intervention.
+              Operators feed shredded tyres or mixed rubber into the baler, which compresses the material into dense, uniform bales. Straps or wires secure each bale for storage or transport. Advanced tyre balers may include automation and monitoring features to ensure consistent results.
             </p>
           </div>
 
@@ -131,11 +134,11 @@ const BalerBlog4 = () => {
           <div id="benefits" className={styles.section}>
             <h2>Key Benefits</h2>
             <ul className={styles.list}>
-              <li>Reduces space used by loose scrap</li>
-              <li>Streamlines material handling and workflow</li>
-              <li>Lowers labor and operational costs</li>
-              <li>Improves resale value for recyclable materials</li>
-              <li>Supports safety and compliance standards</li>
+              <li>Reduces storage space for loose tyre scrap</li>
+              <li>Improves material handling and workflow efficiency</li>
+              <li>Decreases labor and operational costs</li>
+              <li>Enhances resale value of tyre scrap</li>
+              <li>Supports workplace safety and compliance standards</li>
             </ul>
           </div>
 
@@ -143,10 +146,10 @@ const BalerBlog4 = () => {
           <div id="workflow" className={styles.section}>
             <h2>Workflow & Space Optimization</h2>
             <p>
-              Bales take up significantly less space than loose scrap, enabling better utilization of industrial floors and storage areas. Organized bales prevent clutter and reduce bottlenecks in workflow, allowing staff to focus on core production tasks.
+              Compact bales occupy significantly less space, allowing better utilization of factory floors and storage areas. Organized bales reduce clutter, prevent bottlenecks, and improve overall workflow efficiency.
             </p>
             <div className={styles.infoBox}>
-              <strong>Tip:</strong> Stack bales carefully to maximize vertical space and maintain safe access paths for equipment and personnel.
+              <strong>Tip:</strong> Stack tyre bales carefully to maximize vertical space while maintaining safe access paths for equipment and personnel.
             </div>
           </div>
 
@@ -154,7 +157,7 @@ const BalerBlog4 = () => {
           <div id="cost" className={styles.section}>
             <h2>Cost & Transport Efficiency</h2>
             <p>
-              Compact bales reduce the number of transport trips required, cutting fuel and labor costs. Standardized bale sizes simplify logistics planning, container utilization, and loading/unloading processes, ensuring measurable savings.
+              By reducing the number of transport trips required, tyre balers save fuel, labor, and equipment costs. Standardized bales simplify logistics planning, loading, and unloading operations, providing measurable cost savings.
             </p>
           </div>
 
@@ -162,7 +165,7 @@ const BalerBlog4 = () => {
           <div id="safety" className={styles.section}>
             <h2>Safety Advantages</h2>
             <p>
-              Balers help maintain clean and organized workplaces, reducing slips, trips, and other hazards. Emergency stop features, interlocks, and overload protection ensure operators remain safe while using the machine.
+              Tyre balers maintain clean and organized workplaces, reducing hazards such as slips and trips. Safety features like emergency stops and interlocks ensure operators remain protected during operation.
             </p>
           </div>
 
@@ -170,7 +173,7 @@ const BalerBlog4 = () => {
           <div id="sustainability" className={styles.section}>
             <h2>Sustainability & Recycling</h2>
             <p>
-              Compressed bales are easier to recycle, reducing landfill waste and supporting sustainable practices. Companies can demonstrate environmental responsibility and align with circular economy goals.
+              Baled tyre scrap is easier to recycle, reduces landfill dependency, and supports environmental responsibility. Using tyre balers aligns facilities with circular economy practices and sustainability goals.
             </p>
           </div>
 
@@ -178,7 +181,7 @@ const BalerBlog4 = () => {
           <div id="maintenance" className={styles.section}>
             <h2>Maintenance & Reliability</h2>
             <p>
-              Industrial balers are designed for minimal maintenance and long-term reliability. Predictive maintenance alerts and durable components ensure smooth operations, reducing unplanned downtime and maximizing machine lifespan.
+              Tyre balers are designed for durability and minimal maintenance. Predictive maintenance alerts and robust components ensure reliable operations and reduce unplanned downtime.
             </p>
           </div>
 
@@ -186,31 +189,31 @@ const BalerBlog4 = () => {
           <div id="long-term" className={styles.section}>
             <h2>Long-Term Impact</h2>
             <ul className={styles.list}>
-              <li>Operational cost savings over time</li>
-              <li>Enhanced workflow and productivity</li>
-              <li>Improved safety and compliance</li>
-              <li>Maximized scrap resale value</li>
+              <li>Reduces operational costs over time</li>
+              <li>Enhances workflow efficiency and productivity</li>
+              <li>Improves safety and compliance</li>
+              <li>Maximizes resale value of tyre scrap</li>
               <li>Supports sustainability and environmental goals</li>
             </ul>
           </div>
 
           {/* Why Us */}
           <div id="why-us" className={styles.section}>
-            <h2>Why Choose Our Solutions</h2>
+            <h2>Why Choose Our Tyre Balers</h2>
             <p>
-              Our industrial waste management solutions are efficient, reliable, and backed by excellent support. We provide scalable options for facilities of any size, ensuring long-term operational benefits.
+              Our tyre balers are reliable, efficient, and backed by expert support. We offer solutions for facilities of all sizes, ensuring long-term operational benefits and high-quality performance.
             </p>
           </div>
 
           {/* Conclusion */}
           <div id="conclusion" className={styles.section}>
             <div className={styles.imgLeft}>
-              <img src={BlogImg4} alt="Final Thoughts" />
-              <span className={styles.caption}>Organized bales ready for transport</span>
+              <img src={BlogImg4} alt="Organized Tyre Scrap Bales Ready for Transport" />
+              <span className={styles.caption}>Tyre scrap bales ready for transport</span>
             </div>
             <h2>Final Thoughts</h2>
             <p>
-              Industrial balers are a key investment for companies seeking efficient waste management, improved productivity, and sustainable operations. By compressing scrap into compact units, facilities achieve safer, cost-effective, and organized workflows.
+              Tyre balers are a vital investment for companies looking to optimize waste management, reduce costs, and improve operational efficiency. By compressing tyre scrap into compact bales, facilities achieve safer, organized, and more sustainable workflows.
             </p>
           </div>
 
@@ -221,7 +224,7 @@ const BalerBlog4 = () => {
               <li>Enhances workflow efficiency and operational productivity</li>
               <li>Reduces storage and transport costs</li>
               <li>Supports safety and compliance</li>
-              <li>Improves scrap resale value</li>
+              <li>Improves resale value of tyre scrap</li>
               <li>Promotes sustainability and recycling</li>
               <li>Minimizes manual handling and labor risks</li>
               <li>Reliable and long-term operational advantages</li>
@@ -256,30 +259,31 @@ const BalerBlog4 = () => {
 
         </div>
       </div>
-{/* RIGHT — Animated Related Pages Sidebar */}
-<aside className={styles.relatedSidebar}>
-  <h3 className={styles.relatedTitle}>Related Pages</h3>
 
-  <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-    <a href="/balers">Industrial Balers →</a>
-  </div>
+      {/* RIGHT — Animated Related Pages Sidebar */}
+      <aside className={styles.relatedSidebar}>
+        <h3 className={styles.relatedTitle}>Related Pages</h3>
 
-  <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-    <a href="/tyre-scrap-balers">Tyre Scrap Balers →</a>
-  </div>
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/balers">Industrial Balers →</a>
+        </div>
 
-  <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-    <a href="/plasticbaler">Plastic Balers →</a>
-  </div>
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/tyre-scrap-balers">Tyre Scrap Balers →</a>
+        </div>
 
-  <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-    <a href="/pcb">PCB Balers →</a>
-  </div>
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/plasticbaler">Plastic Balers →</a>
+        </div>
 
-  <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-    <a href="/metalbaler">Metal Balers →</a>
-  </div>
-</aside>
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/pcb">PCB Balers →</a>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <a href="/metalbaler">Metal Balers →</a>
+        </div>
+      </aside>
     </div>
   );
 };
