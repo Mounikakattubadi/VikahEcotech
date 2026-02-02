@@ -122,6 +122,9 @@ import Ifat2025 from './Trade Fairs/ifat2025.js';
     import OtherEquipmentBlog3 from './Blogs/OtherEqp/OtherEquipmentBlog3.js';
     import OtherEquipmentBlog4 from './Blogs/OtherEqp/OtherEquipmentBlog4.js';
     import BlogLandingPage from './Blogs/BlogLandingPage.js';
+import MetalShredderBlog from './Blogs/Primary-Shredders/MetalShredderBlog.js';
+import PlasticBalerBlog from './Blogs/Baler/PlasticBalerBlog.js';
+import TyreRecyclingBlog from './Blogs/OtherEqp/TyreRecyclingBlog.js';
         
 
 
@@ -247,8 +250,9 @@ function App() {
         <Route exact path="/otherequipment-blog2" element={<OtherEquipmentBlog2 />} />
         <Route exact path="/otherequipment-blog3" element={<OtherEquipmentBlog3 />} />
         <Route exact path="/otherequipment-blog4" element={<OtherEquipmentBlog4 />} />
-        
-
+        <Route exact path="/metal-shredder-blog" element={<MetalShredderBlog />} />
+        <Route exact path="/plastic-baler-blog" element={<PlasticBalerBlog />} />
+         <Route exact path="/tyre-recycling-blog" element={<TyreRecyclingBlog/>} />
 
       </Routes>
        <Footer />

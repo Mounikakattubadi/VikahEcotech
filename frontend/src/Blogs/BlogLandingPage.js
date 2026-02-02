@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Blog.module.css";
 
@@ -7,12 +7,17 @@ import Img1 from "./../images/Applications/plasticbaler1.jpg";
 import Img2 from "./../images/Applications/apppcb6.webp";
 import Img3 from "./../images/Applications/appm1.jpg";
 import Img4 from "./../images/Applications/plasticbaler2.jpg";
+import Img18 from "./../images/Applications/plasticbaler1.jpg"
+
 
 //secondary shredder
 import Img5 from "./../images/Applications/shredpcb1.jpg";
 import Img6 from "./../images/Applications/secplas.jpg";
 import Img7 from "./../images/Applications/secmetal.webp";
 import Img8 from "./../images/R2.png";
+
+import Img19 from "./../images/Applications/plasticbaler1.jpg";
+
 
 //OtherEqp
 import Img9 from "./../images/Applications/plasticbaler1.jpg";
@@ -25,6 +30,7 @@ import Img13 from "./../images/Applications/shredpcb4.jpg";
 import Img14 from "./../images/Applications/shredm1.jpg";
 import Img15 from "./../images/Applications/shredp1.png";
 import Img16 from "./../images/Applications/shredewaste2.webp";
+import Img17 from "./../images/Applications/shredm2.jpg"
 
 const blogsData = [
     // Baler Blogs
@@ -56,6 +62,14 @@ const blogsData = [
         image: Img4,
         category: "Baler"
     },
+    {
+        title: "Hydraulic Bailing Solution for Plastic Recycling",
+        description: "Explore how hydraulic balers transform plastic waste into compact, high-density bales for efficient recycling and reduced logistics costs.",
+        route: "/plastic-baler-blog",
+        image: Img18, // replace with your new image import
+        category: "Baler"
+    },
+
 
     // Shredder Blogs
     {
@@ -80,13 +94,27 @@ const blogsData = [
         category: "Shredder"
     },
     {
+        title: "Advanced Shredders for Metal Recycling",
+        description: "Trusted metal shredders manufacturers in India offering efficient scrap processing, cost savings, and safety.",
+        route: "/metal-shredder-blog",
+        image: Img17, // Replace with your actual image import for Metal Shredder blog
+        category: "Shredder"
+    },
+    {
         title: "Shredding Technology Trends 2025",
         description: "Discover new shredder technologies designed for better productivity and lower maintenance.",
         route: "/shredder-blog4",
         image: Img16,
         category: "Shredder"
+    }
+    ,
+    {
+        title: "Tyre Scrap Recycling Plant Manufacturers-India",
+        description: "Discover leading tyre scrap recycling plant manufacturers in India offering advanced machinery .",
+        route: "/tyre-recycling-blog",
+        image: Img19, // replace with your actual image import
+        category: "Other"
     },
-
     // Secondary Shredder Blogs
     {
         title: "Secondary Shredders Explained",
@@ -117,41 +145,41 @@ const blogsData = [
         category: "Secondary"
     },
 
-// Other Equipment Blogs
-{
-    title: "How Feeding Equipment Works",
-    description: "Learn how feeding equipment ensures smooth and continuous material flow in recycling operations, preventing jams and improving efficiency.",
-    route: "/otherequipment-blog1",
-    image: Img9,
-    category: "Other"
-},
-{
-    title: "Who Should Use Screening & Separation Equipment?",
-    description: "Discover which recycling facilities benefit most from screening and separation equipment to maintain material purity and improve downstream processing.",
-    route: "/otherequipment-blog2",
-    image: Img10,
-    category: "Other"
-},
-{
-    title: "Types of Tyre Cutting & Preparation Machines",
-    description: "Understand the different types of tyre cutting and preparation machines and how they streamline tyre recycling, from bead wire removal to block cutting.",
-    route: "/otherequipment-blog3",
-    image: Img11,
-    category: "Other"
-},
-{
-    title: "Impact on Efficiency and Workflow Optimization",
-    description: "Explore how packing and folding equipment improves workflow, reduces manual labor, and optimizes efficiency across tyre recycling facilities.",
-    route: "/otherequipment-blog4",
-    image: Img12,
-    category: "Other"
-}
+    // Other Equipment Blogs
+    {
+        title: "How Feeding Equipment Works",
+        description: "Learn how feeding equipment ensures smooth and continuous material flow in recycling operations, preventing jams and improving efficiency.",
+        route: "/otherequipment-blog1",
+        image: Img9,
+        category: "Other"
+    },
+    {
+        title: "Who Should Use Screening & Separation Equipment?",
+        description: "Discover which recycling facilities benefit most from screening and separation equipment to maintain material purity and improve downstream processing.",
+        route: "/otherequipment-blog2",
+        image: Img10,
+        category: "Other"
+    },
+    {
+        title: "Types of Tyre Cutting & Preparation Machines",
+        description: "Understand the different types of tyre cutting and preparation machines and how they streamline tyre recycling, from bead wire removal to block cutting.",
+        route: "/otherequipment-blog3",
+        image: Img11,
+        category: "Other"
+    },
+    {
+        title: "Impact on Efficiency and Workflow Optimization",
+        description: "Explore how packing and folding equipment improves workflow, reduces manual labor, and optimizes efficiency across tyre recycling facilities.",
+        route: "/otherequipment-blog4",
+        image: Img12,
+        category: "Other"
+    }
 
 ];
 
 
 const BlogLandingPage = () => {
-      useEffect(() => window.scrollTo(0, 0), []);
+    useEffect(() => window.scrollTo(0, 0), []);
 
     return (
         <div className="container my-5">
