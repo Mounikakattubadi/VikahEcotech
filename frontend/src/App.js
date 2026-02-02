@@ -250,9 +250,9 @@ function App() {
         <Route exact path="/otherequipment-blog2" element={<OtherEquipmentBlog2 />} />
         <Route exact path="/otherequipment-blog3" element={<OtherEquipmentBlog3 />} />
         <Route exact path="/otherequipment-blog4" element={<OtherEquipmentBlog4 />} />
-        <Route exact path="/metal-shredder-blog" element={<MetalShredderBlog />} />
-        <Route exact path="/plastic-baler-blog" element={<PlasticBalerBlog />} />
-         <Route exact path="/tyre-recycling-blog" element={<TyreRecyclingBlog/>} />
+        <Route exact path="/metal-shredders" element={<MetalShredderBlog />} />
+        <Route exact path="/plastic-baler-info" element={<PlasticBalerBlog />} />
+         <Route exact path="/tyre-recycling-plant-manufacturers" element={<TyreRecyclingBlog/>} />
 
       </Routes>
        <Footer />

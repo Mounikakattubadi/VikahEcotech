@@ -64,7 +64,7 @@ const blogsData = [
     {
         title: "Hydraulic Bailing Solution for Plastic Recycling",
         description: "Explore how hydraulic balers transform plastic waste into compact, high-density bales for efficient recycling and reduced logistics costs.",
-        route: "/plastic-baler-blog",
+        route: "/plastic-baler-info",
         image: Img18, // replace with your new image import
         category: "Baler"
     },
@@ -95,7 +95,7 @@ const blogsData = [
     {
         title: "Advanced Shredders for Metal Recycling",
         description: "Trusted metal shredders manufacturers in India offering efficient scrap processing, cost savings, and safety.",
-        route: "/metal-shredder-blog",
+        route: "/metal-shredders",
         image: Img17, // Replace with your actual image import for Metal Shredder blog
         category: "Shredder"
     },
@@ -110,7 +110,7 @@ const blogsData = [
     {
         title: "Tyre Scrap Recycling Plant Manufacturers-India",
         description: "Discover leading tyre scrap recycling plant manufacturers in India offering advanced machinery .",
-        route: "/tyre-recycling-blog",
+        route: "/tyre-recycling-plant-manufacturers",
         image: Img19, // replace with your actual image import
         category: "Other"
     },
