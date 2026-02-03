@@ -34,7 +34,8 @@ const Ewaste = () => {
       {/* ================= SEO HELMET ================= */}
       <Helmet>
         <title>
-          E-Waste Shredder Machine Manufacturer in India | SHE-400 | Vikah Ecotech
+          E-Waste Shredder Machine Manufacturer in India | SHE-400 | Vikah
+          Ecotech
         </title>
 
         <meta
@@ -47,10 +48,7 @@ const Ewaste = () => {
           content="e-waste shredder machine, electronic waste shredder, pcb shredder, e waste recycling machine, primary e-waste shredder, shredder manufacturer india"
         />
 
-        <link
-          rel="canonical"
-          href="https://vikahecotech.com/ewaste"
-        />
+        <link rel="canonical" href="https://vikahecotech.com/ewaste" />
 
         {/* Product Structured Data */}
         <script type="application/ld+json">
@@ -70,6 +68,14 @@ const Ewaste = () => {
               url: "https://vikahecotech.com",
             },
             category: "E-Waste Recycling Machinery",
+            offers: {
+              "@type": "Offer",
+              url: "https://vikahecotech.com/ewaste",
+              priceCurrency: "INR",
+              price: "0",
+              availability: "https://schema.org/InStock",
+              priceValidUntil: "2026-12-31",
+            },
           })}
         </script>
       </Helmet>
@@ -129,12 +135,13 @@ const Ewaste = () => {
         <div className="productdetails">
           <h1>SHE-400 E-Waste Shredder</h1>
           <p>
-            The <strong>SHE-400 E-Waste Primary Shredder</strong> is an industrial
-            shredding machine engineered for efficient processing of electronic
-            waste such as PCB boards, mobile phones, laptops, household appliances,
-            and mixed electrical scrap. Built with a high-torque, low-speed
-            shredding mechanism, it ensures safe size reduction while protecting
-            valuable recoverable materials for downstream recycling processes.
+            The <strong>SHE-400 E-Waste Primary Shredder</strong> is an
+            industrial shredding machine engineered for efficient processing of
+            electronic waste such as PCB boards, mobile phones, laptops,
+            household appliances, and mixed electrical scrap. Built with a
+            high-torque, low-speed shredding mechanism, it ensures safe size
+            reduction while protecting valuable recoverable materials for
+            downstream recycling processes.
           </p>
         </div>
       </div>
@@ -152,12 +159,18 @@ const Ewaste = () => {
 
           <div className="sht200specification">
             <p>
-              ➤ Twin-shaft high-torque shredding technology<br />
-              ➤ Low-speed operation for safe e-waste processing<br />
-              ➤ Hardened alloy steel cutting blades<br />
-              ➤ Automatic overload reverse protection<br />
-              ➤ PLC-based automation and monitoring<br />
-              ➤ Low noise and vibration design<br />
+              ➤ Twin-shaft high-torque shredding technology
+              <br />
+              ➤ Low-speed operation for safe e-waste processing
+              <br />
+              ➤ Hardened alloy steel cutting blades
+              <br />
+              ➤ Automatic overload reverse protection
+              <br />
+              ➤ PLC-based automation and monitoring
+              <br />
+              ➤ Low noise and vibration design
+              <br />
             </p>
           </div>
         </div>
@@ -170,12 +183,30 @@ const Ewaste = () => {
         <h3>Electrical System</h3>
         <table>
           <tbody>
-            <tr><td>Total Power</td><td>60 HP</td></tr>
-            <tr><td>No. of Motors</td><td>2</td></tr>
-            <tr><td>Voltage</td><td>As per Client Requirement</td></tr>
-            <tr><td>Drive</td><td>Electric</td></tr>
-            <tr><td>Control Panel</td><td>MCC / PLC Controlled</td></tr>
-            <tr><td>Motor Make</td><td>Siemens / Crompton</td></tr>
+            <tr>
+              <td>Total Power</td>
+              <td>60 HP</td>
+            </tr>
+            <tr>
+              <td>No. of Motors</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Voltage</td>
+              <td>As per Client Requirement</td>
+            </tr>
+            <tr>
+              <td>Drive</td>
+              <td>Electric</td>
+            </tr>
+            <tr>
+              <td>Control Panel</td>
+              <td>MCC / PLC Controlled</td>
+            </tr>
+            <tr>
+              <td>Motor Make</td>
+              <td>Siemens / Crompton</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -184,10 +215,22 @@ const Ewaste = () => {
         <h3>Cutting Section</h3>
         <table>
           <tbody>
-            <tr><td>Cutting Chamber</td><td>800 × 700 mm</td></tr>
-            <tr><td>Rotor Diameter</td><td>320 mm</td></tr>
-            <tr><td>Blade Thickness</td><td>40 mm</td></tr>
-            <tr><td>Processing Capacity</td><td>4000 – 6000 kg/hr</td></tr>
+            <tr>
+              <td>Cutting Chamber</td>
+              <td>800 × 700 mm</td>
+            </tr>
+            <tr>
+              <td>Rotor Diameter</td>
+              <td>320 mm</td>
+            </tr>
+            <tr>
+              <td>Blade Thickness</td>
+              <td>40 mm</td>
+            </tr>
+            <tr>
+              <td>Processing Capacity</td>
+              <td>4000 – 6000 kg/hr</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -196,10 +239,22 @@ const Ewaste = () => {
         <h3>Dimensions & Weight</h3>
         <table>
           <tbody>
-            <tr><td>Length</td><td>3500 mm</td></tr>
-            <tr><td>Width</td><td>1500 mm</td></tr>
-            <tr><td>Height</td><td>2400 mm</td></tr>
-            <tr><td>Weight</td><td>Approx. 7000 kg</td></tr>
+            <tr>
+              <td>Length</td>
+              <td>3500 mm</td>
+            </tr>
+            <tr>
+              <td>Width</td>
+              <td>1500 mm</td>
+            </tr>
+            <tr>
+              <td>Height</td>
+              <td>2400 mm</td>
+            </tr>
+            <tr>
+              <td>Weight</td>
+              <td>Approx. 7000 kg</td>
+            </tr>
           </tbody>
         </table>
       </div>
