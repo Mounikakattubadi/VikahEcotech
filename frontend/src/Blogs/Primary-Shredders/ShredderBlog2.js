@@ -2,9 +2,15 @@ import React, { useState, useEffect } from "react";
 import styles from "./Blog.module.css";
 
 // Images
-import BlogImg3 from "../../images/Applications/plasticbaler2.jpg";
-import BlogImg1 from "../../images/Applications/app13.jpg";
+import BlogImg3 from "../../images/Applications/tyreshred2.jpg";
+import BlogImg1 from "../../images/Applications/tyreshred1.jpg";
 import BlogImg4 from "../../images/Applications/pss1.png";
+import TyreShredderImg from "../../images/Applications/pss1.png"; 
+
+
+
+import { Helmet } from "react-helmet";
+
 
 const faqsData = [
   {
@@ -30,17 +36,26 @@ const faqsData = [
   {
     question: "How long do Primary Shredders last?",
     answer: "With proper maintenance, industrial Primary Shredders can last 10+ years. Durable components, routine lubrication, and preventive servicing maximize operational life."
+  },
+  {
+    question: "What makes Tyre Shredders different from regular shredders?",
+    answer: "Tyre Primary Shredders are specifically designed to handle tough materials like car, truck, and industrial tyres. They feature dual-shaft cutting systems, reinforced blades, and high-torque motors to process rubber and steel efficiently."
+  },
+  {
+    question: "Can Tyre Shredders separate steel from rubber?",
+    answer: "Yes, many Tyre Shredders include integrated magnetic separators to remove steel belts and wire, allowing for easier recycling of rubber and metals separately."
   }
 ];
 
 const ShredderBlog2 = () => {
-    useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => window.scrollTo(0, 0), []);
 
   const sections = [
     { id: "introduction", title: "Introduction to Industrial Primary Shredders and Their Role in Efficiency" },
     { id: "efficiency", title: "Maximizing Efficiency in Industrial Operations Using Primary Shredders" },
     { id: "operation", title: "How Industrial Primary Shredders Work: Mechanisms and Process" },
     { id: "types", title: "Different Types of Primary Shredders and Ideal Applications" },
+    { id: "tyreshredder", title: "Tyre Primary Shredders: Features, Operation, and Benefits" },
     { id: "workflow", title: "Workflow Optimization with Primary Shredders for Smooth Operations" },
     { id: "space", title: "Space Utilization and Storage Benefits of Shredding Materials" },
     { id: "cost", title: "Cost Reduction and Transportation Efficiency" },
@@ -80,6 +95,89 @@ const ShredderBlog2 = () => {
 
   return (
     <div className={styles.pageWrapper}>
+
+
+<Helmet>
+  {/* Page Title */}
+  <title>
+    Primary Shredders for Recycling: Advanced Shredding Technologies for Industrial Waste | Vikah Ecotech
+  </title>
+
+  {/* Meta Description */}
+  <meta
+    name="description"
+    content="Explore how primary shredders and advanced shredding technologies improve recycling efficiency, reduce waste, and optimize industrial operations. Learn applications, benefits, and workflow improvements."
+  />
+
+  {/* Meta Keywords */}
+  <meta
+    name="keywords"
+    content="primary shredders, recycling primary shredders, industrial shredding technologies, waste management shredder, tyre shredders, industrial waste processing"
+  />
+
+  {/* Canonical URL */}
+  <link
+    rel="canonical"
+    href="https://vikahecotech.com/recycling-process-with-shredder-machines"
+  />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Primary Shredders for Recycling: Advanced Shredding Technologies for Industrial Waste | Vikah Ecotech"
+  />
+  <meta
+    property="og:description"
+    content="Discover how primary shredders and industrial shredding technologies streamline recycling, reduce labor, and enhance operational efficiency."
+  />
+  <meta
+    property="og:url"
+    content="https://vikahecotech.com/recycling-process-with-shredder-machines"
+  />
+  <meta property="og:type" content="article" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary" />
+  <meta
+    name="twitter:title"
+    content="Primary Shredders for Recycling: Advanced Shredding Technologies for Industrial Waste | Vikah Ecotech"
+  />
+  <meta
+    name="twitter:description"
+    content="Learn how primary shredders and modern shredding technologies optimize recycling processes and improve industrial efficiency."
+  />
+
+  {/* Structured Data – Blog Article (Logo Only) */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline":
+        "Primary Shredders for Recycling: Advanced Shredding Technologies for Industrial Waste",
+      "description":
+        "Industrial primary shredders help industries improve recycling efficiency, reduce labor and energy costs, and optimize industrial operations using advanced shredding technologies.",
+      "url": "https://vikahecotech.com/recycling-process-with-shredder-machines",
+      "author": {
+        "@type": "Organization",
+        "name": "Vikah Ecotech"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Vikah Ecotech",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://vikahecotech.com/logo_vk.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://vikahecotech.com/recycling-process-with-shredder-machines"
+      }
+    })}
+  </script>
+</Helmet>
+
+
 
       {/* LEFT NAVIGATION */}
       <nav className={styles.toc}>
@@ -156,6 +254,24 @@ const ShredderBlog2 = () => {
               <li><strong>High-Speed Rotary Primary Shredders:</strong> Efficient for lightweight materials like paper and cardboard.</li>
             </ul>
             <p>Choosing the right type ensures maximum efficiency, durability, and minimal maintenance.</p>
+          </div>
+
+          {/* Tyre Shredder */}
+          <div id="tyreshredder" className={styles.section}>
+            <h2>Tyre Primary Shredders: Features, Operation, and Benefits</h2>
+            <div className={styles.imgLeft}>
+              <img src={TyreShredderImg} alt="Tyre Primary Shredder" />
+              <span className={styles.caption}>Tyre Primary Shredders efficiently process car, truck, and industrial tyres</span>
+            </div>
+            <p>
+              Tyre Primary Shredders are specialized machines designed to handle the tough and elastic nature of tyres. They feature reinforced dual-shaft cutters, high-torque motors, and durable components capable of cutting rubber and separating embedded steel.
+            </p>
+            <p>
+              These shredders reduce tyres into smaller, uniform pieces suitable for recycling, energy recovery, or reuse. Many include integrated magnetic separators to extract steel belts, making the material easier to process downstream.
+            </p>
+            <p>
+              Industries such as tyre recycling plants, automotive manufacturers, and waste management facilities benefit from these shredders by improving processing speed, safety, and operational efficiency.
+            </p>
           </div>
 
           {/* Workflow */}
@@ -248,7 +364,7 @@ const ShredderBlog2 = () => {
           {/* Conclusion */}
           <div id="conclusion" className={styles.section}>
             <div className={styles.imgLeft}>
-              <img src={BlogImg4} alt="Shredded Materials Ready for Recycling" />
+              <img src={BlogImg1} alt="Shredded Materials Ready for Recycling" />
               <span className={styles.caption}>Processed scrap ready for transport or recycling</span>
             </div>
             <h2>Final Thoughts</h2>
@@ -299,7 +415,6 @@ const ShredderBlog2 = () => {
         </div>
       </div>
 
-
       {/* RIGHT — Animated Related Pages Sidebar */}
       <aside className={styles.relatedSidebar}>
         <h3 className={styles.relatedTitle}>Related Pages</h3>
@@ -329,7 +444,7 @@ const ShredderBlog2 = () => {
         </div>
 
       </aside>
-      
+
     </div>
   );
 };

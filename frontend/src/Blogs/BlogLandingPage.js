@@ -74,22 +74,22 @@ const blogsData = [
     {
         title: "Primary Shredders – Complete Breakdown",
         description: "How do primary shredders manage bulky waste and enhance shredding efficiency?",
-        route: "/shredder-blog1",
+        route: "/primary-shredder-waste-management",
         image: Img13,
         category: "Shredder"
-    },
+    },  
     {
-        title: "High-Capacity Tyre Shredders",
+        title: "High-Capacity  Shredders",
         description: "Explore performance, cost savings, and the safety features of high-capacity shredders.",
-        route: "/shredder-blog2",
+        route: "/recycling-process-with-shredder-machines",
         image: Img14,
         category: "Shredder"
     },
     {
-        title: "Shredding Technology Trends 2025",
+        title: "Tyre Shredding Technology Trends",
         description: "What are the latest innovations boosting throughput and reducing downtime in shredding?",
-        route: "/shredder-blog3",
-        image: Img15,
+        route: "/primary-shredders-for-tyres",
+        image: Img13,
         category: "Shredder"
     },
     {
@@ -100,9 +100,9 @@ const blogsData = [
         category: "Shredder"
     },
     {
-        title: "Shredding Technology Trends 2025",
+        title: "Industrial Primary Shredders",
         description: "Discover new shredder technologies designed for better productivity and lower maintenance.",
-        route: "/shredder-blog4",
+        route: "/industrial-primary-shredders",
         image: Img16,
         category: "Shredder"
     }

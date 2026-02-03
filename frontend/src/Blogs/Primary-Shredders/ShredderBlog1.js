@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 import styles from "./Blog.module.css";
 
 // Images (reuse same ones for now)
-import BlogImg1 from "../../images/Applications/plasticbaler1.jpg";
-import BlogImg3 from "../../images/Applications/plasticbaler2.jpg";
-import BlogImg4 from "../../images/Applications/pcb3.webp";
+import BlogImg1 from "../../images/Applications/tyreshred2.jpg";
+import BlogImg4 from "../../images/Applications/tyreshred1.jpg";
+import shred1 from "../../images/Applications/shredtyre6.jpg";
+import { Helmet } from "react-helmet";
 
 const faqsData = [
   {
@@ -72,6 +73,87 @@ const ShredderBlog1 = () => {
   return (
     <div className={styles.pageWrapper}>
 
+<Helmet>
+  {/* Page Title */}
+  <title>
+    Industrial Primary Shredders for Efficient Waste Management | Vikah Ecotech
+  </title>
+
+  {/* Meta Description */}
+  <meta
+    name="description"
+    content="Learn why industries use industrial primary shredders for efficient waste management, recycling, cost reduction, and sustainability. Explore benefits, safety, and applications."
+  />
+
+  {/* Meta Keywords */}
+  <meta
+    name="keywords"
+    content="industrial primary shredder, waste management shredder, recycling shredder machine, industrial shredding solutions"
+  />
+
+  {/* Canonical URL */}
+  <link
+    rel="canonical"
+    href="https://vikahecotech.com/primary-shredder-waste-management"
+  />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Industrial Primary Shredders for Efficient Waste Management | Vikah Ecotech"
+  />
+  <meta
+    property="og:description"
+    content="Industrial primary shredders improve waste handling, recycling efficiency, and sustainability for modern industries."
+  />
+  <meta
+    property="og:url"
+    content="https://vikahecotech.com/primary-shredder-waste-management"
+  />
+  <meta property="og:type" content="article" />
+
+  {/* Twitter Card */}
+  <meta name="twitter:card" content="summary" />
+  <meta
+    name="twitter:title"
+    content="Industrial Primary Shredders for Efficient Waste Management"
+  />
+  <meta
+    name="twitter:description"
+    content="Why industries rely on primary shredders for efficient waste management and recycling."
+  />
+
+  {/* Structured Data – Blog Article (Logo Only) */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline":
+        "Why Industries Use Industrial Primary Shredders for Efficient Waste Management",
+      "description":
+        "Industrial primary shredders help industries reduce waste volume, improve recycling efficiency, enhance safety, and support sustainability goals.",
+      "url": "https://vikahecotech.com/primary-shredder-waste-management",
+      "author": {
+        "@type": "Organization",
+        "name": "Vikah Ecotech"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Vikah Ecotech",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://vikahecotech.com/logo_vk.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://vikahecotech.com/primary-shredder-waste-management"
+      }
+    })}
+  </script>
+</Helmet>
+
+
       {/* LEFT NAVIGATION */}
       <nav className={styles.toc}>
         <h3>Explore Sections</h3>
@@ -119,7 +201,7 @@ const ShredderBlog1 = () => {
           {/* Operation */}
           <div id="operation" className={styles.section}>
             <div className={styles.imgRight}>
-              <img src={BlogImg3} alt="Primary Shredders Operating Process" />
+              <img src={shred1} alt="Primary Shredders Operating Process" />
               <span className={styles.caption}>Shredding scrap materials for optimized handling</span>
             </div>
             <h2>How Industrial Primary Shredders Operate</h2>

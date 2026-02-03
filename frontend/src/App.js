@@ -235,13 +235,15 @@ function App() {
             {/* blogs pages */}
         <Route exact path="/bloglandingpage" element={<BlogLandingPage />} />
         <Route exact path="/baler-info" element={<BalerBlog1 />} />
+        <Route exact path="/plastic-baler-info" element={<PlasticBalerBlog />} />
         <Route exact path="/baler-scrap-management" element={<BalerBlog2 />} />
         <Route exact path="/tyre-balers-machine" element={<BalerBlog3 />} />
         <Route exact path="/baler-for-tyres" element={<BalerBlog4 />} />
-        <Route exact path="/shredder-blog1" element={<ShredderBlog1 />} />
-        <Route exact path="/shredder-blog2" element={<ShredderBlog2 />} />
-        <Route exact path="/shredder-blog3" element={<ShredderBlog3 />} />
-        <Route exact path="/shredder-blog4" element={<ShredderBlog4 />} />
+        <Route exact path="/primary-shredder-waste-management" element={<ShredderBlog1 />} />
+        <Route exact path="/recycling-process-with-shredder-machines" element={<ShredderBlog2 />} />
+        <Route exact path="/primary-shredders-for-tyres" element={<ShredderBlog3 />} />
+        <Route exact path="/industrial-primary-shredders" element={<ShredderBlog4 />} />
+        <Route exact path="/metal-shredders" element={<MetalShredderBlog />} />
         <Route exact path="/secondaryshredder-blog1" element={<SecondaryShredderBlog1 />} />
         <Route exact path="/secondaryshredder-blog2" element={<SecondaryShredderBlog2 />} />
         <Route exact path="/secondaryshredder-blog3" element={<SecondaryShredderBlog3 />} />
@@ -250,8 +252,6 @@ function App() {
         <Route exact path="/otherequipment-blog2" element={<OtherEquipmentBlog2 />} />
         <Route exact path="/otherequipment-blog3" element={<OtherEquipmentBlog3 />} />
         <Route exact path="/otherequipment-blog4" element={<OtherEquipmentBlog4 />} />
-        <Route exact path="/metal-shredders" element={<MetalShredderBlog />} />
-        <Route exact path="/plastic-baler-info" element={<PlasticBalerBlog />} />
          <Route exact path="/tyre-recycling-plant-manufacturers" element={<TyreRecyclingBlog/>} />
 
       </Routes>
