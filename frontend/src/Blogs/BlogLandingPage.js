@@ -118,7 +118,7 @@ const blogsData = [
     {
         title: "Secondary Shredders Explained",
         description: "Why are secondary shredders crucial for fine processing and size reduction?",
-        route: "/secondaryshredder-blog1",
+        route: "/industrial-secondary-shredder",
         image: Img5,
         category: "Secondary"
     },

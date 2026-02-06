@@ -122,10 +122,16 @@ import Ifat2025 from './Trade Fairs/ifat2025.js';
     import OtherEquipmentBlog3 from './Blogs/OtherEqp/OtherEquipmentBlog3.js';
     import OtherEquipmentBlog4 from './Blogs/OtherEqp/OtherEquipmentBlog4.js';
     import BlogLandingPage from './Blogs/BlogLandingPage.js';
-import MetalShredderBlog from './Blogs/Primary-Shredders/MetalShredderBlog.js';
-import PlasticBalerBlog from './Blogs/Baler/PlasticBalerBlog.js';
-import TyreRecyclingBlog from './Blogs/OtherEqp/TyreRecyclingBlog.js';
-        
+    import MetalShredderBlog from './Blogs/Primary-Shredders/MetalShredderBlog.js';
+    import PlasticBalerBlog from './Blogs/Baler/PlasticBalerBlog.js';
+    import TyreRecyclingBlog from './Blogs/OtherEqp/TyreRecyclingBlog.js';
+
+    //propages
+    import Tyrebalerpage from './Prodpages/Tyrebalerpage.js';
+    import Plasticbalerpage from './Prodpages/Plasticbalerpage.js';
+    import Metalbalerpage from './Prodpages/Metalbalerpage.js';
+    import PCBpage from './Prodpages/pcbpage.js';
+            
 
 
 function App() {
@@ -244,7 +250,7 @@ function App() {
         <Route exact path="/primary-shredders-for-tyres" element={<ShredderBlog3 />} />
         <Route exact path="/industrial-primary-shredders" element={<ShredderBlog4 />} />
         <Route exact path="/metal-shredders" element={<MetalShredderBlog />} />
-        <Route exact path="/secondaryshredder-blog1" element={<SecondaryShredderBlog1 />} />
+        <Route exact path="/industrial-secondary-shredder" element={<SecondaryShredderBlog1 />} />
         <Route exact path="/secondaryshredder-blog2" element={<SecondaryShredderBlog2 />} />
         <Route exact path="/secondaryshredder-blog3" element={<SecondaryShredderBlog3 />} />
         <Route exact path="/secondaryshredder-blog4" element={<SecondaryShredderBlog4 />} />
@@ -253,6 +259,14 @@ function App() {
         <Route exact path="/otherequipment-blog3" element={<OtherEquipmentBlog3 />} />
         <Route exact path="/otherequipment-blog4" element={<OtherEquipmentBlog4 />} />
          <Route exact path="/tyre-recycling-plant-manufacturers" element={<TyreRecyclingBlog/>} />
+
+
+         {/* propages */}
+         <Route exact path="/tyrebalerpage" element={<Tyrebalerpage />} />
+         <Route exact path="/plasticbalerpage" element={<Plasticbalerpage />} />
+         <Route exact path="/metalbalerpage" element={<Metalbalerpage />} />
+         <Route exact path="/pcbpage" element={<PCBpage />} />
+
 
       </Routes>
        <Footer />
