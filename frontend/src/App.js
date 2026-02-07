@@ -131,6 +131,8 @@ import Ifat2025 from './Trade Fairs/ifat2025.js';
     import Plasticbalerpage from './Prodpages/Plasticbalerpage.js';
     import Metalbalerpage from './Prodpages/Metalbalerpage.js';
     import PCBpage from './Prodpages/pcbpage.js';
+    import Tyreshredderpage from './Prodpages/Tyreshredderpage.js';
+    import Plasticshredderpage from './Prodpages/Plasticshredderpage.js';
             
 
 
@@ -266,6 +268,9 @@ function App() {
          <Route exact path="/plasticbalerpage" element={<Plasticbalerpage />} />
          <Route exact path="/metalbalerpage" element={<Metalbalerpage />} />
          <Route exact path="/pcbpage" element={<PCBpage />} />
+         <Route exact path="/tyreshredderpage" element={<Tyreshredderpage/>} />
+         <Route exact path="/plasticshredderpage" element={<Plasticshredderpage/>} />
+
 
 
       </Routes>
