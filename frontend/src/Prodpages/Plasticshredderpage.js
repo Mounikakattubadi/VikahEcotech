@@ -74,7 +74,7 @@ function Plasticshredderpage() {
       <div className={`${styles.tyreHeader} text-center text-white`}>
         <h1 className="display-3 fw-bold">Plastic Shredder Machines</h1>
         <p className="lead">
-          Reliable shredding solutions for plastic recycling and waste management
+          Reliable Shredding solutions for Plastic recycling and waste management
         </p>
       </div>
 
