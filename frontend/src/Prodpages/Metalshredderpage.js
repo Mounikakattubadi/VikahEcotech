@@ -1,17 +1,13 @@
 import React from "react";
-import shredderImg from "../images/Shedder _ Final PNG.png";
-import sht600Img from "../images/Applications/shredtyre6.jpg";
-import sht8000Img from "../images/shredder_hd1.jpg";
-import sht12000Img from "../images/st.jpeg";
+import metalMainImg from "../images/Applications/shredm1.jpg";
+import shm4000Img from "../images/Applications/shredm2.jpg"; 
 import { Helmet } from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "./Tyrebalerpage.module.css";
+import styles from "./Tyrebalerpage.module.css"; 
 
-function Tyreshredderpage() {
+function Metalshredderpage() {
   const models = [
-    { name: "SHT6000", link: "/sht6000", img: sht600Img },
-    { name: "SHT8000", link: "/sht8000", img: sht8000Img },
-    { name: "SHT12000", link: "/sht12000", img: sht12000Img },
+    { name: "SHM4000", link: "/shm4000", img: shm4000Img },
   ];
 
   return (
@@ -19,116 +15,111 @@ function Tyreshredderpage() {
       <Helmet>
         {/* Page Title */}
         <title>
-          Tyre Shredder | Shredding Machine Manufacturer in India
+          Metal Shredder | SHM4000 Heavy-Duty Metal Shredding Machine Manufacturer in India
         </title>
 
         {/* Primary Meta Tags */}
         <meta
           name="description"
-          content="Leading tyre shredder and shredding machine manufacturer in India. Explore high-performance tyre shredders (SHT6000, SHT8000, SHT12000) for efficient tyre recycling and waste management."
+          content="High-performance SHM4000 metal shredder for processing heavy metal scrap. Trusted metal shredding machine manufacturer in India."
         />
         <meta
           name="keywords"
-          content="Tyre shredder, shredding machine manufacturer in India, tyre shredding machine, tyre recycling shredder, SHT6000, SHT8000, SHT12000, industrial shredder, VikaH Ecotech"
+          content="Metal shredder, SHM4000, metal shredding machine, industrial shredder, metal scrap shredder, shredding machine India, Vikah Ecotech"
         />
         <meta name="robots" content="index, follow" />
 
-        {/* Canonical */}
+        {/* Canonical URL */}
         <link
           rel="canonical"
-          href="https://vikahecotech.com/tyreshredderpage"
+          href="https://vikahecotech.com/metalshredderpage"
         />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Tyre Shredder | Shredding Machine Manufacturer in India"
+          content="Metal Shredder | SHM4000 Heavy-Duty Metal Shredding Machine Manufacturer in India"
         />
         <meta
           property="og:description"
-          content="High-capacity tyre shredders for recycling and waste reduction. Trusted shredding machine manufacturer in India – VikaH Ecotech."
+          content="SHM4000 metal shredder engineered for high torque and continuous industrial scrap recycling."
         />
         <meta
           property="og:url"
-          content="https://vikahecotech.com/tyreshredderpage"
+          content="https://vikahecotech.com/metalshredderpage"
         />
         <meta property="og:image" content="https://vikahecotech.com/logo_vk" />
-        <meta property="og:site_name" content="VikaH Ecotech" />
+        <meta property="og:site_name" content="Vikah Ecotech" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Tyre Shredder | Shredding Machine Manufacturer in India"
+          content="Metal Shredder | SHM4000 Heavy-Duty Metal Shredding Machine Manufacturer in India"
         />
         <meta
           name="twitter:description"
-          content="Industrial tyre shredders designed for high efficiency, durability, and sustainability."
+          content="Durable and powerful SHM4000 metal shredder designed for continuous industrial scrap processing."
         />
         <meta name="twitter:image" content="https://vikahecotech.com/logo_vk" />
         <meta name="twitter:site" content="@VikaHEcotech" />
       </Helmet>
 
-      {/* Header */}
+      {/* Header Section */}
       <div className={`${styles.tyreHeader} text-center text-white`}>
-        <h1 className="display-3 fw-bold">Tyre Shredder Machines</h1>
+        <h1 className="display-3 fw-bold">Metal Shredder Machines</h1>
         <p className="lead">
-          Heavy-duty shredding solutions for efficient tyre recycling
+          High-torque shredders for ferrous & non-ferrous scrap processing
         </p>
       </div>
 
       <div className="container my-5">
-        {/* Image + Info */}
+
+        {/* Image + Info Section */}
         <div className="row align-items-center mb-5">
           <div className="col-md-6 text-center mb-4 mb-md-0">
             <div className={styles.imageWrapper}>
               <img
-                src={shredderImg}
-                alt="Tyre Shredder Machine"
+                src={metalMainImg}
+                alt="Metal Shredder Machine"
                 className={`img-fluid rounded shadow-lg ${styles.mainImage}`}
               />
             </div>
           </div>
 
           <div className="col-md-6">
-            <h3 className="mb-3 text-success fw-bold">
-              About Tyre Shredders
-            </h3>
+            <h3 className="mb-3 text-success fw-bold">About Metal Shredders</h3>
 
             <p className={styles.infoText}>
-              Tyre shredders are powerful industrial machines used to break
-              down used and waste tyres into smaller, reusable pieces. These
-              machines play a critical role in tyre recycling by converting
-              bulky tyres into uniform shreds suitable for further processing.
+              Metal shredders are heavy-duty machines built to cut, crush, and
+              break down bulky metal scrap into smaller uniform pieces suitable
+              for recycling and further processing.
             </p>
 
             <p className={styles.infoText}>
-              The shredding process improves material handling efficiency and
-              enables downstream applications such as crumb rubber production,
-              pyrolysis, RDF fuel preparation, and civil construction uses.
+              They efficiently handle ferrous and non-ferrous materials such as
+              steel scrap, aluminium scrap, iron blocks, and mixed metal waste.
             </p>
 
             <p className={styles.infoText}>
-              VikaH Ecotech tyre shredders are engineered for high torque,
-              low-speed operation, ensuring consistent output size, reduced
-              wear, and reliable long-term performance even under continuous
-              industrial workloads.
+              The SHM4000 model from Vikah Ecotech is engineered to deliver
+              high torque at low speed, ensuring maximum durability and
+              long-term reliable performance in industrial environments.
             </p>
 
             <p className={styles.infoText}>
-              As a trusted shredding machine manufacturer in India, we design
-              our machines to meet environmental regulations, reduce landfill
-              waste, and support sustainable recycling practices across
-              industries.
+              Designed to support sustainable recycling, our shredders help
+              industries reduce waste, improve processing efficiency, and
+              comply with environmental standards.
             </p>
           </div>
         </div>
 
-        {/* Models */}
+        {/* Only one model */}
         <div className="mb-5">
           <h3 className="mb-4 text-center text-success fw-bold">
-            Available Models
+            Available Model
           </h3>
 
           <div className="row justify-content-center">
@@ -157,7 +148,7 @@ function Tyreshredderpage() {
           </div>
         </div>
 
-        {/* CTA */}
+        {/* CTA Button */}
         <div className="text-center my-5">
           <a href="/contact" className={styles.btnGradient}>
             Contact Us for Pricing
@@ -168,4 +159,4 @@ function Tyreshredderpage() {
   );
 }
 
-export default Tyreshredderpage;
+export default Metalshredderpage;
