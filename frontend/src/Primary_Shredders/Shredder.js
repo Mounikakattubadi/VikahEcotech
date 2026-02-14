@@ -156,26 +156,145 @@ function Shredder() {
 
   return (
     <div className="baler-page">
-      <Helmet>
-        <title>
-          Primary Shredder Machine Manufacturer in India | Vikah Ecotech
-        </title>
 
-        <meta
-          name="description"
-          content="Vikah Ecotech is a leading manufacturer of primary shredder machines for tyre recycling, e-waste, metal, plastic, and paper waste processing in India. High-performance industrial shredders for reliable waste management."
-        />
+<Helmet>
 
-        <meta
-          name="keywords"
-          content="primary shredder, primary shredder machine, tyre shredder, metal shredder, plastic shredder, paper shredder, e-waste shredder, industrial shredder, waste shredder, shredder manufacturer india"
-        />
+  {/* ===== BASIC SEO ===== */}
+  <title>
+    Primary Shredder Machines in India | Tyre, Metal, Plastic, Paper & E-Waste | Vikah Ecotech
+  </title>
 
-        <link
-          rel="canonical"
-          href="https://vikahecotech.com/primary-shredder"
-        />
-      </Helmet>
+  <meta
+    name="description"
+    content="Vikah Ecotech manufactures primary shredder machines in India for tyre, metal, plastic, paper/cardboard, and e-waste processing. High-performance shredders for industrial recycling."
+  />
+
+  <meta
+    name="keywords"
+    content="primary shredder, tyre shredder, metal shredder, plastic shredder, paper shredder, e-waste shredder, industrial shredder, waste recycling machinery India"
+  />
+
+  <link rel="canonical" href="https://vikahecotech.com/primary-shredder" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Vikah Ecotech Pvt Ltd" />
+
+  {/* ===== OPEN GRAPH ===== */}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Primary Shredder Machines | Vikah Ecotech" />
+  <meta property="og:description" content="Industrial primary shredders for tyre, metal, plastic, paper, and e-waste recycling in India." />
+  <meta property="og:url" content="https://vikahecotech.com/primary-shredder" />
+  <meta property="og:image" content="https://vikahecotech.com/logo_vk.png" />
+
+  {/* ===== TWITTER CARD ===== */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Primary Shredder Machines | Vikah Ecotech" />
+  <meta name="twitter:description" content="High-performance primary shredders for tyre, metal, plastic, paper and e-waste processing." />
+  <meta name="twitter:image" content="https://vikahecotech.com/logo_vk.png" />
+
+  {/* ===== LOCAL BUSINESS SCHEMA ===== */}
+  <script type="application/ld+json">
+    {`
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Vikah Ecotech Pvt Ltd",
+      "image": "https://vikahecotech.com/logo_vk.png",
+      "url": "https://vikahecotech.com",
+      "telephone": "+91-4049471616",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "406, 4th Floor, Patel Towers, Above EasyBuy, Beside Nagole RTO Office, Nagole"
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500068",
+        "addressCountry": "IN"
+      },
+      "areaServed": "India"
+    }
+    `}
+  </script>
+
+  {/* ===== ORGANIZATION SCHEMA ===== */}
+  <script type="application/ld+json">
+    {`
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vikah Ecotech Pvt Ltd",
+      "url": "https://vikahecotech.com",
+      "logo": "https://vikahecotech.com/logo_vk.png"
+    }
+    `}
+  </script>
+
+  {/* ===== ITEM LIST SCHEMA FOR PRIMARY SHREDDER APPLICATIONS ===== */}
+  <script type="application/ld+json">
+    {`
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Primary Shredder Applications",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Tyre Shredder",
+          "url": "https://vikahecotech.com/tyreshredder"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Metal Shredder",
+          "url": "https://vikahecotech.com/shm4000"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Plastic Shredder",
+          "url": "https://vikahecotech.com/plasticshredder"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Paper & Cardboard Shredder",
+          "url": "https://vikahecotech.com/papershredder"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "E-Waste Shredder",
+          "url": "https://vikahecotech.com/ewaste"
+        }
+      ]
+    }
+    `}
+  </script>
+
+  {/* ===== BREADCRUMB SCHEMA ===== */}
+  <script type="application/ld+json">
+    {`
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://vikahecotech.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Primary Shredder",
+          "item": "https://vikahecotech.com/primary-shredder"
+        }
+      ]
+    }
+    `}
+  </script>
+
+</Helmet>
 
       {/* HERO CAROUSEL */}
       <div className={styles.heroWrapper}>

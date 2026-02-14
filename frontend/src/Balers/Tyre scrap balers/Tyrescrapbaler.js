@@ -46,6 +46,7 @@ function Tyrescrapbaler() {
   return (
     <div>
       <Helmet>
+        {/* ===== BASIC SEO ===== */}
         <title>
           Tyre Scrap Baler Machine Manufacturer in Hyderabad | Vikah Ecotech
         </title>
@@ -57,13 +58,153 @@ function Tyrescrapbaler() {
 
         <meta
           name="keywords"
-          content="tyre scrap baler, scrap tyre baler machine, tyre recycling baler, industrial baler for tyres"
+          content="tyre scrap baler, scrap tyre baler machine, tyre recycling baler,tyre crushing machine, industrial baler for tyres"
         />
+
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Vikah Ecotech Pvt Ltd" />
 
         <link
           rel="canonical"
           href="https://vikahecotech.com/tyre-scrap-balers"
         />
+
+        {/* ===== OPEN GRAPH ===== */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Tyre Scrap Baler Machine | Vikah Ecotech"
+        />
+        <meta
+          property="og:description"
+          content="Heavy-duty tyre scrap balers for efficient scrap tyre recycling and industrial waste management in Hyderabad, India."
+        />
+        <meta
+          property="og:url"
+          content="https://vikahecotech.com/tyre-scrap-balers"
+        />
+        <meta
+          property="og:image"
+          content="https://vikahecotech.com/logo_vk.png"
+        />
+
+        {/* ===== TWITTER CARD ===== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Tyre Scrap Baler Machine | Vikah Ecotech"
+        />
+        <meta
+          name="twitter:description"
+          content="Heavy-duty tyre scrap balers for scrap tyre recycling and industrial waste management across India."
+        />
+        <meta
+          name="twitter:image"
+          content="https://vikahecotech.com/logo_vk.png"
+        />
+
+        {/* ===== LOCAL BUSINESS SCHEMA ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Vikah Ecotech Pvt Ltd",
+      "image": "https://vikahecotech.com/logo_vk.png",
+      "url": "https://vikahecotech.com",
+      "telephone": "+91-4049471616",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "406, 4th Floor, Patel Towers, Above EasyBuy, Beside Nagole RTO Office, Nagole",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500068",
+        "addressCountry": "IN"
+      },
+      "areaServed": "India"
+    }
+    `}
+        </script>
+
+        {/* ===== ORGANIZATION SCHEMA ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vikah Ecotech Pvt Ltd",
+      "url": "https://vikahecotech.com",
+      "logo": "https://vikahecotech.com/logo_vk.png"
+    }
+    `}
+        </script>
+
+        {/* ===== PRODUCT SCHEMA FOR EACH BALER MODEL ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Tyre Scrap Baler Machines",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "BLT150",
+          "description": "Tyre Scrap Baler BLT150 with 150 Ton compaction force and 9000 kg weight.",
+          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
+          "url": "https://vikahecotech.com/blt150"
+        },
+        {
+          "@type": "Product",
+          "position": 2,
+          "name": "BLT200",
+          "description": "Tyre Scrap Baler BLT200 with 200 Ton compaction force and 9000 kg weight.",
+          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
+          "url": "https://vikahecotech.com/blt200"
+        },
+        {
+          "@type": "Product",
+          "position": 3,
+          "name": "BLT250",
+          "description": "Tyre Scrap Baler BLT250 with 250 Ton compaction force and 11000 kg weight.",
+          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
+          "url": "https://vikahecotech.com/blt250"
+        }
+      ]
+    }
+    `}
+        </script>
+
+        {/* ===== BREADCRUMB SCHEMA ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://vikahecotech.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Balers",
+          "item": "https://vikahecotech.com/balers"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tyre Scrap Balers",
+          "item": "https://vikahecotech.com/tyre-scrap-balers"
+        }
+      ]
+    }
+    `}
+        </script>
       </Helmet>
 
       {/* Header */}

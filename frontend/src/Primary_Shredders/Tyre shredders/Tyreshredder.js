@@ -53,20 +53,160 @@ function Tyreshredder() {
   return (
     <div>
       <Helmet>
+        {/* ===== BASIC SEO ===== */}
         <title>Tyre Shredder Machine for Recycling | Vikah Ecotech</title>
 
         <meta
           name="description"
           content="Vikah Ecotech manufactures heavy-duty tyre shredder machines designed for primary shredding of waste tyres in recycling plants. Reliable tyre shredders for industrial applications."
         />
-
         <meta
           name="keywords"
           content="tyre shredder machine, tyre shredding machine, tyre recycling shredder, primary tyre shredder, industrial tyre shredder"
         />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Vikah Ecotech Pvt Ltd" />
 
         <link rel="canonical" href="https://vikahecotech.com/tyreshredder" />
+
+        {/* ===== OPEN GRAPH ===== */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Tyre Shredder Machine for Recycling | Vikah Ecotech"
+        />
+        <meta
+          property="og:description"
+          content="Primary tyre shredders for industrial recycling plants. High-performance shredders for processing whole tyres into uniform shredded material."
+        />
+        <meta
+          property="og:url"
+          content="https://vikahecotech.com/tyreshredder"
+        />
+        <meta
+          property="og:image"
+          content="https://vikahecotech.com/logo_vk.png"
+        />
+
+        {/* ===== TWITTER CARD ===== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Tyre Shredder Machine for Recycling | Vikah Ecotech"
+        />
+        <meta
+          name="twitter:description"
+          content="Primary tyre shredders for industrial recycling plants. High-performance shredders for processing whole tyres into uniform shredded material."
+        />
+        <meta
+          name="twitter:image"
+          content="https://vikahecotech.com/logo_vk.png"
+        />
+
+        {/* ===== LOCAL BUSINESS SCHEMA ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Vikah Ecotech Pvt Ltd",
+      "image": "https://vikahecotech.com/logo_vk.png",
+      "url": "https://vikahecotech.com",
+      "telephone": "+91-4049471616",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "406, 4th Floor, Patel Towers, Above EasyBuy, Beside Nagole RTO Office, Nagole",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500068",
+        "addressCountry": "IN"
+      },
+      "areaServed": "India"
+    }
+    `}
+        </script>
+
+        {/* ===== ORGANIZATION SCHEMA ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vikah Ecotech Pvt Ltd",
+      "url": "https://vikahecotech.com",
+      "logo": "https://vikahecotech.com/logo_vk.png"
+    }
+    `}
+        </script>
+
+        {/* ===== PRODUCT SCHEMA FOR EACH SHREDDER ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Primary Tyre Shredder Machines",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "SHT6000",
+          "description": "Primary tyre shredder SHT6000 with 120-160 HP power and robust hydraulic system.",
+          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
+          "url": "https://vikahecotech.com/sht6000"
+        },
+        {
+          "@type": "Product",
+          "position": 2,
+          "name": "SHT8000",
+          "description": "Primary tyre shredder SHT8000 with 160-220 HP power for industrial tyre recycling.",
+          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
+          "url": "https://vikahecotech.com/sht8000"
+        },
+        {
+          "@type": "Product",
+          "position": 3,
+          "name": "SHT12000",
+          "description": "Primary tyre shredder SHT12000 with 220-280 HP power and robust hydraulic system for high-performance tyre shredding.",
+          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
+          "url": "https://vikahecotech.com/sht12000"
+        }
+      ]
+    }
+    `}
+        </script>
+
+        {/* ===== BREADCRUMB SCHEMA ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://vikahecotech.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Primary Shredders",
+          "item": "https://vikahecotech.com/primary-shredder"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Tyre Shredders",
+          "item": "https://vikahecotech.com/tyreshredder"
+        }
+      ]
+    }
+    `}
+        </script>
       </Helmet>
+
       {/* Header */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">

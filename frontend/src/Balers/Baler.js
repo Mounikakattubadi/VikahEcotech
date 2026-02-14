@@ -124,21 +124,153 @@ function Baler() {
   return (
     <div className="baler-page">
       <Helmet>
+        {/* ===== BASIC SEO ===== */}
         <title>
-          Industrial Baler Machines Manufacturer in India | Vikah Ecotech
+          Industrial Baler Machines in India | Tyre, Plastic, Metal & Paper Balers | Vikah Ecotech
         </title>
 
         <meta
           name="description"
-          content="Vikah Ecotech is a leading manufacturer of industrial baler machines in India, offering tyre balers, plastic balers, metal balers, and recycling baling solutions."
+          content="Vikah Ecotech Pvt Ltd manufactures industrial baler machines in Hyderabad, India. Explore tyre scrap balers, plastic balers, metal balers, and paper & cardboard balers for efficient recycling."
         />
 
         <meta
           name="keywords"
-          content="baler machines,balers, industrial baler, tyre baler, plastic baler, metal baler, recycling baler, baler manufacturer india"
+          content="industrial baler machine, tyre scrap baler, plastic baler machine, metal baler, paper baler, cardboard baler, recycling machinery, baler manufacturer India, balers Hyderabad"
         />
 
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Vikah Ecotech Pvt Ltd" />
+
         <link rel="canonical" href="https://vikahecotech.com/balers" />
+
+        {/* ===== OPEN GRAPH ===== */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Industrial Baler Machines | Vikah Ecotech"
+        />
+        <meta
+          property="og:description"
+          content="Manufacturer of tyre, plastic, metal and paper/cardboard baler machines in India for recycling industries."
+        />
+        <meta property="og:url" content="https://vikahecotech.com/balers" />
+        <meta
+          property="og:image"
+          content="https://vikahecotech.com/logo_vk.png"
+        />
+
+        {/* ===== TWITTER CARD ===== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Industrial Baler Machines | Vikah Ecotech"
+        />
+        <meta
+          name="twitter:description"
+          content="Tyre, plastic, metal and paper/cardboard baler machines manufacturer in India."
+        />
+        <meta
+          name="twitter:image"
+          content="https://vikahecotech.com/logo_vk.png"
+        />
+
+        {/* ===== LOCAL BUSINESS SCHEMA ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Vikah Ecotech Pvt Ltd",
+      "image": "https://vikahecotech.com/logo_vk.png",
+      "url": "https://vikahecotech.com",
+      "telephone": "+91-4049471616",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "406, 4th Floor, Patel Towers, Above EasyBuy, Beside Nagole RTO Office, Nagole",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500068",
+        "addressCountry": "IN"
+      },
+      "areaServed": "India"
+    }
+    `}
+        </script>
+
+        {/* ===== ORGANIZATION SCHEMA ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Vikah Ecotech Pvt Ltd",
+      "url": "https://vikahecotech.com",
+      "logo": "https://vikahecotech.com/logo_vk.png"
+    }
+    `}
+        </script>
+
+        {/* ===== ITEM LIST SCHEMA FOR ALL BALERS WITH LINKS ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Industrial Baler Machines",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Tyre Scrap Balers",
+          "url": "https://vikahecotech.com/tyre-scrap-balers"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Plastic Balers",
+          "url": "https://vikahecotech.com/plasticbaler"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Paper and Cardboard Balers",
+          "url": "https://vikahecotech.com/pcb"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Metal Balers",
+          "url": "https://vikahecotech.com/metalbaler"
+        }
+      ]
+    }
+    `}
+        </script>
+
+        {/* ===== BREADCRUMB SCHEMA ===== */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://vikahecotech.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Balers",
+          "item": "https://vikahecotech.com/balers"
+        }
+      ]
+    }
+    `}
+        </script>
       </Helmet>
 
       {/* HERO CAROUSEL */}
@@ -183,7 +315,8 @@ function Baler() {
 
               <div className={styles.contentBox}>
                 <p className={styles.subText}>
-                  Our Balers turns  Waste into Value through Smart Baling Technology
+                  Our Balers turns Waste into Value through Smart Baling
+                  Technology
                 </p>
                 <h1 className={styles.heading}>Tyre Scrap Balers</h1>
 
@@ -317,7 +450,6 @@ function Baler() {
           </button>
         </div>
       </div>
-
       {/* Features + Industries Served */}
       <section className="features-applications-section py-5 balerbackimg">
         <Container>
@@ -405,7 +537,6 @@ function Baler() {
           </Row>
         </Container>
       </section>
-
       {/* Products with Carousel – Applications Section */}
       <div
         className="products-section-bg py-5"
@@ -446,7 +577,6 @@ function Baler() {
           </div>
         </div>
       </div>
-
       {/* Contact Section 
       <Row className="text-center get-in-touch-section text-white py-5 rounded">
         <Col>

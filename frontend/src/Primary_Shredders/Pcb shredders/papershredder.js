@@ -50,55 +50,139 @@ function Papershredder() {
     setSlide((prev) => (prev + 1) % carouselImages.length);
 
   const prevSlide = () =>
-    setSlide((prev) =>
-      prev === 0 ? carouselImages.length - 1 : prev - 1
-    );
+    setSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
 
   return (
     <div>
       {/* ================= SEO HELMET ================= */}
       <Helmet>
+        {/* ===== BASIC SEO ===== */}
         <title>
-          Paper & Cardboard Shredder Machines Manufacturer in India | Vikah Ecotech
+          Paper & Cardboard Shredder Machines Manufacturer in India | Vikah
+          Ecotech
         </title>
 
         <meta
           name="description"
-          content="Vikah Ecotech manufactures paper and cardboard shredder machines for recycling cartons, corrugated boxes, and packaging waste. Primary shredders designed for high output and durability."
+          content="Vikah Ecotech manufactures paper and cardboard shredder machines for recycling cartons, corrugated boxes, office paper, and packaging waste. Primary shredders designed for high output and durability."
         />
-
         <meta
           name="keywords"
           content="paper shredder machine, cardboard shredder machine, paper cardboard shredder, primary paper shredder, recycling shredder for cardboard, shredder manufacturer india"
         />
+        <meta name="robots" content="index, follow" />
+        <meta name="author" content="Vikah Ecotech Pvt Ltd" />
 
-        <link
-          rel="canonical"
-          href="https://vikahecotech.com/papershredder"
+        <link rel="canonical" href="https://vikahecotech.com/papershredder" />
+
+        {/* ===== OPEN GRAPH ===== */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Paper & Cardboard Shredder Machines Manufacturer in India | Vikah Ecotech"
+        />
+        <meta
+          property="og:description"
+          content="Primary paper and cardboard shredders designed for recycling cartons, office paper, and packaging waste. Robust hydraulic systems for industrial applications."
+        />
+        <meta
+          property="og:url"
+          content="https://vikahecotech.com/papershredder"
+        />
+        <meta
+          property="og:image"
+          content="https://vikahecotech.com/logo_vk.png"
         />
 
-        {/* Category Structured Data */}
+        {/* ===== TWITTER CARD ===== */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Paper & Cardboard Shredder Machines Manufacturer in India | Vikah Ecotech"
+        />
+        <meta
+          name="twitter:description"
+          content="Primary paper and cardboard shredders designed for recycling cartons, office paper, and packaging waste. Robust hydraulic systems for industrial applications."
+        />
+        <meta
+          name="twitter:image"
+          content="https://vikahecotech.com/logo_vk.png"
+        />
+
+        {/* ===== ORGANIZATION SCHEMA ===== */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "CollectionPage",
+            "@type": "Organization",
+            name: "Vikah Ecotech Pvt Ltd",
+            url: "https://vikahecotech.com",
+            logo: "https://vikahecotech.com/logo_vk.png",
+          })}
+        </script>
+
+        {/* ===== PRODUCT / ITEM LIST SCHEMA ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
             name: "Paper & Cardboard Shredder Machines",
-            url: "https://vikahecotech.com/papershredder",
-            description:
-              "Primary paper and cardboard shredder machines designed for recycling cartons, corrugated boxes, and packaging waste.",
-            isPartOf: {
-              "@type": "WebSite",
-              name: "Vikah Ecotech",
-              url: "https://vikahecotech.com",
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "Vikah Ecotech",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://vikahecotech.com/favicon.ico",
+            itemListElement: [
+              {
+                "@type": "Product",
+                position: 1,
+                name: "SHC6000",
+                description:
+                  "Paper & Cardboard Shredder SHC6000 with 80–120 HP, ideal for office paper, cartons, and cardboard waste.",
+                brand: { "@type": "Brand", name: "Vikah Ecotech" },
+                url: "https://vikahecotech.com/shc6000",
               },
-            },
+              {
+                "@type": "Product",
+                position: 2,
+                name: "SHC8000",
+                description:
+                  "Paper & Cardboard Shredder SHC8000 with 120–180 HP, featuring auto-feed conveyor system for commercial recycling.",
+                brand: { "@type": "Brand", name: "Vikah Ecotech" },
+                url: "https://vikahecotech.com/shc8000",
+              },
+              {
+                "@type": "Product",
+                position: 3,
+                name: "SHC12000",
+                description:
+                  "Heavy-Duty Paper & Cardboard Shredder SHC12000 with 180–240 HP for high-volume shredding of bulky packaging waste.",
+                brand: { "@type": "Brand", name: "Vikah Ecotech" },
+                url: "https://vikahecotech.com/shc12000",
+              },
+            ],
+          })}
+        </script>
+
+        {/* ===== BREADCRUMB SCHEMA ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              {
+                "@type": "ListItem",
+                position: 1,
+                name: "Home",
+                item: "https://vikahecotech.com",
+              },
+              {
+                "@type": "ListItem",
+                position: 2,
+                name: "Shredders",
+                item: "https://vikahecotech.com/shredders",
+              },
+              {
+                "@type": "ListItem",
+                position: 3,
+                name: "Paper & Cardboard Shredders",
+                item: "https://vikahecotech.com/papershredder",
+              },
+            ],
           })}
         </script>
       </Helmet>
@@ -106,9 +190,7 @@ function Papershredder() {
       {/* ================= HEADER ================= */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
-          <h1 className="display-4">
-            Paper & Cardboard Shredder Machines
-          </h1>
+          <h1 className="display-4">Paper & Cardboard Shredder Machines</h1>
           <p className="lead">
             Primary Shredders for Paper & Packaging Recycling
           </p>
@@ -122,12 +204,13 @@ function Papershredder() {
         </h2>
 
         <p>
-          Vikah Ecotech manufactures primary paper and cardboard shredder machines
-          designed to efficiently process office paper, corrugated cartons,
-          packaging waste, and bulk cardboard materials. Our shredders feature
-          high-torque hydraulic systems, robust cutting shafts, and durable
-          industrial construction to ensure consistent performance, low
-          maintenance, and long service life in demanding recycling environments.
+          Vikah Ecotech manufactures primary paper and cardboard shredder
+          machines designed to efficiently process office paper, corrugated
+          cartons, packaging waste, and bulk cardboard materials. Our shredders
+          feature high-torque hydraulic systems, robust cutting shafts, and
+          durable industrial construction to ensure consistent performance, low
+          maintenance, and long service life in demanding recycling
+          environments.
         </p>
 
         {/* ================= MODEL TABS ================= */}
@@ -186,16 +269,13 @@ function Papershredder() {
                 <strong>Type:</strong> {selected.type}
               </li>
               <li>
-                <strong>Power Range:</strong>{" "}
-                {selected.power}
+                <strong>Power Range:</strong> {selected.power}
               </li>
               <li>
-                <strong>System:</strong>{" "}
-                {selected.system}
+                <strong>System:</strong> {selected.system}
               </li>
               <li>
-                <strong>Application:</strong>{" "}
-                {selected.feature}
+                <strong>Application:</strong> {selected.feature}
               </li>
             </ul>
 
