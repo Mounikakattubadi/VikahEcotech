@@ -8,6 +8,7 @@ import "../../Pages/Models.css";
 import shredderhd from "../../images/Applications/shredp1.png";
 import shredderhd1 from "../../images/Applications/shredp4.webp";
 import shredderhdimg from "../../images/Applications/shredp2.jpeg";
+import SEOHelmet from "../../components/SEO/SEOHelmet";
 
 function Plasticshredder() {
   useEffect(() => {
@@ -41,6 +42,33 @@ function Plasticshredder() {
     },
   ];
 
+  const products = [
+    {
+      name: "SHP100",
+      description:
+        "Plastic Shredder SHP100 with 100–140 HP, suitable for PET bottles and light plastic waste.",
+      image: "https://vikahecotech.com/images/Shredder.png",
+      url: "https://vikahecotech.com/shp100",
+      price: "5000000",
+    },
+    {
+      name: "SHP150",
+      description:
+        "Plastic Shredder SHP150 with 140–200 HP featuring dual shaft cutting mechanism.",
+      image: "https://vikahecotech.com/images/shredder_hd1.jpg",
+      url: "https://vikahecotech.com/shp150",
+      price: "6200000",
+    },
+    {
+      name: "SHP200",
+      description:
+        "Heavy-duty Plastic Shredder SHP200 with 200–260 HP for large-scale recycling.",
+      image: "https://vikahecotech.com/images/st.jpeg",
+      url: "https://vikahecotech.com/shp200",
+      price: "7800000",
+    },
+  ];
+
   const carouselImages = [shredderhd, shredderhd1, shredderhdimg];
 
   const [selected, setSelected] = useState(shredders[0]);
@@ -54,136 +82,25 @@ function Plasticshredder() {
 
   return (
     <div>
-      <Helmet>
-        {/* ===== BASIC SEO ===== */}
-        <title>
-          Plastic Shredder Machines Manufacturer in India | Vikah Ecotech
-        </title>
-
-        <meta
-          name="description"
-          content="Vikah Ecotech manufactures plastic shredder machines for recycling PET, HDPE, LDPE, and industrial plastic waste. Primary plastic shredders designed for high performance and durability."
-        />
-        <meta
-          name="keywords"
-          content="plastic shredder machine, plastic recycling shredder, primary plastic shredder, PET shredder, HDPE shredder, plastic shredder manufacturer india"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Vikah Ecotech Pvt Ltd" />
-
-        <link rel="canonical" href="https://vikahecotech.com/plasticshredder" />
-
-        {/* ===== OPEN GRAPH ===== */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Plastic Shredder Machines Manufacturer in India | Vikah Ecotech"
-        />
-        <meta
-          property="og:description"
-          content="Primary plastic shredders designed for recycling PET, HDPE, LDPE, and industrial plastic waste. High-torque hydraulic systems for industrial applications."
-        />
-        <meta
-          property="og:url"
-          content="https://vikahecotech.com/plasticshredder"
-        />
-        <meta
-          property="og:image"
-          content="https://vikahecotech.com/logo_vk.png"
-        />
-
-        {/* ===== TWITTER CARD ===== */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Plastic Shredder Machines Manufacturer in India | Vikah Ecotech"
-        />
-        <meta
-          name="twitter:description"
-          content="Primary plastic shredders designed for recycling PET, HDPE, LDPE, and industrial plastic waste. High-torque hydraulic systems for industrial applications."
-        />
-        <meta
-          name="twitter:image"
-          content="https://vikahecotech.com/logo_vk.png"
-        />
-
-        {/* ===== ORGANIZATION SCHEMA ===== */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Vikah Ecotech Pvt Ltd",
-            url: "https://vikahecotech.com",
-            logo: "https://vikahecotech.com/logo_vk.png",
-          })}
-        </script>
-
-        {/* ===== PRODUCT / ITEM LIST SCHEMA ===== */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            name: "Plastic Shredder Machines",
-            itemListElement: [
-              {
-                "@type": "Product",
-                position: 1,
-                name: "SHP100",
-                description:
-                  "Plastic Shredder SHP100 with 100–140 HP, suitable for PET bottles, LDPE films, and light plastic waste.",
-                brand: { "@type": "Brand", name: "Vikah Ecotech" },
-                url: "https://vikahecotech.com/shp100",
-              },
-              {
-                "@type": "Product",
-                position: 2,
-                name: "SHP150",
-                description:
-                  "Plastic Shredder SHP150 with 140–200 HP, featuring dual shaft cutting mechanism for efficient plastic recycling.",
-                brand: { "@type": "Brand", name: "Vikah Ecotech" },
-                url: "https://vikahecotech.com/shp150",
-              },
-              {
-                "@type": "Product",
-                position: 3,
-                name: "SHP200",
-                description:
-                  "Heavy-Duty Plastic Shredder SHP200 with 200–260 HP, high-capacity machine for large-scale plastic recycling.",
-                brand: { "@type": "Brand", name: "Vikah Ecotech" },
-                url: "https://vikahecotech.com/shp200",
-              },
-            ],
-          })}
-        </script>
-
-        {/* ===== BREADCRUMB SCHEMA ===== */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://vikahecotech.com",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: "Shredders",
-                item: "https://vikahecotech.com/shredders",
-              },
-              {
-                "@type": "ListItem",
-                position: 3,
-                name: "Plastic Shredders",
-                item: "https://vikahecotech.com/plasticshredder",
-              },
-            ],
-          })}
-        </script>
-      </Helmet>
+      <SEOHelmet
+        title="Plastic Shredder Machines Manufacturer in India | Vikah Ecotech"
+        description="Primary plastic shredders designed for recycling PET, HDPE, LDPE and industrial plastic waste."
+        keywords="plastic shredder machine, plastic recycling shredder, PET shredder"
+        canonical="https://vikahecotech.com/plasticshredder"
+        pageName="Plastic Shredder Machines"
+        products={products}
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com" },
+          {
+            name: "Primary Shredders",
+            url: "https://vikahecotech.com/primary-shredder",
+          },
+          {
+            name: "Plastic Shredders",
+            url: "https://vikahecotech.com/plasticshredder",
+          },
+        ]}
+      />
 
       {/* ================= HEADER ================= */}
       <header className="tyrecutting-header text-white text-center py-5">

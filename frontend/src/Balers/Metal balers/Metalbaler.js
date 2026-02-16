@@ -8,6 +8,8 @@ import "../../Pages/Models.css";
 import metalImg1 from "../../images/Applications/appm1.jpg";
 import metalImg2 from "../../images/Applications/appm4.jpg";
 import metalImg3 from "../../images/Applications/appm6.jpg";
+import SEOHelmet from "../../components/SEO/SEOHelmet";
+
 
 function Metalbaler() {
   useEffect(() => {
@@ -38,6 +40,33 @@ function Metalbaler() {
     },
   ];
 
+  const products = [
+    {
+      name: "BLM150",
+      description:
+        "Metal Scrap Baler BLM150 for light to medium ferrous and non-ferrous metals.",
+      image: "https://vikahecotech.com/images/baler4.png",
+      url: "https://vikahecotech.com/blm150",
+      price: "3500000",
+    },
+    {
+      name: "BLM200",
+      description:
+        "Metal Scrap Baler BLM200 for industrial metal recycling operations.",
+      image: "https://vikahecotech.com/images/baler.png",
+      url: "https://vikahecotech.com/blm200",
+      price: "4200000",
+    },
+    {
+      name: "BLM250",
+      description:
+        "Heavy-duty Metal Scrap Baler BLM250 for high-volume compaction.",
+      image: "https://vikahecotech.com/images/baler_bg.png",
+      url: "https://vikahecotech.com/blm250",
+      price: "5000000",
+    },
+  ];
+
   const carouselImages = [metalImg1, metalImg2, metalImg3];
 
   const [selected, setSelected] = useState(balers[0]);
@@ -51,159 +80,19 @@ function Metalbaler() {
 
   return (
     <div>
-      <Helmet>
-        {/* ===== BASIC SEO ===== */}
-        <title>
-          Metal Scrap Baler Machines Manufacturer in India | Vikah Ecotech
-        </title>
-
-        <meta
-          name="description"
-          content="Vikah Ecotech manufactures metal scrap baler machines for recycling ferrous and non-ferrous metals. Heavy-duty hydraulic metal balers for industrial recycling operations."
-        />
-        <meta
-          name="keywords"
-          content="metal baler machine, metal scrap baler, hydraulic metal baler, ferrous metal baler, non ferrous metal baler, metal recycling baler machine"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Vikah Ecotech Pvt Ltd" />
-
-        <link rel="canonical" href="https://vikahecotech.com/metalbaler" />
-
-        {/* ===== OPEN GRAPH ===== */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Metal Scrap Baler Machines Manufacturer in India | Vikah Ecotech"
-        />
-        <meta
-          property="og:description"
-          content="High-performance metal scrap balers for industrial recycling of ferrous and non-ferrous metals. Hydraulic metal baler machines for foundries and scrap yards."
-        />
-        <meta property="og:url" content="https://vikahecotech.com/metalbaler" />
-        <meta
-          property="og:image"
-          content="https://vikahecotech.com/logo_vk.png"
-        />
-
-        {/* ===== TWITTER CARD ===== */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Metal Scrap Baler Machines Manufacturer in India | Vikah Ecotech"
-        />
-        <meta
-          name="twitter:description"
-          content="High-performance metal scrap balers for industrial recycling of ferrous and non-ferrous metals. Hydraulic metal baler machines for foundries and scrap yards."
-        />
-        <meta
-          name="twitter:image"
-          content="https://vikahecotech.com/logo_vk.png"
-        />
-
-        {/* ===== LOCAL BUSINESS SCHEMA ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Vikah Ecotech Pvt Ltd",
-      "image": "https://vikahecotech.com/logo_vk.png",
-      "url": "https://vikahecotech.com",
-      "telephone": "+91-4049471616",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "406, 4th Floor, Patel Towers, Above EasyBuy, Beside Nagole RTO Office, Nagole",
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
-        "postalCode": "500068",
-        "addressCountry": "IN"
-      },
-      "areaServed": "India"
-    }
-    `}
-        </script>
-
-        {/* ===== ORGANIZATION SCHEMA ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Vikah Ecotech Pvt Ltd",
-      "url": "https://vikahecotech.com",
-      "logo": "https://vikahecotech.com/logo_vk.png"
-    }
-    `}
-        </script>
-
-        {/* ===== PRODUCT/ITEM LIST SCHEMA FOR METAL BALERS ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Metal Scrap Baler Machines",
-      "itemListElement": [
-        {
-          "@type": "Product",
-          "position": 1,
-          "name": "BLM150",
-          "description": "Metal Scrap Baler BLM150 with 150 Ton force, suitable for light to medium ferrous and non-ferrous metals like aluminum and mild steel.",
-          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
-          "url": "https://vikahecotech.com/blm150"
-        },
-        {
-          "@type": "Product",
-          "position": 2,
-          "name": "BLM200",
-          "description": "Metal Scrap Baler BLM200 with 200 Ton force, ideal for medium-density steel scrap, alloy scrap, and industrial metal recycling.",
-          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
-          "url": "https://vikahecotech.com/blm200"
-        },
-        {
-          "@type": "Product",
-          "position": 3,
-          "name": "BLM250",
-          "description": "Heavy-duty Metal Scrap Baler BLM250 with 250 Ton force, engineered for high-volume ferrous and non-ferrous metal compaction.",
-          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
-          "url": "https://vikahecotech.com/blm250"
-        }
-      ]
-    }
-    `}
-        </script>
-
-        {/* ===== BREADCRUMB SCHEMA ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://vikahecotech.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Balers",
-          "item": "https://vikahecotech.com/balers"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Metal Balers",
-          "item": "https://vikahecotech.com/metalbaler"
-        }
-      ]
-    }
-    `}
-        </script>
-      </Helmet>
+      <SEOHelmet
+        title="Metal Scrap Baler Machines Manufacturer in India | Vikah Ecotech"
+        description="Heavy-duty hydraulic metal scrap baler machines for ferrous and non-ferrous metal recycling."
+        keywords="metal baler machine, metal scrap baler, hydraulic metal baler"
+        canonical="https://vikahecotech.com/metalbaler"
+        pageName="Metal Scrap Baler Machines"
+        products={products}
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com" },
+          { name: "Balers", url: "https://vikahecotech.com/balers" },
+          { name: "Metal Balers", url: "https://vikahecotech.com/metalbaler" },
+        ]}
+      />
 
       {/* ================= HEADER ================= */}
       <header className="tyrecutting-header text-white text-center py-5">

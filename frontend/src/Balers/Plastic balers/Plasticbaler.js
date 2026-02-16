@@ -8,6 +8,7 @@ import "../../Pages/Models.css";
 import mainSpecImage from "../../images/Applications/plas14.webp";
 import balerImage from "../../images/Applications/plas16.jpg";
 import img1 from "../../images/Applications/plas18.jpeg";
+import SEOHelmet from "../../components/SEO/SEOHelmet";
 
 function Plasticbaler() {
   useEffect(() => {
@@ -39,6 +40,30 @@ function Plasticbaler() {
     },
   ];
 
+  const products = [
+    {
+      name: "BLP30",
+      description: "Plastic Baler BLP30 with 30 Ton force.",
+      image: "https://vikahecotech.com/images/baler.png",
+      url: "https://vikahecotech.com/blp30",
+      price: "2500000",
+    },
+    {
+      name: "BLP40",
+      description: "Plastic Baler BLP40 with 40 Ton force.",
+      image: "https://vikahecotech.com/images/baler4.png",
+      url: "https://vikahecotech.com/blp40",
+      price: "3000000",
+    },
+    {
+      name: "BLP50",
+      description: "Heavy-duty Plastic Baler BLP50.",
+      image: "https://vikahecotech.com/images/baler_bg.jpg",
+      url: "https://vikahecotech.com/blp50",
+      price: "3500000",
+    },
+  ];
+
   const carouselImages = [mainSpecImage, balerImage, img1];
 
   const [selected, setSelected] = useState(balers[0]);
@@ -52,162 +77,22 @@ function Plasticbaler() {
 
   return (
     <div>
-      <Helmet>
-        {/* ===== BASIC SEO ===== */}
-        <title>
-          Plastic Baler Machines Manufacturer in India | Vikah Ecotech
-        </title>
-
-        <meta
-          name="description"
-          content="Industrial plastic baler machines for PET, HDPE, LDPE, and plastic waste recycling. Vikah Ecotech manufactures durable hydraulic plastic balers for commercial and industrial use."
-        />
-        <meta
-          name="keywords"
-          content="plastic baler machine, plastic balers, plastic recycling baler, PET baler, HDPE baler, LDPE baler, plastic waste baler machine, plastic baler manufacturer in India"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Vikah Ecotech Pvt Ltd" />
-
-        <link rel="canonical" href="https://vikahecotech.com/plasticbaler" />
-
-        {/* ===== OPEN GRAPH ===== */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Plastic Baler Machines Manufacturer in India | Vikah Ecotech"
-        />
-        <meta
-          property="og:description"
-          content="High-performance plastic baler machines for PET, HDPE, LDPE, and plastic waste recycling. Durable hydraulic plastic balers for industrial recycling."
-        />
-        <meta
-          property="og:url"
-          content="https://vikahecotech.com/plasticbaler"
-        />
-        <meta
-          property="og:image"
-          content="https://vikahecotech.com/logo_vk.png"
-        />
-
-        {/* ===== TWITTER CARD ===== */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Plastic Baler Machines Manufacturer in India | Vikah Ecotech"
-        />
-        <meta
-          name="twitter:description"
-          content="High-performance plastic baler machines for PET, HDPE, LDPE, and plastic waste recycling. Durable hydraulic plastic balers for industrial recycling."
-        />
-        <meta
-          name="twitter:image"
-          content="https://vikahecotech.com/logo_vk.png"
-        />
-
-        {/* ===== LOCAL BUSINESS SCHEMA ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Vikah Ecotech Pvt Ltd",
-      "image": "https://vikahecotech.com/logo_vk.png",
-      "url": "https://vikahecotech.com",
-      "telephone": "+91-4049471616",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "406, 4th Floor, Patel Towers, Above EasyBuy, Beside Nagole RTO Office, Nagole",
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
-        "postalCode": "500068",
-        "addressCountry": "IN"
-      },
-      "areaServed": "India"
-    }
-    `}
-        </script>
-
-        {/* ===== ORGANIZATION SCHEMA ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Vikah Ecotech Pvt Ltd",
-      "url": "https://vikahecotech.com",
-      "logo": "https://vikahecotech.com/logo_vk.png"
-    }
-    `}
-        </script>
-
-        {/* ===== PRODUCT/ITEM LIST SCHEMA FOR PLASTIC BALERS ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Plastic Baler Machines",
-      "itemListElement": [
-        {
-          "@type": "Product",
-          "position": 1,
-          "name": "BLP30",
-          "description": "Plastic Baler BLP30 with 30 Ton force, suitable for PET bottles, LDPE films, and lightweight plastic waste.",
-          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
-          "url": "https://vikahecotech.com/blp30"
-        },
-        {
-          "@type": "Product",
-          "position": 2,
-          "name": "BLP40",
-          "description": "Plastic Baler BLP40 with 40 Ton force, ideal for HDPE containers and mixed plastic scrap.",
-          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
-          "url": "https://vikahecotech.com/blp40"
-        },
-        {
-          "@type": "Product",
-          "position": 3,
-          "name": "BLP50",
-          "description": "Heavy-duty Plastic Baler BLP50 with 50 Ton force for industrial-scale plastic recycling and waste management.",
-          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
-          "url": "https://vikahecotech.com/blp50"
-        }
-      ]
-    }
-    `}
-        </script>
-
-        {/* ===== BREADCRUMB SCHEMA ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://vikahecotech.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Balers",
-          "item": "https://vikahecotech.com/balers"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Plastic Balers",
-          "item": "https://vikahecotech.com/plasticbaler"
-        }
-      ]
-    }
-    `}
-        </script>
-      </Helmet>
+      <SEOHelmet
+        title="Plastic Baler Machines Manufacturer in India | Vikah Ecotech"
+        description="Industrial plastic baler machines for PET, HDPE, LDPE and plastic waste recycling."
+        keywords="plastic baler machine, PET baler, HDPE baler"
+        canonical="https://vikahecotech.com/plasticbaler"
+        pageName="Plastic Baler Machines"
+        products={products}
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com" },
+          { name: "Balers", url: "https://vikahecotech.com/balers" },
+          {
+            name: "Plastic Balers",
+            url: "https://vikahecotech.com/plasticbaler",
+          },
+        ]}
+      />
 
       {/* Header */}
       <header className="tyrecutting-header text-white text-center py-5">

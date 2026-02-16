@@ -8,6 +8,9 @@ import "../../Pages/ProductsPage.css";
 import shm4000_main from "../../images/Applications/shredm5.jpg";
 import shm4000_angle1 from "../../images/Applications/shredm6.jpg";
 import shm4000_angle2 from "../../images/Applications/shredm7.jpg";
+import SEOHelmet from "../../components/SEO/SEOHelmet";
+
+
 
 const Shm4000 = () => {
   const [mainImage, setMainImage] = useState(shm4000_main);
@@ -34,82 +37,27 @@ const Shm4000 = () => {
 
   return (
     <>
-      <Helmet>
-        {/* ===== PAGE TITLE & META ===== */}
-        <title>
-          SHM-4000 Metal Shredder Machine Manufacturer in India | Vikah Ecotech
-        </title>
-        <meta
-          name="description"
-          content="SHM-4000 is a heavy-duty primary metal shredder machine by Vikah Ecotech, designed for high-capacity shredding of ferrous and non-ferrous metal scrap in recycling plants."
-        />
-        <meta
-          name="keywords"
-          content="metal shredder machine, primary metal shredder, metal scrap shredder, industrial metal shredder, metal recycling shredder, shredder manufacturer india"
-        />
-        <link rel="canonical" href="https://vikahecotech.com/shm4000" />
-
-        {/* ===== OPEN GRAPH / FACEBOOK ===== */}
-        <meta property="og:type" content="product" />
-        <meta
-          property="og:title"
-          content="SHM-4000 Metal Shredder Machine Manufacturer in India | Vikah Ecotech"
-        />
-        <meta
-          property="og:description"
-          content="Heavy-duty SHM-4000 metal shredder for industrial recycling of ferrous and non-ferrous scrap. Twin-shaft high-torque system for consistent output."
-        />
-        <meta property="og:url" content="https://vikahecotech.com/shm4000" />
-
-        {/* ===== TWITTER CARD ===== */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="SHM-4000 Metal Shredder Machine Manufacturer in India | Vikah Ecotech"
-        />
-        <meta
-          name="twitter:description"
-          content="Heavy-duty SHM-4000 metal shredder for industrial recycling of ferrous and non-ferrous scrap. Twin-shaft high-torque system for consistent output."
-        />
-
-        {/* ===== PRODUCT SCHEMA ===== */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "SHM-4000 Metal Shredder Machine",
-            description:
-              "Heavy-duty primary metal shredder designed for high-capacity processing of ferrous and non-ferrous metal scrap.",
-            brand: {
-              "@type": "Brand",
-              name: "Vikah Ecotech",
-            },
-            manufacturer: {
-              "@type": "Organization",
-              name: "Vikah Ecotech",
-              url: "https://vikahecotech.com",
-            },
-            sku: "SHM-4000",
-            category: "Metal Recycling Machinery",
-            offers: {
-              "@type": "Offer",
-              url: "https://vikahecotech.com/shm4000",
-              priceCurrency: "INR",
-              availability: "https://schema.org/InStock",
-            },
-          })}
-        </script>
-
-        {/* ===== ORGANIZATION SCHEMA ===== */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Vikah Ecotech Pvt Ltd",
-            url: "https://vikahecotech.com",
-          })}
-        </script>
-      </Helmet>
+<SEOHelmet
+        title="SHM-4000 Metal Shredder Machine Manufacturer in India | Vikah Ecotech"
+        description="SHM-4000 is a heavy-duty primary metal shredder machine designed for high-capacity shredding of ferrous and non-ferrous metal scrap."
+        keywords="metal shredder machine, primary metal shredder, metal scrap shredder"
+        canonical="https://vikahecotech.com/shm4000"
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com" },
+          { name: "Primary Shredders", url: "https://vikahecotech.com/primary-shredder" },
+          { name: "SHM-4000", url: "https://vikahecotech.com/shm4000" },
+        ]}
+        product={{
+          name: "SHM-4000 Metal Shredder Machine",
+          description:
+            "Heavy-duty primary metal shredder designed for high-capacity processing of ferrous and non-ferrous metal scrap.",
+          image: "https://vikahecotech.com/images/Shredder.png",
+          sku: "SHM-4000",
+          category: "Metal Recycling Machinery",
+          url: "https://vikahecotech.com/shm4000",
+          price: "5000000"
+        }}
+      />
 
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">

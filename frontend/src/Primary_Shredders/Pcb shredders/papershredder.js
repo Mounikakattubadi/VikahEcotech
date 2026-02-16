@@ -8,6 +8,7 @@ import "../../Pages/Models.css";
 import shredderhd from "../../images/Applications/shredpcb1.jpg";
 import shredderhd1 from "../../images/Applications/shredpcb4.jpg";
 import shredderhdimg from "../../images/Applications/shredpcb7.jpg";
+import SEOHelmet from "../../components/SEO/SEOHelmet";
 
 function Papershredder() {
   useEffect(() => {
@@ -52,140 +53,49 @@ function Papershredder() {
   const prevSlide = () =>
     setSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
 
+    const products = [
+    {
+      name: "SHC6000",
+      description:
+        "Paper & Cardboard Shredder SHC6000 with 80–120 HP, ideal for office paper, cartons, and cardboard waste.",
+      image: "https://vikahecotech.com/images/shredder_hd1.jpg",
+      url: "https://vikahecotech.com/shc6000",
+      price: "4500000",
+    },
+    {
+      name: "SHC8000",
+      description:
+        "Paper & Cardboard Shredder SHC8000 with 120–180 HP featuring auto-feed conveyor system for commercial recycling.",
+      image: "https://vikahecotech.com/images/st.jpeg",
+      url: "https://vikahecotech.com/shc8000",
+      price: "5800000",
+    },
+    {
+      name: "SHC12000",
+      description:
+        "Heavy-duty Paper & Cardboard Shredder SHC12000 with 180–240 HP for high-volume shredding.",
+      image: "https://vikahecotech.com/images/Shredder.png",
+      url: "https://vikahecotech.com/shc12000",
+      price: "7200000",
+    },
+  ];
+
   return (
     <div>
       {/* ================= SEO HELMET ================= */}
-      <Helmet>
-        {/* ===== BASIC SEO ===== */}
-        <title>
-          Paper & Cardboard Shredder Machines Manufacturer in India | Vikah
-          Ecotech
-        </title>
-
-        <meta
-          name="description"
-          content="Vikah Ecotech manufactures paper and cardboard shredder machines for recycling cartons, corrugated boxes, office paper, and packaging waste. Primary shredders designed for high output and durability."
-        />
-        <meta
-          name="keywords"
-          content="paper shredder machine, cardboard shredder machine, paper cardboard shredder, primary paper shredder, recycling shredder for cardboard, shredder manufacturer india"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Vikah Ecotech Pvt Ltd" />
-
-        <link rel="canonical" href="https://vikahecotech.com/papershredder" />
-
-        {/* ===== OPEN GRAPH ===== */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Paper & Cardboard Shredder Machines Manufacturer in India | Vikah Ecotech"
-        />
-        <meta
-          property="og:description"
-          content="Primary paper and cardboard shredders designed for recycling cartons, office paper, and packaging waste. Robust hydraulic systems for industrial applications."
-        />
-        <meta
-          property="og:url"
-          content="https://vikahecotech.com/papershredder"
-        />
-        <meta
-          property="og:image"
-          content="https://vikahecotech.com/logo_vk.png"
-        />
-
-        {/* ===== TWITTER CARD ===== */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Paper & Cardboard Shredder Machines Manufacturer in India | Vikah Ecotech"
-        />
-        <meta
-          name="twitter:description"
-          content="Primary paper and cardboard shredders designed for recycling cartons, office paper, and packaging waste. Robust hydraulic systems for industrial applications."
-        />
-        <meta
-          name="twitter:image"
-          content="https://vikahecotech.com/logo_vk.png"
-        />
-
-        {/* ===== ORGANIZATION SCHEMA ===== */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "Vikah Ecotech Pvt Ltd",
-            url: "https://vikahecotech.com",
-            logo: "https://vikahecotech.com/logo_vk.png",
-          })}
-        </script>
-
-        {/* ===== PRODUCT / ITEM LIST SCHEMA ===== */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ItemList",
-            name: "Paper & Cardboard Shredder Machines",
-            itemListElement: [
-              {
-                "@type": "Product",
-                position: 1,
-                name: "SHC6000",
-                description:
-                  "Paper & Cardboard Shredder SHC6000 with 80–120 HP, ideal for office paper, cartons, and cardboard waste.",
-                brand: { "@type": "Brand", name: "Vikah Ecotech" },
-                url: "https://vikahecotech.com/shc6000",
-              },
-              {
-                "@type": "Product",
-                position: 2,
-                name: "SHC8000",
-                description:
-                  "Paper & Cardboard Shredder SHC8000 with 120–180 HP, featuring auto-feed conveyor system for commercial recycling.",
-                brand: { "@type": "Brand", name: "Vikah Ecotech" },
-                url: "https://vikahecotech.com/shc8000",
-              },
-              {
-                "@type": "Product",
-                position: 3,
-                name: "SHC12000",
-                description:
-                  "Heavy-Duty Paper & Cardboard Shredder SHC12000 with 180–240 HP for high-volume shredding of bulky packaging waste.",
-                brand: { "@type": "Brand", name: "Vikah Ecotech" },
-                url: "https://vikahecotech.com/shc12000",
-              },
-            ],
-          })}
-        </script>
-
-        {/* ===== BREADCRUMB SCHEMA ===== */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Home",
-                item: "https://vikahecotech.com",
-              },
-              {
-                "@type": "ListItem",
-                position: 2,
-                name: "Shredders",
-                item: "https://vikahecotech.com/shredders",
-              },
-              {
-                "@type": "ListItem",
-                position: 3,
-                name: "Paper & Cardboard Shredders",
-                item: "https://vikahecotech.com/papershredder",
-              },
-            ],
-          })}
-        </script>
-      </Helmet>
+<SEOHelmet
+        title="Paper & Cardboard Shredder Machines Manufacturer in India | Vikah Ecotech"
+        description="Vikah Ecotech manufactures paper and cardboard shredder machines for recycling cartons, office paper and packaging waste."
+        keywords="paper shredder machine, cardboard shredder machine, paper recycling shredder"
+        canonical="https://vikahecotech.com/papershredder"
+        pageName="Paper & Cardboard Shredder Machines"
+        products={products}
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com" },
+          { name: "Primary Shredders", url: "https://vikahecotech.com/primary-shredder" },
+          { name: "Paper & Cardboard Shredders", url: "https://vikahecotech.com/papershredder" },
+        ]}
+      />
 
       {/* ================= HEADER ================= */}
       <header className="tyrecutting-header text-white text-center py-5">

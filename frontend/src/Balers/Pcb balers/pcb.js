@@ -9,6 +9,8 @@ import mainSpecImage from "../../images/Applications/apppcb1.jpg";
 import balerImage from "../../images/Applications/apppcb6.webp";
 import img1 from "../../images/Applications/apppcb3.jpg";
 
+import SEOHelmet from "../../components/SEO/SEOHelmet";
+
 function Pcb() {
   useEffect(() => {
     document.documentElement.scrollTop = 0;
@@ -39,6 +41,33 @@ function Pcb() {
     },
   ];
 
+  const products = [
+    {
+      name: "BLC30",
+      description:
+        "Paper & Cardboard Baler BLC30 with 30 Ton force for light packaging waste.",
+      image: "https://vikahecotech.com/images/baler_bg.png",
+      url: "https://vikahecotech.com/blc30",
+      price: "2200000",
+    },
+    {
+      name: "BLC40",
+      description:
+        "Paper & Cardboard Baler BLC40 ideal for carton recycling and packaging waste.",
+      image: "https://vikahecotech.com/images/baler.png",
+      url: "https://vikahecotech.com/blc40",
+      price: "2800000",
+    },
+    {
+      name: "BLC50",
+      description:
+        "Heavy-duty Paper & Cardboard Baler BLC50 for high-volume recycling.",
+      image: "https://vikahecotech.com/images/baler.png",
+      url: "https://vikahecotech.com/blc50",
+      price: "3200000",
+    },
+  ];
+
   const carouselImages = [mainSpecImage, balerImage, img1];
 
   const [selected, setSelected] = useState(balers[0]);
@@ -52,160 +81,22 @@ function Pcb() {
 
   return (
     <div>
-      <Helmet>
-        {/* ===== BASIC SEO ===== */}
-        <title>
-          Paper & Cardboard Baler Machines for Recycling | Vikah Ecotech
-        </title>
-
-        <meta
-          name="description"
-          content="Vikah Ecotech manufactures paper and cardboard baler machines for recycling cartons, packaging waste, and corrugated boxes. Durable hydraulic balers for industrial and commercial recycling."
-        />
-        <meta
-          name="keywords"
-          content="paper baler machine, cardboard baler machine, paper cardboard baler, carton baler, recycling baler for paper, cardboard baler manufacturer india"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Vikah Ecotech Pvt Ltd" />
-
-        <link rel="canonical" href="https://vikahecotech.com/pcb" />
-
-        {/* ===== OPEN GRAPH ===== */}
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Paper & Cardboard Baler Machines for Recycling | Vikah Ecotech"
-        />
-        <meta
-          property="og:description"
-          content="High-performance paper and cardboard balers for industrial and commercial recycling of cartons, corrugated boxes, and packaging waste."
-        />
-        <meta property="og:url" content="https://vikahecotech.com/pcb" />
-        <meta
-          property="og:image"
-          content="https://vikahecotech.com/logo_vk.png"
-        />
-
-        {/* ===== TWITTER CARD ===== */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:title"
-          content="Paper & Cardboard Baler Machines for Recycling | Vikah Ecotech"
-        />
-        <meta
-          name="twitter:description"
-          content="High-performance paper and cardboard balers for industrial and commercial recycling of cartons, corrugated boxes, and packaging waste."
-        />
-        <meta
-          name="twitter:image"
-          content="https://vikahecotech.com/logo_vk.png"
-        />
-
-        {/* ===== LOCAL BUSINESS SCHEMA ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Vikah Ecotech Pvt Ltd",
-      "image": "https://vikahecotech.com/logo_vk.png",
-      "url": "https://vikahecotech.com",
-      "telephone": "+91-4049471616",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "406, 4th Floor, Patel Towers, Above EasyBuy, Beside Nagole RTO Office, Nagole",
-        "addressLocality": "Hyderabad",
-        "addressRegion": "Telangana",
-        "postalCode": "500068",
-        "addressCountry": "IN"
-      },
-      "areaServed": "India"
-    }
-    `}
-        </script>
-
-        {/* ===== ORGANIZATION SCHEMA ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Vikah Ecotech Pvt Ltd",
-      "url": "https://vikahecotech.com",
-      "logo": "https://vikahecotech.com/logo_vk.png"
-    }
-    `}
-        </script>
-
-        {/* ===== PRODUCT/ITEM LIST SCHEMA FOR PAPER & CARDBOARD BALERS ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Paper & Cardboard Baler Machines",
-      "itemListElement": [
-        {
-          "@type": "Product",
-          "position": 1,
-          "name": "BLC30",
-          "description": "Paper & Cardboard Baler BLC30 with 30 Ton force, suitable for small recycling units and warehouses handling light packaging waste.",
-          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
-          "url": "https://vikahecotech.com/blc30"
-        },
-        {
-          "@type": "Product",
-          "position": 2,
-          "name": "BLC40",
-          "description": "Paper & Cardboard Baler BLC40 with 40 Ton force, ideal for carton recycling, corrugated boxes, and commercial packaging waste.",
-          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
-          "url": "https://vikahecotech.com/blc40"
-        },
-        {
-          "@type": "Product",
-          "position": 3,
-          "name": "BLC50",
-          "description": "Heavy-duty Paper & Cardboard Baler BLC50 with 50 Ton force, engineered for high-volume paper and cardboard recycling operations.",
-          "brand": { "@type": "Brand", "name": "Vikah Ecotech" },
-          "url": "https://vikahecotech.com/blc50"
-        }
-      ]
-    }
-    `}
-        </script>
-
-        {/* ===== BREADCRUMB SCHEMA ===== */}
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://vikahecotech.com"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Balers",
-          "item": "https://vikahecotech.com/balers"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Paper & Cardboard Balers",
-          "item": "https://vikahecotech.com/pcb"
-        }
-      ]
-    }
-    `}
-        </script>
-      </Helmet>
-
+      <SEOHelmet
+        title="Paper & Cardboard Baler Machines for Recycling | Vikah Ecotech"
+        description="Vikah Ecotech manufactures paper and cardboard baler machines for recycling cartons and packaging waste."
+        keywords="paper baler machine, cardboard baler machine, carton baler"
+        canonical="https://vikahecotech.com/pcb"
+        pageName="Paper & Cardboard Baler Machines"
+        products={products}
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com" },
+          { name: "Balers", url: "https://vikahecotech.com/balers" },
+          {
+            name: "Paper & Cardboard Balers",
+            url: "https://vikahecotech.com/pcb",
+          },
+        ]}
+      />
       {/* ================= HEADER ================= */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">

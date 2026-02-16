@@ -7,6 +7,7 @@ import she800_main from "../../images/Applications/shredewaste.jpeg";
 import she800_angle1 from "../../images/Applications/shredewaste2.webp";
 import she800_specs from "../../images/Applications/shredewaste3.webp";
 import she800_angle2 from "../../images/Applications/shredewaste4.jpg";
+import SEOHelmet from "../../components/SEO/SEOHelmet";
 
 const Ewaste = () => {
   const [mainImage, setMainImage] = useState(she800_main);
@@ -32,53 +33,30 @@ const Ewaste = () => {
   return (
     <>
       {/* ================= SEO HELMET ================= */}
-      <Helmet>
-        <title>
-          E-Waste Shredder Machine Manufacturer in India | SHE-400 | Vikah
-          Ecotech
-        </title>
-
-        <meta
-          name="description"
-          content="SHE-400 is a heavy-duty e-waste shredder machine by Vikah Ecotech, designed for safe and efficient shredding of electronic waste, PCB boards, appliances, and electrical scrap."
-        />
-
-        <meta
-          name="keywords"
-          content="e-waste shredder machine, electronic waste shredder, pcb shredder, e waste recycling machine, primary e-waste shredder, shredder manufacturer india"
-        />
-
-        <link rel="canonical" href="https://vikahecotech.com/ewaste" />
-
-        {/* Product Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Product",
-            name: "SHE-400 E-Waste Shredder Machine",
-            description:
-              "Heavy-duty primary e-waste shredder for shredding electronic waste, PCB boards, appliances, and electrical scrap.",
-            brand: {
-              "@type": "Brand",
-              name: "Vikah Ecotech",
-            },
-            manufacturer: {
-              "@type": "Organization",
-              name: "Vikah Ecotech",
-              url: "https://vikahecotech.com",
-            },
-            category: "E-Waste Recycling Machinery",
-            offers: {
-              "@type": "Offer",
-              url: "https://vikahecotech.com/ewaste",
-              priceCurrency: "INR",
-              price: "0",
-              availability: "https://schema.org/InStock",
-              priceValidUntil: "2026-12-31",
-            },
-          })}
-        </script>
-      </Helmet>
+      <SEOHelmet
+        title="E-Waste Shredder Machine Manufacturer in India | SHE-400 | Vikah Ecotech"
+        description="SHE-400 is a heavy-duty e-waste shredder machine designed for safe and efficient shredding of electronic waste and PCB boards."
+        keywords="e-waste shredder machine, pcb shredder, electronic waste shredder"
+        canonical="https://vikahecotech.com/ewaste"
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com" },
+          {
+            name: "Primary Shredders",
+            url: "https://vikahecotech.com/primary-shredder",
+          },
+          { name: "E-Waste Shredder", url: "https://vikahecotech.com/ewaste" },
+        ]}
+        product={{
+          name: "SHE-400 E-Waste Shredder Machine",
+          description:
+            "Heavy-duty primary e-waste shredder for shredding electronic waste, PCB boards, appliances and electrical scrap.",
+          image: "https://vikahecotech.com/images/st.jpeg",
+          sku: "SHE-400",
+          category: "E-Waste Recycling Machinery",
+          url: "https://vikahecotech.com/ewaste",
+          price: "3000000",
+        }}
+      />
 
       {/* ================= HEADER ================= */}
       <header className="tyrecutting-header text-white text-center py-5">
