@@ -58,7 +58,7 @@ function Plasticbaler() {
     {
       name: "BLP50",
       description: "Heavy-duty Plastic Baler BLP50.",
-      image: "https://vikahecotech.com/images/baler_bg.jpg",
+      image: "https://vikahecotech.com/images/baler_bg.png",
       url: "https://vikahecotech.com/blp50",
       price: "3500000",
     },
