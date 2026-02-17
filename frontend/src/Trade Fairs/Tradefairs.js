@@ -152,38 +152,6 @@ const TradeFairs = () => {
             </div>
           </div>
 
-          {/* Completed: EnviroTech Asia 2024 */}
-          <div className="col-md-6">
-            <div className="tradefairs-card h-100 d-flex flex-column">
-              <img
-                src={envirotechimg}
-                alt="EnviroTech Asia"
-                className="tradefairs-img"
-              />
-              <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
-                <div>
-                  <h5 className="mb-2">EnviroTech Asia 2024</h5>
-                  <p>
-                    The 7th edition will provide a platform for business
-                    leaders, investors, government officials, industry experts,
-                    and NGOs to share insights and opportunities in
-                    environmental protection and green business. It will be one
-                    of the largest gatherings in the environment sector,
-                    bringing together key stakeholders to drive sustainable
-                    development and environmental preservation.
-                  </p>
-                  <p className="mb-1">
-                    <strong>Date:</strong> 3–5 Dec 2024
-                  </p>
-                  <p>
-                    <strong>Location:</strong> Yashobhoomi Convention Center,
-                    Dwarka, Delhi
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
           {/* Completed: IFAT India 2024 */}
           <div className="col-md-6">
             <div className="tradefairs-card h-100 d-flex flex-column">
