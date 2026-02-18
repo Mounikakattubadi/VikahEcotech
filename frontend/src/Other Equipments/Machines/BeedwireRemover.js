@@ -47,8 +47,19 @@ const BeadwireRemover = () => {
         keywords="beadwire remover, bead wire extractor, tire recycling machine, bead remover machine, tyre recycling equipment manufacturer India"
         canonical="https://vikahecotech.com/beedwire-remover"
         pageName="Beadwire Remover"
+        product={{
+          name: "Beadwire Remover Machine",
+          description: "High-quality industrial beadwire remover machine for efficiently extracting steel bead wires from waste tires. Durable, energy-efficient, and ideal for tire recycling operations.",
+          image: "https://vikahecotech.com/logo_vk.png", // make sure this points to your actual image
+          url: "https://vikahecotech.com/beedwire-remover",
+          sku: "VIKA-BWR-01",
+          category: "Tire Recycling Machinery",
+          price: "0"
+        }}
+
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com" },
+          { name: "Products", url: "https://vikahecotech.com/products" },
           { name: "Beadwire Remover", url: "https://vikahecotech.com/beedwire-remover" }
         ]}
       />

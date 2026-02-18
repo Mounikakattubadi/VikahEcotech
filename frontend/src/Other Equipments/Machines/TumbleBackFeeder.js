@@ -54,7 +54,7 @@ const TumbleBackFeeder = () => {
         product={{
           name: "Tumble Back Feeder",
           description: "Heavy-duty modular tumble back feeder designed for controlled and consistent feeding of materials into shredders and recycling machinery.",
-          image: "https://vikahecotech.com/images/Tumbleback-Feeder.png",
+          image: "https://vikahecotech.com/logo_vk.png",
           url: "https://vikahecotech.com/tumble-back-feeder",
           sku: "VKE-TBF-01",
           category: "Recycling Equipment",

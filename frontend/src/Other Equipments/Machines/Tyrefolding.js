@@ -43,6 +43,15 @@ function Tyrefolding() {
         keywords="Tyre Folding Machine Manufacturer in India, Tyre Folding Machine, Industrial Tyre Folding Machine, Vikah Ecotech Tyre Folding"
         canonical="https://vikahecotech.com/tyrefolding"
         pageName="Tyre Folding Machines"
+        product={{
+          name: "Tyre Folding Machine",
+          description: "Industrial tyre folding machines by Vikah Ecotech designed for efficient tyre waste processing. Robust, durable, and high-performance machines ideal for recycling operations.",
+          image: "https://vikahecotech.com/logo_vk.png", // main image of the first machine
+          url: "https://vikahecotech.com/tyrefolding",
+          sku: "VKE-TF-01",
+          category: "Tyre Recycling Machinery",
+        }}
+
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },
           { name: "Tyre Folding Machines", url: "https://vikahecotech.com/tyrefolding" }

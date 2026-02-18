@@ -41,7 +41,7 @@ const StripCutter = () => {
     name: "Strip Cutter Machine",
     description:
       "Industrial-grade Strip Cutter manufacturer in India offering precision rubber strip cutting with heavy-duty construction and high throughput performance.",
-    image: "https://vikahecotech.com/images/stripcutter1.png",
+    image: "https://vikahecotech.com/logo_vk.png",
     url: "https://vikahecotech.com/strip-cutter",
     sku: "VK-SC-01",
     category: "Rubber Recycling Machinery",

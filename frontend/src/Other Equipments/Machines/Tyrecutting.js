@@ -58,7 +58,15 @@ function Tyrecutting() {
         keywords="Tyre cutting machine manufacturer in India, tyre cutter machine, tyre recycling machine India, PCR tyre cutting machine, OTR tyre cutter, rubber processing machines"
         canonical="https://vikahecotech.com/tyrecutting"
         pageName="Tyre Cutting Machines"
-        products={machines}
+        product={{
+          name: "Tyre Cutting Machine",
+          description: "High-performance industrial tyre cutting machines by Vikah Ecotech, designed for PCR, TBR, and OTR tyres. Durable, precise, and ideal for efficient tyre recycling and rubber processing.",
+          image: "https://vikahecotech.com/logo_vk.png", // main image of the first machine
+          url: "https://vikahecotech.com/tyrecutting",
+          sku: "VKE-TC-01",
+          category: "Tyre Recycling Machinery",
+        }}
+
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },
           { name: "Tyre Cutting Machines", url: "https://vikahecotech.com/tyrecutting" },

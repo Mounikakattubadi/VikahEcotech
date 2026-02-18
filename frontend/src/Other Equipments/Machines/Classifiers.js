@@ -59,6 +59,7 @@ const Classifiers = () => {
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },
+          { name: "Products", url: "https://vikahecotech.com/products" },
           { name: "Classifiers", url: "https://vikahecotech.com/classifiers" }
         ]}
       />
