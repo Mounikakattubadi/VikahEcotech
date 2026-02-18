@@ -3,7 +3,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import '../OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import stripcutter from '../../images/stripcutter1.png'; // Ensure this path is correct
+import stripcutter from '../../images/stripcutter1.png';
+import SEOHelmet from "../../components/SEO/SEOHelmet";
 
 const StripCutter = () => {
   useEffect(() => {
@@ -11,7 +12,7 @@ const StripCutter = () => {
   }, []);
 
   const features = [
-    { title: 'Precision Cutting', description: 'Designed to deliver clean and accurate cuts for various Waste Rubber materials.' },
+    { title: 'Precision Cutting', description: 'Designed to deliver clean and accurate cuts for various waste rubber materials.' },
     { title: 'Heavy-Duty Construction', description: 'Built with robust components to withstand continuous industrial use.' },
     { title: 'Adjustable Cutting Lengths', description: 'Easily adjustable settings to accommodate different strip sizes and thicknesses.' },
     { title: 'User-Friendly Controls', description: 'Intuitive interface for smooth operation and minimal training required.' },
@@ -28,18 +29,45 @@ const StripCutter = () => {
   ];
 
   const specs = [
-    { label: 'Strip Width', value: '2–6 cm (adjustable)' },
-    { label: 'Motor Power', value: '10 HP' },
+    { label: 'Strip Width', value: '2–6 cm (adjustable)' },
+    { label: 'Motor Power', value: '10 HP' },
     { label: 'Capacity', value: '1 TON/Hour' },
-    { label: 'Tyre Diameter Compatibility', value: 'Up to 1200 mm' },
+    { label: 'Tyre Diameter Compatibility', value: 'Up to 1200 mm' },
     { label: 'Machine Size (L x W x H)', value: '1.5 M x 1.0 M x 1.2 M' },
-    { label: 'Weight', value: '800–850 kg' }
+    { label: 'Weight', value: '800–850 kg' }
+  ];
+
+  const productData = {
+    name: "Strip Cutter Machine",
+    description:
+      "Industrial-grade Strip Cutter manufacturer in India offering precision rubber strip cutting with heavy-duty construction and high throughput performance.",
+    image: "https://vikahecotech.com/images/stripcutter1.png",
+    url: "https://vikahecotech.com/strip-cutter",
+    sku: "VK-SC-01",
+    category: "Rubber Recycling Machinery",
+    price: "0"
+  };
+
+  const breadcrumbData = [
+    { name: "Home", url: "https://vikahecotech.com/" },
+    { name: "Strip Cutter", url: "https://vikahecotech.com/strip-cutter" }
   ];
 
   return (
     <div className="tbf-page">
 
-      {/* Enhanced Header */}
+      {/* ===== SEO ===== */}
+      <SEOHelmet
+        title="StripCutter Manufacturer in India | Vikah Ecotech"
+        description="Vikah Ecotech is a leading StripCutter manufacturer in India offering industrial-grade rubber strip cutting machines with high precision, durability, and efficiency."
+        keywords="Strip Cutter manufacturer in India, rubber strip cutting machine, tyre strip cutter, industrial strip cutter, rubber recycling machinery"
+        canonical="https://vikahecotech.com/strip-cutter"
+        pageName="Strip Cutter"
+        product={productData}
+        breadcrumb={breadcrumbData}
+      />
+
+      {/* ===== HEADER ===== */}
       <header className="tbf-header-enhanced text-white py-5 position-relative">
         <Container>
           <Row className="align-items-center">
@@ -56,24 +84,24 @@ const StripCutter = () => {
         </Container>
       </header>
 
-      {/* Intro Paragraph */}
+      {/* ===== INTRO ===== */}
       <div className="tbf-intro container text-center my-4">
         <p className="lead">
-          Our Strip Cutter offers precise and efficient cutting solutions for waste Rubber materials, enhancing productivity and product quality.
+          Our Strip Cutter offers precise and efficient cutting solutions for waste rubber materials, enhancing productivity and product quality.
         </p>
       </div>
 
-{/* Floating Technical Overview */}
-          <div className="specs-box shadow">
-            <h5 className="fw-bold mb-3">Technical Overview</h5>
-            <ul className="list-unstyled mb-0">
-              {specs.map((item, idx) => (
-                <li key={idx}><strong>{item.label}:</strong> {item.value}</li>
-              ))}
-            </ul>
-          </div>
+      {/* ===== TECHNICAL OVERVIEW ===== */}
+      <div className="specs-box shadow container my-4">
+        <h5 className="fw-bold mb-3">Technical Overview</h5>
+        <ul className="list-unstyled mb-0">
+          {specs.map((item, idx) => (
+            <li key={idx}><strong>{item.label}:</strong> {item.value}</li>
+          ))}
+        </ul>
+      </div>
 
-      {/* Features Section */}
+      {/* ===== FEATURES ===== */}
       <section className="tbf-section tbf-features">
         <Container>
           <h2 className="section-title text-center mb-5">Key Features</h2>
@@ -91,7 +119,7 @@ const StripCutter = () => {
         </Container>
       </section>
 
-      {/* Applications Section */}
+      {/* ===== APPLICATIONS ===== */}
       <section className="tbf-section tbf-applications">
         <Container>
           <h2 className="section-title text-center mb-5">Applications</h2>
@@ -106,16 +134,19 @@ const StripCutter = () => {
         </Container>
       </section>
 
-      {/* Contact Section */}
+      {/* ===== CONTACT ===== */}
       <section className="tbf-contact-section text-white text-center py-5">
         <Container>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p className="mb-0">
             For more information about our Strip Cutter, please contact us at{" "}
-            <a href="mailto:info@vikahecotech.com" className="fw-bold text-white">info@vikahecotech.com</a>.
+            <a href="mailto:info@vikahecotech.com" className="fw-bold text-white">
+              info@vikahecotech.com
+            </a>.
           </p>
         </Container>
       </section>
+
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SEOHelmet from "../../components/SEO/SEOHelmet";
 import "../../Other Equipments/Tyrecutting.css";
 import "../../Pages/Models.css";
 import tyrefoldingimg from "../../images/tyre_folding1.png";
@@ -34,6 +35,20 @@ function Tyrefolding() {
 
   return (
     <div>
+
+      {/* ===== SEO ===== */}
+      <SEOHelmet
+        title="Tyre Folding Manufacturer in India | Vikah Ecotech"
+        description="Vikah Ecotech is a leading tyre folding machine manufacturer in India. Our industrial tyre folding machines are designed for efficient tyre waste processing with high performance and durability."
+        keywords="Tyre Folding Machine Manufacturer in India, Tyre Folding Machine, Industrial Tyre Folding Machine, Vikah Ecotech Tyre Folding"
+        canonical="https://vikahecotech.com/tyrefolding"
+        pageName="Tyre Folding Machines"
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com/" },
+          { name: "Tyre Folding Machines", url: "https://vikahecotech.com/tyrefolding" }
+        ]}
+      />
+
       {/* Header */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
@@ -43,7 +58,7 @@ function Tyrefolding() {
 
       {/* Description */}
       <div className="container text-center my-4 balerbackimg">
-        <p className="">
+        <p>
           Vikah Ecotech’s tyre folding machines are designed for robust industrial use,
           helping you optimize tyre waste processing through efficient folding mechanisms.
         </p>
@@ -64,8 +79,13 @@ function Tyrefolding() {
         {/* Selected Machine Details */}
         <div className="row justify-content-center align-items-center">
           <div className="col-md-6 mb-4 text-center">
-            <img src={selected.image} alt={selected.name} className="img-fluid rounded machine-image" />
+            <img
+              src={selected.image}
+              alt={selected.name}
+              className="img-fluid rounded machine-image"
+            />
           </div>
+
           <div className="col-md-6 mb-4 makecenter">
             <h3 className="machine-title">{selected.name}</h3>
             <ul className="list-unstyled">
@@ -74,7 +94,11 @@ function Tyrefolding() {
               <li><strong>Panel:</strong> {selected.panel}</li>
               <li><strong>Power Range:</strong> {selected.power}</li>
             </ul>
-            <Link to={`/${selected.name.toLowerCase()}`} className="btn btn-outline-success mt-3">
+
+            <Link
+              to={`/${selected.name.toLowerCase()}`}
+              className="btn btn-outline-success mt-3"
+            >
               Read More
             </Link>
           </div>
@@ -86,15 +110,24 @@ function Tyrefolding() {
         <Col>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p>
-            For more information about our products and services, please visit our{' '}
-            <a href="#/ourproducts" className="fw-bold text-white text-decoration-underline">
-  product range 
-</a>
-
-            <a href="mailto:info@vikahecotech.com" className="text-white text-decoration-underline"> info@vikahecotech.com</a>.
+            For more information about our products and services, please visit our{" "}
+            <a
+              href="#/ourproducts"
+              className="fw-bold text-white text-decoration-underline"
+            >
+              product range
+            </a>{" "}
+            or contact us at{" "}
+            <a
+              href="mailto:info@vikahecotech.com"
+              className="text-white text-decoration-underline"
+            >
+              info@vikahecotech.com
+            </a>.
           </p>
         </Col>
       </Row>
+
     </div>
   );
 }

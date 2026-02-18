@@ -4,6 +4,7 @@ import '../OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import classifier from "../../images/classifier.png";
+import SEOHelmet from "../../components/SEO/SEOHelmet";
 
 const Classifiers = () => {
   useEffect(() => {
@@ -40,7 +41,29 @@ const Classifiers = () => {
   return (
     <div className="tbf-page">
 
-      {/* Enhanced Header with image */}
+      {/* ✅ SEO HELMET */}
+      <SEOHelmet
+        title="Classifiers Manufacturer in India"
+        description="Vikah Ecotech is a leading Classifiers manufacturer in India offering high precision particle separation systems for food, mineral, plastic, and recycling industries."
+        keywords="Classifiers manufacturer in India, industrial classifier machine, particle separation equipment, mineral classifier, plastic recycling classifier"
+        canonical="https://vikahecotech.com/classifiers"
+        pageName="Classifiers"
+        product={{
+          name: "Industrial Classifiers",
+          description: "High precision industrial classifiers designed for accurate particle size separation across multiple industries.",
+          image: "https://vikahecotech.com/logo_vk.png",
+          url: "https://vikahecotech.com/classifiers",
+          sku: "VK-CLS-01",
+          category: "Industrial Separation Equipment",
+          price: "0"
+        }}
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com/" },
+          { name: "Classifiers", url: "https://vikahecotech.com/classifiers" }
+        ]}
+      />
+
+      {/* Header */}
       <header className="tbf-header-enhanced text-white py-5 position-relative">
         <Container>
           <Row className="align-items-center">
@@ -57,14 +80,14 @@ const Classifiers = () => {
         </Container>
       </header>
 
-      {/* Intro Paragraph */}
+      {/* Intro */}
       <div className="tbf-intro container text-center my-4">
         <p className="lead">
           Our Classifiers provide reliable and efficient separation of particles by size, ensuring enhanced quality and consistent results in various industrial processes.
         </p>
       </div>
 
-      {/* Floating Technical Overview */}
+      {/* Technical Overview */}
       <div className="specs-box shadow">
         <h5 className="fw-bold mb-3">Technical Overview</h5>
         <ul className="list-unstyled mb-0">
@@ -74,7 +97,7 @@ const Classifiers = () => {
         </ul>
       </div>
 
-      {/* Features Section */}
+      {/* Features */}
       <section className="tbf-section tbf-features">
         <Container>
           <h2 className="section-title text-center mb-5">Key Features</h2>
@@ -92,7 +115,7 @@ const Classifiers = () => {
         </Container>
       </section>
 
-      {/* Applications Section */}
+      {/* Applications */}
       <section className="tbf-section tbf-applications">
         <Container>
           <h2 className="section-title text-center mb-5">Applications</h2>
@@ -107,13 +130,15 @@ const Classifiers = () => {
         </Container>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact */}
       <section className="tbf-contact-section text-white text-center py-5">
         <Container>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p className="mb-0">
             For more information about our Classifiers or to request a quote, please contact us at{" "}
-            <a href="mailto:info@vikahecotech.com" className="fw-bold text-white">info@vikahecotech.com</a>.
+            <a href="mailto:info@vikahecotech.com" className="fw-bold text-white">
+              info@vikahecotech.com
+            </a>.
           </p>
         </Container>
       </section>

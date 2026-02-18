@@ -4,6 +4,7 @@ import '../OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import beedwireremover from "../../images/beedwireremover.png";
+import SEOHelmet from "../../components/SEO/SEOHelmet";
 
 const BeadwireRemover = () => {
   useEffect(() => {
@@ -14,11 +15,11 @@ const BeadwireRemover = () => {
     { title: 'High Efficiency', description: 'Capable of processing 40 to 120 tires per hour, depending on the model.' },
     { title: 'Durable Construction', description: 'Built with robust materials to withstand the rigors of tire recycling operations.' },
     { title: 'User-Friendly Operation', description: 'Designed for ease of use, reducing operator training time.' },
-    { title: 'Low Maintenance', description: 'Features a simple design that requires minimal maintenance, ensuring long-term reliability.' },
-    { title: 'Energy Efficient', description: 'Operates with low power consumption, reducing operational costs.' },
-    { title: 'Versatile Applications', description: 'Suitable for various tire sizes and types, including truck and OTR tires.' },
-    { title: 'Clean Steel Wire Output', description: 'Produces high-quality steel wire suitable for resale or further processing.' },
-    { title: 'Safety Features', description: 'Equipped with safety mechanisms to protect operators during operation.' }
+    { title: 'Low Maintenance', description: 'Simple design requiring minimal maintenance for long-term reliability.' },
+    { title: 'Energy Efficient', description: 'Runs with low power consumption, reducing operational costs.' },
+    { title: 'Versatile Applications', description: 'Suitable for various tire sizes like passenger, truck & OTR tires.' },
+    { title: 'Clean Steel Wire Output', description: 'Outputs high-quality bead wire suitable for resale or further use.' },
+    { title: 'Safety Features', description: 'Equipped with safety mechanisms for safe operation.' }
   ];
 
   const applications = [
@@ -39,14 +40,28 @@ const BeadwireRemover = () => {
   return (
     <div className="tbf-page">
 
-      {/* Enhanced Header */}
+      {/* ===== SEO ===== */}
+      <SEOHelmet
+        title="Beadwire Remover Manufacturer in India"
+        description="High-quality beadwire remover machines designed for efficient steel bead wire extraction from waste tires. Trusted manufacturer in India offering durable & energy-efficient recycling machinery."
+        keywords="beadwire remover, bead wire extractor, tire recycling machine, bead remover machine, tyre recycling equipment manufacturer India"
+        canonical="https://vikahecotech.com/beedwire-remover"
+        pageName="Beadwire Remover"
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com" },
+          { name: "Beadwire Remover", url: "https://vikahecotech.com/beedwire-remover" }
+        ]}
+      />
+
+      {/* Header */}
       <header className="tbf-header-enhanced text-white py-5 position-relative">
         <Container>
           <Row className="align-items-center">
             <Col md={6} className="text-center text-md-start">
               <h1 className="tbf-heading display-5 fw-bold">Beadwire Remover</h1>
               <p className="lead mt-3">
-                Efficient and reliable machines engineered to extract steel bead wires from waste tires, boosting recycling and material recovery.
+                Efficient and reliable machines engineered to extract steel bead wires from waste tires,
+                boosting recycling and material recovery.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
@@ -56,14 +71,15 @@ const BeadwireRemover = () => {
         </Container>
       </header>
 
-      {/* Intro Paragraph */}
+      {/* Intro */}
       <div className="tbf-intro container text-center my-4">
         <p className="lead">
-          Our Beadwire Remover machines are designed to simplify the tire recycling process by efficiently extracting steel bead wires, improving overall recycling efficiency.
+          Our Beadwire Remover machines simplify tire recycling by efficiently extracting steel bead wires,
+          improving overall productivity.
         </p>
       </div>
 
-      {/* Floating Technical Overview */}
+      {/* Technical Specs Floating Box */}
       <div className="specs-box shadow">
         <h5 className="fw-bold mb-3">Technical Overview</h5>
         <ul className="list-unstyled mb-0">
@@ -73,7 +89,7 @@ const BeadwireRemover = () => {
         </ul>
       </div>
 
-      {/* Features Section */}
+      {/* Features */}
       <section className="tbf-section tbf-features">
         <Container>
           <h2 className="section-title text-center mb-5">Key Features</h2>
@@ -91,7 +107,7 @@ const BeadwireRemover = () => {
         </Container>
       </section>
 
-      {/* Applications Section */}
+      {/* Applications */}
       <section className="tbf-section tbf-applications">
         <Container>
           <h2 className="section-title text-center mb-5">Applications</h2>
@@ -106,17 +122,18 @@ const BeadwireRemover = () => {
         </Container>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact */}
       <section className="tbf-contact-section text-white text-center py-5">
         <Container>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p className="mb-0">
-            For more information about our Beadwire Remover machines or to request a quote, please contact us at{" "}
-            <a href="mailto:info@vikahecotech.com" className="fw-bold text-white">info@vikahecotech.com</a>.
+            For more information about our Beadwire Remover machines or to request a quote, contact us at{" "}
+            <a href="mailto:info@vikahecotech.com" className="fw-bold text-white">
+              info@vikahecotech.com
+            </a>.
           </p>
         </Container>
       </section>
-
     </div>
   );
 };

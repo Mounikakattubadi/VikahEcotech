@@ -6,6 +6,7 @@ import "../../Pages/Models.css";
 import tyrecimage from "../../images/tyrecutting1.png";
 import tyrecimage2 from "../../images/tyrecutting2.webp";
 import tyrecimage3 from "../../images/tyrecutting3.jpg";
+import SEOHelmet from "../../components/SEO/SEOHelmet";
 
 function Tyrecutting() {
   useEffect(() => {
@@ -20,6 +21,8 @@ function Tyrecutting() {
       pressure: '3000 PSI',
       power: '20 HP, 960 RPM, 50HZ, 3 Phase + 2 Phase',
       image: tyrecimage,
+      url: 'https://vikahecotech.com/tcpcr100',
+      description: 'High performance tyre cutting machine for PCR tyres.',
     },
     {
       name: 'TCTB100',
@@ -28,6 +31,8 @@ function Tyrecutting() {
       panel: '415v, 3 phase, 50Hz',
       power: '20 HP, 960 RPM, 50HZ, 3 Phase + 2 Phase',
       image: tyrecimage2,
+      url: 'https://vikahecotech.com/tctb100',
+      description: 'Efficient tyre cutting solution for truck and bus tyres.',
     },
     {
       name: 'TCOTR100',
@@ -36,6 +41,8 @@ function Tyrecutting() {
       panel: '415v, 3 phase, 50Hz',
       power: '20 HP, 960 RPM, 50HZ, 3 Phase + 2 Phase',
       image: tyrecimage3,
+      url: 'https://vikahecotech.com/tcotr100',
+      description: 'Heavy-duty OTR tyre cutting machine for industrial applications.',
     },
   ];
 
@@ -43,6 +50,21 @@ function Tyrecutting() {
 
   return (
     <div>
+
+      {/* ===== SEO ===== */}
+      <SEOHelmet
+        title="Tyre Cutting Manufacturer in India | Vikah Ecotech"
+        description="Vikah Ecotech is a leading tyre cutting machine manufacturer in India. We offer high-performance tyre cutting machines for PCR, TBR, and OTR tyres with durable design and industrial efficiency."
+        keywords="Tyre cutting machine manufacturer in India, tyre cutter machine, tyre recycling machine India, PCR tyre cutting machine, OTR tyre cutter, rubber processing machines"
+        canonical="https://vikahecotech.com/tyrecutting"
+        pageName="Tyre Cutting Machines"
+        products={machines}
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com/" },
+          { name: "Tyre Cutting Machines", url: "https://vikahecotech.com/tyrecutting" },
+        ]}
+      />
+
       {/* Header */}
       <header className="tyrecutting-header text-white text-center py-5">
         <div className="container">
@@ -52,7 +74,7 @@ function Tyrecutting() {
 
       {/* Description */}
       <div className="container text-center my-4 balerbackimg">
-        <p className="">
+        <p>
           At Vikah Ecotech, we engineer advanced tyre cutting machines designed for high-performance and precision.
           Our machines are crafted to meet the industrial demands of efficient rubber processing, ensuring both productivity and durability.
         </p>
@@ -97,11 +119,13 @@ function Tyrecutting() {
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p>
             For more information about our products and services, please visit our{' '}
-            <a href="#/ourproducts" className="fw-bold text-white text-decoration-underline">
-  product range 
-</a>
-  <span> or reach us at{' '}</span>
-            <a href="mailto:info@vikahecotech.com" className="text-white text-decoration-underline">info@vikahecotech.com</a>.
+            <a href="/ourproducts" className="fw-bold text-white text-decoration-underline">
+              product range
+            </a>
+            <span> or reach us at </span>
+            <a href="mailto:info@vikahecotech.com" className="text-white text-decoration-underline">
+              info@vikahecotech.com
+            </a>.
           </p>
         </Col>
       </Row>

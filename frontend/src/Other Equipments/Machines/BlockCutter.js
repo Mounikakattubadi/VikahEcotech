@@ -4,6 +4,7 @@ import '../OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import blockcutter from "../../images/blockcutter.png";
+import SEOHelmet from "../../components/SEO/SEOHelmet";
 
 const BlockCutter = () => {
   useEffect(() => {
@@ -22,10 +23,9 @@ const BlockCutter = () => {
   ];
 
   const applications = [
-        'Rubber Recycling',
+    'Rubber Recycling',
   ];
 
-  // Optional: Add specs if you want to show a specs box like StripCutter, otherwise comment/remove
   const specs = [
     { label: 'Cutting Capacity', value: 'Up to 200 mm thickness' },
     { label: 'Motor Power', value: '15 HP' },
@@ -34,86 +34,113 @@ const BlockCutter = () => {
   ];
 
   return (
-    <div className="tbf-page">
+    <>
+      {/* ===== SEO HELMET ===== */}
+      <SEOHelmet
+        title="BlockCutter manufacturer in india"
+        description="Vikah Ecotech is a leading Block Cutter manufacturer in India offering high precision rubber cutting machines with durable construction and energy efficient performance."
+        keywords="Block Cutter manufacturer in India, Rubber block cutting machine, Industrial rubber cutter, Rubber recycling machinery, Vikah Ecotech"
+        canonical="https://vikahecotech.com/block-cutter"
+        pageName="Block Cutter"
+        product={{
+          name: "Block Cutter Machine",
+          description: "High precision industrial block cutter machine designed for rubber recycling and waste rubber cutting applications.",
+          image: "https://vikahecotech.com/logo_vk.png",
+          url: "https://vikahecotech.com/block-cutter",
+          sku: "VIKA-BLC-01",
+          category: "Rubber Recycling Machinery",
+          price: "0"
+        }}
+        breadcrumb={[
+          { name: "Home", url: "https://vikahecotech.com" },
+          { name: "Block Cutter", url: "https://vikahecotech.com/block-cutter" }
+        ]}
+      />
 
-      {/* Enhanced Header */}
-      <header className="tbf-header-enhanced text-white py-5 position-relative">
-        <Container>
-          <Row className="align-items-center">
-            <Col md={6} className="text-center text-md-start">
-              <h1 className="tbf-heading display-5 fw-bold">Block Cutter</h1>
-              <p className="lead mt-3">
-                Precise and durable block cutting machine to cut rubber into particular size with user-friendly controls and robust build.
-              </p>
-            </Col>
-            <Col md={6} className="text-center mt-4 mt-md-0">
-              <img src={blockcutter} alt="Block Cutter Machine" className="stripcutter-image img-fluid" />
-            </Col>
-          </Row>
-        </Container>
-      </header>
+      <div className="tbf-page">
 
-      {/* Intro Paragraph */}
-      <div className="tbf-intro container text-center my-4">
-        <p className="lead">
-          Our Block Cutter machines provide efficient and accurate cutting of rubber waste materials, enhancing productivity and quality in your projects.
-        </p>
-      </div>
+        {/* Header */}
+        <header className="tbf-header-enhanced text-white py-5 position-relative">
+          <Container>
+            <Row className="align-items-center">
+              <Col md={6} className="text-center text-md-start">
+                <h1 className="tbf-heading display-5 fw-bold">Block Cutter</h1>
+                <p className="lead mt-3">
+                  Precise and durable block cutting machine to cut rubber into particular size with user-friendly controls and robust build.
+                </p>
+              </Col>
+              <Col md={6} className="text-center mt-4 mt-md-0">
+                <img src={blockcutter} alt="Block Cutter Machine" className="stripcutter-image img-fluid" />
+              </Col>
+            </Row>
+          </Container>
+        </header>
 
-      {/* Floating Technical Overview */}
-      <div className="specs-box shadow">
-        <h5 className="fw-bold mb-3">Technical Overview</h5>
-        <ul className="list-unstyled mb-0">
-          {specs.map((item, idx) => (
-            <li key={idx}><strong>{item.label}:</strong> {item.value}</li>
-          ))}
-        </ul>
-      </div>
-
-      {/* Features Section */}
-      <section className="tbf-section tbf-features">
-        <Container>
-          <h2 className="section-title text-center mb-5">Key Features</h2>
-          <div className="feature-grid">
-            {features.map((feature, idx) => (
-              <div key={idx} className="feature-card shadow-sm">
-                <div className="feature-icon">
-                  <i className="bi bi-check-circle-fill"></i>
-                </div>
-                <h5 className="feature-title">{feature.title}</h5>
-                <p className="feature-desc">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Applications Section */}
-      <section className="tbf-section tbf-applications">
-        <Container>
-          <h2 className="section-title text-center mb-5">Applications</h2>
-          <div className="applications-grid">
-            {applications.map((app, idx) => (
-              <div key={idx} className="application-card shadow-sm">
-                <i className="bi bi-box-seam"></i>
-                <span>{app}</span>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Contact Section */}
-      <section className="tbf-contact-section text-white text-center py-5">
-        <Container>
-          <h4 className="fw-bold mb-3">Get in Touch</h4>
-          <p className="mb-0">
-            For more information about our Block Cutter machines or to request a quote, please contact us at{" "}
-            <a href="mailto:info@vikahecotech.com" className="fw-bold text-white">info@vikahecotech.com</a>.
+        {/* Intro */}
+        <div className="tbf-intro container text-center my-4">
+          <p className="lead">
+            Our Block Cutter machines provide efficient and accurate cutting of rubber waste materials, enhancing productivity and quality in your projects.
           </p>
-        </Container>
-      </section>
-    </div>
+        </div>
+
+        {/* Technical Overview */}
+        <div className="specs-box shadow">
+          <h5 className="fw-bold mb-3">Technical Overview</h5>
+          <ul className="list-unstyled mb-0">
+            {specs.map((item, idx) => (
+              <li key={idx}><strong>{item.label}:</strong> {item.value}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Features */}
+        <section className="tbf-section tbf-features">
+          <Container>
+            <h2 className="section-title text-center mb-5">Key Features</h2>
+            <div className="feature-grid">
+              {features.map((feature, idx) => (
+                <div key={idx} className="feature-card shadow-sm">
+                  <div className="feature-icon">
+                    <i className="bi bi-check-circle-fill"></i>
+                  </div>
+                  <h5 className="feature-title">{feature.title}</h5>
+                  <p className="feature-desc">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        {/* Applications */}
+        <section className="tbf-section tbf-applications">
+          <Container>
+            <h2 className="section-title text-center mb-5">Applications</h2>
+            <div className="applications-grid">
+              {applications.map((app, idx) => (
+                <div key={idx} className="application-card shadow-sm">
+                  <i className="bi bi-box-seam"></i>
+                  <span>{app}</span>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+
+        {/* Contact */}
+        <section className="tbf-contact-section text-white text-center py-5">
+          <Container>
+            <h4 className="fw-bold mb-3">Get in Touch</h4>
+            <p className="mb-0">
+              For more information about our Block Cutter machines or to request a quote, please contact us at{" "}
+              <a href="mailto:info@vikahecotech.com" className="fw-bold text-white">
+                info@vikahecotech.com
+              </a>.
+            </p>
+          </Container>
+        </section>
+
+      </div>
+    </>
   );
 };
 
