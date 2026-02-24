@@ -354,7 +354,7 @@ export default function Ourproducts() {
                     </div>
 
                     <div className={styles.categoryActions}>
-                      <Link to="/othereqptemp" className={styles.linkGhost}>
+                      <Link to="/other-equipment" className={styles.linkGhost}>
                         Other equipment
                       </Link>
                     </div>

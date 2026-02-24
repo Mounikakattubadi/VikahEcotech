@@ -6,6 +6,7 @@ import '../OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import sidewallremover from "../../images/sidewallremover.png";
+import RelatedEquipments from "./RelatedEquipments";
 
 const SidewallRemover = () => {
 
@@ -73,7 +74,11 @@ const SidewallRemover = () => {
               <Col md={6} className="text-center text-md-start">
                 <h1 className="tbf-heading display-5 fw-bold">Side Wall Remover</h1>
                 <p className="lead mt-3">
-                  Our Side Wall Remover is designed to efficiently remove sidewalls from passenger car tyres and truck, bus, and retail tyres, improving product quality and optimizing downstream recycling operations.
+                  A high-efficiency Side Wall Remover engineered to cut and separate sidewalls from
+                  passenger car tires, truck tires, and bus tires with precision. Designed for strong
+                  performance and long-term durability, it enhances material recovery, reduces manual
+                  labor, and ensures smoother downstream processing for tire recycling plants and
+                  rubber manufacturing industries.
                 </p>
               </Col>
               <Col md={6} className="text-center mt-4 mt-md-0">
@@ -134,8 +139,22 @@ const SidewallRemover = () => {
           </Container>
         </section>
 
+        {/* Intro */}
+        <div className="tbf-intro container text-center my-4">
+          <p className="mt-3 fw-semibold text-center">
+            Our Sidewall Remover is part of the{" "}
+            <a href="/other-equipment" className="fw-bold text-decoration-none">
+              Tyre Recycling & Pre-Cutting Equipment
+            </a>{" "}
+            category, engineered to deliver precise sidewall separation for higher-quality rubber recovery and smoother downstream recycling processes.
+          </p>
+        </div>
+
+        {/* RelatedEquipments */}
+        <RelatedEquipments current="/sidewall-remover" />
+
         {/* Contact Section */}
-        <section className="tbf-contact-section text-white text-center py-5">
+        <section className="tbf-contact-section text-white text-center py-5 m-5">
           <Container>
             <h4 className="fw-bold mb-3">Get in Touch</h4>
             <p className="mb-0">

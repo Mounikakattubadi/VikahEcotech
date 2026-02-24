@@ -235,7 +235,7 @@ const Navbar = () => {
                     </p>
                     <div className="ve-mega__group">
                       <span className="ve-mega__group-label">Equipment</span>
-                      <Link to="/othereqptemp" className="ve-mega__link" onClick={closeAll}>Other Equipment</Link>
+                      <Link to="/other-equipment" className="ve-mega__link" onClick={closeAll}>Other Equipment</Link>
                     </div>
                   </div>
                 </div>

@@ -1,0 +1,101 @@
+.related-section {
+  margin-top: 60px;
+  padding: 15px 15px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Wrapper */
+.auto-scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 10px 0;
+}
+
+/* Auto scroll container */
+.auto-scroll {
+  display: flex;
+  gap: 30px; /* ★ More spacing between cards */
+  width: max-content;
+animation: scrollInfinite 90s linear infinite;}
+
+/* Pause scrolling on hover */
+.auto-scroll-wrapper:hover .auto-scroll {
+  animation-play-state: paused;
+}
+
+/* Infinite scroll */
+@keyframes scrollInfinite {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Card */
+.related-card {
+  min-width: 230px; /* bigger, premium size */
+  background: #ffffff;
+  border-radius: 18px; /* softer rounded corners */
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12); /* premium shadow */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: floatUp 2.8s ease-in-out infinite;
+}
+
+/* Floating animation to look alive */
+@keyframes floatUp {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Hover effect */
+.related-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0px 10px 22px rgba(0, 0, 0, 0.18);
+}
+
+/* Image */
+.related-img {
+  width: 100%;
+  height: 140px; /* bigger & cleaner */
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* Title */
+.related-card h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 12px;
+  margin-bottom: 10px;
+}
+
+/* Button styling */
+.related-card .btn {
+  border-radius: 10px;
+  padding: 6px 0;
+  font-weight: 500;
+}
+
+/* Make spacing beautiful on mobile */
+@media (max-width: 768px) {
+  .auto-scroll {
+    gap: 22px;
+  }
+
+  .related-card {
+    min-width: 200px;
+    padding: 15px;
+  }
+
+  .related-img {
+    height: 130px;
+  }
+}

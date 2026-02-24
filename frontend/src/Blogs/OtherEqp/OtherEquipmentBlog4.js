@@ -231,7 +231,7 @@ const OtherEquipmentBlog4 = () => {
                           <h3 className={styles.relatedTitle}>Related Pages</h3>
                   
                           <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-                            <a href="/othereqptemp">Other Equipment →</a>
+                            <a href="/other-equipment">Other Equipment →</a>
                           </div>
                   
                           <div className={`${styles.relatedCard} ${styles.floatCard}`}>

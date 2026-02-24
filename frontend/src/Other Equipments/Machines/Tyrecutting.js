@@ -7,6 +7,7 @@ import tyrecimage from "../../images/tyrecutting1.png";
 import tyrecimage2 from "../../images/tyrecutting2.webp";
 import tyrecimage3 from "../../images/tyrecutting3.jpg";
 import SEOHelmet from "../../components/SEO/SEOHelmet";
+import RelatedEquipments from "./RelatedEquipments";
 
 function Tyrecutting() {
   useEffect(() => {
@@ -121,8 +122,22 @@ function Tyrecutting() {
         </div>
       </div>
 
+      {/* ===== INTRO ===== */}
+      <div className="tbf-intro container text-center my-4">
+        <p className="mt-3 fw-semibold text-center">
+          Our Tyre Cutting Machines are part of the{" "}
+          <a href="/other-equipment" className="fw-bold text-decoration-none">
+            Heavy-Duty Tyre Recycling & Industrial Cutting Equipment
+          </a>{" "}
+          category, engineered to deliver precise cutting performance for PCR, TBR, and OTR tyres with maximum efficiency and durability.
+        </p>
+      </div>
+
+      {/* RelatedEquipments */}
+      <RelatedEquipments current="/tyrecutting" />
+
       {/* Get in Touch Section */}
-      <Row className="text-center get-in-touch-section text-white py-5 rounded m-0">
+      <Row className="text-center get-in-touch-section text-white py-5 rounded m-5">
         <Col>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p>

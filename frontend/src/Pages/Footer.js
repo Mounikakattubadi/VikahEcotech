@@ -4,30 +4,28 @@ import './Footer.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import lion from '../images/Lion.png'; // Adjust path if needed
+import lion from '../images/Lion.png';
 
 const Footer = () => {
   return (
     <footer className="footer-section bg-black text-white pt-5 pb-3">
-      <Container>
-        <Row className="align-items-start">
-          {/* Logo and Social Media */}
-          <Col md={4} className="text-center mb-4">
-            <img
-              src={lion}
-              alt="Make in India"
-              className="footer-logo mb-3"
-            />
+      <Container fluid>
+        <Row className="align-items-start text-center text-md-start">
+          
+          {/* Logo + Social */}
+          <Col md={2} className="d-flex flex-column align-items-center align-items-md-start mb-4 mb-md-0">
+            <img src={lion} alt="Make in India" className="footer-logo mb-3" />
             <div className="social-icons">
-              <a href="https://www.facebook.com/share/1Mxsd16XWYMsvCyi/?mibextid=qi2Omg"><i className="fab fa-facebook facebook-icon mx-2 fs-4"></i></a>
-              <a href="https://www.youtube.com/@vikahecotech"><i className="fab fa-youtube youtube-icon mx-2 fs-4"></i></a>
-              <a href="https://www.instagram.com/vikahecotech/"><i className="fab fa-instagram instagram-icon mx-2 fs-4"></i></a>
-              <a href="https://x.com/vikahecotech"><i className="fab fa-twitter twitter-icon mx-2 fs-4"></i></a>
+              <a href="https://www.facebook.com/share/1Mxsd16XWYMsvCyi/?mibextid=qi2Omg"><i className="fab fa-facebook facebook-icon mx-1 fs-5"></i></a>
+              <a href="https://www.youtube.com/@vikahecotech"><i className="fab fa-youtube youtube-icon mx-1 fs-5"></i></a>
+              <a href="https://www.instagram.com/vikahecotech/"><i className="fab fa-instagram instagram-icon mx-1 fs-5"></i></a>
+              <a href="https://x.com/vikahecotech"><i className="fab fa-twitter twitter-icon mx-1 fs-5"></i></a>
             </div>
           </Col>
 
           {/* Navigation Links */}
-          <Col md={4} className="mb-4 text-center text-md-start">
+          <Col md={2}>
+            <h6 className="fw-bold">Navigation</h6>
             <ul className="list-unstyled footer-links">
               <li><Link to="/">Home</Link></li>
               <li><Link to="/about">About Us</Link></li>
@@ -39,22 +37,57 @@ const Footer = () => {
             </ul>
           </Col>
 
+          {/* Quick Links Column 1 */}
+          <Col md={2}>
+            <h6 className="fw-bold">Balers</h6>
+            <ul className="list-unstyled footer-links">
+              <li><Link to="/balers">Balers</Link></li>
+              <li><Link to="/tyre-scrap-balers">Tyre Scrap Balers</Link></li>
+              <li><Link to="/plasticbaler">Plastic Balers</Link></li>
+              <li><Link to="/pcb">PCB Balers</Link></li>
+              <li><Link to="/metalbaler">Metal Balers</Link></li>
+            </ul>
+          </Col>
+
+          {/* Quick Links Column 2 */}
+          <Col md={2}>
+            <h6 className="fw-bold">Primary Shredders</h6>
+            <ul className="list-unstyled footer-links">
+              <li><Link to="/primary-shredder">Primary Shredder</Link></li>
+              <li><Link to="/tyreshredder">Tyre Shredder</Link></li>
+              <li><Link to="/shm4000">Metal Shredder</Link></li>
+              <li><Link to="/plasticshredder">Plastic Shredder</Link></li>
+              <li><Link to="/papershredder">Paper Shredder</Link></li>
+              <li><Link to="/ewaste">E-Waste Shredder</Link></li>
+            </ul>
+          </Col>
+
+          {/* Quick Links Column 3 */}
+          <Col md={2}>
+            <h6 className="fw-bold">Secondary Shredders</h6>
+            <ul className="list-unstyled footer-links">
+              <li><Link to="/secondary-shredder">Secondary Shredder</Link></li>
+              <li><Link to="/rasper_secondaryshredders">Rasper</Link></li>
+              <li><Link to="/secondarymetalshredder">Secondary Metal Shredder</Link></li>
+              <li><Link to="/secondaryplasticshredder">Secondary Plastic Shredder</Link></li>
+              <li><Link to="/secondarypcb">Secondary PCB Shredder</Link></li>
+            </ul>
+          </Col>
+
           {/* Contact Info */}
-          <Col md={4} className="text-md-start text-center">
-            <h5>Contact Us</h5>
+          <Col md={2} className="text-md-start mt-4 mt-md-0">
+            <h6 className="fw-bold">Contact Us</h6>
             <p><strong>Admin Off:</strong> #406, 4th Floor, Patel Towers, Above EasyBuy Beside Nagole RTO Office, Nagole Hyderabad, Telangana-500068</p>
             <p><strong>Unit Add:</strong> Plot No - 81, Phase-III, Mahalaxmi Nagar, IDA Cherlapally, Rangareddy District, Hyderabad-500051</p>
             <p><strong>Off:</strong> +91 4049471616</p>
             <p><strong>Email:</strong> Info@vikahecotech.com</p>
           </Col>
+
         </Row>
 
-        <Row>
-          <Col className="text-center mt-4">
-            <p className="mb-0">
-              Copyright © 2023 Vikah-Ecotech |
-              All rights reserved
-            </p>
+        <Row className="mt-4">
+          <Col className="text-center">
+            <p className="mb-0">Copyright © 2023 Vikah-Ecotech | All rights reserved</p>
           </Col>
         </Row>
       </Container>

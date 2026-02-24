@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import tumbleBackFeederImg from '../../images/Tumbleback-Feeder.png';
 import SEOHelmet from "../../components/SEO/SEOHelmet";
+import RelatedEquipments from "./RelatedEquipments";
 
 const TumbleBackFeeder = () => {
 
@@ -76,7 +77,11 @@ const TumbleBackFeeder = () => {
                 Tumble Back Feeder
               </h1>
               <p className="lead mt-3">
-                Engineered to automate and streamline the feeding process for shredders and recycling machinery with modular flexibility and durability.
+                A robust and automated Tumble Back Feeder designed to deliver controlled, continuous
+                material feeding into shredders and recycling machinery. Built for heavy-duty use,
+                it improves workflow efficiency, reduces manual handling, and ensures smooth,
+                uninterrupted processing in tire recycling plants, waste management facilities, and
+                industrial production lines.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
@@ -135,8 +140,22 @@ const TumbleBackFeeder = () => {
         </Container>
       </section>
 
+      {/* ===== INTRO ===== */}
+      <div className="tbf-intro container text-center my-4">
+        <p className="mt-3 fw-semibold text-center">
+          Our Tumble Back Feeder is part of the{" "}
+          <a href="/other-equipment" className="fw-bold text-decoration-none">
+            Material Feeding & Recycling Automation Equipment
+          </a>{" "}
+          category, engineered to deliver controlled, consistent, and high-capacity material flow for shredders and advanced recycling systems.
+        </p>
+      </div>
+
+      {/* RelatedEquipments */}
+      <RelatedEquipments current="/tumble-back-feeder" />
+
       {/* ===== Contact ===== */}
-      <section className="tbf-contact-section text-white text-center py-5">
+      <section className="tbf-contact-section text-white text-center py-5 m-5">
         <Container>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p className="mb-0">

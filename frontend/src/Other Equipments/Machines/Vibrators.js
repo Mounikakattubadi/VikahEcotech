@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import vibrator from "../../images/vibrator.png";
 import SEOHelmet from "../../components/SEO/SEOHelmet";
+import RelatedEquipments from "./RelatedEquipments";
 
 const Vibrators = () => {
   useEffect(() => {
@@ -108,9 +109,11 @@ const Vibrators = () => {
                 Vibratory Feeders
               </h1>
               <p className="lead mt-3">
-                Engineered to provide efficient and controlled material
-                handling across various industries with durability and energy
-                efficiency.
+                High-performance Vibratory Feeders engineered for precise, consistent, and controlled
+                material flow across various industrial applications. Built with durable components
+                and energy-efficient vibration technology, these feeders enhance processing speed,
+                reduce manual handling, and ensure smooth, continuous operation in recycling plants,
+                manufacturing units, and material handling systems.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
@@ -123,15 +126,6 @@ const Vibrators = () => {
           </Row>
         </Container>
       </header>
-
-      {/* ===== INTRO ===== */}
-      <div className="tbf-intro container text-center my-4">
-        <p className="lead">
-          Our Vibratory Feeders offer precise control and versatility for
-          handling a wide variety of materials, improving process efficiency
-          and reliability.
-        </p>
-      </div>
 
       {/* ===== TECHNICAL OVERVIEW ===== */}
       <div className="specs-box shadow">
@@ -177,6 +171,20 @@ const Vibrators = () => {
           </div>
         </Container>
       </section>
+
+      {/* ===== INTRO ===== */}
+      <div className="tbf-intro container text-center my-4">
+        <p className="mt-3 fw-semibold text-center">
+          Our industrial Vibrators are part of the{" "}
+          <a href="/other-equipment" className="fw-bold text-decoration-none">
+            Material Flow & Vibratory Handling Equipment
+          </a>{" "}
+          portfolio, engineered to deliver consistent material movement, improved processing accuracy, and enhanced operational efficiency across diverse industrial environments.
+        </p>
+      </div>
+
+      {/* RelatedEquipments */}
+      <RelatedEquipments current="/vibrators" />
 
       {/* ===== CONTACT ===== */}
       <section className="tbf-contact-section text-white text-center py-5">

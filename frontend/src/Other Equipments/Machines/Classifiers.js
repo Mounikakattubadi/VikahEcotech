@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import classifier from "../../images/classifier.png";
 import SEOHelmet from "../../components/SEO/SEOHelmet";
+import RelatedEquipments from "./RelatedEquipments";
 
 const Classifiers = () => {
   useEffect(() => {
@@ -71,7 +72,11 @@ const Classifiers = () => {
             <Col md={6} className="text-center text-md-start">
               <h1 className="tbf-heading display-5 fw-bold">Classifiers</h1>
               <p className="lead mt-3">
-                Engineered for precise particle separation and high efficiency, our Classifiers are ideal for improving product quality across diverse industries.
+                High-performance Classifier Machines designed to separate materials based on size,
+                density, and particle distribution with exceptional accuracy. Built for continuous
+                operation and minimal maintenance, these classifiers enhance product purity,
+                streamline processing, and boost overall efficiency in rubber recycling plants,
+                industrial manufacturing units, and material processing industries.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
@@ -80,13 +85,6 @@ const Classifiers = () => {
           </Row>
         </Container>
       </header>
-
-      {/* Intro */}
-      <div className="tbf-intro container text-center my-4">
-        <p className="lead">
-          Our Classifiers provide reliable and efficient separation of particles by size, ensuring enhanced quality and consistent results in various industrial processes.
-        </p>
-      </div>
 
       {/* Technical Overview */}
       <div className="specs-box shadow">
@@ -131,8 +129,21 @@ const Classifiers = () => {
         </Container>
       </section>
 
+      <div className="tbf-intro container text-center my-4">
+        <p className="mt-3 fw-semibold text-center">
+          The Classifier system forms an essential component of our industrial processing line under the{" "}
+          <a href="/other-equipment" className="fw-bold text-decoration-none">
+            Screening & Separation Equipment
+          </a>{" "}
+          category, ensuring precise material separation to support smooth downstream operations.
+        </p>
+      </div>
+
+      {/* RelatedEquipments */}
+      <RelatedEquipments current="/classifiers" />
+
       {/* Contact */}
-      <section className="tbf-contact-section text-white text-center py-5">
+      <section className="tbf-contact-section text-white text-center py-5 m-5">
         <Container>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p className="mb-0">

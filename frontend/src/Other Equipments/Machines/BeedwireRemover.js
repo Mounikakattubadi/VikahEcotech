@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import beedwireremover from "../../images/beedwireremover.png";
 import SEOHelmet from "../../components/SEO/SEOHelmet";
+import RelatedEquipments from "./RelatedEquipments";
 
 const BeadwireRemover = () => {
   useEffect(() => {
@@ -43,14 +44,14 @@ const BeadwireRemover = () => {
       {/* ===== SEO ===== */}
       <SEOHelmet
         title="Beadwire Remover Manufacturer in India"
-        description="High-quality beadwire remover machines designed for efficient steel bead wire extraction from waste tires. Trusted manufacturer in India offering durable & energy-efficient recycling machinery."
-        keywords="beadwire remover, bead wire extractor, tire recycling machine, bead remover machine, tyre recycling equipment manufacturer India"
+        description="High-performance Beadwire Remover machine designed for efficient steel bead wire extraction from waste tyres. Built for durability, low energy consumption, and clean steel wire recovery—ideal for tyre recycling plants and rubber processing units."
+        keywords="beadwire remover, bead wire extractor, tyre recycling machine, bead wire removal equipment, tyre processing equipment India"
         canonical="https://vikahecotech.com/beedwire-remover"
         pageName="Beadwire Remover"
         product={{
           name: "Beadwire Remover Machine",
-          description: "High-quality industrial beadwire remover machine for efficiently extracting steel bead wires from waste tires. Durable, energy-efficient, and ideal for tire recycling operations.",
-          image: "https://vikahecotech.com/logo_vk.png", // make sure this points to your actual image
+          description: "Industrial-grade Beadwire Remover engineered for precise extraction of steel bead wires from waste tyres. Ensures high efficiency, low maintenance, and seamless integration into tyre recycling lines.",
+          image: "https://vikahecotech.com/logo_vk.png",
           url: "https://vikahecotech.com/beedwire-remover",
           sku: "VIKA-BWR-01",
           category: "Tire Recycling Machinery",
@@ -71,8 +72,11 @@ const BeadwireRemover = () => {
             <Col md={6} className="text-center text-md-start">
               <h1 className="tbf-heading display-5 fw-bold">Beadwire Remover</h1>
               <p className="lead mt-3">
-                Efficient and reliable machines engineered to extract steel bead wires from waste tires,
-                boosting recycling and material recovery.
+                A high-performance Beadwire Remover Machine designed to safely and efficiently extract
+                steel bead wires from all types of waste tires. Engineered for maximum durability and
+                precision, this machine improves recycling output, enhances material recovery, reduces
+                manual labor, and supports smooth downstream processing in tire recycling plants,
+                pyrolysis units, and rubber manufacturing industries.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
@@ -81,14 +85,6 @@ const BeadwireRemover = () => {
           </Row>
         </Container>
       </header>
-
-      {/* Intro */}
-      <div className="tbf-intro container text-center my-4">
-        <p className="lead">
-          Our Beadwire Remover machines simplify tire recycling by efficiently extracting steel bead wires,
-          improving overall productivity.
-        </p>
-      </div>
 
       {/* Technical Specs Floating Box */}
       <div className="specs-box shadow">
@@ -133,8 +129,22 @@ const BeadwireRemover = () => {
         </Container>
       </section>
 
+      <div className="tbf-intro container text-center my-4">
+        {/* Category Sentence (as you requested) */}
+        <p className="mt-3 fw-semibold">
+          The Beadwire Remover is part of our advanced tyre-processing machinery under the{" "}
+          <a href="/other-equipment" className="fw-bold text-decoration-none">
+            Cutting &amp; Preparation Equipment
+          </a>{" "}
+          category, designed to streamline tyre recycling operations and ensure clean steel wire separation.
+        </p>
+      </div>
+
+      {/* RelatedEquipments */}
+      <RelatedEquipments current="/beedwire-remover" />
+
       {/* Contact */}
-      <section className="tbf-contact-section text-white text-center py-5">
+      <section className="tbf-contact-section text-white text-center py-5 m-5">
         <Container>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p className="mb-0">

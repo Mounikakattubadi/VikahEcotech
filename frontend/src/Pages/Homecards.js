@@ -33,7 +33,7 @@ const cards = [
     bg: "bg4",
     btnClass: "btnPink",
     image: null,
-    path: "/othereqptemp",
+    path: "/other-equipment",
   },
 ];
 

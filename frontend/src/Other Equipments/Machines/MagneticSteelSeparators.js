@@ -6,6 +6,7 @@ import '../OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import oms from "../../images/oms.png";
+import RelatedEquipments from "./RelatedEquipments";
 
 const MagneticSteelSeparators = () => {
 
@@ -77,7 +78,11 @@ const MagneticSteelSeparators = () => {
                   Overband Magnetic Steel Separators
                 </h1>
                 <p className="lead mt-3">
-                  Efficient removal of ferrous metals from conveyor belts and waste streams to protect downstream equipment and improve product purity.
+                  High-performance Overband Magnetic Steel Separators designed to automatically remove
+                  ferrous contaminants from conveyor belts and material flows. Built with powerful
+                  magnetic strength and durable construction, these separators ensure maximum metal
+                  recovery, protect downstream machinery, and enhance product purity across recycling
+                  plants, waste processing units, and industrial manufacturing lines.
                 </p>
               </Col>
               <Col md={6} className="text-center mt-4 mt-md-0">
@@ -90,13 +95,6 @@ const MagneticSteelSeparators = () => {
             </Row>
           </Container>
         </header>
-
-        {/* Intro */}
-        <div className="tbf-intro container text-center my-4">
-          <p className="lead">
-            Our Overband Magnetic Steel Separators are designed to provide powerful magnetic separation with durable construction and easy installation, ideal for a wide range of industrial applications.
-          </p>
-        </div>
 
         {/* Technical Overview */}
         <div className="specs-box shadow">
@@ -143,8 +141,22 @@ const MagneticSteelSeparators = () => {
           </Container>
         </section>
 
+        {/* Intro */}
+        <div className="tbf-intro container text-center my-4">
+          <p className="mt-3 fw-semibold text-center">
+            Our Overband Magnetic Steel Separators belong to the{" "}
+            <a href="/other-equipment" className="fw-bold text-decoration-none">
+              Magnetic Separation & Handling Equipment
+            </a>{" "}
+            category, engineered to enhance material purity and protect downstream machinery through reliable ferrous metal extraction.
+          </p>
+        </div>
+
+        {/* RelatedEquipments */}
+        <RelatedEquipments current="/magnetic-steel-separators" />
+
         {/* Contact */}
-        <section className="tbf-contact-section text-white text-center py-5">
+        <section className="tbf-contact-section text-white text-center py-5 m-5">
           <Container>
             <h4 className="fw-bold mb-3">Get in Touch</h4>
             <p className="mb-0">

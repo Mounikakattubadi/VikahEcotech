@@ -6,6 +6,7 @@ import '../OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import fdconveyer from "../../images/fdconveyer.png";
+import RelatedEquipments from "./RelatedEquipments";
 
 const Conveyers = () => {
   useEffect(() => {
@@ -76,7 +77,11 @@ const Conveyers = () => {
                   Feeding & Discharge Conveyors
                 </h1>
                 <p className="lead mt-3">
-                  Our Feeding & Discharge Conveyors are designed to efficiently move materials through your production or recycling line, improving productivity and operational reliability.
+                  High-efficiency Feeding & Discharge Conveyors engineered to transport materials
+                  smoothly across every stage of your production or recycling line. Designed with
+                  durable components and stable performance, these conveyors reduce manual handling,
+                  improve workflow consistency, and support continuous, reliable operation in
+                  rubber recycling plants, manufacturing facilities, and industrial processing units.
                 </p>
               </Col>
               <Col md={6} className="text-center mt-4 mt-md-0">
@@ -135,8 +140,21 @@ const Conveyers = () => {
           </Container>
         </section>
 
+        <div className="tbf-intro container text-center my-4">
+          <p className="mt-3 fw-semibold text-center">
+            Our Feeding &amp; Discharge Conveyors fall under the{" "}
+            <a href="/other-equipment" className="fw-bold text-decoration-none">
+              Feeding &amp; Handling Systems
+            </a>{" "}
+            category, designed to ensure smooth, continuous material flow and support efficient upstream and downstream processing.
+          </p>
+        </div>
+
+        {/* RelatedEquipments */}
+        <RelatedEquipments current="/feeding-discharge-conveyers" />
+
         {/* Contact Section */}
-        <section className="tbf-contact-section text-white text-center py-5">
+        <section className="tbf-contact-section text-white text-center py-5 m-5">
           <Container>
             <h4 className="fw-bold mb-3">Get in Touch</h4>
             <p className="mb-0">

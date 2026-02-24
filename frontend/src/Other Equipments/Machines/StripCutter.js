@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import stripcutter from '../../images/stripcutter1.png';
 import SEOHelmet from "../../components/SEO/SEOHelmet";
+import RelatedEquipments from "./RelatedEquipments";
 
 const StripCutter = () => {
   useEffect(() => {
@@ -74,7 +75,11 @@ const StripCutter = () => {
             <Col md={6} className="text-center text-md-start">
               <h1 className="tbf-heading display-5 fw-bold">Strip Cutter</h1>
               <p className="lead mt-3">
-                Industrial-grade precision cutting solution for rubber strips with heavy-duty performance and robust design.
+                A high-precision Strip Cutter Machine engineered to cut rubber into uniform strips
+                with consistent accuracy and high output. Built with a durable frame and powerful
+                cutting mechanism, it ensures smooth operation, reduced manual effort, and enhanced
+                productivity for rubber recycling plants, tire processing units, and industrial
+                manufacturing applications.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
@@ -83,13 +88,6 @@ const StripCutter = () => {
           </Row>
         </Container>
       </header>
-
-      {/* ===== INTRO ===== */}
-      <div className="tbf-intro container text-center my-4">
-        <p className="lead">
-          Our Strip Cutter offers precise and efficient cutting solutions for waste rubber materials, enhancing productivity and product quality.
-        </p>
-      </div>
 
       {/* ===== TECHNICAL OVERVIEW ===== */}
       <div className="specs-box shadow container my-4">
@@ -134,8 +132,22 @@ const StripCutter = () => {
         </Container>
       </section>
 
+      {/* ===== INTRO ===== */}
+      <div className="tbf-intro container text-center my-4">
+        <p className="mt-3 fw-semibold text-center">
+          Our Strip Cutter is part of the{" "}
+          <a href="/other-equipment" className="fw-bold text-decoration-none">
+            Rubber Processing & Precision Cutting Equipment
+          </a>{" "}
+          category, designed to deliver accurate rubber strip cutting for enhanced productivity, higher material recovery, and efficient tyre recycling operations.
+        </p>
+      </div>
+
+      {/* RelatedEquipments */}
+      <RelatedEquipments current="/strip-cutter" />
+
       {/* ===== CONTACT ===== */}
-      <section className="tbf-contact-section text-white text-center py-5">
+      <section className="tbf-contact-section text-white text-center py-5 m-5">
         <Container>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p className="mb-0">

@@ -1,5 +1,6 @@
 // OtherEqpTemp.jsx
 import React, { useEffect, useMemo, useState } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import "./OtherEqpTemp.css";
 
@@ -11,6 +12,19 @@ const CATEGORIES = [
   { id: "cutting", label: "Cutting & Preparation" },
   { id: "packing", label: "Packing " },
 ];
+
+const PRODUCT_LINKS = {
+  "TUMBLE BACK FEEDER": "/tumble-back-feeder",
+  "FEEDING & DISCHARGE CONVEYORS": "/feeding-discharge-conveyers",
+  "VIBRATORS": "/vibrators",
+  "CLASSIFIERS": "/classifiers",
+  "OVERBAND MAGNETIC STEEL SEPARATORS": "/magnetic-steel-separators",
+  "BEAD WIRE REMOVER": "/beedwire-remover",
+  "STRIP CUTTER": "/strip-cutter",
+  "BLOCK CUTTER": "/block-cutter",
+  "SIDE WALL REMOVER": "/sidewall-remover",
+  "FOLDING EQUIPMENT": "/tyrefolding",
+};
 
 const PRODUCTS = [
   {
@@ -33,7 +47,7 @@ const PRODUCTS = [
   },
   {
     id: "vibrators",
-        name: "VIBRATORS",
+    name: "VIBRATORS",
     category: "flow",
     pillar: "Flow",
     description:
@@ -131,6 +145,20 @@ function OtherEqpTemp() {
     [category, normalizedSearch]
   );
 
+
+  <Helmet>
+    <title>Other Recycling Equipment | Feeding, Cutting, Screening Machines</title>
+    <meta
+      name="description"
+      content="Explore supporting machinery including feeders, conveyors, cutters, magnets, separators, and flow equipment for tyre & solid waste recycling lines."
+    />
+    <meta
+      name="keywords"
+      content="Recycling Equipment, Feeding Machines, Cutting Machines, Screening Machinery, Tyre Recycling Equipment"
+    />
+    <link rel="canonical" href="https://www.vikahecotech.com/othereqptemp" />
+  </Helmet>
+
   return (
     <div className="oe-wrapper">
       <div className="oe-container">
@@ -209,14 +237,23 @@ function OtherEqpTemp() {
                     </div>
                   )}
 
-                  <Link
-                    to={`/enquire?machinery=other-equipment&model=${encodeURIComponent(
-                      product.name
-                    )}`}
-                    className="oe-cardBtn"
-                  >
-                    Enquire about this →
-                  </Link>
+                  <div className="oe-btnRow">
+                    <Link
+                      to={`/enquire?machinery=other-equipment&model=${encodeURIComponent(
+                        product.name
+                      )}`}
+                      className="oe-cardBtn"
+                    >
+                      Enquire →
+                    </Link>
+
+                    <Link
+                      to={PRODUCT_LINKS[product.name] || "#"}
+                      className="oe-cardBtn oe-exploreBtn"
+                    >
+                      Explore →
+                    </Link>
+                  </div>
                 </article>
               ))}
             </div>

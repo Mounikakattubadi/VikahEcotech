@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import blockcutter from "../../images/blockcutter.png";
 import SEOHelmet from "../../components/SEO/SEOHelmet";
+import RelatedEquipments from "./RelatedEquipments";
 
 const BlockCutter = () => {
   useEffect(() => {
@@ -66,7 +67,11 @@ const BlockCutter = () => {
               <Col md={6} className="text-center text-md-start">
                 <h1 className="tbf-heading display-5 fw-bold">Block Cutter</h1>
                 <p className="lead mt-3">
-                  Precise and durable block cutting machine to cut rubber into particular size with user-friendly controls and robust build.
+                  A heavy-duty Block Cutter Machine designed to cut rubber blocks into accurate and
+                  consistent sizes with ease. Built with a robust frame and precision cutting system,
+                  it ensures smooth operation, high productivity, and long-term durability, making it
+                  ideal for rubber processing units, recycling plants, and industrial manufacturing
+                  applications.
                 </p>
               </Col>
               <Col md={6} className="text-center mt-4 mt-md-0">
@@ -75,13 +80,6 @@ const BlockCutter = () => {
             </Row>
           </Container>
         </header>
-
-        {/* Intro */}
-        <div className="tbf-intro container text-center my-4">
-          <p className="lead">
-            Our Block Cutter machines provide efficient and accurate cutting of rubber waste materials, enhancing productivity and quality in your projects.
-          </p>
-        </div>
 
         {/* Technical Overview */}
         <div className="specs-box shadow">
@@ -126,8 +124,21 @@ const BlockCutter = () => {
           </Container>
         </section>
 
+        <div className="tbf-intro container text-center my-4">
+          <p className="mt-3 fw-semibold text-center">
+            The Block Cutter is a key part of our heavy-duty tyre-processing lineup under the{" "}
+            <a href="/other-equipment" className="fw-bold text-decoration-none">
+              Cutting &amp; Preparation Equipment
+            </a>{" "}
+            category, engineered to support efficient rubber sizing operations during early-stage recycling.
+          </p>
+        </div>
+
+        {/* RelatedEquipments */}
+        <RelatedEquipments current="/block-cutter" />
+
         {/* Contact */}
-        <section className="tbf-contact-section text-white text-center py-5">
+        <section className="tbf-contact-section text-white text-center py-5 m-5">
           <Container>
             <h4 className="fw-bold mb-3">Get in Touch</h4>
             <p className="mb-0">

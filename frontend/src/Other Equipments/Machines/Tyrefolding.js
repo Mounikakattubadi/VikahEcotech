@@ -6,6 +6,7 @@ import "../../Other Equipments/Tyrecutting.css";
 import "../../Pages/Models.css";
 import tyrefoldingimg from "../../images/tyre_folding1.png";
 import tyrefoldingimg1 from "../../images/tyre folding2.jpg";
+import RelatedEquipments from "./RelatedEquipments";
 
 function Tyrefolding() {
   useEffect(() => {
@@ -114,8 +115,22 @@ function Tyrefolding() {
         </div>
       </div>
 
+      {/* ===== INTRO ===== */}
+      <div className="tbf-intro container text-center my-4">
+        <p className="mt-3 fw-semibold text-center">
+          Our Tyre Folding Machines are part of the{" "}
+          <a href="/other-equipment" className="fw-bold text-decoration-none">
+            Advanced Tyre Processing & Recycling Equipment
+          </a>{" "}
+          range, expertly engineered to reduce tyre volume, optimize storage efficiency, and support seamless downstream recycling operations with consistent industrial performance.
+        </p>
+      </div>
+
+      {/* RelatedEquipments */}
+      <RelatedEquipments current="/tyrefolding" />
+
       {/* Contact Section */}
-      <Row className="text-center get-in-touch-section text-white py-5 rounded m-0">
+      <Row className="text-center get-in-touch-section text-white py-5 rounded m-5">
         <Col>
           <h4 className="fw-bold mb-3">Get in Touch</h4>
           <p>

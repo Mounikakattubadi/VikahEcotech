@@ -83,7 +83,7 @@ import Rst6000 from './Secondary_Shredders/Rasper/models/Rst6000.js';
 
 
 //other eqipments
-import OtherEquipment from './Other Equipments/OtherEquipment';
+// import OtherEquipment from './Other Equipments/OtherEquipment';
 import TumbleBackFeeder from './Other Equipments/Machines/TumbleBackFeeder';
 import Conveyers from './Other Equipments/Machines/Conveyers';
 import Vibrators from './Other Equipments/Machines/Vibrators';
@@ -136,6 +136,7 @@ import Plasticshredderpage from './Prodpages/Plasticshredderpage.js';
 import Metalshredderpage from './Prodpages/Metalshredderpage.js';
 import Crushingmachinepage from './Prodpages/Crushingmachinepage.js';
 import PaperCardboardShredderpage from './Prodpages/PaperCardboardShredderpage.js';
+import RelatedEquipments from './Other Equipments/Machines/RelatedEquipments.js';
 
 
 
@@ -152,7 +153,7 @@ function App() {
         <Route exact path="/enquire" element={<Enquire />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/ourproducts" element={<Ourproducts />} />
-        <Route exact path="/othereqptemp" element={<OtherEqpTemp />} />
+        <Route exact path="/other-equipment" element={<OtherEqpTemp />} />
 
 
         {/* tradefairs */}
@@ -223,7 +224,7 @@ function App() {
 
 
         {/* other eqipments */}
-        <Route path="/other-equipment" element={<OtherEquipment />} />
+        {/* <Route path="/other-equipment" element={<OtherEquipment />} /> */}
         <Route path="/tumble-back-feeder" element={<TumbleBackFeeder />} />
         <Route path="/feeding-discharge-conveyers" element={<Conveyers />} />
         <Route path="/vibrators" element={<Vibrators />} />
@@ -241,6 +242,7 @@ function App() {
         <Route exact path="/tcpcr100" element={<Tcpcr100 />} />
         <Route exact path="/tctb100" element={<Tctb100 />} />
         <Route exact path="/tcotr100" element={<Tcotr100 />} />
+        <Route exact path="/related-equipment" element={<RelatedEquipments />} />
 
 
         {/* blogs pages */}
