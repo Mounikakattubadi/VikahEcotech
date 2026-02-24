@@ -59,6 +59,7 @@ const MagneticSteelSeparators = () => {
           url: "https://vikahecotech.com/magnetic-steel-separators",
           sku: "VKE-MSS-01",
           category: "Magnetic Separation Equipment",
+          price:"0",
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },

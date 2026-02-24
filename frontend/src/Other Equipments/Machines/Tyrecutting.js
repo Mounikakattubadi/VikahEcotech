@@ -66,6 +66,7 @@ function Tyrecutting() {
           url: "https://vikahecotech.com/tyrecutting",
           sku: "VKE-TC-01",
           category: "Tyre Recycling Machinery",
+          price: "0",
         }}
 
         breadcrumb={[
