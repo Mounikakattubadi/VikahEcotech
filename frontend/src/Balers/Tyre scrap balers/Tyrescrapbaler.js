@@ -256,77 +256,333 @@ function Tyrescrapbaler() {
         </div>
       </header>
 
-      <div className="container text-center my-4 balerbackimg">
-        <p>
-          <p>
-            Our powerful tyre scrap balers are engineered to handle high
-            compaction requirements for scrap tyres and other heavy-duty
-            recycling processes. These industrial baling machines are widely
-            used in tyre recycling, industrial baling,tyre baler, and waste
-            management applications across India.
-          </p>
-        </p>
+      <div className="container-fluid px-4 px-md-5 my-5">
+        {/* ================= INTRO SECTION ================= */}
+        <div className="container-fluid py-5">
+          <div className="row justify-content-center">
+            <div className="col-12 col-lg-10 text-center">
+              <h2
+                className="fw-bold mb-4"
+                style={{
+                  fontSize: "2.2rem",
+                  fontFamily: "'Roboto', sans-serif",
+                  lineHeight: "1.3",
+                  color: "#1f7a63",
+                }}
+              >
+                Tyre Scrap Baler Machine Manufacturer in India
+              </h2>
 
-        {/* Tab Buttons */}
-        <div className="btn-group flex-wrap mb-4">
-          {balers.map((baler, index) => (
-            <button
-              key={index}
-              className={`btn btn-outline-success mx-1 my-1 ${
-                selected.name === baler.name ? "active" : ""
-              }`}
-              onClick={() => setSelected(baler)}
-            >
-              {baler.name}
-            </button>
-          ))}
+              <p
+                className="lead mb-3"
+                style={{
+                  fontSize: "1.125rem",
+                  fontFamily: "'Open Sans', sans-serif",
+                  color: "#2d3748",
+                }}
+              >
+                Vikah Ecotech is a leading manufacturer of hydraulic tyre scrap
+                baler machines in Hyderabad, delivering high-performance
+                compaction solutions for tyre recycling plants and industrial
+                waste management industries across India.
+              </p>
+
+              <p
+                style={{
+                  fontSize: "1rem",
+                  lineHeight: "1.8",
+                  fontFamily: "'Open Sans', sans-serif",
+                  color: "#4a5568",
+                  marginBottom: "1rem",
+                }}
+              >
+                Our tyre baler machines are engineered with reinforced steel
+                fabrication and high-pressure hydraulic cylinders to ensure
+                maximum bale density and operational durability. These machines
+                significantly reduce scrap tyre volume, making transportation,
+                storage, and downstream processing more cost-efficient.
+              </p>
+
+              <p
+                style={{
+                  fontSize: "1rem",
+                  lineHeight: "1.8",
+                  fontFamily: "'Open Sans', sans-serif",
+                  color: "#4a5568",
+                }}
+              >
+                Available in multiple tonnage variants including 150 Ton, 200
+                Ton, and 250 Ton models, our balers are suitable for passenger
+                tyres, truck tyres, and heavy-duty OTR tyres. Vikah Ecotech
+                ensures reliable performance, low maintenance, and long service
+                life in demanding industrial environments.
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* MAIN DISPLAY */}
-        <div className="row justify-content-center align-items-center">
-          {/* CAROUSEL – now react-bootstrap */}
-          <div className="col-md-6 mb-4">
-            <Carousel
-              interval={4000}
-              pause="hover"
-              className="baler-carousel-wrapper"
-            >
-              {carouselImages.map((img, i) => (
-                <Carousel.Item key={i}>
+        {/* ================= FULL WIDTH MODEL SECTION ================= */}
+<div
+  className="py-5 px-3 px-md-5 mb-5"
+  style={{
+    background: "linear-gradient(135deg, #e6fffa, #f0fdfa)",
+    borderTop: "5px solid #22c55e",
+    borderBottom: "5px solid #22c55e",
+  }}
+>
+  <div className="container-fluid">
+    <h3
+      className="text-center fw-bold mb-4"
+      style={{ color: "#166534", fontSize: "1.8rem" }}
+    >
+      Available Tyre Scrap Baler Models
+    </h3>
+
+    {/* ================= MODEL BUTTONS (single row, scrollable on small screens) ================= */}
+    <div
+      className="d-flex flex-nowrap overflow-auto mb-5 justify-content-center"
+      style={{ gap: "10px" }}
+    >
+      {balers.map((baler, index) => (
+        <button
+          key={index}
+          className="flex-shrink-0"
+          style={{
+            background:
+              selected.name === baler.name
+                ? "linear-gradient(135deg, #22c55e, #16a34a)"
+                : "#ccfbf1",
+            color: selected.name === baler.name ? "#ffffff" : "#065f46",
+            border: "none",
+            borderRadius: "50px",
+            fontWeight: "600",
+            minWidth: "90px",
+            padding: "6px 14px",
+            fontSize: "0.9rem",
+            boxShadow:
+              selected.name === baler.name
+                ? "0 4px 12px rgba(34,197,94,0.4)"
+                : "0 2px 6px rgba(0,0,0,0.08)",
+            transition: "all 0.3s ease",
+            whiteSpace: "nowrap",
+            cursor: "pointer",
+          }}
+          onClick={() => setSelected(baler)}
+        >
+          {baler.name}
+        </button>
+      ))}
+    </div>
+
+    <div className="row align-items-center">
+      {/* ================= CAROUSEL CARD ================= */}
+      <div className="col-lg-6 mb-4">
+        <div
+          className="rounded-4 shadow-lg overflow-hidden p-3"
+          style={{
+            height: "460px",
+            background: "linear-gradient(145deg, #f0fdfa, #ecfeff)",
+            border: "1px solid #a7f3d0",
+          }}
+        >
+          <Carousel interval={4000} pause="hover">
+            {carouselImages.map((img, i) => (
+              <Carousel.Item key={i}>
+                <div
+                  style={{
+                    height: "430px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
                   <img
                     src={img}
-                    className="d-block w-100 baler-carousel-img"
-                    alt={`Baler ${i + 1}`}
+                    alt={`Tyre Scrap Baler ${i + 1}`}
+                    style={{
+                      maxHeight: "85%",
+                      maxWidth: "85%",
+                      objectFit: "contain",
+                    }}
                   />
-                </Carousel.Item>
-              ))}
-            </Carousel>
+                </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        </div>
+      </div>
+
+      {/* ================= SPEC CARD ================= */}
+      <div className="col-lg-6">
+        <div
+          className="shadow-lg rounded-4 p-4"
+          style={{
+            background: "linear-gradient(145deg, #ecfdf5, #e0f2fe)",
+            borderLeft: "6px solid #22c55e",
+          }}
+        >
+          <h4
+            className="fw-bold mb-4 text-center"
+            style={{ color: "#065f46", fontSize: "1.6rem" }}
+          >
+            {selected.name}
+          </h4>
+
+          <ul className="list-group list-group-flush mb-4">
+            <li className="list-group-item bg-transparent">
+              <strong>Machine Type:</strong> {selected.type}
+            </li>
+            <li className="list-group-item bg-transparent">
+              <strong>Compaction Force:</strong> {selected.force}
+            </li>
+            <li className="list-group-item bg-transparent">
+              <strong>Machine Weight:</strong> {selected.weight}
+            </li>
+            <li className="list-group-item bg-transparent">
+              <strong>Description:</strong> {selected.note}
+            </li>
+          </ul>
+
+          <Link
+            to={`/${selected.name.toLowerCase()}`}
+            className="btn w-100"
+            style={{
+              background: "linear-gradient(135deg, #22c55e, #16a34a)",
+              color: "#ffffff",
+              fontWeight: "600",
+              padding: "10px",
+              borderRadius: "8px",
+              boxShadow: "0 4px 12px rgba(34,197,94,0.4)",
+            }}
+          >
+            View Detailed Specifications
+          </Link>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        {/* ================= APPLICATIONS ================= */}
+        <div className="container mb-5">
+          <h3 className="fw-bold text-center mb-4" style={{ color: "#2f855a" }}>
+            Applications of Tyre Scrap Balers
+          </h3>
+          <p className="text-center mb-4">
+            Our hydraulic tyre baler machines are widely used in various
+            industrial and recycling sectors where high-density tyre compaction
+            is required.
+          </p>
+
+          <div className="row text-center">
+            {[
+              "Tyre Recycling Plants",
+              "Scrap Tyre Collection Centers",
+              "Pyrolysis Processing Units",
+              "Industrial Waste Management Companies",
+              "Municipal Recycling Facilities",
+              "Rubber Processing Industries",
+            ].map((item, index) => (
+              <div className="col-md-4 mb-3" key={index}>
+                <div
+                  className="p-4 rounded-4 shadow-sm h-100 bg-white"
+                  style={{ border: "1px solid #c6f6d5" }}
+                >
+                  {item}
+                </div>
+              </div>
+            ))}
           </div>
+        </div>
 
-          {/* INFO */}
-          <div className="col-md-6 mb-4 makecenter">
-            <h3 className="machine-title">{selected.name}</h3>
-            <ul className="list-unstyled">
-              <li>
-                <strong>Type:</strong> {selected.type}
-              </li>
-              <li>
-                <strong>Compaction Force:</strong> {selected.force}
-              </li>
-              <li>
-                <strong>Baler Weight:</strong> {selected.weight}
-              </li>
-              <li>
-                <strong>Note:</strong> {selected.note}
-              </li>
-            </ul>
+        {/* ================= WHY CHOOSE US ================= */}
+        <div className="container mb-5">
+          <h3 className="fw-bold text-center mb-4" style={{ color: "#2f855a" }}>
+            Why Choose Vikah Ecotech Tyre Balers?
+          </h3>
 
-            <Link
-              to={`/${selected.name.toLowerCase()}`}
-              className="btn btn-outline-success mt-3"
-            >
-              Read More
-            </Link>
+          <p>
+            Vikah Ecotech stands out as a reliable tyre baler machine
+            manufacturer in India due to our commitment to quality engineering
+            and industrial performance. Our machines are designed for continuous
+            operation, low maintenance, and maximum bale density.
+          </p>
+
+          <ul>
+            <li>Heavy-duty hydraulic cylinders for powerful compaction</li>
+            <li>Energy-efficient and low power consumption design</li>
+            <li>Available in 150 Ton, 200 Ton & 250 Ton models</li>
+            <li>Customizable bale dimensions</li>
+            <li>Strong nationwide installation and after-sales support</li>
+          </ul>
+        </div>
+
+        {/* ================= TECHNICAL FEATURES ================= */}
+        <div className="container mb-5">
+          <h3 className="fw-bold text-center mb-4" style={{ color: "#2f855a" }}>
+            Technical Features
+          </h3>
+
+          <p>
+            Our tyre scrap baler machines are engineered with precision
+            hydraulic systems that ensure uniform pressure distribution and
+            high-density bale formation. The reinforced steel frame construction
+            provides structural stability during heavy compaction cycles. These
+            balers are suitable for compressing passenger car tyres, truck
+            tyres, and large OTR tyres when integrated with proper feeding
+            systems.
+          </p>
+        </div>
+
+        {/* ================= FAQ ================= */}
+        <div className="container mb-5">
+          <h3 className="fw-bold text-center mb-4" style={{ color: "#2f855a" }}>
+            Frequently Asked Questions
+          </h3>
+
+          <div className="accordion" id="balerFaq">
+            {[
+              {
+                q: "What is the price of a tyre scrap baler machine in India?",
+                a: "The price depends on compaction force, automation level, and customization requirements. Contact us for a detailed quotation.",
+              },
+              {
+                q: "What compaction force is suitable for truck tyres?",
+                a: "For truck tyres, 200 Ton to 250 Ton hydraulic balers are recommended.",
+              },
+              {
+                q: "Can the baler handle OTR tyres?",
+                a: "Yes, heavy-duty models can handle large OTR tyres with proper pre-cutting systems.",
+              },
+              {
+                q: "Do you provide installation and after-sales service?",
+                a: "Yes, we provide complete installation guidance and long-term service support across India.",
+              },
+            ].map((faq, index) => (
+              <div
+                className="accordion-item mb-3 border-0 shadow-sm rounded-3"
+                key={index}
+              >
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button collapsed fw-semibold"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target={`#faq${index}`}
+                    style={{ backgroundColor: "#f0fff4" }}
+                  >
+                    {faq.q}
+                  </button>
+                </h2>
+                <div
+                  id={`faq${index}`}
+                  className="accordion-collapse collapse"
+                  data-bs-parent="#balerFaq"
+                >
+                  <div className="accordion-body">{faq.a}</div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
