@@ -48,7 +48,7 @@ const SidewallRemover = () => {
 
   const breadcrumbData = [
     { name: "Home", url: "https://vikahecotech.com/" },
-    { name: "Products", url: "https://vikahecotech.com/products" },
+    { name: "Other Equipment", url: "https://vikahecotech.com/other-equipment" },
     { name: "Sidewall Remover", url: "https://vikahecotech.com/sidewall-remover" },
   ];
 

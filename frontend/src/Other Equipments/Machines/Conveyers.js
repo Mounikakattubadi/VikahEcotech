@@ -61,7 +61,7 @@ const Conveyers = () => {
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },
-          { name: "Products", url: "https://vikahecotech.com/products" },
+          { name: "Other Equipment", url: "https://vikahecotech.com/other-equipment" },
           { name: "Feeding & Discharge Conveyors", url: "https://vikahecotech.com/feeding-discharge-conveyers" }
         ]}
       />

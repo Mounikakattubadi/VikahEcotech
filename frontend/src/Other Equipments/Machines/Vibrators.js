@@ -96,6 +96,7 @@ const Vibrators = () => {
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },
+           { name: "Other Equipment", url: "https://vikahecotech.com/other-equipment" },
           { name: "Vibrators", url: "https://vikahecotech.com/vibrators" },
         ]}
       />

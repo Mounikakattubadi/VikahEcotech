@@ -70,6 +70,7 @@ function Tyrecutting() {
 
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },
+           { name: "Other Equipment", url: "https://vikahecotech.com/other-equipment" },
           { name: "Tyre Cutting Machines", url: "https://vikahecotech.com/tyrecutting" },
         ]}
       />

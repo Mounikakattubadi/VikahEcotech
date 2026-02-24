@@ -62,7 +62,7 @@ const MagneticSteelSeparators = () => {
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },
-          { name: "Products", url: "https://vikahecotech.com/products" },
+          { name: "Other Equipment", url: "https://vikahecotech.com/other-equipment" },
           { name: "Magnetic Steel Separators", url: "https://vikahecotech.com/magnetic-steel-separators" }
         ]}
       />

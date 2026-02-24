@@ -54,6 +54,7 @@ const BlockCutter = () => {
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com" },
+          { name: "Other Equipment", url: "https://vikahecotech.com/other-equipment" },
           { name: "Block Cutter", url: "https://vikahecotech.com/block-cutter" }
         ]}
       />

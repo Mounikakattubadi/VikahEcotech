@@ -1,50 +1,83 @@
-import React, { useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-import '../OtherEqp.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-import tumbleBackFeederImg from '../../images/Tumbleback-Feeder.png';
+import React, { useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "../OtherEqp.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import tumbleBackFeederImg from "../../images/Tumbleback-Feeder.png";
 import SEOHelmet from "../../components/SEO/SEOHelmet";
 import RelatedEquipments from "./RelatedEquipments";
 
 const TumbleBackFeeder = () => {
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const features = [
-    { title: 'Modular Design', description: 'Customizable head and tail sections for flexible installation.' },
-    { title: 'High Throughput', description: 'Handles 2-10 TPH depending on configuration and hopper type.' },
-    { title: 'Gravity-Driven Mechanism', description: 'Utilizes gravity to efficiently remove oversized materials.' },
-    { title: 'Durable Construction', description: 'Built with robust materials to withstand harsh recycling environments.' },
-    { title: 'Adjustable Feeding Angle', description: 'Allows customization to suit specific material types and processing needs.' },
-    { title: 'Easy Maintenance', description: 'Designed for straightforward servicing and reduced downtime.' },
-    { title: 'Consistent Feed Rate', description: 'Ensures a steady flow of materials to downstream equipment.' },
-    { title: 'Versatile Applications', description: 'Suitable for rubber, aluminum, PET, e-waste, steel, and glass recycling.' }
+    {
+      title: "Modular Design",
+      description:
+        "Customizable head and tail sections for flexible installation.",
+    },
+    {
+      title: "High Throughput",
+      description:
+        "Handles 2-10 TPH depending on configuration and hopper type.",
+    },
+    {
+      title: "Gravity-Driven Mechanism",
+      description:
+        "Utilizes gravity to efficiently remove oversized materials.",
+    },
+    {
+      title: "Durable Construction",
+      description:
+        "Built with robust materials to withstand harsh recycling environments.",
+    },
+    {
+      title: "Adjustable Feeding Angle",
+      description:
+        "Allows customization to suit specific material types and processing needs.",
+    },
+    {
+      title: "Easy Maintenance",
+      description:
+        "Designed for straightforward servicing and reduced downtime.",
+    },
+    {
+      title: "Consistent Feed Rate",
+      description:
+        "Ensures a steady flow of materials to downstream equipment.",
+    },
+    {
+      title: "Versatile Applications",
+      description:
+        "Suitable for rubber, aluminum, PET, e-waste, steel, and glass recycling.",
+    },
   ];
 
   const applications = [
-    'Rubber Recycling',
-    'Aluminum Recycling',
-    'PET Recycling',
-    'E-Waste Recycling',
-    'Steel Recycling',
-    'Glass Recycling'
+    "Rubber Recycling",
+    "Aluminum Recycling",
+    "PET Recycling",
+    "E-Waste Recycling",
+    "Steel Recycling",
+    "Glass Recycling",
   ];
 
   const specs = [
-    { label: 'Length', value: '20–48 ft (modular)' },
-    { label: 'Throughput Capacity', value: '10–70 TPH' },
-    { label: 'Material Compatibility', value: 'Rubber, Aluminum, PET, E-Waste, Steel, Glass' },
-    { label: 'Feeding Angle', value: 'Adjustable' },
-    { label: 'Construction Material', value: 'Heavy-duty steel' },
-    { label: 'Power Requirements', value: 'Varies by configuration' },
+    { label: "Length", value: "20–48 ft (modular)" },
+    { label: "Throughput Capacity", value: "10–70 TPH" },
+    {
+      label: "Material Compatibility",
+      value: "Rubber, Aluminum, PET, E-Waste, Steel, Glass",
+    },
+    { label: "Feeding Angle", value: "Adjustable" },
+    { label: "Construction Material", value: "Heavy-duty steel" },
+    { label: "Power Requirements", value: "Varies by configuration" },
   ];
 
   return (
     <div className="tbf-page">
-
       {/* ===== SEO ===== */}
       <SEOHelmet
         title="Tumble Back Feeder Manufacturer in India"
@@ -54,17 +87,24 @@ const TumbleBackFeeder = () => {
         pageName="Tumble Back Feeder"
         product={{
           name: "Tumble Back Feeder",
-          description: "Heavy-duty modular tumble back feeder designed for controlled and consistent feeding of materials into shredders and recycling machinery.",
+          description:
+            "Heavy-duty modular tumble back feeder designed for controlled and consistent feeding of materials into shredders and recycling machinery.",
           image: "https://vikahecotech.com/logo_vk.png",
           url: "https://vikahecotech.com/tumble-back-feeder",
           sku: "VKE-TBF-01",
           category: "Recycling Equipment",
-          price: "0"
+          price: "0",
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com" },
-          { name: "Products", url: "https://vikahecotech.com/products" },
-          { name: "Tumble Back Feeder", url: "https://vikahecotech.com/tumble-back-feeder" }
+          {
+            name: "Other Equipment",
+            url: "https://vikahecotech.com/other-equipment",
+          },
+          {
+            name: "Tumble Back Feeder",
+            url: "https://vikahecotech.com/tumble-back-feeder",
+          },
         ]}
       />
 
@@ -77,11 +117,12 @@ const TumbleBackFeeder = () => {
                 Tumble Back Feeder
               </h1>
               <p className="lead mt-3">
-                A robust and automated Tumble Back Feeder designed to deliver controlled, continuous
-                material feeding into shredders and recycling machinery. Built for heavy-duty use,
-                it improves workflow efficiency, reduces manual handling, and ensures smooth,
-                uninterrupted processing in tire recycling plants, waste management facilities, and
-                industrial production lines.
+                A robust and automated Tumble Back Feeder designed to deliver
+                controlled, continuous material feeding into shredders and
+                recycling machinery. Built for heavy-duty use, it improves
+                workflow efficiency, reduces manual handling, and ensures
+                smooth, uninterrupted processing in tire recycling plants, waste
+                management facilities, and industrial production lines.
               </p>
             </Col>
             <Col md={6} className="text-center mt-4 mt-md-0">
@@ -147,7 +188,9 @@ const TumbleBackFeeder = () => {
           <a href="/other-equipment" className="fw-bold text-decoration-none">
             Material Feeding & Recycling Automation Equipment
           </a>{" "}
-          category, engineered to deliver controlled, consistent, and high-capacity material flow for shredders and advanced recycling systems.
+          category, engineered to deliver controlled, consistent, and
+          high-capacity material flow for shredders and advanced recycling
+          systems.
         </p>
       </div>
 
@@ -165,11 +208,11 @@ const TumbleBackFeeder = () => {
               className="fw-bold text-white"
             >
               info@vikahecotech.com
-            </a>.
+            </a>
+            .
           </p>
         </Container>
       </section>
-
     </div>
   );
 };

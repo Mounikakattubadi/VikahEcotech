@@ -55,6 +55,7 @@ function Tyrefolding() {
 
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },
+           { name: "Other Equipment", url: "https://vikahecotech.com/other-equipment" },
           { name: "Tyre Folding Machines", url: "https://vikahecotech.com/tyrefolding" }
         ]}
       />
