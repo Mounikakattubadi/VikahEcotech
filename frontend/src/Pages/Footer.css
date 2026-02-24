@@ -1,52 +1,137 @@
 .footer-section {
-    background-color: #000;
-    color: #fff;
+  background: #000;
+  color: #fff;
+  padding: 50px 40px 20px 40px; /* desktop padding */
+  font-family: Arial, sans-serif;
+}
+
+/* Footer Logo */
+.footer-logo {
+  width: 220px;   /* Bigger logo */
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Footer titles */
+.footer-section h6 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-links li {
+  margin-bottom: 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Info */
+.footer-section p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons i {
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.social-icons i:hover {
+  transform: scale(1.2);
+}
+
+.facebook-icon { color: #1877F2; }
+.youtube-icon { color: #FF0000; }
+.instagram-icon { color: #C13584; }
+.twitter-icon { color: #1DA1F2; }
+
+/* Tablets / foldable screens */
+@media (max-width: 992px) { /* Bootstrap md breakpoint */
+  .footer-section {
+    padding: 40px 30px 30px 30px; /* reduce horizontal padding */
   }
-  
+
   .footer-logo {
-    max-width: 100%;
-    height: auto;
-    width: 250px;
+    width: 180px;
   }
-  
-  .footer-links li {
-    margin-bottom: 10px;
-  }
-  
+
   .footer-links a {
-    color: white;
-    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .footer-section h6 {
+    font-size: 15px;
+  }
+
+  .footer-section p {
+    font-size: 13px;
+  }
+
+  .social-icons i {
+    font-size: 18px;
+  }
+
+  /* Keep links vertical for tablet */
+  .footer-links {
+    flex-direction: column;
+    gap: 3px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .footer-section {
+    padding: 30px 15px 15px 15px;
+  }
+
+  .footer-logo {
+    width: 140px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-section h6 {
+    font-size: 14px;
+  }
+
+  .footer-section p {
+    font-size: 12px;
+  }
+
+  .social-icons i {
     font-size: 16px;
   }
-  
-  .footer-links a:hover {
-    text-decoration: underline;
+
+  .social-icons {
+    gap: 6px;
+    justify-content: center;
   }
-  
-  /* Social Media Icons */
-  .social-icons a {
-    display: inline-block;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .social-icons a:hover {
-    transform: scale(1.2);
-  }
-  
-  /* Brand Colors */
-  .facebook-icon {
-    color: #1877F2;
-  }
-  
-  .youtube-icon {
-    color: #FF0000;
-  }
-  
-  .instagram-icon {
-    color: #C13584; /* Instagram pink tone */
-  }
-  
-  .twitter-icon {
-    color: #1DA1F2;
-  }
-  
+}

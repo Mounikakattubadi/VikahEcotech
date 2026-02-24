@@ -8,23 +8,23 @@ import lion from '../images/Lion.png';
 
 const Footer = () => {
   return (
-    <footer className="footer-section bg-black text-white pt-5 pb-3">
+    <footer className="footer-section">
       <Container fluid>
         <Row className="align-items-start text-center text-md-start">
-          
+
           {/* Logo + Social */}
-          <Col md={2} className="d-flex flex-column align-items-center align-items-md-start mb-4 mb-md-0">
+          <Col xs={12} md={2} className="d-flex flex-column align-items-center align-items-md-start mb-4 mb-md-0">
             <img src={lion} alt="Make in India" className="footer-logo mb-3" />
             <div className="social-icons">
-              <a href="https://www.facebook.com/share/1Mxsd16XWYMsvCyi/?mibextid=qi2Omg"><i className="fab fa-facebook facebook-icon mx-1 fs-5"></i></a>
-              <a href="https://www.youtube.com/@vikahecotech"><i className="fab fa-youtube youtube-icon mx-1 fs-5"></i></a>
-              <a href="https://www.instagram.com/vikahecotech/"><i className="fab fa-instagram instagram-icon mx-1 fs-5"></i></a>
-              <a href="https://x.com/vikahecotech"><i className="fab fa-twitter twitter-icon mx-1 fs-5"></i></a>
+              <a href="https://www.facebook.com/share/1Mxsd16XWYMsvCyi/?mibextid=qi2Omg"><i className="fab fa-facebook facebook-icon"></i></a>
+              <a href="https://www.youtube.com/@vikahecotech"><i className="fab fa-youtube youtube-icon"></i></a>
+              <a href="https://www.instagram.com/vikahecotech/"><i className="fab fa-instagram instagram-icon"></i></a>
+              <a href="https://x.com/vikahecotech"><i className="fab fa-twitter twitter-icon"></i></a>
             </div>
           </Col>
 
           {/* Navigation Links */}
-          <Col md={2}>
+          <Col xs={6} md={2} className="mb-3 mb-md-0">
             <h6 className="fw-bold">Navigation</h6>
             <ul className="list-unstyled footer-links">
               <li><Link to="/">Home</Link></li>
@@ -37,8 +37,8 @@ const Footer = () => {
             </ul>
           </Col>
 
-          {/* Quick Links Column 1 */}
-          <Col md={2}>
+          {/* Balers */}
+          <Col xs={6} md={2} className="mb-3 mb-md-0 mx-0">
             <h6 className="fw-bold">Balers</h6>
             <ul className="list-unstyled footer-links">
               <li><Link to="/balers">Balers</Link></li>
@@ -49,8 +49,8 @@ const Footer = () => {
             </ul>
           </Col>
 
-          {/* Quick Links Column 2 */}
-          <Col md={2}>
+          {/* Primary Shredders */}
+          <Col xs={6} md={2} className="mb-3 mb-md-0">
             <h6 className="fw-bold">Primary Shredders</h6>
             <ul className="list-unstyled footer-links">
               <li><Link to="/primary-shredder">Primary Shredder</Link></li>
@@ -62,8 +62,8 @@ const Footer = () => {
             </ul>
           </Col>
 
-          {/* Quick Links Column 3 */}
-          <Col md={2}>
+          {/* Secondary Shredders */}
+          <Col xs={6} md={2} className="mb-3 mb-md-0">
             <h6 className="fw-bold">Secondary Shredders</h6>
             <ul className="list-unstyled footer-links">
               <li><Link to="/secondary-shredder">Secondary Shredder</Link></li>
@@ -75,19 +75,19 @@ const Footer = () => {
           </Col>
 
           {/* Contact Info */}
-          <Col md={2} className="text-md-start mt-4 mt-md-0">
+          <Col xs={12} md={2} className="text-center text-md-start">
             <h6 className="fw-bold">Contact Us</h6>
-            <p><strong>Admin Off:</strong> #406, 4th Floor, Patel Towers, Above EasyBuy Beside Nagole RTO Office, Nagole Hyderabad, Telangana-500068</p>
-            <p><strong>Unit Add:</strong> Plot No - 81, Phase-III, Mahalaxmi Nagar, IDA Cherlapally, Rangareddy District, Hyderabad-500051</p>
-            <p><strong>Off:</strong> +91 4049471616</p>
-            <p><strong>Email:</strong> Info@vikahecotech.com</p>
+            <p className='mt-3'><strong>Admin Off:</strong> #406, 4th Floor, Patel Towers, Above EasyBuy Beside Nagole RTO Office, Nagole Hyderabad, Telangana-500068</p>
+            <p className='mt-3'><strong>Unit Add:</strong> Plot No - 81, Phase-III, Mahalaxmi Nagar, IDA Cherlapally, Rangareddy District, Hyderabad-500051</p>
+            <p className='mt-3' ><strong>Off:</strong> +91 4049471616</p>
+            <p className='mt-2'><strong>Email:</strong> Info@vikahecotech.com</p>
           </Col>
 
         </Row>
 
         <Row className="mt-4">
           <Col className="text-center">
-            <p className="mb-0">Copyright © 2023 Vikah-Ecotech | All rights reserved</p>
+            <p className="mb-0">Copyright © 2026 Vikah-Ecotech | All rights reserved</p>
           </Col>
         </Row>
       </Container>
