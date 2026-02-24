@@ -16,8 +16,8 @@ const CATEGORIES = [
 const PRODUCT_LINKS = {
   "TUMBLE BACK FEEDER": "/tumble-back-feeder",
   "FEEDING & DISCHARGE CONVEYORS": "/feeding-discharge-conveyers",
-  "VIBRATORS": "/vibrators",
-  "CLASSIFIERS": "/classifiers",
+  VIBRATORS: "/vibrators",
+  CLASSIFIERS: "/classifiers",
   "OVERBAND MAGNETIC STEEL SEPARATORS": "/magnetic-steel-separators",
   "BEAD WIRE REMOVER": "/beedwire-remover",
   "STRIP CUTTER": "/strip-cutter",
@@ -142,25 +142,27 @@ function OtherEqpTemp() {
           .trim();
         return haystack.includes(normalizedSearch);
       }),
-    [category, normalizedSearch]
+    [category, normalizedSearch],
   );
-
-
-  <Helmet>
-    <title>Other Recycling Equipment | Feeding, Cutting, Screening Machines</title>
-    <meta
-      name="description"
-      content="Explore supporting machinery including feeders, conveyors, cutters, magnets, separators, and flow equipment for tyre & solid waste recycling lines."
-    />
-    <meta
-      name="keywords"
-      content="Recycling Equipment, Feeding Machines, Cutting Machines, Screening Machinery, Tyre Recycling Equipment"
-    />
-    <link rel="canonical" href="https://www.vikahecotech.com/othereqptemp" />
-  </Helmet>
 
   return (
     <div className="oe-wrapper">
+      <Helmet>
+        <title>Other Recycling Equipments | Vikah Ecotech</title>
+        <meta
+          name="description"
+          content="Explore supporting machinery including feeders, conveyors, cutters, magnets, separators, and flow equipment for tyre & solid waste recycling lines."
+        />
+        <meta
+          name="keywords"
+          content="Recycling Equipment, Feeding Machines, Cutting Machines, Screening Machinery, Tyre Recycling Equipment,Tumble Back Feeder,Feeding & Discharge Conveyors,Vibratory Feeders,Classifiers,Overband Magnetic Steel Separators,Beadwire Remover,Strip Cutter,Block Cutter,Side Wall Remover,Tyre Folding"
+        />
+        <link
+          rel="canonical"
+          href="https://vikahecotech.com/other-equipment"
+        />
+      </Helmet>
+
       <div className="oe-container">
         {/* Header row */}
         <div className="oe-headerRow">
@@ -168,8 +170,8 @@ function OtherEqpTemp() {
             <div className="oe-kicker">Supporting equipment</div>
             <h1 className="oe-title">Other Equipment</h1>
             <p className="oe-subtitle">
-              Feeding, conveying, separation and cutting equipment that completes
-              your tyre &amp; solid waste recycling line.
+              Feeding, conveying, separation and cutting equipment that
+              completes your tyre &amp; solid waste recycling line.
             </p>
           </div>
 
@@ -240,7 +242,7 @@ function OtherEqpTemp() {
                   <div className="oe-btnRow">
                     <Link
                       to={`/enquire?machinery=other-equipment&model=${encodeURIComponent(
-                        product.name
+                        product.name,
                       )}`}
                       className="oe-cardBtn"
                     >

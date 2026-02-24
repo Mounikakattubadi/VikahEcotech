@@ -86,6 +86,12 @@
 
 
   <url>
+    <loc>https://vikahecotech.com/other-equipment</loc>
+    <priority>0.8</priority>
+  </url>
+
+
+  <url>
     <loc>https://vikahecotech.com/beedwire-remover</loc>
     <priority>0.8</priority>
   </url>
