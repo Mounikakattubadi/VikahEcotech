@@ -8,51 +8,90 @@ function Crushingmachinepage() {
   return (
     <div className={styles.pageWrapper}>
       <Helmet>
-        {/* Page Title */}
+        {/* ===== BASIC SEO ===== */}
         <title>
-          Crushing Machine | Industrial Crusher Manufacturer in India | Vikah Ecotech
+          Crushing Machine Manufacturer in India | Industrial Scrap Crusher
+          Guide
         </title>
 
-        {/* Primary Meta Tags */}
         <meta
           name="description"
-          content="High-efficiency industrial crushing machines designed for metal scrap, rubber scrap, and industrial waste processing. Trusted crushing machine manufacturer in India."
+          content="Explore high-efficiency industrial crushing machines for metal scrap, rubber waste, and industrial recycling. Complete guide to crushing machine features, applications, and benefits in India."
         />
-        <meta
-          name="keywords"
-          content="crushing machine, industrial crusher, scrap crusher, crusher machine India, waste crushing machine, Vikah Ecotech"
-        />
+
         <meta name="robots" content="index, follow" />
+        <meta name="author" content="Vikah Ecotech Pvt Ltd" />
 
-        {/* Canonical */}
-        <link rel="canonical" href="https://vikahecotech.com/crushingmachinepage" />
+        <link
+          rel="canonical"
+          href="https://vikahecotech.com/crushingmachinepage"
+        />
 
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
+        {/* ===== OPEN GRAPH ===== */}
+        <meta property="og:type" content="article" />
         <meta
           property="og:title"
-          content="Crushing Machine | Industrial Crusher Manufacturer in India"
+          content="Crushing Machine Manufacturer in India | Industrial Scrap Crusher Guide"
         />
         <meta
           property="og:description"
-          content="Industrial crushing machines for efficient scrap size reduction. Built with high torque and long-lasting performance for recycling applications."
+          content="Industrial crushing machines designed for efficient scrap size reduction. Learn about features, applications, and recycling benefits."
         />
-        <meta property="og:url" content="https://vikahecotech.com/crushingmachinepage" />
-        <meta property="og:image" content="https://vikahecotech.com/logo_vk" />
-        <meta property="og:site_name" content="Vikah Ecotech" />
+        <meta
+          property="og:url"
+          content="https://vikahecotech.com/crushingmachinepage"
+        />
+        <meta
+          property="og:image"
+          content="https://vikahecotech.com/images/shredder_hd1.jpg"
+        />
+        <meta property="og:site_name" content="Vikah Ecotech Pvt Ltd" />
 
-        {/* Twitter */}
+        {/* ===== TWITTER CARD ===== */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Crushing Machine | Industrial Crusher Manufacturer in India"
+          content="Crushing Machine Manufacturer in India"
         />
         <meta
           name="twitter:description"
-          content="High-torque crushing machines engineered for efficient scrap processing and recycling."
+          content="High-torque industrial crushing machines for scrap processing and recycling applications."
         />
-        <meta name="twitter:image" content="https://vikahecotech.com/logo_vk" />
-        <meta name="twitter:site" content="@VikahEcotech" />
+        <meta
+          name="twitter:image"
+          content="https://vikahecotech.com/images/shredder_hd1.jpg"
+        />
+
+        {/* ===== BLOG STRUCTURED DATA ===== */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline:
+              "Crushing Machine Manufacturer in India | Industrial Scrap Crusher Guide",
+            description:
+              "Detailed guide on industrial crushing machines including applications, features, and recycling benefits.",
+            image: "https://vikahecotech.com/images/shredder_hd1.jpg",
+            author: {
+              "@type": "Organization",
+              name: "Vikah Ecotech Pvt Ltd",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Vikah Ecotech Pvt Ltd",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://vikahecotech.com/logo_vk.png",
+              },
+            },
+            datePublished: "2026-02-25",
+            dateModified: "2026-02-25",
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://vikahecotech.com/crushingmachinepage",
+            },
+          })}
+        </script>
       </Helmet>
 
       {/* Header */}
@@ -64,7 +103,6 @@ function Crushingmachinepage() {
       </div>
 
       <div className="container my-5">
-
         {/* Image + Description */}
         <div className="row align-items-center mb-5">
           <div className="col-md-6 text-center mb-4 mb-md-0">
@@ -78,22 +116,33 @@ function Crushingmachinepage() {
           </div>
 
           <div className="col-md-6">
-            <h3 className="mb-3 text-success fw-bold">About Crushing Machines</h3>
+            <h3 className="mb-3 text-success fw-bold">
+              About Crushing Machines
+            </h3>
 
             <p className={styles.infoText}>
-              Crushing machines are powerful industrial systems designed to break down bulky waste materials into smaller, manageable pieces for recycling and further processing.
+              Crushing machines are powerful industrial systems designed to
+              break down bulky waste materials into smaller, manageable pieces
+              for recycling and further processing.
             </p>
 
             <p className={styles.infoText}>
-              These machines are widely used for crushing metal scrap, rubber scrap, industrial blocks, construction waste, and various hard materials, improving handling efficiency and reducing storage space.
+              These machines are widely used for crushing metal scrap, rubber
+              scrap, industrial blocks, construction waste, and various hard
+              materials, improving handling efficiency and reducing storage
+              space.
             </p>
 
             <p className={styles.infoText}>
-              Vikah Ecotech crushing machines operate at high torque with low-speed precision, delivering maximum durability and reduced operational wear even under continuous industrial use.
+              Vikah Ecotech crushing machines operate at high torque with
+              low-speed precision, delivering maximum durability and reduced
+              operational wear even under continuous industrial use.
             </p>
 
             <p className={styles.infoText}>
-              Designed and manufactured in India, our crushing systems support sustainable recycling practices, enabling industries to minimize waste and comply with environmental standards.
+              Designed and manufactured in India, our crushing systems support
+              sustainable recycling practices, enabling industries to minimize
+              waste and comply with environmental standards.
             </p>
           </div>
         </div>
