@@ -93,7 +93,7 @@ const TumbleBackFeeder = () => {
           url: "https://vikahecotech.com/tumble-back-feeder",
           sku: "VKE-TBF-01",
           category: "Recycling Equipment",
-          price: "0",
+          price: "258000",
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com" },

@@ -50,7 +50,7 @@ const BlockCutter = () => {
           url: "https://vikahecotech.com/block-cutter",
           sku: "VIKA-BLC-01",
           category: "Rubber Recycling Machinery",
-          price: "0"
+          price: "255000"
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com" },

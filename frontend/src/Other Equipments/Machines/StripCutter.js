@@ -46,7 +46,7 @@ const StripCutter = () => {
     url: "https://vikahecotech.com/strip-cutter",
     sku: "VK-SC-01",
     category: "Rubber Recycling Machinery",
-    price: "0"
+    price: "300000"
   };
 
   const breadcrumbData = [

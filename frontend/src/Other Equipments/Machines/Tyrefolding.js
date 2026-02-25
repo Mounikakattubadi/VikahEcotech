@@ -51,7 +51,7 @@ function Tyrefolding() {
           url: "https://vikahecotech.com/tyrefolding",
           sku: "VKE-TF-01",
           category: "Tyre Recycling Machinery",
-          price: "0",
+          price: "250000",
         }}
 
         breadcrumb={[

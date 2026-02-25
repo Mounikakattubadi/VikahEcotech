@@ -55,7 +55,7 @@ const BeadwireRemover = () => {
           url: "https://vikahecotech.com/beedwire-remover",
           sku: "VIKA-BWR-01",
           category: "Tire Recycling Machinery",
-          price: "0"
+          price: "250000"
         }}
 
         breadcrumb={[

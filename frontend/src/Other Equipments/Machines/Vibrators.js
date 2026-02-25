@@ -92,7 +92,7 @@ const Vibrators = () => {
           url: "https://vikahecotech.com/vibrators",
           sku: "VE-VIB-001",
           category: "Industrial Vibrators",
-          price: "0",
+          price: "250000",
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },

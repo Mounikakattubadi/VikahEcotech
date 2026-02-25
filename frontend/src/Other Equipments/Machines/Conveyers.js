@@ -57,7 +57,7 @@ const Conveyers = () => {
           url: "https://vikahecotech.com/feeding-discharge-conveyers",
           sku: "VET-FDC-01",
           category: "Industrial Conveyors",
-          price: "0"
+          price: "285000"
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },

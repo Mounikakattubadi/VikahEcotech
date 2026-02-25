@@ -56,7 +56,7 @@ const Classifiers = () => {
           url: "https://vikahecotech.com/classifiers",
           sku: "VK-CLS-01",
           category: "Industrial Separation Equipment",
-          price: "0"
+          price: "260000"
         }}
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com/" },
