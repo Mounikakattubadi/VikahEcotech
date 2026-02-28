@@ -130,9 +130,9 @@ const BLT150 = () => {
           <p>
             The BLT series tyre balers are part of our
             <a href="/tyre-scrap-balers"> tyre scrap baler machines </a>
-             under
+            under
             <a href="/balers"> industrial baler systems </a>
-             designed for tyre recycling applications.
+            designed for tyre recycling applications.
           </p>
         </div>
       </div>
@@ -256,11 +256,15 @@ const BLT150 = () => {
             </tr>
             <tr>
               <td>Chamber Size (L × W × H)</td>
-              <td>1800 × 1000 × 2100 mm</td>
+              <td>1250 x 1000 x 2100 mm</td>
             </tr>
             <tr>
-              <td>Bale Size (L × W × H)</td>
-              <td>1800 × 1000 × (700–1250) mm</td>
+              <td>Bale Size PCR (L × W × H)</td>
+              <td>4 x 3 x 4 ft</td>
+            </tr>
+            <tr>
+              <td>Bale Size - TBR (L × W × H)t</td>
+              <td>4 x 3 x 5 ft</td>
             </tr>
             <tr>
               <td>Bale Weight</td>
