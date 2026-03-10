@@ -1,132 +1,134 @@
 <?php
-// Enable error reporting for debugging
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// CORS headers
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
-// SimpleMailer class
-class SimpleMailer {
-    public $to = '';
-    public $from = '';
-    public $fromName = '';
-    public $subject = '';
-    public $body = '';
-    public $attachmentPath = '';
-    public $error = '';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-    public function sendSMTP($smtpHost = '', $smtpUser = '', $smtpPass = '', $smtpPort = 587) {
-        $boundary = md5(time());
-        $headers = "From: {$this->fromName} <{$this->from}>\r\n";
-        $headers .= "Reply-To: {$this->from}\r\n";
-        $headers .= "MIME-Version: 1.0\r\n";
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
 
-        if ($this->attachmentPath && file_exists($this->attachmentPath)) {
-            $fileContent = chunk_split(base64_encode(file_get_contents($this->attachmentPath)));
-            $filename = basename($this->attachmentPath);
-
-            $headers .= "Content-Type: multipart/mixed; boundary=\"{$boundary}\"\r\n\r\n";
-            $message = "--{$boundary}\r\n";
-            $message .= "Content-Type: text/html; charset=\"UTF-8\"\r\n";
-            $message .= "Content-Transfer-Encoding: 7bit\r\n\r\n";
-            $message .= "{$this->body}\r\n\r\n";
-
-            $message .= "--{$boundary}\r\n";
-            $message .= "Content-Type: application/pdf; name=\"{$filename}\"\r\n";
-            $message .= "Content-Transfer-Encoding: base64\r\n";
-            $message .= "Content-Disposition: attachment; filename=\"{$filename}\"\r\n\r\n";
-            $message .= "{$fileContent}\r\n";
-            $message .= "--{$boundary}--";
-        } else {
-            $headers .= "Content-type: text/html; charset=UTF-8\r\n";
-            $message = $this->body;
-        }
-
-        if (!mail($this->to, $this->subject, $message, $headers)) {
-            $this->error = "Mail function failed.";
-            return false;
-        }
-        return true;
-    }
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo json_encode(["success"=>false,"message"=>"Invalid request"]);
+    exit;
 }
 
-// Handle only POST requests
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $data = json_decode(file_get_contents('php://input'), true);
+$data = json_decode(file_get_contents('php://input'), true);
 
-    // Sanitize and extract form data
-    $name = htmlspecialchars($data['name'] ?? '');
-    $company = htmlspecialchars($data['company'] ?? '');
-    $machinery = htmlspecialchars($data['machinery'] ?? '');
-    $model = htmlspecialchars($data['model'] ?? '');
-    $email = filter_var($data['email'] ?? '', FILTER_SANITIZE_EMAIL);
-    $website = htmlspecialchars($data['website'] ?? '');
-    $phone = htmlspecialchars($data['phone'] ?? '');
-    $address = htmlspecialchars($data['address'] ?? '');
-    $city = htmlspecialchars($data['city'] ?? '');
-    $country = htmlspecialchars($data['country'] ?? '');
-    $messageText = htmlspecialchars($data['message'] ?? '');
+// sanitize inputs
+$name = htmlspecialchars($data['name'] ?? '');
+$company = htmlspecialchars($data['company'] ?? '');
+$machinery = htmlspecialchars($data['machinery'] ?? '');
+$model = htmlspecialchars($data['model'] ?? '');
+$email = filter_var($data['email'] ?? '', FILTER_SANITIZE_EMAIL);
+$website = htmlspecialchars($data['website'] ?? '');
+$phone = htmlspecialchars($data['phone'] ?? '');
+$address = htmlspecialchars($data['address'] ?? '');
+$city = htmlspecialchars($data['city'] ?? '');
+$country = htmlspecialchars($data['country'] ?? '');
+$messageText = htmlspecialchars($data['message'] ?? '');
 
-    // Normalize model to match PDF filenames
-    $modelSlug = strtolower(str_replace([' ', '&'], ['-', 'and'], $model));
-    $modelSlug = preg_replace('/[^a-z0-9\-]/', '', $modelSlug); // remove special chars
-    $pdfPath = __DIR__ . "/attachments/{$modelSlug}.pdf";
+// normalize model to match pdf
+$modelSlug = strtolower(str_replace([' ', '&'], ['-', 'and'], $model));
+$modelSlug = preg_replace('/[^a-z0-9\-]/', '', $modelSlug);
 
-    $subject = "Details from VIKAH ECOTECH for Model No " . strtoupper($model);
+$pdfPath = __DIR__ . "/attachments/{$modelSlug}.pdf";
 
-    $htmlBody = "
-        <div style='text-align: justify; font-family: Arial, sans-serif;'>
-            <p><strong>Thanks for showing your interest in our machinery and services.</strong></p>
-            <p>We consider you as our utmost priority and will get back to you as soon as possible.</p>
-            <p><strong>Model:</strong> " . strtoupper($model) . "</p>
-            <p>For any further information, please call us on <strong>8886789356</strong> or email us at <strong>sales@vikahecotech.com</strong>.</p>
-        </div>
-    ";
+$subject = "Details from VIKAH ECOTECH for Model No " . strtoupper($model);
 
-    // Email to customer
-    $customerMail = new SimpleMailer();
-    $customerMail->to = $email;
-    $customerMail->from = "support@vikahecotech.com";
-    $customerMail->fromName = "VIKAH ECOTECH";
-    $customerMail->subject = $subject;
-    $customerMail->body = $htmlBody;
-    $customerMail->attachmentPath = file_exists($pdfPath) ? $pdfPath : '';
+$customerBody = "
+<div style='font-family: Arial'>
+<p><strong>Thanks for showing your interest in our machinery and services.</strong></p>
 
-    $customerSent = $customerMail->sendSMTP();
+<p>We consider you as our utmost priority and will get back to you soon.</p>
 
-    // Email to admin
+<p><strong>Model:</strong> ".strtoupper($model)."</p>
+
+<p>
+For more information call us at <strong>8886789356</strong>
+or email <strong>sales@vikahecotech.com</strong>
+</p>
+</div>
+";
+
+try {
+
+    // CUSTOMER EMAIL
+    $customerMail = new PHPMailer(true);
+
+    $customerMail->isSMTP();
+    $customerMail->Host = "smtp.hostinger.com";
+    $customerMail->SMTPAuth = true;
+    $customerMail->Username = "support@vikahecotech.com";
+    $customerMail->Password = "Vikahecotech@123";
+    $customerMail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $customerMail->Port = 465;
+
+    $customerMail->setFrom("support@vikahecotech.com","VIKAH ECOTECH");
+    $customerMail->addAddress($email);
+
+    if(file_exists($pdfPath)){
+        $customerMail->addAttachment($pdfPath);
+    }
+
+    $customerMail->isHTML(true);
+    $customerMail->Subject = $subject;
+    $customerMail->Body = $customerBody;
+
+    $customerMail->send();
+
+    // ADMIN EMAIL
     $adminBody = "
-        <h3>New Enquiry Received</h3>
-        <p><strong>Name:</strong> $name</p>
-        <p><strong>Company:</strong> $company</p>
-        <p><strong>Machinery:</strong> $machinery</p>
-        <p><strong>Model:</strong> $model</p>
-        <p><strong>Email:</strong> $email</p>
-        <p><strong>Website:</strong> $website</p>
-        <p><strong>Phone:</strong> $phone</p>
-        <p><strong>Address:</strong> $address</p>
-        <p><strong>City:</strong> $city</p>
-        <p><strong>Country:</strong> $country</p>
-        <p><strong>Message:</strong> $messageText</p>
+    <h3>New Enquiry Received</h3>
+
+    <p><strong>Name:</strong> $name</p>
+    <p><strong>Company:</strong> $company</p>
+    <p><strong>Machinery:</strong> $machinery</p>
+    <p><strong>Model:</strong> $model</p>
+    <p><strong>Email:</strong> $email</p>
+    <p><strong>Website:</strong> $website</p>
+    <p><strong>Phone:</strong> $phone</p>
+    <p><strong>Address:</strong> $address</p>
+    <p><strong>City:</strong> $city</p>
+    <p><strong>Country:</strong> $country</p>
+    <p><strong>Message:</strong> $messageText</p>
     ";
 
-    $adminMail = new SimpleMailer();
-    $adminMail->to = "support@vikahecotech.com";
-    $adminMail->from = "support@vikahecotech.com";
-    $adminMail->fromName = "VIKAH ECOTECH";
-    $adminMail->subject = "New Enquiry: " . strtoupper($model);
-    $adminMail->body = $adminBody;
-    $adminMail->sendSMTP();
+    $adminMail = new PHPMailer(true);
 
-    if ($customerSent) {
-        echo "Thanks for sending enquiry. One of our executives will get back to you.";
-    } else {
-        echo "Failed to send email: " . $customerMail->error;
-    }
-} else {
-    echo "Invalid request method.";
+    $adminMail->isSMTP();
+    $adminMail->Host = "smtp.hostinger.com";
+    $adminMail->SMTPAuth = true;
+    $adminMail->Username = "sales@vikahecotech.com";
+    $adminMail->Password = "Vikahecotech@123";
+    $adminMail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $adminMail->Port = 465;
+
+    $adminMail->setFrom("sales@vikahecotech.com","VIKAH ECOTECH");
+    $adminMail->addAddress("support@vikahecotech.com");
+
+    $adminMail->isHTML(true);
+    $adminMail->Subject = "New Enquiry: ".strtoupper($model);
+    $adminMail->Body = $adminBody;
+
+    $adminMail->send();
+
+    echo json_encode([
+        "success"=>true,
+        "message"=>"Thanks for sending enquiry. One of our executives will contact you."
+    ]);
+
 }
-?>
+catch (Exception $e){
+
+    echo json_encode([
+        "success"=>false,
+        "error"=>$e->getMessage()
+    ]);
+}
