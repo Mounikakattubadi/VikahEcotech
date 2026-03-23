@@ -76,64 +76,64 @@ const BalerBlog1 = () => {
 
   return (
     <div className={styles.pageWrapper}>
-      <Helmet>
-        {/* SEO Title */}
-        <title>
-          Tyre Scrap Balers & Hydraulic Baling Machines for Industrial Recycling
-          | Vikah Ecotech
-        </title>
+        <Helmet>
+          {/* SEO Title */}
+          <title>
+            Tyre Scrap Balers & Hydraulic Baling Machines for Industrial Recycling
+            | Vikah Ecotech
+          </title>
 
-        {/* Meta Description */}
-        <meta
-          name="description"
-          content="Explore how tyre scrap balers and hydraulic baling machines optimize tyre recycling, industrial waste management, and cost savings in India."
-        />
+          {/* Meta Description */}
+          <meta
+            name="description"
+            content="Explore how tyre scrap balers and hydraulic baling machines optimize tyre recycling, industrial waste management, and cost savings in India."
+          />
 
-        {/* Keywords */}
-        <meta
-          name="keywords"
-          content="industrial tyre balers, hydraulic baling machines, tyre recycling equipment, tyre waste management solutions, baling machines India"
-        />
+          {/* Keywords */}
+          <meta
+            name="keywords"
+            content="industrial tyre balers, hydraulic baling machines, tyre recycling equipment, tyre waste management solutions, baling machines India"
+          />
 
-        {/* Canonical */}
-        <link rel="canonical" href="https://vikahecotech.com/baler-info" />
+          {/* Canonical */}
+          <link rel="canonical" href="https://vikahecotech.com/baler-info" />
 
-        {/* Open Graph */}
-        <meta
-          property="og:title"
-          content="Industrial Tyre Scrap Balers & Hydraulic Baling Machines | Vikah Ecotech"
-        />
-        <meta
-          property="og:description"
-          content="Discover the best tyre scrap balers and hydraulic baling machines to improve recycling efficiency and reduce industrial waste costs."
-        />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://vikahecotech.com/baler-info" />
+          {/* Open Graph */}
+          <meta
+            property="og:title"
+            content="Industrial Tyre Scrap Balers & Hydraulic Baling Machines | Vikah Ecotech"
+          />
+          <meta
+            property="og:description"
+            content="Discover the best tyre scrap balers and hydraulic baling machines to improve recycling efficiency and reduce industrial waste costs."
+          />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content="https://vikahecotech.com/baler-info" />
 
-        {/* Article Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline:
-              "Industrial Tyre Scrap Balers & Hydraulic Baling Machines",
-            description:
-              "Learn how industrial tyre scrap balers and hydraulic baling machines help factories and recycling plants manage tyre waste efficiently, save costs, and improve safety.",
-            author: {
-              "@type": "Organization",
-              name: "Vikah Ecotech",
-            },
-            publisher: {
-              "@type": "Organization",
-              name: "Vikah Ecotech",
-            },
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": "https://vikahecotech.com/baler-info",
-            },
-          })}
-        </script>
-      </Helmet>
+          {/* Article Structured Data */}
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline:
+                "Industrial Tyre Scrap Balers & Hydraulic Baling Machines",
+              description:
+                "Learn how industrial tyre scrap balers and hydraulic baling machines help factories and recycling plants manage tyre waste efficiently, save costs, and improve safety.",
+              author: {
+                "@type": "Organization",
+                name: "Vikah Ecotech",
+              },
+              publisher: {
+                "@type": "Organization",
+                name: "Vikah Ecotech",
+              },
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": "https://vikahecotech.com/baler-info",
+              },
+            })}
+          </script>
+        </Helmet>
 
       {/* LEFT NAVIGATION */}
       <nav className={styles.toc}>
