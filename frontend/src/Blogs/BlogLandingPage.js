@@ -68,6 +68,13 @@ const blogsData = [
         image: Img18, // replace with your new image import
         category: "Baler"
     },
+    {
+    title: "Municipal Solid Waste Management in India",
+    description: "Explore how municipal solid waste management uses recycling solutions like balers and shredders to improve efficiency, reduce costs, and support sustainable urban development.",
+    route: "/munipical-waste-management",
+    image: Img18, // add your MSW image import
+    category: "Other"
+},
 
 
     // Shredder Blogs

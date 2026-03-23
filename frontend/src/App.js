@@ -137,6 +137,7 @@ import Metalshredderpage from './Prodpages/Metalshredderpage.js';
 import Crushingmachinepage from './Prodpages/Crushingmachinepage.js';
 import PaperCardboardShredderpage from './Prodpages/PaperCardboardShredderpage.js';
 import RelatedEquipments from './Other Equipments/Machines/RelatedEquipments.js';
+import MSWBlog from './Blogs/Baler/MSWBlog.js';
 
 
 
@@ -266,6 +267,7 @@ function App() {
         <Route exact path="/otherequipment-blog3" element={<OtherEquipmentBlog3 />} />
         <Route exact path="/otherequipment-blog4" element={<OtherEquipmentBlog4 />} />
         <Route exact path="/tyre-recycling-plant-manufacturers" element={<TyreRecyclingBlog />} />
+        <Route exact path="/munipical-waste-management" element={<MSWBlog />} />
 
 
         {/* propages */}
