@@ -12,6 +12,8 @@ import rsme from "../images/Recyclingexpo_middleeast_2025/logo_rsme.jpg";
 import bgImage from "../images/backimg.avif";
 import ece from "../images/eco sustain 2025/ese.png";
 import Homecards from "./Homecards";
+import bharatrecycling from "../images/bharatrecycling.png";
+
 
 function Home() {
   const productsRef = useRef(null);
@@ -90,24 +92,23 @@ function Home() {
 
   const [activeTab, setActiveTab] = useState("upcoming");
 
-  const scrollCards = (direction) => {
-    const container = document.getElementById("tradeCardScroll");
-    const card = container.querySelector(".trade-card");
+const scrollRef = useRef(null);
 
-    if (!card || !container) return;
+const scrollCards = (direction) => {
+  const container = scrollRef.current;
+  if (!container) return;
 
-    const cardStyle = window.getComputedStyle(card);
-    const cardWidth = card.offsetWidth;
-    const gap = parseInt(cardStyle.marginRight || 20, 10); // fallback gap
+  const card = container.querySelector(".trade-card");
+  if (!card) return;
 
-    const scrollAmount = cardWidth + gap;
+  const cardWidth = card.getBoundingClientRect().width + 20;
 
-    if (direction === "left") {
-      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    } else {
-      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    }
-  };
+  if (direction === "left") {
+    container.scrollBy({ left: -cardWidth, behavior: "smooth" });
+  } else {
+    container.scrollBy({ left: cardWidth, behavior: "smooth" });
+  }
+};
 
 
   return (
@@ -186,12 +187,14 @@ function Home() {
 
           {/* Scrollable Cards */}
           <div
-            className={`trade-scroll-wrapper d-flex ${activeTab === "upcoming" ? "single-card" : ""
-              }`}
-            id="tradeCardScroll"
-          >
+  ref={scrollRef}
+  className={`trade-scroll-wrapper d-flex ${
+    activeTab === "upcoming" ? "single-card" : ""
+  }`}
+>
             {activeTab === "upcoming" && (
               <>
+                {/* 1. Recycling Expo Middle East */}
                 <div className="trade-card position-relative">
                   <div className="upcoming-badge">Upcoming Trade Fair</div>
                   <img
@@ -205,20 +208,10 @@ function Home() {
                       Organized by Eljays44, a seasoned global event company,
                       Recycling Expo Middle East 2025 is a premier B2B platform
                       uniting industry leaders, innovators, and decision-makers.
-                      Featuring groundbreaking recycling technologies,
-                      thought-leadership seminars, interactive zones, and key
-                      networking, it drives innovation in the waste management
-                      sector.
                     </p>
-                    <p>
-                      <strong>Date:</strong> June-2026
-                    </p>
-                    <p>
-                      <strong>Location:</strong> The Arena, Riyadh, Saudi Arabia
-                    </p>
-                    <p>
-                      <strong>Booth No:</strong> A52
-                    </p>
+                    <p><strong>Date:</strong> June-2026</p>
+                    <p><strong>Location:</strong> The Arena, Riyadh, Saudi Arabia</p>
+                    <p><strong>Booth No:</strong> A52</p>
                     <a
                       href="https://www.recyclingexpome.com/"
                       className="btn btn-success"
@@ -226,6 +219,61 @@ function Home() {
                       rel="noopener noreferrer"
                     >
                       Explore Recycling Expo
+                    </a>
+                  </div>
+                </div>
+
+                {/* 2. IFAT Germany 2026 */}
+                <div className="trade-card position-relative">
+                  <div className="upcoming-badge">Upcoming Trade Fair</div>
+                  <img src={ifatimg} alt="IFAT Germany 2026" className="trade-img" />
+                  <div className="trade-content p-3">
+                    <h5>IFAT Germany</h5>
+                    <p>
+                      IFAT Germany is the world’s leading trade fair for environmental
+                      technologies, focusing on water, sewage, waste, and recycling.
+                    </p>
+                    <p><strong>Date:</strong> 09-09-2026 to 11-09-2026</p>
+                    <p><strong>Location:</strong> Bombay Exhibition Centre</p>
+                    <p><strong>Hall No:</strong> 02</p>
+                    <p><strong>Booth No:</strong> C021</p>
+                    <a
+                      href="https://ifat.de/en/trade-fair/"
+                      className="btn btn-success"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Explore IFAT Germany
+                    </a>
+                  </div>
+                </div>
+
+                {/* 3. Bharat Recycling Show 2026 */}
+                <div className="trade-card position-relative">
+                  <div className="upcoming-badge">Upcoming Trade Fair</div>
+                  <img
+                    src={bharatrecycling}
+                    alt="Bharat Recycling Show 2026"
+                    className="trade-img"
+                  />
+                  <div className="trade-content p-3">
+                    <h5>Bharat Recycling Show</h5>
+                    <p>
+                      Bharat Recycling Show is a premier platform dedicated to India’s
+                      recycling and waste management industry, bringing together
+                      manufacturers, recyclers, and innovators.
+                    </p>
+                    <p><strong>Date:</strong> 31-08-2026 to 02-09-2026</p>
+                    <p><strong>Location:</strong> Bombay Exhibition Centre Nesco, Mumbai </p>
+                    <p><strong>Hall No:</strong> 4</p>
+                    <p><strong>Booth No:</strong> B410</p>
+                    <a
+                      href="https://www.bharatrecyclingshow.com/"
+                      className="btn btn-success"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Explore Bharat Recycling Show
                     </a>
                   </div>
                 </div>

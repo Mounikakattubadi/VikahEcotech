@@ -200,39 +200,39 @@ img.img-fluid {
   font-weight: 700;
 }
 
-/* Scrollable Card Wrapper */
 .trade-scroll-wrapper {
   display: flex;
-  gap: 20px;
   overflow-x: auto;
+  gap: 20px;
+  padding: 10px;
   scroll-behavior: smooth;
-  padding: 10px 0;
-  scroll-snap-type: x mandatory;
-  margin-left: 3%;
 
-  /* Hides scrollbar for WebKit */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  /* 🔥 Hide scrollbar (ALL browsers) */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
 }
 
 .trade-scroll-wrapper::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none;                /* Chrome, Safari */
 }
 
 /* Individual Trade Card */
 .trade-card {
-  flex: 0 0 90%;
-  max-width: 90%;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  scroll-snap-align: start;
-  transition: transform 0.3s ease-in-out;
-}
+  flex: 0 0 50%;
+  min-width: 50%;
+  max-width: 50%;
 
+  background: #f9f9f9;              /* light bg like image */
+  border-radius: 16px;             /* smooth rounded corners */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);  /* soft shadow */
+  padding: 20px;
+  transition: all 0.3s ease;
+
+  position: relative;
+}
 .trade-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
 }
 
 /* Card Image */
@@ -271,7 +271,6 @@ img.img-fluid {
     max-width: 48%;
   }
 }
-
 /* === Scroll Arrow Buttons (Updated Style) === */
 .scroll-btn {
   position: absolute;
@@ -295,13 +294,12 @@ img.img-fluid {
 }
 
 .scroll-btn.left {
-  left: 0;
+  left: 0px;
 }
 
 .scroll-btn.right {
-  right: 0;
+  right: 0px;
 }
-
 
 .btn-tab {
   width: 220px;
@@ -328,9 +326,8 @@ img.img-fluid {
 }
 
 /* Center single child in flex container */
-.trade-scroll-wrapper:only-child,
-.trade-scroll-wrapper.single-card {
-  justify-content: center;
+.trade-scroll-wrapper:only-child
+{  justify-content: center;
 }
 
 
@@ -462,3 +459,25 @@ a, a:visited, a:hover, a:active {
   z-index: 1;
 }
 
+/* ✅ Mobile (default) → 1 card */
+.trade-card {
+  flex: 0 0 90%;
+  min-width: 90%;
+  max-width: 90%;
+
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* ✅ Tablet & Desktop → 2 cards ONLY */
+@media (min-width: 768px) {
+  .trade-card {
+    flex: 0 0 50%;
+    min-width: 50%;
+    max-width: 50%;
+  }
+} 

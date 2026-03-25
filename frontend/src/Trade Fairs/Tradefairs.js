@@ -7,6 +7,8 @@ import ifatimg from "../images/ifat-india-300x218.png";
 import ecosustainimg from "../images/ecosustain.png";
 import ece from "../images/eco sustain 2025/ese.png";
 import rsme from "../images/Recyclingexpo_middleeast_2025/logo_rsme.jpg";
+import bharatrecycling from "../images/bharatrecycling.png";
+
 
 const TradeFairs = () => {
   useEffect(() => {
@@ -75,6 +77,76 @@ const TradeFairs = () => {
               </div>
             </div>
           </div>
+
+          <div className="col-md-6">
+            <div className="tradefairs-card h-100 d-flex flex-column position-relative">
+              <div className="upcoming-badge">Upcoming Trade Fair</div>
+              <img src={bharatrecycling} alt="Bharat Recycling Show 2026" className="trade-img" />
+              <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
+                <div className="trade-content p-3">
+                  <h5>Bharat Recycling Show</h5>
+
+                  <p>
+                    Bharat Recycling Show is a premier platform dedicated to recycling,
+                    waste management, and circular economy solutions in India. The event
+                    showcases advanced technologies, industry innovations, and provides
+                    networking opportunities for professionals and policymakers driving
+                    sustainable growth.
+                  </p>
+
+                  <p><strong>Date:</strong> 31-08-2026 to 02-09-2026</p>
+                  <p><strong>Location:</strong> Bombay Exhibition Centre
+                    Nesco, Mumbai </p>
+                  <p><strong>Hall No:</strong> 4</p>
+                  <p><strong>Booth No:</strong> B410</p>
+
+                  <a
+                    href="https://www.bharatrecyclingshow.com/"
+                    className="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Explore Bharat Recycling
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="col-md-6">
+            <div className="tradefairs-card h-100 d-flex flex-column position-relative">
+              <div className="upcoming-badge">Upcoming Trade Fair</div>
+              <img src={ifatimg} alt="IFAT Germany 2026" className="trade-img" />
+
+              <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
+                <div className="trade-content p-3">
+                  <h5>IFAT Germany</h5>
+
+                  <p>
+                    IFAT Germany is the world’s leading trade fair for water, sewage,
+                    waste, and raw materials management. It brings together global
+                    industry leaders, cutting-edge technologies, and innovative solutions
+                    focused on sustainable environmental practices and resource efficiency.
+                  </p>
+
+                  <p><strong>Date:</strong> 09-09-2026 to 11-09-2026</p>
+                  <p><strong>Location:</strong>  Bombay Exhibition Centre</p>
+                  <p><strong>Hall No:</strong> 02</p>
+                  <p><strong>Booth No:</strong> C021</p>
+
+                  <a
+                    href="https://ifat.de/en/trade-fair/"
+                    className="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Explore IFAT Germany
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
           <div className="col-md-6">
             <div className="tradefairs-card h-100 d-flex flex-column position-relative">
