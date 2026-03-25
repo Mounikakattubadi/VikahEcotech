@@ -1,0 +1,58 @@
+/* Same styling to keep UI identical */
+
+.trade-card {
+  flex: 0 0 90%;
+  min-width: 90%;
+  max-width: 90%;
+
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.trade-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.trade-img {
+  width: 100%;
+  height: 141px;
+  object-fit: contain;
+  margin-top: 4%;
+}
+
+.trade-content h5 {
+  font-weight: bold;
+  color: #221ce6;
+  font-size: 1rem;
+}
+
+.trade-content p {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.trade-content .btn-success {
+  background-color: #28a745;
+  border: none;
+}
+
+.trade-content .btn-success:hover {
+  background-color: #218838;
+}
+
+/* Tablet & Desktop → 2 cards */
+@media (min-width: 768px) {
+  .trade-card {
+    flex: 0 0 50%;
+    min-width: 50%;
+    max-width: 50%;
+  }
+}
+.trade-card {
+  flex: 0 0 auto;   /* 🔥 ADD THIS */
+}

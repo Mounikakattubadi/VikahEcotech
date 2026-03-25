@@ -116,14 +116,14 @@ const TradeFairs = () => {
           <div className="col-md-6">
             <div className="tradefairs-card h-100 d-flex flex-column position-relative">
               <div className="upcoming-badge">Upcoming Trade Fair</div>
-              <img src={ifatimg} alt="IFAT Germany 2026" className="trade-img" />
+              <img src={ifatimg} alt="IFAT 2026" className="trade-img" />
 
               <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
                 <div className="trade-content p-3">
-                  <h5>IFAT Germany</h5>
+                  <h5>IFAT</h5>
 
                   <p>
-                    IFAT Germany is the world’s leading trade fair for water, sewage,
+                    IFAT is the world’s leading trade fair for water, sewage,
                     waste, and raw materials management. It brings together global
                     industry leaders, cutting-edge technologies, and innovative solutions
                     focused on sustainable environmental practices and resource efficiency.
@@ -140,7 +140,7 @@ const TradeFairs = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Explore IFAT Germany
+                    Explore IFAT
                   </a>
                 </div>
               </div>

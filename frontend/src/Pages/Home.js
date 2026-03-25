@@ -1,19 +1,14 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Home.css";
+import UpcomingTradeFairs from "../Trade Fairs/UpcomingTradeFairs";
+import CompletedTradeFairs from "../Trade Fairs/CompletedTradeFairs";
 import gif from "../images/green_combo_top.gif";
 import Baler from "../images/baler.png";
 import Baler1 from "../images/baler1.png";
 import tyrefolding from "../images/tyre folding1.jpg";
-import envirotechimg from "../images/envirotech/envirotechimg.png";
-import ifatimg from "../images/ifat-india-300x218.png";
-import ecosustainimg from "../images/ecosustain.png";
-import rsme from "../images/Recyclingexpo_middleeast_2025/logo_rsme.jpg";
 import bgImage from "../images/backimg.avif";
-import ece from "../images/eco sustain 2025/ese.png";
 import Homecards from "./Homecards";
-import bharatrecycling from "../images/bharatrecycling.png";
-
 
 function Home() {
   const productsRef = useRef(null);
@@ -92,22 +87,18 @@ function Home() {
 
   const [activeTab, setActiveTab] = useState("upcoming");
 
-const scrollRef = useRef(null);
+  const scrollRef = useRef(null);
 
 const scrollCards = (direction) => {
   const container = scrollRef.current;
   if (!container) return;
 
-  const card = container.querySelector(".trade-card");
-  if (!card) return;
+  const scrollAmount = container.clientWidth * 0.9;
 
-  const cardWidth = card.getBoundingClientRect().width + 20;
-
-  if (direction === "left") {
-    container.scrollBy({ left: -cardWidth, behavior: "smooth" });
-  } else {
-    container.scrollBy({ left: cardWidth, behavior: "smooth" });
-  }
+  container.scrollBy({
+    left: direction === "left" ? -scrollAmount : scrollAmount,
+    behavior: "smooth",
+  });
 };
 
 
@@ -185,254 +176,14 @@ const scrollCards = (direction) => {
             &#8250;
           </button>
 
-          {/* Scrollable Cards */}
           <div
-  ref={scrollRef}
-  className={`trade-scroll-wrapper d-flex ${
-    activeTab === "upcoming" ? "single-card" : ""
-  }`}
->
-            {activeTab === "upcoming" && (
-              <>
-                {/* 1. Recycling Expo Middle East */}
-                <div className="trade-card position-relative">
-                  <div className="upcoming-badge">Upcoming Trade Fair</div>
-                  <img
-                    src={rsme}
-                    alt="Recycling Expo Middle East"
-                    className="trade-img"
-                  />
-                  <div className="trade-content p-3">
-                    <h5>Recycling Expo Middle East</h5>
-                    <p>
-                      Organized by Eljays44, a seasoned global event company,
-                      Recycling Expo Middle East 2025 is a premier B2B platform
-                      uniting industry leaders, innovators, and decision-makers.
-                    </p>
-                    <p><strong>Date:</strong> June-2026</p>
-                    <p><strong>Location:</strong> The Arena, Riyadh, Saudi Arabia</p>
-                    <p><strong>Booth No:</strong> A52</p>
-                    <a
-                      href="https://www.recyclingexpome.com/"
-                      className="btn btn-success"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Explore Recycling Expo
-                    </a>
-                  </div>
-                </div>
-
-                {/* 2. IFAT Germany 2026 */}
-                <div className="trade-card position-relative">
-                  <div className="upcoming-badge">Upcoming Trade Fair</div>
-                  <img src={ifatimg} alt="IFAT Germany 2026" className="trade-img" />
-                  <div className="trade-content p-3">
-                    <h5>IFAT Germany</h5>
-                    <p>
-                      IFAT Germany is the world’s leading trade fair for environmental
-                      technologies, focusing on water, sewage, waste, and recycling.
-                    </p>
-                    <p><strong>Date:</strong> 09-09-2026 to 11-09-2026</p>
-                    <p><strong>Location:</strong> Bombay Exhibition Centre</p>
-                    <p><strong>Hall No:</strong> 02</p>
-                    <p><strong>Booth No:</strong> C021</p>
-                    <a
-                      href="https://ifat.de/en/trade-fair/"
-                      className="btn btn-success"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Explore IFAT Germany
-                    </a>
-                  </div>
-                </div>
-
-                {/* 3. Bharat Recycling Show 2026 */}
-                <div className="trade-card position-relative">
-                  <div className="upcoming-badge">Upcoming Trade Fair</div>
-                  <img
-                    src={bharatrecycling}
-                    alt="Bharat Recycling Show 2026"
-                    className="trade-img"
-                  />
-                  <div className="trade-content p-3">
-                    <h5>Bharat Recycling Show</h5>
-                    <p>
-                      Bharat Recycling Show is a premier platform dedicated to India’s
-                      recycling and waste management industry, bringing together
-                      manufacturers, recyclers, and innovators.
-                    </p>
-                    <p><strong>Date:</strong> 31-08-2026 to 02-09-2026</p>
-                    <p><strong>Location:</strong> Bombay Exhibition Centre Nesco, Mumbai </p>
-                    <p><strong>Hall No:</strong> 4</p>
-                    <p><strong>Booth No:</strong> B410</p>
-                    <a
-                      href="https://www.bharatrecyclingshow.com/"
-                      className="btn btn-success"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Explore Bharat Recycling Show
-                    </a>
-                  </div>
-                </div>
-              </>
-            )}
-
-            {activeTab === "completed" && (
-              <>
-                <div className="trade-card position-relative">
-                  <img src={ifatimg} alt="IFAT India" className="trade-img" />
-                  <div className="trade-content p-3">
-                    <h5>IFAT India</h5>
-                    <p>
-                      IFAT India brings together professionals from water,
-                      sewage, waste, and recycling industries to foster
-                      knowledge sharing, networking, and collaboration among
-                      policymakers, industry leaders, and environmental experts.
-                    </p>
-                    <p>
-                      <strong>Date:</strong> 14-10-2025 to 16-10-2025
-                    </p>
-                    <p>
-                      <strong>Location:</strong> Bombay Exhibition Centre,
-                      Mumbai
-                    </p>
-                    <p>
-                      <strong>Booth No:</strong> 2 / B005
-                    </p>
-                    <Link
-                      to="/ifat2025"
-                      className="tradefairs-btn mt-3 align-self-start"
-                    >
-                      Images and Videos
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="trade-card position-relative">
-                  <img src={ece} alt="Eco Sustain Expo" className="trade-img" />
-                  <div className="trade-content p-3">
-                    <h5>Eco Sustain Expo & Conference</h5>
-                    <p>
-                      Eco Sustain Expo & Conference, an exceptional event
-                      meticulously crafted by HITEX, Hyderabad that brings
-                      together a diverse community of professionals,
-                      visionaries, policymakers, researchers, and solution
-                      providers, all bound by a resolute dedication to shaping a
-                      sustainable future.
-                    </p>
-                    <p>
-                      <strong>Date:</strong> 22-08-2025 to 24-08-2025
-                    </p>
-                    <p>
-                      <strong>Location:</strong> HITEX Exhibition Center,
-                      Hyderabad
-                    </p>
-                    <p>
-                      <strong>Stall No:</strong> C06
-                    </p>
-                    <Link
-                      to="/ecosustain2025"
-                      className="tradefairs-btn mt-3 align-self-start"
-                    >
-                      Images and Videos
-                    </Link>
-                  </div>
-                </div>
-                {/* Completed Card 2 */}
-                <div className="trade-card">
-                  <img
-                    src={envirotechimg}
-                    alt="EnviroTech Asia"
-                    className="trade-img"
-                  />
-                  <div className="trade-content p-3">
-                    <h5>EnviroTech Asia 2024</h5>
-                    <p>
-                      The 7th edition will provide a platform for business
-                      leaders, investors, government officials, industry
-                      experts, and NGOs to share insights and opportunities in
-                      environmental protection and green business. It will be
-                      one of the largest gatherings in the environment sector,
-                      bringing together key stakeholders to drive sustainable
-                      development and environmental preservation.
-                    </p>
-                    <p>
-                      <strong>Date:</strong> 3–5 Dec 2024
-                    </p>
-                    <p>
-                      <strong>Location:</strong> Yashobhoomi Convention Center,
-                      Dwarka, Delhi
-                    </p>
-                    <Link to="/Tradefairs" className="btn btn-success">
-                      Know More
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Completed Card 3 */}
-                <div className="trade-card">
-                  <img src={ifatimg} alt="IFAT India" className="trade-img" />
-                  <div className="trade-content p-3">
-                    <h5>IFAT India</h5>
-                    <p>
-                      IFAT India has been bringing together professionals and
-                      experts from various sectors of the water, sewage, waste,
-                      and recycling industry, providing the entire industry with
-                      a platform for knowledge exchange, networking, and the
-                      opportunity to forge partnerships between industry
-                      players, policy makers, and environmental experts.
-                    </p>
-                    <p>
-                      <strong>Date:</strong> 16–18 Oct 2024
-                    </p>
-                    <p>
-                      <strong>Location:</strong> Mumbai Exhibition Centre
-                    </p>
-                    <p>
-                      <strong>Booth No:</strong> D016, Hall:3
-                    </p>
-                    <Link to="/ifat" className="btn btn-success">
-                      Images and videos
-                    </Link>
-                  </div>
-                </div>
-
-                {/* Completed Card 4 */}
-                <div className="trade-card">
-                  <img
-                    src={ecosustainimg}
-                    alt="Eco Sustain Expo"
-                    className="trade-img"
-                  />
-                  <div className="trade-content p-3">
-                    <h5>Eco Sustain Expo & Conference</h5>
-                    <p>
-                      Eco Sustain Expo & Conference, an exceptional event
-                      meticulously crafted by HITEX, Hyderabad that brings
-                      together a diverse community of professionals,
-                      visionaries, policymakers, researchers, and solution
-                      providers, all bound by a resolute dedication to shaping a
-                      sustainable future.
-                    </p>
-                    <p>
-                      <strong>Date:</strong> 16–18 Aug 2024
-                    </p>
-                    <p>
-                      <strong>Location:</strong> HITEX Exhibition Center,
-                      Hyderabad
-                    </p>
-                    <p>
-                      <strong>Booth No:</strong> 4N01
-                    </p>
-                    <Link to="/completedTradefair1" className="btn btn-success">
-                      Images and Videos
-                    </Link>
-                  </div>
-                </div>
-              </>
+            ref={scrollRef}
+            className="trade-scroll-wrapper d-flex"
+          >
+            {activeTab === "upcoming" ? (
+              <UpcomingTradeFairs />
+            ) : (
+              <CompletedTradeFairs />
             )}
           </div>
         </div>
