@@ -8,6 +8,8 @@ import "../../Pages/Models.css";
 import shredderhd from "../../images/R1.png";
 import shredderhd1 from "../../images/R2.png";
 import shredderhdimg from "../../images/R4.jpg";
+import Carousel from "react-bootstrap/Carousel";
+import styles from "../../Styles/Topheadings.module.css";
 
 function RasperSecondaryshredders() {
   useEffect(() => {
@@ -41,9 +43,7 @@ function RasperSecondaryshredders() {
   };
 
   const prevSlide = () => {
-    setSlide((prev) =>
-      prev === 0 ? carouselImages.length - 1 : prev - 1
-    );
+    setSlide((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
   };
 
   return (
@@ -51,7 +51,8 @@ function RasperSecondaryshredders() {
       {/* ================= SEO HELMET ================= */}
       <Helmet>
         <title>
-          Secondary Shredders for Tyre Recycling (Rasper Machines) | Vikah Ecotech
+          Secondary Shredders for Tyre Recycling (Rasper Machines) | Vikah
+          Ecotech
         </title>
 
         <meta
@@ -71,13 +72,113 @@ function RasperSecondaryshredders() {
       </Helmet>
 
       {/* ================= PAGE HEADER ================= */}
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">
-            Secondary Shredders for Tyre Recycling
-          </h1>
-        </div>
-      </header>
+      {/* HERO CAROUSEL */}
+
+      <div className={styles.heroWrapper}>
+        <Carousel controls indicators interval={4000}>
+          {/* Slide 1 */}
+
+          <Carousel.Item>
+            <img
+            style={{ objectFit: "contain" }}
+              className={styles.heroImage}
+              src={shredderhd}
+              alt="Secondary Tyre Shredder"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Secondary Tyre Shredders</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Advanced rasper shredders designed for secondary processing of
+                  tyre scrap after primary shredding, delivering consistent
+                  particle size reduction.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          {/* Slide 2 */}
+
+          <Carousel.Item>
+            <img
+            
+              className={styles.heroImage}
+              src={shredderhd1}
+              alt="Rasper Machine"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Rasper Shredder Machines</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Heavy-duty rasper machines engineered for fine shredding of
+                  pre-processed tyres in recycling plants, ensuring high
+                  efficiency and durability.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          {/* Slide 3 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              style={{ objectFit: "contain" }}
+              src={shredderhdimg}
+              alt="Tyre Recycling Secondary Shredder"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Tyre Recycling Solutions</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Reliable secondary shredders for tyre recycling plants,
+                  preparing rubber material for granulation, steel separation,
+                  and downstream recovery processes.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+        </Carousel>
+      </div>
 
       {/* ================= INTRO CONTENT ================= */}
       <div className="container text-center my-4 balerbackimg">
@@ -97,7 +198,7 @@ function RasperSecondaryshredders() {
         </p>
 
         {/* ================= MODEL SELECTION ================= */}
-        <div className="btn-group flex-wrap mb-4" role="group">
+        <div id="modelsSection" className="btn-group flex-wrap mb-4" role="group">
           {shredders.map((machine, index) => (
             <button
               key={index}

@@ -10,6 +10,7 @@ import shredderhd from "../../images/Applications/shredpcb1.jpg";
 import shredderhd1 from "../../images/Applications/shredpcb4.jpg";
 import shredderhdimg from "../../images/Applications/shredpcb7.jpg";
 import SEOHelmet from "../../components/SEO/SEOHelmet";
+import styles from "../../Styles/Topheadings.module.css";
 
 function Papershredder() {
   useEffect(() => {
@@ -105,15 +106,109 @@ function Papershredder() {
       />
 
       {/* ================= HEADER ================= */}
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">Paper & Cardboard Shredder Machines</h1>
-          <p className="lead">
-            Primary Shredders for Paper & Packaging Recycling
-          </p>
-        </div>
-      </header>
+      {/* HERO CAROUSEL */}
 
+      <div className={styles.heroWrapper}>
+        <Carousel controls indicators interval={4000}>
+          {/* Slide 1 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              src={shredderhd}
+              alt="Paper Cardboard Shredder Machine"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>
+                  Paper & Cardboard Shredders
+                </h1>
+
+                <p className={styles.heroSubtitle}>
+                  Industrial shredders designed for efficient size reduction of
+                  paper waste, cartons, and corrugated packaging materials.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          {/* Slide 2 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              src={shredderhd1}
+              alt="Industrial Cardboard Shredder"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Industrial Paper Shredding</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Heavy-duty shredders engineered for recycling facilities
+                  handling large volumes of paper and packaging waste.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          {/* Slide 3 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              src={shredderhdimg}
+              alt="Hydraulic Cardboard Shredder"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>High Performance Shredders</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Advanced shredding technology delivering consistent particle
+                  size and reliable operation for paper recycling industries.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+        </Carousel>
+      </div>
       <div className="container-fluid px-4 px-md-5 my-5">
         {/* ================= INTRO SECTION ================= */}
         <div className="container-fluid py-5">
@@ -127,7 +222,7 @@ function Papershredder() {
                   lineHeight: "1.3",
                 }}
               >
-                 Paper & Cardboard Shredders Manufacturer in India
+                Paper & Cardboard Shredders Manufacturer in India
               </h2>
 
               <p
@@ -163,6 +258,7 @@ function Papershredder() {
 
         {/* ================= FULL WIDTH MODEL SECTION ================= */}
         <div
+          id="modelsSection"
           className="py-5 px-3 px-md-5 mb-5"
           style={{
             background: "linear-gradient(135deg, #f0fdfa, #e6fffa)",
@@ -260,7 +356,7 @@ function Papershredder() {
                     className="fw-bold mb-4 text-center"
                     style={{ color: "#065f46", fontSize: "1.6rem" }}
                   >
-                    {selected.name} 
+                    {selected.name}
                   </h4>
 
                   <ul className="list-group list-group-flush mb-4">

@@ -8,6 +8,7 @@ import shredderhd from "../../images/shredder_hd.jpg";
 import shredderhd1 from "../../images/shredder_hd1.jpg";
 import { Helmet } from "react-helmet";
 import SEOHelmet from "../../components/SEO/SEOHelmet";
+import styles from "../../Styles/Topheadings.module.css";
 
 function Tyreshredder() {
   useEffect(() => {
@@ -101,11 +102,113 @@ function Tyreshredder() {
       />
 
       {/* Header */}
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">Primary Shredders For Tyres</h1>
-        </div>
-      </header>
+      {/* HERO CAROUSEL */}
+
+      <div className={styles.heroWrapper}>
+        <Carousel controls indicators interval={4000}>
+          {/* Slide 1 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              style={{ objectFit: "contain" }}
+              src={shredderhdimg}
+              alt="Primary Tyre Shredder Machine"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Primary Tyre Shredders</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Heavy-duty tyre shredders engineered for primary shredding of
+                  whole tyres in recycling plants, delivering consistent and
+                  efficient material processing.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          {/* Slide 2 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              style={{ objectFit: "contain" }}
+              src={shredderhd1}
+              alt="Industrial Tyre Shredder"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Industrial Tyre Shredding</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Powerful shredding systems designed for tyre recycling plants
+                  to process large volumes of scrap tyres with high efficiency
+                  and durability.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          {/* Slide 3 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              style={{ objectFit: "contain" }}
+              src={shredderhd}
+              alt="Hydraulic Tyre Shredder"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>High Performance Shredders</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Advanced tyre shredders equipped with powerful hydraulic
+                  systems and high horsepower drives for reliable continuous
+                  operation.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+        </Carousel>
+      </div>
 
       <div className="container-fluid px-4 px-md-5 my-5">
         {/* ================= INTRO SECTION ================= */}
@@ -156,6 +259,7 @@ function Tyreshredder() {
 
         {/* ================= FULL WIDTH MODEL SECTION ================= */}
         <div
+          id="modelsSection"
           className="py-5 px-3 px-md-5 mb-5"
           style={{
             background: "linear-gradient(135deg, #e6fffa, #f0fdfa)",
