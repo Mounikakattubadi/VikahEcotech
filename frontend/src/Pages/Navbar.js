@@ -2,6 +2,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../images/logo.png";
+import Baler from "../images/baler.png";
+import shredderhdimg from "../images/Shedder _ Final PNG.png";
+import shred2 from "../images/R1.png";
+
 import "./Navbar.css";
 
 const MOBILE_BREAKPOINT = 992;
@@ -14,7 +18,7 @@ const Navbar = () => {
     typeof window !== "undefined" ? window.innerWidth < MOBILE_BREAKPOINT : false
   );
 
-  
+
   const navbarRef = useRef(null); // ⬅️ ref for click-outside
 
   // Close menus when clicking outside navbar
@@ -92,7 +96,7 @@ const Navbar = () => {
   };
 
   return (
-    <header       ref={navbarRef}  className={`ve-navbar ${elevated ? "ve-navbar--elevated" : ""}`}>
+    <header ref={navbarRef} className={`ve-navbar ${elevated ? "ve-navbar--elevated" : ""}`}>
       <div className="container ve-navbar__inner mt-1 mb-1">
         {/* Mobile toggle (CSS places it left on mobile) */}
         <button
@@ -172,38 +176,55 @@ const Navbar = () => {
 
               <div className={`ve-mega ${productsOpen ? "ve-mega--open" : ""}`} role="region" aria-hidden={!productsOpen}>
                 <div className="ve-mega__grid">
+
                   {/* Baler */}
                   <div className="ve-mega__column">
-                    <h4 className="ve-mega__title">Balers</h4>
+                    <h4 className="ve-mega__title ve-mega__title--icon">
+                      Balers
+                      <span className="ve-mega__icon">
+                        <img src={Baler} alt="Balers" />
+                      </span>
+                    </h4>
+
                     <p className="ve-mega__desc">
-                      High-density balers for tyre scrap, plastics, metals,
-                      paper and cardboard.
+                      High-density balers for tyre scrap, plastics, metals, paper and cardboard.
                     </p>
+
                     <Link to="/balers" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>
                       Baler overview →
                     </Link>
+
                     <div className="ve-mega__group">
                       <span className="ve-mega__group-label">Applications</span>
                       <Link to="/tyre-scrap-balers" className="ve-mega__link" onClick={closeAll}>Tyre Scrap Baler</Link>
                       <Link to="/plasticbaler" className="ve-mega__link" onClick={closeAll}>Plastic Balers</Link>
-                      <Link to="/pcb" className="ve-mega__link" onClick={closeAll}>Paper &amp; Cardboard Balers</Link>
+                      <Link to="/pcb" className="ve-mega__link" onClick={closeAll}>Paper & Cardboard Balers</Link>
                       <Link to="/metalbaler" className="ve-mega__link" onClick={closeAll}>Metal Balers</Link>
                     </div>
                   </div>
 
                   {/* Primary Shredder */}
                   <div className="ve-mega__column">
-                    <h4 className="ve-mega__title">Primary Shredders</h4>
+                    <h4 className="ve-mega__title ve-mega__title--icon">
+                      Primary Shredders
+                      <span className="ve-mega__icon">
+                        <img src={shredderhdimg} alt="Primary Shredders" />
+                      </span>
+                    </h4>
+
                     <p className="ve-mega__desc">
-                      Heavy-duty primary shredders for bulky tyres, plastics,
-                      metals and e-waste.
+                      Heavy-duty primary shredders for bulky tyres, plastics, metals and e-waste.
                     </p>
-                    <Link to="/primary-shredder" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>Primary shredders →</Link>
+
+                    <Link to="/primary-shredder" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>
+                      Primary shredders →
+                    </Link>
+
                     <div className="ve-mega__group">
                       <span className="ve-mega__group-label">Applications</span>
                       <Link to="/tyreshredder" className="ve-mega__link" onClick={closeAll}>Tyre Shredder</Link>
                       <Link to="/plasticshredder" className="ve-mega__link" onClick={closeAll}>Plastic Shredder</Link>
-                      <Link to="/papershredder" className="ve-mega__link" onClick={closeAll}>Paper &amp; Cardboard Shredder</Link>
+                      <Link to="/papershredder" className="ve-mega__link" onClick={closeAll}>Paper & Cardboard Shredder</Link>
                       <Link to="/ewaste" className="ve-mega__link" onClick={closeAll}>E-Waste Shredder</Link>
                       <Link to="/shm4000" className="ve-mega__link" onClick={closeAll}>Metal Shredder (SHM4000)</Link>
                     </div>
@@ -211,33 +232,44 @@ const Navbar = () => {
 
                   {/* Secondary Shredder */}
                   <div className="ve-mega__column">
-                    <h4 className="ve-mega__title">Secondary Shredders</h4>
+                    <h4 className="ve-mega__title ve-mega__title--icon">
+                      Secondary Shredders
+                      <span className="ve-mega__icon">
+                        <img src={shred2} alt="Secondary Shredders" />
+                      </span>
+                    </h4>
+
                     <p className="ve-mega__desc">
-                      Raspers &amp; secondary shredders for fine granulation and
-                      uniform output.
+                      Raspers & secondary shredders for fine granulation and uniform output.
                     </p>
-                    <Link to="/secondary-shredder" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>Secondary shredders →</Link>
+
+                    <Link to="/secondary-shredder" className="ve-mega__link ve-mega__link--main" onClick={closeAll}>
+                      Secondary shredders →
+                    </Link>
+
                     <div className="ve-mega__group">
                       <span className="ve-mega__group-label">Applications</span>
                       <Link to="/rasper_secondaryshredders" className="ve-mega__link" onClick={closeAll}>Rasper</Link>
                       <Link to="/secondarymetalshredder" className="ve-mega__link" onClick={closeAll}>Metal Shredder</Link>
                       <Link to="/secondaryplasticshredder" className="ve-mega__link" onClick={closeAll}>Plastic Shredder</Link>
-                      <Link to="/secondarypcb" className="ve-mega__link" onClick={closeAll}>Paper &amp; Cardboard Shredder</Link>
+                      <Link to="/secondarypcb" className="ve-mega__link" onClick={closeAll}>Paper & Cardboard Shredder</Link>
                     </div>
                   </div>
 
-                  {/* Systems / more */}
+                  {/* Systems */}
                   <div className="ve-mega__column">
                     <h4 className="ve-mega__title">Complete Systems</h4>
+
                     <p className="ve-mega__desc">
-                      End-to-end tyre &amp; waste recycling lines with feeding,
-                      separation and conveying.
+                      End-to-end tyre & waste recycling lines with feeding, separation and conveying.
                     </p>
+
                     <div className="ve-mega__group">
                       <span className="ve-mega__group-label">Equipment</span>
                       <Link to="/other-equipment" className="ve-mega__link" onClick={closeAll}>Other Equipment</Link>
                     </div>
                   </div>
+
                 </div>
               </div>
             </li>
