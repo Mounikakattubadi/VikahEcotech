@@ -10,6 +10,7 @@ import balerImage from "../../images/Applications/apppcb6.webp";
 import img1 from "../../images/Applications/apppcb3.jpg";
 
 import SEOHelmet from "../../components/SEO/SEOHelmet";
+import styles from "../../Styles/Topheadings.module.css";
 
 function Pcb() {
   useEffect(() => {
@@ -98,14 +99,110 @@ function Pcb() {
         ]}
       />
       {/* ================= HEADER ================= */}
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">Paper & Cardboard Baler Machines</h1>
-          <p className="lead">
-            Efficient Recycling Solutions for Paper & Packaging Waste
-          </p>
-        </div>
-      </header>
+      {/* HERO CAROUSEL */}
+
+      <div className={styles.heroWrapper}>
+        <Carousel controls indicators interval={4000}>
+          {/* Slide 1 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              src={mainSpecImage}
+              alt="Paper Cardboard Baler Machine"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Paper & Cardboard Balers</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Efficient baler machines designed to compress paper, cartons,
+                  and cardboard waste into compact bales for easy recycling and
+                  transportation.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          {/* Slide 2 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              src={balerImage}
+              alt="Industrial Cardboard Baler"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>
+                  Industrial Cardboard Balers
+                </h1>
+
+                <p className={styles.heroSubtitle}>
+                  Heavy-duty balers ideal for recycling warehouses, packaging
+                  industries, and large-scale carton waste management.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          {/* Slide 3 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              src={img1}
+              alt="Hydraulic Paper Baler"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Hydraulic Paper Balers</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Advanced hydraulic compression technology designed for
+                  high-volume paper and packaging waste recycling.
+                </p>
+
+                <button
+                  className={styles.heroButton}
+                  onClick={() =>
+                    document
+                      .getElementById("modelsSection")
+                      ?.scrollIntoView({ behavior: "smooth" })
+                  }
+                >
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+        </Carousel>
+      </div>
 
       <div className="container-fluid px-4 px-md-5 my-5">
         {/* ================= INTRO SECTION ================= */}
@@ -174,6 +271,7 @@ function Pcb() {
 
         {/* ================= FULL WIDTH MODEL SECTION ================= */}
         <div
+          id="modelsSection"
           className="py-5 px-3 px-md-5 mb-5"
           style={{
             background: "linear-gradient(135deg, #e6fffa, #f0fdfa)",

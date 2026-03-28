@@ -7,13 +7,24 @@ import "../../Pages/Models.css";
 import Balerimg from "../../images/baler.png";
 import Baler1 from "../../images/baler1.png";
 import Baler2 from "../../images/baler2.png";
+import TyreBaler1 from "../../images/Applications/tyrebaler1.webp"
+import tyrebaler2 from "../../images/Applications/tyrebaler2.webp"
 import { Helmet } from "react-helmet";
+import styles from "../../Styles/Topheadings.module.css";
 
 function Tyrescrapbaler() {
   useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
   }, []);
+
+  const scrollToModels = () => {
+    const section = document.getElementById("modelsSection");
+
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const balers = [
     {
@@ -250,11 +261,88 @@ function Tyrescrapbaler() {
       </Helmet>
 
       {/* Header */}
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">Tyre Scrap Balers</h1>
-        </div>
-      </header>
+      <div className={styles.heroWrapper}>
+        <Carousel controls indicators interval={4000}>
+          {/* Slide 1 */}
+
+          <Carousel.Item>
+            <img
+            
+              className={styles.heroImage}
+              src={TyreBaler1}
+              alt="Tyre Scrap Baler"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Tyre Scrap Balers</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Efficient hydraulic balers designed for compressing tyre scrap
+                  into compact bales for easy storage and transport.
+                </p>
+
+                <button className={styles.heroButton} onClick={scrollToModels}>
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          {/* Slide 2 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              style={{objectFit:"contain"}}
+              src={Baler1}
+              alt="Industrial Tyre Baler"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>Industrial Tyre Balers</h1>
+
+                <p className={styles.heroSubtitle}>
+                  Heavy-duty baling machines engineered for tyre recycling
+                  plants, delivering powerful compression and high efficiency.
+                </p>
+
+                <button className={styles.heroButton} onClick={scrollToModels}>
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+
+          {/* Slide 3 */}
+
+          <Carousel.Item>
+            <img
+              className={styles.heroImage}
+              src={tyrebaler2}
+              alt="Hydraulic Tyre Scrap Baler"
+            />
+
+            <div className={styles.heroOverlay}>
+              <div className={styles.heroContent}>
+                <h1 className={styles.heroTitle}>
+                  Advanced Hydraulic Technology
+                </h1>
+
+                <p className={styles.heroSubtitle}>
+                  High-performance hydraulic systems designed to compress tyre
+                  scrap efficiently for recycling industries worldwide.
+                </p>
+
+                <button className={styles.heroButton} onClick={scrollToModels}>
+                  View Models
+                </button>
+              </div>
+            </div>
+          </Carousel.Item>
+        </Carousel>
+      </div>
 
       <div className="container-fluid px-4 px-md-5 my-5">
         {/* ================= INTRO SECTION ================= */}
@@ -322,146 +410,147 @@ function Tyrescrapbaler() {
         </div>
 
         {/* ================= FULL WIDTH MODEL SECTION ================= */}
-<div
-  className="py-5 px-3 px-md-5 mb-5"
-  style={{
-    background: "linear-gradient(135deg, #e6fffa, #f0fdfa)",
-    borderTop: "5px solid #22c55e",
-    borderBottom: "5px solid #22c55e",
-  }}
->
-  <div className="container-fluid">
-    <h3
-      className="text-center fw-bold mb-4"
-      style={{ color: "#166534", fontSize: "1.8rem" }}
-    >
-      Available Tyre Scrap Baler Models
-    </h3>
-
-    {/* ================= MODEL BUTTONS (single row, scrollable on small screens) ================= */}
-    <div
-      className="d-flex flex-nowrap overflow-auto mb-5 justify-content-center"
-      style={{ gap: "10px" }}
-    >
-      {balers.map((baler, index) => (
-        <button
-          key={index}
-          className="flex-shrink-0"
-          style={{
-            background:
-              selected.name === baler.name
-                ? "linear-gradient(135deg, #22c55e, #16a34a)"
-                : "#ccfbf1",
-            color: selected.name === baler.name ? "#ffffff" : "#065f46",
-            border: "none",
-            borderRadius: "50px",
-            fontWeight: "600",
-            minWidth: "90px",
-            padding: "6px 14px",
-            fontSize: "0.9rem",
-            boxShadow:
-              selected.name === baler.name
-                ? "0 4px 12px rgba(34,197,94,0.4)"
-                : "0 2px 6px rgba(0,0,0,0.08)",
-            transition: "all 0.3s ease",
-            whiteSpace: "nowrap",
-            cursor: "pointer",
-          }}
-          onClick={() => setSelected(baler)}
-        >
-          {baler.name}
-        </button>
-      ))}
-    </div>
-
-    <div className="row align-items-center">
-      {/* ================= CAROUSEL CARD ================= */}
-      <div className="col-lg-6 mb-4">
         <div
-          className="rounded-4 shadow-lg overflow-hidden p-3"
+          id="modelsSection"
+          className="py-5 px-3 px-md-5 mb-5"
           style={{
-            height: "460px",
-            background: "linear-gradient(145deg, #f0fdfa, #ecfeff)",
-            border: "1px solid #a7f3d0",
+            background: "linear-gradient(135deg, #e6fffa, #f0fdfa)",
+            borderTop: "5px solid #22c55e",
+            borderBottom: "5px solid #22c55e",
           }}
         >
-          <Carousel interval={4000} pause="hover">
-            {carouselImages.map((img, i) => (
-              <Carousel.Item key={i}>
-                <div
+          <div className="container-fluid">
+            <h3
+              className="text-center fw-bold mb-4"
+              style={{ color: "#166534", fontSize: "1.8rem" }}
+            >
+              Available Tyre Scrap Baler Models
+            </h3>
+
+            {/* ================= MODEL BUTTONS (single row, scrollable on small screens) ================= */}
+            <div
+              className="d-flex flex-nowrap overflow-auto mb-5 justify-content-center"
+              style={{ gap: "10px" }}
+            >
+              {balers.map((baler, index) => (
+                <button
+                  key={index}
+                  className="flex-shrink-0"
                   style={{
-                    height: "430px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
+                    background:
+                      selected.name === baler.name
+                        ? "linear-gradient(135deg, #22c55e, #16a34a)"
+                        : "#ccfbf1",
+                    color: selected.name === baler.name ? "#ffffff" : "#065f46",
+                    border: "none",
+                    borderRadius: "50px",
+                    fontWeight: "600",
+                    minWidth: "90px",
+                    padding: "6px 14px",
+                    fontSize: "0.9rem",
+                    boxShadow:
+                      selected.name === baler.name
+                        ? "0 4px 12px rgba(34,197,94,0.4)"
+                        : "0 2px 6px rgba(0,0,0,0.08)",
+                    transition: "all 0.3s ease",
+                    whiteSpace: "nowrap",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => setSelected(baler)}
+                >
+                  {baler.name}
+                </button>
+              ))}
+            </div>
+
+            <div className="row align-items-center">
+              {/* ================= CAROUSEL CARD ================= */}
+              <div className="col-lg-6 mb-4">
+                <div
+                  className="rounded-4 shadow-lg overflow-hidden p-3"
+                  style={{
+                    height: "460px",
+                    background: "linear-gradient(145deg, #f0fdfa, #ecfeff)",
+                    border: "1px solid #a7f3d0",
                   }}
                 >
-                  <img
-                    src={img}
-                    alt={`Tyre Scrap Baler ${i + 1}`}
-                    style={{
-                      maxHeight: "85%",
-                      maxWidth: "85%",
-                      objectFit: "contain",
-                    }}
-                  />
+                  <Carousel interval={4000} pause="hover">
+                    {carouselImages.map((img, i) => (
+                      <Carousel.Item key={i}>
+                        <div
+                          style={{
+                            height: "430px",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                          }}
+                        >
+                          <img
+                            src={img}
+                            alt={`Tyre Scrap Baler ${i + 1}`}
+                            style={{
+                              maxHeight: "85%",
+                              maxWidth: "85%",
+                              objectFit: "contain",
+                            }}
+                          />
+                        </div>
+                      </Carousel.Item>
+                    ))}
+                  </Carousel>
                 </div>
-              </Carousel.Item>
-            ))}
-          </Carousel>
+              </div>
+
+              {/* ================= SPEC CARD ================= */}
+              <div className="col-lg-6">
+                <div
+                  className="shadow-lg rounded-4 p-4"
+                  style={{
+                    background: "linear-gradient(145deg, #ecfdf5, #e0f2fe)",
+                    borderLeft: "6px solid #22c55e",
+                  }}
+                >
+                  <h4
+                    className="fw-bold mb-4 text-center"
+                    style={{ color: "#065f46", fontSize: "1.6rem" }}
+                  >
+                    {selected.name}
+                  </h4>
+
+                  <ul className="list-group list-group-flush mb-4">
+                    <li className="list-group-item bg-transparent">
+                      <strong>Machine Type:</strong> {selected.type}
+                    </li>
+                    <li className="list-group-item bg-transparent">
+                      <strong>Compaction Force:</strong> {selected.force}
+                    </li>
+                    <li className="list-group-item bg-transparent">
+                      <strong>Machine Weight:</strong> {selected.weight}
+                    </li>
+                    <li className="list-group-item bg-transparent">
+                      <strong>Description:</strong> {selected.note}
+                    </li>
+                  </ul>
+
+                  <Link
+                    to={`/${selected.name.toLowerCase()}`}
+                    className="btn w-100"
+                    style={{
+                      background: "linear-gradient(135deg, #22c55e, #16a34a)",
+                      color: "#ffffff",
+                      fontWeight: "600",
+                      padding: "10px",
+                      borderRadius: "8px",
+                      boxShadow: "0 4px 12px rgba(34,197,94,0.4)",
+                    }}
+                  >
+                    View Detailed Specifications
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* ================= SPEC CARD ================= */}
-      <div className="col-lg-6">
-        <div
-          className="shadow-lg rounded-4 p-4"
-          style={{
-            background: "linear-gradient(145deg, #ecfdf5, #e0f2fe)",
-            borderLeft: "6px solid #22c55e",
-          }}
-        >
-          <h4
-            className="fw-bold mb-4 text-center"
-            style={{ color: "#065f46", fontSize: "1.6rem" }}
-          >
-            {selected.name}
-          </h4>
-
-          <ul className="list-group list-group-flush mb-4">
-            <li className="list-group-item bg-transparent">
-              <strong>Machine Type:</strong> {selected.type}
-            </li>
-            <li className="list-group-item bg-transparent">
-              <strong>Compaction Force:</strong> {selected.force}
-            </li>
-            <li className="list-group-item bg-transparent">
-              <strong>Machine Weight:</strong> {selected.weight}
-            </li>
-            <li className="list-group-item bg-transparent">
-              <strong>Description:</strong> {selected.note}
-            </li>
-          </ul>
-
-          <Link
-            to={`/${selected.name.toLowerCase()}`}
-            className="btn w-100"
-            style={{
-              background: "linear-gradient(135deg, #22c55e, #16a34a)",
-              color: "#ffffff",
-              fontWeight: "600",
-              padding: "10px",
-              borderRadius: "8px",
-              boxShadow: "0 4px 12px rgba(34,197,94,0.4)",
-            }}
-          >
-            View Detailed Specifications
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
         {/* ================= APPLICATIONS ================= */}
         <div className="container mb-5">
