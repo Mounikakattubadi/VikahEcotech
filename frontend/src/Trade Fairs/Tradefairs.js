@@ -97,7 +97,6 @@ const TradeFairs = () => {
                   <p><strong>Date:</strong> 31-08-2026 to 02-09-2026</p>
                   <p><strong>Location:</strong> Bombay Exhibition Centre
                     Nesco, Mumbai </p>
-                  <p><strong>Hall No:</strong> 4</p>
                   <p><strong>Booth No:</strong> B410</p>
 
                   <a

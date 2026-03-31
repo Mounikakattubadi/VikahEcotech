@@ -31,7 +31,6 @@ function UpcomingTradeFairs() {
       and business opportunities.`,
       date: "31-08-2026 to 02-09-2026",
       location: "Bombay Exhibition Centre (NESCO), Mumbai",
-      hall: "04",
       booth: "B410",
       link: "https://www.bharatrecyclingshow.com/",
       buttonText: "Explore Bharat Recycling Show",
