@@ -14,22 +14,25 @@ import ssshredderhd from "../images/R1.png";
 
 import OtherEqpTemp from "../Other Equipments/OtherEqpTemp";
 
-/* ------------------ NEW IMAGE IMPORTS (per your list) ------------------ */
+/* Category Images */
+import balerCategoryImg from "../images/baler.png";
+import primaryCategoryImg from "../images/shredder_hd.jpg";
+import secondaryCategoryImg from "../images/R4.jpg";
 
 /* PLASTIC BALER */
-import plas_main from '../images/Applications/plas14.webp';
-import plas_img1 from '../images/Applications/plas16.jpg';
-import plas_img2 from '../images/Applications/plas18.jpeg';
+import plas_main from "../images/Applications/plas14.webp";
+import plas_img1 from "../images/Applications/plas16.jpg";
+import plas_img2 from "../images/Applications/plas18.jpeg";
 
 /* METAL BALER */
-import metal_img1 from '../images/Applications/appm1.jpg';
-import metal_img2 from '../images/Applications/appm4.jpg';
-import metal_img3 from '../images/Applications/appm6.jpg';
+import metal_img1 from "../images/Applications/appm1.jpg";
+import metal_img2 from "../images/Applications/appm4.jpg";
+import metal_img3 from "../images/Applications/appm6.jpg";
 
 /* PAPER & CARDBOARD BALER */
-import pcb_main from '../images/Applications/apppcb1.jpg';
-import pcb_img1 from '../images/Applications/apppcb6.webp';
-import pcb_img2 from '../images/Applications/apppcb3.jpg';
+import pcb_main from "../images/Applications/apppcb1.jpg";
+import pcb_img1 from "../images/Applications/apppcb6.webp";
+import pcb_img2 from "../images/Applications/apppcb3.jpg";
 
 /* PRIMARY SHREDDER – plastic */
 import shp_img1 from "../images/Applications/shredp1.png";
@@ -56,24 +59,32 @@ import sec_metal from "../images/Applications/secmetal.webp";
 /* SECONDARY SHREDDER — paper & cardboard */
 import sec_pcb from "../images/Applications/secpcb.webp";
 
-/* --------------------------------------------------------------------- */
-
 const FALLBACK_IMG = Baler;
 
 export default function Ourproducts() {
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const [query, setQuery] = useState("");
+  const [modal, setModal] = useState(null);
+  const [openCategory, setOpenCategory] = useState("baler");
 
   const products = useMemo(
     () => [
       {
         id: "baler",
         title: "BALER",
-        description: "Applications: Tyre scrap, Metal, Plastic, Paper & Cardboard",
+        description:
+          "Applications: Tyre scrap, Metal, Plastic, Paper & Cardboard",
+        categoryImg: balerCategoryImg,
+        keywords: ["baler", "baling machine", "hydraulic baler"],
         applications: [
           {
             id: "tyre-scrap-baler",
             title: "Tyre Scrap Baler",
             blurb: "Hydraulic balers specially configured for tyre scrap.",
+            keywords: ["tyre", "tire", "scrap", "rubber"],
             models: [
               { code: "BLT150", link: "/blt150", img: img1 },
               { code: "BLT200", link: "/blt200", img: img2 },
@@ -84,6 +95,7 @@ export default function Ourproducts() {
             id: "metal-baler",
             title: "Metal Baler",
             blurb: "High-compression balers for metallic scrap.",
+            keywords: ["metal", "steel", "iron", "scrap"],
             models: [
               { code: "BLM150", link: "/blm150", img: metal_img1 },
               { code: "BLM200", link: "/blm200", img: metal_img2 },
@@ -94,6 +106,7 @@ export default function Ourproducts() {
             id: "plastic-baler",
             title: "Plastic Baler",
             blurb: "Continuous & batch balers for plastic flakes and bottles.",
+            keywords: ["plastic", "pet bottle", "bottle", "flakes"],
             models: [
               { code: "BLP30", link: "/blp30", img: plas_main },
               { code: "BLP40", link: "/blp40", img: plas_img1 },
@@ -104,6 +117,7 @@ export default function Ourproducts() {
             id: "paper-cardboard-baler",
             title: "Paper & Cardboard Baler",
             blurb: "Efficient baling for paper and corrugated cardboard.",
+            keywords: ["paper", "cardboard", "carton", "corrugated"],
             models: [
               { code: "BLC30", link: "/blc30", img: pcb_main },
               { code: "BLC40", link: "/blc40", img: pcb_img1 },
@@ -112,16 +126,19 @@ export default function Ourproducts() {
           },
         ],
       },
-
       {
         id: "primary-shredder",
         title: "PRIMARY SHREDDER",
-        description: "Applications: Tyre, Plastic, Metal, Paper & Cardboard, E-Waste",
+        description:
+          "Applications: Tyre, Plastic, Metal, Paper & Cardboard, E-Waste",
+        categoryImg: primaryCategoryImg,
+        keywords: ["primary shredder", "industrial shredder", "crusher"],
         applications: [
           {
             id: "tyre-primary",
             title: "Tyre (Primary)",
             blurb: "High-torque primary shredding for bulky tyres.",
+            keywords: ["tyre", "rubber", "tire"],
             models: [
               { code: "SHT6000", link: "/sht6000", img: shredderhd },
               { code: "SHT8000", link: "/sht8000", img: shredderhd1 },
@@ -132,6 +149,7 @@ export default function Ourproducts() {
             id: "plastic-primary",
             title: "Plastic (Primary)",
             blurb: "Robust primary shredders for large plastic parts.",
+            keywords: ["plastic", "container", "drum"],
             models: [
               { code: "SHP100", link: "/shp100", img: shp_img1 },
               { code: "SHP150", link: "/shp150", img: shp_img2 },
@@ -142,67 +160,40 @@ export default function Ourproducts() {
             id: "metal-primary",
             title: "Metal (Primary)",
             blurb: "Primary metal shredder for bulky scrap.",
-            models: [
-              { code: "SHM4000", link: "/shm4000", img: shm_main },
-            ],
-          },
-          {
-            id: "paper-primary",
-            title: "Paper & Cardboard (Primary)",
-            blurb: "Primary shredding prior to pulping or baling.",
-            models: [
-              { code: "SHC6000", link: "/shc6000", img: shpcb_1 },
-              { code: "SHC8000", link: "/shc8000", img: shpcb_2 },
-              { code: "SHC12000", link: "/shc12000", img: shpcb_3 },
-            ],
-          },
-          {
-            id: "ewaste-primary",
-            title: "E-Waste (Primary)",
-            blurb: "Rugged primary shredders for e-waste pre-processing.",
-            models: [
-              { code: "SHE400", link: "/ewaste", img: she_ewaste1 },
-            ],
+            keywords: ["metal", "steel", "iron"],
+            models: [{ code: "SHM4000", link: "/shm4000", img: shm_main }],
           },
         ],
       },
-
       {
         id: "secondary-shredder",
         title: "SECONDARY SHREDDER",
-        description: "Applications: Rasper, Metal, Plastic, Paper & Cardboard",
+        description:
+          "Applications: Rasper, Metal, Plastic, Paper & Cardboard",
+        categoryImg: secondaryCategoryImg,
+        keywords: ["secondary shredder", "rasper", "fine shredder"],
         applications: [
           {
             id: "rasper",
             title: "Rasper",
             blurb: "Finishing raspers for consistent particle size.",
+            keywords: ["rasper", "rubber powder", "fine shred"],
             models: [
               { code: "RST4000", link: "/rst4000", img: ssshredderhdimg },
               { code: "RST6000", link: "/rst6000", img: ssshredderhd },
             ],
           },
           {
-            id: "metal-secondary",
-            title: "Metal (Secondary)",
-            blurb: "Secondary metal processing and sizing.",
-            models: [
-              { code: "Metal Shredder", link: "/secondarymetalshredder", img: sec_metal },
-            ],
-          },
-          {
             id: "plastic-secondary",
             title: "Plastic (Secondary)",
             blurb: "Plastic finishing and size reduction.",
+            keywords: ["plastic", "flakes", "small plastic"],
             models: [
-              { code: "Plastic Shredder", link: "/secondaryplasticshredder", img: sec_plas },
-            ],
-          },
-          {
-            id: "paper-secondary",
-            title: "Paper & Cardboard (Secondary)",
-            blurb: "Secondary shredding for uniform output.",
-            models: [
-              { code: "Paper & Cardboard Shredder", link: "/secondarypcb", img: sec_pcb },
+              {
+                code: "Plastic Shredder",
+                link: "/secondaryplasticshredder",
+                img: sec_plas,
+              },
             ],
           },
         ],
@@ -211,240 +202,218 @@ export default function Ourproducts() {
     []
   );
 
-  const [query, setQuery] = useState("");
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [activeApp, setActiveApp] = useState(null);
-  const [modal, setModal] = useState(null);
+  const filteredProducts = products
+    .map((category) => {
+      const filteredApplications = category.applications
+        .map((app) => {
+          const filteredModels = app.models.filter((model) => {
+            const search = query.toLowerCase().trim();
 
-  const flatModels = useMemo(() => {
-    const out = [];
-    products.forEach((cat) => {
-      cat.applications.forEach((app) => {
-        app.models.forEach((m) => {
-          out.push({
-            ...m,
-            appId: app.id,
-            appTitle: app.title,
-            categoryId: cat.id,
-            categoryTitle: cat.title,
+            if (!search) return true;
+
+            return (
+              model.code.toLowerCase().includes(search) ||
+              app.title.toLowerCase().includes(search) ||
+              category.title.toLowerCase().includes(search) ||
+              app.blurb.toLowerCase().includes(search) ||
+              category.description.toLowerCase().includes(search) ||
+              category.keywords?.some((k) =>
+                k.toLowerCase().includes(search)
+              ) ||
+              app.keywords?.some((k) =>
+                k.toLowerCase().includes(search)
+              )
+            );
           });
-        });
-      });
-    });
-    return out;
-  }, [products]);
 
-  const q = query.trim().toLowerCase();
-  const filteredModels = flatModels.filter((m) => {
-    if (!q) return true;
-    return (
-      (m.code && m.code.toLowerCase().includes(q)) ||
-      (m.appTitle && m.appTitle.toLowerCase().includes(q)) ||
-      (m.categoryTitle && m.categoryTitle.toLowerCase().includes(q))
-    );
-  });
+          return {
+            ...app,
+            models: filteredModels,
+          };
+        })
+        .filter((app) => app.models.length > 0);
 
-  const visibleByCategory = useMemo(() => {
-    const map = {};
-    filteredModels.forEach((m) => {
-      if (!map[m.categoryId]) map[m.categoryId] = {};
-      if (!map[m.categoryId][m.appId]) map[m.categoryId][m.appId] = [];
-      map[m.categoryId][m.appId].push(m);
-    });
-    return map;
-  }, [filteredModels]);
-
-  const categories = ["all", ...products.map((p) => p.id)];
-
-  const handleCategoryClick = (catId) => {
-    setActiveCategory(catId);
-    setActiveApp(null);
-    setQuery("");
-  };
-
-  const handleAppJump = (appId) => {
-    setActiveApp(appId);
-    const el = document.getElementById(appId);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+      return {
+        ...category,
+        applications: filteredApplications,
+      };
+    })
+    .filter((category) => category.applications.length > 0);
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.containerFull}>
-        <aside className={styles.left}>
+      <div className={styles.heroSection}>
+        <span className={styles.heroBadge}>
+          Industrial Recycling Solutions
+        </span>
 
-          <div className={styles.searchWrap}>
-            <input
-              className={styles.search}
-              placeholder="Search models, app, category..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              aria-label="Search products"
-            />
-            <button className={styles.clearBtn} onClick={() => setQuery("")} aria-label="Clear search">✕</button>
-          </div>
+        <h1 className={styles.pageTitle}>Our Products</h1>
 
-          <div className={styles.catTitle}>Categories</div>
-          <nav className={styles.catList} aria-label="Product categories">
-            {categories.map((c) => {
-              const label = c === "all" ? "All" : products.find((p) => p.id === c).title;
-              return (
-                <button
-                  key={c}
-                  className={`${styles.catItem} ${activeCategory === c ? styles.activeCat : ""}`}
-                  onClick={() => handleCategoryClick(c)}
-                >
-                  {label}
-                </button>
-              );
-            })}
-          </nav>
+        <p className={styles.lead}>
+          Explore our balers and shredders by category. Click a section below
+          to view related products and models.
+        </p>
 
-          <div className={styles.quickTitle}>Quick jump</div>
-          <div className={styles.quickList}>
-            {products.map((p) =>
-              p.applications.map((a) => (
-                <button
-                  key={a.id}
-                  className={styles.quickChip}
-                  onClick={() => {
-                    handleCategoryClick(p.id);
-                    setTimeout(() => handleAppJump(a.id), 120);
-                  }}
-                >
-                  {a.title}
-                </button>
-              ))
-            )}
-          </div>
+        <div className={styles.searchWrapTop}>
+          <input
+            className={styles.search}
+            placeholder="Search models, applications, tyre, metal, plastic..."
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
 
-          <div className={styles.contactCard}>
-            <h4>Need help?</h4>
-            <p>Contact sales for tailored solutions & layouts.</p>
-            <Link to="/contact" className={styles.contactBtn}>
-              Contact Sales
-            </Link>
-          </div>
-        </aside>
+          {query && (
+            <button
+              className={styles.clearBtn}
+              onClick={() => setQuery("")}
+            >
+              ✕
+            </button>
+          )}
+        </div>
+      </div>
 
-        <main className={styles.main}>
-          <div className={styles.header}>
-            <h1 className={styles.pageTitle}>Our Products — Machines & Models</h1>
-            <p className={styles.lead}>
-              Explore our balers and shredders grouped by application. Click any model to view images or open its product page.
-            </p>
-          </div>
+      <div className={styles.mainContent}>
+        {filteredProducts.map((category) => {
+          const isOpen = openCategory === category.id || query;
 
-          <section className={styles.productsArea}>
-            {products.map((cat) => {
-              if (activeCategory !== "all" && activeCategory !== cat.id) return null;
-
-              const apps = cat.applications.filter((app) => {
-                if (!q) return true;
-                return visibleByCategory[cat.id] && visibleByCategory[cat.id][app.id];
-              });
-              if (q && apps.length === 0) return null;
-
-              return (
-                <div key={cat.id} className={styles.categoryBlock}>
-                  <div className={styles.categoryHeader}>
-                    <div>
-                      <h2 className={styles.categoryTitle}>{cat.title}</h2>
-                      <div className={styles.categoryDesc}>{cat.description}</div>
-                    </div>
-
-                    <div className={styles.categoryActions}>
-                      <Link to="/other-equipment" className={styles.linkGhost}>
-                        Other equipment
-                      </Link>
-                    </div>
+          return (
+            <div key={category.id} className={styles.dropdownSection}>
+              <button
+                className={
+                  isOpen
+                    ? `${styles.dropdownHeader} ${styles.dropdownHeaderActive}`
+                    : styles.dropdownHeader
+                }
+                onClick={() =>
+                  setOpenCategory(isOpen ? null : category.id)
+                }
+              >
+                <div className={styles.dropdownLeft}>
+                  <div className={styles.dropdownIcon}>
+                    <img
+                      src={category.categoryImg}
+                      alt={category.title}
+                      className={styles.dropdownIconImg}
+                    />
                   </div>
 
-                  <div className={styles.appsWrap}>
-                    {apps.map((app) => {
-                      const models = q
-                        ? (visibleByCategory[cat.id] && visibleByCategory[cat.id][app.id]) || []
-                        : app.models;
-
-                      if (!models || models.length === 0) return null;
-
-                      return (
-                        <div id={app.id} key={app.id} className={styles.application}>
-                          <div className={styles.appHeader}>
-                            <div>
-                              <h3 className={styles.appTitle}>{app.title}</h3>
-                              {app.blurb && <div className={styles.appBlurb}>{app.blurb}</div>}
-                            </div>
-                            <div>
-                              <button
-                                className={styles.viewAllModels}
-                                onClick={() => {
-                                  setActiveApp(app.id === activeApp ? null : app.id);
-                                  const el = document.getElementById(app.id);
-                                  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-                                }}
-                                aria-expanded={activeApp === app.id}
-                              >
-                                {activeApp === app.id ? "Collapse" : `${models.length} model(s)`}
-                              </button>
-                            </div>
-                          </div>
-
-                          <div className={styles.modelGrid}>
-                            {models.map((m) => (
-                              <article key={m.code} className={styles.card}>
-                                <div
-                                  className={styles.cardImg}
-                                  onClick={() => setModal({ ...m, appTitle: app.title, categoryTitle: cat.title })}
-                                  role="button"
-                                  tabIndex={0}
-                                  onKeyDown={(e) => { if (e.key === "Enter") setModal({ ...m, appTitle: app.title, categoryTitle: cat.title }); }}
-                                >
-                                  <img src={m.img || FALLBACK_IMG} alt={m.code} />
-                                </div>
-
-                                <div className={styles.cardBody}>
-                                  <div className={styles.modelRow}>
-                                    <div className={styles.modelCode}>{m.code}</div>
-                                    <Link to={m.link} className={styles.openLink} title={`Open ${m.code}`}>Open →</Link>
-                                  </div>
-                                  <div className={styles.modelMeta}>
-                                    <span className={styles.metaChip}>{app.title}</span>
-                                    <span className={styles.metaMuted}>{cat.title}</span>
-                                  </div>
-                                </div>
-                              </article>
-                            ))}
-                          </div>
-                        </div>
-                      );
-                    })}
+                  <div>
+                    <h2>{category.title}</h2>
+                    <p>{category.description}</p>
                   </div>
                 </div>
-              );
-            })}
-          </section>
 
-          <div className={styles.otherSection}>
-            <h2 className={styles.otherTitle}>Other Equipment</h2>
-            <OtherEqpTemp />
-          </div>
-        </main>
+                <span
+                  className={
+                    isOpen
+                      ? `${styles.dropdownArrow} ${styles.rotateArrow}`
+                      : styles.dropdownArrow
+                  }
+                >
+                  ▼
+                </span>
+              </button>
+
+              {isOpen && (
+                <div className={styles.dropdownBody}>
+                  {category.applications.map((app) => (
+                    <div key={app.id} className={styles.applicationBlock}>
+                      <div className={styles.applicationHeader}>
+                        <div>
+                          <h3>{app.title}</h3>
+                          <p>{app.blurb}</p>
+                        </div>
+                      </div>
+
+                      <div className={styles.modelGrid}>
+                        {app.models.map((model) => (
+                          <article key={model.code} className={styles.card}>
+                            <div
+                              className={styles.cardImg}
+                              onClick={() =>
+                                setModal({
+                                  ...model,
+                                  appTitle: app.title,
+                                  categoryTitle: category.title,
+                                })
+                              }
+                            >
+                              <img
+                                src={model.img || FALLBACK_IMG}
+                                alt={model.code}
+                              />
+                            </div>
+
+                            <div className={styles.cardBody}>
+                              <div className={styles.modelCode}>
+                                {model.code}
+                              </div>
+
+                              <div className={styles.modelMeta}>
+                                <span className={styles.metaChip}>
+                                  {app.title}
+                                </span>
+                              </div>
+
+                              <Link
+                                to={model.link}
+                                className={styles.openLink}
+                              >
+                                View Product →
+                              </Link>
+                            </div>
+                          </article>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
+
+        <div className={styles.otherSection}>
+          <h2 className={styles.otherTitle}>Other Equipment</h2>
+          <OtherEqpTemp />
+        </div>
       </div>
 
       {modal && (
-        <div className={styles.modalBackdrop} onClick={() => setModal(null)} role="dialog" aria-modal="true">
-          <div className={styles.modalCard} onClick={(e) => e.stopPropagation()}>
-            <button className={styles.modalClose} onClick={() => setModal(null)} aria-label="Close">✕</button>
+        <div
+          className={styles.modalBackdrop}
+          onClick={() => setModal(null)}
+        >
+          <div
+            className={styles.modalCard}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className={styles.modalClose}
+              onClick={() => setModal(null)}
+            >
+              ✕
+            </button>
+
             <div className={styles.modalHeader}>
               <strong>{modal.code}</strong>
-              <span className={styles.modalSub}>{modal.appTitle} • {modal.categoryTitle}</span>
+              <span>
+                {modal.appTitle} • {modal.categoryTitle}
+              </span>
             </div>
+
             <div className={styles.modalBody}>
-              <img src={modal.img || FALLBACK_IMG} alt={modal.code} />
+              <img
+                src={modal.img || FALLBACK_IMG}
+                alt={modal.code}
+              />
             </div>
+
             <div className={styles.modalFooter}>
-              <Link to={modal.link} className={styles.btnPrimary}>View product page</Link>
+              <Link to={modal.link} className={styles.btnPrimary}>
+                View Product Page
+              </Link>
             </div>
           </div>
         </div>
