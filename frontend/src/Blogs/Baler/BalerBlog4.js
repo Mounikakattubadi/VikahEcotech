@@ -82,7 +82,6 @@ const BalerBlog4 = () => {
 
   const sections = [
     { id: "introduction", title: "Introduction" },
-    { id: "benefits", title: "Key Benefits" },
     { id: "importance", title: "Importance of Tyre Balers" },
     { id: "operation", title: "How Tyre Balers Operate" },
     { id: "process", title: "Working Process" },
@@ -124,7 +123,7 @@ const BalerBlog4 = () => {
 
   return (
     <div className={styles.pageWrapper}>
-<Helmet>
+      <Helmet>
         {/* SEO Title */}
         <title>
           Tyre Bailing Machines for Tyre scrap Management & Recycling | Vikah
@@ -283,12 +282,42 @@ const BalerBlog4 = () => {
             </div>
           </div>
 
-          <section id="benefits" className={styles.sectionCard}>
+          {/* INTRODUCTION */}
+          <section id="introduction" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Introduction</span>
+              <h2>Industrial Waste Requires Smarter Management</h2>
+            </div>
+
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={BlogImg1} alt="Compact tyre baler" />
+                <span>Efficient tyre scrap handling in industrial facilities</span>
+              </div>
+
+              <div className={styles.textCard}>
+                <p>
+                  Industrial facilities generate large volumes of tyre scrap daily. Managing this efficiently is crucial for
+                  operational flow, safety, and cost savings. Tyre balers provide a reliable solution by compressing tyres
+                  and rubber scrap into compact, manageable bales.
+                </p>
+
+                <p>
+                  By implementing tyre balers, facilities can streamline recycling processes, optimize storage, and reduce
+                  transportation costs while maintaining compliance with environmental standards.
+                </p>
+
+              </div>
+            </div>
+          </section>
+
+          <section id="importance" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Benefits</span>
               <h2>Why Industries Prefer Tyre Balers</h2>
             </div>
-
+            <p>Tyre balers transform loose tyre scrap into standardized bales, improving space utilization and workflow efficiency.
+              This ensures safer, cleaner, and more organized industrial environments.</p>
             <div className={styles.benefitsGrid}>
               {benefitsData.map((item, index) => (
                 <div key={index} className={styles.benefitCard}>
@@ -300,6 +329,7 @@ const BalerBlog4 = () => {
             </div>
           </section>
 
+          {/* Operation */}
           <section id="operation" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -311,16 +341,17 @@ const BalerBlog4 = () => {
                 <span className={styles.sectionTag}>Operation</span>
                 <h2>How Tyre Balers Operate</h2>
                 <p>
-                  Operators feed shredded tyres or rubber into the baler, where
-                  hydraulic systems compress the material into dense bales.
+                  Operators feed shredded tyres or mixed rubber into the baler, which compresses
+                  the material into dense, uniform bales. Straps or wires secure each bale for storage or transport.
                 </p>
                 <p>
-                  These compact bales are easier to store, transport, and recycle.
+                  Advanced tyre balers may include automation and monitoring features to ensure consistent results.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* Working Process */}
           <section id="process" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Working Process</span>
@@ -338,12 +369,25 @@ const BalerBlog4 = () => {
             </div>
           </section>
 
+          {/* Workflow & Space Optimization */}
+          <section id="workflow" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Workflow & Space Optimization</span>
+            </div>
+            <p>Compact bales occupy significantly less space, allowing better utilization of factory floors and storage areas. Organized bales reduce clutter,
+              prevent bottlenecks, and improve overall workflow efficiency.</p>            <div className={styles.highlightBox}>
+              <strong>Tip:</strong> Stack tyre bales carefully to maximize vertical space while maintaining safe access paths for equipment and personnel.
+            </div>
+          </section>
+
+          {/* Cost Savings */}
           <section id="cost" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Cost Savings</span>
               <h2>Cost & Transport Efficiency</h2>
             </div>
-
+            <p>By reducing the number of transport trips required, tyre balers save fuel, labor, and equipment costs. Standardized bales simplify
+              logistics planning, loading, and unloading operations, providing measurable cost savings.</p>
             <div className={styles.statsGrid}>
               <div className={styles.statCard}>
                 <h3>70%</h3>
@@ -362,6 +406,79 @@ const BalerBlog4 = () => {
             </div>
           </section>
 
+          {/* Safety Advantages */}
+          <section id="safety" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Safety Advantages</span>
+            </div>
+            <p>Tyre balers maintain clean and organized workplaces, reducing hazards such as slips and trips.
+              Safety features like emergency stops and interlocks ensure operators remain protected during operation.</p>
+          </section>
+
+          {/* Sustainability & Recycling */}
+          <section id="sustainability" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Sustainability & Recycling</span>
+            </div>
+            <p>Baled tyre scrap is easier to recycle, reduces landfill dependency, and supports environmental responsibility.
+              Using tyre balers aligns facilities with circular economy practices and sustainability goals.</p>
+          </section>
+
+          {/* Maintenance & Reliability */}
+          <section id="maintenance" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Maintenance & Reliability</span>
+            </div>
+            <p>Tyre balers are designed for durability and minimal maintenance. Predictive maintenance alerts and robust components
+              ensure reliable operations and reduce unplanned downtime.</p>
+          </section>
+
+          {/* Long-Term Benefits*/}
+          <section id="long-term" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Long-Term Benefits</span>
+              <h2>Long-Term Benefits</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li> Reduces operational costs over time</li>
+              <li> Enhances workflow efficiency and productivity</li>
+              <li> Improves safety and compliance</li>
+              <li>Maximizes resale value of tyre scrap </li>
+              <li>Supports sustainability and environmental goals </li>
+            </ul>
+          </section>
+
+          {/* Why Choose Vikah Ecotech */}
+          <section id="why-us" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Why Choose Vikah Ecotech</span>
+              <h2>Why Choose Vikah Ecotech</h2>
+            </div>
+            <p>Our tyre balers are reliable, efficient, and backed by expert support.
+              We offer solutions for facilities of all sizes, ensuring long-term operational benefits and high-quality performance.</p>
+          </section>
+
+          {/* CONCLUSION */}
+          <section id="conclusion" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={BlogImg4} alt="Optimized tyre bales" />
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Conclusion</span>
+                <h2>Final Thoughts</h2>
+                <p>Tyre balers are a vital investment for companies looking to optimize waste management,
+                  reduce costs, and improve operational efficiency. By compressing tyre scrap into compact bales,
+                  facilities achieve safer, organized, and more sustainable workflows.</p>
+
+                <a href="#faqs" className={styles.primaryBtn}>
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </section>
+
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>FAQs</span>
@@ -372,9 +489,8 @@ const BalerBlog4 = () => {
               {faqsData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`${styles.faqItem} ${
-                    openFAQ === index ? styles.activeFAQ : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
+                    }`}
                 >
                   <div
                     className={styles.faqQuestion}
