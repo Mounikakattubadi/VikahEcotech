@@ -68,7 +68,8 @@ export default function Ourproducts() {
 
   const [query, setQuery] = useState("");
   const [modal, setModal] = useState(null);
-  const [openCategory, setOpenCategory] = useState("baler");
+  const [openCategory, setOpenCategory] = useState(null);
+  const [openApplication, setOpenApplication] = useState(null);
 
   const products = useMemo(
     () => [
@@ -78,13 +79,11 @@ export default function Ourproducts() {
         description:
           "Applications: Tyre scrap, Metal, Plastic, Paper & Cardboard",
         categoryImg: balerCategoryImg,
-        keywords: ["baler", "baling machine", "hydraulic baler"],
         applications: [
           {
             id: "tyre-scrap-baler",
             title: "Tyre Scrap Baler",
             blurb: "Hydraulic balers specially configured for tyre scrap.",
-            keywords: ["tyre", "tire", "scrap", "rubber"],
             models: [
               { code: "BLT150", link: "/blt150", img: img1 },
               { code: "BLT200", link: "/blt200", img: img2 },
@@ -92,21 +91,9 @@ export default function Ourproducts() {
             ],
           },
           {
-            id: "metal-baler",
-            title: "Metal Baler",
-            blurb: "High-compression balers for metallic scrap.",
-            keywords: ["metal", "steel", "iron", "scrap"],
-            models: [
-              { code: "BLM150", link: "/blm150", img: metal_img1 },
-              { code: "BLM200", link: "/blm200", img: metal_img2 },
-              { code: "BLM250", link: "/blm250", img: metal_img3 },
-            ],
-          },
-          {
             id: "plastic-baler",
-            title: "Plastic Baler",
+            title: "Plastic Balers",
             blurb: "Continuous & batch balers for plastic flakes and bottles.",
-            keywords: ["plastic", "pet bottle", "bottle", "flakes"],
             models: [
               { code: "BLP30", link: "/blp30", img: plas_main },
               { code: "BLP40", link: "/blp40", img: plas_img1 },
@@ -115,13 +102,22 @@ export default function Ourproducts() {
           },
           {
             id: "paper-cardboard-baler",
-            title: "Paper & Cardboard Baler",
+            title: "Paper & Cardboard Balers",
             blurb: "Efficient baling for paper and corrugated cardboard.",
-            keywords: ["paper", "cardboard", "carton", "corrugated"],
             models: [
               { code: "BLC30", link: "/blc30", img: pcb_main },
               { code: "BLC40", link: "/blc40", img: pcb_img1 },
               { code: "BLC50", link: "/blc50", img: pcb_img2 },
+            ],
+          },
+          {
+            id: "metal-baler",
+            title: "Metal Balers",
+            blurb: "High-compression balers for metallic scrap.",
+            models: [
+              { code: "BLM150", link: "/blm150", img: metal_img1 },
+              { code: "BLM200", link: "/blm200", img: metal_img2 },
+              { code: "BLM250", link: "/blm250", img: metal_img3 },
             ],
           },
         ],
@@ -132,13 +128,11 @@ export default function Ourproducts() {
         description:
           "Applications: Tyre, Plastic, Metal, Paper & Cardboard, E-Waste",
         categoryImg: primaryCategoryImg,
-        keywords: ["primary shredder", "industrial shredder", "crusher"],
         applications: [
           {
             id: "tyre-primary",
-            title: "Tyre (Primary)",
+            title: "Tyre Shredders",
             blurb: "High-torque primary shredding for bulky tyres.",
-            keywords: ["tyre", "rubber", "tire"],
             models: [
               { code: "SHT6000", link: "/sht6000", img: shredderhd },
               { code: "SHT8000", link: "/sht8000", img: shredderhd1 },
@@ -147,9 +141,8 @@ export default function Ourproducts() {
           },
           {
             id: "plastic-primary",
-            title: "Plastic (Primary)",
+            title: "Plastic Shredders",
             blurb: "Robust primary shredders for large plastic parts.",
-            keywords: ["plastic", "container", "drum"],
             models: [
               { code: "SHP100", link: "/shp100", img: shp_img1 },
               { code: "SHP150", link: "/shp150", img: shp_img2 },
@@ -158,10 +151,19 @@ export default function Ourproducts() {
           },
           {
             id: "metal-primary",
-            title: "Metal (Primary)",
+            title: "Metal Shredders",
             blurb: "Primary metal shredder for bulky scrap.",
-            keywords: ["metal", "steel", "iron"],
             models: [{ code: "SHM4000", link: "/shm4000", img: shm_main }],
+          },
+          {
+            id: "paper-primary",
+            title: "Paper & Cardboard Shredders",
+            blurb: "Primary shredding prior to pulping or baling.",
+            models: [
+              { code: "SHC6000", link: "/shc6000", img: shpcb_1 },
+              { code: "SHC8000", link: "/shc8000", img: shpcb_2 },
+              { code: "SHC12000", link: "/shc12000", img: shpcb_3 },
+            ],
           },
         ],
       },
@@ -171,23 +173,32 @@ export default function Ourproducts() {
         description:
           "Applications: Rasper, Metal, Plastic, Paper & Cardboard",
         categoryImg: secondaryCategoryImg,
-        keywords: ["secondary shredder", "rasper", "fine shredder"],
         applications: [
           {
             id: "rasper",
-            title: "Rasper",
+            title: "Rasper Machines",
             blurb: "Finishing raspers for consistent particle size.",
-            keywords: ["rasper", "rubber powder", "fine shred"],
             models: [
               { code: "RST4000", link: "/rst4000", img: ssshredderhdimg },
               { code: "RST6000", link: "/rst6000", img: ssshredderhd },
             ],
           },
           {
+            id: "metal-secondary",
+            title: "Metal Shredders",
+            blurb: "Secondary metal processing and sizing.",
+            models: [
+              {
+                code: "Metal Shredder",
+                link: "/secondarymetalshredder",
+                img: sec_metal,
+              },
+            ],
+          },
+          {
             id: "plastic-secondary",
-            title: "Plastic (Secondary)",
+            title: "Plastic Shredders",
             blurb: "Plastic finishing and size reduction.",
-            keywords: ["plastic", "flakes", "small plastic"],
             models: [
               {
                 code: "Plastic Shredder",
@@ -196,49 +207,23 @@ export default function Ourproducts() {
               },
             ],
           },
+          {
+            id: "paper-secondary",
+            title: "Paper & Cardboard Shredders",
+            blurb: "Secondary shredding for uniform output.",
+            models: [
+              {
+                code: "Paper & Cardboard Shredder",
+                link: "/secondarypcb",
+                img: sec_pcb,
+              },
+            ],
+          },
         ],
       },
     ],
     []
   );
-
-  const filteredProducts = products
-    .map((category) => {
-      const filteredApplications = category.applications
-        .map((app) => {
-          const filteredModels = app.models.filter((model) => {
-            const search = query.toLowerCase().trim();
-
-            if (!search) return true;
-
-            return (
-              model.code.toLowerCase().includes(search) ||
-              app.title.toLowerCase().includes(search) ||
-              category.title.toLowerCase().includes(search) ||
-              app.blurb.toLowerCase().includes(search) ||
-              category.description.toLowerCase().includes(search) ||
-              category.keywords?.some((k) =>
-                k.toLowerCase().includes(search)
-              ) ||
-              app.keywords?.some((k) =>
-                k.toLowerCase().includes(search)
-              )
-            );
-          });
-
-          return {
-            ...app,
-            models: filteredModels,
-          };
-        })
-        .filter((app) => app.models.length > 0);
-
-      return {
-        ...category,
-        applications: filteredApplications,
-      };
-    })
-    .filter((category) => category.applications.length > 0);
 
   return (
     <div className={styles.wrapper}>
@@ -250,14 +235,14 @@ export default function Ourproducts() {
         <h1 className={styles.pageTitle}>Our Products</h1>
 
         <p className={styles.lead}>
-          Explore our balers and shredders by category. Click a section below
-          to view related products and models.
+          Explore our balers and shredders by category. Open a section to view
+          machines and models.
         </p>
 
         <div className={styles.searchWrapTop}>
           <input
             className={styles.search}
-            placeholder="Search models, applications, tyre, metal, plastic..."
+            placeholder="Search models, categories, plastic, tyre..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
@@ -265,7 +250,11 @@ export default function Ourproducts() {
           {query && (
             <button
               className={styles.clearBtn}
-              onClick={() => setQuery("")}
+              onClick={() => {
+                setQuery("");
+                setOpenCategory(null);
+                setOpenApplication(null);
+              }}
             >
               ✕
             </button>
@@ -274,20 +263,45 @@ export default function Ourproducts() {
       </div>
 
       <div className={styles.mainContent}>
-        {filteredProducts.map((category) => {
-          const isOpen = openCategory === category.id || query;
+        {products.map((category) => {
+          const categoryMatch =
+            query === "" ||
+            category.title.toLowerCase().includes(query.toLowerCase()) ||
+            category.description.toLowerCase().includes(query.toLowerCase());
+
+          const filteredApplications = category.applications.filter((app) => {
+            const appMatch =
+              app.title.toLowerCase().includes(query.toLowerCase()) ||
+              app.blurb.toLowerCase().includes(query.toLowerCase());
+
+            const modelMatch = app.models.some((model) =>
+              model.code.toLowerCase().includes(query.toLowerCase())
+            );
+
+            return query === "" || appMatch || modelMatch;
+          });
+
+          if (query && !categoryMatch && filteredApplications.length === 0) {
+            return null;
+          }
+
+          const isCategoryOpen =
+            openCategory === category.id || query !== "";
 
           return (
             <div key={category.id} className={styles.dropdownSection}>
               <button
                 className={
-                  isOpen
+                  isCategoryOpen
                     ? `${styles.dropdownHeader} ${styles.dropdownHeaderActive}`
                     : styles.dropdownHeader
                 }
-                onClick={() =>
-                  setOpenCategory(isOpen ? null : category.id)
-                }
+                onClick={() => {
+                  setOpenCategory(
+                    openCategory === category.id ? null : category.id
+                  );
+                  setOpenApplication(null);
+                }}
               >
                 <div className={styles.dropdownLeft}>
                   <div className={styles.dropdownIcon}>
@@ -306,7 +320,7 @@ export default function Ourproducts() {
 
                 <span
                   className={
-                    isOpen
+                    isCategoryOpen
                       ? `${styles.dropdownArrow} ${styles.rotateArrow}`
                       : styles.dropdownArrow
                   }
@@ -315,59 +329,95 @@ export default function Ourproducts() {
                 </span>
               </button>
 
-              {isOpen && (
+              {isCategoryOpen && (
                 <div className={styles.dropdownBody}>
-                  {category.applications.map((app) => (
-                    <div key={app.id} className={styles.applicationBlock}>
-                      <div className={styles.applicationHeader}>
-                        <div>
-                          <h3>{app.title}</h3>
-                          <p>{app.blurb}</p>
-                        </div>
-                      </div>
+                  {filteredApplications.map((app) => {
+                    const isApplicationOpen =
+                      openApplication === app.id || query !== "";
 
-                      <div className={styles.modelGrid}>
-                        {app.models.map((model) => (
-                          <article key={model.code} className={styles.card}>
-                            <div
-                              className={styles.cardImg}
-                              onClick={() =>
-                                setModal({
-                                  ...model,
-                                  appTitle: app.title,
-                                  categoryTitle: category.title,
-                                })
-                              }
-                            >
-                              <img
-                                src={model.img || FALLBACK_IMG}
-                                alt={model.code}
-                              />
+                    return (
+                      <div
+                        key={app.id}
+                        className={styles.applicationDropdown}
+                      >
+                        <button
+                          className={
+                            isApplicationOpen
+                              ? `${styles.applicationToggle} ${styles.applicationToggleActive}`
+                              : styles.applicationToggle
+                          }
+                          onClick={() =>
+                            setOpenApplication(
+                              openApplication === app.id ? null : app.id
+                            )
+                          }
+                        >
+                          <div>
+                            <h3>{app.title}</h3>
+                            <p>{app.blurb}</p>
+                          </div>
+
+                          <span
+                            className={
+                              isApplicationOpen
+                                ? `${styles.dropdownArrow} ${styles.rotateArrow}`
+                                : styles.dropdownArrow
+                            }
+                          >
+                            ▼
+                          </span>
+                        </button>
+
+                        {isApplicationOpen && (
+                          <div className={styles.applicationContent}>
+                            <div className={styles.modelGrid}>
+                              {app.models.map((model) => (
+                                <article
+                                  key={model.code}
+                                  className={styles.card}
+                                >
+                                  <div
+                                    className={styles.cardImg}
+                                    onClick={() =>
+                                      setModal({
+                                        ...model,
+                                        appTitle: app.title,
+                                        categoryTitle: category.title,
+                                      })
+                                    }
+                                  >
+                                    <img
+                                      src={model.img || FALLBACK_IMG}
+                                      alt={model.code}
+                                    />
+                                  </div>
+
+                                  <div className={styles.cardBody}>
+                                    <div className={styles.modelCode}>
+                                      {model.code}
+                                    </div>
+
+                                    <div className={styles.modelMeta}>
+                                      <span className={styles.metaChip}>
+                                        {app.title}
+                                      </span>
+                                    </div>
+
+                                    <Link
+                                      to={model.link}
+                                      className={styles.openLink}
+                                    >
+                                      View Product →
+                                    </Link>
+                                  </div>
+                                </article>
+                              ))}
                             </div>
-
-                            <div className={styles.cardBody}>
-                              <div className={styles.modelCode}>
-                                {model.code}
-                              </div>
-
-                              <div className={styles.modelMeta}>
-                                <span className={styles.metaChip}>
-                                  {app.title}
-                                </span>
-                              </div>
-
-                              <Link
-                                to={model.link}
-                                className={styles.openLink}
-                              >
-                                View Product →
-                              </Link>
-                            </div>
-                          </article>
-                        ))}
+                          </div>
+                        )}
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>
