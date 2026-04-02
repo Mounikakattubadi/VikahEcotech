@@ -9,349 +9,389 @@ import MSW2 from "../../images/Applications/pcb1.webp";
 import MSW3 from "../../images/Applications/pcb3.webp";
 
 const faqsData = [
-    {
-        question: "What is municipal solid waste management?",
-        answer:
-            "Municipal Solid Waste Management (MSWM) refers to the systematic collection, segregation, processing, recycling, and disposal of waste generated from households, industries, and commercial establishments.",
-    },
-    {
-        question: "Why are shredders important in waste management?",
-        answer:
-            "Shredders reduce waste size, improve sorting efficiency, and enhance recycling output by preparing materials for further processing.",
-    },
-    {
-        question: "How do balers help in recycling?",
-        answer:
-            "Balers compress waste into compact bales, reducing storage space and lowering transportation costs significantly.",
-    },
-    {
-        question: "Can MSWM reduce environmental pollution?",
-        answer:
-            "Yes, proper waste management reduces landfill waste, minimizes pollution, and supports sustainable environmental practices.",
-    },
+  {
+    question: "What is municipal solid waste management?",
+    answer:
+      "Municipal Solid Waste Management (MSWM) refers to the systematic collection, segregation, processing, recycling, and disposal of waste generated from households, industries, and commercial establishments.",
+  },
+  {
+    question: "Why are shredders important in waste management?",
+    answer:
+      "Shredders reduce waste size, improve sorting efficiency, and enhance recycling output by preparing materials for further processing.",
+  },
+  {
+    question: "How do balers help in recycling?",
+    answer:
+      "Balers compress waste into compact bales, reducing storage space and lowering transportation costs significantly.",
+  },
+  {
+    question: "Can MSWM reduce environmental pollution?",
+    answer:
+      "Yes, proper waste management reduces landfill waste, minimizes pollution, and supports sustainable environmental practices.",
+  },
+];
+
+const benefitsData = [
+  {
+    title: "Better Recycling",
+    icon: "♻️",
+    text: "Improves sorting, segregation, and recycling output efficiently.",
+  },
+  {
+    title: "Lower Costs",
+    icon: "💰",
+    text: "Reduces labor, transport, and waste handling expenses.",
+  },
+  {
+    title: "Less Space Usage",
+    icon: "📦",
+    text: "Compacted waste takes up far less storage space.",
+  },
+  {
+    title: "Cleaner Environment",
+    icon: "🌍",
+    text: "Reduces pollution and landfill dependency significantly.",
+  },
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Collection",
+    text: "Waste is collected from households, industries, and commercial facilities.",
+  },
+  {
+    step: "02",
+    title: "Segregation",
+    text: "Waste is separated into recyclable, biodegradable, and non-recyclable categories.",
+  },
+  {
+    step: "03",
+    title: "Shredding & Baling",
+    text: "Machines reduce waste size and compress it into manageable bales.",
+  },
+  {
+    step: "04",
+    title: "Recycling & Disposal",
+    text: "Reusable materials are recovered while the remaining waste is safely disposed.",
+  },
 ];
 
 const MSWBlog = () => {
-    useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => window.scrollTo(0, 0), []);
 
-    const sections = [
-        { id: "introduction", title: "Introduction" },
-        { id: "challenge", title: "MSW Challenges" },
-        { id: "types", title: "Types of Waste" },
-        { id: "process", title: "Waste Management Process" },
-        { id: "equipment", title: "Balers & Shredders" },
-        { id: "space", title: "Space Management" },
-        { id: "cost", title: "Cost Optimization" },
-        { id: "value", title: "Recycling Value" },
-        { id: "safety", title: "Safety & Compliance" },
-        { id: "sustainability", title: "Sustainability" },
-        { id: "why-us", title: "Why Vikah Ecotech" },
-        { id: "conclusion", title: "Conclusion" },
-        { id: "faqs", title: "FAQs" },
-    ];
+  const sections = [
+    { id: "introduction", title: "Introduction" },
+    { id: "benefits", title: "Key Benefits" },
+    { id: "challenge", title: "MSW Challenges" },
+    { id: "types", title: "Types of Waste" },
+    { id: "process", title: "Waste Management Process" },
+    { id: "equipment", title: "Balers & Shredders" },
+    { id: "space", title: "Space Management" },
+    { id: "cost", title: "Cost Optimization" },
+    { id: "value", title: "Recycling Value" },
+    { id: "safety", title: "Safety & Compliance" },
+    { id: "sustainability", title: "Sustainability" },
+    { id: "why-us", title: "Why Vikah Ecotech" },
+    { id: "conclusion", title: "Conclusion" },
+    { id: "faqs", title: "FAQs" },
+  ];
 
-    const [activeSection, setActiveSection] = useState(sections[0].id);
-    const [openFAQ, setOpenFAQ] = useState(null);
+  const [activeSection, setActiveSection] = useState(sections[0].id);
+  const [openFAQ, setOpenFAQ] = useState(null);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            let scrollPos = window.scrollY + 150;
-            for (let i = sections.length - 1; i >= 0; i--) {
-                const elem = document.getElementById(sections[i].id);
-                if (elem && elem.offsetTop <= scrollPos) {
-                    setActiveSection(sections[i].id);
-                    break;
-                }
-            }
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      let scrollPos = window.scrollY + 150;
 
-    const toggleFAQ = (index) => {
-        setOpenFAQ(openFAQ === index ? null : index);
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const elem = document.getElementById(sections[i].id);
+
+        if (elem && elem.offsetTop <= scrollPos) {
+          setActiveSection(sections[i].id);
+          break;
+        }
+      }
     };
 
-    return (
-        <div className={styles.pageWrapper}>
-            <Helmet>
-                {/* SEO Title */}
-                <title>
-                    Municipal Solid Waste Management in India | Balers & Shredders for Recycling | Vikah Ecotech
-                </title>
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [sections]);
 
-                {/* Meta Description */}
-                <meta
-                    name="description"
-                    content="Explore municipal solid waste management in India using advanced balers and shredders. Improve recycling efficiency, reduce operational costs, and achieve sustainable waste management solutions."
-                />
+  const toggleFAQ = (index) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
 
-                {/* Keywords */}
-                <meta
-                    name="keywords"
-                    content="municipal solid waste management India, MSW recycling solutions, industrial balers and shredders, waste recycling machines India, solid waste management equipment, recycling machinery India"
-                />
+  return (
+    <div className={styles.pageWrapper}>
+      <Helmet>
+        <title>
+          Municipal Solid Waste Management in India | Balers & Shredders for Recycling | Vikah Ecotech
+        </title>
 
-                {/* Canonical */}
-                <link
-                    rel="canonical"
-                    href="https://vikahecotech.com/munipical-waste-management"
-                />
+        <meta
+          name="description"
+          content="Explore municipal solid waste management in India using advanced balers and shredders. Improve recycling efficiency, reduce operational costs, and achieve sustainable waste management solutions."
+        />
 
-                {/* Open Graph */}
-                <meta
-                    property="og:title"
-                    content="Municipal Solid Waste Management with Balers & Shredders | Vikah Ecotech"
-                />
-                <meta
-                    property="og:description"
-                    content="Discover how balers and shredders improve municipal solid waste management, recycling efficiency, and sustainability across industries in India."
-                />
-                <meta property="og:type" content="article" />
-                <meta
-                    property="og:url"
-                    content="https://vikahecotech.com/munipical-waste-management"
-                />
+        <meta
+          name="keywords"
+          content="municipal solid waste management India, MSW recycling solutions, industrial balers and shredders, waste recycling machines India, solid waste management equipment, recycling machinery India"
+        />
 
-                {/* Article Structured Data */}
-                <script type="application/ld+json">
-                    {JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "Article",
-                        headline:
-                            "Municipal Solid Waste Management in India with Balers & Shredders",
-                        description:
-                            "Learn how municipal solid waste management systems use industrial balers and shredders to improve recycling efficiency, reduce waste volume, and support sustainability in India.",
-                        author: {
-                            "@type": "Organization",
-                            name: "Vikah Ecotech",
-                        },
-                        publisher: {
-                            "@type": "Organization",
-                            name: "Vikah Ecotech",
-                        },
-                        mainEntityOfPage: {
-                            "@type": "WebPage",
-                            "@id":
-                                "https://vikahecotech.com/munipical-waste-management",
-                        },
-                    })}
-                </script>
-            </Helmet>
+        <link
+          rel="canonical"
+          href="https://vikahecotech.com/munipical-waste-management"
+        />
 
-            {/* LEFT NAV */}
-            <nav className={styles.toc}>
-                <h3>Explore Sections</h3>
-                <ul>
-                    {sections.map((sec) => (
-                        <li key={sec.id}>
-                            <a
-                                href={`#${sec.id}`}
-                                className={activeSection === sec.id ? styles.active : ""}
-                            >
-                                {sec.title}
-                            </a>
-                        </li>
-                    ))}
-                </ul>
-            </nav>
+        <meta
+          property="og:title"
+          content="Municipal Solid Waste Management with Balers & Shredders | Vikah Ecotech"
+        />
 
-            {/* BLOG CONTENT */}
-            <div className={styles.blogWrapper}>
-                <div className={styles.blogInner}>
-                    <h1 className="mulch-heading">
-                        Municipal Solid Waste Management Through Recycling Solutions:
-                        Balers & Shredders in India
-                    </h1>
+        <meta
+          property="og:description"
+          content="Discover how balers and shredders improve municipal solid waste management, recycling efficiency, and sustainability across industries in India."
+        />
 
-                    {/* INTRO */}
-                    <div id="introduction" className={styles.section}>
-                        <div className={styles.imgLeft}>
-                            <img src={MSW1} alt="MSW India" />
-                        </div>
-                        <p>
-                            Municipal Solid Waste Management (MSWM) is one of the most critical
-                            aspects of modern urban infrastructure. With increasing population
-                            and industrial growth in India, the volume of waste generated has
-                            grown exponentially, making efficient waste handling a necessity.
-                        </p>
-                        <p>
-                            Traditional disposal methods such as dumping and landfilling are no
-                            longer viable. Instead, modern systems emphasize segregation,
-                            recycling, and recovery using advanced technologies.
-                        </p>
-                        <p>
-                            Recycling machinery such as balers and shredders plays a vital role
-                            in converting waste into reusable materials, reducing landfill
-                            dependency and improving operational efficiency.
-                        </p>
-                    </div>
+        <meta property="og:type" content="article" />
 
-                    {/* CHALLENGE */}
-                    <div id="challenge" className={styles.section}>
-                        <div className={styles.imgRight}>
-                            <img src={MSW2} alt="Challenges" />
-                        </div>
-                        <h2>Challenges in MSW Management</h2>
-                        <p>
-                            Waste management systems in India face multiple operational and
-                            environmental challenges that impact efficiency and sustainability.
-                        </p>
-                        <ul className={styles.list}>
-                            <li>Improper waste segregation at source</li>
-                            <li>Overflowing landfills</li>
-                            <li>High logistics and transportation costs</li>
-                            <li>Environmental pollution and health hazards</li>
-                        </ul>
-                    </div>
+        <meta
+          property="og:url"
+          content="https://vikahecotech.com/munipical-waste-management"
+        />
+      </Helmet>
 
-                    {/* TYPES */}
-                    <div id="types" className={styles.section}>
-                        <h2>Types of Waste</h2>
-                        <p>
-                            Municipal waste consists of biodegradable waste, recyclable
-                            materials such as plastic and paper, and non-recyclable residues.
-                        </p>
-                        <p>
-                            Proper classification ensures efficient recycling and reduces
-                            contamination in processing facilities.
-                        </p>
-                    </div>
+      <nav className={styles.toc}>
+        <h3>Explore Sections</h3>
+        <ul>
+          {sections.map((sec) => (
+            <li key={sec.id}>
+              <a
+                href={`#${sec.id}`}
+                className={activeSection === sec.id ? styles.active : ""}
+              >
+                {sec.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
-                    {/* PROCESS */}
-                    <div id="process" className={styles.section}>
-                        <h2>Waste Management Process</h2>
-                        <p>
-                            The MSW process includes collection, segregation, shredding,
-                            baling, recycling, and disposal. Each stage plays a crucial role in
-                            ensuring efficient waste handling and material recovery.
-                        </p>
-                    </div>
+      <div className={styles.blogWrapper}>
+        <div className={styles.blogInner}>
+          <div className={styles.heroSection}>
+            <div className={styles.heroContent}>
+              <span className={styles.heroBadge}>Municipal Waste Management</span>
 
-                    {/* EQUIPMENT */}
-                    <div id="equipment" className={styles.section}>
-                        <h2>Role of Balers & Shredders</h2>
-                        <p>
-                            Shredders reduce waste size for easier processing, while balers
-                            compress materials into compact bales for storage and transport.
-                        </p>
-                        <p>
-                            Together, these machines improve recycling efficiency, reduce
-                            manual labor, and optimize operational workflows.
-                        </p>
-                    </div>
+              <h1 className={styles.heroTitle}>
+                Municipal Solid Waste Management Through Recycling Solutions:
+                Balers & Shredders in India
+              </h1>
 
-                    {/* SPACE */}
-                    <div id="space" className={styles.section}>
-                        <h2>Space Management</h2>
-                        <p>
-                            Compacted waste occupies significantly less space, allowing better
-                            warehouse organization and improved safety.
-                        </p>
-                    </div>
+              <p className={styles.heroDescription}>
+                Learn how balers and shredders improve recycling efficiency,
+                reduce waste volume, and support sustainable municipal solid
+                waste management.
+              </p>
 
-                    {/* COST */}
-                    <div id="cost" className={styles.section}>
-                        <h2>Cost Optimization</h2>
-                        <p>
-                            Reduced waste volume leads to fewer transport trips, lowering fuel
-                            and operational costs.
-                        </p>
-                    </div>
+              <div className={styles.heroButtons}>
+                <a href="#benefits" className={styles.primaryBtn}>
+                  Explore Benefits
+                </a>
 
-                    {/* VALUE */}
-                    <div id="value" className={styles.section}>
-                        <h2>Recycling Value</h2>
-                        <p>
-                            Properly processed waste increases resale value and supports a
-                            circular economy.
-                        </p>
-                    </div>
-
-                    {/* SAFETY */}
-                    <div id="safety" className={styles.section}>
-                        <h2>Safety & Compliance</h2>
-                        <p>
-                            Organized waste management improves safety and ensures compliance
-                            with environmental regulations.
-                        </p>
-                    </div>
-
-                    {/* SUSTAINABILITY */}
-                    <div id="sustainability" className={styles.section}>
-                        <h2>Sustainability</h2>
-                        <p>
-                            Recycling reduces landfill dependency and supports environmental
-                            sustainability goals.
-                        </p>
-                    </div>
-
-                    {/* WHY US */}
-                    <div id="why-us" className={styles.section}>
-                        <h2>Why Vikah Ecotech</h2>
-                        <p>
-                            Vikah Ecotech provides reliable recycling machinery designed for
-                            modern waste management needs.
-                        </p>
-                    </div>
-
-                    {/* CONCLUSION */}
-                    <div id="conclusion" className={styles.section}>
-                        <div className={styles.imgLeft}>
-                            <img src={MSW3} alt="Conclusion" />
-                        </div>
-                        <h2>Conclusion</h2>
-                        <p>
-                            MSW management requires advanced solutions like balers and
-                            shredders to ensure efficiency, sustainability, and cost savings.
-                        </p>
-                    </div>
-
-                    {/* FAQ - FIXED UI */}
-                    <div id="faqs" className={styles.section}>
-                        <h2>Frequently Asked Questions</h2>
-                        <div className={styles.faqContainer}>
-                            {faqsData.map((faq, index) => (
-                                <div
-                                    key={index}
-                                    className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
-                                        }`}
-                                    onClick={() => toggleFAQ(index)}
-                                >
-                                    <div className={styles.faqQuestion}>
-                                        {faq.question}
-                                        <span className={styles.faqIcon}>
-                                            {openFAQ === index ? "−" : "+"}
-                                        </span>
-                                    </div>
-                                    {openFAQ === index && (
-                                        <div className={styles.faqAnswer}>{faq.answer}</div>
-                                    )}
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+                <a href="#faqs" className={styles.secondaryBtn}>
+                  Read FAQs
+                </a>
+              </div>
             </div>
 
-            {/* RIGHT SIDEBAR */}
-            <aside className={styles.relatedSidebar}>
-                <h3 className={styles.relatedTitle}>Related Pages</h3>
+            <div className={styles.heroImageWrapper}>
+              <img
+                src={MSW1}
+                alt="Municipal Solid Waste Management"
+                className={styles.heroImage}
+              />
+            </div>
+          </div>
 
-                <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-                    <Link to="/balers">Industrial Balers →</Link>
-                </div>
+          <section id="benefits" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Benefits</span>
+              <h2>Why Modern MSW Systems Matter</h2>
+            </div>
 
-                <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-                    <Link to="/primary-shredder-waste-management">Primary Shredders →</Link>
+            <div className={styles.benefitsGrid}>
+              {benefitsData.map((item, index) => (
+                <div key={index} className={styles.benefitCard}>
+                  <div className={styles.benefitIcon}>{item.icon}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
                 </div>
+              ))}
+            </div>
+          </section>
 
-                <div className={`${styles.relatedCard} ${styles.floatCard}`}>
-                    <Link to="/secondaryshredder-blog2">Secondary Shredders →</Link>
+          <section id="introduction" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={MSW1} alt="MSW India" />
+                <span>Efficient municipal waste management system</span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Introduction</span>
+                <h2>Managing Growing Waste Volumes</h2>
+                <p>
+                  Municipal Solid Waste Management is essential for handling the
+                  increasing volume of waste generated by cities and industries.
+                </p>
+                <p>
+                  Modern systems focus on segregation, recycling, and recovery
+                  instead of traditional dumping and landfilling.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="challenge" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Challenges</span>
+                <h2>Challenges in MSW Management</h2>
+
+                <ul className={styles.modernList}>
+                  <li>Improper segregation of waste at source</li>
+                  <li>Overflowing landfills and pollution</li>
+                  <li>High logistics and transport costs</li>
+                  <li>Health hazards and environmental damage</li>
+                </ul>
+              </div>
+
+              <div className={styles.imageCard}>
+                <img src={MSW2} alt="MSW Challenges" />
+                <span>Improper waste handling creates major challenges</span>
+              </div>
+            </div>
+          </section>
+
+          <section id="process" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Process</span>
+              <h2>Waste Management Process</h2>
+            </div>
+
+            <div className={styles.processGrid}>
+              {processSteps.map((item, index) => (
+                <div key={index} className={styles.processCard}>
+                  <div className={styles.processNumber}>{item.step}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
                 </div>
-            </aside>
+              ))}
+            </div>
+          </section>
+
+          <section id="equipment" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={MSW3} alt="Balers and shredders" />
+                <span>Balers and shredders improve waste recycling</span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Equipment</span>
+                <h2>Role of Balers & Shredders</h2>
+                <p>
+                  Shredders reduce waste size for easier processing, while balers
+                  compress materials into compact bundles for storage and transport.
+                </p>
+                <p>
+                  These machines improve workflow, reduce manual labour, and increase recycling efficiency.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="cost" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Cost Savings</span>
+              <h2>Cost Optimization & Efficiency</h2>
+            </div>
+
+            <div className={styles.statsGrid}>
+              <div className={styles.statCard}>
+                <h3>50%</h3>
+                <p>Reduction in transport trips</p>
+              </div>
+
+              <div className={styles.statCard}>
+                <h3>60%</h3>
+                <p>Improvement in storage efficiency</p>
+              </div>
+
+              <div className={styles.statCard}>
+                <h3>40%</h3>
+                <p>Lower waste handling costs</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="faqs" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>FAQs</span>
+              <h2>Frequently Asked Questions</h2>
+            </div>
+
+            <div className={styles.faqContainer}>
+              {faqsData.map((faq, index) => (
+                <div
+                  key={index}
+                  className={`${styles.faqItem} ${
+                    openFAQ === index ? styles.activeFAQ : ""
+                  }`}
+                >
+                  <div
+                    className={styles.faqQuestion}
+                    onClick={() => toggleFAQ(index)}
+                  >
+                    <span>{faq.question}</span>
+                    <span className={styles.faqIcon}>
+                      {openFAQ === index ? "−" : "+"}
+                    </span>
+                  </div>
+
+                  <div className={styles.faqAnswerWrapper}>
+                    <div className={styles.faqAnswer}>{faq.answer}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
         </div>
-    );
+      </div>
+
+      <aside className={styles.relatedSidebar}>
+        <h3 className={styles.relatedTitle}>Related Pages</h3>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <Link to="/balers">Industrial Balers →</Link>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <Link to="/primary-shredder-waste-management">
+            Primary Shredders →
+          </Link>
+        </div>
+
+        <div className={`${styles.relatedCard} ${styles.floatCard}`}>
+          <Link to="/secondaryshredder-blog2">
+            Secondary Shredders →
+          </Link>
+        </div>
+      </aside>
+    </div>
+  );
 };
 
 export default MSWBlog;
