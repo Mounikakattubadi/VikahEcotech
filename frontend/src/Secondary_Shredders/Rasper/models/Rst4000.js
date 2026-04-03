@@ -5,6 +5,7 @@ import shredderhd from "../../../images/R1.png";
 import shredderhd1 from "../../../images/R2.png";
 import shredderhdimg from "../../../images/R4.jpg";
 import { Helmet } from "react-helmet";
+import styles from "../../../Styles/ProductHeader.module.css";
 
 const Rst4000 = () => {
   const [mainImage, setMainImage] = useState(shredderhd1);
@@ -27,6 +28,9 @@ const Rst4000 = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+  const handleViewImage = () => {
+    window.open(mainImage, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -51,9 +55,34 @@ const Rst4000 = () => {
       </Helmet>
 
       {/* Heading section similar to SecondaryMetalshredder */}
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">RST- 4000</h1>
+      <header className={styles.productHeader}>
+        <div className={styles.headerContent}>
+          <div className={styles.breadcrumb}>
+            Home / Products / <span>RST-4000</span>
+          </div>
+
+          <h1 className={styles.productTitle}>
+            RST-<span>4000</span>
+          </h1>
+
+          <p className={styles.productSubtitle}>
+            High-performance secondary shredder (rasper) designed for fine
+            shredding of pre-processed tyres, ensuring efficient size reduction
+            and smooth downstream granulation in tyre recycling plants.
+          </p>
+
+          <div className={styles.headerButtons}>
+            <button
+              className={styles.primaryBtn}
+              onClick={() => handleDownload("RST-4000")}
+            >
+              Download Brochure
+            </button>
+
+            <button className={styles.secondaryBtn} onClick={handleViewImage}>
+              View Machine Image
+            </button>
+          </div>
         </div>
       </header>
 
@@ -127,11 +156,13 @@ const Rst4000 = () => {
             24/7 operation.
           </p>
           <p>
-            This model is part of our  <a href="/rasper_secondaryshredders">  '    secondary shredder (rasper) range '</a> used in advanced tyre recycling systems .     
+            This model is part of our{" "}
+            <a href="/rasper_secondaryshredders">
+              {" "}
+              ' secondary shredder (rasper) range '
+            </a>{" "}
+            used in advanced tyre recycling systems .
           </p>
-             
-                
-        
         </div>
       </div>
 

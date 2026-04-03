@@ -7,6 +7,7 @@ import Baler4 from "../../../images/Applications/app13.jpg";
 import bp5 from "../../../images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg";
 import bp2 from "../../../images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.45 AM.jpeg";
 import { Helmet } from "react-helmet";
+import styles from "../../../Styles/ProductHeader.module.css";
 
 const BLT250 = () => {
   const [mainImage, setMainImage] = useState(Baler4);
@@ -60,9 +61,34 @@ const BLT250 = () => {
         <link rel="canonical" href="https://vikahecotech.com/blt250" />
       </Helmet>
 
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">BLT-250</h1>
+      <header className={styles.productHeader}>
+        <div className={styles.headerContent}>
+          <div className={styles.breadcrumb}>
+            Home / Products / <span>BLT-250</span>
+          </div>
+
+          <h1 className={styles.productTitle}>
+            BLT-<span>250</span>
+          </h1>
+
+          <p className={styles.productSubtitle}>
+            Industrial-grade tyre scrap baler machine built for high-volume
+            recycling facilities, providing maximum compaction force, dense bale
+            formation, and dependable long-term performance.
+          </p>
+
+          <div className={styles.headerButtons}>
+            <button
+              className={styles.primaryBtn}
+              onClick={() => handleDownload("blt250")}
+            >
+              Download Brochure
+            </button>
+
+            <button className={styles.secondaryBtn} onClick={handleViewImage}>
+              View Machine Image
+            </button>
+          </div>
         </div>
       </header>
 
@@ -138,9 +164,9 @@ const BLT250 = () => {
           <p>
             The BLT series tyre balers are part of our
             <a href="/tyre-scrap-balers"> tyre scrap baler machines </a>
-             under
+            under
             <a href="/balers"> industrial baler systems </a>
-             designed for tyre recycling applications.
+            designed for tyre recycling applications.
           </p>
         </div>
       </div>
