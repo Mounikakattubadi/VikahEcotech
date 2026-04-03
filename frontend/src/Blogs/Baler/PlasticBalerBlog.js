@@ -214,6 +214,33 @@ const PlasticBalerBlog = () => {
             </div>
           </div>
 
+          {/* introduction */}
+          <section id="introduction" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={PlasticBaler1} alt="Plastic baling machine" />
+                <span>Hydraulic baler compressing PET plastic</span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Introduction</span>
+                <h2>Managing Plastic Waste Efficiently</h2>
+                <p>
+                  Plastic waste in India has grown rapidly due to high consumption of packaging materials, PET bottles,
+                  and industrial plastic products. Managing this waste efficiently requires a reliable and sustainable solution.
+                </p>
+                <p>
+                  Hydraulic baling machines play a crucial role in plastic recycling by compressing loose plastic into compact, dense bales.
+                  These standardized bales reduce storage issues, lower transport costs, and improve the efficiency of recycling units.
+                </p>
+                <p>
+                  Industries using hydraulic balers experience up to 70% reduction in plastic waste volume, making waste management faster, safer, and more profitable.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Benefits */}
           <section id="benefits" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Benefits</span>
@@ -231,34 +258,13 @@ const PlasticBalerBlog = () => {
             </div>
           </section>
 
-          <section id="introduction" className={styles.sectionCard}>
-            <div className={styles.contentGrid}>
-              <div className={styles.imageCard}>
-                <img src={PlasticBaler1} alt="Plastic baling machine" />
-                <span>Hydraulic baler compressing PET plastic</span>
-              </div>
-
-              <div className={styles.textCard}>
-                <span className={styles.sectionTag}>Introduction</span>
-                <h2>Managing Plastic Waste Efficiently</h2>
-                <p>
-                  Plastic waste in India has grown rapidly due to the increasing
-                  use of PET bottles, packaging films, and industrial plastic materials.
-                </p>
-                <p>
-                  Hydraulic balers provide an efficient way to compress plastic waste
-                  into compact bales for easier storage, transport, and recycling.
-                </p>
-              </div>
-            </div>
-          </section>
-
+          {/* Challenges */}
           <section id="challenge" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.textCard}>
                 <span className={styles.sectionTag}>Challenges</span>
                 <h2>Challenges in Plastic Waste Handling</h2>
-
+                <p>Loose plastic waste creates several operational and safety challenges in industrial facilities. Common issues include:</p>
                 <ul className={styles.modernList}>
                   <li>Large storage space requirements</li>
                   <li>Fire hazards from lightweight plastic waste</li>
@@ -275,6 +281,29 @@ const PlasticBalerBlog = () => {
             </div>
           </section>
 
+          {/* Types of Plastic Waste Ideal for Baling */}
+          <section id="types" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.textCard}>
+                <h2>Types of Plastic Waste Ideal for Baling</h2>
+                <p>Baling these materials increases their recyclability and enhances resale value. Recyclers prefer baled plastic because it is easier to transport, handle, and process.</p>
+                <ul className={styles.modernList}>
+                  <li>PET bottles</li>
+                  <li>HDPE & LDPE sheets</li>
+                  <li>PP and PE scrap</li>
+                  <li>Plastic packaging films </li>
+                  <li>Plastic wrappers and industrial offcuts</li>
+                </ul>
+              </div>
+
+              <div className={styles.imageCard}>
+                <img src={PCB1} alt="Plastic waste challenges" />
+                <span>Unmanaged plastic waste causing clutter</span>
+              </div>
+            </div>
+          </section>
+
+          {/* How Hydraulic Plastic Balers Work */}
           <section id="how" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -286,15 +315,22 @@ const PlasticBalerBlog = () => {
                 <span className={styles.sectionTag}>Technology</span>
                 <h2>How Hydraulic Plastic Balers Work</h2>
                 <p>
-                  Hydraulic balers compress loose plastic using high-pressure systems.
-                </p>
+                  Hydraulic plastic balers use high-pressure compression to reduce the volume of plastic waste.  </p>
                 <p>
-                  Modern balers include PLC controls, sensors, and automatic bale ejection.
+                  The process involves:
                 </p>
+                <ul className={styles.modernList}>
+                  <li>Feeding loose plastic into the baler chamber</li>
+                  <li>Applying hydraulic pressure to compress the waste</li>
+                  <li>Binding the bale using wires or straps</li>
+                  <li>Automatically ejecting the bale for storage or transport </li>
+                </ul>
+                <p>Modern balers include sensors and PLC controls for consistent bale size and density.</p>
               </div>
             </div>
           </section>
 
+          {/* Working Process */}
           <section id="process" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Working Process</span>
@@ -312,12 +348,14 @@ const PlasticBalerBlog = () => {
             </div>
           </section>
 
+          {/* Benefits of Using Plastic Balers */}
           <section id="cost" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Savings</span>
               <h2>Cost & Transport Savings</h2>
             </div>
-
+            <p>Compact bales significantly lower transport frequency, resulting in up to 30–40% yearly logistics savings</p>
+            <p>Standardized bale sizes also help in predictable freight costing and improve container space utilization.</p>
             <div className={styles.statsGrid}>
               <div className={styles.statCard}>
                 <h3>70%</h3>
@@ -336,6 +374,79 @@ const PlasticBalerBlog = () => {
             </div>
           </section>
 
+          {/* Boosting Scrap Value */}
+          <section id="value" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Boosting Scrap Value</span>
+              <h2>Boosting Scrap Value</h2>
+            </div>
+            <p>Clean, uniform bales attract better pricing from recycling buyers. Industries can increase scrap revenue by 15–25% using hydraulic balers.</p>
+            <div className={styles.highlightBox}>
+              <strong>“Baled plastic scrap sells faster and at higher prices than loose plastic.”</strong>
+            </div>
+          </section>
+
+          {/* Safety & Compliance */}
+          <section id="safety" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Safety & Compliance</span>
+              <h2>Safety & Compliance</h2>
+            </div>
+            <p>Hydraulic balers improve safety by preventing loose plastic accumulation and reducing fire risks.</p>
+            <ul className={styles.modernList}>
+              <li>Emergency stop features</li>
+              <li>Door interlocks</li>
+              <li>Hydraulic overload protection</li>
+              <li>Automated compression sensors</li>
+            </ul>
+          </section>
+
+
+          {/* Supporting Sustainability Goals */}
+          <section id="sustainability" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Supporting Sustainability Goals</span>
+              <h2>Supporting Sustainability Goals</h2>
+            </div>
+            <p>Baling promotes recycling, reduces landfill usage, and supports CSR and ESG compliance.</p>
+            <p>Industries using balers contribute significantly to a cleaner, circular economy by enabling better plastic recovery.</p>
+          </section>
+
+          {/* Ease of Operation */}
+          <section id="operation" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Ease of Operation</span>
+              <h2>Ease of Operation</h2>
+            </div>
+            <p>Hydraulic balers are simple to use, require minimal training, and offer consistent performance.</p>
+            <p>Features like auto-cycle mode and remote monitoring improve productivity.</p>
+          </section>
+
+          {/* Long-Term Advantages */}
+          <section id="long-term" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Long-Term Advantages</span>
+              <h2>Long-Term Advantages</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li>Lower operational costs</li>
+              <li>Higher scrap output and resale value</li>
+              <li>Better warehouse organization</li>
+              <li>Long-lasting hydraulic systems</li>
+            </ul>
+          </section>
+
+          {/* Why Choose Vikah Ecotech */}
+          <section id="why-us" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Why Choose Vikah Ecotech</span>
+              <h2>Why Choose Vikah Ecotech</h2>
+            </div>
+            <p>Vikah Ecotech provides durable, efficient, and user-friendly hydraulic plastic balers customized to industry requirements.</p>
+            <p>Our machines ensure maximum ROI, long-term performance, and strong service support.</p>
+          </section>
+
+          {/* Final Thoughts */}
           <section id="conclusion" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -358,6 +469,7 @@ const PlasticBalerBlog = () => {
             </div>
           </section>
 
+          {/* Frequently Asked Questions */}
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>FAQs</span>
@@ -368,9 +480,8 @@ const PlasticBalerBlog = () => {
               {faqsData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`${styles.faqItem} ${
-                    openFAQ === index ? styles.activeFAQ : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
+                    }`}
                 >
                   <div
                     className={styles.faqQuestion}
@@ -389,6 +500,7 @@ const PlasticBalerBlog = () => {
               ))}
             </div>
           </section>
+
 
           <aside className={styles.relatedSidebar}>
             <h3 className={styles.relatedTitle}>Related Pages</h3>

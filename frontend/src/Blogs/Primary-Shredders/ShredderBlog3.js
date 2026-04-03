@@ -12,23 +12,39 @@ const faqsData = [
   {
     question: "Can Tyre Primary Shredders improve recycling efficiency?",
     answer:
-      "Yes, Tyre Primary Shredders reduce whole tyres into uniform pieces, enabling easier separation of rubber, steel, and fabric components.",
+      "Yes, Tyre Primary Shredders reduce whole tyres into uniform pieces, enabling easier separation of rubber, steel, and fabric components. This improves downstream recycling efficiency and reduces processing time.",
   },
   {
     question: "Do Tyre Shredders support sustainable waste management?",
     answer:
-      "Absolutely. By processing end-of-life tyres, these shredders reduce landfill disposal and enable recycling into valuable products.",
+      "Absolutely. By processing end-of-life tyres, these shredders reduce landfill disposal, enable recycling into rubber mats, fuel, or granules, and help industries comply with environmental regulations.",
   },
   {
     question: "What types of tyres can be shredded?",
     answer:
-      "Tyre Primary Shredders can process passenger car tyres, truck tyres, industrial tyres, and agricultural tyres.",
+      "Tyre Primary Shredders can process passenger car tyres, truck tyres, off-road and industrial tyres, and sometimes even oversized or agricultural tyres, depending on the shredder model.",
   },
   {
     question: "Are Tyre Shredders cost-effective for recycling facilities?",
     answer:
-      "Yes, they reduce manual labor, storage requirements, and transport costs while creating valuable recycled material.",
+      "YYes, they reduce manual labor, storage requirements, and transport costs. Processed tyre chips have resale value for fuel, rubber mats, playground surfaces, and other applications.",
   },
+  {
+    question: "Which industries benefit most from Tyre Primary Shredders?",
+    answer:
+      "Recycling centers, rubber product manufacturers, energy recovery facilities, and automotive waste management industries gain the most efficiency, cost reduction, and sustainability benefits.",
+  },
+  {
+    question: "How does automation improve tyre shredding productivity?",
+    answer:
+      "Automation enables continuous feeding, prevents jams, integrates with conveyors or magnetic separators, and allows predictive maintenance, reducing downtime and human error.",
+  },
+  {
+    question: "How long do Tyre Primary Shredders last?",
+    answer:
+      "With proper maintenance, high-quality Tyre Shredders can last over 10 years. Regular servicing of blades, motors, and hydraulic systems ensures consistent and reliable operation.",
+  },
+
 ];
 
 const benefitsData = [
@@ -86,22 +102,22 @@ const ShredderBlog3 = () => {
     { id: "role", title: "Role in Recycling" },
     { id: "operation", title: "How It Works" },
     { id: "types", title: "Types of Shredders" },
-    { id: "recycling", title: "Recycling Efficiency" },
-    { id: "workflow", title: "Workflow Optimization" },
-    { id: "space", title: "Space Advantages" },
+    { id: "recycling", title: "Boosting Tyre Recycling Efficiency" },
+    { id: "workflow", title: "Optimizing Workflow & Storage" },
+    { id: "space", title: "Space Utilization Advantages" },
     { id: "process", title: "Working Process" },
-    { id: "cost", title: "Cost Savings" },
-    { id: "safety", title: "Safety" },
-    { id: "sustainability", title: "Sustainability" },
-    { id: "maintenance", title: "Maintenance" },
-    { id: "automation", title: "Automation" },
-    { id: "troubleshooting", title: "Troubleshooting" },
-    { id: "roi", title: "ROI" },
-    { id: "future", title: "Future Trends" },
+    { id: "cost", title: "Cost & Operational Savings" },
+    { id: "safety", title: "Safety Considerations" },
+    { id: "sustainability", title: "Sustainability Benefits " },
+    { id: "maintenance", title: "Maintenance & Longevity" },
+    { id: "automation", title: "Automation & Smart Integration" },
+    { id: "troubleshooting", title: "Common Issues & Troubleshooting Tips" },
+    { id: "roi", title: "Return on Investment & Long-Term Benefits" },
+    { id: "future", title: "Future Trends in Tyre Shredding Technology" },
     { id: "why-us", title: "Why Choose Us" },
     { id: "conclusion", title: "Conclusion" },
     { id: "key-takeaways", title: "Key Takeaways" },
-    { id: "faqs", title: "FAQs" },
+    { id: "faqs", title: "Frequently Asked Questions" },
   ];
 
   const [activeSection, setActiveSection] = useState(sections[0].id);
@@ -170,7 +186,39 @@ const ShredderBlog3 = () => {
             </div>
           </div>
 
+          {/* INTRODUCTION */}
+          <section id="introduction" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Introduction</span>
+              <h2>Processing end-of-life tyres efficiently</h2>
+            </div>
+
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={BlogImg1} alt="Compact tyre baler" />
+              </div>
+
+              <div className={styles.textCard}>
+                <p>
+                  Tyre Primary Shredders are critical for sustainable tyre recycling.
+                  They reduce whole tyres into manageable chips or strips, making storage, transport, and recycling more efficient.
+                </p>
+
+                <p>
+                  Efficient shredding reduces manual labor, enhances facility throughput, and ensures proper material recovery,
+                  supporting environmental and regulatory compliance.
+                </p>
+
+              </div>
+            </div>
+          </section>
+
+          {/* BENEFITS */}
           <section id="benefits" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Key Benefits</span>
+            </div>
+
             <div className={styles.benefitsGrid}>
               {benefitsData.map((item, index) => (
                 <div key={index} className={styles.benefitCard}>
@@ -182,61 +230,73 @@ const ShredderBlog3 = () => {
             </div>
           </section>
 
-          <section id="introduction" className={styles.sectionCard}>
-            <h2>Introduction</h2>
-            <p>
-              Tyre Primary Shredders reduce whole tyres into chips or strips,
-              making recycling and storage much easier.
-            </p>
-          </section>
-
+          {/* role */}
           <section id="role" className={styles.sectionCard}>
-            <h2>Role in Recycling</h2>
-            <p>
-              Tyre shredders improve recycling by separating rubber, steel,
-              and fabric materials for reuse.
-            </p>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Role in Recycling</span>
+              <h2>The Role of Tyre Primary Shredders in Recycling</h2>
+            </div>
+            <p>Tyre Shredders convert bulky end-of-life tyres into uniform pieces suitable for separation into rubber, steel, and fiber components. </p>
+            <p>This process enables easier recycling, energy recovery, and material reuse.</p>
+            <p>By improving workflow and reducing bottlenecks, tyre shredders increase facility efficiency while lowering costs and supporting eco-friendly waste management.</p>
           </section>
 
+          {/* operation */}
           <section id="operation" className={styles.sectionCard}>
-            <h2>How It Works</h2>
-            <p>
-              Tyre Shredders use rotating cutters and high-torque motors to reduce tyres.
-            </p>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>How It Works</span>
+              <h2>How Tyre Primary Shredders Operate</h2>
+            </div>
+            <p>Tyre Shredders use rotating blades or dual-shaft cutters to break tyres into chips.
+              High-torque motors ensure efficient shredding, even for truck or industrial tyres.</p>
+            <p>Adjustable cutting settings allow customization of chip size to match recycling, energy recovery, or resale requirements.</p>
           </section>
 
+          {/* Different Types of Primary Shredders and Their Applications */}
           <section id="types" className={styles.sectionCard}>
-            <h2>Types of Shredders</h2>
-            <ul className={styles.list}>
-              <li>Single Shaft Tyre Shredders</li>
-              <li>Dual Shaft Tyre Shredders</li>
-              <li>Granulators</li>
-              <li>Hammermills</li>
-            </ul>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Different Types of Tyre Primary Shredders and Their Applications</span>
+              <p><b>Single-Shaft Tyre Shredders: </b> Ideal for medium tyres and steady throughput in smaller facilities.</p>
+              <p><b>Dual-Shaft Tyre Shredders:</b>Handle truck, industrial, and oversized tyres efficiently.</p>
+              <p><b>Granulators:</b>Produce smaller rubber granules for mats, playground surfaces, or fuel pellets.</p>
+              <p><b>High-Speed Rotary hredders:</b>Efficient for lightweight tyres or secondary shredding stages.</p>
+              <p><b>Hammermills:</b>Reduce shredded tyre chips further for energy recovery or fine rubber granules.</p>
+            </div>
           </section>
 
+          {/* recycling */}
           <section id="recycling" className={styles.sectionCard}>
-            <h2>Recycling Efficiency</h2>
-            <p>
-              Shredded tyres are easier to process, recycle, transport, and reuse.
-            </p>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Boosting Tyre Recycling Efficiency</span>
+              <p>Shredded tyres allow efficient separation of steel, fiber, and rubber. Recycled rubber can be used in construction,
+                playground surfaces, mats, and as fuel in cement kilns.</p>
+              <p>Facilities benefit from reduced landfill dependency, compliance with environmental standards, and the creation of valuable recycled products.</p>
+            </div>
           </section>
 
+          {/* workflow */}
           <section id="workflow" className={styles.sectionCard}>
-            <h2>Workflow Optimization</h2>
-            <p>
-              Tyre shredders streamline material flow and reduce manual handling.
-            </p>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Optimizing Workflow & Storage</span>
+              <p>Tyre Shredders streamline the material flow. Chips can be fed directly to conveyors, magnetic separators,
+                or storage areas, reducing manual handling and improving productivity.</p>
+            </div>
           </section>
 
+          {/* space */}
           <section id="space" className={styles.sectionCard}>
-            <h2>Space Advantages</h2>
-            <p>
-              Shredded tyres occupy less storage space than whole tyres.
-            </p>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Space Utilization Advantages </span>
+              <p>Shredded tyres take less space than whole tyres, improving storage efficiency, warehouse organization, and safety. </p>
+              <p>This enables facilities to process higher volumes without expanding their footprint.</p>
+            </div>
           </section>
 
+          {/* process */}
           <section id="process" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}> Working Process</span>
+            </div>
             <div className={styles.processGrid}>
               {processSteps.map((item, index) => (
                 <div key={index} className={styles.processCard}>
@@ -248,75 +308,128 @@ const ShredderBlog3 = () => {
             </div>
           </section>
 
+          {/* cost */}
           <section id="cost" className={styles.sectionCard}>
-            <h2>Cost Savings</h2>
-            <p>Lower labor, transport, and landfill costs.</p>
-          </section>
-
-          <section id="safety" className={styles.sectionCard}>
-            <h2>Safety</h2>
-            <p>Reduces fire hazards and improves workplace safety.</p>
-          </section>
-
-          <section id="sustainability" className={styles.sectionCard}>
-            <h2>Sustainability</h2>
-            <p>Supports circular economy and reduces landfill waste.</p>
-          </section>
-
-          <section id="maintenance" className={styles.sectionCard}>
-            <h2>Maintenance</h2>
-            <p>Routine servicing ensures long-term performance.</p>
-          </section>
-
-          <section id="automation" className={styles.sectionCard}>
-            <h2>Automation</h2>
-            <p>Smart sensors and conveyors improve efficiency.</p>
-          </section>
-
-          <section id="troubleshooting" className={styles.sectionCard}>
-            <h2>Troubleshooting</h2>
-            <ul className={styles.list}>
-              <li>Inspect blades regularly</li>
-              <li>Check motor load</li>
-              <li>Monitor vibrations</li>
-            </ul>
-          </section>
-
-          <section id="roi" className={styles.sectionCard}>
-            <h2>ROI</h2>
-            <p>Strong long-term return through recycling and savings.</p>
-          </section>
-
-          <section id="future" className={styles.sectionCard}>
-            <h2>Future Trends</h2>
-            <p>AI and predictive maintenance are shaping tyre shredding.</p>
-          </section>
-
-          <section id="why-us" className={styles.sectionCard}>
-            <h2>Why Choose Us</h2>
-            <p>Reliable, durable, and efficient tyre shredding solutions.</p>
-          </section>
-
-          <section id="conclusion" className={styles.sectionCard}>
-            <div className={styles.imageCard}>
-              <img src={BlogImg4} alt="Processed tyre chips" />
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Cost & Operational Savings</span>
+              <p>Tyre Shredders reduce labor, transport, and storage costs. Processed chips have resale value,
+                and energy recovery opportunities reduce waste-to-landfill expenses.</p>
             </div>
-            <h2>Conclusion</h2>
-            <p>
-              Tyre Primary Shredders are essential for recycling, cost reduction,
-              and sustainability.
-            </p>
           </section>
 
+          {/* safety */}
+          <section id="safety" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Safety Considerations</span>
+              <p>Shredding tyres reduces clutter and prevents fire hazards from stored whole tyres. Emergency stops, interlocks,
+                and overload protection ensure operator safety.</p>
+            </div>
+          </section>
+
+          {/* sustainability */}
+          <section id="sustainability" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Sustainability Benefits</span>
+              <p>Tyre Shredders support environmental sustainability by enabling rubber recycling, reducing landfill usage,
+                and contributing to circular economy initiatives.</p>
+            </div>
+          </section>
+
+          {/* maintenance */}
+          <section id="maintenance" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Maintenance & Longevity</span>
+              <p>Regular inspection of blades, motors, and hydraulics ensures long shredder life. Proper maintenance minimizes downtime and ensures consistent chip quality.</p>
+            </div>
+          </section>
+
+          {/* automation */}
+          <section id="automation" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Automation & Smart Integration</span>
+              <p>Tyre Shredders with smart sensors, conveyors, and IoT integration enable continuous operation, predictive maintenance, and reduced human error.</p>
+            </div>
+          </section>
+
+          {/* troubleshooting */}
+          <section id="troubleshooting" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Troubleshooting</span>
+              <p>Common Issues & Troubleshooting Tips</p>
+              <ul className={styles.list}>
+                <li><b>Tyre jams: </b>Use emergency stop and reverse carefully.</li>
+                <li><b>Blade wear: </b>Inspect and replace blades regularly.</li>
+                <li><b>Motor overload: </b>Ensure proper load handling and cooling.</li>
+                <li><b>Excess vibration: </b>Check alignment and rotor balance.</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* roi */}
+          <section id="roi" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Return on Investment & Long-Term Benefits</span>
+              <p>Investing in Tyre Primary Shredders provides long-term savings, improves material recovery, enhances recycling revenue, and reduces labor and landfill costs.</p>
+            </div>
+          </section>
+
+          {/* future */}
+          <section id="future" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Future Trends in Tyre Shredding Technology</span>
+              <p>AI-driven monitoring, energy-efficient motors, and integration with Industry 4.0 are shaping tyre shredding. </p>
+              <p>Smart sensors allow predictive maintenance and real-time process optimization.</p>
+            </div>
+          </section>
+
+          {/* why-us */}
+          <section id="why-us" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Why Choose Our Tyre Primary Shredders</span>
+              <p>Our Tyre Shredders combine durability, efficiency, and safety. Designed for diverse tyre recycling applications,
+                they optimize workflow, reduce costs, and support sustainability.</p>
+            </div>
+          </section>
+
+
+          {/* conclusion */}
+          <section id="conclusion" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={BlogImg4} alt="Processed shredded materials" />
+                <span>Shredded tyres ready for recycling or energy recovery</span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Conclusion</span>
+                <h2>Final Thoughts</h2>
+                <p>
+                  Tyre Primary Shredders are essential for efficient and sustainable tyre recycling.
+                </p>
+                <p>
+                  They improve workflow, reduce costs, support environmental initiatives, and provide long-term operational benefits.
+                </p>
+
+              </div>
+            </div>
+          </section>
+
+          {/* key-takeaways */}
           <section id="key-takeaways" className={styles.sectionCard}>
-            <h2>Key Takeaways</h2>
-            <ul className={styles.list}>
-              <li>Improves recycling efficiency</li>
-              <li>Reduces labor and transport costs</li>
-              <li>Supports sustainability</li>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Key Takeaways</span>
+            </div>
+            <ul className={styles.modernList}>
+              <li> Streamlines tyre recycling operations</li>
+              <li> Enhances sustainability and material recovery</li>
+              <li> Reduces operational, labor, and landfill costs</li>
+              <li>Improves workplace safety and workflow</li>
+              <li>Durable, reliable, and long-term solution  </li>
+              <li>Supports automation and smart integration</li>
             </ul>
           </section>
 
+          {/* faqs */}
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.faqContainer}>
               {faqsData.map((faq, index) => (
