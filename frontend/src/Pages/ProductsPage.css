@@ -452,3 +452,267 @@
     margin-right: 0.4rem;
   }
 }
+
+
+
+.secondary-metal-hero {
+  min-height: 500px;
+  padding: 120px 20px 100px;
+  background: linear-gradient(
+      rgba(10, 20, 35, 0.75),
+      rgba(10, 20, 35, 0.8)
+    ),
+    url("../images/Applications/metalshred1.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.secondary-metal-hero::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 193, 7, 0.15);
+  border-radius: 50%;
+  top: -120px;
+  left: -100px;
+  filter: blur(30px);
+}
+
+.secondary-metal-hero::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  bottom: -100px;
+  right: -80px;
+  filter: blur(20px);
+}
+
+.machine-content p {
+  line-height: 1.9;
+  color: #555;
+}
+
+.machine-content h3 {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.machine-content h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #ffc107;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .secondary-metal-hero {
+    min-height: auto;
+    padding: 100px 15px 80px;
+  }
+
+  .secondary-metal-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .secondary-metal-hero .lead {
+    font-size: 1rem;
+  }
+}
+
+.secondary-plastic-hero {
+  min-height: 500px;
+  padding: 120px 20px 100px;
+  background: linear-gradient(
+      rgba(10, 20, 35, 0.75),
+      rgba(10, 20, 35, 0.8)
+    ),
+    url("../images/Applications/secplas.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.secondary-plastic-hero::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(13, 202, 240, 0.18);
+  border-radius: 50%;
+  top: -120px;
+  left: -100px;
+  filter: blur(30px);
+}
+
+.secondary-plastic-hero::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  bottom: -100px;
+  right: -80px;
+  filter: blur(20px);
+}
+
+.machine-content p {
+  line-height: 1.9;
+  color: #555;
+}
+
+.machine-content h3 {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.machine-content h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #0dcaf0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .secondary-plastic-hero {
+    min-height: auto;
+    padding: 100px 15px 80px;
+  }
+
+  .secondary-plastic-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .secondary-plastic-hero .lead {
+    font-size: 1rem;
+  }
+}
+
+
+.secondary-pcb-hero {
+  min-height: 500px;
+  padding: 120px 20px 100px;
+  background: linear-gradient(
+      rgba(10, 20, 35, 0.75),
+      rgba(10, 20, 35, 0.8)
+    ),
+    url("../images/Applications/secpcb.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.secondary-pcb-hero::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: rgba(25, 135, 84, 0.18);
+  border-radius: 50%;
+  top: -120px;
+  left: -100px;
+  filter: blur(30px);
+}
+
+.secondary-pcb-hero::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  bottom: -100px;
+  right: -80px;
+  filter: blur(20px);
+}
+
+.hero-btns .btn {
+  min-width: 170px;
+}
+
+.machine-content p {
+  line-height: 1.9;
+  color: #555;
+}
+
+.machine-content h3 {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.machine-content h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #198754;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+.contact-bar-box {
+  background: #1f2937;
+  border-radius: 24px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-bar-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.contact-bar-buttons .btn {
+  min-width: 170px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .secondary-pcb-hero {
+    min-height: auto;
+    padding: 100px 15px 80px;
+  }
+
+  .secondary-pcb-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .secondary-pcb-hero .lead {
+    font-size: 1rem;
+  }
+
+  .contact-bar-box {
+    padding: 24px 18px;
+  }
+
+  .contact-bar-buttons {
+    width: 100%;
+  }
+
+  .contact-bar-buttons .btn {
+    width: 100%;
+  }
+}

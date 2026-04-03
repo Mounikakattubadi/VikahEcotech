@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import styles from "./Blog.module.css";
+import styles from "../Baler/Blog.module.css";
 import { Helmet } from "react-helmet";
 
-// Images (replace as needed)
+// Images
 import Plant1 from "../../images/Applications/plasticbaler1.jpg";
 import Plant2 from "../../images/Applications/plasticbaler2.jpg";
 import Tyre1 from "../../images/Applications/pcb1.webp";
@@ -32,15 +32,61 @@ const faqsData = [
   },
 ];
 
+const benefitsData = [
+  {
+    icon: "♻️",
+    title: "Waste Reduction",
+    text: "Reduce tyre waste going to landfills and illegal dumping areas.",
+  },
+  {
+    icon: "💰",
+    title: "High Profit Potential",
+    text: "Earn from crumb rubber, steel wire, pyrolysis oil, and carbon black.",
+  },
+  {
+    icon: "🏭",
+    title: "Industrial Efficiency",
+    text: "Automated plants improve throughput and reduce manual labor.",
+  },
+  {
+    icon: "🌍",
+    title: "Environmental Benefits",
+    text: "Support sustainability and government recycling initiatives.",
+  },
+];
+
+const processSteps = [
+  {
+    step: "01",
+    title: "Tyre Collection",
+    text: "Waste tyres are collected from dealers, industries, and scrap yards.",
+  },
+  {
+    step: "02",
+    title: "Shredding & Cutting",
+    text: "Tyres are cut into smaller pieces for easier processing.",
+  },
+  {
+    step: "03",
+    title: "Steel Separation",
+    text: "Steel wire is removed and collected for resale.",
+  },
+  {
+    step: "04",
+    title: "Final Recycling Output",
+    text: "Rubber, oil, carbon black, and steel are recovered for reuse.",
+  },
+];
+
 const TyreRecyclingBlog = () => {
   useEffect(() => window.scrollTo(0, 0), []);
 
   const sections = [
     { id: "intro", title: "Introduction" },
+    { id: "benefits", title: "Benefits of Tyre Recycling Plants" },
     { id: "demand", title: "Demand for Tyre Recycling Plants in India" },
     { id: "process", title: "How Tyre Scrap Recycling Plants Work" },
     { id: "machinery", title: "Core Machinery in a Recycling Plant" },
-    { id: "benefits", title: "Industrial & Environmental Benefits" },
     {
       id: "manufacturers",
       title: "Top Tyre Scrap Recycling Plant Manufacturers",
@@ -58,14 +104,17 @@ const TyreRecyclingBlog = () => {
   useEffect(() => {
     const handleScroll = () => {
       let pos = window.scrollY + 150;
+
       for (let i = sections.length - 1; i >= 0; i--) {
         const el = document.getElementById(sections[i].id);
+
         if (el && el.offsetTop <= pos) {
           setActiveSection(sections[i].id);
           break;
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -76,7 +125,6 @@ const TyreRecyclingBlog = () => {
 
   return (
     <div className={styles.pageWrapper}>
-      {/* SEO Helmet */}
       <Helmet>
         {/* ===== BASIC SEO ===== */}
         <title>
@@ -206,7 +254,6 @@ const TyreRecyclingBlog = () => {
         </script>
       </Helmet>
 
-      {/* LEFT TOC */}
       <nav className={styles.toc}>
         <h3>Explore Sections</h3>
         <ul>
@@ -223,223 +270,236 @@ const TyreRecyclingBlog = () => {
         </ul>
       </nav>
 
-      {/* BLOG CONTENT */}
       <div className={styles.blogWrapper}>
         <div className={styles.blogInner}>
-          <h1 className="mulch-heading">
-            Tyre Scrap Recycling Plant Manufacturers in India
-          </h1>
-
-          {/* Intro */}
-          <div id="intro" className={styles.section}>
-            <div className={styles.imgLeft}>
-              <img src={Plant1} alt="Tyre Recycling Plant" />
-              <span className={styles.caption}>
-                Modern tyre scrap recycling plant
+          <div className={styles.heroSection}>
+            <div className={styles.heroContent}>
+              <span className={styles.heroBadge}>
+                Tyre Scrap Recycling Plants
               </span>
+
+              <h1 className={styles.heroTitle}>
+                Tyre Scrap Recycling Plant Manufacturers in India
+              </h1>
+
+              <p className={styles.heroDescription}>
+                Explore how tyre recycling plants work, the machinery required,
+                setup costs, profitability, and the best manufacturers in India.
+              </p>
+
+              <div className={styles.heroButtons}>
+                <a href="#benefits" className={styles.primaryBtn}>
+                  Explore Benefits
+                </a>
+
+                <a href="#faqs" className={styles.secondaryBtn}>
+                  Read FAQs
+                </a>
+              </div>
             </div>
 
-            <p>
-              With India generating over **6 million tonnes of tyre waste every
-              year**, the demand for advanced tyre scrap recycling plants has
-              increased dramatically. Manufacturers now build fully-automated
-              recycling machinery capable of shredding, grinding, baling, and
-              processing tyres into reusable materials like rubber granules,
-              pyrolysis oil, steel wire, and carbon black.
-            </p>
-
-            <p>
-              Leading manufacturers in India offer durable, customizable
-              recycling plants suitable for factories, municipal waste
-              facilities, tyre processing companies, and recycling units.
-            </p>
+            <div className={styles.heroImageWrapper}>
+              <img
+                src={Plant1}
+                alt="Tyre Recycling Plant"
+                className={styles.heroImage}
+              />
+            </div>
           </div>
 
-          {/* Demand */}
-          <div id="demand" className={styles.section}>
-            <div className={styles.imgRight}>
-              <img src={Tyre1} alt="Tyre scrap demand" />
-              <span className={styles.caption}>
-                India’s rising tyre scrap generation
-              </span>
+          <section id="benefits" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Benefits</span>
+              <h2>Why Tyre Recycling Plants Matter</h2>
             </div>
 
-            <h2>Growing Demand for Tyre Recycling Plants in India</h2>
-            <p>
-              Rapid urbanization, transportation growth, and industrial
-              expansion have resulted in massive tyre waste accumulation.
-              Without proper recycling, these tyres become fire hazards,
-              mosquito breeding grounds, and environmental threats.
-            </p>
+            <div className={styles.benefitsGrid}>
+              {benefitsData.map((item, index) => (
+                <div key={index} className={styles.benefitCard}>
+                  <div className={styles.benefitIcon}>{item.icon}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
 
-            <ul className={styles.list}>
-              <li>India generates millions of end-of-life tyres annually</li>
-              <li>Recycling demand is rising due to government mandates</li>
-              <li>High profitability from recovered materials</li>
-              <li>Industries need sustainable waste management solutions</li>
-            </ul>
-          </div>
+          <section id="intro" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={Plant1} alt="Tyre Recycling Plant" />
+                <span>Modern tyre scrap recycling plant</span>
+              </div>
 
-          {/* Process */}
-          <div id="process" className={styles.section}>
-            <h2>How Tyre Scrap Recycling Plants Work</h2>
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Introduction</span>
+                <h2>Growing Need for Tyre Recycling Plants</h2>
+                <p>
+                  India generates millions of tonnes of tyre waste every year,
+                  creating a huge demand for advanced recycling facilities.
+                </p>
+                <p>
+                  Modern plants convert waste tyres into valuable outputs like
+                  rubber granules, pyrolysis oil, steel wire, and carbon black.
+                </p>
+              </div>
+            </div>
+          </section>
 
-            <p>Typical process includes:</p>
+          <section id="demand" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={Tyre1} alt="Tyre scrap demand" />
+                <span>India’s rising tyre scrap generation</span>
+              </div>
 
-            <ul className={styles.list}>
-              <li>
-                <strong>Tyre shredding:</strong> Breaking tyres into small
-                pieces
-              </li>
-              <li>
-                <strong>Steel wire extraction:</strong> Separating high-grade
-                steel
-              </li>
-              <li>
-                <strong>Rubber granulation:</strong> Producing crumb rubber
-              </li>
-              <li>
-                <strong>Pyrolysis conversion:</strong> Converting rubber into
-                oil & gas
-              </li>
-              <li>
-                <strong>Baling:</strong> Compacting scrap for transport
-              </li>
-            </ul>
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Demand</span>
+                <h2>Demand for Tyre Recycling Plants in India</h2>
+                <p>
+                  Rapid urbanization and transportation growth are increasing
+                  tyre waste generation across the country.
+                </p>
+                <p>
+                  Recycling plants help industries comply with regulations while
+                  generating profit from recovered materials.
+                </p>
+              </div>
+            </div>
+          </section>
 
-            <p>
-              Modern plants integrate PLC control panels, dust systems, and
-              automatic conveyors for continuous production with minimal labor.
-            </p>
-          </div>
+          <section id="process" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Process</span>
+              <h2>How Tyre Scrap Recycling Plants Work</h2>
+            </div>
 
-          {/* Machinery */}
-          <div id="machinery" className={styles.section}>
-            <h2>Core Machinery Included in a Tyre Recycling Plant</h2>
+            <div className={styles.processGrid}>
+              {processSteps.map((item, index) => (
+                <div key={index} className={styles.processCard}>
+                  <div className={styles.processNumber}>{item.step}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <section id="machinery" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Machinery</span>
+              <h2>Core Machinery in a Tyre Recycling Plant</h2>
+            </div>
 
             <ul className={styles.list}>
               <li>Tyre Shredders & Crushers</li>
-              <li>Rubber Grinders & Cryogenic Systems</li>
-              <li>Hydraulic Tyre Balers</li>
+              <li>Rubber Grinders & Granulators</li>
               <li>Steel Wire Separators</li>
+              <li>Hydraulic Balers</li>
               <li>Conveyors & Feeders</li>
               <li>Dust Collection Units</li>
               <li>PLC Automation Controls</li>
             </ul>
+          </section>
 
-            <p>
-              Each plant is customized based on tyre scrap volume, facility
-              size, and recycling goals.
-            </p>
-          </div>
+          <section id="manufacturers" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={Plant2} alt="Manufacturing Recycling Plants" />
+                <span>Manufacturing high-quality recycling plants</span>
+              </div>
 
-          {/* Benefits */}
-          <div id="benefits" className={styles.section}>
-            <h2>Industrial & Environmental Benefits</h2>
-            <p>Tyre recycling plants offer huge advantages:</p>
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Manufacturers</span>
+                <h2>Top Tyre Scrap Recycling Plant Manufacturers</h2>
+                <p>
+                  Vikah Ecotech and other specialized equipment manufacturers
+                  provide complete recycling plant solutions.
+                </p>
+                <p>
+                  These plants include shredders, balers, conveyors, automation
+                  systems, and maintenance support.
+                </p>
+              </div>
+            </div>
+          </section>
 
-            <ul className={styles.list}>
-              <li>Reduces landfill waste</li>
-              <li>Promotes circular economy</li>
-              <li>High ROI from recycled materials</li>
-              <li>Improves facility hygiene & organization</li>
-              <li>Ensures compliance with waste regulations</li>
-            </ul>
-          </div>
-
-          {/* Manufacturers */}
-          <div id="manufacturers" className={styles.section}>
-            <div className={styles.imgLeft}>
-              <img src={Plant2} alt="Manufacturing Recycling Plants" />
-              <span className={styles.caption}>
-                Manufacturing high-quality plants
-              </span>
+          <section id="cost" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Investment</span>
+              <h2>Cost of Setting Up a Tyre Recycling Plant</h2>
             </div>
 
-            <h2>Top Tyre Scrap Recycling Plant Manufacturers in India</h2>
-
-            <p>Some leading manufacturers include:</p>
-
             <ul className={styles.list}>
-              <li>
-                <strong>Vikah Ecotech</strong> — Trusted for durable tyre balers
-                & recycling machinery
-              </li>
-              <li>Specialized tyre shredder manufacturers</li>
-              <li>Rubber granulation equipment suppliers</li>
-              <li>Pyrolysis plant manufacturers</li>
-              <li>Industrial waste management equipment providers</li>
+              <li>Small Scale Plant: ₹15–25 Lakhs</li>
+              <li>Medium Scale Plant: ₹40–80 Lakhs</li>
+              <li>Large Automated Plant: ₹1.2–4 Crores+</li>
+              <li>Additional costs for land, labor, and approvals</li>
             </ul>
+          </section>
 
-            <p>
-              These manufacturers supply turnkey plant solutions with
-              installation, automation setup, maintenance, and long-term service
-              support.
-            </p>
-          </div>
-
-          {/* Cost */}
-          <div id="cost" className={styles.section}>
-            <h2>Cost of Setting Up a Tyre Scrap Recycling Plant</h2>
-            <p>Plant cost depends on capacity:</p>
-
-            <ul className={styles.list}>
-              <li>Small scale: ₹15–25 Lakhs</li>
-              <li>Medium scale: ₹40–80 Lakhs</li>
-              <li>Large, fully automated: ₹1.2–4 Crores+</li>
-            </ul>
-
-            <p>
-              Additional costs include land, labor, power supply, and
-              environmental clearances.
-            </p>
-          </div>
-
-          {/* Compliance */}
-          <div id="compliance" className={styles.section}>
-            <h2>Government Policies & Recycling Compliance</h2>
+          <section id="compliance" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Compliance</span>
+              <h2>Government Policies & Recycling Compliance</h2>
+            </div>
 
             <ul className={styles.list}>
               <li>CPCB tyre waste management rules</li>
-              <li>Environmental impact assessment (EIA)</li>
-              <li>Pollution board approvals</li>
-              <li>Fire & safety certifications</li>
+              <li>Environmental impact assessment requirements</li>
+              <li>Pollution control board approvals</li>
+              <li>Fire and safety certifications</li>
               <li>ISO quality compliance</li>
             </ul>
-          </div>
+          </section>
 
-          {/* Why Us */}
-          <div id="why-us" className={styles.section}>
-            <h2>Why Choose Vikah Ecotech</h2>
-            <p>
-              Vikah Ecotech provides high-quality tyre balers, shredders, and
-              recycling machinery that ensure reliability, efficiency, and
-              long-term value. Our solutions are built for industrial durability
-              and optimized for continuous operations.
-            </p>
-          </div>
-
-          {/* Conclusion */}
-          <div id="conclusion" className={styles.section}>
-            <div className={styles.imgLeft}>
-              <img src={Tyre2} alt="Conclusion" />
-              <span className={styles.caption}>
-                Recycled tyre scrap ready for reuse
-              </span>
+          <section id="why-us" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Why Us</span>
+              <h2>Why Choose Vikah Ecotech</h2>
             </div>
 
-            <h2>Final Thoughts</h2>
             <p>
-              Tyre scrap recycling plants play a crucial role in India’s
-              industrial and environmental progress. With rising tyre waste,
-              choosing the right manufacturer ensures efficient processing,
-              better revenue, and maximum sustainability.
+              Vikah Ecotech offers durable, reliable, and efficient tyre
+              recycling machinery designed for long-term industrial use.
             </p>
-          </div>
 
-          {/* FAQs */}
-          <div id="faqs" className={styles.section}>
-            <h2>Frequently Asked Questions</h2>
+            <ul className={styles.list}>
+              <li>Advanced shredders, balers, and conveyors</li>
+              <li>Customized plant layouts</li>
+              <li>Reliable automation and PLC controls</li>
+              <li>Installation, maintenance, and technical support</li>
+              <li>High productivity with lower operational costs</li>
+            </ul>
+          </section>
+
+          <section id="conclusion" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={Tyre2} alt="Recycled tyre scrap ready for reuse" />
+                <span>Recycled tyre scrap ready for reuse</span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Conclusion</span>
+                <h2>Final Thoughts</h2>
+                <p>
+                  Tyre recycling plants are essential for India’s industrial and
+                  environmental future.
+                </p>
+                <p>
+                  Choosing the right manufacturer ensures better efficiency,
+                  higher profits, and long-term sustainability.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="faqs" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>FAQs</span>
+              <h2>Frequently Asked Questions</h2>
+            </div>
 
             <div className={styles.faqContainer}>
               {faqsData.map((faq, index) => (
@@ -448,25 +508,27 @@ const TyreRecyclingBlog = () => {
                   className={`${styles.faqItem} ${
                     openFAQ === index ? styles.activeFAQ : ""
                   }`}
-                  onClick={() => toggleFAQ(index)}
                 >
-                  <div className={styles.faqQuestion}>
-                    {faq.question}
+                  <div
+                    className={styles.faqQuestion}
+                    onClick={() => toggleFAQ(index)}
+                  >
+                    <span>{faq.question}</span>
                     <span className={styles.faqIcon}>
                       {openFAQ === index ? "−" : "+"}
                     </span>
                   </div>
-                  {openFAQ === index && (
+
+                  <div className={styles.faqAnswerWrapper}>
                     <div className={styles.faqAnswer}>{faq.answer}</div>
-                  )}
+                  </div>
                 </div>
               ))}
             </div>
-          </div>
+          </section>
         </div>
       </div>
 
-      {/* RIGHT — Animated Related Pages Sidebar */}
       <aside className={styles.relatedSidebar}>
         <h3 className={styles.relatedTitle}>Related Pages</h3>
 
