@@ -8,21 +8,6 @@ function UpcomingTradeFairs() {
 
   const tradeFairs = [
     {
-      title: "Recycling Expo Middle East",
-      image: rsme,
-      description: `Organized by Eljays44, a globally recognized event company,
-      Recycling Expo Middle East 2026 serves as a premier B2B platform connecting
-      industry leaders, innovators, and decision-makers in the recycling and waste
-      management sector. The event highlights cutting-edge technologies,
-      sustainable practices, and investment opportunities shaping the future of recycling.`,
-      date: "June 2026",
-      location: "The Arena, Riyadh, Saudi Arabia",
-      hall: null,
-      booth: "A52",
-      link: "https://www.recyclingexpome.com/",
-      buttonText: "Explore Recycling Expo",
-    },
-    {
       title: "Bharat Recycling Show",
       image: bharatrecycling,
       description: `Bharat Recycling Show is a premier platform dedicated to India’s
@@ -48,6 +33,21 @@ function UpcomingTradeFairs() {
       booth: "C021",
       link: "https://ifat.de/en/trade-fair/",
       buttonText: "Explore IFAT",
+    },
+        {
+      title: "Recycling Expo Middle East",
+      image: rsme,
+      description: `Organized by Eljays44, a globally recognized event company,
+      Recycling Expo Middle East 2026 serves as a premier B2B platform connecting
+      industry leaders, innovators, and decision-makers in the recycling and waste
+      management sector. The event highlights cutting-edge technologies,
+      sustainable practices, and investment opportunities shaping the future of recycling.`,
+      date: "22-09-2026 to 23-09-2026",
+      location: "Dubai",
+      hall: null,
+      booth: "A52",
+      link: "https://www.recyclingexpome.com/",
+      buttonText: "Explore Recycling Expo",
     },
   ];
 

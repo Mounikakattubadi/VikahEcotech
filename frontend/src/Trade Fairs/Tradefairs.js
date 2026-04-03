@@ -34,49 +34,6 @@ const TradeFairs = () => {
 
       <div className="container my-5">
         <div className="row gy-4 p-3">
-          <div className="col-md-6">
-            <div className="tradefairs-card h-100 d-flex flex-column position-relative">
-              <div className="upcoming-badge">Upcoming Trade Fair</div>
-              <img
-                src={rsme}
-                alt="Recycling Expo Middle East"
-                className="trade-img"
-              />
-              <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
-                <div className="trade-content p-3">
-                  <h5>Recycling Expo Middle East</h5>
-
-                  {/* Upcoming: Recycling Expo Middle East 2025 */}
-                  <p>
-                    Organized by Eljays44, a seasoned global event company,
-                    Recycling Expo Middle East 2025 is a premier B2B platform
-                    uniting industry leaders, innovators, and decision-makers.
-                    Featuring groundbreaking recycling technologies,
-                    thought-leadership seminars, interactive zones, and key
-                    networking, it drives innovation in the waste management
-                    sector.
-                  </p>
-                  <p>
-                    <strong>Date:</strong> June-2026
-                  </p>
-                  <p>
-                    <strong>Location:</strong> The Arena, Riyadh, Saudi Arabia
-                  </p>
-                  <p>
-                    <strong>Booth No:</strong> A52
-                  </p>
-                  <a
-                    href="https://www.recyclingexpome.com/"
-                    className="btn btn-success"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Explore Recycling Expo
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <div className="col-md-6">
             <div className="tradefairs-card h-100 d-flex flex-column position-relative">
@@ -146,7 +103,49 @@ const TradeFairs = () => {
             </div>
           </div>
 
+<div className="col-md-6">
+            <div className="tradefairs-card h-100 d-flex flex-column position-relative">
+              <div className="upcoming-badge">Upcoming Trade Fair</div>
+              <img
+                src={rsme}
+                alt="Recycling Expo Middle East"
+                className="trade-img"
+              />
+              <div className="tradefairs-content flex-grow-1 d-flex flex-column justify-content-between p-3">
+                <div className="trade-content p-3">
+                  <h5>Recycling Expo Middle East</h5>
 
+                  {/* Upcoming: Recycling Expo Middle East 2025 */}
+                  <p>
+                    Organized by Eljays44, a seasoned global event company,
+                    Recycling Expo Middle East 2025 is a premier B2B platform
+                    uniting industry leaders, innovators, and decision-makers.
+                    Featuring groundbreaking recycling technologies,
+                    thought-leadership seminars, interactive zones, and key
+                    networking, it drives innovation in the waste management
+                    sector.
+                  </p>
+                  <p>
+                    <strong>Date:</strong> 22-09-2026 to 23-09-2026
+                  </p>
+                  <p>
+                    <strong>Location:</strong> Dubai
+                  </p>
+                  <p>
+                    <strong>Booth No:</strong> A52
+                  </p>
+                  <a
+                    href="https://www.recyclingexpome.com/"
+                    className="btn btn-success"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Explore Recycling Expo
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
           <div className="col-md-6">
             <div className="tradefairs-card h-100 d-flex flex-column position-relative">
               <img src={ifatimg} alt="IFAT India 2025" className="trade-img" />
