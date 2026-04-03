@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../../Pages/ProductsPage.css";
-
+import styles from "../../../Styles/ProductHeader.module.css";
 import mainSpecImage from "../../../images/baler3.png";
 import balerImage from "../../../images/Applications/app1.webp";
 import img1 from "../../../images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg";
@@ -52,9 +52,34 @@ const BLT150 = () => {
 
         <link rel="canonical" href="https://vikahecotech.com/blt150" />
       </Helmet>
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">BLT-150</h1>
+      <header className={styles.productHeader}>
+        <div className={styles.headerContent}>
+          <div className={styles.breadcrumb}>
+            Home / Products / <span>BLT-150</span>
+          </div>
+
+          <h1 className={styles.productTitle}>
+            BLT-<span>150</span>
+          </h1>
+
+          <p className={styles.productSubtitle}>
+            Compact and powerful tyre scrap baler machine designed for efficient
+            bale compaction, easy handling, and reliable performance in tyre
+            recycling operations.
+          </p>
+
+          <div className={styles.headerButtons}>
+            <button
+              className={styles.primaryBtn}
+              onClick={() => handleDownload("blt150")}
+            >
+              Download Brochure
+            </button>
+
+            <button className={styles.secondaryBtn} onClick={handleViewImage}>
+              View Machine Image
+            </button>
+          </div>
         </div>
       </header>
       {/* Rest of your existing JSX */}

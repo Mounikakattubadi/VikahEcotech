@@ -6,6 +6,7 @@ import shredderhd from "../../../images/Applications/shredtyre7.webp";
 import shredderhd1 from "../../../images/shredder_hd1.jpg";
 import shredderhdimg from "../../../images/Shedder _ Final PNG.png";
 import { Helmet } from "react-helmet";
+import styles from "../../../Styles/ProductHeader.module.css";
 
 const Sht12000 = () => {
   const [mainImage, setMainImage] = useState(shredderhdimg);
@@ -35,6 +36,9 @@ const Sht12000 = () => {
     // Remove the anchor from the body
     document.body.removeChild(link);
   };
+  const handleViewImage = () => {
+    window.open(mainImage, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <>
@@ -53,9 +57,35 @@ const Sht12000 = () => {
         <link rel="canonical" href="https://vikahecotech.com/sht12000" />
       </Helmet>
 
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">SHT-12000</h1>
+      <header className={styles.productHeader}>
+        <div className={styles.headerContent}>
+          <div className={styles.breadcrumb}>
+            Home / Products / <span>SHT-12000</span>
+          </div>
+
+          <h1 className={styles.productTitle}>
+            SHT-<span>12000</span>
+          </h1>
+
+          <p className={styles.productSubtitle}>
+            Heavy-duty tyre shredder machine developed for large-scale recycling
+            plants, delivering high-volume primary shredding of PCR and TBR
+            tyres with maximum efficiency, durability, and consistent
+            throughput.
+          </p>
+
+          <div className={styles.headerButtons}>
+            <button
+              className={styles.primaryBtn}
+              onClick={() => handleDownload("sht12000")}
+            >
+              Download Brochure
+            </button>
+
+            <button className={styles.secondaryBtn} onClick={handleViewImage}>
+              View Machine Image
+            </button>
+          </div>
         </div>
       </header>
       <div className="productpagetop">
@@ -135,11 +165,11 @@ const Sht12000 = () => {
             mission-critical.
           </p>
           <p>
-            This model is part of our 
+            This model is part of our
             <a href="/tyreshredder"> tyre shredder range </a>
-             under
+            under
             <a href="/primary-shredder"> primary shredder systems </a>
-             for tyre recycling applications.
+            for tyre recycling applications.
           </p>
         </div>
       </div>

@@ -6,6 +6,7 @@ import shredderhd from "../../../images/Applications/shredtyre6.jpg";
 import shredderhd1 from "../../../images/shredder_hd1.jpg";
 import shredderhdimg from "../../../images/Shedder _ Final PNG.png";
 import { Helmet } from "react-helmet";
+import styles from "../../../Styles/ProductHeader.module.css";
 
 const Sht6000 = () => {
   const [mainImage, setMainImage] = useState(shredderhd);
@@ -33,6 +34,10 @@ const Sht6000 = () => {
     // Remove the anchor from the body
     document.body.removeChild(link);
   };
+
+  const handleViewImage = () => {
+    window.open(mainImage, "_blank", "noopener,noreferrer");
+  };
   return (
     <>
       <Helmet>
@@ -51,9 +56,34 @@ const Sht6000 = () => {
         <link rel="canonical" href="https://vikahecotech.com/sht6000" />
       </Helmet>
 
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">SHT-6000</h1>
+      <header className={styles.productHeader}>
+        <div className={styles.headerContent}>
+          <div className={styles.breadcrumb}>
+            Home / Products / <span>SHT-6000</span>
+          </div>
+
+          <h1 className={styles.productTitle}>
+            SHT-<span>6000</span>
+          </h1>
+
+          <p className={styles.productSubtitle}>
+            Powerful primary tyre shredder machine engineered for processing PCR
+            and TBR tyres with high efficiency, uniform shredding output, and
+            reliable performance in tyre recycling plants.
+          </p>
+
+          <div className={styles.headerButtons}>
+            <button
+              className={styles.primaryBtn}
+              onClick={() => handleDownload("sht6000")}
+            >
+              Download Brochure
+            </button>
+
+            <button className={styles.secondaryBtn} onClick={handleViewImage}>
+              View Machine Image
+            </button>
+          </div>
         </div>
       </header>
       <div className="productpagetop">
@@ -133,11 +163,11 @@ const Sht6000 = () => {
             tyres.
           </p>
           <p>
-            The SHT-6000 tyre shredder is part of our 
+            The SHT-6000 tyre shredder is part of our
             <a href="/tyreshredder"> tyre shredder range </a>
-             under
+            under
             <a href="/primary-shredder"> primary shredder systems </a>
-             for tyre recycling applications.
+            for tyre recycling applications.
           </p>
         </div>
       </div>

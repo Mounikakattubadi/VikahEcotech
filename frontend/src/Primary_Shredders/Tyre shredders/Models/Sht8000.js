@@ -6,6 +6,7 @@ import shredderhd from "../../../images/Applications/shredtyre9.jpg";
 import shredderhd1 from "../../../images/shredder_hd1.jpg";
 import shredderhdimg from "../../../images/Shedder _ Final PNG.png";
 import { Helmet } from "react-helmet";
+import styles from "../../../Styles/ProductHeader.module.css";
 
 const Sht8000 = () => {
   const [mainImage, setMainImage] = useState(shredderhd1);
@@ -34,6 +35,9 @@ const Sht8000 = () => {
     // Remove the anchor from the body
     document.body.removeChild(link);
   };
+  const handleViewImage = () => {
+    window.open(mainImage, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <>
@@ -53,9 +57,34 @@ const Sht8000 = () => {
         <link rel="canonical" href="https://vikahecotech.com/sht8000" />
       </Helmet>
 
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">SHT-8000</h1>
+      <header className={styles.productHeader}>
+        <div className={styles.headerContent}>
+          <div className={styles.breadcrumb}>
+            Home / Products / <span>SHT-8000</span>
+          </div>
+
+          <h1 className={styles.productTitle}>
+            SHT-<span>8000</span>
+          </h1>
+
+          <p className={styles.productSubtitle}>
+            High-capacity tyre shredder machine built for medium and large
+            recycling facilities, offering efficient primary shredding of PCR
+            and TBR tyres with powerful performance and consistent output.
+          </p>
+
+          <div className={styles.headerButtons}>
+            <button
+              className={styles.primaryBtn}
+              onClick={() => handleDownload("sht8000")}
+            >
+              Download Brochure
+            </button>
+
+            <button className={styles.secondaryBtn} onClick={handleViewImage}>
+              View Machine Image
+            </button>
+          </div>
         </div>
       </header>
       <div className="productpagetop">
