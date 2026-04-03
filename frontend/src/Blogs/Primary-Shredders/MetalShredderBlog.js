@@ -231,23 +231,7 @@ const MetalShredderBlog = () => {
             </div>
           </div>
 
-          <section id="benefits" className={styles.sectionCard}>
-            <div className={styles.sectionHeader}>
-              <span className={styles.sectionTag}>Benefits</span>
-              <h2>Why Industries Use Metal Shredders</h2>
-            </div>
-
-            <div className={styles.benefitsGrid}>
-              {benefitsData.map((item, index) => (
-                <div key={index} className={styles.benefitCard}>
-                  <div className={styles.benefitIcon}>{item.icon}</div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
+          {/* introduction */}
           <section id="introduction" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -273,6 +257,25 @@ const MetalShredderBlog = () => {
             </div>
           </section>
 
+          {/* benefits */}
+          <section id="benefits" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Benefits</span>
+              <h2>Why Industries Use Metal Shredders</h2>
+            </div>
+
+            <div className={styles.benefitsGrid}>
+              {benefitsData.map((item, index) => (
+                <div key={index} className={styles.benefitCard}>
+                  <div className={styles.benefitIcon}>{item.icon}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* challenges */}
           <section id="challenges" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -284,8 +287,8 @@ const MetalShredderBlog = () => {
                 <span className={styles.sectionTag}>Challenges</span>
                 <h2>Metal Scrap Challenges in Industrial Facilities</h2>
                 <p>
-                  Metal scrap accumulation can obstruct workflow, increase fire
-                  risks, and raise labor costs.
+                  Metal scrap accumulation can obstruct workflow, increase fire risks,
+                  and raise labor costs. Improper handling of scrap metals leads to workplace hazards and inefficiencies.
                 </p>
 
                 <ul className={styles.list}>
@@ -296,8 +299,43 @@ const MetalShredderBlog = () => {
                 </ul>
               </div>
             </div>
+            <p>Metal shredders resolve these issues by converting scrap into uniform sizes, improving safety and operational efficiency.</p>
           </section>
 
+          {/* Types of Metal Scrap */}
+          <section id="types" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Types of Metal Scrap</span>
+              <p><b>Ferrous scrap:  </b>iron, steel</p>
+              <p><b>Non-ferrous metals: </b>aluminum, copper, brass</p>
+              <p>Automotive parts and chassis components</p>
+              <p>Industrial manufacturing offcuts</p>
+              <p>Construction and demolition scrap</p>
+            </div>
+            <p>Proper shredding and segregation increases resale value and reduces handling risks, enabling a smoother metal recycling process.</p>
+          </section>
+
+          {/* How Metal Shredders Work */}
+          <section id="how-it-works" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={MetalScrap1} alt="Metal Scrap Challenges" />
+                <span>How Metal Shredders Work</span>
+              </div>
+
+              <div className={styles.textCard}>
+                <h2>How Metal Shredders Work</h2>
+                <p>
+                  Metal shredders use powerful cutting and crushing mechanisms to break down
+                  scrap metals into uniform sizes. Operators feed scrap into the machine, which processes it efficiently and safely.
+                </p>
+                <p>Modern shredders include PLCs, automated sensors, and overload protection to ensure consistent operation, reducing downtime and maximizing output.</p>
+              </div>
+            </div>
+            <p>Metal shredders resolve these issues by converting scrap into uniform sizes, improving safety and operational efficiency.</p>
+          </section>
+
+          {/* process */}
           <section id="process" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Process</span>
@@ -315,6 +353,87 @@ const MetalShredderBlog = () => {
             </div>
           </section>
 
+          {/* workflow */}
+          <section id="efficiency" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Efficiency & Workflow</span>
+              <p>Shredding metals allows efficient storage, reduces clutter, and optimizes workflow.
+                Automated metal handling and conveyor integration streamline operations further.</p>
+            </div>
+          </section>
+
+          {/* Cost & Transport Benefits */}
+          <section id="cost-benefits" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Cost & Transport Benefits</span>
+              <p>Shredded metals are easier to transport, reducing freight trips and lowering fuel and
+                labor costs. This improves cost predictability and reduces environmental impact.</p>
+            </div>
+          </section>
+
+          {/* Maximizing Scrap Value */}
+          <section id="value-maximization" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Maximizing Scrap Value</span>
+              <p>Uniform, clean shredded metals fetch higher resale prices. Proper segregation and
+                shredding improve transparency and strengthen buyer confidence.</p>
+            </div>
+          </section>
+
+          {/* Safety & Compliance */}
+          <section id="safety" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Safety & Compliance</span>
+              <p>Properly shredded metals reduce workplace hazards and ensure compliance with ISO and environmental standards.</p>
+              <ul className={styles.modernList}>
+                <li>Emergency stops for immediate shutdown</li>
+                <li>Interlocks preventing unsafe operation</li>
+                <li>Overload protection to avoid mechanical failures</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Maximizing Scrap Value */}
+          <section id="sustainability" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Sustainable Practices</span>
+              <p>Metal shredding promotes recycling, reduces landfill dependency, and aligns with CSR
+                and environmental goals, fostering a circular economy.</p>
+            </div>
+          </section>
+
+          {/* Easy Operation & Reliability*/}
+          <section id="operation" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Easy Operation & Reliability</span>
+              <p>Minimal training is required, and modern metal shredders offer predictive maintenance and remote monitoring, ensuring maximum uptime.</p>
+            </div>
+          </section>
+
+          {/* Long-Term Benefits */}
+          <section id="long-term" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Long-Term Benefits</span>
+              <ul className={styles.modernList}>
+                <li>Lower operational costs over time</li>
+                <li>Higher resale revenue</li>
+                <li>Durable machinery for decades</li>
+                <li>Improved safety and compliance</li>
+                <li>Supports sustainability goals</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* Why Choose Vikah Ecotech */}
+          <section id="why-us" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Why Choose Vikah Ecotech</span>
+              <p>Vikah Ecotech provides reliable, high-performance metal shredders in India with excellent support, 
+                customization options, and ROI-focused solutions for all industrial setups.</p>
+            </div>
+          </section>
+
+          {/* conclusion */}
           <section id="conclusion" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -337,6 +456,21 @@ const MetalShredderBlog = () => {
             </div>
           </section>
 
+          {/* Long-Term Benefits */}
+          <section id="key-takeaways" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Key Takeaways</span>
+              <ul className={styles.modernList}>
+                <li>Efficient metal scrap processing</li>
+                <li>Reduced labor and transport costs</li>
+                <li>Enhanced resale value of metals</li>
+                <li>Improved workplace safety and compliance</li>
+                <li>Supports sustainability and recycling initiatives</li>
+              </ul>
+            </div>
+          </section>
+
+          {/* faqs */}
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>FAQs</span>
@@ -347,9 +481,8 @@ const MetalShredderBlog = () => {
               {faqsData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`${styles.faqItem} ${
-                    openFAQ === index ? styles.activeFAQ : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
+                    }`}
                 >
                   <div
                     className={styles.faqQuestion}

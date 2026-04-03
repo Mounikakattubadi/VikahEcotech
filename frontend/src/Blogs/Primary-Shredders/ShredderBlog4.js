@@ -28,6 +28,26 @@ const faqsData = [
     answer:
       "Yes, shredding materials simplifies recycling, reduces landfill dependency, and aligns with corporate sustainability and environmental compliance goals.",
   },
+  {
+    question: "Which industries benefit most from Primary Shredders?",
+    answer:
+      "Automotive, plastics, rubber, paper, e-waste management, and metal recycling industries gain significant efficiency, cost, and sustainability benefits from industrial Primary Shredders.",
+  },
+  {
+    question: "How does automation enhance shredder performance?",
+    answer:
+      "Automation allows continuous operation, predictive maintenance, and integration with conveyors and balers, reducing human error and increasing throughput.",
+  },
+  {
+    question: "What is the lifespan of industrial Primary Shredders?",
+    answer:
+      "With proper maintenance, high-quality Primary Shredders can operate reliably for over 10 years, providing consistent output and ROI.",
+  },
+   {
+    question: "How do Primary Shredders contribute to environmental compliance?",
+    answer:
+      "By reducing waste volume and enabling efficient recycling, Primary Shredders help companies meet environmental regulations and sustainability targets.",
+  },
 ];
 
 const benefitsData = [
@@ -390,23 +410,7 @@ const ShredderBlog4 = () => {
             </div>
           </div>
 
-          <section id="benefits" className={styles.sectionCard}>
-            <div className={styles.sectionHeader}>
-              <span className={styles.sectionTag}>Benefits</span>
-              <h2>Why Industries Use Primary Shredders</h2>
-            </div>
-
-            <div className={styles.benefitsGrid}>
-              {benefitsData.map((item, index) => (
-                <div key={index} className={styles.benefitCard}>
-                  <div className={styles.benefitIcon}>{item.icon}</div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
+          {/* introduction */}
           <section id="introduction" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -434,6 +438,36 @@ const ShredderBlog4 = () => {
             </div>
           </section>
 
+          {/* benefits */}
+          <section id="benefits" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Benefits</span>
+              <h2>Why Industries Use Primary Shredders</h2>
+            </div>
+
+            <div className={styles.benefitsGrid}>
+              {benefitsData.map((item, index) => (
+                <div key={index} className={styles.benefitCard}>
+                  <div className={styles.benefitIcon}>{item.icon}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+
+          {/* Boosting Industrial Efficiency & Throughput */}
+          <section id="efficiency" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Boosting Industrial Efficiency & Throughput</span>
+              <h2>Boosting Industrial Efficiency & Throughput</h2>
+            </div>
+            <p>Primary Shredders automate material size reduction, minimizing manual labor and improving throughput.</p>
+            <p>High-volume processing ensures faster material handling, reducing bottlenecks and maintaining consistent workflow across industrial facilities.</p>
+          </section>
+
+          {/* operation */}
           <section id="operation" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -443,25 +477,43 @@ const ShredderBlog4 = () => {
 
               <div className={styles.textCard}>
                 <span className={styles.sectionTag}>Technology</span>
-                <h2>How Industrial Primary Shredders Work</h2>
+                <h2>How Industrial Primary Shredders Work: Mechanisms & Technology</h2>
                 <p>
-                  Primary Shredders use rotating blades, cutters, or granulators
-                  to reduce materials into uniform sizes.
+                  Primary Shredders use rotating blades, cutters, or granulators to reduce materials into uniform sizes. Adjustable settings
+                  allow precise control over output size, speed, and torque, optimizing operations for plastics, rubber, metals, paper, and e-waste.
                 </p>
                 <p>
-                  Integration with conveyors, balers, and automated sorting
-                  systems ensures continuous and smooth workflow.
+                  Integration with conveyors, balers, and automated sorting systems ensures continuous, smooth workflow for downstream processing.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* Types of Industrial Primary Shredders and Their Applications */}
+          <section id="types" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Types of Primary Shredders & Their Industrial Applications  </span>
+              </div>
+            </div>
+            <p>
+              <b>Single-Shaft Primary Shredders:</b> Medium-density scrap like plastics and cardboard.
+            </p>
+            <p><b>Dual-Shaft Primary Shredders:</b> Heavy-duty materials such as tyres, metals, and large plastic pieces.</p>
+            <p><b>Granulators: </b> Produce small granules for recycling or resale, ideal for plastics and rubber.</p>
+            <p><b>High-Speed Rotary Primary Shredders: </b> Lightweight materials like paper and cardboard.</p>
+            <p><b>Hammermills:</b>Crush tough materials for further processing or recycling.</p>
+          </section>
+
+
+          {/* workflow */}
           <section id="workflow" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Process</span>
               <h2>Industrial Shredding Process</h2>
             </div>
-
+            <p>Shredded materials are easier to handle, store, and transport. Organized storage improves accessibility and
+              reduces bottlenecks, enabling higher processing volumes with fewer resources.</p>
             <div className={styles.processGrid}>
               {processSteps.map((item, index) => (
                 <div key={index} className={styles.processCard}>
@@ -473,6 +525,148 @@ const ShredderBlog4 = () => {
             </div>
           </section>
 
+
+          {/* Maximizing Space Utilization & Storage Efficiency */}
+          <section id="space" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Maximizing Space Utilization & Storage Efficiency</span>
+              <h2>Maximizing Space Utilization & Storage Efficiency</h2>
+            </div>
+            <p>Compacted, uniform scrap allows facilities to utilize warehouse and factory floor space efficiently. </p>
+            <p>This results in safer operations and increased throughput without expanding infrastructure.</p>
+          </section>
+
+          {/* Cost Savings, ROI & Operational Benefits */}
+          <section id="cost" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Cost Savings, ROI & Operational Benefits</span>
+              <h2>Cost Savings, ROI & Operational Benefits</h2>
+            </div>
+            <p>Primary Shredders reduce labor, transportation, and storage costs.  </p>
+            <p>Smaller materials mean fewer trips, optimal container usage, and higher resale or recycling value, delivering tangible ROI for industries.</p>
+          </section>
+
+          {/* Workplace Safety & Regulatory Compliance */}
+          <section id="safety" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Workplace Safety & Regulatory Compliance</span>
+              <h2>Workplace Safety & Regulatory Compliance</h2>
+            </div>
+            <p>Primary Shredders reduce loose scrap and clutter, minimizing hazards. </p>
+            <p> Safety features like emergency stops, interlocks, and overload protections ensure regulatory compliance and a safe working environment.</p>
+          </section>
+
+          {/* Environmental & Sustainability Advantages */}
+          <section id="sustainability" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Environmental & Sustainability Advantages</span>
+              <h2>Environmental & Sustainability Advantages</h2>
+            </div>
+            <p>Shredded materials are easier to recycle, reducing landfill dependency. </p>
+            <p>  Industries adopting Primary Shredders support corporate sustainability initiatives and contribute positively to environmental stewardship.</p>
+          </section>
+
+          {/* Maintenance, Reliability & Longevity */}
+          <section id="maintenance" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Maintenance, Reliability & Longevity</span>
+              <h2>Maintenance, Reliability & Longevity</h2>
+            </div>
+            <p>High-quality Primary Shredders are built for durability. </p>
+            <p>Regular maintenance of blades, motors, and controls ensures consistent performance, minimizes downtime, and extends the machine’s lifespan.</p>
+          </section>
+
+          {/* Automation, Smart Integration & Industry 4.0 */}
+          <section id="automation" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Automation, Smart Integration & Industry 4.0</span>
+              <h2>Automation, Smart Integration & Industry 4.0</h2>
+            </div>
+            <p>Smart Primary Shredders integrate with IoT systems, sensors, and automated conveyors.</p>
+            <p>Automation enables predictive maintenance, real-time monitoring, and seamless operation, increasing productivity and reducing human errors.</p>
+          </section>
+
+          {/* Troubleshooting Common Shredder Issues */}
+          <section id="troubleshooting" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Troubleshooting Common Shredder Issues</span>
+              <h2>Troubleshooting Common Shredder Issues</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li> <b>Material jams:</b>Use reverse function and remove obstacles carefully.</li>
+              <li><b>Blade wear: </b>Inspect and replace blades as needed to maintain efficiency.</li>
+              <li><b>Motor overheating:</b> Ensure load management and proper ventilation.</li>
+              <li><b>Excess vibration: </b> Check alignment, mounting bolts, and rotor balance.</li>
+            </ul>
+          </section>
+
+          {/* Return on Investment Analysis & Long-Term Benefits */}
+          <section id="roi" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Return on Investment Analysis & Long-Term Benefits</span>
+              <h2>Return on Investment Analysis & Long-Term Benefits</h2>
+            </div>
+            <p>Investing in industrial Primary Shredders ensures long-term savings, improved recycling efficiency,
+               reduced labor costs, and measurable ROI over the machine's lifespan.</p>
+          </section>
+
+          {/* Future Trends in Industrial Shredding Technology */}
+          <section id="future" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Future Trends in Industrial Shredding Technology</span>
+              <h2>Future Trends in Industrial Shredding Technology</h2>
+            </div>
+            <p>AI-driven maintenance, energy-efficient motors, and Industry 4.0 integration are transforming shredding technology. </p>
+            <p>Future Primary Shredders will offer predictive maintenance, remote monitoring, and higher throughput for sustainable operations.</p>
+          </section>
+
+          {/* Why Choose Our Industrial Primary Shredders */}
+          <section id="why-us" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Why Choose Our Industrial Primary Shredders</span>
+              <h2>Why Choose Our Industrial Primary Shredders</h2>
+            </div>
+            <p>Our Primary Shredders are reliable, scalable, and energy-efficient. They provide industries
+               with cost-effective, safe, and sustainable solutions for material handling, waste reduction, and recycling.</p>
+          </section>
+
+          {/* conclusion */}
+          <section id="conclusion" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={BlogImg4} alt="Processed shredded materials" />
+                <span>Processed materials ready for recycling</span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Conclusion</span>
+                <h2>Final Thoughts</h2>
+                <p>
+                  Industrial Primary Shredders are crucial for operational efficiency, cost savings, and sustainability.
+                </p>
+                <p>
+                  They standardize material size, optimize workflow, improve recycling, and deliver long-term operational advantages.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* key-takeaways */}
+          <section id="key-takeaways" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Key Takeaways & Summary</span>
+            </div>
+            <ul className={styles.modernList}>
+              <li>Enhances workflow and operational efficiency</li>
+              <li>Reduces labor, storage, and transport costs</li>
+              <li>Supports safety, compliance, and sustainability</li>
+              <li>Improves recycling efficiency and resource utilization</li>
+              <li>Provides long-term performance and ROI</li>
+              <li>Integrates with automation and Industry 4.0 systems</li>
+            </ul>
+          </section>
+
+          {/* faqs */}
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>FAQs</span>
@@ -483,9 +677,8 @@ const ShredderBlog4 = () => {
               {faqsData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`${styles.faqItem} ${
-                    openFAQ === index ? styles.activeFAQ : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
+                    }`}
                 >
                   <div
                     className={styles.faqQuestion}
