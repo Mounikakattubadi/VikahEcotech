@@ -42,6 +42,7 @@ const Enquire = () => {
       "Metal Shredder",
       "Plastic Shredder",
       "Paper and Cardboard Shredder",
+      "E-waste"
     ],
     "secondary-shredder": [
       "Rasper",
