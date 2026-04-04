@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import "../../Pages/ProductsPage.css";
+import styles from "../../Styles/ProductHeader.module.css";
 
 import she800_main from "../../images/Applications/shredewaste.jpeg";
 import she800_angle1 from "../../images/Applications/shredewaste2.webp";
@@ -16,8 +17,8 @@ const Ewaste = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const machinery = "e-waste-primary-shredder";
-  const model = "SHE-400";
+  const machinery = "shredder";
+  const model = "E-waste";
 
   const handleImageClick = (img) => setMainImage(img);
 
@@ -28,6 +29,10 @@ const Ewaste = () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  const handleViewImage = () => {
+    window.open(mainImage, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -59,12 +64,34 @@ const Ewaste = () => {
       />
 
       {/* ================= HEADER ================= */}
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">E-Waste Shredder Machine</h1>
-          <p className="lead">
-            Primary Shredding Solution for Electronic Waste Recycling
+      <header className={styles.productHeader}>
+        <div className={styles.headerContent}>
+          <div className={styles.breadcrumb}>
+            Home / Products / <span>E-Waste Shredder Machine</span>
+          </div>
+
+          <h1 className={styles.productTitle}>
+            E-Waste <span>Shredder</span>
+          </h1>
+
+          <p className={styles.productSubtitle}>
+            Advanced primary shredding solution designed for safe and efficient
+            processing of electronic waste, PCB boards, appliances, and
+            electrical scrap in recycling facilities.
           </p>
+
+          <div className={styles.headerButtons}>
+            <button
+              className={styles.primaryBtn}
+              onClick={() => handleDownload("Ewaste Shredder")}
+            >
+              Download Brochure
+            </button>
+
+            <button className={styles.secondaryBtn} onClick={handleViewImage}>
+              View  Image
+            </button>
+          </div>
         </div>
       </header>
 
@@ -245,7 +272,7 @@ const Ewaste = () => {
 
         <button
           className="downloadspeci-button"
-          onClick={() => handleDownload("she800")}
+          onClick={() => handleDownload("Ewaste Shredder")}
         >
           Download Specifications
         </button>

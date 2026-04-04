@@ -9,7 +9,7 @@ import shm4000_main from "../../images/Applications/shredm5.jpg";
 import shm4000_angle1 from "../../images/Applications/shredm6.jpg";
 import shm4000_angle2 from "../../images/Applications/shredm7.jpg";
 import SEOHelmet from "../../components/SEO/SEOHelmet";
-
+import styles from "../../Styles/ProductHeader.module.css";
 
 
 const Shm4000 = () => {
@@ -19,8 +19,8 @@ const Shm4000 = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const machinery = "metal-shredder";
-  const model = "SHM-4000";
+  const machinery = "shredder";
+  const model = "Metal Shredder";
 
   const handleDownload = (fileName) => {
     const link = document.createElement("a");
@@ -35,16 +35,23 @@ const Shm4000 = () => {
     setMainImage(img);
   };
 
+  const handleViewImage = () => {
+    window.open(mainImage, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <>
-<SEOHelmet
+      <SEOHelmet
         title="SHM-4000 Metal Shredder Machine Manufacturer in India | Vikah Ecotech"
         description="SHM-4000 is a heavy-duty primary metal shredder machine designed for high-capacity shredding of ferrous and non-ferrous metal scrap."
         keywords="metal shredder machine, primary metal shredder, metal scrap shredder"
         canonical="https://vikahecotech.com/shm4000"
         breadcrumb={[
           { name: "Home", url: "https://vikahecotech.com" },
-          { name: "Primary Shredders", url: "https://vikahecotech.com/primary-shredder" },
+          {
+            name: "Primary Shredders",
+            url: "https://vikahecotech.com/primary-shredder",
+          },
           { name: "SHM-4000", url: "https://vikahecotech.com/shm4000" },
         ]}
         product={{
@@ -55,14 +62,38 @@ const Shm4000 = () => {
           sku: "SHM-4000",
           category: "Metal Recycling Machinery",
           url: "https://vikahecotech.com/shm4000",
-          price: "5000000"
+          price: "5000000",
         }}
       />
 
-      <header className="tyrecutting-header text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-4">SHM-4000 Metal Shredder</h1>
-          <p className="lead">Primary Shredders for Metal Recycling</p>
+      <header className={styles.productHeader}>
+        <div className={styles.headerContent}>
+          <div className={styles.breadcrumb}>
+            Home / Products / <span>SHM-4000 Metal Shredder</span>
+          </div>
+
+          <h1 className={styles.productTitle}>
+            SHM-<span>4000</span>
+          </h1>
+
+          <p className={styles.productSubtitle}>
+            Heavy-duty metal shredder machine designed for high-capacity
+            processing of ferrous and non-ferrous scrap, delivering powerful
+            shredding performance for modern recycling operations.
+          </p>
+
+          <div className={styles.headerButtons}>
+            <button
+              className={styles.primaryBtn}
+              onClick={() => handleDownload("Primary Metal Shredder")}
+            >
+              Download Brochure
+            </button>
+
+            <button className={styles.secondaryBtn} onClick={handleViewImage}>
+              View  Image
+            </button>
+          </div>
         </div>
       </header>
 
@@ -238,7 +269,7 @@ const Shm4000 = () => {
 
         <button
           className="downloadspeci-button"
-          onClick={() => handleDownload("shm4000")}
+          onClick={() => handleDownload("Primary Metal Shredder")}
         >
           Download Specifications
         </button>
