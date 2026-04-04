@@ -18,8 +18,8 @@ const Rst6000 = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const machinery = "shredder";
-  const model = "RST-6000"; // Keeping original variables as requested
+const machinery = "secondary-shredder";
+const model = "Rasper";
 
   const handleDownload = (fileName) => {
     const link = document.createElement("a");
@@ -75,7 +75,7 @@ const Rst6000 = () => {
           <div className={styles.headerButtons}>
             <button
               className={styles.primaryBtn}
-              onClick={() => handleDownload("RST-6000")}
+              onClick={() => handleDownload("Rasper(Tyres)")}
             >
               Download Brochure
             </button>
@@ -142,7 +142,7 @@ const Rst6000 = () => {
           </div>
         </div>
         <div className="productdetails">
-          <h1>{model}</h1>
+          <h1>RST-6000</h1>
           <p>
             The RST-6000 is a high-capacity secondary shredder engineered for
             advanced tyre chip refinement in medium to large-scale recycling
@@ -325,6 +325,17 @@ const Rst6000 = () => {
           </tbody>
         </table>
       </div>
+                  <div className="buttons-container">
+                    <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
+                      <button className="login-button">Enquire Us</button>
+                    </Link>
+                    <button
+        className="downloadspeci-button"
+        onClick={() => handleDownload("Rasper(Tyres)")}
+      >
+        Download Specifications
+      </button>
+                  </div>
     </div>
   );
 };

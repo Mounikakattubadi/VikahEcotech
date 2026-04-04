@@ -18,9 +18,8 @@ const Rst4000 = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const machinery = "shredder";
-  const model = "RST-4000";
-
+const machinery = "secondary-shredder";
+const model = "Rasper";
   const handleDownload = (fileName) => {
     const link = document.createElement("a");
     link.href = `${process.env.PUBLIC_URL}/${fileName}.pdf`;
@@ -74,7 +73,7 @@ const Rst4000 = () => {
           <div className={styles.headerButtons}>
             <button
               className={styles.primaryBtn}
-              onClick={() => handleDownload("RST-4000")}
+              onClick={() => handleDownload("Rasper(Tyres)")}
             >
               Download Brochure
             </button>
@@ -140,7 +139,7 @@ const Rst4000 = () => {
           </div>
         </div>
         <div className="productdetails">
-          <h1>{model}</h1>
+          <h1>RST - 4000</h1>
           <p>
             The RST-4000 is a high-efficiency secondary shredder (rasper)
             designed to refine pre-shredded tyre chips into clean, uniform
@@ -326,7 +325,19 @@ const Rst4000 = () => {
           </tbody>
         </table>
       </div>
+            <div className="buttons-container">
+              <Link to={`/enquire?machinery=${machinery}&model=${model}`}>
+                <button className="login-button">Enquire Us</button>
+              </Link>
+              <button
+  className="downloadspeci-button"
+  onClick={() => handleDownload("Rasper(Tyres)")}
+>
+  Download Specifications
+</button>
+            </div>
     </div>
+    
   );
 };
 
