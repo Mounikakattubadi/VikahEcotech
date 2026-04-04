@@ -207,6 +207,34 @@ const OtherEquipmentBlog4 = () => {
             </div>
           </div>
 
+          {/* introduction */}
+          <section id="introduction" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={BlogImg1} alt="Packing Equipment" />
+                <span>
+                  Folding equipment stacking rubber sheets
+                </span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Introduction</span>
+                <h2>Overview of Folding & Packing Equipment</h2>
+                <p>
+                  Packing and folding equipment plays a pivotal role in modern recycling operations.
+                  These machines help in compacting processed rubber sheets or cut materials into uniform stacks,
+                  improving storage, handling, and transportation efficiency.<b>Recycling facilities that implement
+                  proper folding and packing solutions often see higher throughput, less clutter, and more organized warehouses.</b>
+                </p>
+                <p>
+                  These machines improve storage efficiency, simplify handling,
+                  and support smoother shipping and logistics operations.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* benefits */}
           <section id="benefits" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Benefits</span>
@@ -224,30 +252,7 @@ const OtherEquipmentBlog4 = () => {
             </div>
           </section>
 
-          <section id="introduction" className={styles.sectionCard}>
-            <div className={styles.contentGrid}>
-              <div className={styles.imageCard}>
-                <img src={BlogImg1} alt="Packing Equipment" />
-                <span>
-                  Folding equipment stacking rubber sheets
-                </span>
-              </div>
-
-              <div className={styles.textCard}>
-                <span className={styles.sectionTag}>Introduction</span>
-                <h2>Overview of Folding & Packing Equipment</h2>
-                <p>
-                  Folding and packing equipment helps organize processed rubber
-                  sheets and recycled materials into neat, uniform stacks.
-                </p>
-                <p>
-                  These machines improve storage efficiency, simplify handling,
-                  and support smoother shipping and logistics operations.
-                </p>
-              </div>
-            </div>
-          </section>
-
+          {/* how-it-works */}
           <section id="how-it-works" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -259,19 +264,22 @@ const OtherEquipmentBlog4 = () => {
 
               <div className={styles.textCard}>
                 <span className={styles.sectionTag}>How It Works</span>
-                <h2>How Folding Machines Work</h2>
+                <h2>How Folding Machines Work: Step by Step</h2>
                 <p>
-                  Folding machines automatically collect, align, and stack
-                  processed sheets or strips into uniform bundles.
+                  Folding machines automatically pick up processed sheets or strips and fold them into uniform stacks.
+                   Advanced sensors ensure proper alignment and consistent stack height. 
+                  Some machines also include conveyors that move the folded stacks to pallets
+                   or storage areas, minimizing manual handling.
                 </p>
                 <p>
-                  Advanced systems use conveyors and sensors to maintain stack
-                  quality while reducing manual handling.
+                  This step not only organizes materials but also prevents damage to fragile sheets, ensuring that 
+                  the quality of recycled rubber or plastics is maintained.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* process */}
           <section id="process" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Workflow</span>
@@ -289,6 +297,18 @@ const OtherEquipmentBlog4 = () => {
             </div>
           </section>
 
+          {/* Importance of Folding Equipment in Recycling Lines*/}
+          <section id="why-you-need-it" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Importance of Folding Equipment in Recycling Lines</span>
+              <h2>Importance of Folding Equipment in Recycling Lines</h2>
+            </div>
+            <p>Without automated folding, materials can pile up haphazardly, causing storage inefficiencies and slowing down 
+              the recycling process. Folding equipment ensures a streamlined workflow, reduced clutter, and safer storage practices.</p>
+            <p>Facilities aiming for ISO compliance or operational excellence benefit from implementing these machines.</p>
+          </section>
+
+          {/* efficiency-impact */}
           <section id="efficiency-impact" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -300,19 +320,29 @@ const OtherEquipmentBlog4 = () => {
 
               <div className={styles.textCard}>
                 <span className={styles.sectionTag}>Efficiency</span>
-                <h2>Impact on Workflow Optimization</h2>
+                <h2>Impact on Efficiency and Workflow Optimization</h2>
                 <p>
-                  Automated folding reduces labor, speeds up logistics, and
-                  keeps workspaces organized.
+                  Automated folding reduces labor requirements and accelerates logistics operations. 
                 </p>
                 <p>
-                  Facilities can process larger volumes while maintaining a
-                  cleaner and safer environment.
+                   By minimizing human intervention, recycling facilities can process larger volumes 
+                   without adding staff. This improves turnaround time and ensures consistent workflow across all stages.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* Safety and Material Handling Benefits */}
+          <section id="safety-benefits" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Safety and Material Handling Benefits</span>
+              <h2>Safety and Material Handling Benefits</h2>
+            </div>
+            <p>Folding equipment reduces the need for manual lifting and stacking, lowering the risk of workplace injuries.
+               Organized stacks are easier to transport with forklifts or pallet jacks, ensuring safer material handling.</p>
+          </section>
+
+          {/* cost-savings */}
           <section id="cost-savings" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -326,17 +356,26 @@ const OtherEquipmentBlog4 = () => {
                 <span className={styles.sectionTag}>Cost Savings</span>
                 <h2>Reducing Labor Costs and Storage Expenses</h2>
                 <p>
-                  Automated stacking reduces manual work, lowers labor costs,
-                  and minimizes warehouse space requirements.
+                  By automating repetitive stacking tasks, facilities save on labor costs and reduce storage space requirements. 
                 </p>
                 <p>
-                  Uniform stacks improve transport efficiency and reduce
-                  material damage during handling.
+                  Uniform stacks maximize warehouse capacity, and faster packing leads to higher operational efficiency.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* Who Should Use Folding and Packing Machines? */}
+          <section id="who-should-use-it" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Who Should Use Folding and Packing Machines?</span>
+              <h2>Who Should Use Folding and Packing Machines?</h2>
+            </div>
+            <p>Warehouses, tyre recycling facilities, rubber sheet processors, and large-scale recycling operations benefit most. 
+              Any facility that handles high volumes of processed material can improve workflow, safety, and storage efficiency.</p>
+          </section>
+
+          {/* implementation-tips */}
           <section id="implementation-tips" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Implementation</span>
@@ -362,6 +401,7 @@ const OtherEquipmentBlog4 = () => {
             </ul>
           </section>
 
+          {/* faqs */}
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>FAQs</span>
@@ -372,9 +412,8 @@ const OtherEquipmentBlog4 = () => {
               {faqsData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`${styles.faqItem} ${
-                    openFAQ === index ? styles.activeFAQ : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
+                    }`}
                 >
                   <div
                     className={styles.faqQuestion}

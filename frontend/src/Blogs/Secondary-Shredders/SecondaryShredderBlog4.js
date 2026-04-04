@@ -202,23 +202,7 @@ const SecondaryShredderBlog4 = () => {
             </div>
           </div>
 
-          <section id="benefits" className={styles.sectionCard}>
-            <div className={styles.sectionHeader}>
-              <span className={styles.sectionTag}>Benefits</span>
-              <h2>Why Industries Use Secondary Shredders</h2>
-            </div>
-
-            <div className={styles.benefitsGrid}>
-              {benefitsData.map((item, index) => (
-                <div key={index} className={styles.benefitCard}>
-                  <div className={styles.benefitIcon}>{item.icon}</div>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
+          {/* introduction */}
           <section id="introduction" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -242,6 +226,34 @@ const SecondaryShredderBlog4 = () => {
             </div>
           </section>
 
+          {/* benefits */}
+          <section id="benefits" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Benefits</span>
+              <h2>Why Industries Use Secondary Shredders</h2>
+            </div>
+
+            <div className={styles.benefitsGrid}>
+              {benefitsData.map((item, index) => (
+                <div key={index} className={styles.benefitCard}>
+                  <div className={styles.benefitIcon}>{item.icon}</div>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* Enhanced Productivity */}
+          <section id="productivity" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Enhanced Productivity</span>
+              <p>By producing consistent material sizes, secondary shredders streamline operations, enabling faster processing and higher throughput.
+                This allows facilities to meet production targets efficiently and reduce downtime.</p>
+            </div>
+          </section>
+
+          {/* workflow */}
           <section id="workflow" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -266,6 +278,7 @@ const SecondaryShredderBlog4 = () => {
             </div>
           </section>
 
+          {/* process */}
           <section id="process" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Process</span>
@@ -283,6 +296,78 @@ const SecondaryShredderBlog4 = () => {
             </div>
           </section>
 
+          {/* Operational Cost Reduction*/}
+          <section id="cost" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Operational Cost Reduction </span>
+              <p>Secondary shredders minimize manual labor, optimize storage space, and reduce transportation needs.
+                This leads to significant cost savings in both operations and logistics.</p>
+            </div>
+          </section>
+
+          {/* Efficiency & Reliability  */}
+          <section id="efficiency" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Efficiency & Reliability </span>
+              <p>Designed for continuous operation, these shredders deliver reliable, consistent performance. Facilities experience
+                fewer interruptions, improved productivity, and predictable results.</p>
+            </div>
+          </section>
+
+          {/* Safety Features*/}
+          <section id="safety" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Safety Features</span>
+              <p>Equipped with emergency stops, interlocks, and overload protection, secondary shredders ensure
+                operator safety and regulatory compliance, minimizing workplace hazards.</p>
+            </div>
+          </section>
+
+          {/* Sustainability Benefits */}
+          <section id="sustainability" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Sustainability Benefits</span>
+              <p>By producing uniform, recyclable material, secondary shredders support sustainability initiatives,
+                reduce landfill dependency, and promote circular economy practices in industrial operations.</p>
+            </div>
+          </section>
+
+          {/* Maintenance & Longevity */}
+          <section id="maintenance" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Maintenance & Longevity</span>
+              <p>Regular maintenance ensures long-term reliability and peak performance. Secondary shredders are built for durability,
+                providing consistent output over extended periods.</p>
+            </div>
+          </section>
+
+          {/* Long-Term Advantages*/}
+          <section id="long-term" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Long-Term Advantages </span>
+              <h2>Long-Term Advantages</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li> Higher operational productivity </li>
+              <li> Lower labor and logistics costs </li>
+              <li> Improved workflow and reduced downtime </li>
+              <li> Enhanced safety and compliance </li>
+              <li> Supports sustainable practices and recycling goals </li>
+            </ul>
+          </section>
+
+
+          {/* Why Choose Our Shredders */}
+          <section id="why-us" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Why Choose Our Shredders</span>
+              <h2>Why Choose Our Shredders</h2>
+            </div>
+            <p>Our secondary shredders deliver reliability, efficiency, and safety. They are designed to maximize productivity, reduce costs,
+              and help facilities achieve operational excellence while supporting sustainability goals.</p>
+          </section>
+
+          {/* conclusion */}
           <section id="conclusion" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -307,6 +392,23 @@ const SecondaryShredderBlog4 = () => {
             </div>
           </section>
 
+          {/* Key Takeaways & Summary */}
+          <section id="key-takeaways" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Key Takeaways & Summary</span>
+              <h2>Key Takeaways & Summary</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li> Boosts industrial productivity and operational efficiency </li>
+              <li> Reduces labor, storage, and transport costs </li>
+              <li> Ensures uniform output for smoother workflow </li>
+              <li> Supports safety compliance and sustainability initiatives </li>
+              <li> Durable and reliable for long-term industrial use </li>
+              <li> Integrates with automation and smart monitoring systems </li>
+            </ul>
+          </section>
+
+          {/* faqs */}
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>FAQs</span>
@@ -317,9 +419,8 @@ const SecondaryShredderBlog4 = () => {
               {faqsData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`${styles.faqItem} ${
-                    openFAQ === index ? styles.activeFAQ : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
+                    }`}
                 >
                   <div
                     className={styles.faqQuestion}
@@ -343,7 +444,6 @@ const SecondaryShredderBlog4 = () => {
 
       <aside className={styles.relatedSidebar}>
         <h3 className={styles.relatedTitle}>Related Pages</h3>
-
         <div className={`${styles.relatedCard} ${styles.floatCard}`}>
           <a href="/secondary-shredder">
             Industrial Secondary Shredders →

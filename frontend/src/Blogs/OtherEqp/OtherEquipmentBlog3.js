@@ -123,6 +123,9 @@ const OtherEquipmentBlog3 = () => {
       id: "who-should-use-it",
       title: "Who Should Use Tyre Preparation Equipment?",
     },
+    { id: "key-takeaways",
+       title: "Key Takeaways" },
+
     {
       id: "maintenance-tips",
       title: "Maintenance Tips for Tyre Cutting Machines",
@@ -213,6 +216,34 @@ const OtherEquipmentBlog3 = () => {
             </div>
           </div>
 
+          {/* introduction */}
+          <section id="introduction" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={BlogImg1} alt="Cutting Equipment" />
+                <span>
+                  Bead wire removers and cutters in action
+                </span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Introduction</span>
+                <h2>Importance of Tyre Pre-Processing</h2>
+                <p>
+                  Tyre recycling is a multi-step process, and pre-processing is critical for efficiency. Cutting and preparation equipment
+                  removes steel beads, slices tyres into strips, cuts blocks, and prepares material for shredding.
+                  Without this step, shredders face jams, uneven feed, and increased wear.
+                </p>
+                <p>
+                  Investing in proper tyre cutting machines not only protects expensive shredders but also recovers valuable steel
+                  and ensures consistent material size. A smooth pre-processing workflow directly contributes
+                  to higher throughput, safer operations, and improved material quality.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* benefits */}
           <section id="benefits" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Benefits</span>
@@ -230,30 +261,7 @@ const OtherEquipmentBlog3 = () => {
             </div>
           </section>
 
-          <section id="introduction" className={styles.sectionCard}>
-            <div className={styles.contentGrid}>
-              <div className={styles.imageCard}>
-                <img src={BlogImg1} alt="Cutting Equipment" />
-                <span>
-                  Bead wire removers and cutters in action
-                </span>
-              </div>
-
-              <div className={styles.textCard}>
-                <span className={styles.sectionTag}>Introduction</span>
-                <h2>Importance of Tyre Pre-Processing</h2>
-                <p>
-                  Tyre recycling is a multi-step process, and pre-processing is
-                  essential for smooth and efficient shredding.
-                </p>
-                <p>
-                  Proper cutting and preparation equipment removes steel,
-                  standardizes feed size, and reduces shredder wear.
-                </p>
-              </div>
-            </div>
-          </section>
-
+          {/* how-it-works */}
           <section id="how-it-works" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -265,19 +273,21 @@ const OtherEquipmentBlog3 = () => {
 
               <div className={styles.textCard}>
                 <span className={styles.sectionTag}>How It Works</span>
-                <h2>How Tyre Cutting Equipment Works</h2>
+                <h2>How Tyre Cutting & Preparation Equipment Works</h2>
                 <p>
-                  Bead wire removers extract steel wires, strip cutters slice
-                  tyres, and block cutters reduce material into smaller pieces.
+                  Bead wire removers first extract steel wires from the tyre, which reduces machine wear and allows for steel recovery. Strip cutters then slice tyres into
+                  long strips, and block cutters divide these strips into smaller, manageable sizes. Side wall removers eliminate unwanted rubber
+                  walls, preparing clean material for shredding.
                 </p>
                 <p>
-                  This ensures consistent feed size, better shredder
-                  performance, and improved recycling efficiency.
+                  Advanced equipment may include automated feeding, sensors to detect blockage,
+                  and adjustable cutting speeds. This ensures consistent output, minimizes human error, and improves overall line efficiency.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* types-of-machines */}
           <section id="types-of-machines" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Machine Types</span>
@@ -294,20 +304,19 @@ const OtherEquipmentBlog3 = () => {
                 for shredding.
               </li>
               <li>
-                <strong>Block Cutters:</strong> Cut strips into smaller rubber
-                blocks.
+                <strong>Block Cutters:</strong> Reduce strips into smaller blocks for consistent feed.
               </li>
               <li>
                 <strong>Side Wall Removers:</strong> Remove sidewalls to prepare
                 cleaner rubber material.
               </li>
               <li>
-                <strong>Combination Systems:</strong> Automated pre-processing
-                lines with multiple functions.
+                <strong>Combination Pre-Processing Lines:</strong>  Fully automated systems combining all the above functions to maximize efficiency.
               </li>
             </ul>
           </section>
 
+          {/* process */}
           <section id="process" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Process</span>
@@ -325,6 +334,18 @@ const OtherEquipmentBlog3 = () => {
             </div>
           </section>
 
+          {/* Why You Need Tyre Cutting & Preparation Equipment */}
+          <section id="why-you-need-it" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Why You Need Tyre Cutting & Preparation Equipment</span>
+              <h2>Why You Need Tyre Cutting & Preparation Equipment</h2>
+            </div>
+            <p>Shredders without proper pre-processing face frequent jams, uneven feed, and faster wear. Pre-processing machines
+              eliminate these problems by standardizing tyre size, removing steel, and cleaning the material. </p>
+            <p>This reduces downtime, extends shredder lifespan, and allows operators to focus on higher-value tasks.</p>
+          </section>
+
+          {/* efficiency-improvement */}
           <section
             id="efficiency-improvement"
             className={styles.sectionCard}
@@ -341,44 +362,69 @@ const OtherEquipmentBlog3 = () => {
                 <span className={styles.sectionTag}>Efficiency</span>
                 <h2>How Equipment Improves Recycling Efficiency</h2>
                 <p>
-                  Standardizing tyre pieces ensures shredders work efficiently
-                  with fewer interruptions and less wear.
+                  Standardizing tyre pieces ensures shredders work at maximum efficiency with minimal interruptions. Removing
+                  obstacles like steel beads and sidewalls reduces machine wear and improves safety. Facilities can
+                  process more tyres in less time while maintaining consistent quality.
                 </p>
                 <p>
-                  Facilities can process more tyres in less time while
-                  maintaining consistent quality and safety.
+                  Pre-processing also optimizes downstream processes, including grinding, granulation, and separation,
+                  improving overall plant productivity and cost-effectiveness.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* Who Should Use Tyre Preparation Equipment? */}
+          <section id="who-should-use-it" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Who Should Use Tyre Preparation Equipment?</span>
+              <h2>Who Should Use Tyre Preparation Equipment?</h2>
+            </div>
+            <p>Any facility processing passenger, truck, or industrial tyres will benefit. Recycling plants, tyre shredding units, and large-scale
+              rubber processing operations can improve throughput, protect machines, and recover steel using cutting and preparation equipment.</p>
+          </section>
+
+          {/* Key Takeaways & Summary */}
+          <section id="key-takeaways" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Key Benefits of Pre-Processing Equipment</span>
+              <h2>Key Benefits of Pre-Processing Equipment</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li> Reduced machine wear and downtime. </li>
+              <li> Consistent feed size for shredders. </li>
+              <li> Recovery of valuable steel from tyres.</li>
+              <li> Cleaner and safer material for operators. </li>
+              <li> Increased throughput and operational efficiency. </li>
+              <li> Minimized labour costs and human error. </li>
+              <li> Optimized shredding and recycling workflow. </li>
+            </ul>
+          </section>
+
+          {/* maintenance-tips */}
           <section id="maintenance-tips" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
+
               <div className={styles.imageCard}>
                 <img
                   src={BlogImg5}
-                  alt="Maintenance of Cutting Equipment"
+                  alt="Maintenance of Separation Equipment"
                 />
                 <span>
-                  Proper maintenance extends equipment life
+                  Maintenance Tips for Tyre Cutting Machines
                 </span>
               </div>
-
-              <div className={styles.textCard}>
-                <span className={styles.sectionTag}>Maintenance</span>
-                <h2>Maintenance Tips for Tyre Cutting Machines</h2>
-                <p>
-                  Inspect moving parts weekly and lubricate motors, bearings,
-                  and cutting components regularly.
-                </p>
-                <p>
-                  Replace worn blades, clean equipment frequently, and schedule
-                  professional servicing to maintain peak performance.
-                </p>
-              </div>
+              <ul className={styles.modernList}>
+                <li> Inspect moving parts weekly and clean thoroughly. </li>
+                <li> Lubricate bearings, motors, and cutting mechanisms regularly. </li>
+                <li> Check sensor calibration and feeding alignment monthly. </li>
+                <li> Replace worn blades and cutting edges on schedule. </li>
+                <li> Schedule professional servicing for optimal longevity. </li>
+              </ul>
             </div>
           </section>
 
+          {/* faqs */}
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>FAQs</span>
@@ -389,9 +435,8 @@ const OtherEquipmentBlog3 = () => {
               {faqsData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`${styles.faqItem} ${
-                    openFAQ === index ? styles.activeFAQ : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
+                    }`}
                 >
                   <div
                     className={styles.faqQuestion}

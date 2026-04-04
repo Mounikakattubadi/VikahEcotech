@@ -307,6 +307,32 @@ const TyreRecyclingBlog = () => {
             </div>
           </div>
 
+
+          {/* intro */}
+          <section id="intro" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={Plant1} alt="Tyre Recycling Plant" />
+                <span>Modern tyre scrap recycling plant</span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Introduction</span>
+                <h2>Growing Need for Tyre Recycling Plants</h2>
+                <p>
+                  With India generating over 6 million tonnes of tyre waste every year, the demand for advanced tyre scrap recycling
+                  plants has increased dramatically. Manufacturers now build fully-automated recycling machinery
+                  capable of shredding, grinding, baling, and processing tyres into reusable materials like rubber granules, pyrolysis oil, steel wire, and carbon black.
+                </p>
+                <p>
+                  Leading manufacturers in India offer durable, customizable recycling plants suitable for factories, municipal waste facilities,
+                  tyre processing companies, and recycling units.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* benefits */}
           <section id="benefits" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Benefits</span>
@@ -324,28 +350,7 @@ const TyreRecyclingBlog = () => {
             </div>
           </section>
 
-          <section id="intro" className={styles.sectionCard}>
-            <div className={styles.contentGrid}>
-              <div className={styles.imageCard}>
-                <img src={Plant1} alt="Tyre Recycling Plant" />
-                <span>Modern tyre scrap recycling plant</span>
-              </div>
-
-              <div className={styles.textCard}>
-                <span className={styles.sectionTag}>Introduction</span>
-                <h2>Growing Need for Tyre Recycling Plants</h2>
-                <p>
-                  India generates millions of tonnes of tyre waste every year,
-                  creating a huge demand for advanced recycling facilities.
-                </p>
-                <p>
-                  Modern plants convert waste tyres into valuable outputs like
-                  rubber granules, pyrolysis oil, steel wire, and carbon black.
-                </p>
-              </div>
-            </div>
-          </section>
-
+          {/* demand */}
           <section id="demand" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -357,17 +362,22 @@ const TyreRecyclingBlog = () => {
                 <span className={styles.sectionTag}>Demand</span>
                 <h2>Demand for Tyre Recycling Plants in India</h2>
                 <p>
-                  Rapid urbanization and transportation growth are increasing
-                  tyre waste generation across the country.
+                  Rapid urbanization, transportation growth, and industrial expansion have resulted in massive tyre waste accumulation.
                 </p>
                 <p>
-                  Recycling plants help industries comply with regulations while
-                  generating profit from recovered materials.
+                  Without proper recycling, these tyres become fire hazards, mosquito breeding grounds, and environmental threats.
                 </p>
               </div>
             </div>
+            <ul className={styles.modernList}>
+              <li> India generates millions of end-of-life tyres annually </li>
+              <li> Recycling demand is rising due to government mandates </li>
+              <li> High profitability from recovered materials </li>
+              <li> Industries need sustainable waste management solutions </li>
+            </ul>
           </section>
 
+          {/* process */}
           <section id="process" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Process</span>
@@ -385,6 +395,7 @@ const TyreRecyclingBlog = () => {
             </div>
           </section>
 
+          {/* machinery */}
           <section id="machinery" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Machinery</span>
@@ -400,8 +411,10 @@ const TyreRecyclingBlog = () => {
               <li>Dust Collection Units</li>
               <li>PLC Automation Controls</li>
             </ul>
+            <p>Each plant is customized based on tyre scrap volume, facility size, and recycling goals.</p>
           </section>
 
+          {/* manufacturers */}
           <section id="manufacturers" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -421,9 +434,18 @@ const TyreRecyclingBlog = () => {
                   systems, and maintenance support.
                 </p>
               </div>
+              <ul className={styles.list}>
+              <li>Vikah Ecotech — Trusted for durable tyre balers & recycling machinery</li>
+              <li>Specialized tyre shredder manufacturers</li>
+              <li>Rubber granulation equipment suppliers</li>
+              <li>Pyrolysis plant manufacturers</li>
+              <li>Industrial waste management equipment providers</li>
+
+            </ul>
             </div>
           </section>
 
+          {/* cost */}
           <section id="cost" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Investment</span>
@@ -438,6 +460,7 @@ const TyreRecyclingBlog = () => {
             </ul>
           </section>
 
+          {/* compliance */}
           <section id="compliance" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Compliance</span>
@@ -453,6 +476,7 @@ const TyreRecyclingBlog = () => {
             </ul>
           </section>
 
+          {/* why-us */}
           <section id="why-us" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Why Us</span>
@@ -473,6 +497,7 @@ const TyreRecyclingBlog = () => {
             </ul>
           </section>
 
+          {/* conclusion */}
           <section id="conclusion" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -495,6 +520,7 @@ const TyreRecyclingBlog = () => {
             </div>
           </section>
 
+          {/* faqs */}
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>FAQs</span>
@@ -505,9 +531,8 @@ const TyreRecyclingBlog = () => {
               {faqsData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`${styles.faqItem} ${
-                    openFAQ === index ? styles.activeFAQ : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
+                    }`}
                 >
                   <div
                     className={styles.faqQuestion}
