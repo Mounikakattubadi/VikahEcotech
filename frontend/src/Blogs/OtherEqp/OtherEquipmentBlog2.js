@@ -102,6 +102,8 @@ const OtherEquipmentBlog2 = () => {
       title: "Does It Improve Quality?",
     },
     { id: "who-should-use-it", title: "Who Should Use It?" },
+            { id: "key-takeaways", title: "Key Takeaways" },
+
     { id: "maintenance-tips", title: "Maintenance Tips" },
     { id: "faqs", title: "FAQs" },
   ];
@@ -187,6 +189,33 @@ const OtherEquipmentBlog2 = () => {
             </div>
           </div>
 
+          {/* introduction */}
+          <section id="introduction" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={BlogImg1} alt="Screening Equipment" />
+                <span>
+                  Classifiers and magnetic separators ensuring purity
+                </span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Introduction</span>
+                <h2>Cleaner Recycling Through Better Separation</h2>
+                <p>
+                  Screening and separation equipment is the foundation of modern recycling operations. Whether you handle plastics, rubber, metals, or paper, 
+                  separating materials ensures high-quality output, prevents contamination, and protects expensive processing equipment.
+                </p>
+                <p>
+                  Proper separation not only improves recycling efficiency but also reduces operational costs. Contaminated 
+                  or unevenly sized materials can cause machine jams, production delays, and unsafe conditions for operators. By implementing 
+                  the right equipment, facilities can maximize throughput, maintain consistent product quality, and adhere to environmental and safety regulations.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* benefits */}
           <section id="benefits" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Benefits</span>
@@ -204,31 +233,7 @@ const OtherEquipmentBlog2 = () => {
             </div>
           </section>
 
-          <section id="introduction" className={styles.sectionCard}>
-            <div className={styles.contentGrid}>
-              <div className={styles.imageCard}>
-                <img src={BlogImg1} alt="Screening Equipment" />
-                <span>
-                  Classifiers and magnetic separators ensuring purity
-                </span>
-              </div>
-
-              <div className={styles.textCard}>
-                <span className={styles.sectionTag}>Introduction</span>
-                <h2>Cleaner Recycling Through Better Separation</h2>
-                <p>
-                  Screening and separation equipment is essential for modern
-                  recycling facilities handling plastics, rubber, metals, and
-                  paper.
-                </p>
-                <p>
-                  Proper separation improves quality, prevents contamination,
-                  and protects downstream machines from damage.
-                </p>
-              </div>
-            </div>
-          </section>
-
+          {/* how-it-works */}
           <section id="how-it-works" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -242,17 +247,25 @@ const OtherEquipmentBlog2 = () => {
                 <span className={styles.sectionTag}>How It Works</span>
                 <h2>How Separation Equipment Works</h2>
                 <p>
-                  Classifiers separate materials by size while magnetic
-                  separators remove ferrous contaminants from the flow.
+                  Classifiers use sieves and precision screening techniques
+                   to separate materials by size. Powders, granules, and small chips pass through 
+                   graded meshes while larger pieces are directed to appropriate processing stages.
                 </p>
                 <p>
-                  This improves material purity, reduces machine wear, and
-                  ensures smoother recycling operations.
+                  Overband magnetic steel separators remove ferrous metals such as steel wires,
+                   screws, and nails from the material flow. This prevents machine damage, enhances 
+                   safety, and ensures the purity of processed materials.
+                </p>
+                <p>
+                  Some advanced systems integrate sensors and automation to monitor flow, 
+                  detect blockages, and adjust operation speed in real time. This reduces downtime 
+                  and improves overall line efficiency.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* types-of-equipment */}
           <section id="types-of-equipment" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Equipment Types</span>
@@ -261,27 +274,24 @@ const OtherEquipmentBlog2 = () => {
 
             <ul className={styles.list}>
               <li>
-                <strong>Vibratory Classifiers:</strong> Ideal for powders and
-                granules.
+                <strong>Vibratory Classifiers:</strong> Ideal for powders and small granules, using vibration to achieve precise size separation.
               </li>
               <li>
-                <strong>Rotary Screens:</strong> Suitable for bulk materials.
+                <strong>Rotary or Trommel Screens:</strong> Used for bulkier materials; rotation helps separate different sizes efficiently.
               </li>
               <li>
-                <strong>Magnetic Separators:</strong> Remove ferrous metals from
-                material flow.
+                <strong>Overband Magnetic Separators: </strong> Remove ferrous contaminants to protect machinery and improve material purity.
               </li>
               <li>
-                <strong>Air Classifiers:</strong> Separate light and heavy
-                materials.
+                <strong>Air Classifiers:</strong>  Separate lightweight from heavy materials using airflow and density differences.
               </li>
               <li>
-                <strong>Combination Systems:</strong> Integrate multiple
-                separation technologies.
+                <strong>Combination Systems:</strong> Some facilities combine magnetic, vibratory, and air-based systems to handle mixed materials efficiently.
               </li>
             </ul>
           </section>
 
+          {/* process */}
           <section id="process" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Process</span>
@@ -299,6 +309,19 @@ const OtherEquipmentBlog2 = () => {
             </div>
           </section>
 
+          {/* Why Screening & Separation is Critical */}
+          <section id="why-you-need-it" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Why Screening & Separation is Critical</span>
+              <h2>Why Screening & Separation is Critical</h2>
+            </div>
+            <p>Without effective separation, recycling lines face contamination, uneven material quality, and increased wear on equipment. 
+              This can lead to downtime, higher labor costs, and reduced resale value of processed materials.</p>
+            <p>Implementing advanced screening and magnetic separation systems improves reliability, safety, and output consistency.
+               Operators can focus on value-added tasks while automation ensures precise separation.</p>
+          </section>
+
+          {/* does-it-improve-quality */}
           <section
             id="does-it-improve-quality"
             className={styles.sectionCard}
@@ -315,19 +338,49 @@ const OtherEquipmentBlog2 = () => {
                 <span className={styles.sectionTag}>Quality</span>
                 <h2>Does It Improve Quality?</h2>
                 <p>
-                  Proper separation ensures that powders, granules, and chips
-                  meet quality standards.
+                  Absolutely. Proper separation ensures that each material type meets strict
+                   quality standards. This translates to higher resale value, smoother downstream processing, 
+                   and reduced production delays.
                 </p>
                 <p>
-                  This improves resale value, reduces contamination, and
-                  ensures smooth downstream processing.
+                  Quality separation also reduces contamination-related rework and prevents costly 
+                  machine damage, improving overall plant efficiency and profitability.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* Who Should Use Screening & Separation Equipment? */}
+          <section id="who-should-use-it" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Who Should Use Screening & Separation Equipment?</span>
+              <h2>Who Should Use Screening & Separation Equipment?</h2>
+            </div>
+            <p>Recycling facilities, plastic and rubber manufacturers, paper and cardboard processors, and metal recyclers benefit significantly. </p>
+            <p>Any operation that handles mixed materials or requires precise sizing will see improvements in efficiency, safety, and product quality.</p>
+          </section>
+
+          {/* Key Takeaways & Summary */}
+          <section id="key-takeaways" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Key Takeaways & Summary</span>
+              <h2>Key Takeaways & Summary</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li> Enhanced material purity and quality </li>
+              <li> Reduced wear and tear on downstream machines </li>
+              <li> Minimized contamination and operational delays </li>
+              <li> Improved workplace safety </li>
+              <li> Optimized recycling workflow and efficiency </li>
+              <li> Higher resale value for sorted materials </li>
+              <li> Scalable solutions for small to large recycling operations </li>
+            </ul>
+          </section>
+
+          {/* maintenance-tips */}
           <section id="maintenance-tips" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
+
               <div className={styles.imageCard}>
                 <img
                   src={BlogImg5}
@@ -336,23 +389,22 @@ const OtherEquipmentBlog2 = () => {
                 <span>
                   Regular maintenance ensures longevity and performance
                 </span>
+
               </div>
 
-              <div className={styles.textCard}>
-                <span className={styles.sectionTag}>Maintenance</span>
-                <h2>Maintenance Tips</h2>
-                <p>
-                  Inspect screens, separators, and moving parts weekly to
-                  prevent failures and downtime.
-                </p>
-                <p>
-                  Regular cleaning, lubrication, and calibration improve
-                  reliability and long-term performance.
-                </p>
-              </div>
+              <ul className={styles.modernList}>
+              <li> Enhanced material purity and quality </li>
+              <li> Reduced wear and tear on downstream machines </li>
+              <li> Minimized contamination and operational delays </li>
+              <li> Improved workplace safety </li>
+              <li> Optimized recycling workflow and efficiency </li>
+              <li> Higher resale value for sorted materials </li>
+              <li> Scalable solutions for small to large recycling operations </li>
+            </ul>
             </div>
           </section>
 
+          {/* faqs */}
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>FAQs</span>
@@ -363,9 +415,8 @@ const OtherEquipmentBlog2 = () => {
               {faqsData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`${styles.faqItem} ${
-                    openFAQ === index ? styles.activeFAQ : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
+                    }`}
                 >
                   <div
                     className={styles.faqQuestion}

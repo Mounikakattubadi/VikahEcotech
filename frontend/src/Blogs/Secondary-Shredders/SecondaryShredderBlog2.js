@@ -215,6 +215,30 @@ const SecondaryShredderBlog2 = () => {
             </div>
           </div>
 
+          {/* introduction */}
+          <section id="introduction" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.imageCard}>
+                <img src={BlogImg1} alt="Secondary Shredder Workflow" />
+                <span>Enhancing workflow in industrial facilities</span>
+              </div>
+
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Introduction</span>
+                <h2>Overview of Secondary Shredders</h2>
+                <p>
+                  Secondary shredders are essential equipment in modern industries, designed to enhance workflow, reduce material bottlenecks,
+                  and ensure consistent output quality. They complement primary shredders, enabling standardized material sizes for smooth processing, storage, and recycling.
+                </p>
+                <p>
+                  Industries including plastics, rubber, paper, metals, and e-waste rely on secondary shredders to increase throughput, optimize floor space, and improve operational
+                  efficiency. By maintaining uniform material dimensions, these machines facilitate better material handling and downstream processing.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* benefits */}
           <section id="benefits" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Benefits</span>
@@ -232,30 +256,18 @@ const SecondaryShredderBlog2 = () => {
             </div>
           </section>
 
-          <section id="introduction" className={styles.sectionCard}>
-            <div className={styles.contentGrid}>
-              <div className={styles.imageCard}>
-                <img src={BlogImg1} alt="Secondary Shredder Workflow" />
-                <span>Enhancing workflow in industrial facilities</span>
-              </div>
-
-              <div className={styles.textCard}>
-                <span className={styles.sectionTag}>Introduction</span>
-                <h2>Overview of Secondary Shredders</h2>
-                <p>
-                  Secondary shredders are essential equipment in modern
-                  industries, designed to enhance workflow, reduce material
-                  bottlenecks, and ensure consistent output quality.
-                </p>
-                <p>
-                  Industries including plastics, rubber, paper, metals, and
-                  e-waste rely on secondary shredders to increase throughput and
-                  improve operational efficiency.
-                </p>
-              </div>
+          {/* Optimized Workflow: How Secondary Shredders Improve Operations */}
+          <section id="workflow" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Optimized Workflow: How Secondary Shredders Improve Operations</span>
+              <p>Secondary shredders standardize irregular scrap into uniform sizes, streamlining material flow across factories.
+                This not only reduces manual labor but also minimizes downtime by preventing jams and improving conveyor efficiency.</p>
+              <p>By ensuring materials are consistent, facilities can plan storage, transportation, and recycling more effectively,
+                improving overall industrial productivity and minimizing bottlenecks.</p>
             </div>
           </section>
 
+          {/* operation */}
           <section id="operation" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -264,20 +276,35 @@ const SecondaryShredderBlog2 = () => {
               </div>
 
               <div className={styles.textCard}>
-                <span className={styles.sectionTag}>Operation</span>
+                <span className={styles.sectionTag}>Operational Mechanisms:</span>
                 <h2>How Secondary Shredders Work</h2>
                 <p>
-                  Secondary shredders typically use rotating blades, cutters, or
-                  hammers that reduce material into consistent sizes.
+                  Secondary shredders typically utilize rotating blades, cutters, or hammers that reduce
+                  material to consistent sizes. Adjustable motor speeds, torque controls, and integrated conveyors ensure continuous, high-efficiency operation.
                 </p>
                 <p>
-                  Advanced models include overload protection, sensors, and
-                  automatic reverse functions to minimize downtime.
+                  Advanced models feature sensors to detect jams, prevent overload, and automatically reverse material flow if necessary, ensuring minimal downtime.
                 </p>
               </div>
             </div>
           </section>
 
+          {/* Types of Secondary Shredders & Industry Applications */}
+          <section id="types" className={styles.sectionCard}>
+            <div className={styles.contentGrid}>
+              <div className={styles.textCard}>
+                <span className={styles.sectionTag}>Types of Secondary Shredders & Industry Applications</span>
+              </div>
+            </div>
+            <p>
+              <b>Single-Shaft Shredders:</b> Ideal for medium-density materials like plastics, paper, and cardboard.
+            </p>
+            <p><b>Dual-Shaft Shredders:</b>  Handle heavy-duty materials such as rubber, metals, and industrial scrap.</p>
+            <p><b>Granulators: </b>Produce small granules for recycling, especially in plastics and rubber.</p>
+            <p><b>High-Speed Rotary Shredders: </b>Efficient for lightweight materials like cardboard, paper, and packaging waste.</p>
+          </section>
+
+          {/* process */}
           <section id="process" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>Process</span>
@@ -295,6 +322,125 @@ const SecondaryShredderBlog2 = () => {
             </div>
           </section>
 
+          {/* Optimized Workflow: How Secondary Shredders Improve Operations */}
+          <section id="efficiency" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Enhanced Efficiency: Reducing Labor & Increasing Throughput</span>
+              <p>Consistent material size speeds up manual and automated handling. Secondary shredders reduce the need for extra labor,
+                streamline processing lines, and enhance production throughput. </p>
+              <p>Facilities can recycle and transport materials faster while maintaining quality.</p>
+            </div>
+          </section>
+
+          {/* Cost Savings & ROI: How Secondary Shredders Reduce Operational Expenses */}
+          <section id="cost" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Cost Savings & ROI: How Secondary Shredders Reduce Operational Expenses</span>
+              <p>By producing uniform and compact materials, secondary shredders lower storage, transport, and handling costs.
+                They maximize container usage, reduce the number of trips required, and increase resale value of recycled materials. </p>
+              <p>Investing in high-quality secondary shredders provides a measurable ROI through energy savings, reduced labor, and minimized downtime.</p>
+            </div>
+          </section>
+
+
+          {/* Safety Features & Workplace Compliance */}
+          <section id="safety" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Safety Features & Workplace Compliance</span>
+              <p>Integrated safety mechanisms such as emergency stops, interlocks, overload sensors, and protective covers ensure safe operation.  </p>
+              <p>Standardized material reduces loose scrap hazards, keeping workspaces clean and safe.</p>
+            </div>
+          </section>
+
+          {/* Sustainability Benefits & Environmental Impact */}
+          <section id="sustainability" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Sustainability Benefits & Environmental Impact</span>
+              <p>Secondary shredders contribute to sustainability by facilitating material recycling, reducing landfill dependence, and optimizing energy use.  </p>
+              <p>Uniform output ensures recycling processes are efficient and compliant with environmental standards.</p>
+            </div>
+          </section>
+
+          {/* Maintenance & Reliability: Ensuring Long-Term Performance */}
+          <section id="maintenance" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Maintenance & Reliability: Ensuring Long-Term Performance</span>
+              <p>Regular inspection, lubrication, and blade replacement extend equipment life. Well-maintained shredders operate reliably over a decade or more,
+                ensuring long-term performance and minimal operational interruptions.</p>
+            </div>
+          </section>
+
+          {/* Automation & Smart Industrial Integration */}
+          <section id="automation" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Automation & Smart Industrial Integration</span>
+              <p>Modern secondary shredders integrate with smart factory systems, IoT devices, and predictive maintenance software.
+                Automation minimizes manual intervention, improves throughput, and allows data-driven operational decisions.</p>
+            </div>
+          </section>
+
+
+          {/* Common Issues & Troubleshooting Strategies */}
+          <section id="troubleshooting" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Common Issues & Troubleshooting Strategies</span>
+              <h2>Common Issues & Troubleshooting Strategies</h2>
+            </div>
+
+            <ul className={styles.list}>
+              <li><b>Material jams:</b> Reverse or clear carefully to avoid damage.</li>
+              <li><b>Blade wear: </b>Replace blades regularly for consistent output.</li>
+              <li><b>Motor overheating: </b>Ensure ventilation and monitor load limits.</li>
+              <li><b>Excess vibration: </b>Inspect alignment and mounting.</li>
+              <li><b>Noise issues: </b>Lubricate moving parts and tighten loose components.</li>
+            </ul>
+          </section>
+
+          {/* Long-Term Benefits*/}
+          <section id="long-term" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Long-Term Industrial Impact & Benefits</span>
+              <h2>Long-Term Industrial Impact & Benefits</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li> Streamlined industrial workflow</li>
+              <li>  Reduced operational costs and labor</li>
+              <li>Safer, compliant work environments</li>
+              <li>Support for sustainability and recycling initiatives </li>
+              <li>Durable, reliable, and scalable industrial equipment </li>
+            </ul>
+          </section>
+
+          {/* Future Trends in Secondary Shredding Technology */}
+          <section id="future" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Future Trends in Secondary Shredding Technology</span>
+              <h2>Future Trends in Secondary Shredding Technology</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li> Integration with AI for predictive maintenance and automated material sorting. </li>
+              <li> IoT-enabled monitoring for real-time operational insights. </li>
+              <li> Energy-efficient designs to reduce environmental footprint. </li>
+              <li> Modular shredders for scalable industrial applications. </li>
+            </ul>
+          </section>
+
+          {/* Why Choose Our Secondary Shredders */}
+          <section id="why-us" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Why Choose Our Secondary Shredders</span>
+              <h2>Why Choose Our Secondary Shredders</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li> High reliability and long-term durability </li>
+              <li> Customizable solutions for various industries </li>
+              <li> Advanced safety and automation integration </li>
+              <li> Support for sustainability and industrial compliance </li>
+              <li>Measurable ROI and energy efficiency benefits</li>
+            </ul>
+          </section>
+
+          {/* conclusion */}
           <section id="conclusion" className={styles.sectionCard}>
             <div className={styles.contentGrid}>
               <div className={styles.imageCard}>
@@ -318,6 +464,22 @@ const SecondaryShredderBlog2 = () => {
             </div>
           </section>
 
+          {/* Key Takeaways & Summary */}
+          <section id="key-takeaways" className={styles.sectionCard}>
+            <div className={styles.sectionHeader}>
+              <span className={styles.sectionTag}>Key Takeaways & Summary</span>
+              <h2>Key Takeaways & Summary</h2>
+            </div>
+            <ul className={styles.modernList}>
+              <li> Streamlined industrial operations and improved throughput </li>
+              <li> Lower labor, transportation, and storage costs </li>
+              <li> Reliable and durable for long-term industrial use </li>
+              <li> Supports recycling and sustainability initiatives </li>
+              <li> Enhanced safety and regulatory compliance </li>
+              <li>Integrates with automation and smart industrial systems</li>
+            </ul>
+          </section>
+          
           <section id="faqs" className={styles.sectionCard}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionTag}>FAQs</span>
@@ -328,9 +490,8 @@ const SecondaryShredderBlog2 = () => {
               {faqsData.map((faq, index) => (
                 <div
                   key={index}
-                  className={`${styles.faqItem} ${
-                    openFAQ === index ? styles.activeFAQ : ""
-                  }`}
+                  className={`${styles.faqItem} ${openFAQ === index ? styles.activeFAQ : ""
+                    }`}
                 >
                   <div
                     className={styles.faqQuestion}
