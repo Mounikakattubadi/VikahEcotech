@@ -8,6 +8,8 @@ import mainSpecImage from '../../../images/Applications/appm7.jpg';
 import metalImg1 from '../../../images/Applications/appm3.jpg';
 import metalImg2 from '../../../images/Applications/appm4.jpg';
 import metalImg3 from '../../../images/Applications/appm5.avif';
+import styles from "../../../Styles/ProductHeader.module.css";
+
 
 const Blm200 = () => {
   const [mainImage, setMainImage] = useState(metalImg1);
@@ -37,6 +39,39 @@ const Blm200 = () => {
 
   return (
     <>
+    <header className={styles.productHeader}>
+  <div className={styles.headerContent}>
+    <div className={styles.breadcrumb}>
+      Home / Products / <span>BLM-200 Metal Baler</span>
+    </div>
+
+    <h1 className={styles.productTitle}>
+      BLM-<span>200</span>
+    </h1>
+
+    <p className={styles.productSubtitle}>
+      Heavy-duty metal baler machine built for compacting steel sheets, alloy
+      scrap, fabricated metal waste, and medium-to-heavy scrap materials with
+      reinforced construction and strong compression force.
+    </p>
+
+    <div className={styles.headerButtons}>
+      <button
+        className={styles.primaryBtn}
+        onClick={handleDownload}
+      >
+        Download Brochure
+      </button>
+
+      <button
+        className={styles.secondaryBtn}
+        onClick={handleViewImage}
+      >
+        View Machine Image
+      </button>
+    </div>
+  </div>
+</header>
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">

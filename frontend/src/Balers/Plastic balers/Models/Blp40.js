@@ -6,6 +6,8 @@ import mainSpecImage from '../../../images/Applications/plas12.jpg';
 import balerImage from '../../../images/Applications/plas16.jpg';
 import img1 from '../../../images/Applications/plas1.webp';
 import img2 from '../../../images/Applications/plas15.jpg';
+import styles from "../../../Styles/ProductHeader.module.css";
+
 
 const BLP40 = () => {
   const [mainImage, setMainImage] = useState(img1);
@@ -37,6 +39,39 @@ const BLP40 = () => {
 
   return (
     <>
+    <header className={styles.productHeader}>
+  <div className={styles.headerContent}>
+    <div className={styles.breadcrumb}>
+      Home / Products / <span>BLP-40 Plastic Baler</span>
+    </div>
+
+    <h1 className={styles.productTitle}>
+      BLP-<span>40</span>
+    </h1>
+
+    <p className={styles.productSubtitle}>
+      Efficient plastic baler machine designed for compressing PET bottles,
+      packaging films, plastic sheets, and lightweight waste materials with
+      high compaction and low energy consumption.
+    </p>
+
+    <div className={styles.headerButtons}>
+      <button
+        className={styles.primaryBtn}
+        onClick={() => handleDownload("blp 40")}
+      >
+        Download Brochure
+      </button>
+
+      <button
+        className={styles.secondaryBtn}
+        onClick={handleViewImage}
+      >
+        View Machine Image
+      </button>
+    </div>
+  </div>
+</header>
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">

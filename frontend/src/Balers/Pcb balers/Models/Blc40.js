@@ -6,6 +6,7 @@ import mainSpecImage from '../../../images/Applications/apppcb4.jpg';
 import balerImage from '../../../images/Applications/apppcb6.webp';
 import img1 from '../../../images/Applications/apppcb7.avif';
 import img2 from '../../../images/Applications/apppcb8.webp';
+import styles from "../../../Styles/ProductHeader.module.css";
 
 const BLC40 = () => {
   const [mainImage, setMainImage] = useState(img1);
@@ -37,6 +38,40 @@ const BLC40 = () => {
 
   return (
     <>
+
+    <header className={styles.productHeader}>
+  <div className={styles.headerContent}>
+    <div className={styles.breadcrumb}>
+      Home / Products / <span>BLC-40 Paper and  Cardboard Baler</span>
+    </div>
+
+    <h1 className={styles.productTitle}>
+      BLC-<span>40</span>
+    </h1>
+
+    <p className={styles.productSubtitle}>
+      Medium-capacity paper and cardboard baler machine built for handling
+      larger volumes of cartons, packaging waste, and corrugated materials
+      with stronger compaction and improved efficiency.
+    </p>
+
+    <div className={styles.headerButtons}>
+      <button
+        className={styles.primaryBtn}
+        onClick={() => handleDownload("blc 40")}
+      >
+        Download Brochure
+      </button>
+
+      <button
+        className={styles.secondaryBtn}
+        onClick={handleViewImage}
+      >
+        View Machine Image
+      </button>
+    </div>
+  </div>
+</header>
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">

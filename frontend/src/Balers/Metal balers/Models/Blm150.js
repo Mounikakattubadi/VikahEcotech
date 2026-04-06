@@ -8,6 +8,8 @@ import mainSpecImage from '../../../images/Applications/appm3.jpg';
 import metalImg1 from '../../../images/Applications/appm1.jpg';
 import metalImg2 from '../../../images/Applications/appm2.jpg';
 import metalImg3 from '../../../images/Applications/appm4.jpg';
+import styles from "../../../Styles/ProductHeader.module.css";
+
 
 const Blm150 = () => {
   const [mainImage, setMainImage] = useState(metalImg1);
@@ -39,6 +41,39 @@ const Blm150 = () => {
 
   return (
     <>
+    <header className={styles.productHeader}>
+  <div className={styles.headerContent}>
+    <div className={styles.breadcrumb}>
+      Home / Products / <span>BLM-150 Metal Baler</span>
+    </div>
+
+    <h1 className={styles.productTitle}>
+      BLM-<span>150</span>
+    </h1>
+
+    <p className={styles.productSubtitle}>
+      Compact metal baler machine designed for compressing aluminium, copper,
+      brass, steel offcuts, and light scrap materials with strong compaction
+      force and reliable operation.
+    </p>
+
+    <div className={styles.headerButtons}>
+      <button
+        className={styles.primaryBtn}
+        onClick={handleDownload}
+      >
+        Download Brochure
+      </button>
+
+      <button
+        className={styles.secondaryBtn}
+        onClick={handleViewImage}
+      >
+        View Machine Image
+      </button>
+    </div>
+  </div>
+</header>
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">

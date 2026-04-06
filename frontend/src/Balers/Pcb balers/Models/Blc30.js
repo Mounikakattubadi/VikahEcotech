@@ -6,6 +6,8 @@ import mainSpecImage from '../../../images/Applications/apppcb1.jpg';
 import balerImage from '../../../images/Applications/apppcb2.jpg';
 import img1 from '../../../images/Applications/apppcb3.jpg';
 import img2 from '../../../images/Applications/apppcb5.jpg';
+import styles from "../../../Styles/ProductHeader.module.css";
+
 
 const BLC30 = () => {
   const [mainImage, setMainImage] = useState(img1);
@@ -37,6 +39,39 @@ const BLC30 = () => {
 
   return (
     <>
+        <header className={styles.productHeader}>
+          <div className={styles.headerContent}>
+            <div className={styles.breadcrumb}>
+              Home / Products / <span>BLC-30 paper and  Cardboard Baler</span>
+            </div>
+
+            <h1 className={styles.productTitle}>
+              BLC-<span>30</span>
+            </h1>
+
+            <p className={styles.productSubtitle}>
+              Compact paper and cardboard baler machine designed for efficient
+              compaction of cartons, paper sheets, packaging waste, and corrugated
+              materials for easier storage and transport.
+            </p>
+
+            <div className={styles.headerButtons}>
+              <button
+                className={styles.primaryBtn}
+                onClick={() => handleDownload("blc 30")}
+              >
+                Download Brochure
+              </button>
+
+              <button
+                className={styles.secondaryBtn}
+                onClick={handleViewImage}
+              >
+                View Machine Image
+              </button>
+            </div>
+          </div>
+        </header>
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">

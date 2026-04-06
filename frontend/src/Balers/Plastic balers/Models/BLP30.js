@@ -6,6 +6,8 @@ import mainSpecImage from '../../../images/Applications/plas14.webp';
 import balerImage from '../../../images/Applications/plas12.jpg';
 import img1 from '../../../images/Applications/plas13.webp';
 import img2 from '../../../images/Applications/plas1.webp';
+import styles from "../../../Styles/ProductHeader.module.css";
+
 
 const BLP30 = () => {
   const [mainImage, setMainImage] = useState(img1);
@@ -37,6 +39,39 @@ const BLP30 = () => {
 
   return (
     <>
+    <header className={styles.productHeader}>
+  <div className={styles.headerContent}>
+    <div className={styles.breadcrumb}>
+      Home / Products / <span>BLP-30 Plastic Baler</span>
+    </div>
+
+    <h1 className={styles.productTitle}>
+      BLP-<span>30</span>
+    </h1>
+
+    <p className={styles.productSubtitle}>
+      Compact plastic baler machine designed for efficient compaction of
+      plastic waste, PET bottles, films, and packaging materials for easier
+      storage, handling, and recycling.
+    </p>
+
+    <div className={styles.headerButtons}>
+      <button
+        className={styles.primaryBtn}
+        onClick={() => handleDownload("blp 30")}
+      >
+        Download Brochure
+      </button>
+
+      <button
+        className={styles.secondaryBtn}
+        onClick={handleViewImage}
+      >
+        View Machine Image
+      </button>
+    </div>
+  </div>
+</header>
       <div className='productpagetop'>
         <div className='imagetop'>
           <div className="main-image-container">
