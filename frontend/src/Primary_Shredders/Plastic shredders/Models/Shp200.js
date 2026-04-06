@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../../../Pages/ProductsPage.css";
+import styles from "../../../Styles/ProductHeader.module.css";
 
 import shredderhd from "../../../images/Applications/shredp7.jpg"
 import shredderhd1 from "../../../images/Applications/shredp8.jpg"
@@ -31,8 +32,42 @@ const Shp200 = () => {
         document.body.removeChild(link);
     };
 
+        const handleViewImage = () => {
+        window.open(mainImage, "_blank", "noopener,noreferrer");
+    };
+
     return (
         <>
+                    <header className={styles.productHeader}>
+                        <div className={styles.headerContent}>
+                            <div className={styles.breadcrumb}>
+                                Home / Products / <span>SHP-200</span>
+                            </div>
+        
+                            <h1 className={styles.productTitle}>
+                                SHP-<span>200</span>
+                            </h1>
+        
+                            <p className={styles.productSubtitle}>
+                                Heavy-duty primary shredder built for high-volume plastic waste processing. Engineered 
+                                for maximum efficiency and powerful size reduction, it ensures consistent output, rugged durability, 
+                                and reliable performance in large-scale recycling operations.
+                            </p>
+        
+                            <div className={styles.headerButtons}>
+                                <button
+                                    className={styles.primaryBtn}
+                                    onClick={() => handleDownload("shp200")}
+                                >
+                                    Download Brochure
+                                </button>
+        
+                                <button className={styles.secondaryBtn} onClick={handleViewImage}>
+                                    View Machine Image
+                                </button>
+                            </div>
+                        </div>
+                    </header>
             <div className='productpagetop'>
                 <div className='imagetop'>
                     <div className="main-image-container">

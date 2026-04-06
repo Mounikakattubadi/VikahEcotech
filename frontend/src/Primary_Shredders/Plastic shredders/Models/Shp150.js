@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../../../Pages/ProductsPage.css";
+import styles from "../../../Styles/ProductHeader.module.css";
 
 import shredderhd from "../../../images/Applications/shredp3.jpg"
 import shredderhd1 from "../../../images/Applications/shredp4.webp"
@@ -30,8 +31,43 @@ const Shp150 = () => {
         document.body.removeChild(link);
     };
 
+    const handleViewImage = () => {
+        window.open(mainImage, "_blank", "noopener,noreferrer");
+    };
+
+
     return (
         <>
+            <header className={styles.productHeader}>
+                <div className={styles.headerContent}>
+                    <div className={styles.breadcrumb}>
+                        Home / Products / <span>SHP-150</span>
+                    </div>
+
+                    <h1 className={styles.productTitle}>
+                        SHP-<span>150</span>
+                    </h1>
+
+                    <p className={styles.productSubtitle}>
+                        Robust and high-capacity primary shredder engineered for efficient processing of plastic waste.
+                        Designed to handle larger volumes with consistent output, it delivers powerful performance, durability,
+                        and smooth operation for demanding recycling applications.
+                    </p>
+
+                    <div className={styles.headerButtons}>
+                        <button
+                            className={styles.primaryBtn}
+                            onClick={() => handleDownload("shp150")}
+                        >
+                            Download Brochure
+                        </button>
+
+                        <button className={styles.secondaryBtn} onClick={handleViewImage}>
+                            View Machine Image
+                        </button>
+                    </div>
+                </div>
+            </header>
             <div className='productpagetop'>
                 <div className='imagetop'>
                     <div className="main-image-container">

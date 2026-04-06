@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../../../Pages/ProductsPage.css";
+import styles from "../../../Styles/ProductHeader.module.css";
 
 import shredderhd from "../../../images/Applications/shredpcb8.jpg"
 import shredderhd1 from "../../../images/Applications/shredpcb4.jpg"
@@ -33,8 +34,44 @@ const Shc8000 = () => {
         // Remove the anchor from the body
         document.body.removeChild(link);
     };
+
+    const handleViewImage = () => {
+        window.open(mainImage, "_blank", "noopener,noreferrer");
+    };
+
     return (
         <>
+            <header className={styles.productHeader}>
+                <div className={styles.headerContent}>
+                    <div className={styles.breadcrumb}>
+                        Home / Products / <span>SHC-8000</span>
+                    </div>
+
+                    <h1 className={styles.productTitle}>
+                        SHC-<span>8000</span>
+                    </h1>
+
+                    <p className={styles.productSubtitle}>
+                        Ultra high-capacity plastic shredder designed for heavy-duty processing
+                        of plastic waste. Ensures powerful performance, consistent output, and energy-efficient
+                        operation for large-scale recycling plants.
+                    </p>
+
+                    <div className={styles.headerButtons}>
+                        <button
+                            className={styles.primaryBtn}
+                            onClick={() => handleDownload("shc8000")}
+                        >
+                            Download Brochure
+                        </button>
+
+                        <button className={styles.secondaryBtn} onClick={handleViewImage}>
+                            View Machine Image
+                        </button>
+                    </div>
+                </div>
+            </header>
+
             <div className='productpagetop'>
                 <div className='imagetop'>
                     <div className="main-image-container">
@@ -86,9 +123,9 @@ const Shc8000 = () => {
                 <div className="productdetails">
                     <h1>{model}</h1>
                     <p>
-                        SHC-8000 Plastic Shredder is an industrial-grade dual shaft shredder 
-                        designed to handle large volumes of mixed plastic waste. 
-                        Its robust blades and powerful motors ensure consistent shredding 
+                        SHC-8000 Plastic Shredder is an industrial-grade dual shaft shredder
+                        designed to handle large volumes of mixed plastic waste.
+                        Its robust blades and powerful motors ensure consistent shredding
                         of hard and soft plastics into uniform flakes for recycling.
                     </p>
                 </div>
@@ -99,7 +136,7 @@ const Shc8000 = () => {
                 <div className='features-content'>
                     <img src={shredderhdimg} alt="Specifications" className="specifications-image" />
                     <div className='sht200specification'>
-                       <p>
+                        <p>
                             ➤ Twin-shaft shredding system for high efficiency<br />
                             ➤ Replaceable alloy steel blades<br />
                             ➤ PLC automation and overload protection<br />
@@ -128,7 +165,7 @@ const Shc8000 = () => {
             <div className="cuttingsection">
                 <h3>Cutting Section</h3>
                 <table>
-                     <tbody>
+                    <tbody>
                         <tr><td>Cutting Chamber</td><td>1000 x 650 mm</td></tr>
                         <tr><td>Knives Thickness</td><td>30 mm</td></tr>
                         <tr><td>Knives Diameter</td><td>350 mm</td></tr>

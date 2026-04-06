@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import "../../../Pages/ProductsPage.css";
+import styles from "../../../Styles/ProductHeader.module.css";
 
 import shredderhd from "../../../images/Applications/shredpcb2.jpg"
 import shredderhd1 from "../../../images/Applications/shredpcb6.jpg"
@@ -33,8 +34,43 @@ const Shc12000 = () => {
         // Remove the anchor from the body
         document.body.removeChild(link);
     };
+
+    const handleViewImage = () => {
+        window.open(mainImage, "_blank", "noopener,noreferrer");
+    };
+
     return (
         <>
+            <header className={styles.productHeader}>
+                <div className={styles.headerContent}>
+                    <div className={styles.breadcrumb}>
+                        Home / Products / <span>SHC-12000</span>
+                    </div>
+
+                    <h1 className={styles.productTitle}>
+                        SHC-<span>12000</span>
+                    </h1>
+
+                    <p className={styles.productSubtitle}>
+                        Ultra high-capacity plastic shredder designed for heavy-duty processing
+                        of plastic waste. Ensures powerful performance, consistent output, and energy-efficient
+                        operation for large-scale recycling plants.
+                    </p>
+
+                    <div className={styles.headerButtons}>
+                        <button
+                            className={styles.primaryBtn}
+                            onClick={() => handleDownload("shc12000")}
+                        >
+                            Download Brochure
+                        </button>
+
+                        <button className={styles.secondaryBtn} onClick={handleViewImage}>
+                            View Machine Image
+                        </button>
+                    </div>
+                </div>
+            </header>
             <div className='productpagetop'>
                 <div className='imagetop'>
                     <div className="main-image-container">
