@@ -5,7 +5,7 @@ import SEOHelmet from "../../components/SEO/SEOHelmet";
 import '../OtherEqp.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import fdconveyer from "../../images/fdconveyer.png";
+import fdconveyer from "../../images/Discharge_Conveyor.png";
 import RelatedEquipments from "./RelatedEquipments";
 
 const Conveyers = () => {
