@@ -28,10 +28,10 @@ const offices = [
     company: "LAVA RUBBER FZ LLC",
     addresses: [
       "FDRK4258, Compass Building, A1 Shohada Road, Al Hamra Industrial Zone – FZ, Ras Al Khaimah, UAE",
-      "Unit: Plot No-9, Indira Gandhi Co-Operative Housing Society, Gagan Pahad, Hyderabad"
+      
     ],
     phone: "+971585513239",
-    email: "Info@VikahEcotech.com"
+    email: "Info@lavarubberllc.com"
   },
   {
     country: "Oman",
@@ -39,10 +39,10 @@ const offices = [
     company: "GLOBAL METAL AND RUBBER RECYCLING",
     addresses: [
       "303, 3rd Floor, Bin Ham Group Building, Al Khuwair, Muscat, Sultanate of Oman",
-      "Unit: Plot No-9, Indira Gandhi Co-Operative Housing Society, Gagan Pahad, Hyderabad"
+      
     ],
     phone: "+968 79211933",
-    email: "Info@VikahEcotech.com"
+    email: "Info@globalmetal.com"
   },
   {
     country: "New Zealand",
@@ -50,7 +50,7 @@ const offices = [
     company: "LAKSS RECYCLING LIMITED",
     addresses: [
       "Albert Street, New Zealand",
-      "Unit: Plot No-9, Indira Gandhi Co-Operative Housing Society, Gagan Pahad, Hyderabad"
+      
     ],
     phone: "+64223136208",
     email: "info@lakssrecycling.com"
