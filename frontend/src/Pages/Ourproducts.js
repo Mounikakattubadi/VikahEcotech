@@ -1,8 +1,8 @@
-// Ourproducts.jsx
 import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./OurProducts.module.css";
 
+// Image Imports
 import Baler from "../images/baler.png";
 import shredderhdimg from "../images/Shedder _ Final PNG.png";
 import img1 from "../images/whatsup images/WhatsApp Image 2024-07-11 at 11.56.50 AM.jpeg";
@@ -11,7 +11,6 @@ import shredderhd from "../images/shredder_hd.jpg";
 import shredderhd1 from "../images/shredder_hd1.jpg";
 import ssshredderhdimg from "../images/R4.jpg";
 import ssshredderhd from "../images/R1.png";
-
 import OtherEqpTemp from "../Other Equipments/OtherEqpTemp";
 
 /* Category Images */
@@ -47,9 +46,6 @@ import shpcb_1 from "../images/Applications/shredpcb1.jpg";
 import shpcb_2 from "../images/Applications/shredpcb4.jpg";
 import shpcb_3 from "../images/Applications/shredpcb7.jpg";
 
-/* PRIMARY SHREDDER – e-waste */
-import she_ewaste1 from "../images/Applications/shredewaste2.webp";
-
 /* SECONDARY SHREDDER — plastic */
 import sec_plas from "../images/Applications/secplas.jpg";
 
@@ -58,6 +54,10 @@ import sec_metal from "../images/Applications/secmetal.webp";
 
 /* SECONDARY SHREDDER — paper & cardboard */
 import sec_pcb from "../images/Applications/secpcb.webp";
+
+// e-waste
+import ewaste from "../images/Applications/shredewaste.jpeg";
+
 
 const FALLBACK_IMG = Baler;
 
@@ -76,8 +76,7 @@ export default function Ourproducts() {
       {
         id: "baler",
         title: "BALER",
-        description:
-          "Applications: Tyre scrap, Metal, Plastic, Paper & Cardboard",
+        description: "Applications: Tyre scrap, Metal, Plastic, Paper & Cardboard",
         categoryImg: balerCategoryImg,
         applications: [
           {
@@ -125,8 +124,7 @@ export default function Ourproducts() {
       {
         id: "primary-shredder",
         title: "PRIMARY SHREDDER",
-        description:
-          "Applications: Tyre, Plastic, Metal, Paper & Cardboard, E-Waste",
+        description: "Applications: Tyre, Plastic, Metal, Paper & Cardboard, E-Waste",
         categoryImg: primaryCategoryImg,
         applications: [
           {
@@ -165,13 +163,20 @@ export default function Ourproducts() {
               { code: "SHC12000", link: "/shc12000", img: shpcb_3 },
             ],
           },
+          {
+            id: "E-Waste Primary",
+            title: "E-Waste Primary Shredder",
+            blurb: "Safe, efficient primary shredding for E-Waste.",
+            models: [
+              { code: "SHE-400", link: "/ewaste", img: ewaste },
+            ],
+          },
         ],
       },
       {
         id: "secondary-shredder",
         title: "SECONDARY SHREDDER",
-        description:
-          "Applications: Rasper, Metal, Plastic, Paper & Cardboard",
+        description: "Applications: Rasper, Metal, Plastic, Paper & Cardboard",
         categoryImg: secondaryCategoryImg,
         applications: [
           {
@@ -187,37 +192,19 @@ export default function Ourproducts() {
             id: "metal-secondary",
             title: "Metal Shredders",
             blurb: "Secondary metal processing and sizing.",
-            models: [
-              {
-                code: "Metal Shredder",
-                link: "/secondarymetalshredder",
-                img: sec_metal,
-              },
-            ],
+            models: [{ code: "Metal Shredder", link: "/secondarymetalshredder", img: sec_metal }],
           },
           {
             id: "plastic-secondary",
             title: "Plastic Shredders",
             blurb: "Plastic finishing and size reduction.",
-            models: [
-              {
-                code: "Plastic Shredder",
-                link: "/secondaryplasticshredder",
-                img: sec_plas,
-              },
-            ],
+            models: [{ code: "Plastic Shredder", link: "/secondaryplasticshredder", img: sec_plas }],
           },
           {
             id: "paper-secondary",
             title: "Paper & Cardboard Shredders",
             blurb: "Secondary shredding for uniform output.",
-            models: [
-              {
-                code: "Paper & Cardboard Shredder",
-                link: "/secondarypcb",
-                img: sec_pcb,
-              },
-            ],
+            models: [{ code: "Paper & Cardboard Shredder", link: "/secondarypcb", img: sec_pcb }],
           },
         ],
       },
@@ -226,158 +213,106 @@ export default function Ourproducts() {
   );
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.heroSection}>
-        <span className={styles.heroBadge}>
-          Industrial Recycling Solutions
-        </span>
-
-        <h1 className={styles.pageTitle}>Our Products</h1>
-
-        <p className={styles.lead}>
-          Explore our balers and shredders by category. Open a section to view
-          machines and models.
-        </p>
-
-        <div className={styles.searchWrapTop}>
-          <input
-            className={styles.search}
-            placeholder="Search models, categories, plastic, tyre..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-
-          {query && (
-            <button
-              className={styles.clearBtn}
-              onClick={() => {
-                setQuery("");
-                setOpenCategory(null);
-                setOpenApplication(null);
-              }}
-            >
-              ✕
-            </button>
-          )}
+    <div className={styles.pageWrapper}>
+      <header className={styles.industrialHeader}>
+        <div className={styles.topBar}>
+          <span className={styles.tagline}>PRECISION RECYCLING SYSTEMS</span>
+          <div className={styles.headerLine}></div>
         </div>
-      </div>
 
-      <div className={styles.mainContent}>
+        <div className={styles.mainLayout}>
+          <div className={styles.titleColumn}>
+            <div className={styles.accentBox}></div>
+            <h1 className={styles.giantTitle}>
+              OUR <br /> <span>PRODUCTS</span>
+            </h1>
+          </div>
+
+          <div className={styles.controlColumn}>
+            <p className={styles.description}>
+              Advanced machinery for high-capacity rubber, metal, and plastic processing.
+              Filter by material or model below.
+            </p>
+
+            <div className={styles.modernSearch}>
+              <input
+                type="text"
+                className={styles.glassInput}
+                placeholder="ENTER KEYWORD..."
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+              <div className={styles.searchPulse}></div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Product Discovery Area */}
+      <main className={styles.catalogContainer}>
         {products.map((category) => {
           const categoryMatch =
             query === "" ||
             category.title.toLowerCase().includes(query.toLowerCase()) ||
             category.description.toLowerCase().includes(query.toLowerCase());
 
-          const filteredApplications = category.applications.filter((app) => {
+          const filteredApps = category.applications.filter((app) => {
             const appMatch =
               app.title.toLowerCase().includes(query.toLowerCase()) ||
               app.blurb.toLowerCase().includes(query.toLowerCase());
-
-            const modelMatch = app.models.some((model) =>
-              model.code.toLowerCase().includes(query.toLowerCase())
+            const modelMatch = app.models.some((m) =>
+              m.code.toLowerCase().includes(query.toLowerCase())
             );
-
             return query === "" || appMatch || modelMatch;
           });
 
-          if (query && !categoryMatch && filteredApplications.length === 0) {
-            return null;
-          }
+          if (query && !categoryMatch && filteredApps.length === 0) return null;
 
-          const isCategoryOpen =
-            openCategory === category.id || query !== "";
+          const isCatOpen = openCategory === category.id || query !== "";
 
           return (
-            <div key={category.id} className={styles.dropdownSection}>
+            <div key={category.id} className={`${styles.categoryStack} ${isCatOpen ? styles.stackActive : ""}`}>
               <button
-                className={
-                  isCategoryOpen
-                    ? `${styles.dropdownHeader} ${styles.dropdownHeaderActive}`
-                    : styles.dropdownHeader
-                }
+                className={styles.stackTrigger}
                 onClick={() => {
-                  setOpenCategory(
-                    openCategory === category.id ? null : category.id
-                  );
+                  setOpenCategory(openCategory === category.id ? null : category.id);
                   setOpenApplication(null);
                 }}
               >
-                <div className={styles.dropdownLeft}>
-                  <div className={styles.dropdownIcon}>
-                    <img
-                      src={category.categoryImg}
-                      alt={category.title}
-                      className={styles.dropdownIconImg}
-                    />
-                  </div>
-
-                  <div>
-                    <h2>{category.title}</h2>
-                    <p>{category.description}</p>
-                  </div>
+                <div className={styles.triggerVisual}>
+                  <img src={category.categoryImg} alt={category.title} />
                 </div>
-
-                <span
-                  className={
-                    isCategoryOpen
-                      ? `${styles.dropdownArrow} ${styles.rotateArrow}`
-                      : styles.dropdownArrow
-                  }
-                >
-                  ▼
-                </span>
+                <div className={styles.triggerInfo}>
+                  <h2>{category.title}</h2>
+                  <p>{category.description}</p>
+                </div>
+                <div className={`${styles.chevron} ${isCatOpen ? styles.rotated : ""}`}>+</div>
               </button>
 
-              {isCategoryOpen && (
-                <div className={styles.dropdownBody}>
-                  {filteredApplications.map((app) => {
-                    const isApplicationOpen =
-                      openApplication === app.id || query !== "";
-
+              {isCatOpen && (
+                <div className={styles.stackBody}>
+                  {filteredApps.map((app) => {
+                    const isAppOpen = openApplication === app.id || query !== "";
                     return (
-                      <div
-                        key={app.id}
-                        className={styles.applicationDropdown}
-                      >
+                      <div key={app.id} className={styles.nestedApp}>
                         <button
-                          className={
-                            isApplicationOpen
-                              ? `${styles.applicationToggle} ${styles.applicationToggleActive}`
-                              : styles.applicationToggle
-                          }
-                          onClick={() =>
-                            setOpenApplication(
-                              openApplication === app.id ? null : app.id
-                            )
-                          }
+                          className={`${styles.appToggle} ${isAppOpen ? styles.appToggleActive : ""}`}
+                          onClick={() => setOpenApplication(openApplication === app.id ? null : app.id)}
                         >
-                          <div>
+                          <div className={styles.appTitle}>
                             <h3>{app.title}</h3>
-                            <p>{app.blurb}</p>
+                            <span>{app.blurb}</span>
                           </div>
-
-                          <span
-                            className={
-                              isApplicationOpen
-                                ? `${styles.dropdownArrow} ${styles.rotateArrow}`
-                                : styles.dropdownArrow
-                            }
-                          >
-                            ▼
-                          </span>
+                          <span className={styles.statusSign}>{isAppOpen ? "CLOSE" : "VIEW MODELS"}</span>
                         </button>
 
-                        {isApplicationOpen && (
-                          <div className={styles.applicationContent}>
-                            <div className={styles.modelGrid}>
+                        {isAppOpen && (
+                          <div className={styles.modelDisplay}>
+                            <div className={styles.gridAuto}>
                               {app.models.map((model) => (
-                                <article
-                                  key={model.code}
-                                  className={styles.card}
-                                >
+                                <div key={model.code} className={styles.productCard}>
                                   <div
-                                    className={styles.cardImg}
+                                    className={styles.cardVisual}
                                     onClick={() =>
                                       setModal({
                                         ...model,
@@ -386,31 +321,17 @@ export default function Ourproducts() {
                                       })
                                     }
                                   >
-                                    <img
-                                      src={model.img || FALLBACK_IMG}
-                                      alt={model.code}
-                                    />
+                                    <img src={model.img || FALLBACK_IMG} alt={model.code} />
+                                    <div className={styles.quickLook}>Quick View</div>
                                   </div>
-
-                                  <div className={styles.cardBody}>
-                                    <div className={styles.modelCode}>
-                                      {model.code}
-                                    </div>
-
-                                    <div className={styles.modelMeta}>
-                                      <span className={styles.metaChip}>
-                                        {app.title}
-                                      </span>
-                                    </div>
-
-                                    <Link
-                                      to={model.link}
-                                      className={styles.openLink}
-                                    >
-                                      View Product →
+                                  <div className={styles.cardDetails}>
+                                    <span className={styles.skuTag}>MODEL</span>
+                                    <h4>{model.code}</h4>
+                                    <Link to={model.link} className={styles.detailLink}>
+                                      Technical Data Sheet →
                                     </Link>
                                   </div>
-                                </article>
+                                </div>
                               ))}
                             </div>
                           </div>
@@ -424,46 +345,34 @@ export default function Ourproducts() {
           );
         })}
 
-        <div className={styles.otherSection}>
-          <h2 className={styles.otherTitle}>Other Equipment</h2>
+        <section className={styles.supplementary}>
+          <h2 className={styles.extraHeader}>Ancillary Components</h2>
           <OtherEqpTemp />
-        </div>
-      </div>
+        </section>
+      </main>
 
+      {/* Vibrant Modal Overlay */}
       {modal && (
-        <div
-          className={styles.modalBackdrop}
-          onClick={() => setModal(null)}
-        >
-          <div
-            className={styles.modalCard}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              className={styles.modalClose}
-              onClick={() => setModal(null)}
-            >
-              ✕
-            </button>
-
-            <div className={styles.modalHeader}>
-              <strong>{modal.code}</strong>
-              <span>
-                {modal.appTitle} • {modal.categoryTitle}
-              </span>
-            </div>
-
-            <div className={styles.modalBody}>
-              <img
-                src={modal.img || FALLBACK_IMG}
-                alt={modal.code}
-              />
-            </div>
-
-            <div className={styles.modalFooter}>
-              <Link to={modal.link} className={styles.btnPrimary}>
-                View Product Page
-              </Link>
+        <div className={styles.glassBackdrop} onClick={() => setModal(null)}>
+          <div className={styles.vibrantModal} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.exitBtn} onClick={() => setModal(null)}>✕</button>
+            <div className={styles.modalGrid}>
+              <div className={styles.visualSide}>
+                <img src={modal.img || FALLBACK_IMG} alt={modal.code} />
+              </div>
+              <div className={styles.contentSide}>
+                <p className={styles.modalSub}>{modal.categoryTitle} / {modal.appTitle}</p>
+                <h2 className={styles.modalTitle}>{modal.code}</h2>
+                <div className={styles.featureList}>
+                  <div className={styles.featItem}>✦ Heavy-Duty Hydraulic Build</div>
+                  <div className={styles.featItem}>✦ Automated Material Grading</div>
+                  <div className={styles.featItem}>✦ High-Efficiency Power Cycle</div>
+                </div>
+                <div className={styles.modalActions}>
+                  <Link to={modal.link} className={styles.primeBtn}>Explore Machine Specification</Link>
+                  <button className={styles.secBtn} onClick={() => setModal(null)}>Close</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
