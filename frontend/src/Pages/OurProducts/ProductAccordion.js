@@ -37,7 +37,7 @@ import ewaste from "../../images/Applications/shredewaste.jpeg";
 export const productRegistry = {
     "BALER": {
         categoryIcon: Baler,
-        "Tyre Scrap": {
+        "Tyre Scrap Baler": {
             blurb: "Hydraulic balers for tyre scrap",
             description: "Hydraulic balers specially configured for high-pressure tyre scrap baling.",
             items: [
@@ -46,7 +46,7 @@ export const productRegistry = {
                 { id: 3, model: "BLT250", img: Baler, link: "/blt250" },
             ]
         },
-        "Plastic": {
+        "Plastic Baler": {
             blurb: "For plastic flakes & bottles",
             description: "Efficient baling solutions for various plastic materials including PET and HDPE.",
             items: [
@@ -55,7 +55,7 @@ export const productRegistry = {
                 { id: 6, model: "BLP50", img: plas_img2, link: "/blp50" },
             ]
         },
-        "Paper & Cardboard": {
+        "Paper & Cardboard Baler": {
             blurb: "For paper & corrugated cardboard",
             description: "High-density baling for paper waste, magazines, and corrugated cardboard.",
             items: [
@@ -64,7 +64,7 @@ export const productRegistry = {
                 { id: 9, model: "BLC50", img: pcb_img2, link: "/blc50" },
             ]
         },
-        "Metal": {
+        "Metal Baler": {
             blurb: "For metallic scrap",
             description: "Heavy-duty baling for metallic waste, aluminum cans, and light scrap metal.",
             items: [
@@ -85,7 +85,7 @@ export const productRegistry = {
                 { id: 15, model: "SHT12000", img: shredderhdimg, link: "/sht12000" },
             ]
         },
-        "Plastic": {
+        "Plastic Primary Shredder": {
             blurb: "Industrial plastic shredder",
             description: "Powerful shredding for plastic drums, pipes, and large bulky waste.",
             items: [
@@ -94,14 +94,14 @@ export const productRegistry = {
                 { id: 18, model: "SHP200", img: shp_img3, link: "/shp200" },
             ]
         },
-        "Metal": {
+        "Metal Primary Shredder": {
             blurb: "Scrap metal shredding",
             description: "High-torque shredders for light iron, aluminum profiles, and metal sheets.",
             items: [
                 { id: 19, model: "SHM4000", img: shm_main, link: "/shm4000" },
             ]
         },
-        "Paper & Cardboard": {
+        "Paper & Cardboard Primary Shredder": {
             blurb: "Bulk paper processing",
             description: "Industrial shredding for high-volume paper and cardboard recycling plants.",
             items: [
@@ -110,7 +110,7 @@ export const productRegistry = {
                 { id: 22, model: "SHC12000", img: shpcb_3, link: "/shc12000" },
             ]
         },
-        "E-Waste": {
+        "E-Waste Primary Shredder": {
             blurb: "Electronic waste recycling",
             description: "Specialized shredding for hard drives, circuit boards, and appliances.",
             items: [
@@ -120,7 +120,7 @@ export const productRegistry = {
     },
     "SECONDARY SHREDDER": {
         categoryIcon: ssshredderhdimg,
-        "Rasper Machines": {
+        "Rasper": {
             blurb: "Secondary steel liberation",
             description: "Precision raspers for wire liberation and high-quality rubber mulch production.",
             items: [
@@ -128,21 +128,21 @@ export const productRegistry = {
                 { id: 25, model: "RST6000", img: ssshredderhd, link: "/rst6000" },
             ]
         },
-        "Metal": {
+        "Secondary Shredder for Metal": {
             blurb: "Fine metal shredding",
             description: "Secondary processing for metal purification.",
             items: [],
             fallbackImg: sec_metal,
             link: "/secondarymetalshredder"
         },
-        "Plastic": {
+        "Secondary Shredder for Plastic": {
             blurb: "Plastic granulation",
             description: "Refining plastics into small uniform granules.",
             items: [],
             fallbackImg: sec_plas,
             link: "/secondaryplasticshredder"
         },
-        "Paper & Cardboard": {
+        "Secondary Shredder for Paper & Cardboard": {
             blurb: "Confidential shredding",
             description: "Secondary shredding for high-security document destruction.",
             items: [],
@@ -160,30 +160,23 @@ const ProductAccordion = ({ title, applications, isOpen, onToggle, searchQuery }
         Object.keys(categoryData).filter(key => key !== 'categoryIcon'),
     [categoryData]);
 
-    // Initialize with the first tab to avoid empty content area on load
     const [activeTab, setActiveTab] = useState(tabs[0] || "");
 
-    // Keep activeTab in sync if the category title changes
     useEffect(() => {
         if (tabs.length > 0 && (!activeTab || !tabs.includes(activeTab))) {
             setActiveTab(tabs[0]);
         }
     }, [tabs, activeTab]);
 
-    // Handle auto-switching tabs based on search matches
     useEffect(() => {
         if (!searchQuery) return;
-
         const query = searchQuery.toLowerCase().trim();
-
         const matchingTab = tabs.find(tab => {
             const tabNameMatch = tab.toLowerCase().includes(query);
             const tabItems = categoryData[tab]?.items || [];
             const modelMatch = tabItems.some(item => item.model.toLowerCase().includes(query));
-
             return tabNameMatch || modelMatch;
         });
-
         if (matchingTab && matchingTab !== activeTab) {
             setActiveTab(matchingTab);
         }
@@ -192,20 +185,14 @@ const ProductAccordion = ({ title, applications, isOpen, onToggle, searchQuery }
     const activeData = categoryData[activeTab] || { items: [], description: "" };
 
     const filteredItems = useMemo(() => {
-        // Default view: No search query
         if (!searchQuery || searchQuery.trim() === "") {
             return activeData.items || [];
         }
-
         const query = searchQuery.toLowerCase().trim();
-        
-        // If searching for a category name (e.g. "Tyre"), show all items in that category
         const isTabMatch = activeTab.toLowerCase().includes(query);
         if (isTabMatch) {
             return activeData.items || [];
         }
-
-        // Otherwise filter specific models
         return (activeData.items || []).filter(item =>
             item.model.toLowerCase().includes(query)
         );
@@ -250,22 +237,36 @@ const ProductAccordion = ({ title, applications, isOpen, onToggle, searchQuery }
                     <div className={styles.contentArea}>
                         <div className={styles.contentHeader}>
                             <h3 className={styles.contentTitle}>
-                                {activeTab ? `${activeTab} Equipment` : "Equipment"}
+                                {activeTab ? `${activeTab} ` : ""}
                             </h3>
                             <p className={styles.contentDesc}>{activeData.description}</p>
                         </div>
 
                         <div className={styles.productGrid}>
+                            {/* CASE 1: Specific models exist and are found via filter */}
                             {filteredItems.length > 0 ? (
                                 filteredItems.map((item) => (
                                     <ProductCard key={item.id} item={item} type={activeTab} mainCategory={registryKey} />
                                 ))
                             ) : (
-                                // Logic from image_e17b1c.png fix: Only show error if user is actually searching
-                                searchQuery && searchQuery.trim() !== "" && (
-                                    <div className={styles.noResults}>
-                                        <p>No specific models match "{searchQuery}" in this category.</p>
-                                    </div>
+                                /* CASE 2: No models exist in the registry for this tab (like Secondary Metal) */
+                                activeData.items && activeData.items.length === 0 && activeData.link ? (
+                                    <ProductCard 
+                                        item={{ 
+                                            model: `${activeTab}`, 
+                                            img: activeData.fallbackImg, 
+                                            link: activeData.link 
+                                        }} 
+                                        type={activeTab} 
+                                        mainCategory={registryKey} 
+                                    />
+                                ) : (
+                                    /* CASE 3: Search returned no matches */
+                                    searchQuery && searchQuery.trim() !== "" && (
+                                        <div className={styles.noResults}>
+                                            <p>No specific models match "{searchQuery}" in this category.</p>
+                                        </div>
+                                    )
                                 )
                             )}
                         </div>

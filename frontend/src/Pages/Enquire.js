@@ -62,18 +62,24 @@ const Enquire = () => {
       "SIDE WALL REMOVER",
       "CUTTING EQUIPMENT",
       "FOLDING EQUIPMENT",
+      "DUST COLLECTOR",
+      "VIBRO HOPPER",
+      "FIBRE SEPARATOR",
     ],
   };
 
   // keep initial selection in sync with available models
-  useEffect(() => {
-    if (
-      models[selectedMachinery] &&
-      !models[selectedMachinery].includes(selectedModel)
-    ) {
+useEffect(() => {
+  // Only auto-select the first model if the URL didn't provide one
+  // OR if the provided machinery doesn't have the provided model.
+  if (models[selectedMachinery]) {
+    const isModelValid = models[selectedMachinery].includes(selectedModel);
+    
+    if (!selectedModel || !isModelValid) {
       setSelectedModel(models[selectedMachinery][0]);
     }
-  }, [selectedMachinery, selectedModel]);
+  }
+}, [selectedMachinery]);
 
   const handleMachineryChange = (event) => {
     const machinery = event.target.value.toLowerCase();

@@ -7,17 +7,32 @@ const HeroSection = ({ onSearchChange }) => {
   return (
     <div className={styles.wrapper}>
       <section className={styles.heroCard}>
+        
+        {/* Left Side: Contains Text, Search, and Features */}
         <div className={styles.leftSide}>
-          <div className={styles.badge}>OUR PRODUCTS</div>
-          <h1 className={styles.mainTitle}>
-            Engineered for Performance.<br />
-            Built for a Greener Future.
-          </h1>
-          <p className={styles.subtext}>
-            Discover our range of industrial recycling equipment designed for 
-            maximum efficiency, durability and sustainability.
-          </p>
           
+          {/* Wrapper for text elements to keep them together as 'Order 1' on mobile */}
+          <div className={styles.textContent}>
+            <div className={styles.badge}>OUR PRODUCTS</div>
+            <h1 className={styles.mainTitle}>
+              Engineered for Performance.<br />
+              Built for a Greener Future.
+            </h1>
+            <p className={styles.subtext}>
+              Discover our range of industrial recycling equipment designed for 
+              maximum efficiency, durability and sustainability.
+            </p>
+          </div>
+          
+          {/* Features: Becomes 'Order 4' on mobile */}
+          <div className={styles.featureGrid}>
+            <FeatureCard title="High Performance" desc="Maximum output with efficiency" Icon={ShieldCheck} />
+            <FeatureCard title="Eco Friendly" desc="Built with sustainability at the core" Icon={Leaf} />
+            <FeatureCard title="Low Maintenance" desc="Reliable machines with minimal upkeep" Icon={Settings} />
+            <FeatureCard title="Certified Quality" desc="Tested. Certified. Trusted worldwide." Icon={Award} />
+          </div>
+          
+          {/* Search Box: Becomes 'Order 3' on mobile */}
           <div className={styles.searchBox}>
             <Search size={18} className={styles.searchIcon} />
             <input 
@@ -27,14 +42,10 @@ const HeroSection = ({ onSearchChange }) => {
             />
           </div>
 
-          <div className={styles.featureGrid}>
-            <FeatureCard title="High Performance" desc="Maximum output with efficiency" Icon={ShieldCheck} />
-            <FeatureCard title="Eco Friendly" desc="Built with sustainability at the core" Icon={Leaf} />
-            <FeatureCard title="Low Maintenance" desc="Reliable machines with minimal upkeep" Icon={Settings} />
-            <FeatureCard title="Certified Quality" desc="Tested. Certified. Trusted worldwide." Icon={Award} />
-          </div>
+          
         </div>
 
+        {/* Right Side: Contains Image. Becomes 'Order 2' on mobile */}
         <div className={styles.rightSide}>
           <img src={ourprodbg} alt="Machine" className={styles.machineImg} />
           <div className={styles.statsCard}>
@@ -44,6 +55,7 @@ const HeroSection = ({ onSearchChange }) => {
             <StatItem Icon={Hourglass} value="15+" label="Years Experience" />
           </div>
         </div>
+        
       </section>
     </div>
   );
