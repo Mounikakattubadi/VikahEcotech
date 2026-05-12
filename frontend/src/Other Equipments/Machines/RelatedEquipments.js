@@ -4,17 +4,76 @@ import "./RelatedEquipments.css";
 
 const RelatedEquipments = ({ current }) => {
     const products = [
-        { label: "Tumble Back Feeder", path: "/tumble-back-feeder", image: "/images/tbf.png" },
-        { label: "Feeding & Discharge Conveyers", path: "/feeding-discharge-conveyers", image: "/images/fdc.png" },
-        { label: "Vibrators", path: "/vibrators", image: "/images/vibrator.png" },
-        { label: "Classifiers", path: "/classifiers", image: "/images/classifier.png" },
-        { label: "Overband Magnetic Steel Separators", path: "/magnetic-steel-separators", image: "/images/oms.png" },
-        { label: "Beadwire Remover", path: "/beedwire-remover", image: "/images/beadwire.png" },
-        { label: "Strip Cutter", path: "/strip-cutter", image: "/images/stripcutter.png" },
-        { label: "Block Cutter", path: "/block-cutter", image: "/images/blockcutter.png" },
-        { label: "Side Wall Remover", path: "/sidewall-remover", image: "/images/sidewallremover.png" },
-        { label: "Tyre Cutting Machines", path: "/tyrecutting", image: "/images/tyrecutting.png" },
-        { label: "Tyre Folding Machines", path: "/tyrefolding", image: "/images/tyrefolding.png" },
+        {
+            label: "Tumble Back Feeder",
+            path: "/tumble-back-feeder",
+            image: "/images/tbf.png",
+        },
+        {
+            label: "Feeding & Discharge Conveyers",
+            path: "/feeding-discharge-conveyers",
+            image: "/images/fdc.png",
+        },
+        {
+            label: "Vibrators",
+            path: "/vibrators",
+            image: "/images/vibrator.png",
+        },
+        {
+            label: "Classifiers",
+            path: "/classifiers",
+            image: "/images/classifier.png",
+        },
+        {
+            label: "Overband Magnetic Steel Separators",
+            path: "/magnetic-steel-separators",
+            image: "/images/oms.png",
+        },
+        {
+            label: "Beadwire Remover",
+            path: "/beedwire-remover",
+            image: "/images/beadwire.png",
+        },
+        {
+            label: "Strip Cutter",
+            path: "/strip-cutter",
+            image: "/images/stripcutter.png",
+        },
+        {
+            label: "Block Cutter",
+            path: "/block-cutter",
+            image: "/images/blockcutter.png",
+        },
+        {
+            label: "Side Wall Remover",
+            path: "/sidewall-remover",
+            image: "/images/sidewallremover.png",
+        },
+        {
+            label: "Tyre Cutting Machines",
+            path: "/tyrecutting",
+            image: "/images/tyrecutting.png",
+        },
+        {
+            label: "Tyre Folding Machines",
+            path: "/tyrefolding",
+            image: "/images/tyrefolding.png",
+        },
+        {
+            label: "Dust Collector",
+            path: "/dust-collector",
+            image: "/images/Machinery images/DustCollector.png",
+        },
+        {
+            label: "Vibro Hopper",
+            path: "/vibro-hopper",
+            image: "/images/Machinery images/Hopper1.png",
+        },
+        {
+            label: "Fibre Separator",
+            path: "/fibre-separator",
+            image: "/images/Machinery images/Fibre Seperator.png",
+        },
     ];
 
     const filtered = products.filter((p) => p.path !== current);

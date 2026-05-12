@@ -24,6 +24,9 @@ const PRODUCT_LINKS = {
   "BLOCK CUTTER": "/block-cutter",
   "SIDE WALL REMOVER": "/sidewall-remover",
   "FOLDING EQUIPMENT": "/tyrefolding",
+  "DUST COLLECTOR": "/dust-collector",
+  "VIBRO HOPPER": "/vibro-hopper",
+"FIBRE SEPARATOR": "/fibre-seperator",
 };
 
 const PRODUCTS = [
@@ -117,6 +120,34 @@ const PRODUCTS = [
       "Folds processed rubber sheets or components into compact stacks. Saves storage space and improves handling efficiency for shipping and warehousing.",
     materials: ["Rubber Sheets", "Cut Strips"],
   },
+  {
+  id: "dust-collector",
+  name: "DUST COLLECTOR",
+  category: "flow",
+  pillar: "Flow",
+  description:
+    "Efficiently captures and removes dust particles generated during recycling operations. Improves air quality, ensures cleaner working environment, and enhances machine life.",
+  materials: ["Fine Dust", "Airborne Particles"],
+},
+{
+  id: "vibro-hopper",
+  name: "VIBRO HOPPER",
+  category: "feeding",
+  pillar: "Feeding & Handling",
+  description:
+    "Designed for efficient storage and vibration-assisted feeding of bulk materials into processing lines. Prevents clogging and ensures smooth, continuous material flow.",
+  materials: ["Rubber", "Plastic", "Bulk Waste"],
+},
+{
+  id: "fibre-separator",
+  name: "FIBRE SEPARATOR",
+  category: "screening",
+  pillar: "Screening & Separation",
+  description:
+    "Separates lightweight fibre contaminants from rubber granules and powders to improve product purity and quality in tyre recycling operations.",
+  materials: ["Rubber Powder", "Fibre", "Textile Waste"],
+},
+
 ];
 
 function OtherEqpTemp() {

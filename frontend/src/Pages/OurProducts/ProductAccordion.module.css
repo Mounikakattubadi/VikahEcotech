@@ -1,0 +1,285 @@
+/* --- Container --- */
+.accordionItem {
+  background: #ffffff;
+  border: 1px solid #eef2ef;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* --- Header Section --- */
+.header {
+  padding: 20px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.headerInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.categoryCircle {
+  width: 48px;
+  height: 48px;
+  background: #f0f4f2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mainTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0b2d24;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.appSubtitle {
+  font-size: 13px;
+  color: #8fa09c;
+  margin: 2px 0 0 0;
+}
+
+/* --- Expanded Body Layout --- */
+.body {
+  display: flex;
+  border-top: 1px solid #f0f3f1;
+  background: #ffffff;
+}
+
+/* --- Sidebar (Vertical Tabs for Desktop) --- */
+.sidebar {
+  width: 300px;
+  padding: 24px 16px;
+  background-color: #fcfdfc;
+  border-right: 1px solid #f0f3f1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.tabBtn, .activeTab {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block;
+  text-decoration: none;
+}
+
+.tabBtn { background: transparent; }
+.tabBtn:hover { background: #f1f5f2; }
+
+.activeTab {
+  background: #f1f8f5;
+  border-color: #2d6a4f;
+}
+
+.tabContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tabText {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0b2d24;
+}
+
+.tabBlurb {
+  font-size: 11px;
+  color: #8fa09c;
+}
+
+/* --- Content Area --- */
+.contentArea {
+  flex: 1;
+  padding: 32px;
+  min-width: 0; /* Prevents grid blowout */
+}
+
+.contentTitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0b2d24;
+  margin-bottom: 8px;
+}
+
+.contentDesc {
+  font-size: 14px;
+  color: #5d706b;
+  margin-bottom: 24px;
+}
+
+/* --- Product Grid --- */
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #f0f3f1;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.machinePlaceholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.viewProductBtn {
+  margin-top: auto; /* Keeps buttons aligned even if text length varies */
+  text-decoration: none;
+  padding: 12px;
+  background: linear-gradient(90deg, #38b000, #2d6a4f);
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* --- RESPONSIVE BREAKPOINTS --- */
+
+/* Tablet & Smaller Desktop (Break layout to stack) */
+@media (max-width: 1024px) {
+  .body {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #f0f3f1;
+    flex-direction: row; /* Horizontal scroll tabs */
+    overflow-x: auto;
+    padding: 12px 20px;
+    gap: 12px;
+    /* Hide scrollbar but keep functionality */
+    scrollbar-width: none; 
+  }
+  
+  .sidebar::-webkit-scrollbar { display: none; }
+
+  .tabBtn, .activeTab {
+    width: auto;
+    white-space: nowrap;
+    padding: 10px 18px;
+  }
+
+  .tabBlurb, .tabArrow, .tabIcon {
+    display: none; /* Keep mobile navigation clean */
+  }
+
+  .contentArea {
+    padding: 24px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+  .header {
+    padding: 15px 20px;
+  }
+
+  .categoryCircle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mainTitle {
+    font-size: 15px;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr; /* 1 card per row for maximum focus */
+  }
+
+  .contentTitle {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+}
+
+/* Title styling: Bold, dark, and tight spacing */
+.productModel {
+  font-size: 18px;
+  font-weight: 800; /* Extra bold like img 2 */
+  color: #0b2d24;
+  margin: 0 0 8px 0;
+  text-align: left;
+}
+
+/* Tag Container to handle alignment */
+.tagWrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+/* The "Tyre Scrap Baler" tag styling */
+.greenTag {
+  display: inline-block;
+  background: #f1f8f4; /* Very light mint background */
+  color: #2d6a4f;      /* Deep green text */
+  font-size: 11px;
+  font-weight: 700;    /* Bold tag text */
+  padding: 4px 10px;
+  border-radius: 6px;  /* Rounded corners for the tag */
+  text-transform: capitalize;
+}
+
+/* Ensure the button matches the rounded, centered look */
+.viewProductBtn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #38b000, #2d6a4f);
+  color: white;
+  border: none;
+  border-radius: 12px; /* Smooth rounded corners */
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}

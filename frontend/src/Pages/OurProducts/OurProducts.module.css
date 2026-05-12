@@ -1,0 +1,57 @@
+.container {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8faf9;
+  color: #1a3c34;
+}
+
+.contentWrapper {
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+/* Accordion Specifics */
+.accordionItem {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #e0e7e1;
+  overflow: hidden;
+}
+
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.sidebar {
+  width: 250px;
+  border-right: 1px solid #eee;
+  padding: 20px;
+}
+
+.activeTab {
+  background: #eef7f2;
+  color: #2d6a4f;
+  border-left: 4px solid #2d6a4f;
+  font-weight: bold;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.viewBtn {
+  width: 100%;
+  background: linear-gradient(to right, #2d6a4f, #40916c);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}

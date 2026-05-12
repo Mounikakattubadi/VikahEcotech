@@ -8,7 +8,7 @@ import Footer from './Pages/Footer';
 import AboutUs from './Pages/AboutUs';
 import Enquire from './Pages/Enquire';
 import Contact from './Pages/Contact.js';
-import Ourproducts from './Pages/Ourproducts.js';
+import Ourproducts from './Pages/OurProducts/Ourproducts.js';
 import Homecards from './Pages/Homecards.js';
 import ScrollToTopButton from './Pages/ScrollToTopButton';
 
@@ -138,6 +138,9 @@ import Crushingmachinepage from './Prodpages/Crushingmachinepage.js';
 import PaperCardboardShredderpage from './Prodpages/PaperCardboardShredderpage.js';
 import RelatedEquipments from './Other Equipments/Machines/RelatedEquipments.js';
 import MSWBlog from './Blogs/Baler/MSWBlog.js';
+import DustCollector from './Other Equipments/Machines/DustCollector.js';
+import VibroHopper from './Other Equipments/Machines/VibroHopper.js';
+import FibreSeparator from './Other Equipments/Machines/FibreSeparator.js';
 
 
 
@@ -235,6 +238,10 @@ function App() {
         <Route path="/strip-cutter" element={<StripCutter />} />
         <Route path="/block-cutter" element={<BlockCutter />} />
         <Route path="/sidewall-remover" element={<SidewallRemover />} />
+        <Route path="/dust-collector" element={<DustCollector />} />
+        <Route path="/vibro-hopper" element={<VibroHopper />} />
+        <Route path="/fibre-seperator" element={<FibreSeparator />} />
+
 
         <Route exact path="/tyrecutting" element={<Tyrecutting />} />
         <Route exact path="/tyrefolding" element={<Tyrefolding />} />

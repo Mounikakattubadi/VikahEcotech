@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../../../Pages/ProductsPage.css";
-import shredderhd from "../../../images/R1.png";
+import shredderhd from "../../../images/Machinery images/MulchPlant.png";
 import shredderhd1 from "../../../images/R2.png";
 import shredderhdimg from "../../../images/R4.jpg";
 import { Helmet } from "react-helmet";
